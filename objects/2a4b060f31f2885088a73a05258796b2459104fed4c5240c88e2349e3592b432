@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "id": "light-quilted-jacket",
+  "displayName": "Quilted jacket",
+  "layer": "top",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 12817,
+  "weightClass": "light",
+  "triangles": 24794,
+  "materials": [
+    "cloth",
+    "leather",
+    "wood"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "thin",
+      "at1": "thick padding",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.0958,
+          1.4128,
+          -0.0861
+        ],
+        "end": [
+          -0.0957,
+          1.4135,
+          -0.0887
+        ],
+        "lengthMm": 2.68
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "tucked skirt",
+      "at1": "full skirt",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1999,
+          0.8,
+          0.03
+        ],
+        "end": [
+          0.2879,
+          0.8,
+          0.03
+        ],
+        "lengthMm": 88.0
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "AxisUp",
+      "at0": "stitched lines",
+      "at1": "puffed",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.184,
+          0.9023,
+          -0.0312
+        ],
+        "end": [
+          0.1806,
+          0.9006,
+          -0.0298
+        ],
+        "lengthMm": 3.97
+      },
+      "animation": {
+        "name": "AxisUp",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "leather",
+    "2": "wood"
+  },
+  "materialClasses": [
+    "cloth",
+    "leather",
+    "wood"
+  ],
+  "coverageCm2": 8893.4,
+  "mass": 1334.01,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "light-quilted-jacket.glb",
+    "glbBytes": 3702024,
+    "glbSha256": "ebcf5c25dfd4fa1e70d722a99229f88112766f51da7a4e35f378d7ba794986fc",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "light-quilted-jacket.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1",
+        "AxisUp@0",
+        "AxisUp@0.25",
+        "AxisUp@0.75",
+        "AxisUp@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 12454,
+          "triangles": 22416,
+          "targets": 12,
+          "material": 0
+        },
+        {
+          "vertices": 2319,
+          "triangles": 2268,
+          "targets": 12,
+          "material": 1
+        },
+        {
+          "vertices": 185,
+          "triangles": 110,
+          "targets": 12,
+          "material": 1
+        }
+      ],
+      "triangles": 24794,
+      "vertices": 14958,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.00155,
+          "verticesMoved": 12351
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00077,
+          "verticesMoved": 12347
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00052,
+          "verticesMoved": 12343
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.00104,
+          "verticesMoved": 12349
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.04,
+          "verticesMoved": 2340
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.02,
+          "verticesMoved": 2340
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.024,
+          "verticesMoved": 2340
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.048,
+          "verticesMoved": 2340
+        },
+        "AxisUp@0": {
+          "maxDeltaM": 0.00245,
+          "verticesMoved": 8896
+        },
+        "AxisUp@0.25": {
+          "maxDeltaM": 0.00122,
+          "verticesMoved": 7971
+        },
+        "AxisUp@0.75": {
+          "maxDeltaM": 0.00073,
+          "verticesMoved": 6856
+        },
+        "AxisUp@1": {
+          "maxDeltaM": 0.00137,
+          "verticesMoved": 6856
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "AxisUp": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 2499,
+        "clavicle_r": 2462,
+        "hand_l": 516,
+        "hand_r": 518,
+        "head": 1259,
+        "lowerarm_l": 1723,
+        "lowerarm_r": 1721,
+        "neck_01": 2061,
+        "pelvis": 4563,
+        "spine_01": 3793,
+        "spine_02": 4091,
+        "spine_03": 7493,
+        "thigh_l": 743,
+        "thigh_r": 729,
+        "thumb_01_l": 14,
+        "thumb_01_r": 14,
+        "upperarm_l": 2893,
+        "upperarm_r": 2878
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": {
+    "reference": "the gambeson as the armour (REVIEW.md, October 22: \"Yes for gambesons\"); walnut-parlour-jack's ochre quilting, foresters-line's quilted vest",
+    "fit": "the light under-slot garment's surface (sleeves, collar, split skirt), subdivided, quilted, its edges bound, toggled down the front; bends with the body"
+  },
+  "slot": "chest",
+  "category": "chest",
+  "pinRegions": [
+    0
+  ],
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "thin",
+      "standard",
+      "thick padding"
+    ],
+    "RadiusBottom": [
+      "tucked skirt",
+      "A-line skirt",
+      "full skirt"
+    ],
+    "AxisUp": [
+      "flat stitched lines",
+      "quilted",
+      "puffed"
+    ]
+  },
+  "softChecks": {
+    "passed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 1.71
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.89
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.89
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.77
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.37
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.89
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.89
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.89
+      },
+      {
+        "case": "AxisUp=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "AxisUp=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 1.73
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.88
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.04
+      }
+    ],
+    "minClearanceMm": 1.71
+  }
+}

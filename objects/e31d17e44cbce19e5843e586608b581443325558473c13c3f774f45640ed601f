@@ -1,0 +1,2123 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-vambrace-r",
+  "displayName": "Vambrace (right)",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "arm",
+  "slot": "gloves",
+  "attach": "rigid",
+  "bones": [
+    "lowerarm_r"
+  ],
+  "allowedRegions": [
+    "lowerarm_r"
+  ],
+  "defaultRegion": "lowerarm_r",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      -0.4917,
+      1.071,
+      0.1644
+    ],
+    "normal": [
+      -0.4247,
+      -0.5822,
+      -0.6933
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "mirror",
+    "pairedId": "f1-vambrace-l"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      -0.5068,
+      -0.4817,
+      0.7149
+    ]
+  },
+  "handles": [
+    {
+      "name": "RadiusTop",
+      "at0": "slim at the elbow end",
+      "at1": "wide at the elbow end",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.3785,
+          1.1103,
+          0.1114
+        ],
+        "end": [
+          -0.3697,
+          1.1017,
+          0.1134
+        ],
+        "lengthMm": 12.47
+      },
+      "animation": {
+        "name": "RadiusTop",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      },
+      "oldDefault": 0.2
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "slim at the wrist",
+      "at1": "wide at the wrist",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.4381,
+          1.0845,
+          0.2156
+        ],
+        "end": [
+          -0.4244,
+          1.086,
+          0.2211
+        ],
+        "lengthMm": 14.83
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      },
+      "oldDefault": 0.3
+    },
+    {
+      "name": "BoneLength",
+      "at0": "wrist band",
+      "at1": "full forearm",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.491,
+          1.1145,
+          0.1366
+        ],
+        "end": [
+          -0.4382,
+          1.1693,
+          0.0529
+        ],
+        "lengthMm": 113.19
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      },
+      "oldDefault": 0.6
+    },
+    {
+      "name": "Detail",
+      "at0": "plain",
+      "at1": "bold details",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.3908,
+          1.1381,
+          0.1546
+        ],
+        "end": [
+          -0.3706,
+          1.1585,
+          0.1722
+        ],
+        "lengthMm": 33.72
+      },
+      "animation": {
+        "name": "Detail",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "metal",
+    "1": "leather",
+    "2": "metal"
+  },
+  "materialClasses": [
+    "leather",
+    "metal"
+  ],
+  "coverageCm2": 244.4,
+  "mass": 224.32,
+  "weightClass": "heavy",
+  "triangles": 978,
+  "complexity": 10,
+  "mutateTags": [
+    "heavy",
+    "plain"
+  ],
+  "references": [],
+  "build": {
+    "glb": "f1-vambrace-r.glb",
+    "glbSha256": "97ff746bfd266dbb2d80f427ecbb3c183da3848a611b578031fc12e04bb0168b",
+    "glbBytes": 407176,
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": 10.0,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-vambrace-r.glb",
+      "targetNames": [
+        "RadiusTop@0",
+        "RadiusTop@0.25",
+        "RadiusTop@0.75",
+        "RadiusTop@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1",
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1",
+        "Detail@0",
+        "Detail@0.25",
+        "Detail@0.75",
+        "Detail@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 354,
+          "triangles": 512,
+          "targets": 16,
+          "material": 0
+        },
+        {
+          "vertices": 258,
+          "triangles": 232,
+          "targets": 16,
+          "material": 1
+        },
+        {
+          "vertices": 297,
+          "triangles": 234,
+          "targets": 16,
+          "material": 2
+        }
+      ],
+      "triangles": 978,
+      "vertices": 909,
+      "targets": {
+        "RadiusTop@0": {
+          "maxDeltaM": 0.00223,
+          "verticesMoved": 909
+        },
+        "RadiusTop@0.25": {
+          "maxDeltaM": 0.00112,
+          "verticesMoved": 909
+        },
+        "RadiusTop@0.75": {
+          "maxDeltaM": 0.00447,
+          "verticesMoved": 909
+        },
+        "RadiusTop@1": {
+          "maxDeltaM": 0.00893,
+          "verticesMoved": 909
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.0041,
+          "verticesMoved": 909
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.00205,
+          "verticesMoved": 909
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.00479,
+          "verticesMoved": 909
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.00957,
+          "verticesMoved": 909
+        },
+        "BoneLength@0": {
+          "maxDeltaM": 0.05026,
+          "verticesMoved": 909
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.02513,
+          "verticesMoved": 909
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.01675,
+          "verticesMoved": 909
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.03351,
+          "verticesMoved": 909
+        },
+        "Detail@0": {
+          "maxDeltaM": 0.01958,
+          "verticesMoved": 523
+        },
+        "Detail@0.25": {
+          "maxDeltaM": 0.00979,
+          "verticesMoved": 523
+        },
+        "Detail@0.75": {
+          "maxDeltaM": 0.00546,
+          "verticesMoved": 398
+        },
+        "Detail@1": {
+          "maxDeltaM": 0.01091,
+          "verticesMoved": 398
+        }
+      },
+      "animations": {
+        "RadiusTop": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "Detail": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "lowerarm_r": 909
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.057,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 6.21,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.458,
+            -0.098,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.042,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 6.64,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.458,
+            -0.098,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.028,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.07,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.098,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.014,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            487,
+            485,
+            486,
+            488,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.49,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.084,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 9.63,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.46,
+            -0.096,
+            1.123
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 68,
+        "maxEdgeStretch": 1.168,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 11.34,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.461,
+            -0.095,
+            1.123
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 77,
+        "maxEdgeStretch": 1.253,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            522,
+            521,
+            523,
+            524
+          ],
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            522,
+            524,
+            520,
+            518
+          ]
+        ],
+        "minClearanceMm": 12.06,
+        "minClearanceAt": {
+          "vertex": 265,
+          "at": [
+            -0.449,
+            -0.213,
+            1.105
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusTop=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 87,
+        "maxEdgeStretch": 1.337,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            39,
+            40,
+            24,
+            23,
+            "x",
+            324,
+            322,
+            323
+          ],
+          [
+            39,
+            40,
+            24,
+            23,
+            "x",
+            329,
+            330,
+            324,
+            323
+          ]
+        ],
+        "minClearanceMm": 12.06,
+        "minClearanceAt": {
+          "vertex": 265,
+          "at": [
+            -0.449,
+            -0.213,
+            1.105
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 74,
+        "maxEdgeStretch": 1.052,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            522,
+            521,
+            523,
+            524
+          ],
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            522,
+            524,
+            520,
+            518
+          ]
+        ],
+        "minClearanceMm": 7.82,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 70,
+        "maxEdgeStretch": 1.038,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            487,
+            485,
+            486,
+            488,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.85,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 68,
+        "maxEdgeStretch": 1.024,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            487,
+            485,
+            486,
+            488,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.87,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.012,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.9,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 83,
+        "maxEdgeStretch": 1.092,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            89,
+            90,
+            74,
+            73,
+            "x",
+            510,
+            509,
+            511,
+            512
+          ],
+          [
+            89,
+            90,
+            74,
+            73,
+            "x",
+            509,
+            483,
+            485,
+            511
+          ]
+        ],
+        "minClearanceMm": 7.98,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 101,
+        "maxEdgeStretch": 1.184,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            89,
+            90,
+            74,
+            73,
+            "x",
+            509,
+            483,
+            485,
+            511
+          ],
+          [
+            89,
+            90,
+            74,
+            73,
+            "x",
+            510,
+            509,
+            511,
+            512
+          ]
+        ],
+        "minClearanceMm": 8.03,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 116,
+        "maxEdgeStretch": 1.277,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            531,
+            529,
+            525,
+            527
+          ]
+        ],
+        "minClearanceMm": 8.09,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 138,
+        "maxEdgeStretch": 1.371,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            531,
+            529,
+            525,
+            527
+          ],
+          [
+            73,
+            74,
+            58,
+            57,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 8.15,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 99,
+        "maxEdgeStretch": 1.138,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            120,
+            121,
+            105,
+            104,
+            "x",
+            502,
+            501,
+            503,
+            504
+          ],
+          [
+            120,
+            121,
+            105,
+            104,
+            "x",
+            504,
+            503,
+            505,
+            506
+          ]
+        ],
+        "minClearanceMm": 8.64,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.484,
+            -0.14,
+            1.098
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 102,
+        "maxEdgeStretch": 1.087,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            529,
+            530,
+            526,
+            525
+          ],
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 8.65,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.478,
+            -0.129,
+            1.105
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 110,
+        "maxEdgeStretch": 1.055,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            529,
+            530,
+            526,
+            525
+          ],
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 8.14,
+        "minClearanceAt": {
+          "vertex": 178,
+          "at": [
+            -0.478,
+            -0.124,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 72,
+        "maxEdgeStretch": 1.025,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.96,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.465,
+            -0.108,
+            1.117
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 62,
+        "maxEdgeStretch": 1.136,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            487,
+            485,
+            486,
+            488,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 8.21,
+        "minClearanceAt": {
+          "vertex": 182,
+          "at": [
+            -0.432,
+            -0.133,
+            1.183
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 62,
+        "maxEdgeStretch": 1.275,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            483,
+            481,
+            482,
+            484,
+            "x",
+            529,
+            530,
+            526,
+            525
+          ],
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 8.08,
+        "minClearanceAt": {
+          "vertex": 182,
+          "at": [
+            -0.428,
+            -0.128,
+            1.188
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 62,
+        "maxEdgeStretch": 1.417,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            483,
+            481,
+            482,
+            484,
+            "x",
+            529,
+            530,
+            526,
+            525
+          ]
+        ],
+        "minClearanceMm": 7.77,
+        "minClearanceAt": {
+          "vertex": 182,
+          "at": [
+            -0.425,
+            -0.122,
+            1.192
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 60,
+        "maxEdgeStretch": 1.561,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            483,
+            481,
+            482,
+            484,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            507,
+            481,
+            483,
+            509,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.37,
+        "minClearanceAt": {
+          "vertex": 182,
+          "at": [
+            -0.421,
+            -0.117,
+            1.197
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 240,
+        "maxEdgeStretch": 1.122,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            136,
+            152,
+            151,
+            135,
+            "x",
+            330,
+            331,
+            325,
+            324
+          ],
+          [
+            136,
+            152,
+            151,
+            135,
+            "x",
+            326,
+            322,
+            325
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 174,
+        "maxEdgeStretch": 1.092,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            72,
+            73,
+            57,
+            56,
+            "x",
+            452,
+            451,
+            453,
+            454
+          ],
+          [
+            72,
+            73,
+            57,
+            56,
+            "x",
+            427,
+            425,
+            426,
+            428
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 269,
+        "maxEdgeStretch": 1.061,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            24,
+            25,
+            9,
+            8,
+            "x",
+            332,
+            333,
+            327,
+            326
+          ],
+          [
+            24,
+            25,
+            9,
+            8,
+            "x",
+            332,
+            334,
+            333
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 265,
+        "maxEdgeStretch": 1.03,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            24,
+            25,
+            9,
+            8,
+            "x",
+            332,
+            333,
+            327,
+            326
+          ],
+          [
+            24,
+            25,
+            9,
+            8,
+            "x",
+            327,
+            322,
+            326
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 62,
+        "maxEdgeStretch": 1.125,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 60,
+        "maxEdgeStretch": 1.25,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 60,
+        "maxEdgeStretch": 1.375,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "Detail=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 57,
+        "maxEdgeStretch": 1.5,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            487,
+            485,
+            486,
+            488,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 262,
+        "maxEdgeStretch": 1.152,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            72,
+            73,
+            57,
+            56,
+            "x",
+            452,
+            451,
+            453,
+            454
+          ],
+          [
+            72,
+            73,
+            57,
+            56,
+            "x",
+            427,
+            425,
+            426,
+            428
+          ]
+        ],
+        "minClearanceMm": 6.84,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.483,
+            -0.141,
+            1.099
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 122,
+        "maxEdgeStretch": 1.595,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            36,
+            37,
+            21,
+            20,
+            "x",
+            311,
+            309,
+            310
+          ],
+          [
+            36,
+            37,
+            21,
+            20,
+            "x",
+            316,
+            317,
+            311,
+            310
+          ]
+        ],
+        "minClearanceMm": 14.3,
+        "minClearanceAt": {
+          "vertex": 182,
+          "at": [
+            -0.422,
+            -0.12,
+            1.203
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 64,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.671,
+        "selfIntersectionExamples": [
+          [
+            509,
+            483,
+            485,
+            511,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ],
+          [
+            511,
+            485,
+            487,
+            513,
+            "x",
+            530,
+            529,
+            531,
+            532
+          ]
+        ],
+        "minClearanceMm": 7.92,
+        "minClearanceAt": {
+          "vertex": 177,
+          "at": [
+            -0.459,
+            -0.097,
+            1.124
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)"
+      }
+    ]
+  },
+  "notes": {
+    "reference": "parts/f1-vambrace"
+  },
+  "mirrorOf": "f1-vambrace-l",
+  "keyframing": "linear between the old end shapes",
+  "charmSeats": [
+    {
+      "name": "accent1",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.4166,
+        1.1486,
+        0.1704
+      ],
+      "normal": [
+        0.5086,
+        0.4585,
+        0.7287
+      ],
+      "up": [
+        -0.2624,
+        0.8887,
+        -0.376
+      ],
+      "scale": 1.0,
+      "clearanceMm": 14.4,
+      "pin": {
+        "triangle": [
+          72,
+          57,
+          56
+        ],
+        "bary": [
+          0.333333,
+          0.333333,
+          0.333333
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 68.413
+      }
+    },
+    {
+      "name": "accent2",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.4273,
+        1.1018,
+        0.0969
+      ],
+      "normal": [
+        -0.3594,
+        -0.9331,
+        -0.0079
+      ],
+      "up": [
+        -0.9329,
+        0.3595,
+        -0.0205
+      ],
+      "scale": 1.0,
+      "clearanceMm": 16.2,
+      "pin": {
+        "triangle": [
+          62,
+          63,
+          47
+        ],
+        "bary": [
+          0.333334,
+          0.333328,
+          0.333339
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": -24.111
+      }
+    },
+    {
+      "name": "accent3",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.415,
+        1.1016,
+        0.1766
+      ],
+      "normal": [
+        0.817,
+        -0.2786,
+        0.5048
+      ],
+      "up": [
+        0.237,
+        0.9604,
+        0.1464
+      ],
+      "scale": 1.0,
+      "clearanceMm": 22.7,
+      "pin": {
+        "triangle": [
+          74,
+          75,
+          59
+        ],
+        "bary": [
+          0.33334,
+          0.333326,
+          0.333334
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 150.554
+      }
+    }
+  ],
+  "charmSeatsWhy": [
+    "no hero seat: its widest clear spot is 45.8 mm, the hero needs 46.2 mm, flat and facing the way the part shows"
+  ]
+}

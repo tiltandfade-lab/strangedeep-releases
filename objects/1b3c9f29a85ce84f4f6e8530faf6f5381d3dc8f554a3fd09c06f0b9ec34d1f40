@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "id": "medium-hose",
+  "displayName": "Padded hose (medium under-slot)",
+  "layer": "under",
+  "attach": "soft",
+  "bones": [
+    "calf_l",
+    "calf_r",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "head",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 1031,
+  "weightClass": "medium",
+  "triangles": 1495,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "thin hose",
+      "at1": "thick padded hose",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.0,
+          0.8406,
+          0.0538
+        ],
+        "end": [
+          0.0,
+          0.8376,
+          0.0542
+        ],
+        "lengthMm": 3.0
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 7588.5,
+  "mass": 1138.27,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "medium-hose.glb",
+    "glbBytes": 163428,
+    "glbSha256": "42aab0cb59a458c98c6da02e4fdb1b9f10ae284801d0a375f62383005e1dc368",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "medium-hose.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1084,
+          "triangles": 1495,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 1495,
+      "vertices": 1084,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.0015,
+          "verticesMoved": 700
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00075,
+          "verticesMoved": 700
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00075,
+          "verticesMoved": 590
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.0015,
+          "verticesMoved": 597
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "calf_l": 271,
+        "calf_r": 263,
+        "clavicle_l": 53,
+        "clavicle_r": 49,
+        "foot_l": 147,
+        "foot_r": 36,
+        "head": 36,
+        "neck_01": 96,
+        "pelvis": 354,
+        "spine_01": 221,
+        "spine_02": 93,
+        "spine_03": 135,
+        "thigh_l": 331,
+        "thigh_r": 330,
+        "upperarm_l": 35,
+        "upperarm_r": 35
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Legs under-slot for medium armour: padded hose to just above the ankle (walnut-parlour-jack's quilted legs). Bends with the body.",
+  "slot": "legs",
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "thin hose",
+      "padded hose",
+      "thick padded hose"
+    ]
+  }
+}

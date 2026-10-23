@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "id": "sm-doll-hair",
+  "displayName": "Doll hair (painted)",
+  "family": "SM",
+  "familyName": "Starter masks",
+  "tier": 1,
+  "category": "head",
+  "slot": "helm",
+  "attach": "rigid",
+  "bones": [
+    "head"
+  ],
+  "allowedRegions": [
+    "head"
+  ],
+  "defaultRegion": "head",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.648,
+      -0.0597
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "close",
+      "at1": "full",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisUp",
+      "at0": "flat",
+      "at1": "tall bun",
+      "default": 0.2,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "regionClasses": {
+    "0": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "coverageCm2": 677.5,
+  "mass": 677.5,
+  "weightClass": "light",
+  "triangles": 648,
+  "complexity": 7,
+  "mutateTags": [
+    "light",
+    "round",
+    "weird"
+  ],
+  "references": [],
+  "build": {
+    "glb": "sm-doll-hair.glb",
+    "glbSha256": "1848add219c5c53fa600b36326f47241257e65dbaf08ad8078ba997b93bf3628",
+    "glbBytes": 60308,
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "generatorSha256": "cb9afa88424a01e7caca93fc5e948a7f420589a7f41678ea48ed9e425bc16014",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sm-doll-hair.glb",
+      "targetNames": [
+        "Radius",
+        "AxisUp"
+      ],
+      "primitives": [
+        {
+          "vertices": 410,
+          "triangles": 648,
+          "targets": 2,
+          "material": 0
+        }
+      ],
+      "triangles": 648,
+      "vertices": 410,
+      "targets": {
+        "Radius": {
+          "maxDeltaM": 0.016,
+          "verticesMoved": 410
+        },
+        "AxisUp": {
+          "maxDeltaM": 0.03317,
+          "verticesMoved": 304
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 410
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "basis",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 6.75,
+        "minClearanceAt": {
+          "vertex": 222,
+          "at": [
+            0.0,
+            0.027,
+            1.726
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.084,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 14.6,
+        "minClearanceAt": {
+          "vertex": 222,
+          "at": [
+            0.0,
+            0.033,
+            1.731
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.168,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 22.46,
+        "minClearanceAt": {
+          "vertex": 222,
+          "at": [
+            0.0,
+            0.039,
+            1.737
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.212,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 6.88,
+        "minClearanceAt": {
+          "vertex": 210,
+          "at": [
+            0.0,
+            -0.142,
+            1.722
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.484,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 6.88,
+        "minClearanceAt": {
+          "vertex": 210,
+          "at": [
+            0.0,
+            -0.142,
+            1.722
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.278,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 14.86,
+        "minClearanceAt": {
+          "vertex": 210,
+          "at": [
+            0.0,
+            -0.148,
+            1.728
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.606,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 22.83,
+        "minClearanceAt": {
+          "vertex": 210,
+          "at": [
+            0.0,
+            -0.154,
+            1.733
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.116,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.617,
+        "minClearanceMm": 11.67,
+        "minClearanceAt": {
+          "vertex": 210,
+          "at": [
+            0.0,
+            -0.146,
+            1.725
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "mask": true,
+    "ruling": "Starter mask improvement pass, Adam, October 19.",
+    "material": "Moulded doll hair in a dark paint."
+  },
+  "materialSlots": [
+    "hair"
+  ]
+}

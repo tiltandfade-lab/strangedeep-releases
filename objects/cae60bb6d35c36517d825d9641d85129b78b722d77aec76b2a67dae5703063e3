@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "id": "light-trousers",
+  "displayName": "Trousers (light under-slot)",
+  "layer": "under",
+  "attach": "soft",
+  "bones": [
+    "calf_l",
+    "calf_r",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "head",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 1034,
+  "weightClass": "light",
+  "triangles": 1501,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "thin linen",
+      "at1": "quilted",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.0,
+          0.8406,
+          0.0538
+        ],
+        "end": [
+          0.0,
+          0.8376,
+          0.0542
+        ],
+        "lengthMm": 3.0
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 7583.6,
+  "mass": 1137.54,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "light-trousers.glb",
+    "glbBytes": 170360,
+    "glbSha256": "366d32eb17d92d0549dd2c1fc408355dfa0a6fb9b3053badb0121971fb45883f",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "light-trousers.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1088,
+          "triangles": 1501,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 1501,
+      "vertices": 1088,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.001,
+          "verticesMoved": 707
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.0005,
+          "verticesMoved": 707
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.001,
+          "verticesMoved": 707
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.002,
+          "verticesMoved": 707
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "calf_l": 270,
+        "calf_r": 266,
+        "clavicle_l": 51,
+        "clavicle_r": 47,
+        "foot_l": 144,
+        "foot_r": 36,
+        "head": 34,
+        "neck_01": 92,
+        "pelvis": 360,
+        "spine_01": 221,
+        "spine_02": 90,
+        "spine_03": 130,
+        "thigh_l": 336,
+        "thigh_r": 335,
+        "upperarm_l": 34,
+        "upperarm_r": 34
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Legs under-slot for light armour: trousers to just above the ankle (tideglass-drifter, foresters-line). Bends with the body.",
+  "slot": "legs",
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "thin linen",
+      "linen",
+      "quilted"
+    ]
+  }
+}

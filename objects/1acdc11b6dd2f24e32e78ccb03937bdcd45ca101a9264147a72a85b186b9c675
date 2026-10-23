@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-glove",
+  "displayName": "Glove (leather, measured)",
+  "layer": "glove",
+  "attach": "soft",
+  "bones": [
+    "hand_l",
+    "hand_r",
+    "index_01_l",
+    "index_01_r",
+    "index_02_l",
+    "index_02_r",
+    "index_03_l",
+    "index_03_r",
+    "lowerarm_l",
+    "lowerarm_r",
+    "middle_01_l",
+    "middle_01_r",
+    "middle_02_l",
+    "middle_02_r",
+    "middle_03_l",
+    "middle_03_r",
+    "pinky_01_l",
+    "pinky_01_r",
+    "pinky_02_l",
+    "pinky_02_r",
+    "pinky_03_l",
+    "pinky_03_r",
+    "ring_01_l",
+    "ring_01_r",
+    "ring_02_l",
+    "ring_02_r",
+    "ring_03_l",
+    "ring_03_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "thumb_02_l",
+    "thumb_02_r",
+    "thumb_03_l",
+    "thumb_03_r"
+  ],
+  "vertices": 2053,
+  "weightClass": "light",
+  "triangles": 3189,
+  "materials": [
+    "leather"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "skin-tight glove",
+      "at1": "thick gauntlet glove",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.5012,
+          1.027,
+          0.2942
+        ],
+        "end": [
+          -0.4861,
+          1.014,
+          0.296
+        ],
+        "lengthMm": 20.0
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      },
+      "oldDefault": 0.75
+    }
+  ],
+  "regionClasses": {
+    "0": "leather"
+  },
+  "materialClasses": [
+    "leather"
+  ],
+  "coverageCm2": 904.6,
+  "mass": 271.38,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-glove.glb",
+    "glbBytes": 403620,
+    "glbSha256": "42cd123f63a8b422163a029ba82ec3a0d77eaa013bf2edbabd6126a0ae0447ca",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-glove.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 2595,
+          "triangles": 3189,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 3189,
+      "vertices": 2595,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.0141,
+          "verticesMoved": 2595
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00705,
+          "verticesMoved": 2595
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00143,
+          "verticesMoved": 2595
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.00287,
+          "verticesMoved": 2595
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "hand_l": 477,
+        "hand_r": 475,
+        "index_01_l": 197,
+        "index_01_r": 197,
+        "index_02_l": 141,
+        "index_02_r": 141,
+        "index_03_l": 130,
+        "index_03_r": 130,
+        "lowerarm_l": 96,
+        "lowerarm_r": 96,
+        "middle_01_l": 218,
+        "middle_01_r": 214,
+        "middle_02_l": 110,
+        "middle_02_r": 110,
+        "middle_03_l": 107,
+        "middle_03_r": 107,
+        "pinky_01_l": 148,
+        "pinky_01_r": 148,
+        "pinky_02_l": 89,
+        "pinky_02_r": 89,
+        "pinky_03_l": 95,
+        "pinky_03_r": 95,
+        "ring_01_l": 195,
+        "ring_01_r": 195,
+        "ring_02_l": 101,
+        "ring_02_r": 101,
+        "ring_03_l": 120,
+        "ring_03_r": 120,
+        "thumb_01_l": 137,
+        "thumb_01_r": 137,
+        "thumb_02_l": 175,
+        "thumb_02_r": 175,
+        "thumb_03_l": 136,
+        "thumb_03_r": 136
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Gloves slot. The body's hand grown to a measured real glove (tools/armor-suit/glove-ratios.json); bends with the hand.",
+  "growthMm": {
+    "mean": 4.82,
+    "max": 13.6
+  },
+  "keyframing": "sampled from the builder at every keyframe"
+}

@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "id": "light-tunic",
+  "displayName": "Tunic (light under-slot)",
+  "layer": "under",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 1952,
+  "weightClass": "light",
+  "triangles": 3317,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "thin linen",
+      "at1": "quilted",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.0129,
+          1.275,
+          0.1444
+        ],
+        "end": [
+          -0.0124,
+          1.2758,
+          0.1477
+        ],
+        "lengthMm": 3.5
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "tucked skirt",
+      "at1": "full skirt",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.1976,
+          0.84,
+          0.03
+        ],
+        "end": [
+          -0.2856,
+          0.84,
+          0.03
+        ],
+        "lengthMm": 88.0
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 8241.1,
+  "mass": 1236.16,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "10c450c160b3e69b2e28320d659c53f7ed340f7c763c3a975ae78d81c4a2c568",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "light-tunic.glb",
+    "glbBytes": 329780,
+    "glbSha256": "1681c233480b9fb12926c79c5914b595a6e8b2dca508e6cb04844f5f14330af3",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "light-tunic.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 2168,
+          "triangles": 3317,
+          "targets": 8,
+          "material": 0
+        }
+      ],
+      "triangles": 3317,
+      "vertices": 2168,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.001,
+          "verticesMoved": 618
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.001,
+          "verticesMoved": 618
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00125,
+          "verticesMoved": 965
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.0025,
+          "verticesMoved": 965
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.04,
+          "verticesMoved": 536
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.02,
+          "verticesMoved": 536
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.024,
+          "verticesMoved": 536
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.048,
+          "verticesMoved": 536
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 282,
+        "clavicle_r": 274,
+        "hand_l": 71,
+        "hand_r": 72,
+        "head": 55,
+        "lowerarm_l": 215,
+        "lowerarm_r": 216,
+        "neck_01": 181,
+        "pelvis": 815,
+        "spine_01": 663,
+        "spine_02": 433,
+        "spine_03": 813,
+        "thigh_l": 159,
+        "thigh_r": 152,
+        "thumb_01_l": 3,
+        "thumb_01_r": 3,
+        "upperarm_l": 384,
+        "upperarm_r": 391
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Chest under-slot for light armour: a sleeved tunic to the top of the thigh (ravenglass-coat, red-bloom-veil, loomshift-runner, dartglass-runner). Bends with the body.",
+  "slot": "chest",
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "thin linen",
+      "linen",
+      "quilted"
+    ],
+    "RadiusBottom": [
+      "tucked skirt",
+      "A-line skirt",
+      "full skirt"
+    ]
+  }
+}

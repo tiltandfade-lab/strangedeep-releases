@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-boot-foot-l",
+  "displayName": "Boot foot (left)",
+  "kind": "shell",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "foot"
+  ],
+  "slot": "feet",
+  "attach": "lames",
+  "bones": [
+    "foot_l",
+    "ball_l"
+  ],
+  "allowedRegions": [
+    "foot_l"
+  ],
+  "defaultRegion": "foot_l",
+  "pivot": {
+    "point": [
+      0.1966,
+      -0.1285,
+      0.0761
+    ],
+    "normal": [
+      0.0,
+      -0.1683,
+      0.9857
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "fitToGirth": null,
+  "twin": {
+    "kind": "mirror",
+    "pairedId": "f1-boot-foot-r"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      -0.9857,
+      -0.1683
+    ]
+  },
+  "handles": [
+    {
+      "name": "AxisForward",
+      "at0": "round toe",
+      "at1": "long or pointed",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Radius",
+      "at0": "slim",
+      "at1": "broad",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisUp",
+      "at0": "low instep",
+      "at1": "high instep",
+      "default": 0.2,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal",
+    "leather"
+  ],
+  "triangles": 384,
+  "mutateTags": [
+    "heavy",
+    "plain"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-sabaton/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-boot-foot-l.glb",
+    "glbSha256": "4c8f9b26a5e2d934886f25feef4bc5e5b28cd05792506586eb40fe80918df246",
+    "glbBytes": 58076,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-boot-foot-l.glb",
+      "targetNames": [
+        "AxisForward",
+        "Radius",
+        "AxisUp"
+      ],
+      "primitives": [
+        {
+          "vertices": 298,
+          "triangles": 344,
+          "targets": 3,
+          "material": 0
+        },
+        {
+          "vertices": 44,
+          "triangles": 40,
+          "targets": 3,
+          "material": 1
+        }
+      ],
+      "triangles": 384,
+      "vertices": 342,
+      "targets": {
+        "AxisForward": {
+          "maxDeltaM": 0.04335,
+          "verticesMoved": 158
+        },
+        "Radius": {
+          "maxDeltaM": 0.01726,
+          "verticesMoved": 342
+        },
+        "AxisUp": {
+          "maxDeltaM": 0.01047,
+          "verticesMoved": 123
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "ball_l": 170,
+        "foot_l": 172
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal",
+        "leather"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      },
+      "body": {
+        "pass": true,
+        "worst": {
+          "flippedFaces": 0,
+          "degenerateFaces": 0,
+          "selfIntersections": 0,
+          "ringFailures": 0,
+          "bodyPokesThrough": 0,
+          "minClearanceMm": 6.74,
+          "minOwnBoneWeight": 0.664,
+          "maxEdgeStretch": 1.713
+        }
+      }
+    },
+    "budget": {
+      "triangles": 384,
+      "limit": 1200,
+      "pass": true
+    }
+  },
+  "notes": {},
+  "plates": [
+    {
+      "plate": 1,
+      "bone": "foot_l"
+    },
+    {
+      "plate": 2,
+      "bone": "ball_l",
+      "role": "toe cap"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-ring-stack",
+  "displayName": "Ring stack",
+  "kind": "piece",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "any"
+  ],
+  "slot": "inherits",
+  "attach": "rigid",
+  "bones": "any",
+  "allowedRegions": [
+    "neck",
+    "forearm",
+    "calf",
+    "ankle",
+    "wrist"
+  ],
+  "defaultRegion": "neck",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": {
+    "morph": "Fit",
+    "innerRadiusM": [
+      0.03,
+      0.18
+    ],
+    "rule": "Fit = (girth radius + clearance - innerRadiusM[0]) / (innerRadiusM[1] - innerRadiusM[0])"
+  },
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "one ring",
+      "at1": "four",
+      "default": 0.67,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "RadiusTop",
+      "at0": "even",
+      "at1": "flared at the top",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Radius",
+      "at0": "fits",
+      "at1": "loose",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 384,
+  "mutateTags": [
+    "heavy",
+    "plain"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-gorget/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-ring-stack.glb",
+    "glbSha256": "c72163a72f0fbf7be073167fa7c4419997688a5dfe98da9298571daf6c50372c",
+    "glbBytes": 36156,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-ring-stack.glb",
+      "targetNames": [
+        "BoneLength",
+        "RadiusTop",
+        "Radius",
+        "Fit"
+      ],
+      "primitives": [
+        {
+          "vertices": 384,
+          "triangles": 384,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 384,
+      "vertices": 384,
+      "targets": {
+        "BoneLength": {
+          "maxDeltaM": 0.045,
+          "verticesMoved": 288
+        },
+        "RadiusTop": {
+          "maxDeltaM": 0.014,
+          "verticesMoved": 48
+        },
+        "Radius": {
+          "maxDeltaM": 0.01,
+          "verticesMoved": 384
+        },
+        "Fit": {
+          "maxDeltaM": 0.15,
+          "verticesMoved": 384
+        }
+      },
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      }
+    },
+    "budget": {
+      "triangles": 384,
+      "limit": 400,
+      "pass": true
+    }
+  },
+  "notes": {
+    "makes": "gorget, boot shaft, cuff bands, greave bands",
+    "fit": "Fit sets the bottom (innermost) ring; each ring above is 3.5 mm wider."
+  }
+}

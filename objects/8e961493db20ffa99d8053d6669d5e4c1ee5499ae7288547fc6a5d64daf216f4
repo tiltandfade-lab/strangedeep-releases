@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-rivet-row",
+  "displayName": "Rivet row",
+  "kind": "piece",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "any"
+  ],
+  "slot": "inherits",
+  "attach": "rigid",
+  "bones": "any",
+  "allowedRegions": [
+    "any"
+  ],
+  "defaultRegion": "any",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": null,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "three rivets",
+      "at1": "nine",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Radius",
+      "at0": "pin",
+      "at1": "boss",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 360,
+  "mutateTags": [
+    "plain"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-gorget/turnaround.jpg",
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-knuckle-plate/turnaround.jpg",
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-vambrace/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-rivet-row.glb",
+    "glbSha256": "620e9248460dedda10e94fc5615386d16babc97d995b52f9b5116231bfc125fe",
+    "glbBytes": 39760,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-rivet-row.glb",
+      "targetNames": [
+        "BoneLength",
+        "Radius"
+      ],
+      "primitives": [
+        {
+          "vertices": 513,
+          "triangles": 360,
+          "targets": 2,
+          "material": 0
+        }
+      ],
+      "triangles": 360,
+      "vertices": 513,
+      "targets": {
+        "BoneLength": {
+          "maxDeltaM": 0.012,
+          "verticesMoved": 342
+        },
+        "Radius": {
+          "maxDeltaM": 0.004,
+          "verticesMoved": 513
+        }
+      },
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      }
+    },
+    "budget": {
+      "triangles": 360,
+      "limit": 400,
+      "pass": true
+    }
+  },
+  "notes": {
+    "makes": "riveted bands, brigandine rows, finger plates",
+    "sunk": "Rivets not yet drawn out sit 12 mm under the surface, inside the host."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-base-hood",
+  "displayName": "Sack hood (base layer)",
+  "layer": "base",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "head",
+    "neck_01",
+    "spine_03"
+  ],
+  "vertices": 289,
+  "weightClass": "light",
+  "triangles": 480,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 0.0,
+  "mass": 0.0,
+  "countsTowardItem": false,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_family.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "4ecc92c18a429a9b1d9d42637373fb56ce64b933f7ada64e8c8fb13fb86fa66a",
+    "librarySha256": "2aa2876616398e05f72968104f81da9907178b202942dbc990dee463b43cb525",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-base-hood.glb",
+    "glbBytes": 33080,
+    "glbSha256": "4f8d9188a60ece6f51cd7fe9935d7fbc67a78d2f49334e9087f845c6660ec077",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-base-hood.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 37,
+        "clavicle_r": 34,
+        "head": 271,
+        "neck_01": 154,
+        "spine_03": 88
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Base layer (founder ruling, October 11). Every vertex carries the body's own bone blend (at most four bones), so it bends exactly like the skin under it."
+}
