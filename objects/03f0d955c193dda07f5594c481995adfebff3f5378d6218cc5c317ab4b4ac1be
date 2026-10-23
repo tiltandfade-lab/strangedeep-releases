@@ -1,0 +1,263 @@
+{
+ "schemaVersion": 1,
+ "effect": "evasive-stance",
+ "source": "Generated from EVASIVE_STANCE_MATRIX_CASES by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-evasive-coverage",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-evasive",
+   "fields": {},
+   "previewKey": "evasivePreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-evasive",
+   "fields": {
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Action",
+     "evasion": 15,
+     "missiles": false,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Action",
+     "evasion": 18,
+     "missiles": false,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Bonus Action",
+     "evasion": 18,
+     "missiles": false,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Bonus Action",
+     "evasion": 21,
+     "missiles": false,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Bonus Action",
+     "evasion": 21,
+     "missiles": true,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Free",
+     "evasion": 21,
+     "missiles": true,
+     "ticks": 0,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Free",
+     "evasion": 25,
+     "missiles": true,
+     "ticks": 0,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-precision",
+    "level": 8,
+    "fork": "precision",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Free",
+     "evasion": 28,
+     "missiles": true,
+     "ticks": 0,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-precision",
+    "level": 9,
+    "fork": "precision",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Free",
+     "evasion": 31,
+     "missiles": true,
+     "ticks": 0,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-precision",
+    "level": 10,
+    "fork": "precision",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "cost": "Free",
+     "evasion": 35,
+     "missiles": true,
+     "ticks": 0,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

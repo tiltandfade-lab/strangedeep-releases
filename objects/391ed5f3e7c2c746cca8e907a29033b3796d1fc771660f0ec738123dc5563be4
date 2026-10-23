@@ -1,0 +1,154 @@
+[gd_resource type="Resource" script_class="EffectRecipe" format=3]
+
+[ext_resource type="Script" path="res://src/EffectLayer.cs" id="1_x2hs1"]
+[ext_resource type="Texture2D" path="res://assets/vfx/library/kenney-particles/smoke_04.png" id="2_pwyv2"]
+[ext_resource type="Texture2D" path="res://assets/vfx/library/kenney-particles/dirt_03.png" id="3_rna1m"]
+[ext_resource type="Texture2D" path="res://assets/vfx/library/kenney-particles/spark_05.png" id="4_yk5ak"]
+[ext_resource type="Script" path="res://src/EffectRecipe.cs" id="5_1isjv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojj34"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_pwyv2")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_sj2cb"]
+material = SubResource("StandardMaterial3D_ojj34")
+
+[sub_resource type="Curve" id="Curve_r4ax4"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ntyh3"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.68, 0.59, 0.48, 0, 0.68, 0.59, 0.48, 0.5, 0.68, 0.59, 0.48, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_yee2l"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "damping_min", "damping_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(926004076),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 25, 0, -1, 24, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 23, 20, 24, 21, 0),
+"variants": [0, 4, 0.45, true, 1.0, 31, SubResource("QuadMesh_sj2cb"), 1, 0.08, Vector3(0.9119215, 0.41036466, 0), 60.0, Vector3(0, 0, 0), 0.27, 0.63, 1.2, 1.5, -180.0, 180.0, 0.22399999, 0.41599998, SubResource("Curve_r4ax4"), SubResource("Gradient_ntyh3")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_sij10"]
+script = ExtResource("1_x2hs1")
+Label = "Dust"
+Delay = 0.03
+Duration = 0.45
+Offset = Vector3(0, 0.4, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_yee2l")
+AlignToFloorTravel = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm8h0"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_rna1m")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_w0u1o"]
+material = SubResource("StandardMaterial3D_mm8h0")
+
+[sub_resource type="Curve" id="Curve_xcowh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_v7yr5"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.54, 0.51, 0.47, 0, 0.54, 0.51, 0.47, 0.95, 0.54, 0.51, 0.47, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_3p34w"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(784006403),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 23, 0, -1, 22, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 0),
+"variants": [0, 6, 0.4, true, 1.0, 31, SubResource("QuadMesh_w0u1o"), 1, 0.08, Vector3(0.8192319, 0.5734623, 0), 60.0, Vector3(0, -7, 0), 1.14, 2.6599998, -180.0, 180.0, 0.049, 0.091, SubResource("Curve_xcowh"), SubResource("Gradient_v7yr5")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_qg51f"]
+script = ExtResource("1_x2hs1")
+Label = "Chips"
+Delay = 0.03
+Duration = 0.4
+Offset = Vector3(0, 0.7, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_3p34w")
+AlignToFloorTravel = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bqm6"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_yk5ak")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_3ja1j"]
+material = SubResource("StandardMaterial3D_8bqm6")
+
+[sub_resource type="Curve" id="Curve_rlq3c"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_pgb1v"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.86, 0.93, 1, 0, 0.86, 0.93, 1, 0.9, 0.86, 0.93, 1, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_5uder"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(2103077021),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 23, 0, -1, 22, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 0),
+"variants": [0, 3, 0.22, true, 1.0, 31, SubResource("QuadMesh_3ja1j"), 1, 0.08, Vector3(0.92847675, 0.3713907, 0), 70.0, Vector3(0, -3, 0), 1.44, 3.3600001, -180.0, 180.0, 0.063, 0.117, SubResource("Curve_rlq3c"), SubResource("Gradient_pgb1v")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_utfaf"]
+script = ExtResource("1_x2hs1")
+Label = "Sparks"
+Blend = 1
+Delay = 0.03
+Duration = 0.22
+Offset = Vector3(0, 0.75, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_5uder")
+AlignToFloorTravel = true
+
+[resource]
+script = ExtResource("5_1isjv")
+Title = "Soft Weapon Hit"
+Layers = Array[ExtResource("1_x2hs1")]([SubResource("Resource_sij10"), SubResource("Resource_qg51f"), SubResource("Resource_utfaf")])

@@ -1,0 +1,32 @@
+{
+  "$schema": "./_stats.schema.json",
+  "schemaVersion": 1,
+  "what": "Every stat name an ability record's rank numbers may use, with its unit, allowed range, sort group and the two player-text keys (godot/text/abilities.csv) that word a rise or a fall of {n}; a `flag` stat (0 or 1) has no {n}, and its two keys are the whole line for 1 and for 0. A record naming a stat not listed here, or a value outside its range, fails to load. docs/ABILITY-STATS.md is generated from this file.",
+  "stats": [
+    {"id": "damagePercent", "unit": "percent", "range": {"min": 1, "max": 200}, "group": 10, "textKeys": {"positive": "stat.damage-percent.pos", "negative": "stat.damage-percent.neg"}},
+    {"id": "accuracyBonus", "unit": "flat", "range": {"min": 0, "max": 20}, "group": 20, "textKeys": {"positive": "stat.accuracy-bonus.pos", "negative": "stat.accuracy-bonus.neg"}},
+    {"id": "rangeCells", "unit": "tiles", "range": {"min": 1, "max": 12}, "group": 30, "textKeys": {"positive": "stat.range-cells.pos", "negative": "stat.range-cells.neg"}},
+    {"id": "arcCells", "unit": "tiles", "range": {"min": 1, "max": 8}, "group": 31, "textKeys": {"positive": "stat.arc-cells.pos", "negative": "stat.arc-cells.neg"}},
+    {"id": "maximumTargets", "unit": "flat", "range": {"min": 1, "max": 8}, "group": 40, "textKeys": {"positive": "stat.maximum-targets.pos", "negative": "stat.maximum-targets.neg"}},
+    {"id": "extraTargets", "unit": "flat", "range": {"min": 0, "max": 5}, "group": 41, "textKeys": {"positive": "stat.extra-targets.pos", "negative": "stat.extra-targets.neg"}},
+    {"id": "impactBonus", "unit": "flat", "range": {"min": 0, "max": 5}, "group": 50, "textKeys": {"positive": "stat.impact-bonus.pos", "negative": "stat.impact-bonus.neg"}},
+    {"id": "pushTiles", "unit": "tiles", "range": {"min": 0, "max": 5}, "group": 51, "textKeys": {"positive": "stat.push-tiles.pos", "negative": "stat.push-tiles.neg"}},
+    {"id": "stunChancePercent", "unit": "percent", "range": {"min": 0, "max": 100}, "group": 60, "textKeys": {"positive": "stat.stun-chance-percent.pos", "negative": "stat.stun-chance-percent.neg"}},
+    {"id": "slowPenalty", "unit": "tiles", "range": {"min": 1, "max": 6}, "group": 70, "textKeys": {"positive": "stat.slow-penalty.pos", "negative": "stat.slow-penalty.neg"}},
+    {"id": "slowTurns", "unit": "turns", "range": {"min": 1, "max": 4}, "group": 71, "textKeys": {"positive": "stat.slow-turns.pos", "negative": "stat.slow-turns.neg"}},
+    {"id": "blastDamage", "unit": "flat", "range": {"min": 0, "max": 40}, "group": 11, "textKeys": {"positive": "stat.blast-damage.pos", "negative": "stat.blast-damage.neg"}},
+    {"id": "residueDamage", "unit": "flat", "range": {"min": 0, "max": 20}, "group": 12, "textKeys": {"positive": "stat.residue-damage.pos", "negative": "stat.residue-damage.neg"}},
+    {"id": "blastRadius", "unit": "tiles", "range": {"min": 0, "max": 4}, "group": 32, "textKeys": {"positive": "stat.blast-radius.pos", "negative": "stat.blast-radius.neg"}},
+    {"id": "residueRadius", "unit": "tiles", "range": {"min": 0, "max": 4}, "group": 33, "textKeys": {"positive": "stat.residue-radius.pos", "negative": "stat.residue-radius.neg"}},
+    {"id": "residueDuration", "unit": "turns", "range": {"min": 0, "max": 6}, "group": 72, "textKeys": {"positive": "stat.residue-duration.pos", "negative": "stat.residue-duration.neg"}},
+    {"id": "oncePerEncounter", "unit": "flag", "range": {"min": 0, "max": 1}, "group": 90, "textKeys": {"positive": "stat.once-per-encounter.pos", "negative": "stat.once-per-encounter.neg"}},
+    {"id": "pushChancePercent", "unit": "percent", "range": {"min": 0, "max": 100}, "group": 61, "textKeys": {"positive": "stat.push-chance-percent.pos", "negative": "stat.push-chance-percent.neg"}},
+    {"id": "stunTurns", "unit": "turns", "range": {"min": 1, "max": 4}, "group": 62, "textKeys": {"positive": "stat.stun-turns.pos", "negative": "stat.stun-turns.neg"}},
+    {"id": "approachTiles", "unit": "tiles", "range": {"min": 1, "max": 12}, "group": 34, "textKeys": {"positive": "stat.approach-tiles.pos", "negative": "stat.approach-tiles.neg"}},
+    {"id": "impactCap", "unit": "percent", "range": {"min": 0, "max": 100}, "group": 13, "textKeys": {"positive": "stat.impact-cap.pos", "negative": "stat.impact-cap.neg"}},
+    {"id": "uses", "unit": "uses", "range": {"min": 1, "max": 5}, "group": 91, "textKeys": {"positive": "stat.uses.pos", "negative": "stat.uses.neg"}},
+    {"id": "evasionBonus", "unit": "flat", "range": {"min": 1, "max": 50}, "group": 80, "textKeys": {"positive": "stat.evasion-bonus.pos", "negative": "stat.evasion-bonus.neg"}},
+    {"id": "mitigationChancePercent", "unit": "percent", "range": {"min": 1, "max": 100}, "group": 81, "textKeys": {"positive": "stat.mitigation-chance-percent.pos", "negative": "stat.mitigation-chance-percent.neg"}},
+    {"id": "damageReductionPercent", "unit": "percent", "range": {"min": 1, "max": 100}, "group": 82, "textKeys": {"positive": "stat.damage-reduction-percent.pos", "negative": "stat.damage-reduction-percent.neg"}}
+  ]
+}

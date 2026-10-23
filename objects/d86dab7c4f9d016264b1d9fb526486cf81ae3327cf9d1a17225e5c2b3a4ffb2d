@@ -1,0 +1,971 @@
+{
+ "schemaVersion": 1,
+ "effect": "whirlwind",
+ "source": "Generated from WHIRLWIND_CAST_MATRIX_CASES in test/helpers/reviewed-movement-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "attributes": {
+   "strength": 4,
+   "dexterity": 3,
+   "magic": 3,
+   "vitality": 3
+  },
+  "sourcePrerequisites": {
+   "equippedOrdinaryMeleeWeapon": true
+  },
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "whirlwind-payoff",
+  "targetHitPoints": 50,
+  "weapon": "sword",
+  "preview": {
+   "operation": "preview-reviewed-whirlwind",
+   "fields": {
+    "targetId": "$cell:6,3"
+   },
+   "previewKey": "whirlwindPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-whirlwind",
+   "fields": {
+    "targetId": "$cell:6,3",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "whirlwind-lv1",
+    "level": 1,
+    "fork": null,
+    "routeCells": 3,
+    "targetCap": 3,
+    "damagePercent": 60,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       606
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv2",
+    "level": 2,
+    "fork": null,
+    "routeCells": 4,
+    "targetCap": 3,
+    "damagePercent": 60,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       606
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv3",
+    "level": 3,
+    "fork": null,
+    "routeCells": 4,
+    "targetCap": 4,
+    "damagePercent": 60,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       606
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv4",
+    "level": 4,
+    "fork": null,
+    "routeCells": 4,
+    "targetCap": 4,
+    "damagePercent": 65,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       657
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv5",
+    "level": 5,
+    "fork": null,
+    "routeCells": 5,
+    "targetCap": 4,
+    "damagePercent": 65,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       657
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv6",
+    "level": 6,
+    "fork": null,
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 65,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       657
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv7",
+    "level": 7,
+    "fork": null,
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 70,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       707
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv8-power",
+    "level": 8,
+    "fork": "power",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 75,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       758
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv8-frequency",
+    "level": 8,
+    "fork": "frequency",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 70,
+    "usesPerSegment": 2,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       707
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv9-power",
+    "level": 9,
+    "fork": "power",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 80,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       808
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv9-frequency",
+    "level": 9,
+    "fork": "frequency",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 70,
+    "usesPerSegment": 3,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       707
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv10-power",
+    "level": 10,
+    "fork": "power",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 85,
+    "usesPerSegment": 1,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       859
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "whirlwind-lv10-frequency",
+    "level": 10,
+    "fork": "frequency",
+    "routeCells": 5,
+    "targetCap": 5,
+    "damagePercent": 70,
+    "usesPerSegment": 4,
+    "kind": "whirlwind",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "path": [
+     [
+      6,
+      2
+     ],
+     [
+      6,
+      3
+     ]
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       707
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 1,
+     "voluntarySteps": 1,
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,363 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-fire-wall",
+ "source": "Generated from FIRE_WALL_MATRIX_CASES by tools/ability-lane/export-arena-matrix.mjs",
+ "matrix": {
+  "frame": {
+   "hero": [
+    4,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-fire-wall-path",
+  "targetHitPoints": 200,
+  "contentFlag": "reviewedFireWall",
+  "willingAllies": {
+   "ally": 1
+  },
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "preview": {
+   "operation": "preview-fire-wall",
+   "fields": {
+    "startCellId": "$cell:4,6",
+    "endCellId": "$cell:5,6",
+    "protectedAllyId": null
+   },
+   "previewKey": "fireWallPreview"
+  },
+  "cast": {
+   "operation": "reviewed-fire-wall",
+   "fields": {
+    "startCellId": "$cell:4,6",
+    "endCellId": "$cell:5,6",
+    "protectedAllyId": null,
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "fire-wall-1-base",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "span": 2,
+     "rangeCells": 5,
+     "duration": 2,
+     "damage": 2,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-2-base",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "span": 2,
+     "rangeCells": 6,
+     "duration": 2,
+     "damage": 2,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-3-base",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "span": 3,
+     "rangeCells": 6,
+     "duration": 2,
+     "damage": 2,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-4-base",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "span": 3,
+     "rangeCells": 6,
+     "duration": 2,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-5-base",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "span": 4,
+     "rangeCells": 6,
+     "duration": 2,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-6-base",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "span": 4,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-7-base",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "span": 5,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-8-safe-flame",
+    "level": 8,
+    "fork": "safe-flame",
+    "expected": {
+     "span": 5,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-9-safe-flame",
+    "level": 9,
+    "fork": "safe-flame",
+    "expected": {
+     "span": 5,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    },
+    "fields": {
+     "protectedAllyId": "$unit:ally"
+    }
+   },
+   {
+    "id": "fire-wall-10-safe-flame",
+    "level": 10,
+    "fork": "safe-flame",
+    "expected": {
+     "span": 5,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-8-reach",
+    "level": 8,
+    "fork": "reach",
+    "expected": {
+     "span": 6,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-9-reach",
+    "level": 9,
+    "fork": "reach",
+    "expected": {
+     "span": 7,
+     "rangeCells": 6,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   },
+   {
+    "id": "fire-wall-10-reach",
+    "level": 10,
+    "fork": "reach",
+    "expected": {
+     "span": 7,
+     "rangeCells": 8,
+     "duration": 3,
+     "damage": 3,
+     "uses": 1,
+     "events": [
+      {
+       "type": "floor-timed-field-cast"
+      }
+     ],
+     "arenaNote": "Creation grants a finite persisted fire field; exposure/caster expiry/cold replay use focused owner suites."
+    },
+    "units": {
+     "ally": [
+      5,
+      3
+     ]
+    }
+   }
+  ]
+ }
+}

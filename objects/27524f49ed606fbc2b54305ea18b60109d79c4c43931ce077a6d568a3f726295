@@ -1,0 +1,327 @@
+{
+ "schemaVersion": 1,
+ "effect": "bash",
+ "source": "Generated from BASH_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-bash-control",
+  "weapon": "sword",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-bash",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "bashPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-bash",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 100,
+     "pushChance": 0,
+     "pushTiles": 0,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 105,
+     "pushChance": 0,
+     "pushTiles": 0,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 110,
+     "pushChance": 0,
+     "pushTiles": 0,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4-push",
+    "level": 4,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 110,
+     "pushChance": 35,
+     "pushTiles": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5-push",
+    "level": 5,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 110,
+     "pushChance": 45,
+     "pushTiles": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-push",
+    "level": 6,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 120,
+     "pushChance": 45,
+     "pushTiles": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7-push",
+    "level": 7,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 120,
+     "pushChance": 45,
+     "pushTiles": 2,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-push",
+    "level": 8,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 120,
+     "pushChance": 55,
+     "pushTiles": 2,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-push",
+    "level": 9,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 120,
+     "pushChance": 65,
+     "pushTiles": 2,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-push",
+    "level": 10,
+    "fork": "push",
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": [
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 120,
+     "pushChance": 65,
+     "pushTiles": 3,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

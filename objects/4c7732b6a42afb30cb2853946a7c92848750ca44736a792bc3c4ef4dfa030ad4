@@ -1,0 +1,84 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "reviewed-demolition",
+  "aliases": [
+    "demolition",
+    "cast-reviewed-demolition",
+    "preview-demolition",
+    "preview-reviewed-demolition"
+  ],
+  "textKeys": {
+    "name": "ability.reviewed-demolition.name",
+    "summary": "ability.reviewed-demolition.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "demolitions",
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"rangeCells": 4, "blastDamage": 6, "blastRadius": 1, "oncePerEncounter": 0, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 2, "cost": 1, "numbers": {"rangeCells": 5, "blastDamage": 6, "blastRadius": 1, "oncePerEncounter": 0, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 3, "cost": 1, "numbers": {"rangeCells": 5, "blastDamage": 8, "blastRadius": 1, "oncePerEncounter": 0, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 4, "cost": 1, "numbers": {"rangeCells": 5, "blastDamage": 8, "blastRadius": 1, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 5, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 8, "blastRadius": 1, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 6, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 1, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}},
+    {"level": 7, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 0, "residueDuration": 0}}
+  ],
+  "paths": {
+    "forkId": "reviewed-demolition-path",
+    "level": 8,
+    "options": [
+      {
+        "id": "fire",
+        "nameKey": "ability.reviewed-demolition.path.fire",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 2, "residueDuration": 2}},
+          {"level": 9, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 2, "residueDamage": 2, "residueDuration": 2}},
+          {"level": 10, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 2, "residueDamage": 2, "residueDuration": 3}}
+        ]
+      },
+      {
+        "id": "poison",
+        "nameKey": "ability.reviewed-demolition.path.poison",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 1, "residueDamage": 2, "residueDuration": 3}},
+          {"level": 9, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 2, "residueDamage": 2, "residueDuration": 3}},
+          {"level": 10, "cost": 1, "numbers": {"rangeCells": 6, "blastDamage": 10, "blastRadius": 2, "oncePerEncounter": 1, "residueRadius": 2, "residueDamage": 2, "residueDuration": 4}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "cell",
+    "range": "rank:rangeCells",
+    "requestProperty": null,
+    "requestFields": [
+      "targetId"
+    ]
+  },
+  "presentation": {
+    "key": "demolition",
+    "clips": [
+      {"clip": "throw-overhand"}
+    ],
+    "strikeDelay": null,
+    "effectRecipe": "demolition",
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": true,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": "demolition",
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/demolition.ts",
+    "src/floor/demolition-rules.ts",
+    "src/floor/demolition-blast-data.ts",
+    "src/campaign/reviewed-demolition.ts",
+    "src/campaign/reviewed-demolition-content.ts",
+    "src/campaign/reviewed-demolition-producer.ts",
+    "godot/src/ReviewedAbilities.Demolition.cs"
+  ]
+}

@@ -1,0 +1,401 @@
+{
+ "schemaVersion": 1,
+ "effect": "taunt",
+ "source": "Generated from TAUNT_MATRIX_CASES in test/helpers/taunt-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-taunt-path",
+  "targetHitPoints": 50,
+  "frameNote": "Each case may move the primary and add units (units).",
+  "preview": {
+   "operation": "preview-taunt",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "tauntPreview"
+  },
+  "cast": {
+   "operation": "taunt",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "rangeCells": 4,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 55
+     }
+    },
+    "expected": {
+     "chancePercent": 55,
+     "rangeCells": 4,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 55
+     }
+    },
+    "expected": {
+     "chancePercent": 55,
+     "rangeCells": 5,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 65
+     }
+    },
+    "expected": {
+     "chancePercent": 65,
+     "rangeCells": 5,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 65
+     }
+    },
+    "expected": {
+     "chancePercent": 65,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 75
+     }
+    },
+    "expected": {
+     "chancePercent": 75,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-crowd",
+    "level": 8,
+    "fork": "crowd",
+    "units": {
+     "b": [
+      7,
+      1
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 80,
+      "b": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary",
+      "b"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-pressure",
+    "level": 8,
+    "fork": "pressure",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 12,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-crowd",
+    "level": 9,
+    "fork": "crowd",
+    "units": {
+     "b": [
+      7,
+      1
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 80,
+      "b": 80,
+      "c": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary",
+      "b",
+      "c"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-pressure",
+    "level": 9,
+    "fork": "pressure",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 15,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-crowd",
+    "level": 10,
+    "fork": "crowd",
+    "units": {
+     "b": [
+      7,
+      1
+     ],
+     "c": [
+      8,
+      3
+     ],
+     "d": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 80,
+      "b": 80,
+      "c": 80,
+      "d": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 10,
+     "turns": 2,
+     "taunted": [
+      "primary",
+      "b",
+      "c",
+      "d"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-pressure",
+    "level": 10,
+    "fork": "pressure",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 80
+     }
+    },
+    "expected": {
+     "chancePercent": 80,
+     "rangeCells": 6,
+     "accuracyPenalty": 20,
+     "turns": 2,
+     "taunted": [
+      "primary"
+     ],
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

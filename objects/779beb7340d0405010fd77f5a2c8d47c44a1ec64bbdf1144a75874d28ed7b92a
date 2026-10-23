@@ -1,0 +1,313 @@
+{
+ "schemaVersion": 1,
+ "effect": "arcane-shield",
+ "source": "Generated from ARCANE_SHIELD_MATRIX_CASES in test/helpers/arcane-shield-matrix.ts; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "Explicit new Reaction-window fixture.",
+  "trigger": "Prepare, end turn and advance a direct hostile attack; inspect same-roll ward resolution. Rendered sequencing belongs to integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-arcane-shield-path",
+  "weapon": "none",
+  "preview": {
+   "operation": "preview-arcane-shield",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "arcaneShieldPreview"
+  },
+  "cast": {
+   "operation": "prepare-arcane-shield",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 10,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 12,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 14,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 16,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 18,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 20,
+     "maximumUses": 1,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 20,
+     "maximumUses": 2,
+     "expiry": "start",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-duration",
+    "level": 8,
+    "fork": "duration",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 20,
+     "maximumUses": 2,
+     "expiry": "end",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-duration",
+    "level": 9,
+    "fork": "duration",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 23,
+     "maximumUses": 2,
+     "expiry": "end",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-duration",
+    "level": 10,
+    "fork": "duration",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 25,
+     "maximumUses": 2,
+     "expiry": "end",
+     "coverage": "physical",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-coverage",
+    "level": 8,
+    "fork": "coverage",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 20,
+     "maximumUses": 2,
+     "expiry": "start",
+     "coverage": "physical-and-missile",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-coverage",
+    "level": 9,
+    "fork": "coverage",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 23,
+     "maximumUses": 2,
+     "expiry": "start",
+     "coverage": "physical-and-missile",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-coverage",
+    "level": 10,
+    "fork": "coverage",
+    "rng": {
+     "attackRoll": 70,
+     "damageDraw": 0
+    },
+    "expected": {
+     "evasion": 25,
+     "maximumUses": 2,
+     "expiry": "start",
+     "coverage": "physical-and-missile",
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   }
+  ]
+ }
+}

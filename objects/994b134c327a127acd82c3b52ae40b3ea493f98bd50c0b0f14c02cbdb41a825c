@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "effect": "jump",
+  "cases": [
+    {
+      "name": "Jump one cell north",
+      "levels": [
+        1
+      ],
+      "formation": "group",
+      "preview": {
+        "operation": "preview-reviewed-jump",
+        "fields": {
+          "destinationCellId": "$cell:3,5"
+        },
+        "previewKey": "jumpPreview"
+      },
+      "cast": {
+        "operation": "cast-reviewed-jump",
+        "fields": {
+          "destinationCellId": "$cell:3,5",
+          "previewId": "$preview.floor.previewId",
+          "contextId": "$preview.contextId"
+        }
+      }
+    },
+    {
+      "name": "Jump two cells north into open floor",
+      "levels": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "formation": "group",
+      "preview": {
+        "operation": "preview-reviewed-jump",
+        "fields": {
+          "destinationCellId": "$cell:3,4"
+        },
+        "previewKey": "jumpPreview"
+      },
+      "cast": {
+        "operation": "cast-reviewed-jump",
+        "fields": {
+          "destinationCellId": "$cell:3,4",
+          "previewId": "$preview.floor.previewId",
+          "contextId": "$preview.contextId"
+        }
+      }
+    }
+  ]
+}

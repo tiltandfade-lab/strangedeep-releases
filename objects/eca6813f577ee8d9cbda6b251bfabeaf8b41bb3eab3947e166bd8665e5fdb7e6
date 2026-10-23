@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "setId": "live-figure-crop-v1",
+  "purpose": "Initiative identity portraits derived from current live-figure renders",
+  "generator": "tools/build-initiative-portraits.py",
+  "method": "explicit square crop; premultiplied-alpha Lanczos resize; straight-alpha PNG output",
+  "cssSize": [
+    56,
+    56
+  ],
+  "densities": [
+    1,
+    2
+  ],
+  "portraits": [
+    {
+      "id": "fighter-basic",
+      "source": "web/assets/figures/fighter-basic/front-right.png",
+      "sourceSha256": "e3f3ee89aee6b33f9b2afc38d6b0de943791b75a5a3018bc2ab2307fb0bb36eb",
+      "sourceCropLTRB": [
+        180,
+        54,
+        340,
+        214
+      ],
+      "status": "truthful-prototype-pending-armored-meshy-model",
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "fighter-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 5968,
+          "sha256": "f739890dc7eaca08307abcce2e37ed6826152b1061f5a58f86cd7e9d177e84e3"
+        },
+        {
+          "density": "2x",
+          "file": "fighter-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 17612,
+          "sha256": "13f6040457d39e3a22be4b6f371e5c7921847651abb39ed8403083870c85a346"
+        }
+      ]
+    },
+    {
+      "id": "zombie-basic",
+      "source": "web/assets/figures/zombie-basic/front-right.png",
+      "sourceSha256": "3092ee4f7126a3d64eb97ca471f5fc6b3b498780ae9413a49f59924674216008",
+      "sourceCropLTRB": [
+        170,
+        72,
+        330,
+        232
+      ],
+      "status": "current-source",
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "zombie-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 6476,
+          "sha256": "0328fe36fc719177992eb0d62de03824a724927ed514d5efe2f34c20559d78e9"
+        },
+        {
+          "density": "2x",
+          "file": "zombie-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 21135,
+          "sha256": "392de9cb63b25702e19dca2f182ad4c8aa99c429340e51e27425853acb413238"
+        }
+      ]
+    },
+    {
+      "id": "skeleton-basic",
+      "source": "web/assets/figures/skeleton-basic/front-right.png",
+      "sourceSha256": "1c0192ceef0aa566dd095fbb2a52d242dd32f08b63909990b50a9cc3cb57302f",
+      "sourceCropLTRB": [
+        132,
+        88,
+        292,
+        248
+      ],
+      "status": "current-source",
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "skeleton-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 6069,
+          "sha256": "ee0e402f53886a763ea43154c74255f55c8be9d3d3284f592e801bf60d5c0b8c"
+        },
+        {
+          "density": "2x",
+          "file": "skeleton-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 18976,
+          "sha256": "bcb78a0157bb6422449d71d784fa5e087c3c3c3271c2d81a5ce88cb0d6ee20a8"
+        }
+      ]
+    }
+  ]
+}

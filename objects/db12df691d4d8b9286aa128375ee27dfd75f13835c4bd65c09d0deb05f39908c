@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "assetId": "stitchling-review",
+  "displayName": "Stitchling",
+  "reviewLabel": null,
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/stitchling/2026-08-23/models/stitchling-retopo-voxel-t12000.glb",
+    "sha256": "0e94f91e7d5ed03cd9d28b2cca9ed1c659c25fe66537133db0ec93cd46ad878e",
+    "family": "design-notebook/Strangedeep/Dungeon/Monsters and Bosses/candidates/R2 Humanoid Candidates/Dead/D20 Corpse Doll to Charnel Giant.md"
+  },
+  "rig": {
+    "provider": null,
+    "note": "Static Meshy model; no rig. Stands in its modelled A-pose."
+  },
+  "godot": {
+    "model": "res://assets/characters/stitchling/review/stitchling-retopo-voxel-t12000.glb",
+    "wrapper": "res://assets/characters/stitchling/review/stitchling_review_candidate.tscn",
+    "material": "res://assets/characters/stitchling/review/stitchling-matte-review.tres",
+    "materialNote": "External review material replaces the provider material: flesh and cloth finish, roughness 0.85, metallic 0, specular 0.35, double-sided as the source declares. Base-color and normal textures are the untouched provider images; the provider metallic-roughness map (roughness about 0.35 to 0.45, reading as plastic) is not connected.",
+    "emission": "none in the source; no eye or emissive region is obvious in the provider texture, so no mask was added",
+    "heightMetres": 1.8288,
+    "heightNote": "6 feet",
+    "footprintCells": 1,
+    "modelScale": 0.963188,
+    "floorOffsetMeters": 0.917115
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG",
+    "ANIMATION",
+    "RUNTIME_PROMOTION"
+  ]
+}

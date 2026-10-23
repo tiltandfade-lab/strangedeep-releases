@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strangedeep:ability-record",
+  "title": "Ability record",
+  "description": "One ability's facts in one place: godot/content/abilities/<id>.json. See docs/ABILITY-REGISTRY.md. Read by src/abilities/registry.ts and godot/src/AbilityRegistry.cs; checked by tools/verify-ability-registry.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "aliases", "textKeys", "textKeysPending", "listKey", "ranks", "paths", "aim", "presentation", "ai", "ownFiles"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/abilityId", "description": "The ability's one current id; the file is named <id>.json." },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/abilityId" },
+      "description": "Older ids and operation names still used by code (removed with the old code)."
+    },
+    "textKeys": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "summary"],
+      "properties": {
+        "name": { "$ref": "#/$defs/textKey" },
+        "summary": { "$ref": "#/$defs/textKey" }
+      }
+    },
+    "textKeysPending": {
+      "type": "boolean",
+      "description": "true while the keys are not yet in godot/text/*.csv (allowed until player-text part 4a lands)."
+    },
+    "listKey": {
+      "type": ["string", "null"],
+      "pattern": "^[a-z][A-Za-z]*$",
+      "description": "The key of this ability's offers in the projected ability lists (ReviewedAbilitySpec.ProjectionKey)."
+    },
+    "params": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][A-Za-z0-9]*$" },
+      "additionalProperties": { "type": "integer" },
+      "description": "Named whole numbers the rank formulas may read (optional)."
+    },
+    "ranks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/rank" },
+      "description": "One row per level before any path choice, levels 1, 2, 3 ... in order."
+    },
+    "paths": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["forkId", "level", "options"],
+          "properties": {
+            "forkId": { "$ref": "#/$defs/abilityId" },
+            "level": { "type": "integer", "minimum": 2, "maximum": 10 },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["id", "nameKey", "ranks"],
+                "properties": {
+                  "id": { "$ref": "#/$defs/abilityId" },
+                  "nameKey": { "$ref": "#/$defs/textKey" },
+                  "ranks": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/rank" } }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "description": "The path choice: from `level` the ability continues along exactly one option."
+    },
+    "aim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shape", "range", "requestFields"],
+      "properties": {
+        "shape": { "enum": ["arc", "target", "line", "cell", "self"] },
+        "range": {
+          "anyOf": [
+            { "const": "rank:rangeCells" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["minimum", "maximum"],
+              "properties": {
+                "minimum": { "type": "integer", "minimum": 0 },
+                "maximum": { "type": "integer", "minimum": 0 }
+              }
+            }
+          ]
+        },
+        "requestProperty": { "type": ["string", "null"] },
+        "requestFields": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "clips", "strikeDelay", "effectRecipe", "timingKey", "timingPropertyPrefix", "sound", "actionCamera", "travelMotion", "knockback", "icon", "webEffectKind"],
+      "properties": {
+        "key": { "$ref": "#/$defs/abilityId", "description": "The ability key Godot's presentation tables use." },
+        "clips": {
+          "type": ["array", "null"],
+          "items": { "$ref": "#/$defs/levelled", "properties": { "clip": { "type": "string" } }, "required": ["clip"] },
+          "description": "Body clips from AbilityBodyClips.All, most general first; null when the weapon's own swing plays."
+        },
+        "strikeDelay": { "type": ["number", "null"], "minimum": 0, "description": "Seconds between targets landing on one body beat (StrikeClips.OneBeat)." },
+        "effectRecipe": { "type": ["string", "null"] },
+        "timingKey": { "type": ["string", "null"], "description": "Prefix of this ability's keys in AbilityVfxProfile.Timings()." },
+        "timingPropertyPrefix": { "type": ["string", "null"], "description": "Prefix of this ability's timing properties in godot/resources/ability_vfx_profile.tres." },
+        "sound": { "type": ["string", "null"], "description": "Cue in SfxCues.RequiredCues." },
+        "actionCamera": { "type": "boolean" },
+        "travelMotion": { "type": "boolean" },
+        "knockback": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/levelled", "properties": { "key": { "type": "string" } }, "required": ["key"] },
+          "description": "Ragdoll source keys (CombatRagdoll.SourceKey), most general first."
+        },
+        "icon": { "type": ["string", "null"], "description": "Prototype icon key: the ability entry in godot/assets/ui/abilities/prototype-ability-icons.json." },
+        "webEffectKind": { "type": ["string", "null"] }
+      }
+    },
+    "ai": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["learnOrder", "aimRule"],
+          "properties": {
+            "learnOrder": {
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 0 },
+              "description": "Position in each bot policy's skillPreference list (tools/autoplay/policies.ts)."
+            },
+            "aimRule": { "enum": ["first-arc-with-min-targets", "each-enemy-by-id"] },
+            "minTargets": { "type": "integer", "minimum": 1 }
+          }
+        }
+      ]
+    },
+    "ownFiles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^(src|godot/src|tools/autoplay)/" },
+      "description": "Files allowed to name this ability by id or alias."
+    }
+  },
+  "$defs": {
+    "abilityId": { "type": "string", "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$" },
+    "textKey": { "type": "string", "pattern": "^ability\\.[a-z0-9-]+(\\.[a-z0-9-]+)+$" },
+    "rank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "cost", "numbers"],
+      "properties": {
+        "level": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "cost": { "type": "integer", "minimum": 0 },
+        "numbers": {
+          "type": "object",
+          "additionalProperties": { "type": ["integer", "string"] },
+          "description": "Stat name (one listed in _stats.json) to a whole number, or to a formula string over lvl and the record's params (src/abilities/calc.ts)."
+        }
+      }
+    },
+    "levelled": {
+      "type": "object",
+      "properties": {
+        "minLevel": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "path": { "type": "string" }
+      }
+    }
+  }
+}

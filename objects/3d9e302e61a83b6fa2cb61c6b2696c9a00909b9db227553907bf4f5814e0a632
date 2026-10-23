@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "assetId": "dead-caller-review",
+  "displayName": "Dead Caller",
+  "reviewLabel": "on hold",
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/dead-caller/2026-08-23/models/dead-caller-retopo-voxel-t15000.glb",
+    "sha256": "c207ca78253f7dff524979eda0c4fdb1f318e0b880cbdd97b522d7b3993b5ae4",
+    "family": "design-notebook/Strangedeep/Dungeon/Monsters and Bosses/candidates/R2 Humanoid Candidates/Dead/D05 Dead Caller to Grave Conductor.md"
+  },
+  "rig": {
+    "provider": null,
+    "note": "Static Meshy model; no rig. Stands in its modelled A-pose."
+  },
+  "godot": {
+    "model": "res://assets/characters/dead-caller/review/dead-caller-retopo-voxel-t15000.glb",
+    "wrapper": "res://assets/characters/dead-caller/review/dead_caller_review_candidate.tscn",
+    "material": "res://assets/characters/dead-caller/review/dead-caller-matte-review.tres",
+    "materialNote": "External review material replaces the provider material: ritual cloth and bone finish, roughness 0.88, metallic 0, specular 0.35, double-sided as the source declares. Base-color and normal textures are the untouched provider images; the provider metallic-roughness map (roughness about 0.35 to 0.45, reading as plastic) is not connected.",
+    "emission": "none in the source; no eye or emissive region is obvious in the provider texture, so no mask was added",
+    "heightMetres": 1.8288,
+    "heightNote": "6 feet",
+    "footprintCells": 1,
+    "modelScale": 0.961226,
+    "floorOffsetMeters": 0.914896
+  },
+  "openGates": [
+    "ART_DIRECTION_HOLD (founder: rework or regenerate)",
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG",
+    "ANIMATION",
+    "RUNTIME_PROMOTION"
+  ]
+}

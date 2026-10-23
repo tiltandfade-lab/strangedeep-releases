@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "prototype-fixture-only",
+  "profile": "poison-supply-v1",
+  "provenance": "Founder ruling of October 20, 2026 (docs/production/poison-v2-2026-10-08/README.md): the Antidote vial's supply numbers for new adventures. One roll per ordinary enemy, elite enemy and ordinary chest on Floor 1 (src/campaign/poison-supply.ts); the town sells the vial at purchasePrice and buys it back at saleValue. Read only when a new adventure accepts its item and town content (research-lab/src/godot/poison-supply-content.ts); saved catalogs keep the policy they were created with, and catalogs without one roll no Antidote. No starting vial.",
+  "policy": {
+    "version": "poison-supply-v1",
+    "dropChancePercent": 5,
+    "purchasePrice": 12,
+    "saleValue": 4
+  }
+}

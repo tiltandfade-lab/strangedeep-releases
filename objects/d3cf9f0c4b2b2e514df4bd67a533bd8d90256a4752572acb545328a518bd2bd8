@@ -1,0 +1,645 @@
+{
+ "schemaVersion": 1,
+ "effect": "steady-aim",
+ "source": "Generated from STEADY_AIM_CAST_MATRIX_CASES in test/helpers/reviewed-movement-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "attributes": {
+   "strength": 4,
+   "dexterity": 3,
+   "magic": 3,
+   "vitality": 3
+  },
+  "sourcePrerequisites": {
+   "noPriorVoluntaryTravel": true
+  },
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "steady-aim-payoff",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-steady-aim",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "steadyAimPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-steady-aim",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "steady-aim-lv1",
+    "level": 1,
+    "fork": null,
+    "accuracyBonus": 10,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 100,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv2",
+    "level": 2,
+    "fork": null,
+    "accuracyBonus": 12,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 102,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv3",
+    "level": 3,
+    "fork": null,
+    "accuracyBonus": 14,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 104,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv4",
+    "level": 4,
+    "fork": null,
+    "accuracyBonus": 15,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 105,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv5",
+    "level": 5,
+    "fork": null,
+    "accuracyBonus": 17,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 107,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv6",
+    "level": 6,
+    "fork": null,
+    "accuracyBonus": 19,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 109,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv7",
+    "level": 7,
+    "fork": null,
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 5,
+     "directDamageUnits": 1010,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv8-critical",
+    "level": 8,
+    "fork": "critical",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 5,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 10,
+     "directDamageUnits": 2020,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv8-force",
+    "level": 8,
+    "fork": "force",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 10,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 5,
+     "directDamageUnits": 1111,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv9-critical",
+    "level": 9,
+    "fork": "critical",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 10,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 15,
+     "directDamageUnits": 2020,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv9-force",
+    "level": 9,
+    "fork": "force",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 20,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 5,
+     "directDamageUnits": 1212,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv10-critical",
+    "level": 10,
+    "fork": "critical",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 15,
+    "damagePercentBonus": 0,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 20,
+     "directDamageUnits": 2020,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "steady-aim-lv10-force",
+    "level": 10,
+    "fork": "force",
+    "accuracyBonus": 20,
+    "criticalChanceBonus": 0,
+    "damagePercentBonus": 30,
+    "kind": "steady-aim",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     7,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     }
+    },
+    "expected": {
+     "rawAccuracy": 110,
+     "criticalChance": 5,
+     "directDamageUnits": 1313,
+     "healthUnitsPerPoint": 100,
+     "voluntaryMovementLocked": true,
+     "benefitConsumedAfterAttempt": true,
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      },
+      {
+       "type": "floor-steady-aim-prepared"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   }
+  ]
+ }
+}

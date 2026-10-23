@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-cup",
+  "displayName": "Cup",
+  "kind": "piece",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "any"
+  ],
+  "slot": "inherits",
+  "attach": "rigid",
+  "bones": "any",
+  "allowedRegions": [
+    "any"
+  ],
+  "defaultRegion": "any",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": null,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "small cup",
+      "at1": "large",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisUp",
+      "at0": "flat",
+      "at1": "domed",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisBack",
+      "at0": "plain",
+      "at1": "winged",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisLeft",
+      "at0": "tight",
+      "at1": "flared out",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 320,
+  "mutateTags": [
+    "heavy",
+    "round"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-couter/turnaround.jpg",
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-pauldron/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "4d1d97ed407aaab0dfca8727adb791a18348e346646b62531eb00fbecfe8d1a0",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-cup.glb",
+    "glbSha256": "dc43d9722abfec6dba37a8db125e6aacab75d07c94b4a6196ce3fdd374bbfce8",
+    "glbBytes": 25764,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-cup.glb",
+      "targetNames": [
+        "Radius",
+        "AxisUp",
+        "AxisBack",
+        "AxisLeft"
+      ],
+      "primitives": [
+        {
+          "vertices": 194,
+          "triangles": 320,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 320,
+      "vertices": 194,
+      "targets": {
+        "Radius": {
+          "maxDeltaM": 0.03563,
+          "verticesMoved": 192
+        },
+        "AxisUp": {
+          "maxDeltaM": 0.03,
+          "verticesMoved": 162
+        },
+        "AxisBack": {
+          "maxDeltaM": 0.022,
+          "verticesMoved": 84
+        },
+        "AxisLeft": {
+          "maxDeltaM": 0.014,
+          "verticesMoved": 84
+        }
+      },
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      }
+    },
+    "budget": {
+      "triangles": 320,
+      "limit": 400,
+      "pass": true
+    }
+  },
+  "notes": {
+    "makes": "pauldron, couter, poleyn, shoulder cap, knee pad",
+    "AxisLeft": "Not in the plan's cup row; added because the F1 pauldron recipe sets AxisLeft 0.6."
+  }
+}

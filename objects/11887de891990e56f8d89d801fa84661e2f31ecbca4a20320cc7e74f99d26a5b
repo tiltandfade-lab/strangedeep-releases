@@ -1,0 +1,1050 @@
+{
+ "schemaVersion": 1,
+ "effect": "shield-sweep",
+ "source": "Generated from SHIELD_SWEEP_MATRIX_CASES in test/helpers/shield-sweep-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-shield-sweep-path",
+  "targetHitPoints": 50,
+  "offHand": "shield",
+  "frameNote": "Each case may move the primary and add units (units).",
+  "preview": {
+   "operation": "preview-shield-sweep",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "shieldSweepPreview"
+  },
+  "cast": {
+   "operation": "shield-sweep",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 25,
+      "b": 25
+     }
+    },
+    "expected": {
+     "arcCells": 2,
+     "damagePercent": 50,
+     "pushChancePercent": 25,
+     "damage": 6,
+     "struck": [
+      [
+       "primary",
+       6
+      ],
+      [
+       "b",
+       6
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 25,
+      "b": 25
+     }
+    },
+    "expected": {
+     "arcCells": 2,
+     "damagePercent": 55,
+     "pushChancePercent": 25,
+     "damage": 6,
+     "struck": [
+      [
+       "primary",
+       6
+      ],
+      [
+       "b",
+       6
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 25,
+      "b": 25,
+      "c": 25
+     }
+    },
+    "expected": {
+     "arcCells": 3,
+     "damagePercent": 55,
+     "pushChancePercent": 25,
+     "damage": 6,
+     "struck": [
+      [
+       "primary",
+       6
+      ],
+      [
+       "b",
+       6
+      ],
+      [
+       "c",
+       6
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 30,
+      "b": 30,
+      "c": 30
+     }
+    },
+    "expected": {
+     "arcCells": 3,
+     "damagePercent": 55,
+     "pushChancePercent": 30,
+     "damage": 6,
+     "struck": [
+      [
+       "primary",
+       6
+      ],
+      [
+       "b",
+       6
+      ],
+      [
+       "c",
+       6
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 30,
+      "b": 30,
+      "c": 30
+     }
+    },
+    "expected": {
+     "arcCells": 3,
+     "damagePercent": 60,
+     "pushChancePercent": 30,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 30,
+      "b": 30,
+      "c": 30,
+      "d": 30
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 60,
+     "pushChancePercent": 30,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35,
+      "d": 35
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 60,
+     "pushChancePercent": 35,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-force",
+    "level": 8,
+    "fork": "force",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35,
+      "d": 35
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 65,
+     "pushChancePercent": 35,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-control",
+    "level": 8,
+    "fork": "control",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 40,
+      "b": 40,
+      "c": 40,
+      "d": 40
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 60,
+     "pushChancePercent": 40,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-force",
+    "level": 9,
+    "fork": "force",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35,
+      "d": 35
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 70,
+     "pushChancePercent": 35,
+     "damage": 8,
+     "struck": [
+      [
+       "primary",
+       8
+      ],
+      [
+       "b",
+       8
+      ],
+      [
+       "c",
+       8
+      ],
+      [
+       "d",
+       8
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-control",
+    "level": 9,
+    "fork": "control",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 45,
+      "b": 45,
+      "c": 45,
+      "d": 45
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 60,
+     "pushChancePercent": 45,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-force",
+    "level": 10,
+    "fork": "force",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35,
+      "d": 35
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 75,
+     "pushChancePercent": 35,
+     "damage": 9,
+     "struck": [
+      [
+       "primary",
+       9
+      ],
+      [
+       "b",
+       9
+      ],
+      [
+       "c",
+       9
+      ],
+      [
+       "d",
+       9
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-control",
+    "level": 10,
+    "fork": "control",
+    "units": {
+     "b": [
+      7,
+      3
+     ],
+     "c": [
+      6,
+      3
+     ],
+     "d": [
+      5,
+      3
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 50,
+      "b": 50,
+      "c": 50,
+      "d": 50
+     }
+    },
+    "expected": {
+     "arcCells": 4,
+     "damagePercent": 60,
+     "pushChancePercent": 50,
+     "damage": 7,
+     "struck": [
+      [
+       "primary",
+       7
+      ],
+      [
+       "b",
+       7
+      ],
+      [
+       "c",
+       7
+      ],
+      [
+       "d",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       7,
+       3
+      ],
+      "c": [
+       6,
+       4
+      ],
+      "d": [
+       5,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

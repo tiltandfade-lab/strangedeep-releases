@@ -1,0 +1,452 @@
+{
+ "schemaVersion": 1,
+ "effect": "unarmed-proficiency",
+ "cases": [
+  {
+   "name": "Ordinary fist strike on the adjacent target",
+   "levels": "all",
+   "forks": "all",
+   "formation": "single",
+   "weapon": "none",
+   "preview": {
+    "operation": "preview-attack",
+    "fields": {
+     "targetId": "$target:0",
+     "actionKind": "melee"
+    },
+    "previewKey": "preview"
+   },
+   "cast": {
+    "operation": "attack-actor",
+    "fields": {
+     "targetId": "$target:0",
+     "actionKind": "melee",
+     "previewId": "$preview.previewId"
+    }
+   }
+  }
+ ],
+ "source": "Generated from UNARMED_PROFICIENCY_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-unarmed-proficiency-mastery",
+  "weapon": "none",
+  "preview": {
+   "operation": "preview-attack",
+   "fields": {
+    "targetId": "$unit:primary",
+    "actionKind": "melee"
+   },
+   "previewKey": "preview"
+  },
+  "cast": {
+   "operation": "attack-actor",
+   "fields": {
+    "targetId": "$unit:primary",
+    "actionKind": "melee",
+    "previewId": "$preview.previewId"
+   }
+  },
+  "cases": [
+   {
+    "id": "unarmed-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 1,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 7,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 2,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 9,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 3,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 4,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 105,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 5,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 6,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 7,
+        "fork": null
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-8-precision",
+    "level": 8,
+    "fork": "precision",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 14,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 8,
+        "fork": "precision"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-9-precision",
+    "level": 9,
+    "fork": "precision",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 16,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 9,
+        "fork": "precision"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-10-precision",
+    "level": 10,
+    "fork": "precision",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 18,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 10,
+        "fork": "precision"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-8-force",
+    "level": 8,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 112,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 8,
+        "fork": "force"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-9-force",
+    "level": 9,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 114,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 9,
+        "fork": "force"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   },
+   {
+    "id": "unarmed-10-force",
+    "level": 10,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 116,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "unarmedProficiency": {
+        "level": 10,
+        "fork": "force"
+       }
+      }
+     ],
+     "arenaNote": "Declared 100-damage basis is automated arithmetic evidence; production fists use actual body and inventory stats."
+    }
+   }
+  ]
+ }
+}

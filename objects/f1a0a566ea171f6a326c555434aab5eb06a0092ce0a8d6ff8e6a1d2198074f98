@@ -1,0 +1,201 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "charge",
+  "aliases": [
+    "preview-charge"
+  ],
+  "textKeys": {
+    "name": "ability.charge.name",
+    "summary": "ability.charge.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "charges",
+  "params": {
+    "lastSharedLevel": 7
+  },
+  "ranks": [
+    {
+      "level": 1,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 4,
+        "accuracyBonus": 0,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 2,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 5,
+        "accuracyBonus": 0,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 3,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 5,
+        "accuracyBonus": 3,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 4,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 6,
+        "accuracyBonus": 3,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 5,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 6,
+        "accuracyBonus": 5,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 6,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 7,
+        "accuracyBonus": 5,
+        "impactCap": 30,
+        "uses": 1
+      }
+    },
+    {
+      "level": 7,
+      "cost": 1,
+      "numbers": {
+        "approachTiles": 8,
+        "accuracyBonus": 5,
+        "impactCap": 30,
+        "uses": 1
+      }
+    }
+  ],
+  "paths": {
+    "forkId": "reviewed-charge-path",
+    "level": 8,
+    "options": [
+      {
+        "id": "impact",
+        "nameKey": "ability.charge.path.impact",
+        "ranks": [
+          {
+            "level": 8,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 35,
+              "uses": 1
+            }
+          },
+          {
+            "level": 9,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 40,
+              "uses": 1
+            }
+          },
+          {
+            "level": 10,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 50,
+              "uses": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "frequency",
+        "nameKey": "ability.charge.path.frequency",
+        "ranks": [
+          {
+            "level": 8,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 30,
+              "uses": "lvl - lastSharedLevel"
+            }
+          },
+          {
+            "level": 9,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 30,
+              "uses": "lvl - lastSharedLevel"
+            }
+          },
+          {
+            "level": 10,
+            "cost": 1,
+            "numbers": {
+              "approachTiles": 8,
+              "accuracyBonus": 5,
+              "impactCap": 30,
+              "uses": "lvl - lastSharedLevel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 2,
+      "maximum": 10
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId"
+    ]
+  },
+  "presentation": {
+    "key": "charge",
+    "clips": null,
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/charge.ts",
+    "src/floor/movement-technique-source.ts",
+    "src/campaign/reviewed-charge.ts",
+    "src/campaign/reviewed-charge-content.ts",
+    "src/floor/movement-ability-data.ts",
+    "src/campaign/reviewed-movement.ts"
+  ]
+}

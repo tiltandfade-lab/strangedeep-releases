@@ -1,0 +1,84 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "reviewed-shield-throw",
+  "aliases": [
+    "shield-throw",
+    "shield-impact",
+    "shield-stun",
+    "shield-ricochet",
+    "shield-hammer"
+  ],
+  "textKeys": {
+    "name": "ability.reviewed-shield-throw.name",
+    "summary": "ability.reviewed-shield-throw.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "shieldThrows",
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"rangeCells": 4, "impactBonus": 0, "stunChancePercent": 0, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 2, "cost": 1, "numbers": {"rangeCells": 4, "impactBonus": 1, "stunChancePercent": 0, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 3, "cost": 1, "numbers": {"rangeCells": 5, "impactBonus": 1, "stunChancePercent": 0, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 4, "cost": 1, "numbers": {"rangeCells": 5, "impactBonus": 1, "stunChancePercent": 25, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 5, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 1, "stunChancePercent": 25, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 6, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 1, "stunChancePercent": 35, "extraTargets": 0, "pushTiles": 0}},
+    {"level": 7, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 0, "pushTiles": 0}}
+  ],
+  "paths": {
+    "forkId": "reviewed-shield-throw-path",
+    "level": 8,
+    "options": [
+      {
+        "id": "ricochet",
+        "nameKey": "ability.reviewed-shield-throw.path.ricochet",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 1, "pushTiles": 0}},
+          {"level": 9, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 2, "pushTiles": 0}},
+          {"level": 10, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 3, "pushTiles": 0}}
+        ]
+      },
+      {
+        "id": "hammer",
+        "nameKey": "ability.reviewed-shield-throw.path.hammer",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 0, "pushTiles": 1}},
+          {"level": 9, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 0, "pushTiles": 2}},
+          {"level": 10, "cost": 1, "numbers": {"rangeCells": 6, "impactBonus": 2, "stunChancePercent": 35, "extraTargets": 0, "pushTiles": 3}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": "rank:rangeCells",
+    "requestProperty": null,
+    "requestFields": [
+      "targetId"
+    ]
+  },
+  "presentation": {
+    "key": "shield-throw",
+    "clips": [
+      {"clip": "frisbee-throw"}
+    ],
+    "strikeDelay": 0.1,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": "ability.shield-throw",
+    "actionCamera": true,
+    "travelMotion": true,
+    "knockback": [],
+    "icon": "shield-throw",
+    "webEffectKind": null
+  },
+  "ai": {
+    "learnOrder": {},
+    "aimRule": "each-enemy-by-id"
+  },
+  "ownFiles": [
+    "src/floor/shield-throw.ts",
+    "src/campaign/reviewed-shield-throw.ts",
+    "src/campaign/reviewed-shield-throw-content.ts"
+  ]
+}

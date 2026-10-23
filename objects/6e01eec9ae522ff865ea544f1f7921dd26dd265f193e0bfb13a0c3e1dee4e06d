@@ -1,0 +1,455 @@
+{
+ "schemaVersion": 1,
+ "effect": "impact-echo",
+ "source": "Generated from IMPACT_ECHO_MATRIX_CASES; actual paid Kick10 and ShockWave10 fusion required.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-impact-echo-path",
+  "targetHitPoints": 50,
+  "sourcePrerequisites": {
+   "actualFusion": true,
+   "paidParents": [
+    "kick",
+    "shock-wave"
+   ],
+   "parentRanks": [
+    10,
+    10
+   ],
+   "retainedParentHistories": true
+  },
+  "preview": {
+   "operation": "preview-impact-echo",
+   "fields": {
+    "targetId": "$unit:primary",
+    "mode": "echo"
+   },
+   "previewKey": "impactEchoPreview"
+  },
+  "cast": {
+   "operation": "impact-echo",
+   "fields": {
+    "targetId": "$unit:primary",
+    "mode": "echo",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 1,
+     "maximum": 2,
+     "tileBudget": 3,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 2,
+     "maximum": 3,
+     "tileBudget": 3,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 2,
+     "maximum": 3,
+     "tileBudget": 4,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 3,
+     "maximum": 4,
+     "tileBudget": 4,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 3,
+     "maximum": 4,
+     "tileBudget": 5,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 4,
+     "maximum": 5,
+     "tileBudget": 5,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 4,
+     "maximum": 5,
+     "tileBudget": 6,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-force",
+    "level": 8,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 5,
+     "maximum": 6,
+     "tileBudget": 6,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-force",
+    "level": 9,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 6,
+     "maximum": 7,
+     "tileBudget": 6,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-force",
+    "level": 10,
+    "fork": "force",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 7,
+     "maximum": 8,
+     "tileBudget": 6,
+     "directions": 1,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-split",
+    "level": 8,
+    "fork": "split",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 4,
+     "maximum": 5,
+     "tileBudget": 6,
+     "directions": 3,
+     "usesPerEncounter": 1,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-split",
+    "level": 9,
+    "fork": "split",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 4,
+     "maximum": 5,
+     "tileBudget": 6,
+     "directions": 3,
+     "usesPerEncounter": 2,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-split",
+    "level": 10,
+    "fork": "split",
+    "units": {
+     "primary": [
+      7,
+      2
+     ],
+     "recipient": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "hit": 51,
+     "damage": "minimum"
+    },
+    "expected": {
+     "minimum": 5,
+     "maximum": 6,
+     "tileBudget": 6,
+     "directions": 3,
+     "usesPerEncounter": 2,
+     "events": [
+      {
+       "type": "floor-impact-echo-committed"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

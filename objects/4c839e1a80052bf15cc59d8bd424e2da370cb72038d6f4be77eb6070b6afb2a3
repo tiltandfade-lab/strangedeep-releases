@@ -1,0 +1,353 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-demolition",
+ "source": "Generated from independent DEMOLITION_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    4,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-demolition-path",
+  "contentFlag": "reviewedDemolition",
+  "targetHitPoints": 200,
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "preview": {
+   "operation": "preview-demolition",
+   "fields": {
+    "targetId": "$cell:6,6"
+   },
+   "previewKey": "demolitionPreview"
+  },
+  "cast": {
+   "operation": "reviewed-demolition",
+   "fields": {
+    "targetId": "$cell:6,6",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "demolition-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "blastDamage": 6,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "blastDamage": 6,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "blastDamage": 8,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "blastDamage": 8,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 8,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 1,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 1,
+     "residueDuration": 0,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-8-fire",
+    "level": 8,
+    "fork": "fire",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 1,
+     "residueDuration": 2,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-8-poison",
+    "level": 8,
+    "fork": "poison",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 1,
+     "residueDuration": 3,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-9-fire",
+    "level": 9,
+    "fork": "fire",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 2,
+     "residueDuration": 2,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-9-poison",
+    "level": 9,
+    "fork": "poison",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 2,
+     "residueDuration": 3,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-10-fire",
+    "level": 10,
+    "fork": "fire",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 2,
+     "residueDuration": 3,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   },
+   {
+    "id": "demolition-10-poison",
+    "level": 10,
+    "fork": "poison",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "blastDamage": 10,
+     "blastRadius": 2,
+     "residueRadius": 2,
+     "residueDuration": 4,
+     "events": [
+      {
+       "type": "floor-demolition-blast"
+      }
+     ],
+     "arenaNote": "Production fixed blast lands on the actual arena primary cell (6,6); raw damage, hostile/friendly bodies, pre-blast Cover and finite first-exposure residue use typed receipts and focused suites."
+    }
+   }
+  ]
+ }
+}

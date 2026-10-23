@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+  "bones": 53,
+  "clips": 49,
+  "equipment": 15,
+  "armorSlots": 5,
+  "checks": [
+    "primary and casting planted-foot contacts, bare feet and boots, and disabled-correction negative control",
+    "airborne jump preserved",
+    "all clips sampled",
+    "live bone attachments",
+    "equipment and armor controls",
+    "grip-centered attachment transforms",
+    "measured reset and fitted finger toggle",
+    "isolated grip camera",
+    "pose controls",
+    "pose keys and undo",
+    "timeline loop and stop",
+    "selected motion capture times and invalid sampling rejected",
+    "save reload revert backup",
+    "invalid edits rejected without mutation",
+    "responsive control bounds"
+  ],
+  "sizes": [
+    {
+      "width": 1280,
+      "height": 720,
+      "stageWidth": 942,
+      "railWidth": 310
+    },
+    {
+      "width": 960,
+      "height": 720,
+      "stageWidth": 652,
+      "railWidth": 280
+    }
+  ],
+  "rasterReview": "PENDING: dummy renderer cannot render the Godot interface",
+  "inspection": {
+    "status": "INSTALLED_PRIMARY_AND_ARMOR_REVIEWED_DENSE_MOTION_FINDINGS_REMAIN",
+    "record": "reviews/2026-09-07-loadout-v4/review.json",
+    "handContactReport": "reviews/2026-09-07-loadout-v4/hand-contact.json",
+    "bodyClearanceReport": "reviews/2026-09-07-loadout-v4/primary-body-clearance.json",
+    "primaryContactChecks": 120,
+    "armorClipsInspected": 49,
+    "armorPosesInspected": 147,
+    "handViewsInspected": 120,
+    "correctedBodyViewsInspected": 120,
+    "previousReview": "reviews/2026-09-06-grounding-v3/review.json",
+    "pairRefinement": {
+      "status": "RETAINED_CANDIDATES_NOT_INSTALLED",
+      "items": [
+        "basic_iron_club",
+        "makeshift_cathedral_club_01",
+        "makeshift_cathedral_club_02"
+      ],
+      "with": "shield",
+      "pose": "sword-and-shield-slash at 75 percent",
+      "workingEvidence": "artifacts/character-workshop/loadout-v4/OVERNIGHT.md",
+      "record": "reviews/2026-09-07-paired-motion-followup/review.json",
+      "finding": "Three coordinated club/shield candidates pass 61 actual body/opposite-hand/floor samples each, plus inspected hands and body views. The same shared shield angle collides with five other weapons in the dense slash review; no replacement fit was installed."
+    },
+    "longWeaponFloorRefinement": {
+      "status": "RETAINED_CANDIDATES_NOT_INSTALLED",
+      "items": [
+        "basic_iron_greatsword",
+        "makeshift_cathedral_staff_01"
+      ],
+      "failure": "The expanded paired motion check found the long tips entering the fixed floor during slash55/65/75%; baseline four primary samples did not include these poses.",
+      "evidence": "artifacts/character-workshop/loadout-v4/floor-failures-visual-review.json",
+      "installedFitsUnchanged": true,
+      "record": "reviews/2026-09-07-paired-motion-followup/review.json",
+      "candidateDisposition": "Greatsword trial passes 61 joined samples and inspected views, but the shared shield change fails other loadouts. Lower-grip staff clears the sampled floor but crosses leg armor at slash52/54. Neither replacement is installed."
+    },
+    "densePairFollowup": {
+      "status": "CONFIRMED_FINDINGS_LOADOUT_MOTION_REPAIR_REQUIRED",
+      "evidence": "artifacts/character-workshop/loadout-v4/dense-shield-failure-visual-review.json",
+      "finding": "Additional two-percent slash samples expose shield/left-boot intersection at72/74%, club/shield contact around70-76%, and greatsword/shield contact78-82%. Existing40-sample passes do not cover those times. Unreviewed replacement fits have not been installed.",
+      "record": "reviews/2026-09-07-paired-motion-followup/review.json",
+      "next": "Coordinate forearm, hand and shield through the failed motion interval; preserve the exact grasp and planted feet. Recheck every affected counterpart."
+    },
+    "morningNativeProof": {
+      "status": "PASS",
+      "utc": "2026-09-07T12:07:46.459270+00:00",
+      "record": "reviews/2026-09-07-paired-motion-followup/checks/native-proof.json",
+      "sha256": "bee361eb7c49b5ab0e4c7604cfae82e6aba93bce9646ee20c7e6599754b01b71",
+      "sourceHashesVerified": true
+    }
+  },
+  "sourceSha256": {
+    "godot/src/CharacterWorkshop.cs": "e327867ad82515b2cab642166f6524c384ca3f907bcdf9a44bca85173488c81f",
+    "godot/src/CharacterWorkshopCatalog.cs": "f4a85ff3ecf73158aa9c8f3bb9af55ef4eaa00103b07bb6753b0029b04bf37cd",
+    "godot/src/CharacterWorkshopContactCapture.cs": "e13a9b6f1d1cbf20563589e137c387336badfedd5dae2262c4397d8d8fb4779b",
+    "godot/src/CharacterWorkshopDocument.cs": "7eca22b6e2f8a1787e24bf3fbd568599be2ab34ea6d2de87bae57b5ddbe232e1",
+    "godot/src/CharacterWorkshopEditors.cs": "872c090a3775294ae5b6fc01a6f197723b0f6d3cd2f8abe87634ffbdeff89e31",
+    "godot/src/CharacterWorkshopGroundProof.cs": "e20c9537b48ba4998ba3a5192edf814a199244464a135eb37c7339f6a5903046",
+    "godot/src/CharacterWorkshopGrounding.cs": "05b5251204ebededeb818bc69c7bfa2e4b679a710fbd34d5c1b975fc9093755b",
+    "godot/src/CharacterWorkshopProof.cs": "8a7eccf63fde3fd9569ae73b8c1a92f6e20e07b1d3d1b10f7fd67ecd9b2909ef",
+    "godot/src/CharacterWorkshopSession.cs": "0121a22016c290d3074f0e23ffbd3956ffdc106356e5222d3f8fd5f91166abdf",
+    "godot/src/CharacterWorkshopStage.cs": "f22bb6ee298403921d21fa8fff68ecb8e0811aa836a93253724db1b1f0127f0b"
+  },
+  "socketPresetsSha256": "4cbb072f8e4aecb0e5e759a5d0f412b79096808b7edbbaec30c4ea2f077b2be3",
+  "catalogSha256": "912ea89c44a049404a864ce2648c0bbb4b9dadef9c819a234d1c76ae34b3cf75",
+  "armorSha256": "4366f2e8beb2cd31bf2ca5e99a3d42d53fd3332723f795456bc4610054f8eb66",
+  "sourceMotionSha256": "014710252ee9a125cd91222d253b91711847054d85395b80b88e1d0d0b69c021",
+  "groundContact": {
+    "status": "INSTALLED_CASTING_CONTACT_CORRECTION_SAMPLED_VERIFIED",
+    "record": "reviews/2026-09-07-grounding-v4/review.json",
+    "bareReport": "reviews/2026-09-07-grounding-v4/after-bare.json",
+    "bootedReport": "reviews/2026-09-07-grounding-v4/after-ward.json",
+    "samplingFps": 60,
+    "clipsPerVariant": 49,
+    "casting": {
+      "bare": {
+        "before": {
+          "frames": 180,
+          "plants": 4,
+          "fullyPlantedSamples": 226,
+          "plantedDriftMm": 8.895827,
+          "anchorErrorMm": 8.895841,
+          "minimumSoleMm": -7.7348675e-05,
+          "maximumContactClearanceMm": 14.781997,
+          "maximumAirborneClearanceMm": 13.28339,
+          "worstContact": {
+            "time": 0.6,
+            "side": "l",
+            "errorMm": 8.895841,
+            "clearanceMm": 14.781997,
+            "desiredReach": 0.88339514,
+            "maximumReach": 0.8662428,
+            "hip": "(0.10697251, 0.8291906, -0.020462431)",
+            "ankle": "(0.21499076, 0.08707246, 0.41289198)",
+            "target": "(0.21714218, 0.072290465, 0.42152375)",
+            "anchor": "(0.10057104, 0, 0.57425535)",
+            "toe": "(0.09841962, 0, 0.5656236)",
+            "pelvis": "(-3.1579624E-15, 0.8312057, 0.0068253907)"
+          }
+        },
+        "after": {
+          "frames": 180,
+          "plants": 4,
+          "fullyPlantedSamples": 226,
+          "plantedDriftMm": 0.00033979875,
+          "anchorErrorMm": 0.00044703484,
+          "minimumSoleMm": -7.7348675e-05,
+          "maximumContactClearanceMm": 0.00060454477,
+          "maximumAirborneClearanceMm": 0.00048192544,
+          "worstContact": {
+            "time": 0.08333333333333333,
+            "side": "r",
+            "errorMm": 0.00012287812,
+            "clearanceMm": 0.00060454477,
+            "desiredReach": 0.8642431,
+            "maximumReach": 0.8662425,
+            "hip": "(-0.050077654, 0.84137243, -0.09157639)",
+            "ankle": "(-0.14695567, 0.07260969, -0.47437352)",
+            "target": "(-0.14695579, 0.07260909, -0.47437355)",
+            "anchor": "(-0.26766896, 0, -0.47380006)",
+            "toe": "(-0.26766884, 0, -0.47380003)",
+            "pelvis": "(-4.9448263E-15, 0.84031117, 0.0068253744)"
+          }
+        }
+      },
+      "ward": {
+        "before": {
+          "frames": 180,
+          "plants": 4,
+          "fullyPlantedSamples": 226,
+          "plantedDriftMm": 4.9199347,
+          "anchorErrorMm": 4.919872,
+          "minimumSoleMm": 9.9651515e-05,
+          "maximumContactClearanceMm": 8.077445,
+          "maximumAirborneClearanceMm": 6.9449644,
+          "worstContact": {
+            "time": 0.6,
+            "side": "l",
+            "errorMm": 4.919872,
+            "clearanceMm": 8.077445,
+            "desiredReach": 0.87560064,
+            "maximumReach": 0.8662428,
+            "hip": "(0.10697251, 0.8291906, -0.020462431)",
+            "ankle": "(0.21595244, 0.089479774, 0.41674986)",
+            "target": "(0.21714216, 0.08140233, 0.42152372)",
+            "anchor": "(0.10057104, 0, 0.57425535)",
+            "toe": "(0.09938131, 0, 0.5694815)",
+            "pelvis": "(-3.1579624E-15, 0.8312057, 0.0068253907)"
+          }
+        },
+        "after": {
+          "frames": 180,
+          "plants": 4,
+          "fullyPlantedSamples": 226,
+          "plantedDriftMm": 0.0004283274,
+          "anchorErrorMm": 0.00044827486,
+          "minimumSoleMm": -7.4505806e-05,
+          "maximumContactClearanceMm": 0.003904235,
+          "maximumAirborneClearanceMm": 0.003904235,
+          "worstContact": {
+            "time": 1.8666666666666667,
+            "side": "l",
+            "errorMm": 0.00044827486,
+            "clearanceMm": 0.003904235,
+            "desiredReach": 0.8354572,
+            "maximumReach": 0.86624265,
+            "hip": "(0.09213419, 0.6141984, -0.043124158)",
+            "ankle": "(0.21005791, 0.08140224, 0.5894945)",
+            "target": "(0.21005775, 0.08139834, 0.58949494)",
+            "anchor": "(0.10057104, 0, 0.57425535)",
+            "toe": "(0.1005712, 0, 0.57425493)",
+            "pelvis": "(-1.1777884E-15, 0.5794401, 0.0068253777)"
+          }
+        }
+      }
+    }
+  },
+  "groundContactEvidenceNote": "Current main-project 49-clip scans pass with bare feet and fitted boots. Twelve primary comparison captures are byte-identical before/after the casting reach correction. Death settling remains deferred."
+}

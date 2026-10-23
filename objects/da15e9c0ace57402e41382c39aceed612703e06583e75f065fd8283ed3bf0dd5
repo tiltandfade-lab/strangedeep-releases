@@ -1,0 +1,917 @@
+{
+ "schemaVersion": 1,
+ "effect": "shock-wave",
+ "source": "Generated from SHOCK_WAVE_MATRIX_CASES in test/helpers/shock-wave-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-shock-wave-form",
+  "targetHitPoints": 50,
+  "weapon": "greatsword",
+  "preview": {
+   "operation": "preview-shock-wave",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "shockWavePreview"
+  },
+  "cast": {
+   "operation": "shock-wave",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "near": [
+      8,
+      2
+     ],
+     "beyond": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       1,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "near",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "edge": [
+      9,
+      2
+     ],
+     "beyond": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       2,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "edge": [
+      10,
+      2
+     ],
+     "beyond": [
+      11,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       3,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "edge": [
+      11,
+      2
+     ],
+     "beyond": [
+      12,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       4,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "edge": [
+      12,
+      2
+     ],
+     "beyond": [
+      13,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       5,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "near": [
+      9,
+      2
+     ],
+     "edge": [
+      13,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "near",
+       10
+      ],
+      [
+       "edge",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "near": [
+      8,
+      2
+     ],
+     "edge": [
+      13,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "near",
+       11
+      ],
+      [
+       "edge",
+       11
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv8-straight",
+    "level": 8,
+    "fork": "straight",
+    "units": {
+     "edge": [
+      13,
+      2
+     ],
+     "diagonal": [
+      8,
+      1
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 60,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv9-straight",
+    "level": 9,
+    "fork": "straight",
+    "units": {
+     "edge": [
+      13,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 65,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       13
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv10-straight",
+    "level": 10,
+    "fork": "straight",
+    "units": {
+     "edge": [
+      13,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 70,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "edge",
+       14
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv8-split",
+    "level": 8,
+    "fork": "split",
+    "units": {
+     "forward": [
+      9,
+      2
+     ],
+     "left": [
+      9,
+      0
+     ],
+     "right": [
+      8,
+      3
+     ],
+     "beyond": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       2,
+       "budget"
+      ],
+      [
+       1,
+       2,
+       "budget"
+      ],
+      [
+       3,
+       2,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "forward",
+       11
+      ],
+      [
+       "left",
+       11
+      ],
+      [
+       "right",
+       11
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv9-split",
+    "level": 9,
+    "fork": "split",
+    "units": {
+     "forward": [
+      9,
+      2
+     ],
+     "left": [
+      9,
+      0
+     ],
+     "right": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 60,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       2,
+       "budget"
+      ],
+      [
+       1,
+       2,
+       "budget"
+      ],
+      [
+       3,
+       2,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "forward",
+       12
+      ],
+      [
+       "left",
+       12
+      ],
+      [
+       "right",
+       12
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv6-unseen-victim",
+    "level": 6,
+    "fork": null,
+    "hidden": true,
+    "units": {
+     "unseen": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       6,
+       "budget"
+      ]
+     ],
+     "forecastRays": [
+      [
+       2,
+       1,
+       "undiscovered"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "unseen",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv6-breakable-crate",
+    "level": 6,
+    "fork": null,
+    "crates": {
+     "crate": [
+      9,
+      2
+     ]
+    },
+    "units": {
+     "near": [
+      8,
+      2
+     ],
+     "behind": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       1,
+       "blocker"
+      ]
+     ],
+     "lostTiles": 5,
+     "struck": [
+      [
+       "near",
+       10
+      ]
+     ],
+     "obstructions": [
+      [
+       2,
+       "object",
+       "crate",
+       10
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv6-indestructible-wall",
+    "level": 6,
+    "fork": null,
+    "walls": {
+     "wall": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {
+     "near": [
+      8,
+      2
+     ],
+     "behind": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       1,
+       "blocker"
+      ]
+     ],
+     "lostTiles": 5,
+     "struck": [
+      [
+       "near",
+       10
+      ]
+     ],
+     "obstructions": [
+      [
+       2,
+       "wall",
+       "wall",
+       null
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv8-split-obstructed-forward",
+    "level": 8,
+    "fork": "split",
+    "crates": {
+     "crate": [
+      8,
+      2
+     ]
+    },
+    "units": {
+     "left": [
+      9,
+      0
+     ],
+     "right": [
+      9,
+      4
+     ],
+     "beyond": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       0,
+       "blocker"
+      ],
+      [
+       1,
+       2,
+       "budget"
+      ],
+      [
+       3,
+       2,
+       "budget"
+      ]
+     ],
+     "lostTiles": 2,
+     "struck": [
+      [
+       "left",
+       11
+      ],
+      [
+       "right",
+       11
+      ]
+     ],
+     "obstructions": [
+      [
+       2,
+       "object",
+       "crate",
+       11
+      ]
+     ]
+    }
+   },
+   {
+    "id": "lv10-split-3-2-1",
+    "level": 10,
+    "fork": "split",
+    "allocation": [
+     3,
+     2,
+     1
+    ],
+    "units": {
+     "forward": [
+      10,
+      2
+     ],
+     "left": [
+      9,
+      0
+     ],
+     "right": [
+      8,
+      3
+     ],
+     "beyondRight": [
+      9,
+      4
+     ]
+    },
+    "rng": {
+     "primary": [
+      10,
+      20
+     ],
+     "wave": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "damagePercent": 65,
+     "primaryDamage": 20,
+     "rays": [
+      [
+       2,
+       3,
+       "budget"
+      ],
+      [
+       1,
+       2,
+       "budget"
+      ],
+      [
+       3,
+       1,
+       "budget"
+      ]
+     ],
+     "lostTiles": 0,
+     "struck": [
+      [
+       "forward",
+       13
+      ],
+      [
+       "left",
+       13
+      ],
+      [
+       "right",
+       13
+      ]
+     ]
+    }
+   }
+  ]
+ }
+}

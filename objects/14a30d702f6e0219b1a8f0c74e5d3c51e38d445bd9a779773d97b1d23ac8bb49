@@ -1,0 +1,418 @@
+{
+ "schemaVersion": 1,
+ "effect": "throw-stone",
+ "source": "Generated from THROW_STONE_MATRIX_CASES in test/helpers/throw-stone-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-throw-stone-path",
+  "targetHitPoints": 200,
+  "preview": {
+   "operation": "preview-throw-stone",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "throwStonePreview"
+  },
+  "cast": {
+   "operation": "throw-stone",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "maximumDamage": 4,
+     "rawAccuracy": 70,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "maximumDamage": 4,
+     "rawAccuracy": 75,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "maximumDamage": 4,
+     "rawAccuracy": 75,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "maximumDamage": 6,
+     "rawAccuracy": 75,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "maximumDamage": 6,
+     "rawAccuracy": 80,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 6,
+     "rawAccuracy": 80,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 0,
+     "pushTiles": 0,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-push",
+    "level": 8,
+    "fork": "push",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 25,
+     "pushTiles": 1,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-stun",
+    "level": 8,
+    "fork": "stun",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 15,
+     "pushTiles": 0,
+     "stunAffectedTurns": 1,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-stunned-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-push",
+    "level": 9,
+    "fork": "push",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 50,
+     "pushTiles": 1,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-stun",
+    "level": 9,
+    "fork": "stun",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 30,
+     "pushTiles": 0,
+     "stunAffectedTurns": 1,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-stunned-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-push",
+    "level": 10,
+    "fork": "push",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 50,
+     "pushTiles": 2,
+     "stunAffectedTurns": 0,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-stun",
+    "level": 10,
+    "fork": "stun",
+    "rng": {
+     "strike": [
+      50,
+      1
+     ],
+     "control": 1
+    },
+    "expected": {
+     "rangeCells": 6,
+     "maximumDamage": 8,
+     "rawAccuracy": 80,
+     "chancePercent": 45,
+     "pushTiles": 0,
+     "stunAffectedTurns": 1,
+     "damage": 1,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-stunned-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Exact scripted control chance, unseen routes, Stunned recovery and cold reopen are guarded by automated suites."
+    },
+    "units": {}
+   }
+  ]
+ }
+}

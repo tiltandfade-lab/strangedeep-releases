@@ -1,0 +1,1104 @@
+{
+ "schemaVersion": 1,
+ "effect": "kick",
+ "source": "Generated from KICK_MATRIX_CASES in test/helpers/kick-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-kick-form",
+  "targetHitPoints": 50,
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "preview": {
+   "operation": "preview-reviewed-kick",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "kickPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-kick",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 0,
+     "damagePercent": 100,
+     "pushTiles": 0,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       7,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 0,
+     "damagePercent": 100,
+     "pushTiles": 1,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 1,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4-crowd",
+    "level": 4,
+    "fork": "crowd",
+    "units": {
+     "north": [
+      6,
+      1
+     ],
+     "south": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "fields": {
+     "targetIds": [
+      "$unit:primary",
+      "$unit:north"
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 1,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       15
+      ],
+      [
+       "north",
+       15
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "north": [
+       6,
+       0
+      ],
+      "south": [
+       6,
+       3
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:north"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4-distance",
+    "level": 4,
+    "fork": "distance",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 2,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       9,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5-crowd",
+    "level": 5,
+    "fork": "crowd",
+    "units": {
+     "north": [
+      6,
+      1
+     ],
+     "south": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "fields": {
+     "targetIds": [
+      "$unit:primary",
+      "$unit:north",
+      "$unit:south"
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 1,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       15
+      ],
+      [
+       "north",
+       15
+      ],
+      [
+       "south",
+       15
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "north": [
+       6,
+       0
+      ],
+      "south": [
+       6,
+       4
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:north"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:south"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5-distance",
+    "level": 5,
+    "fork": "distance",
+    "units": {
+     "blocker": [
+      11,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "bonus-action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 3,
+     "collisionPercent": 0,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       10,
+       2
+      ],
+      "blocker": [
+       11,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-crowd",
+    "level": 6,
+    "fork": "crowd",
+    "units": {
+     "north": [
+      6,
+      1
+     ],
+     "blocker": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "fields": {
+     "targetIds": [
+      "$unit:primary",
+      "$unit:north"
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 1,
+     "collisionPercent": 25,
+     "struck": [
+      [
+       "primary",
+       15
+      ],
+      [
+       "north",
+       15
+      ]
+     ],
+     "collisions": [
+      [
+       "blocker",
+       3
+      ]
+     ],
+     "positions": {
+      "primary": [
+       7,
+       2
+      ],
+      "north": [
+       6,
+       0
+      ],
+      "blocker": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:north"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-distance",
+    "level": 6,
+    "fork": "distance",
+    "units": {
+     "blocker": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 3,
+     "collisionPercent": 25,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [
+      [
+       "blocker",
+       5
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "blocker": [
+       9,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7-crowd",
+    "level": 7,
+    "fork": "crowd",
+    "units": {
+     "north": [
+      6,
+      1
+     ],
+     "south": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "fields": {
+     "targetIds": [
+      "$unit:primary",
+      "$unit:north",
+      "$unit:south"
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 2,
+     "collisionPercent": 25,
+     "struck": [
+      [
+       "primary",
+       15
+      ],
+      [
+       "north",
+       15
+      ],
+      [
+       "south",
+       15
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       9,
+       2
+      ],
+      "north": [
+       6,
+       0
+      ],
+      "south": [
+       6,
+       5
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:north"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:south"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7-distance",
+    "level": 7,
+    "fork": "distance",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 4,
+     "collisionPercent": 25,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       11,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-crowd",
+    "level": 8,
+    "fork": "crowd",
+    "units": {
+     "blocker": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 2,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       15
+      ]
+     ],
+     "collisions": [
+      [
+       "blocker",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "blocker": [
+       9,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-distance",
+    "level": 8,
+    "fork": "distance",
+    "units": {
+     "blocker": [
+      10,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 4,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [
+      [
+       "blocker",
+       10
+      ]
+     ],
+     "positions": {
+      "primary": [
+       9,
+       2
+      ],
+      "blocker": [
+       10,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-crowd",
+    "level": 9,
+    "fork": "crowd",
+    "units": {
+     "north": [
+      6,
+      1
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "fields": {
+     "targetIds": [
+      "$unit:primary",
+      "$unit:north"
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 3,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       15
+      ],
+      [
+       "north",
+       15
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       10,
+       2
+      ],
+      "north": [
+       6,
+       0
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:north"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-distance",
+    "level": 9,
+    "fork": "distance",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 6,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       13,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-crowd",
+    "level": 10,
+    "fork": "crowd",
+    "units": {
+     "first": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 75,
+     "pushTiles": 3,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       15
+      ]
+     ],
+     "collisions": [
+      [
+       "first",
+       7
+      ]
+     ],
+     "positions": {
+      "primary": [
+       10,
+       2
+      ],
+      "first": [
+       11,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-distance",
+    "level": 10,
+    "fork": "distance",
+    "units": {
+     "first": [
+      9,
+      2
+     ],
+     "second": [
+      12,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 6,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [
+      [
+       "second",
+       10
+      ],
+      [
+       "first",
+       10
+      ]
+     ],
+     "positions": {
+      "primary": [
+       13,
+       2
+      ],
+      "first": [
+       14,
+       2
+      ],
+      "second": [
+       15,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-distance-unseen-landing",
+    "level": 9,
+    "fork": "distance",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 6,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [],
+     "positions": {
+      "primary": [
+       13,
+       2
+      ]
+     },
+     "forecast": {
+      "cells": 1,
+      "stoppedBy": "unseen"
+     },
+     "arenaNote": "The arena room is lit and cannot limit the hero's sight yet; the unseen forecast stop is checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-distance-unseen-collision",
+    "level": 10,
+    "fork": "distance",
+    "units": {
+     "hidden": [
+      11,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "cost": "action",
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "pushTiles": 6,
+     "collisionPercent": 50,
+     "struck": [
+      [
+       "primary",
+       20
+      ]
+     ],
+     "collisions": [
+      [
+       "hidden",
+       10
+      ]
+     ],
+     "positions": {
+      "primary": [
+       13,
+       2
+      ],
+      "hidden": [
+       14,
+       2
+      ]
+     },
+     "forecast": {
+      "cells": 1,
+      "stoppedBy": "unseen"
+     },
+     "arenaNote": "The arena room is lit and cannot limit the hero's sight yet; the unseen forecast stop is checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "status": "ROUGHNESS_PASS_IMPLEMENTED_REQUIRES_VISUAL_REVIEW",
+  "curves": {
+    "dielectric": [
+      [
+        0,
+        0
+      ],
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.25,
+        0.52
+      ],
+      [
+        0.4,
+        0.7
+      ],
+      [
+        0.55,
+        0.82
+      ],
+      [
+        0.8,
+        0.9
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "metal": [
+      [
+        0,
+        0
+      ],
+      [
+        0.15,
+        0.25
+      ],
+      [
+        0.3,
+        0.4
+      ],
+      [
+        0.5,
+        0.55
+      ],
+      [
+        0.75,
+        0.77
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "glassMixed": [
+      [
+        0,
+        0
+      ],
+      [
+        0.2,
+        0.22
+      ],
+      [
+        0.4,
+        0.47
+      ],
+      [
+        0.6,
+        0.68
+      ],
+      [
+        0.8,
+        0.84
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "assets": [
+    {
+      "id": "sword",
+      "file": "sword.glb",
+      "sourceSha256": "84d4c90a5e2979b6b28320ec0f7bb725ffb2f02109736b0eebe797d312701571",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "rusty_basic_one_handed_sword",
+      "file": "rusty_basic_one_handed_sword.glb",
+      "sourceSha256": "bbeb08b793ba10378475f1cf14aaf996800237643ddf03ad3738099d2038ea0b",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "makeshift_cathedral_one_handed_sword_01",
+      "file": "makeshift_cathedral_one_handed_sword_01.glb",
+      "sourceSha256": "0ad65ed048264f92ef23bfc003aa4c9f22c9c396081b279960db6d195d866f6c",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "basic_iron_club",
+      "file": "basic_iron_club.glb",
+      "sourceSha256": "221f1b155e0f3abe961201501061b336a23be479f9559639f1ca5da24a4d01a0",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "spiked_table_leg",
+      "file": "spiked_table_leg.glb",
+      "sourceSha256": "0c3ae8a2d6daad722d3c3fc50b78b4361d61f43e68a98603811dc3f30081173e",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Original materials on restored construction",
+          "roughnessFile": "spiked_table_leg.png",
+          "sha256": "f67205dcabc5a2ad698c03f645df23544eaab2a38fb91c41bf7c264a986c4b2d",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.0,
+          "atlasMedianAfter": 0.0,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "makeshift_cathedral_club_01",
+      "file": "makeshift_cathedral_club_01.glb",
+      "sourceSha256": "6a3f67775a9cefc23ef8faf3e40d9cb99ef7dd53dc64d797acae71d761d02fe3",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Original materials on restored construction",
+          "roughnessFile": "makeshift_cathedral_club_01.png",
+          "sha256": "aa4b2b49d318ffaf000c5e24242cf8a27ac1c2899f72a3a50f6bb4af044e22b9",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.0,
+          "atlasMedianAfter": 0.0,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "stained_glass_longsword",
+      "file": "stained_glass_longsword.glb",
+      "sourceSha256": "a5175a603fdbce3b386fd07bdd0093e6c66b15aa1cedb13e5d90b9dd04f4c4b3",
+      "mode": "glassMixed",
+      "materials": [
+        {
+          "expectedName": "CPU baked original materials",
+          "roughnessFile": "stained_glass_longsword.png",
+          "sha256": "2a615821fe237a62a6414d3acfb294ff47791c980416baca0eb2f417431bf208",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.7411764860153198,
+          "atlasMedianAfter": 0.792156862745098,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "flanged_mace",
+      "file": "flanged_mace.glb",
+      "sourceSha256": "afa4ddcb1c32d8c7b0dc88bbe614f7789f5c63513e9c9b295cb5d856cb01419d",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Material_0",
+          "roughnessFile": "flanged_mace.png",
+          "sha256": "5f54d8c846bfa7268055d7769b59c88f883698918d478044fa157b84611127be",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.5529412031173706,
+          "atlasMedianAfter": 0.611764705882353,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "forged_warhammer",
+      "file": "forged_warhammer.glb",
+      "sourceSha256": "e4d0b76c4dc9bb7fea2fabae63e3a2a08f15b040f96f7ec5fdbb8ccd53a5927d",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Material_0.006",
+          "roughnessFile": "forged_warhammer.png",
+          "sha256": "935192d6523acd6cd6b20815b21bcbb44b628074fc0ac6b3757c11d2dda68838",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.49803921580314636,
+          "atlasMedianAfter": 0.7607843137254902,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "makeshift_cathedral_club_02",
+      "file": "makeshift_cathedral_club_02.glb",
+      "sourceSha256": "c931b1245152a25a4a76fd615bf062bae4860ec59b58a31f31517b5461618585",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "BakedMaterial",
+          "roughnessFile": "makeshift_cathedral_club_02.png",
+          "sha256": "af606d80d83dc97ca603453bd55156986215d0fec012a62b2b8fe5dd21c14e61",
+          "width": 4096,
+          "height": 4096,
+          "atlasMedianBefore": 0.5764706134796143,
+          "atlasMedianAfter": 0.8274509803921568,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "basic_iron_dagger",
+      "file": "basic_iron_dagger.glb",
+      "sourceSha256": "4baced93476b58ff6a2ee6c7e04c638db068aa061add680c867cac825350b9b9",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "rusty_basic_dagger",
+      "file": "rusty_basic_dagger.glb",
+      "sourceSha256": "09c138bf576484ef9cc505cb60afa2b3157575045a8683b1fa3112d63fdec82a",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "makeshift_cathedral_dagger_02",
+      "file": "makeshift_cathedral_dagger_02.glb",
+      "sourceSha256": "68181b74a751c93a66684aa8f65acb1ae5ac8a66e630d4a78876c1b2ba9e6d45",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Original materials on restored construction",
+          "roughnessFile": "makeshift_cathedral_dagger_02.png",
+          "sha256": "a04cbdf9f4fc5d4c9c6d45f54a00024dd43aa5f1b974145332bfcbc8a707dbc3",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.5490196347236633,
+          "atlasMedianAfter": 0.6549019607843137,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "stained_glass_dagger",
+      "file": "stained_glass_dagger.glb",
+      "sourceSha256": "10ec4800f7aa103ccdab7a053c88781f0f6986cde8c1d995b5bd08d9b3cc22e8",
+      "mode": "glassMixed",
+      "materials": [
+        {
+          "expectedName": "CPU baked original materials",
+          "roughnessFile": "stained_glass_dagger.png",
+          "sha256": "9b5f26e289d75fe127c42bd362a57f2d5de8f0d56eba6a7d5779e871ff8f003e",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.5372549295425415,
+          "atlasMedianAfter": 0.615686274509804,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "leafblade_dagger",
+      "file": "leafblade_dagger.glb",
+      "sourceSha256": "c0e21620410a8d343a75d10e776ee3ee4257ff30bdebd8051f48890c9e97b873",
+      "mode": "dielectric-metal",
+      "materials": [
+        {
+          "expectedName": "Material_0.003",
+          "roughnessFile": "leafblade_dagger.png",
+          "sha256": "c9419dfff9775947b0267b5991e0a24ea874b0e996f5b8700906243b056e1414",
+          "width": 2048,
+          "height": 2048,
+          "atlasMedianBefore": 0.3019607961177826,
+          "atlasMedianAfter": 0.4,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "makeshift_cathedral_dagger_01",
+      "file": "makeshift_cathedral_dagger_01.glb",
+      "sourceSha256": "6a6c09fdc8397261fb28817cd86ceefca885c940784bd2a8147b1c336253bb6f",
+      "mode": "glassMixed",
+      "materials": [
+        {
+          "expectedName": "BakedMaterial",
+          "roughnessFile": "makeshift_cathedral_dagger_01.png",
+          "sha256": "d36c168936d3a877330ec9a404437ef736b62384ad1e6cedee70a6f81a6880e9",
+          "width": 4096,
+          "height": 4096,
+          "atlasMedianBefore": 0.4431372582912445,
+          "atlasMedianAfter": 0.5137254901960784,
+          "note": "Atlas statistics only; see before.json for occupied-surface baseline. Metallic controls blending, not verified semantic segmentation."
+        }
+      ]
+    },
+    {
+      "id": "staff_trial_basic_iron_staff",
+      "file": "staff_trial_basic_iron_staff.glb",
+      "sourceSha256": "3ffdd7353900a0bcb7ffbe90c1e4a39f656178c764f99b28f2d03f5257e04249",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "staff_trial_rusty_basic_staff",
+      "file": "staff_trial_rusty_basic_staff.glb",
+      "sourceSha256": "331f76286517c91247fa1311889ee21696ab494960947cab3253866b85c46782",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "staff_trial_dead_caller_single_loop_staff",
+      "file": "staff_trial_dead_caller_single_loop_staff.glb",
+      "sourceSha256": "b1581a8200abf47a7f4ed69d5def601ff5afadb9377554684bb084f0839e30e9",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "staff_trial_grave_conductor_skull_staff",
+      "file": "staff_trial_grave_conductor_skull_staff.glb",
+      "sourceSha256": "561197606d0ebcfdbc440cab9c637931175d970ffb880a42d03d2eef5c1398db",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "staff_trial_corpse_orator_triple_loop_staff",
+      "file": "staff_trial_corpse_orator_triple_loop_staff.glb",
+      "sourceSha256": "2ceeeb8d087915c1dc469fa3c07b53d4bd52d05fce21479e80d374e377749861",
+      "mode": "retain-reviewed",
+      "materials": []
+    },
+    {
+      "id": "bow_aligned_iron_longbow_v1",
+      "file": "bow_aligned_iron_longbow_v1.glb",
+      "sourceSha256": "9731a847c1a86e4f14bb0b4f45cfb665703bd67f9f92b9f3ca657fffecd396c3",
+      "mode": "retain-provisional",
+      "decision": "Technical, provisional (September 29 prototype bow): keep the source scan PBR (wood, leather, iron, cord) unchanged; no roughness pass has been made. Founder visual review pending."
+    }
+  ]
+}

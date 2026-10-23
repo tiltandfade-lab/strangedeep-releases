@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "status": "provisional-two-hand-uniques-v1",
+  "sourceSha256": "78c24555e2957e6c2255c01e49d554f335b82665b92f258d2857c2c7d8b86353",
+  "definitions": [
+    {
+      "schemaVersion": 1,
+      "id": "item-definition_1bdf234efbdc5be9",
+      "label": "Stone Slab Greatsword",
+      "nameKey": "item.twohand-stone-slab.name",
+      "category": "equipment",
+      "footprint": {
+        "width": 2,
+        "height": 4
+      },
+      "equipmentOptions": [
+        [
+          "main-hand",
+          "off-hand"
+        ]
+      ],
+      "grantedActionIds": [
+        "action_1bdf234efbdc5be9"
+      ],
+      "grantedEffectIds": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "item-definition_b3a9fc6db09c3fc7",
+      "label": "Corpse Leg",
+      "nameKey": "item.corpse-leg.name",
+      "category": "equipment",
+      "footprint": {
+        "width": 2,
+        "height": 4
+      },
+      "equipmentOptions": [
+        [
+          "main-hand",
+          "off-hand"
+        ]
+      ],
+      "grantedActionIds": [
+        "action_b3a9fc6db09c3fc7"
+      ],
+      "grantedEffectIds": []
+    }
+  ],
+  "actions": [
+    {
+      "schemaVersion": 3,
+      "id": "action_1bdf234efbdc5be9",
+      "label": "Stone Slab Greatsword",
+      "kind": "melee",
+      "minimumRangeCells": 1,
+      "maximumRangeCells": 1,
+      "accuracyPercent": 80,
+      "damageDice": 1,
+      "damageDieSides": 7,
+      "damageModifier": 0,
+      "damageRange": {
+        "minimum": 4,
+        "maximum": 10,
+        "criticalMultiplier": 2
+      },
+      "armorIgnore": 0,
+      "requiresLineOfSight": true,
+      "usesCover": true
+    },
+    {
+      "schemaVersion": 3,
+      "id": "action_b3a9fc6db09c3fc7",
+      "label": "Corpse Leg",
+      "kind": "melee",
+      "minimumRangeCells": 1,
+      "maximumRangeCells": 1,
+      "accuracyPercent": 80,
+      "damageDice": 1,
+      "damageDieSides": 6,
+      "damageModifier": 0,
+      "damageRange": {
+        "minimum": 2,
+        "maximum": 7,
+        "criticalMultiplier": 2
+      },
+      "armorIgnore": 10,
+      "requiresLineOfSight": true,
+      "usesCover": true
+    }
+  ]
+}

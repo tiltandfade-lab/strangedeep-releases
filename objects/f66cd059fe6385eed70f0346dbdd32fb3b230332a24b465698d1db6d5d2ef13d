@@ -1,0 +1,131 @@
+[gd_resource type="Resource" script_class="StrangedeepDungeonPartCatalog" load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://src/StrangedeepDungeonPartCatalog.cs" id="1_catalog"]
+[ext_resource type="Script" path="res://src/StrangedeepDungeonPartDefinition.cs" id="2_definition"]
+
+[sub_resource type="Resource" id="Resource_plain"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.plain.v1"
+DisplayName = "Plain founded wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "plain"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_recess"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.recess.v1"
+DisplayName = "Recess wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "recess"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_buttress"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.processional-buttress.v1"
+DisplayName = "Processional buttress wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "buttress"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_damaged"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.damaged-recess.v1"
+DisplayName = "Damaged recess wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "damaged"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_clerestory"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.clerestory.v1"
+DisplayName = "Clerestory wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "clerestory"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+WindowSlotWidthRatio = 0.56
+WindowSillRatio = 0.47
+WindowCrownRatio = 0.89
+WindowBackingFraction = 0.35
+
+[sub_resource type="Resource" id="Resource_blind_arch"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-bay.blind-arch.v1"
+DisplayName = "Blind arch wall bay"
+Family = "WALL_BAY"
+HostKind = "FOUNDED_WALL_BAY"
+PresentationRecipe = "blind-arch"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_collapsed_breach"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-run.collapsed-breach.v1"
+DisplayName = "Collapsed breach landmark"
+Family = "WALL_RUN_LANDMARK"
+HostKind = "FOUNDED_WALL_RUN"
+PresentationRecipe = "collapsed-breach"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_service_bell_frame"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-run.service-bell-frame.v1"
+DisplayName = "Service bell frame landmark"
+Family = "WALL_RUN_LANDMARK"
+HostKind = "FOUNDED_WALL_RUN"
+PresentationRecipe = "service-bell-frame"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_processional_crown"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-run.sacred-processional-crown.v1"
+DisplayName = "Sacred processional crown landmark"
+Family = "WALL_RUN_LANDMARK"
+HostKind = "FOUNDED_WALL_RUN"
+PresentationRecipe = "sacred-processional-crown"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_raised_gatehouse"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall-run.raised-gatehouse.v1"
+DisplayName = "Raised gatehouse landmark"
+Family = "WALL_RUN_LANDMARK"
+HostKind = "FOUNDED_WALL_RUN"
+PresentationRecipe = "raised-gatehouse"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_founded_door"]
+script = ExtResource("2_definition")
+PartId = "dungeon.portal.founded-door.v1"
+DisplayName = "Founded door portal"
+Family = "DOOR_PORTAL"
+HostKind = "FOUNDED_DOOR_APERTURE"
+PresentationRecipe = "founded-door"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_monumental_ingress"]
+script = ExtResource("2_definition")
+PartId = "dungeon.portal.monumental-ingress.v1"
+DisplayName = "Monumental ingress crown"
+Family = "DOOR_PORTAL"
+HostKind = "FOUNDED_DOOR_APERTURE"
+PresentationRecipe = "monumental-ingress"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[sub_resource type="Resource" id="Resource_freestanding_wall"]
+script = ExtResource("2_definition")
+PartId = "dungeon.wall.freestanding-full-height.v1"
+DisplayName = "Founded freestanding full-height wall"
+Family = "FREESTANDING_WALL"
+HostKind = "FOUNDED_FREESTANDING_WALL"
+PresentationRecipe = "freestanding-full-height"
+AdmissionStatus = "INSPECTOR_CATALOG_BRIDGE"
+
+[resource]
+script = ExtResource("1_catalog")
+CatalogId = "strangedeep-dungeon-part-catalog-v1"
+SchemaVersion = 1
+Definitions = Array[ExtResource("2_definition")]([SubResource("Resource_plain"), SubResource("Resource_recess"), SubResource("Resource_buttress"), SubResource("Resource_damaged"), SubResource("Resource_clerestory"), SubResource("Resource_blind_arch"), SubResource("Resource_collapsed_breach"), SubResource("Resource_service_bell_frame"), SubResource("Resource_processional_crown"), SubResource("Resource_raised_gatehouse"), SubResource("Resource_founded_door"), SubResource("Resource_monumental_ingress"), SubResource("Resource_freestanding_wall")])

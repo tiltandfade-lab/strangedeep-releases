@@ -1,0 +1,757 @@
+{
+ "schemaVersion": 1,
+ "effect": "leap",
+ "source": "Generated from LEAP_CAST_MATRIX_CASES in test/helpers/reviewed-movement-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "attributes": {
+   "strength": 4,
+   "dexterity": 3,
+   "magic": 3,
+   "vitality": 3
+  },
+  "sourcePrerequisites": {
+   "paidJumpLevel": 5
+  },
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    11,
+    2
+   ]
+  },
+  "forkId": null,
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-leap",
+   "fields": {
+    "targetId": "$cell:10,2"
+   },
+   "previewKey": "leapPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-leap",
+   "fields": {
+    "targetId": "$cell:10,2",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "leap-lv1",
+    "level": 1,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 1,
+    "maximumDamage": 6,
+    "stunChance": 0,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       101
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv2",
+    "level": 2,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 2,
+    "maximumDamage": 7,
+    "stunChance": 0,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       202
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv3",
+    "level": 3,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 3,
+    "maximumDamage": 8,
+    "stunChance": 0,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       303
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv4",
+    "level": 4,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 4,
+    "maximumDamage": 9,
+    "stunChance": 0,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       404
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv5",
+    "level": 5,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 0,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv6",
+    "level": 6,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 25,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv7",
+    "level": 7,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 40,
+    "pushCells": 0,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv8",
+    "level": 8,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 40,
+    "pushCells": 1,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv9",
+    "level": 9,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 40,
+    "pushCells": 2,
+    "displaceCollidedUnits": false,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   },
+   {
+    "id": "leap-lv10",
+    "level": 10,
+    "fork": null,
+    "rangeCells": 4,
+    "minimumDamage": 5,
+    "maximumDamage": 10,
+    "stunChance": 40,
+    "pushCells": 2,
+    "displaceCollidedUnits": true,
+    "kind": "leap",
+    "heroAt": [
+     6,
+     2
+    ],
+    "primaryAt": [
+     11,
+     2
+    ],
+    "destination": [
+     10,
+     2
+    ],
+    "attributes": {
+     "strength": 4,
+     "magic": 3,
+     "dexterity": 3,
+     "vitality": 3
+    },
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "struck": [
+      [
+       "primary",
+       505
+      ]
+     ],
+     "healthUnitsPerPoint": 100,
+     "movementCost": 0,
+     "voluntarySteps": 4,
+     "landing": [
+      10,
+      2
+     ],
+     "targetCount": 1,
+     "events": [
+      {
+       "type": "floor-movement-schedule-started"
+      },
+      {
+       "type": "floor-scheduled-movement-step"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-movement-schedule-finished"
+      }
+     ],
+     "arenaNote": "Requires the integration-owned explicit engineVersion1 arena source and actual paid prerequisite construction. Legacy arena baselines stay unchanged; numeric precision results are checked in focused owned-source suites."
+    }
+   }
+  ]
+ }
+}

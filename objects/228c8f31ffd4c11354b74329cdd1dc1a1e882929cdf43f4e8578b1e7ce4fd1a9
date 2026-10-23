@@ -1,0 +1,55 @@
+{
+ "schemaVersion": 1,
+ "effect": "second-wind",
+ "source": "Generated from SECOND_WIND_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-second-wind",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "reviewedSecondWindPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-second-wind",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {},
+    "expected": {
+     "healing": 5,
+     "usePeriod": "segment",
+     "uses": 1,
+     "cost": "Bonus Action",
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-second-wind-healed"
+      }
+     ],
+     "arenaNote": "Requires the accepted town/portal epoch, and a wounded hero; the automated durable fixture supplies it."
+    }
+   }
+  ]
+ }
+}

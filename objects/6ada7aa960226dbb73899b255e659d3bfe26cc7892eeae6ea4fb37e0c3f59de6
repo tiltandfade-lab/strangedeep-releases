@@ -1,0 +1,2525 @@
+{
+ "version": 1,
+ "status": "Draft for founder review (October 3, 2026). Tileset light palettes, material class ranges and per-material tints. Nothing here is approved art; the material audit checks every entry against its class range.",
+ "notebook": "design-notebook/Strangedeep/Visual Direction/Dungeon and Interface Presentation.md#october-3-tileset-palettes-and-room-lights",
+ "howToAddATileset": "Add a tileset object keyed by its canonical style id (as TilesetPalette.TilesetOf returns it) with identity, lights {flame, torch, cold} (flame and torch warm: hue 15-50, saturation at least 0.3; cold: hue 160-270), decorative {name: RRGGBB} (a glow takes the nearest by hue), decorativeRoles {role: RRGGBB}, secondPool (doorway-wall-light or cold-grate), secondPoolCells, hallTorchCells and anchors {class or floor: {hsv, huePull, pull}}. Add one materials entry per kit mesh node (id <style>/<role>/<node>, source kit, class, anchor, tint) and a <style>/field entry for its slab floor; then run python3 godot/tools/measure-tileset-albedo.py --propose-tints --write, python3 godot/tools/measure-tileset-albedo.py and node godot/tools/tileset-palette-check.mjs. Every material must land inside its class range.",
+ "classes": {
+  "stone": {
+   "value": [
+    0.14,
+    0.38
+   ],
+   "saturation": [
+    0.0,
+    0.3
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ],
+   "note": "masonry, brick, slate and flag floors"
+  },
+  "wood": {
+   "value": [
+    0.1,
+    0.32
+   ],
+   "saturation": [
+    0.12,
+    0.46
+   ],
+   "roughness": [
+    0.6,
+    1.0
+   ],
+   "note": "panelling, planks, furniture (weathered grey wood included)"
+  },
+  "metal": {
+   "value": [
+    0.1,
+    0.36
+   ],
+   "saturation": [
+    0.0,
+    0.5
+   ],
+   "roughness": [
+    0.3,
+    1.0
+   ],
+   "note": "iron, bronze and brass or gold trim and fittings"
+  },
+  "glass-glow": {
+   "value": [
+    0.05,
+    0.6
+   ],
+   "saturation": [
+    0.0,
+    0.7
+   ],
+   "roughness": [
+    0.0,
+    1.0
+   ],
+   "note": "glass carriers and glowing parts; their light comes from the tileset light palette"
+  },
+  "cloth": {
+   "value": [
+    0.12,
+    0.5
+   ],
+   "saturation": [
+    0.03,
+    0.45
+   ],
+   "roughness": [
+    0.7,
+    1.0
+   ],
+   "note": "banners, clothes, rugs, book covers"
+  },
+  "skin": {
+   "value": [
+    0.38,
+    0.7
+   ],
+   "saturation": [
+    0.18,
+    0.45
+   ],
+   "roughness": [
+    0.5,
+    0.9
+   ],
+   "note": "bare skin of characters"
+  }
+ },
+ "tilesets": {
+  "opal-lanternhouse": {
+   "identity": "Warm rose-brown stone and dull bronze around pink, white and cyan opal glass on a grey flag floor; an amber lantern pool against the cool glass (founder-approved M1 target 1).",
+   "concept": "scratch/m1-visual-targets-2026-10-03/target-1-opal-room.png (approved); scratch/lighting-materials-2026-10-03/concepts/concept-opal.png",
+   "lights": {
+    "flame": "ffd6a8",
+    "torch": "ffc996",
+    "cold": "b8a6ff"
+   },
+   "decorative": {
+    "ember": "ff5c48",
+    "amber": "ffc98a",
+    "cyan": "8fd6ff",
+    "lavender": "b8a6ff",
+    "rose": "ff9ccf"
+   },
+   "decorativeRoles": {},
+   "secondPool": "doorway-wall-light",
+   "anchors": {
+    "stone": {
+     "hsv": [
+      10,
+      0.22,
+      0.3
+     ],
+     "huePull": 0.3,
+     "pull": 0.4
+    },
+    "floor": {
+     "hsv": [
+      25,
+      0.1,
+      0.26
+     ],
+     "huePull": 0.3,
+     "pull": 0.5
+    },
+    "metal": {
+     "hsv": [
+      30,
+      0.28,
+      0.2
+     ],
+     "huePull": 0.2,
+     "pull": 0.4
+    }
+   },
+   "secondPoolCells": 24,
+   "hallTorchCells": 96
+  },
+  "pendulum-conservatory": {
+   "identity": "Walnut panelling and yellow-gold brass (not orange) around amber and blue windows on a dark slate floor; honey lanterns, with teal and amber window light on the floor (founder-approved M1 target 2).",
+   "concept": "scratch/m1-visual-targets-2026-10-03/target-2-pendulum-room.png (approved); scratch/lighting-materials-2026-10-03/concepts/concept-pendulum.png",
+   "lights": {
+    "flame": "ffdcaa",
+    "torch": "ffcd98",
+    "cold": "66d0c4"
+   },
+   "decorative": {
+    "teal": "66d0c4",
+    "amber": "ffc066"
+   },
+   "decorativeRoles": {
+    "G04": "ffd28f",
+    "G06": "ffd28f"
+   },
+   "secondPool": "doorway-wall-light",
+   "anchors": {
+    "wood": {
+     "hsv": [
+      20,
+      0.32,
+      0.17
+     ],
+     "huePull": 0.3,
+     "pull": 0.5
+    },
+    "metal": {
+     "hsv": [
+      40,
+      0.45,
+      0.24
+     ],
+     "huePull": 0.6,
+     "pull": 0.6
+    },
+    "floor": {
+     "hsv": [
+      200,
+      0.06,
+      0.19
+     ],
+     "huePull": 0.5,
+     "pull": 0.6
+    },
+    "stone": {
+     "hsv": [
+      200,
+      0.06,
+      0.19
+     ],
+     "huePull": 0.5,
+     "pull": 0.6
+    }
+   },
+   "secondPoolCells": 24,
+   "hallTorchCells": 96
+  },
+  "cathedral": {
+   "identity": "Soot-dark brown brick, grey flags and black iron; big warm wall-torch pools and hard shadows in true black (founder-approved M1 target 3). Its cold light is kept for later glass or grates; no composed light uses it yet.",
+   "concept": "scratch/m1-visual-targets-2026-10-03/target-3-brick-room.png (approved); scratch/lighting-materials-2026-10-03/concepts/concept-cathedral.png",
+   "lights": {
+    "flame": "e9aa70",
+    "torch": "e9aa70",
+    "cold": "98a8ff"
+   },
+   "decorative": {},
+   "decorativeRoles": {},
+   "secondPool": "doorway-wall-light",
+   "anchors": {
+    "stone": {
+     "hsv": [
+      12,
+      0.32,
+      0.22
+     ],
+     "huePull": 0.3,
+     "pull": 0.5
+    },
+    "floor": {
+     "hsv": [
+      215,
+      0.05,
+      0.22
+     ],
+     "huePull": 0.5,
+     "pull": 0.5
+    },
+    "dressed": {
+     "hsv": [
+      30,
+      0.08,
+      0.28
+     ],
+     "huePull": 0.3,
+     "pull": 0.5
+    },
+    "metal": {
+     "hsv": [
+      220,
+      0.05,
+      0.15
+     ],
+     "huePull": 0.3,
+     "pull": 0.3
+    },
+    "wood": {
+     "hsv": [
+      24,
+      0.34,
+      0.18
+     ],
+     "huePull": 0.3,
+     "pull": 0.3
+    }
+   },
+   "secondPoolCells": 16,
+   "hallTorchCells": 48
+  },
+  "cinder-eye": {
+   "identity": "Blackened stone with restrained gold (the September 24 Cinder Eye wave): near-black walls and floor, thin gold trim, ember-orange flames against a cold eye-glow. Draft for the third kit tileset; its kit materials join when the skin lands.",
+   "concept": "none yet",
+   "lights": {
+    "flame": "ffcb9a",
+    "torch": "ffbe88",
+    "cold": "84d2ff"
+   },
+   "decorative": {
+    "eye": "84d2ff",
+    "ember": "ff7a45",
+    "gold": "ffcc7a"
+   },
+   "decorativeRoles": {
+    "G05": "ffa24a"
+   },
+   "secondPool": "cold-grate",
+   "secondPoolCells": 20,
+   "hallTorchCells": 64,
+   "anchors": {
+    "stone": {
+     "hsv": [
+      22,
+      0.1,
+      0.32
+     ],
+     "huePull": 0.3,
+     "pull": 0.65
+    },
+    "floor": {
+     "hsv": [
+      24,
+      0.08,
+      0.3
+     ],
+     "huePull": 0.3,
+     "pull": 0.65
+    },
+    "metal": {
+     "hsv": [
+      40,
+      0.32,
+      0.33
+     ],
+     "huePull": 0.5,
+     "pull": 0.6
+    },
+    "wood": {
+     "hsv": [
+      20,
+      0.25,
+      0.14
+     ],
+     "huePull": 0.3,
+     "pull": 0.4
+    },
+    "glass": {
+     "hsv": [
+      32,
+      0.55,
+      0.12
+     ],
+     "huePull": 0.6,
+     "pull": 0.85
+    },
+    "lamp": {
+     "hsv": [
+      34,
+      0.35,
+      0.2
+     ],
+     "huePull": 0.5,
+     "pull": 0.7
+    }
+   }
+  },
+  "global": {
+   "identity": "Characters and catalog props appear in every tileset; their tints live in their own settings (props: the catalog Preview fields).",
+   "anchors": {
+    "skin": {
+     "hsv": [
+      20,
+      0.34,
+      0.62
+     ],
+     "huePull": 0.0,
+     "pull": 1.0
+    },
+    "stone": {
+     "hsv": [
+      35,
+      0.06,
+      0.25
+     ],
+     "huePull": 0.0,
+     "pull": 0.6
+    },
+    "wood": {
+     "hsv": [
+      26,
+      0.3,
+      0.22
+     ],
+     "huePull": 0.0,
+     "pull": 0.0
+    },
+    "metal": {
+     "hsv": [
+      30,
+      0.12,
+      0.18
+     ],
+     "huePull": 0.0,
+     "pull": 0.0
+    }
+   }
+  }
+ },
+ "roomLights": {
+  "coldGrateCells": 12,
+  "smallAreaCells": 6,
+  "smallAreaReach": 3.5,
+  "minimumSpacing": 3.0,
+  "mountHeight": 1.35,
+  "faceOffset": 0.078,
+  "exclusionRadius": 0.75,
+  "coldGrate": {
+   "height": 2.1,
+   "inset": 0.3,
+   "energy": 0.9,
+   "range": 3.4,
+   "attenuation": 1.2
+  }
+ },
+ "roomAccents": {
+  "note": "Room themes (October 5, draft for founder review; drawn only with the look panel's Room themes toggle on). A themed room's practical lights (lanterns, wall and standing torches) lean toward practical by practicalPull (and burn at practicalValue of their brightness, 1 when absent), its cold glows toward cold by coldPull. A plain hall keeps its skin's colours. Those tints stay inside the existing light classes: warm hue 15-50 with saturation at least 0.3, cold hue 160-270 with saturation at least 0.2. Each themed room also gets one accentLight, and its accent props (brazier flames, the dead fire's embers and their floor pools) burn in glow (or, for an accent pool, the accent light's own colour); both belong to the room-accent class below when glowClass is accent (RoomThemeAccents.Validate, the room themes proof).",
+  "accentClass": {
+   "note": "room-accent light class (October 5 second pass, a new class, draft for Adam's review; it widens neither the warm nor the cold class): saturated colour at modest energy for a themed room's single accent light and its accent props. Hue inside one of the named windows, saturation 0.45-0.95, energy 0.2-1.2, range 2.5-4.5 cells, no shadow, and never on characters (the figure layers are off its cull mask, so it cannot change character exposure). At most one accent light per themed room, none in a plain hall. Accent colours do not drift by floor.",
+   "hueWindows": { "crimson": [340, 360], "ember": [6, 22], "emerald": [130, 165], "teal": [166, 196], "steel": [200, 228] },
+   "saturation": [0.45, 0.95],
+   "energy": [0.2, 1.2],
+   "range": [2.5, 4.5]
+  },
+  "library": { "practical": "ffc56e", "practicalPull": 0.35, "cold": "5fd0c4", "coldPull": 0.35,
+   "accentLight": { "color": "22b8cc", "window": "teal", "energy": 1.1, "range": 4.0, "height": 1.5 } },
+  "crypt": { "practical": "ff6328", "practicalPull": 0.45, "practicalValue": 0.8, "glow": "e0243a", "glowClass": "accent",
+   "accentLight": { "color": "e0243a", "window": "crimson", "energy": 1.2, "range": 3.4, "height": 0.85 } },
+  "camp": { "practical": "ff8a48", "practicalPull": 0.3, "practicalValue": 0.7, "glow": "ff4a1c", "glowClass": "accent",
+   "accentLight": { "color": "ff4a1c", "window": "ember", "energy": 0.9, "range": 3.0, "height": 0.45 } },
+  "armory": { "practical": "ff9a4a", "practicalPull": 0.4, "cold": "8fb0dc", "coldPull": 0.4, "glow": "ff9a4a", "glowClass": "warm",
+   "accentLight": { "color": "6c98e0", "window": "steel", "energy": 1.0, "range": 3.8, "height": 1.4 } },
+  "shrine": { "practical": "ffe08a", "practicalPull": 0.25, "cold": "4ee0b0", "coldPull": 0.35, "glow": "1ed67c", "glowClass": "accent",
+   "accentLight": { "color": "1ed67c", "window": "emerald", "energy": 1.1, "range": 3.8, "height": 1.0 } }
+ },
+ "floorDrift": {
+  "note": "A gentle palette shift by floor (founder: \"we also need to talk about a slightly shifting color palette as floors progress\"; October 5 draft, drawn with Room themes on). Floor 1 is unchanged; each floor below turns warm light warmHuePerFloor degrees (toward red) and cold light coldHuePerFloor degrees (toward violet) and adds saturationPerFloor, clamped to the light's class, so Floor 5 reads colder and stranger. It pairs with the Retro look's own floor drift (shadow tint, ambient, fog, background: RetroLookProfile FloorDrift).",
+  "floors": 5,
+  "warmHuePerFloor": -1.5,
+  "coldHuePerFloor": 3.0,
+  "saturationPerFloor": 0.02
+ },
+ "materials": [
+  {
+   "id": "pendulum-conservatory/field",
+   "source": "field",
+   "style": "pendulum-conservatory",
+   "theme": "pendulum-conservatory",
+   "class": "stone",
+   "anchor": "floor",
+   "tint": [
+    1.151,
+    1.164,
+    1.18
+   ]
+  },
+  {
+   "id": "opal-lanternhouse/field",
+   "source": "field",
+   "style": "opal-lanternhouse",
+   "theme": "opal-lanternhouse",
+   "class": "stone",
+   "anchor": "floor",
+   "tint": [
+    0.886,
+    0.883,
+    0.882
+   ]
+  },
+  {
+   "id": "cinder-eye/field",
+   "source": "field",
+   "style": "cinder-eye",
+   "theme": "cinder-eye",
+   "class": "stone",
+   "anchor": "floor",
+   "tint": [
+    1.593,
+    1.529,
+    1.543
+   ]
+  },
+  {
+   "id": "opal-lanternhouse/A01/solid_A01_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A01",
+   "node": "solid_A01_stone",
+   "class": "stone",
+   "tint": [
+    0.955,
+    0.951,
+    0.949
+   ],
+   "anchor": "floor"
+  },
+  {
+   "id": "opal-lanternhouse/A02/solid_A02_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A02",
+   "node": "solid_A02_trim",
+   "class": "metal",
+   "tint": [
+    1.161,
+    1.15,
+    1.145
+   ],
+   "anchor": "floor"
+  },
+  {
+   "id": "opal-lanternhouse/A03/lower_A03_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A03",
+   "node": "lower_A03_stone",
+   "class": "stone",
+   "tint": [
+    1.008,
+    0.985,
+    0.995
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A03/lower_A03_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A03",
+   "node": "lower_A03_trim",
+   "class": "metal",
+   "tint": [
+    1.004,
+    0.988,
+    0.968
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A03/upper_A03_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A03",
+   "node": "upper_A03_stone",
+   "class": "stone",
+   "tint": [
+    0.929,
+    0.909,
+    0.924
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A03/upper_A03_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A03",
+   "node": "upper_A03_trim",
+   "class": "metal",
+   "tint": [
+    0.963,
+    0.951,
+    0.935
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A04/lower_A04_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A04",
+   "node": "lower_A04_stone",
+   "class": "stone",
+   "tint": [
+    1.058,
+    1.049,
+    1.082
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A04/lower_A04_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A04",
+   "node": "lower_A04_trim",
+   "class": "metal",
+   "tint": [
+    0.969,
+    0.985,
+    0.999
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A04/upper_A04_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A04",
+   "node": "upper_A04_stone",
+   "class": "stone",
+   "tint": [
+    0.971,
+    0.955,
+    0.988
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A04/upper_A04_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A04",
+   "node": "upper_A04_trim",
+   "class": "metal",
+   "tint": [
+    0.94,
+    0.95,
+    0.963
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A05/lower_A05_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A05",
+   "node": "lower_A05_stone",
+   "class": "stone",
+   "tint": [
+    1.054,
+    1.042,
+    1.064
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A05/lower_A05_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A05",
+   "node": "lower_A05_trim",
+   "class": "metal",
+   "tint": [
+    1.005,
+    0.999,
+    0.986
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A05/upper_A05_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A05",
+   "node": "upper_A05_stone",
+   "class": "stone",
+   "tint": [
+    0.944,
+    0.931,
+    0.955
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A05/upper_A05_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A05",
+   "node": "upper_A05_trim",
+   "class": "metal",
+   "tint": [
+    0.941,
+    0.936,
+    0.925
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A06/lower_A06_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A06",
+   "node": "lower_A06_stone",
+   "class": "stone",
+   "tint": [
+    1.119,
+    1.096,
+    1.099
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A06/lower_A06_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A06",
+   "node": "lower_A06_trim",
+   "class": "metal",
+   "tint": [
+    1.012,
+    0.992,
+    0.97
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A06/upper_A06_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A06",
+   "node": "upper_A06_stone",
+   "class": "stone",
+   "tint": [
+    0.983,
+    0.965,
+    0.98
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A06/upper_A06_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A06",
+   "node": "upper_A06_trim",
+   "class": "metal",
+   "tint": [
+    0.991,
+    0.971,
+    0.949
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A07/lower_A07_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A07",
+   "node": "lower_A07_stone",
+   "class": "stone",
+   "tint": [
+    1.05,
+    1.028,
+    1.044
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A07/lower_A07_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A07",
+   "node": "lower_A07_trim",
+   "class": "metal",
+   "tint": [
+    1.043,
+    1.031,
+    1.015
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A07/upper_A07_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A07",
+   "node": "upper_A07_stone",
+   "class": "stone",
+   "tint": [
+    0.941,
+    0.921,
+    0.939
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A07/upper_A07_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A07",
+   "node": "upper_A07_trim",
+   "class": "metal",
+   "tint": [
+    0.97,
+    0.966,
+    0.959
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A08/lower_A08_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A08",
+   "node": "lower_A08_stone",
+   "class": "stone",
+   "tint": [
+    1.166,
+    1.144,
+    1.167
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A08/lower_A08_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A08",
+   "node": "lower_A08_trim",
+   "class": "metal",
+   "tint": [
+    1.053,
+    1.043,
+    1.031
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/A08/upper_A08_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A08",
+   "node": "upper_A08_stone",
+   "class": "stone",
+   "tint": [
+    0.988,
+    0.97,
+    0.995
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/A08/upper_A08_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "A08",
+   "node": "upper_A08_trim",
+   "class": "metal",
+   "tint": [
+    0.959,
+    0.962,
+    0.961
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G01/solid_G01_metal",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G01",
+   "node": "solid_G01_metal",
+   "class": "metal",
+   "tint": [
+    0.664,
+    0.659,
+    0.654
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G01/solid_G01_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G01",
+   "node": "solid_G01_trim",
+   "class": "metal",
+   "tint": [
+    0.998,
+    0.982,
+    0.963
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G02/solid_G02_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G02",
+   "node": "solid_G02_stone",
+   "class": "stone",
+   "tint": [
+    0.912,
+    0.884,
+    0.884
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G02/solid_G02_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G02",
+   "node": "solid_G02_trim",
+   "class": "metal",
+   "tint": [
+    0.912,
+    0.89,
+    0.865
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G03/lower_G03_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G03",
+   "node": "lower_G03_stone",
+   "class": "stone",
+   "tint": [
+    0.916,
+    0.89,
+    0.893
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G03/upper_G03_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G03",
+   "node": "upper_G03_stone",
+   "class": "stone",
+   "tint": [
+    0.869,
+    0.844,
+    0.847
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G04/solid_G04_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G04",
+   "node": "solid_G04_stone",
+   "class": "stone",
+   "tint": [
+    0.964,
+    0.948,
+    0.965
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G04/solid_G04_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G04",
+   "node": "solid_G04_trim",
+   "class": "metal",
+   "tint": [
+    0.986,
+    0.974,
+    0.957
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G04/solid_G04_metal",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G04",
+   "node": "solid_G04_metal",
+   "class": "metal",
+   "tint": [
+    0.899,
+    0.896,
+    0.887
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G04/solid_G04_stone.001",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G04",
+   "node": "solid_G04_stone.001",
+   "class": "stone",
+   "tint": [
+    0.939,
+    0.923,
+    0.941
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G04/solid_G04_trim.001",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G04",
+   "node": "solid_G04_trim.001",
+   "class": "metal",
+   "tint": [
+    1.014,
+    1.0,
+    0.982
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "opal-lanternhouse/G05/solid_G05_metal",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G05",
+   "node": "solid_G05_metal",
+   "class": "metal",
+   "anchor": "metal",
+   "exempt": "G05 lanterns keep their imported material: they are the skin's light source (Floor Calm exempts them too) and the Finished G05 LOD policy binds the metal to the imported atlas."
+  },
+  {
+   "id": "opal-lanternhouse/G06/solid_G06_stone",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G06",
+   "node": "solid_G06_stone",
+   "class": "stone",
+   "tint": [
+    0.889,
+    0.869,
+    0.881
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "opal-lanternhouse/G06/solid_G06_trim",
+   "source": "kit",
+   "style": "opal-lanternhouse",
+   "role": "G06",
+   "node": "solid_G06_trim",
+   "class": "metal",
+   "tint": [
+    0.916,
+    0.903,
+    0.886
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A01/solid_A01_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A01",
+   "node": "solid_A01_stone",
+   "class": "stone",
+   "tint": [
+    1.08,
+    1.15,
+    1.114
+   ],
+   "anchor": "floor"
+  },
+  {
+   "id": "pendulum-conservatory/A02/solid_A02_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A02",
+   "node": "solid_A02_trim",
+   "class": "metal",
+   "tint": [
+    1.032,
+    1.215,
+    1.181
+   ],
+   "anchor": "floor"
+  },
+  {
+   "id": "pendulum-conservatory/A03/lower_A03_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A03",
+   "node": "lower_A03_stone",
+   "class": "wood",
+   "tint": [
+    1.019,
+    1.019,
+    1.043
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A03/lower_A03_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A03",
+   "node": "lower_A03_trim",
+   "class": "metal",
+   "tint": [
+    1.172,
+    1.211,
+    1.11
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A03/upper_A03_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A03",
+   "node": "upper_A03_stone",
+   "class": "wood",
+   "tint": [
+    0.978,
+    0.981,
+    1.006
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A03/upper_A03_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A03",
+   "node": "upper_A03_trim",
+   "class": "metal",
+   "tint": [
+    1.121,
+    1.165,
+    1.075
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A04/lower_A04_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A04",
+   "node": "lower_A04_stone",
+   "class": "wood",
+   "tint": [
+    1.01,
+    1.01,
+    1.034
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A04/lower_A04_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A04",
+   "node": "lower_A04_trim",
+   "class": "metal",
+   "tint": [
+    1.085,
+    1.114,
+    1.031
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A04/upper_A04_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A04",
+   "node": "upper_A04_stone",
+   "class": "wood",
+   "tint": [
+    0.974,
+    0.976,
+    1.002
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A04/upper_A04_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A04",
+   "node": "upper_A04_trim",
+   "class": "metal",
+   "tint": [
+    1.109,
+    1.14,
+    1.048
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A05/lower_A05_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A05",
+   "node": "lower_A05_stone",
+   "class": "wood",
+   "tint": [
+    1.053,
+    1.068,
+    1.106
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A05/lower_A05_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A05",
+   "node": "lower_A05_trim",
+   "class": "metal",
+   "tint": [
+    1.166,
+    1.211,
+    1.126
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A05/upper_A05_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A05",
+   "node": "upper_A05_stone",
+   "class": "wood",
+   "tint": [
+    0.97,
+    0.987,
+    1.032
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A05/upper_A05_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A05",
+   "node": "upper_A05_trim",
+   "class": "metal",
+   "tint": [
+    1.154,
+    1.207,
+    1.122
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A06/lower_A06_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A06",
+   "node": "lower_A06_stone",
+   "class": "wood",
+   "tint": [
+    1.019,
+    1.03,
+    1.064
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A06/lower_A06_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A06",
+   "node": "lower_A06_trim",
+   "class": "metal",
+   "tint": [
+    1.135,
+    1.179,
+    1.09
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A06/upper_A06_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A06",
+   "node": "upper_A06_stone",
+   "class": "wood",
+   "tint": [
+    0.954,
+    0.968,
+    1.008
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A06/upper_A06_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A06",
+   "node": "upper_A06_trim",
+   "class": "metal",
+   "tint": [
+    1.071,
+    1.111,
+    1.033
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A07/lower_A07_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A07",
+   "node": "lower_A07_stone",
+   "class": "wood",
+   "tint": [
+    1.043,
+    1.044,
+    1.072
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A07/lower_A07_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A07",
+   "node": "lower_A07_trim",
+   "class": "metal",
+   "tint": [
+    1.21,
+    1.246,
+    1.139
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A07/upper_A07_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A07",
+   "node": "upper_A07_stone",
+   "class": "wood",
+   "tint": [
+    1.013,
+    1.009,
+    1.03
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A07/upper_A07_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A07",
+   "node": "upper_A07_trim",
+   "class": "metal",
+   "tint": [
+    1.154,
+    1.193,
+    1.101
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A08/lower_A08_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A08",
+   "node": "lower_A08_stone",
+   "class": "wood",
+   "tint": [
+    0.99,
+    0.998,
+    1.027
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A08/lower_A08_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A08",
+   "node": "lower_A08_trim",
+   "class": "metal",
+   "tint": [
+    1.11,
+    1.157,
+    1.064
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/A08/upper_A08_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A08",
+   "node": "upper_A08_stone",
+   "class": "wood",
+   "tint": [
+    0.96,
+    0.959,
+    0.98
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/A08/upper_A08_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "A08",
+   "node": "upper_A08_trim",
+   "class": "metal",
+   "tint": [
+    1.062,
+    1.11,
+    1.029
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G01/solid_G01_metal",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G01",
+   "node": "solid_G01_metal",
+   "class": "metal",
+   "tint": [
+    1.116,
+    1.302,
+    1.245
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G01/solid_G01_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G01",
+   "node": "solid_G01_trim",
+   "class": "metal",
+   "tint": [
+    0.762,
+    0.8,
+    0.828
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G02/solid_G02_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G02",
+   "node": "solid_G02_stone",
+   "class": "wood",
+   "tint": [
+    1.008,
+    1.024,
+    1.048
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G02/solid_G02_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G02",
+   "node": "solid_G02_trim",
+   "class": "metal",
+   "tint": [
+    1.023,
+    1.048,
+    0.963
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G03/lower_G03_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G03",
+   "node": "lower_G03_stone",
+   "class": "wood",
+   "tint": [
+    0.926,
+    0.928,
+    0.952
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G03/upper_G03_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G03",
+   "node": "upper_G03_stone",
+   "class": "wood",
+   "tint": [
+    0.913,
+    0.918,
+    0.952
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G04/solid_G04_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G04",
+   "node": "solid_G04_stone",
+   "class": "wood",
+   "tint": [
+    0.887,
+    0.95,
+    1.02
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G04/solid_G04_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G04",
+   "node": "solid_G04_trim",
+   "class": "metal",
+   "tint": [
+    0.798,
+    0.858,
+    0.848
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G04/solid_G04_metal",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G04",
+   "node": "solid_G04_metal",
+   "class": "metal",
+   "tint": [
+    1.051,
+    1.17,
+    1.091
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G04/solid_G04_stone.001",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G04",
+   "node": "solid_G04_stone.001",
+   "class": "wood",
+   "tint": [
+    0.932,
+    0.994,
+    1.056
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G04/solid_G04_trim.001",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G04",
+   "node": "solid_G04_trim.001",
+   "class": "metal",
+   "tint": [
+    0.761,
+    0.811,
+    0.81
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "pendulum-conservatory/G05/solid_G05_metal",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G05",
+   "node": "solid_G05_metal",
+   "class": "metal",
+   "anchor": "metal",
+   "exempt": "G05 lanterns keep their imported material: they are the skin's light source (Floor Calm exempts them too) and the Finished G05 LOD policy binds the metal to the imported atlas."
+  },
+  {
+   "id": "pendulum-conservatory/G06/solid_G06_stone",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G06",
+   "node": "solid_G06_stone",
+   "class": "wood",
+   "tint": [
+    0.938,
+    1.022,
+    1.119
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "pendulum-conservatory/G06/solid_G06_trim",
+   "source": "kit",
+   "style": "pendulum-conservatory",
+   "role": "G06",
+   "node": "solid_G06_trim",
+   "class": "metal",
+   "tint": [
+    0.87,
+    0.962,
+    0.978
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "cathedral/wall",
+   "source": "cathedral",
+   "style": "cathedral",
+   "slot": "wall",
+   "texture": "surface-wall-ordinary-albedo",
+   "class": "stone",
+   "tint": [
+    1.093,
+    1.017,
+    0.981
+   ],
+   "anchor": "stone"
+  },
+  {
+   "id": "cathedral/floor",
+   "source": "cathedral",
+   "style": "cathedral",
+   "slot": "floor",
+   "texture": "surface-floor-ordinary-albedo",
+   "class": "stone",
+   "tint": [
+    1.003,
+    0.981,
+    1.014
+   ],
+   "anchor": "floor"
+  },
+  {
+   "id": "cathedral/dressed",
+   "source": "cathedral",
+   "style": "cathedral",
+   "slot": "dressed",
+   "texture": "donor-material-stone-albedo",
+   "class": "stone",
+   "tint": [
+    0.879,
+    0.886,
+    0.913
+   ],
+   "anchor": "dressed"
+  },
+  {
+   "id": "cathedral/iron",
+   "source": "cathedral",
+   "style": "cathedral",
+   "slot": "iron",
+   "texture": "donor-material-iron-albedo",
+   "class": "metal",
+   "tint": [
+    0.985,
+    0.965,
+    0.99
+   ],
+   "anchor": "metal"
+  },
+  {
+   "id": "cathedral/wood",
+   "source": "cathedral",
+   "style": "cathedral",
+   "slot": "wood",
+   "texture": "donor-material-wood-albedo",
+   "class": "wood",
+   "tint": [
+    1.008,
+    1.016,
+    1.03
+   ],
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/storage-barrel:intact/barrel-low-740",
+   "source": "prop",
+   "prop": "storage-barrel:intact",
+   "material": "barrel-low-740",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/heavy-crate:intact/heavy-crate-character-v6-baked-wood",
+   "source": "prop",
+   "prop": "heavy-crate:intact",
+   "material": "heavy-crate-character-v6-baked-wood",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/heavy-crate:intact/heavy-crate-character-v6-baked-iron",
+   "source": "prop",
+   "prop": "heavy-crate:intact",
+   "material": "heavy-crate-character-v6-baked-iron",
+   "class": "metal",
+   "anchor": "metal"
+  },
+  {
+   "id": "prop/pew-2x1-wood:intact/wooden-pew-f2-v2-low-704",
+   "source": "prop",
+   "prop": "pew-2x1-wood:intact",
+   "material": "wooden-pew-f2-v2-low-704",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/pew-3x1-wood:intact/wooden-pew-f3-v2-low-880",
+   "source": "prop",
+   "prop": "pew-3x1-wood:intact",
+   "material": "wooden-pew-f3-v2-low-880",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/pew-2x1-stone:intact/stone-pew-f2-v2-low-704",
+   "source": "prop",
+   "prop": "pew-2x1-stone:intact",
+   "material": "stone-pew-f2-v2-low-704",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/pew-3x1-stone:intact/stone-pew-f3-v2-low-616",
+   "source": "prop",
+   "prop": "pew-3x1-stone:intact",
+   "material": "stone-pew-f3-v2-low-616",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/fountain-2x2-circle:intact/circular-fountain-f4-v1-low-1692",
+   "source": "prop",
+   "prop": "fountain-2x2-circle:intact",
+   "material": "circular-fountain-f4-v1-low-1692",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/ordinary-chest:closed/ordinary-chest-closed-low-708",
+   "source": "prop",
+   "prop": "ordinary-chest:closed",
+   "material": "ordinary-chest-closed-low-708",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/ordinary-chest:open/ordinary-chest-open-v4-low-884",
+   "source": "prop",
+   "prop": "ordinary-chest:open",
+   "material": "ordinary-chest-open-v4-low-884",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/stone-sarcophagus:closed/sarcophagus-body-open-low-1836",
+   "source": "prop",
+   "prop": "stone-sarcophagus:closed",
+   "material": "sarcophagus-body-open-low-1836",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/stone-sarcophagus:closed/sarcophagus-lid-low-484",
+   "source": "prop",
+   "prop": "stone-sarcophagus:closed",
+   "material": "sarcophagus-lid-low-484",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/stone-sarcophagus:open/sarcophagus-body-open-low-1836",
+   "source": "prop",
+   "prop": "stone-sarcophagus:open",
+   "material": "sarcophagus-body-open-low-1836",
+   "class": "stone",
+   "anchor": "stone"
+  },
+  {
+   "id": "prop/reliquary-chest:closed/reliquary-strongbox-closed-character-v6-baked-wood",
+   "source": "prop",
+   "prop": "reliquary-chest:closed",
+   "material": "reliquary-strongbox-closed-character-v6-baked-wood",
+   "class": "wood",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/reliquary-chest:closed/reliquary-strongbox-closed-character-v6-baked-iron",
+   "source": "prop",
+   "prop": "reliquary-chest:closed",
+   "material": "reliquary-strongbox-closed-character-v6-baked-iron",
+   "class": "metal",
+   "anchor": "metal"
+  },
+  {
+   "id": "prop/bookcase:intact-full-orderly/material",
+   "source": "prop",
+   "prop": "bookcase:intact-full-orderly",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:intact-full-disorderly/material",
+   "source": "prop",
+   "prop": "bookcase:intact-full-disorderly",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:intact-three-quarter/material",
+   "source": "prop",
+   "prop": "bookcase:intact-three-quarter",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:intact-sparse/material",
+   "source": "prop",
+   "prop": "bookcase:intact-sparse",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:aged-full/material",
+   "source": "prop",
+   "prop": "bookcase:aged-full",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:ransacked-sparse/material",
+   "source": "prop",
+   "prop": "bookcase:ransacked-sparse",
+   "material": "material",
+   "class": "cloth",
+   "anchor": "wood"
+  },
+  {
+   "id": "prop/bookcase:intact-full-orderly/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:intact-full-orderly",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:intact-empty/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:intact-empty",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:intact-full-disorderly/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:intact-full-disorderly",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:intact-three-quarter/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:intact-three-quarter",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:intact-sparse/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:intact-sparse",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:aged-full/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:aged-full",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "prop/bookcase:ransacked-sparse/clean-frame",
+   "source": "prop",
+   "prop": "bookcase:ransacked-sparse",
+   "material": "clean-frame",
+   "class": "wood",
+   "anchor": "wood",
+    "exempt": "Founder, October 6: the rebuilt bookcase boards draw at board value 0.30 (\"i think .3 is good\"), just under the wood value floor of 0.10; the look was chosen in Retro at gameplay zoom and the bookcase fit proof guards it."
+  },
+  {
+   "id": "character/mpfb-human.glb/white-male-base-body-pilot-skin",
+   "source": "character",
+   "file": "mpfb-human.glb",
+   "material": "white-male-base-body-pilot-skin",
+   "class": "skin",
+   "tint": [
+    0.748,
+    0.709,
+    0.682
+   ],
+   "anchor": "skin"
+  },
+  {
+   "id": "cinder-eye/A01/solid_A01_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A01",
+   "node": "solid_A01_stone",
+   "class": "stone",
+   "anchor": "floor",
+   "tint": [
+    1.375,
+    1.344,
+    1.328
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A02/solid_A02_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A02",
+   "node": "solid_A02_trim",
+   "class": "metal",
+   "anchor": "floor",
+   "tint": [
+    1.424,
+    1.407,
+    1.396
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A03/lower_A03_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A03",
+   "node": "lower_A03_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.652,
+    1.638,
+    1.63
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A03/lower_A03_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A03",
+   "node": "lower_A03_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.45,
+    1.383,
+    1.263
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A03/upper_A03_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A03",
+   "node": "upper_A03_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.527,
+    1.513,
+    1.505
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A03/upper_A03_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A03",
+   "node": "upper_A03_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.393,
+    1.33,
+    1.215
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A04/lower_A04_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A04",
+   "node": "lower_A04_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.552,
+    1.551,
+    1.565
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A04/lower_A04_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A04",
+   "node": "lower_A04_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.234,
+    1.189,
+    1.09
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A04/upper_A04_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A04",
+   "node": "upper_A04_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.403,
+    1.403,
+    1.415
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A04/upper_A04_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A04",
+   "node": "upper_A04_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.284,
+    1.239,
+    1.137
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A05/lower_A05_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A05",
+   "node": "lower_A05_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.536,
+    1.54,
+    1.559
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A05/lower_A05_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A05",
+   "node": "lower_A05_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.298,
+    1.25,
+    1.146
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A05/upper_A05_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A05",
+   "node": "upper_A05_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.479,
+    1.482,
+    1.497
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A05/upper_A05_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A05",
+   "node": "upper_A05_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.35,
+    1.3,
+    1.191
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A06/lower_A06_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A06",
+   "node": "lower_A06_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.815,
+    1.786,
+    1.768
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A06/lower_A06_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A06",
+   "node": "lower_A06_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.33,
+    1.274,
+    1.164
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A06/upper_A06_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A06",
+   "node": "upper_A06_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.513,
+    1.501,
+    1.496
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A06/upper_A06_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A06",
+   "node": "upper_A06_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.272,
+    1.22,
+    1.115
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A07/lower_A07_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A07",
+   "node": "lower_A07_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.585,
+    1.567,
+    1.557
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A07/lower_A07_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A07",
+   "node": "lower_A07_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.382,
+    1.32,
+    1.205
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A07/upper_A07_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A07",
+   "node": "upper_A07_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.485,
+    1.473,
+    1.467
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A07/upper_A07_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A07",
+   "node": "upper_A07_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.296,
+    1.243,
+    1.137
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A08/lower_A08_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A08",
+   "node": "lower_A08_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.45,
+    1.437,
+    1.433
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A08/lower_A08_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A08",
+   "node": "lower_A08_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.241,
+    1.188,
+    1.085
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/A08/upper_A08_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A08",
+   "node": "upper_A08_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.375,
+    1.363,
+    1.358
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/A08/upper_A08_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "A08",
+   "node": "upper_A08_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.223,
+    1.172,
+    1.07
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G01/solid_G01_metal",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G01",
+   "node": "solid_G01_metal",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.183,
+    1.113,
+    1.025
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G01/solid_G01_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G01",
+   "node": "solid_G01_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    0.754,
+    0.808,
+    0.836
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G02/solid_G02_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G02",
+   "node": "solid_G02_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.329,
+    1.297,
+    1.282
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G02/solid_G02_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G02",
+   "node": "solid_G02_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.192,
+    1.126,
+    1.024
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G03/lower_G03_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G03",
+   "node": "lower_G03_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.289,
+    1.282,
+    1.276
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G03/upper_G03_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G03",
+   "node": "upper_G03_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.292,
+    1.28,
+    1.271
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G04/solid_G04_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G04",
+   "node": "solid_G04_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.142,
+    1.145,
+    1.143
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G04/solid_G04_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G04",
+   "node": "solid_G04_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.042,
+    1.032,
+    0.961
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G04/solid_G04_metal",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G04",
+   "node": "solid_G04_metal",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.163,
+    1.102,
+    1.011
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G04/solid_G04_stone.001",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G04",
+   "node": "solid_G04_stone.001",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.28,
+    1.276,
+    1.267
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G04/solid_G04_trim.001",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G04",
+   "node": "solid_G04_trim.001",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    0.95,
+    0.952,
+    0.896
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G05/glow_G05_warm_glow",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G05",
+   "node": "glow_G05_warm_glow",
+   "class": "glass-glow",
+   "anchor": "glass",
+   "tint": [
+    0.392,
+    0.38,
+    0.356
+   ],
+   "roughness": 0.4
+  },
+  {
+   "id": "cinder-eye/G05/solid_G05_metal",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G05",
+   "node": "solid_G05_metal",
+   "class": "metal",
+   "anchor": "lamp",
+   "tint": [
+    0.659,
+    0.719,
+    0.802
+   ],
+   "roughness": 0.72
+  },
+  {
+   "id": "cinder-eye/G06/glow_G06_exit_glow",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G06",
+   "node": "glow_G06_exit_glow",
+   "class": "glass-glow",
+   "anchor": "metal",
+   "tint": [
+    0.715,
+    0.749,
+    0.76
+   ],
+   "roughness": 0.4
+  },
+  {
+   "id": "cinder-eye/G06/solid_G06_stone",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G06",
+   "node": "solid_G06_stone",
+   "class": "stone",
+   "anchor": "stone",
+   "tint": [
+    1.381,
+    1.402,
+    1.413
+   ],
+   "roughness": 0.8
+  },
+  {
+   "id": "cinder-eye/G06/solid_G06_trim",
+   "source": "kit",
+   "style": "cinder-eye",
+   "role": "G06",
+   "node": "solid_G06_trim",
+   "class": "metal",
+   "anchor": "metal",
+   "tint": [
+    1.122,
+    1.115,
+    1.037
+   ],
+   "roughness": 0.72
+  }
+ ]
+}

@@ -1,0 +1,840 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-ring-chain",
+  "displayName": "Ring and chain",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "detail",
+  "slot": "chest",
+  "attach": "rigid",
+  "bones": [
+    "spine_01"
+  ],
+  "allowedRegions": [
+    "pinned to a part's plate"
+  ],
+  "defaultRegion": "f1-fauld-lames",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.1294,
+      1.0475,
+      0.1397
+    ],
+    "normal": [
+      0.5946,
+      0.1547,
+      0.789
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.25,
+    6.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 180,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "pin normal",
+    "vector": [
+      0.5946,
+      0.1547,
+      0.789
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "ring alone",
+      "at1": "ring and six links",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1306,
+          1.0445,
+          0.1413
+        ],
+        "end": [
+          0.1303,
+          0.9034,
+          0.1409
+        ],
+        "lengthMm": 141.16
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "2": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "weightClass": "light",
+  "triangles": 562,
+  "complexity": 6,
+  "mutateTags": [
+    "heavy",
+    "chain"
+  ],
+  "references": [],
+  "build": {
+    "glb": "f1-ring-chain.glb",
+    "glbSha256": "34948ee953ec5e30f73e8782e770329d291ff01d5568be050bd4e1d86b38568e",
+    "glbBytes": 84260,
+    "generator": "tools/armor-kit/build_f1_pins.py",
+    "generatorSha256": "8e6da521ba90d9b40c87ec109fba294b1997b3243c78bcfc7fc610aabb27bf5d",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "librarySha256": "8c4999f782bd660c2d1358abcc94d1a1eb9ffdc1aa8952897dfb14bd138e956f",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-ring-chain.glb",
+      "targetNames": [
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 695,
+          "triangles": 562,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 562,
+      "vertices": 695,
+      "targets": {
+        "BoneLength@0": {
+          "maxDeltaM": 0.08596,
+          "verticesMoved": 244
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.08596,
+          "verticesMoved": 164
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.10443,
+          "verticesMoved": 176
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.14116,
+          "verticesMoved": 264
+        }
+      },
+      "animations": {
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "spine_01": 695
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 148,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 412,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 232,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 250,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 217,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 123,
+        "maxEdgeStretch": 3.409,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 122,
+        "maxEdgeStretch": 5.836,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 121,
+        "maxEdgeStretch": 5.836,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            51,
+            52,
+            57,
+            56
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 96,
+        "maxEdgeStretch": 6.311,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            51,
+            52,
+            57,
+            56
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 412,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 96,
+        "maxEdgeStretch": 6.311,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            51,
+            52,
+            57,
+            56
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 148,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 1.0,
+        "selfIntersectionExamples": [
+          [
+            8,
+            9,
+            17,
+            16,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ],
+          [
+            0,
+            1,
+            9,
+            8,
+            "x",
+            50,
+            51,
+            56,
+            55
+          ]
+        ],
+        "minClearanceMm": 28.81,
+        "minClearanceAt": {
+          "vertex": 286,
+          "at": [
+            0.127,
+            -0.136,
+            1.047
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true,
+        "selfIntersectionPolicy": "reported, allowed (ruling 24)",
+        "pinPolicy": "flipped and degenerate faces fail; skin clearance and poke-through reported (baked out)"
+      }
+    ]
+  },
+  "notes": {
+    "reference": "morph forms f1-ring-chain",
+    "rigid": "the chain is rigid: it hangs as modelled",
+    "hidden": "links not yet shown wait shrunk inside the riveted tab"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "pin": {
+    "parent": "f1-fauld-lames",
+    "triangle": [
+      36,
+      60,
+      37
+    ],
+    "bary": [
+      0.031237,
+      0.155096,
+      0.813668
+    ],
+    "offsetMm": 0.0,
+    "angleDeg": 110.419,
+    "scale": 1.0,
+    "frame": "the piece's own: +Z out of the surface, +Y up, +X right; metres"
+  },
+  "ideas": {
+    "BoneLength": [
+      "ring alone",
+      "ring and three links",
+      "ring and six links hanging"
+    ]
+  },
+  "follow": [
+    {
+      "parent": "standard",
+      "spotOffSurfaceMm": 0.0049,
+      "backGapMm": 0.0,
+      "pass": true
+    },
+    {
+      "parent": "every handle high",
+      "spotOffSurfaceMm": 0.0336,
+      "backGapMm": 0.0,
+      "pass": true
+    },
+    {
+      "parent": "every handle high",
+      "checks": "pass"
+    }
+  ],
+  "charm": {
+    "property": "harvest",
+    "tiers": {
+      "1": {
+        "BoneLength": 0.0
+      },
+      "2": {
+        "BoneLength": 0.333
+      },
+      "3": {
+        "BoneLength": 0.667
+      },
+      "4": {
+        "BoneLength": 1.0
+      }
+    },
+    "fidelity": "as the table: ring alone, two, four and six links",
+    "metal": "charm metal: tin and darkened brass, whatever the piece's own (Adam, October 22)",
+    "sizes": {
+      "accent": 1.0,
+      "hero": 4.0
+    },
+    "tierChecks": [
+      {
+        "case": "tier 1",
+        "values": {
+          "BoneLength": 0.0
+        },
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "tier 2",
+        "values": {
+          "BoneLength": 0.333
+        },
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "tier 3",
+        "values": {
+          "BoneLength": 0.667
+        },
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "tier 4",
+        "values": {
+          "BoneLength": 1.0
+        },
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "pass": true
+      }
+    ]
+  }
+}

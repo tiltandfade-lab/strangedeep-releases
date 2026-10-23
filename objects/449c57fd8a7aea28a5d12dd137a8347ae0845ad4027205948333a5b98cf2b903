@@ -1,0 +1,712 @@
+{
+ "schemaVersion": 1,
+ "effect": "arc-lash",
+ "source": "Generated from ARC_LASH_MATRIX_CASES in test/helpers/lightning-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    8,
+    2
+   ]
+  },
+  "forkId": "reviewed-arc-lash-path",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-arc-lash",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "arcLashesPreview"
+  },
+  "cast": {
+   "operation": "arc-lash",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "arc-lash-lv1",
+    "kind": "arc-lash",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10
+     }
+    },
+    "expected": {
+     "targetCap": 2,
+     "accuracy": 80,
+     "rangeCells": 3,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       1
+      ],
+      [
+       "b",
+       1
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv2",
+    "kind": "arc-lash",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10
+     }
+    },
+    "expected": {
+     "targetCap": 2,
+     "accuracy": 85,
+     "rangeCells": 3,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       1
+      ],
+      [
+       "b",
+       1
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv3",
+    "kind": "arc-lash",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10
+     }
+    },
+    "expected": {
+     "targetCap": 2,
+     "accuracy": 85,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       1
+      ],
+      [
+       "b",
+       1
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv4",
+    "kind": "arc-lash",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10
+     }
+    },
+    "expected": {
+     "targetCap": 2,
+     "accuracy": 85,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       2
+      ],
+      [
+       "b",
+       2
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv5",
+    "kind": "arc-lash",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10
+     }
+    },
+    "expected": {
+     "targetCap": 2,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       2
+      ],
+      [
+       "b",
+       2
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv6",
+    "kind": "arc-lash",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       2
+      ],
+      [
+       "b",
+       2
+      ],
+      [
+       "c",
+       2
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv7",
+    "kind": "arc-lash",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       3
+      ],
+      [
+       "b",
+       3
+      ],
+      [
+       "c",
+       3
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv8-gaps",
+    "kind": "arc-lash",
+    "level": 8,
+    "fork": "gaps",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       3
+      ],
+      [
+       "b",
+       3
+      ],
+      [
+       "c",
+       3
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv8-power",
+    "kind": "arc-lash",
+    "level": 8,
+    "fork": "power",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       4
+      ],
+      [
+       "b",
+       4
+      ],
+      [
+       "c",
+       4
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv9-gaps",
+    "kind": "arc-lash",
+    "level": 9,
+    "fork": "gaps",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 5,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       3
+      ],
+      [
+       "b",
+       3
+      ],
+      [
+       "c",
+       3
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv9-power",
+    "kind": "arc-lash",
+    "level": 9,
+    "fork": "power",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       5
+      ],
+      [
+       "b",
+       5
+      ],
+      [
+       "c",
+       5
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv10-gaps",
+    "kind": "arc-lash",
+    "level": 10,
+    "fork": "gaps",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 95,
+     "rangeCells": 5,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       3
+      ],
+      [
+       "b",
+       3
+      ],
+      [
+       "c",
+       3
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "arc-lash-lv10-power",
+    "kind": "arc-lash",
+    "level": 10,
+    "fork": "power",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      8,
+      3
+     ]
+    },
+    "rng": {
+     "strike": {
+      "primary": 10,
+      "b": 10,
+      "c": 10
+     }
+    },
+    "expected": {
+     "targetCap": 3,
+     "accuracy": 90,
+     "rangeCells": 4,
+     "hopCells": 0,
+     "struck": [
+      [
+       "primary",
+       6
+      ],
+      [
+       "b",
+       6
+      ],
+      [
+       "c",
+       6
+      ]
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

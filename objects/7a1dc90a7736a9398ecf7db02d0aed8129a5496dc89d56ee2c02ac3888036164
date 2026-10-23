@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "id": "strangedeep-prop-retirement-2026-10-02",
+  "approval": {
+    "by": "Adam (founder)",
+    "date": "2026-10-02",
+    "source": "Props and Monsters Review page; approved list /Volumes/GAMEDEV/Strangedeep/scratch/prop-retirement-2026-10-02/approved-2026-10-02.json",
+    "quote": "see if you can detect the weak ok props and we can permanently retire them",
+    "changedFromProposal": {
+      "map-item.ritual-low-plinth": "brick-set (cathedral-only) -> retire"
+    }
+  },
+  "rules": [
+    "A retired id may never be registered in a prop, model-candidate or grid map item catalog, a dressing pool, a room pattern appearance or a candidate list. Catalog loaders and generated-floor dressing reject it (PropRetirement.cs); godot/tools/prop-retirement.test.mjs fails if one becomes placeable.",
+    "Retired runtime copies are kept on disk under godot/assets/retired/2026-10-02/ (a .gdignore folder: never imported, exported or placed). Source assets, git history and LFS objects are untouched.",
+    "Old saves keep loading: saved room-prop kinds stay valid; a kind or id whose appearance is retired resolves through legacyAppearances (null = drawn as nothing; these are inert dressing with no rules effect).",
+    "Cathedral is the biome (Floors 1-5). Its tilesets are opal-lanternhouse, pendulum-conservatory and the brick (old cathedral) tileset, id cathedral (STRANGEDEEP_SHARED_MODULE_STYLE=cathedral; the pre-kit Studio/legacy presentation counts as the brick tileset). A prop in a tilesetSets entry may be placed only in that entry's allowedTilesets; change the list to retarget it."
+  ],
+  "retired": [
+    {
+      "id": "prop.fountain.circle.1x1.dry.v1",
+      "group": "catalog prop",
+      "reason": "A 0.32 m pale ring with a smeared texture: it reads as a floor tub, not a fountain. The 2x2 basin covers the round shape."
+    },
+    {
+      "id": "prop.fountain.square.1x1.dry.v1",
+      "group": "catalog prop",
+      "reason": "An empty pale concrete box with flat, blurry stone. No fountain identity at game scale; weakest catalog prop."
+    },
+    {
+      "id": "greybox.half-wall",
+      "group": "procedural greybox",
+      "reason": "Untextured procedural white box. Retire the greybox look only; the half-wall cover object stays, drawn by every finished skin's low-cover role."
+    },
+    {
+      "id": "greybox.thick-pier",
+      "group": "procedural greybox",
+      "reason": "Untextured procedural white block. Retire the greybox look only; the skins draw the pier with the G03 full-height-blocker role."
+    },
+    {
+      "id": "model-candidate.structural-support.full-cell-square-pier-c.v1",
+      "group": "model candidate",
+      "reason": "A blank stack of white boxes (528 tris, no texture). The kit's pier role already fills full-cell piers."
+    },
+    {
+      "id": "model-candidate.structural-support.full-cell-buttressed-pier-d.v5",
+      "group": "model candidate",
+      "reason": "A blank white buttress block, untextured after five revisions. It duplicates the kit's full-height pier."
+    },
+    {
+      "id": "model-candidate.retained-donor.dungeon-gate-frame.v1",
+      "group": "Kenney donor",
+      "reason": "A chunky Kenney stone arch that clashes with the modular kit, whose doorway role replaces it. Low-poly, no UVs, family material only."
+    },
+    {
+      "id": "model-candidate.retained-donor.dungeon-gate-door.v1",
+      "group": "Kenney donor",
+      "reason": "Kenney gate door: an unreadable dark blob in Retro; the kit's door-closure role replaces it. Low-poly, no UVs, family material only."
+    },
+    {
+      "id": "model-candidate.retained-donor.dungeon-gate-bars.v1",
+      "group": "Kenney donor",
+      "reason": "Kenney gate bars: an unreadable dark blob in Retro; the kit's door-closure role replaces it. Low-poly, no UVs, family material only."
+    },
+    {
+      "id": "model-candidate.retained-donor.dungeon-stairs.v1",
+      "group": "Kenney donor",
+      "reason": "Kenney stairs read as a grey box with a diamond tiling; the kit's exit marker replaces them. Low-poly, no UVs, family material only."
+    },
+    {
+      "id": "model-candidate.retained-donor.low-cover-boulder-cluster.v1",
+      "group": "Genesis Meshy donor",
+      "reason": "Faceted low-poly rocks (236 tris). The skins' low-cover role now does this job."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-altar-stone.v1",
+      "group": "Kenney donor",
+      "reason": "A striped white Kenney block altar in cartoon style; the grid-v1 ritual plinth does the job better."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-bench.v1",
+      "group": "Kenney donor",
+      "reason": "A cartoon park bench (160 tris) in the wrong style for the dungeon."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-bench-damaged.v1",
+      "group": "Kenney donor",
+      "reason": "A cartoon broken park bench (240 tris) in the wrong style."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-candle.v1",
+      "group": "Kenney donor",
+      "reason": "A flat yellow toy cylinder (54 tris); invisible or toy-like at game scale."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-candle-group.v1",
+      "group": "Kenney donor",
+      "reason": "Flat yellow toy cylinders (162 tris); the same toy read as the single candle."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-coffin.v1",
+      "group": "Kenney donor",
+      "reason": "\"The little casket\" Adam named: a 0.2 m toy coffin with flat palette bands; the worst prop in the set."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-debris.v1",
+      "group": "Kenney donor",
+      "reason": "Kenney sugar-cube rubble (240 tris). Usable, but it reads as toy blocks; the triplanar fix is under review."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-chalice.v1",
+      "group": "Kenney donor",
+      "reason": "A tiny black goblet (0.25 m) that is unreadable in Retro."
+    },
+    {
+      "id": "model-candidate.retained-donor.graveyard-urn-round.v1",
+      "group": "Kenney donor",
+      "reason": "A banded toy urn with Kenney palette stripes; cartoon style."
+    },
+    {
+      "id": "map-item.abandoned-existing-helmet",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A lone grey dome that reads as a rock; the belongings group already shows it in context."
+    },
+    {
+      "id": "map-item.abandoned-papers",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "Tiny black flat sheets (0.15 m), invisible at game scale."
+    },
+    {
+      "id": "map-item.empty-shroud",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A black lumpy sheet that reads as a stain, not cloth (11,456 tris)."
+    },
+    {
+      "id": "map-item.expedition-scabbard",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A thin dark stick that is illegible at game scale; the abandoned-belongings group already includes it."
+    },
+    {
+      "id": "map-item.expedition-waterskin",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A small dark blob that is illegible alone; it is in the belongings group."
+    },
+    {
+      "id": "map-item.heavy-crate-collapsed",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 crate, plain flat-orange planks, weaker than the catalog crate the game places. Damage states should come from that crate."
+    },
+    {
+      "id": "map-item.heavy-crate-damaged",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 crate, plain flat-orange planks, weaker than the catalog crate the game places. Damage states should come from that crate."
+    },
+    {
+      "id": "map-item.heavy-crate-intact",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 crate, plain flat-orange planks, weaker than the catalog crate the game places. Damage states should come from that crate."
+    },
+    {
+      "id": "map-item.hosted-candle-in-pan",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A single flat yellow candle; the toy candle read again."
+    },
+    {
+      "id": "map-item.ritual-floor-candles",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "Flat yellow toy candles on black dishes, the same weak read as the Kenney candles."
+    },
+    {
+      "id": "map-item.ritual-low-plinth",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A stepped masonry altar plinth (grid-v1 procedural). Proposed for the brick (old cathedral) tileset only; Adam changed it to retire on October 2."
+    },
+    {
+      "id": "map-item.ritual-metal-dish",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A flat black disc that reads as a hole in the floor."
+    },
+    {
+      "id": "map-item.storage-barrel-collapsed",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 barrel that is weaker than the founder-approved Rustbound barrel the game places. Damage states should come from that barrel."
+    },
+    {
+      "id": "map-item.storage-barrel-damaged",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 barrel that is weaker than the founder-approved Rustbound barrel the game places. Damage states should come from that barrel."
+    },
+    {
+      "id": "map-item.storage-barrel-intact",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "A procedural grid-v1 barrel that is weaker than the founder-approved Rustbound barrel the game places. Damage states should come from that barrel."
+    },
+    {
+      "id": "map-item.wall-candle-rail",
+      "group": "grid-v1 map item (Blender procedural, Studio)",
+      "reason": "Flat yellow toy candles on a rail, the same weak read as the Kenney candles."
+    }
+  ],
+  "tilesetSets": {
+    "BRICK_SET_PROPS": {
+      "allowedTilesets": [
+        "cathedral"
+      ],
+      "note": "Founder October 2: brick (old cathedral) tileset only for now. Adam may allow all three Cathedral tilesets; editing allowedTilesets is all it takes. Elsewhere a pew's half cover is drawn with the tileset's own low-cover kit piece and the 2x2 basin (inert dressing) is not drawn.",
+      "props": [
+        "prop.pew.wood.2x1.intact.v1",
+        "prop.pew.wood.3x1.intact.v1",
+        "prop.pew.stone.2x1.intact.v1",
+        "prop.pew.stone.3x1.intact.v1",
+        "prop.fountain.circle.2x2.dry.v1",
+        "model-candidate.structural-support.slender-octagonal-a.v1",
+        "model-candidate.structural-support.slender-clustered-repair-b.v2",
+        "model-candidate.retained-donor.wall-flame-sconce.v1",
+        "map-item.short-wooden-pew-collapsed",
+        "map-item.short-wooden-pew-damaged",
+        "map-item.short-wooden-pew-intact"
+      ]
+    }
+  },
+  "legacyAppearances": {
+    "note": "Save and Studio compatibility only. Never a placement source.",
+    "roomPropKinds": {
+      "fountain-1x1-circle": null,
+      "fountain-1x1-square": null
+    },
+    "assetIds": {
+      "map-item.heavy-crate-intact": "prop.heavy-crate.rustic.intact.v1",
+      "map-item.heavy-crate-damaged": "prop.heavy-crate.rustic.intact.v1",
+      "map-item.heavy-crate-collapsed": null,
+      "map-item.storage-barrel-intact": "prop.storage-barrel.rustbound.intact.v1",
+      "map-item.storage-barrel-damaged": "prop.storage-barrel.rustbound.intact.v1",
+      "map-item.storage-barrel-collapsed": null
+    },
+    "greybox": {
+      "greybox.half-wall": "tileset G02-low-cover kit piece",
+      "greybox.thick-pier": "tileset G03-full-height-blocker kit piece"
+    }
+  }
+}

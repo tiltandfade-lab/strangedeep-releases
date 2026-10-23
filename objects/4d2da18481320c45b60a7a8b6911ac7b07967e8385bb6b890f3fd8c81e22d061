@@ -1,0 +1,5109 @@
+{
+ "schemaVersion": 1,
+ "status": "draft",
+ "comment": "DRAFT for Adam's review (October 22, 2026; lane armor-paint). Every material, colour rule, floor pool and theme here is a proposal Adam can change. Look only: no rule, stat or drop rate reads this file. Design note: design-notebook/Strangedeep/Visual Direction/Armor Materials and Colours.md.",
+ "tiers": [
+  "janky",
+  "normal",
+  "excellent",
+  "pristine",
+  "masterwork"
+ ],
+ "types": [
+  "metal",
+  "leather",
+  "cloth",
+  "bone",
+  "wood",
+  "glass",
+  "gem"
+ ],
+ "editorClasses": {
+  "metal": "iron",
+  "leather": "leather",
+  "cloth": "cloth",
+  "bone": "bone",
+  "wood": "wood",
+  "glass": "glass",
+  "gem": "gem"
+ },
+ "neverDyed": [],
+ "regionSlots": [
+  {
+   "number": 0,
+   "id": "plate",
+   "nameKey": "armor-paint.slot.plate.name",
+   "role": "the main surface of a part: a breastplate's face, a cup, a boot's shaft",
+   "paintable": true,
+   "authoredClass": "metal"
+  },
+  {
+   "number": 1,
+   "id": "strap",
+   "nameKey": "armor-paint.slot.strap.name",
+   "role": "straps, laces and bands that tie a part on",
+   "paintable": true,
+   "authoredClass": "leather"
+  },
+  {
+   "number": 2,
+   "id": "trim",
+   "nameKey": "armor-paint.slot.trim.name",
+   "role": "rims, bands, rivets, studs and buckles",
+   "paintable": true,
+   "authoredClass": "metal"
+  },
+  {
+   "number": 3,
+   "id": "opening",
+   "nameKey": "armor-paint.slot.opening.name",
+   "role": "eye slits and other holes: always darkness, never painted",
+   "paintable": false
+  },
+  {
+   "number": 4,
+   "id": "second-plate",
+   "nameKey": "armor-paint.slot.second-plate.name",
+   "role": "a second surface on the same part: lames, panels, the inner face of a pauldron",
+   "paintable": true,
+   "authoredClass": "metal"
+  },
+  {
+   "number": 5,
+   "id": "padding",
+   "nameKey": "armor-paint.slot.padding.name",
+   "role": "quilted and padded layers and cloth hanging from a part",
+   "paintable": true,
+   "authoredClass": "cloth"
+  },
+  {
+   "number": 6,
+   "id": "lining",
+   "nameKey": "armor-paint.slot.lining.name",
+   "role": "the inside faces and the lining that shows at the edges",
+   "paintable": true,
+   "authoredClass": "cloth"
+  },
+  {
+   "number": 7,
+   "id": "glow",
+   "nameKey": "armor-paint.slot.glow.name",
+   "role": "reserved for charms and finishes that glow; never dyed, not painted in this draft",
+   "paintable": false
+  }
+ ],
+ "exclusions": [
+  {
+   "slot": "strap",
+   "type": "glass",
+   "reason": "a strap bends with the body; glass or porcelain on a bending strap reads as broken, not decorative"
+  },
+  {
+   "slot": "strap",
+   "type": "gem",
+   "reason": "a whole strap of gem has no edge to read at the game camera and looks like a rendering error"
+  },
+  {
+   "slot": "padding",
+   "type": "glass",
+   "reason": "quilted padding in glass looks like a broken material, not a choice"
+  }
+ ],
+ "patterns": [
+  "plain",
+  "pitted",
+  "patched",
+  "hide",
+  "crackle",
+  "weave",
+  "quilt",
+  "grain",
+  "folded",
+  "tooled",
+  "pebble",
+  "velvet",
+  "brocade",
+  "facet",
+  "leaded",
+  "mail",
+  "filigree",
+  "dip-dye",
+  "stripe",
+  "plaid",
+  "herringbone"
+ ],
+ "masterworkFinish": {
+  "nameKey": "armor-paint.finish.makers-inlay.name",
+  "look": "a thin bright line of gold (silver on gold metals) inlaid just inside every edge, and the polish that takes all grime off",
+  "inlayGold": "#e0be62",
+  "inlaySilver": "#e2e5ea",
+  "inlayWidth": 0.035
+ },
+ "materials": [
+  {
+   "id": "scrap-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.scrap-iron.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4a2a1a",
+    "#625e58"
+   ],
+   "roughness": 0.88,
+   "metallic": 0.5,
+   "wear": 0.9,
+   "grime": 0.85,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#8c8a86",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0.0,
+   "relief": 0.9,
+   "look": "rust brown over grey, rough, flaking edges, heavy grime"
+  },
+  {
+   "id": "pig-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.pig-iron.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#34322f",
+    "#4e4a45"
+   ],
+   "roughness": 0.82,
+   "metallic": 0.6,
+   "wear": 0.6,
+   "grime": 0.85,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#7c7a76",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0.0,
+   "relief": 0.9,
+   "look": "dull dark grey, pitted, grime packed in every hollow"
+  },
+  {
+   "id": "patched-tin",
+   "type": "metal",
+   "nameKey": "armor-paint.material.patched-tin.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6c6b66",
+    "#8a8882"
+   ],
+   "roughness": 0.74,
+   "metallic": 0.75,
+   "wear": 0.8,
+   "grime": 0.6,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#a9a8a3",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "patched",
+   "iridescence": 0.0,
+   "relief": 0.9,
+   "look": "pale dull tin in mismatched patches, dented, bright scuffs"
+  },
+  {
+   "id": "wrought-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.wrought-iron.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#45464a",
+    "#5c5d62"
+   ],
+   "roughness": 0.6,
+   "metallic": 0.8,
+   "wear": 0.5,
+   "grime": 0.5,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#9a9ca0",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.55,
+   "look": "honest dark grey, soft sheen, worn lighter at the edges",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "plain-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.plain-steel.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6e7176",
+    "#8c8f94"
+   ],
+   "roughness": 0.5,
+   "metallic": 0.9,
+   "wear": 0.4,
+   "grime": 0.35,
+   "edgeHighlight": 0.6,
+   "edgeColor": "#d8dce3",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.55,
+   "look": "mid grey steel, clear sheen, light wear",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "bronze",
+   "type": "metal",
+   "nameKey": "armor-paint.material.bronze.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a4e30",
+    "#8a6a44"
+   ],
+   "roughness": 0.5,
+   "metallic": 0.9,
+   "wear": 0.45,
+   "grime": 0.45,
+   "edgeHighlight": 0.55,
+   "edgeColor": "#c69751",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.55,
+   "look": "warm brown gold, soft sheen, darker in the hollows",
+   "trim": {
+    "style": "polish",
+    "width": 0.5
+   }
+  },
+  {
+   "id": "blackened-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.blackened-iron.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a2a2e",
+    "#38383d"
+   ],
+   "roughness": 0.55,
+   "metallic": 0.7,
+   "wear": 0.35,
+   "grime": 0.3,
+   "edgeHighlight": 0.75,
+   "edgeColor": "#a6a8ac",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.55,
+   "look": "near-black iron whose edges wear through to bright steel",
+   "trim": {
+    "style": "band",
+    "with": "brass"
+   }
+  },
+  {
+   "id": "riveted-mail",
+   "type": "metal",
+   "nameKey": "armor-paint.material.riveted-mail.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#5a5c60",
+    "#7c7f84"
+   ],
+   "roughness": 0.5,
+   "metallic": 0.9,
+   "wear": 0.35,
+   "grime": 0.6,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#a8abb0",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "mail",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "rows of small riveted rings, grey, dark between the links",
+   "trim": {
+    "style": "polish",
+    "width": 0.2
+   },
+   "patternScale": 0.55
+  },
+  {
+   "id": "butted-mail",
+   "type": "metal",
+   "nameKey": "armor-paint.material.butted-mail.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4a3a2e",
+    "#6a6560"
+   ],
+   "roughness": 0.8,
+   "metallic": 0.75,
+   "wear": 0.6,
+   "grime": 0.8,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#8c8a86",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "mail",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "loose butted rings, rust bleeding between them",
+   "patternScale": 0.6
+  },
+  {
+   "id": "fine-mail",
+   "type": "metal",
+   "nameKey": "armor-paint.material.fine-mail.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#8e9197",
+    "#b4b7bd"
+   ],
+   "roughness": 0.3,
+   "metallic": 0.9,
+   "wear": 0.1,
+   "grime": 0.15,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#e6e9ee",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "mail",
+   "iridescence": 0.0,
+   "relief": 0.55,
+   "look": "small bright riveted rings, oiled, close-set",
+   "trim": {
+    "style": "polish",
+    "width": 0.2
+   },
+   "patternScale": 0.75
+  },
+  {
+   "id": "hardened-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.hardened-steel.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8e949e",
+    "#b0b6c0"
+   ],
+   "roughness": 0.34,
+   "metallic": 1,
+   "wear": 0.25,
+   "grime": 0.2,
+   "edgeHighlight": 0.65,
+   "edgeColor": "#feffff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.15,
+   "look": "hardened steel with a brushed finish, fine lines running one way",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "brass",
+   "type": "metal",
+   "nameKey": "armor-paint.material.brass.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#9a8048",
+    "#b39658"
+   ],
+   "roughness": 0.35,
+   "metallic": 1,
+   "wear": 0.3,
+   "grime": 0.3,
+   "edgeHighlight": 0.6,
+   "edgeColor": "#ffd567",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.3,
+   "look": "yellow brass, warm shine, a little tarnish in the hollows",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "blued-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.blued-steel.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#26354d",
+    "#3a4c6c"
+   ],
+   "roughness": 0.3,
+   "metallic": 1,
+   "wear": 0.2,
+   "grime": 0.15,
+   "edgeHighlight": 0.6,
+   "edgeColor": "#b4bac4",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.3,
+   "look": "heat-blued steel, deep blue-black shine, silver edges",
+   "trim": {
+    "style": "band",
+    "with": "reliquary-gold"
+   }
+  },
+  {
+   "id": "fine-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.fine-steel.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#b4bac4",
+    "#ccd2dc"
+   ],
+   "roughness": 0.14,
+   "metallic": 1,
+   "wear": 0.1,
+   "grime": 0.08,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#ffffff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.12,
+   "look": "near-mirror steel, almost no wear or grime",
+   "trim": {
+    "style": "scroll",
+    "with": "gilt-bronze",
+    "width": 0.6
+   }
+  },
+  {
+   "id": "silvered-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.silvered-steel.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#d8d2c6",
+    "#ebe6dc"
+   ],
+   "roughness": 0.1,
+   "metallic": 1,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#ffffff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.12,
+   "look": "cool white silver, soft mirror shine",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "gilt-bronze",
+   "type": "metal",
+   "nameKey": "armor-paint.material.gilt-bronze.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#a98840",
+    "#c4a258"
+   ],
+   "roughness": 0.25,
+   "metallic": 1,
+   "wear": 0.15,
+   "grime": 0.15,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#8a6a34",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.12,
+   "look": "rich gold over bronze, bright shine, gilding worn on the high edges",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "folded-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.folded-steel.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8a8d93",
+    "#b8bbc1"
+   ],
+   "roughness": 0.22,
+   "metallic": 1,
+   "wear": 0.05,
+   "grime": 0.05,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#f3f7ff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "folded",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "steel with a watered grain of light and dark bands, polished",
+   "trim": {
+    "style": "band",
+    "with": "electrum"
+   }
+  },
+  {
+   "id": "electrum",
+   "type": "metal",
+   "nameKey": "armor-paint.material.electrum.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#b0a87a",
+    "#ccc296"
+   ],
+   "roughness": 0.2,
+   "metallic": 1,
+   "wear": 0.05,
+   "grime": 0.05,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#ffffb2",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "pale green-gold, soft mirror shine",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "night-steel",
+   "type": "metal",
+   "nameKey": "armor-paint.material.night-steel.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 5,
+   "baseColor": [
+    "#2a2d34",
+    "#3a3e46"
+   ],
+   "roughness": 0.2,
+   "metallic": 1,
+   "wear": 0.05,
+   "grime": 0.05,
+   "edgeHighlight": 0.85,
+   "edgeColor": "#c8ccd2",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "polished black steel with knife-bright edges",
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   }
+  },
+  {
+   "id": "reliquary-gold",
+   "type": "metal",
+   "nameKey": "armor-paint.material.reliquary-gold.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 5,
+   "baseColor": [
+    "#b8963e",
+    "#d0ae58"
+   ],
+   "roughness": 0.22,
+   "metallic": 1,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#fff86f",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.12,
+   "look": "deep treasure gold, heavy shine, dark in the hollows",
+   "accent": {
+    "floors": [
+     5
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 5: the Golden Treasure the necromancer guards; design-notebook/Strangedeep/Dungeon/Dressing/Biome Direction Drafts.md, Auric Ossuary: rare gold framing as the omen"
+   },
+   "trim": {
+    "style": "scroll",
+    "with": "reliquary-gold",
+    "width": 0.6
+   }
+  },
+  {
+   "id": "rawhide",
+   "type": "leather",
+   "nameKey": "armor-paint.material.rawhide.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#9c875f",
+    "#bba67a"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.7,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#eec18a",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "hide",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "stiff pale hide, blotchy, fraying pale edges, dirty"
+  },
+  {
+   "id": "patched-hide",
+   "type": "leather",
+   "nameKey": "armor-paint.material.patched-hide.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4e3a2a",
+    "#64503c"
+   ],
+   "roughness": 0.86,
+   "metallic": 0,
+   "wear": 0.4,
+   "grime": 0.8,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#907055",
+   "blend1": 0.1,
+   "blend2": 0.4,
+   "pattern": "patched",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "brown hide pieced from scraps, mismatched tones, heavy grime",
+   "patternScale": 1.4
+  },
+  {
+   "id": "cracked-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.cracked-leather.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#382a20",
+    "#54402f"
+   ],
+   "roughness": 0.8,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.7,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#664e39",
+   "blend1": 0.15,
+   "blend2": 0.45,
+   "pattern": "crackle",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "dry dark leather crazed with pale cracks",
+   "patternScale": 0.7
+  },
+  {
+   "id": "tanned-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.tanned-leather.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#64432e",
+    "#7e5a3e"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.5,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#9a6e4c",
+   "blend1": 0.2,
+   "blend2": 0.75,
+   "pattern": "hide",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "warm red-brown, low sheen, lighter worn edges",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "suede",
+   "type": "leather",
+   "nameKey": "armor-paint.material.suede.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7a624e",
+    "#94806a"
+   ],
+   "roughness": 1.0,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.4,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#d8aa7a",
+   "blend1": 0.2,
+   "blend2": 0.7,
+   "pattern": "velvet",
+   "iridescence": 0.0,
+   "relief": 0.5,
+   "look": "soft matte light brown, takes dye evenly",
+   "trim": {
+    "style": "stitched",
+    "with": "tanned-leather"
+   }
+  },
+  {
+   "id": "boiled-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.boiled-leather.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#46241a",
+    "#663826"
+   ],
+   "roughness": 0.42,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.4,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#7c442e",
+   "blend1": 0.2,
+   "blend2": 0.55,
+   "pattern": "hide",
+   "iridescence": 0.0,
+   "relief": 0.25,
+   "look": "hard dark leather with a glossy, lighter rim",
+   "trim": {
+    "style": "burnish",
+    "width": 0.5
+   }
+  },
+  {
+   "id": "waxed-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.waxed-leather.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2c1c12",
+    "#44301e"
+   ],
+   "roughness": 0.26,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.3,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#533b25",
+   "blend1": 0.25,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.4,
+   "look": "deep brown with a waxy sheen, little wear",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "dyed-calfskin",
+   "type": "leather",
+   "nameKey": "armor-paint.material.dyed-calfskin.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5a4232",
+    "#72543e"
+   ],
+   "roughness": 0.6,
+   "metallic": 0,
+   "wear": 0.2,
+   "grime": 0.2,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#aa704a",
+   "blend1": 0.3,
+   "blend2": 0.85,
+   "pattern": "hide",
+   "iridescence": 0.0,
+   "relief": 0.5,
+   "look": "fine smooth leather that carries a strong dye",
+   "trim": {
+    "style": "stitched",
+    "with": "funeral-leather"
+   },
+   "defaultColor2": {
+    "hue": "crimson",
+    "saturation": 0.5,
+    "value": 0.3
+   }
+  },
+  {
+   "id": "lacquered-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.lacquered-leather.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#34221a",
+    "#4a3226"
+   ],
+   "roughness": 0.12,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.15,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#643f2a",
+   "blend1": 0.3,
+   "blend2": 0.85,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.25,
+   "look": "hard glossy lacquer over dark leather, bright rim",
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "defaultColor2": {
+    "hue": "crimson",
+    "saturation": 0.6,
+    "value": 0.2
+   }
+  },
+  {
+   "id": "tooled-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.tooled-leather.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#56402e",
+    "#6e523a"
+   ],
+   "roughness": 0.5,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.25,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#9b633e",
+   "blend1": 0.3,
+   "blend2": 0.8,
+   "pattern": "tooled",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "leather pressed with a fine raised pattern, grime only in the lines",
+   "trim": {
+    "style": "band",
+    "with": "brass"
+   },
+   "patternScale": 0.7
+  },
+  {
+   "id": "shagreen",
+   "type": "leather",
+   "nameKey": "armor-paint.material.shagreen.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#6e735e",
+    "#8f957a"
+   ],
+   "roughness": 0.45,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.1,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#aeb695",
+   "blend1": 0.35,
+   "blend2": 0.8,
+   "pattern": "pebble",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "pebbled ray skin, pale grey-green, polished",
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   },
+   "patternScale": 0.6
+  },
+  {
+   "id": "stitched-patchwork",
+   "type": "leather",
+   "nameKey": "armor-paint.material.stitched-patchwork.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#3e2a1e",
+    "#9a7a52"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.35,
+   "grime": 0.75,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#a78261",
+   "blend1": 0.15,
+   "blend2": 0.5,
+   "pattern": "patched",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "mismatched leather offcuts, light and dark, sewn together with heavy seams",
+   "accent": {
+    "floors": [
+     3
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 3: constructs of cloth, wood, stone and iron pieced together from what the animators find"
+   },
+   "patternScale": 1.6
+  },
+  {
+   "id": "funeral-leather",
+   "type": "leather",
+   "nameKey": "armor-paint.material.funeral-leather.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 5,
+   "baseColor": [
+    "#1b1715",
+    "#262020"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.2,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#2e2727",
+   "blend1": 0.2,
+   "blend2": 0.4,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "black lacquered mourning leather, faint plum rim",
+   "accent": {
+    "floors": [
+     5
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 5: sacred architecture becomes funerary architecture"
+   },
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   }
+  },
+  {
+   "id": "sackcloth",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.sackcloth.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7a6440",
+    "#9a8052"
+   ],
+   "roughness": 0.95,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.8,
+   "edgeHighlight": 0.1,
+   "edgeColor": "#bc9c64",
+   "blend1": 0.1,
+   "blend2": 0.4,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "coarse undyed weave, sagging, stained",
+   "patternScale": 0.3
+  },
+  {
+   "id": "rag",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.rag.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5e5648",
+    "#786e5e"
+   ],
+   "roughness": 0.95,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.8,
+   "edgeHighlight": 0.1,
+   "edgeColor": "#928673",
+   "blend1": 0.1,
+   "blend2": 0.45,
+   "pattern": "patched",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "grey-brown scraps, holes and fraying everywhere",
+   "patternScale": 0.6
+  },
+  {
+   "id": "hemp-canvas",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.hemp-canvas.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7e7e66",
+    "#9a9a80"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.55,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#bcbc9c",
+   "blend1": 0.15,
+   "blend2": 0.55,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "stiff pale canvas, plain weave, scuffed",
+   "patternScale": 0.45
+  },
+  {
+   "id": "linen",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.linen.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#ccc8b8",
+    "#dedbcc"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.4,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#ffffeb",
+   "blend1": 0.2,
+   "blend2": 0.9,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "clean pale flax, fine weave, takes dye well",
+   "patternScale": 1.0
+  },
+  {
+   "id": "wool",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.wool.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7c6c5c",
+    "#9a8874"
+   ],
+   "roughness": 0.95,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.35,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#bca68e",
+   "blend1": 0.25,
+   "blend2": 0.85,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "soft heavy cloth, matte, deep even colour",
+   "patternScale": 0.7
+  },
+  {
+   "id": "quilted-cotton",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.quilted-cotton.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#b0a48a",
+    "#c5b99f"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.35,
+   "grime": 0.4,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#fffad7",
+   "blend1": 0.2,
+   "blend2": 0.92,
+   "pattern": "quilt",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "padded cloth in stitched rows, the gambeson look",
+   "trim": {
+    "style": "stitched",
+    "with": "tanned-leather",
+    "width": 0.5
+   }
+  },
+  {
+   "id": "padded-jack",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.padded-jack.name",
+   "tiers": [
+    "janky",
+    "janky"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7e735f",
+    "#958a74"
+   ],
+   "roughness": 0.95,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.75,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#b8ad94",
+   "blend1": 0.2,
+   "blend2": 0.9,
+   "pattern": "quilt",
+   "iridescence": 0.0,
+   "relief": 0.9,
+   "look": "a coarse stuffed jack, lumpy quilting, stained and patched"
+  },
+  {
+   "id": "arming-doublet",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.arming-doublet.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#a89e8c",
+    "#c2b8a6"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#f2ecdf",
+   "blend1": 0.2,
+   "blend2": 0.96,
+   "pattern": "quilt",
+   "iridescence": 0.0,
+   "relief": 0.75,
+   "look": "a fitted arming doublet, tight even quilting with a soft sheen, takes strong colour",
+   "trim": {
+    "style": "stitched",
+    "with": "dyed-calfskin",
+    "width": 0.5
+   }
+  },
+  {
+   "id": "felt",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.felt.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#55504c",
+    "#6a6460"
+   ],
+   "roughness": 1.0,
+   "metallic": 0,
+   "wear": 0.2,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#817a75",
+   "blend1": 0.25,
+   "blend2": 0.9,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.5,
+   "look": "dense matte felt, no weave, very even colour",
+   "trim": {
+    "style": "stitched",
+    "with": "tanned-leather"
+   }
+  },
+  {
+   "id": "broadcloth",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.broadcloth.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5f574d",
+    "#766c60"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.2,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#9f9282",
+   "blend1": 0.3,
+   "blend2": 0.95,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "fine tight wool, crisp folds, rich colour",
+   "trim": {
+    "style": "band",
+    "with": "brass",
+    "width": 0.2
+   },
+   "patternScale": 1.6
+  },
+  {
+   "id": "velvet",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.velvet.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4a3f3a",
+    "#5f5149"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.15,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#806d63",
+   "blend1": 0.35,
+   "blend2": 0.95,
+   "pattern": "velvet",
+   "iridescence": 0.0,
+   "relief": 0.4,
+   "look": "deep pile that glows pale at the rims",
+   "trim": {
+    "style": "scroll",
+    "with": "gilt-bronze"
+   }
+  },
+  {
+   "id": "silk",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.silk.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#cec6ba",
+    "#e0d9ce"
+   ],
+   "roughness": 0.35,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#ffffff",
+   "blend1": 0.35,
+   "blend2": 0.95,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.3,
+   "look": "smooth sheen that shifts with the light",
+   "trim": {
+    "style": "stitched",
+    "with": "gilt-bronze"
+   },
+   "patternScale": 2.2
+  },
+  {
+   "id": "brocade",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.brocade.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#6b5a3e",
+    "#85704c"
+   ],
+   "roughness": 0.55,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.1,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#b49767",
+   "blend1": 0.4,
+   "blend2": 0.9,
+   "pattern": "brocade",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "heavy cloth woven with a raised pattern in a second sheen",
+   "trim": {
+    "style": "band",
+    "with": "reliquary-gold"
+   }
+  },
+  {
+   "id": "ombre-velvet",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.ombre-velvet.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a5a50",
+    "#827064"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.25,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#5f5149",
+   "blend1": 0.15,
+   "blend2": 0.95,
+   "pattern": "dip-dye",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "velvet dyed in a slow fade, the pile catching the light",
+   "defaultColor1": {
+    "neutral": "charcoal"
+   },
+   "defaultColor2": {
+    "hue": "crimson",
+    "saturation": 0.75,
+    "value": 0.3
+   },
+   "trim": {
+    "style": "scroll",
+    "with": "reliquary-gold"
+   }
+  },
+  {
+   "id": "dip-dyed-silk",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.dip-dyed-silk.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#cec6ba",
+    "#e0d9ce"
+   ],
+   "roughness": 0.45,
+   "metallic": 0,
+   "wear": 0.25,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#e0d9ce",
+   "blend1": 0.15,
+   "blend2": 0.95,
+   "pattern": "dip-dye",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "silk dyed from the hem up, deep at one end and fading to pale",
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "defaultColor2": {
+    "hue": "indigo",
+    "saturation": 0.7,
+    "value": 0.35
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze",
+    "width": 0.2
+   }
+  },
+  {
+   "id": "plaid-wool",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.plaid-wool.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5a5446",
+    "#726a58"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.25,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#726a58",
+   "blend1": 0.15,
+   "blend2": 0.85,
+   "pattern": "plaid",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "a heavy plaid, bands crossing in two dyes",
+   "defaultColor1": {
+    "neutral": "moss"
+   },
+   "defaultColor2": {
+    "hue": "crimson",
+    "saturation": 0.45,
+    "value": 0.35
+   },
+   "trim": {
+    "style": "stitched",
+    "with": "dyed-calfskin"
+   }
+  },
+  {
+   "id": "herringbone-twill",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.herringbone-twill.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a6254",
+    "#857b6a"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.25,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#857b6a",
+   "blend1": 0.15,
+   "blend2": 0.85,
+   "pattern": "herringbone",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "a close zigzag twill in two yarns",
+   "defaultColor1": {
+    "neutral": "ash"
+   },
+   "defaultColor2": {
+    "neutral": "charcoal"
+   },
+   "trim": {
+    "style": "stitched",
+    "with": "tanned-leather"
+   }
+  },
+  {
+   "id": "striped-wool",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.striped-wool.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8a7e6c",
+    "#a0937f"
+   ],
+   "roughness": 0.92,
+   "metallic": 0,
+   "wear": 0.25,
+   "grime": 0.3,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#a0937f",
+   "blend1": 0.15,
+   "blend2": 0.85,
+   "pattern": "stripe",
+   "iridescence": 0.0,
+   "relief": 0.6,
+   "look": "undyed wool woven with a broad stripe and a pinstripe",
+   "defaultColor1": {
+    "neutral": "undyed"
+   },
+   "defaultColor2": {
+    "hue": "orange",
+    "saturation": 0.35,
+    "value": 0.4
+   }
+  },
+  {
+   "id": "morpho-silk",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.morpho-silk.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#14204a",
+    "#26408a"
+   ],
+   "roughness": 0.3,
+   "metallic": 0.0,
+   "wear": 0.05,
+   "grime": 0.1,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#5ab0f0",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "weave",
+   "iridescence": 0.85,
+   "relief": 0.35,
+   "look": "wing-scale silk, deep blue that flashes bright as it turns"
+  },
+  {
+   "id": "bookbinding-buckram",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.bookbinding-buckram.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4a3a30",
+    "#5e4a3c"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.35,
+   "grime": 0.4,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#7f6451",
+   "blend1": 0.2,
+   "blend2": 0.7,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "stiff sized book cloth, slight gloss, scuffed corners",
+   "accent": {
+    "floors": [
+     1
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 1: empty shelves and hidden old books"
+   }
+  },
+  {
+   "id": "tarred-canvas",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.tarred-canvas.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#2e2b27",
+    "#403b35"
+   ],
+   "roughness": 0.6,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.6,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#565048",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "black tar-soaked canvas, sticky sheen, cracked at folds",
+   "accent": {
+    "floors": [
+     2
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 2: rival camps, barricades and defended claims"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "altar-linen",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.altar-linen.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#e2dccb",
+    "#efe9da"
+   ],
+   "roughness": 0.8,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.15,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#ffffff",
+   "blend1": 0.25,
+   "blend2": 0.6,
+   "pattern": "weave",
+   "iridescence": 0.0,
+   "relief": 0.8,
+   "look": "white sacred linen with a faint woven border",
+   "accent": {
+    "floors": [
+     4
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 4: less-plundered sacred rooms that show the original faith"
+   },
+   "trim": {
+    "style": "scroll",
+    "with": "gilt-bronze"
+   },
+   "patternScale": 1.4
+  },
+  {
+   "id": "gnawed-bone",
+   "type": "bone",
+   "nameKey": "armor-paint.material.gnawed-bone.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a5636",
+    "#8a7450"
+   ],
+   "roughness": 0.75,
+   "metallic": 0,
+   "wear": 0.4,
+   "grime": 0.8,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#a08a62",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "crackle",
+   "iridescence": 0.0,
+   "relief": 0.45,
+   "look": "yellowed bone, cracked and stained in every pore"
+  },
+  {
+   "id": "horn",
+   "type": "bone",
+   "nameKey": "armor-paint.material.horn.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#45362a",
+    "#6f5a42"
+   ],
+   "roughness": 0.4,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.4,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#967a59",
+   "blend1": 0.15,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.45,
+   "look": "dark streaked horn, translucent-looking light edges",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "polished-bone",
+   "type": "bone",
+   "nameKey": "armor-paint.material.polished-bone.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#b8a070",
+    "#d0bc8c"
+   ],
+   "roughness": 0.35,
+   "metallic": 0,
+   "wear": 0.2,
+   "grime": 0.3,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.25,
+   "look": "smooth cream bone with a soft gloss",
+   "trim": {
+    "style": "burnish"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "ivory",
+   "type": "bone",
+   "nameKey": "armor-paint.material.ivory.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#e2d8be",
+    "#efe7d2"
+   ],
+   "roughness": 0.25,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.15,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.25,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.2,
+   "look": "warm white with fine grain lines, polished",
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "patternScale": 0.6
+  },
+  {
+   "id": "june-carapace",
+   "type": "bone",
+   "nameKey": "armor-paint.material.june-carapace.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#18301a",
+    "#2c4a26"
+   ],
+   "roughness": 0.22,
+   "metallic": 0.0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#c09a40",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "plain",
+   "iridescence": 0.75,
+   "relief": 0.15,
+   "look": "beetle shell that turns green to bronze as it moves, glossy"
+  },
+  {
+   "id": "scrimshaw",
+   "type": "bone",
+   "nameKey": "armor-paint.material.scrimshaw.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#e4dac0",
+    "#f0e8d4"
+   ],
+   "roughness": 0.25,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.05,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#fbf6ea",
+   "blend1": 0.05,
+   "blend2": 0.85,
+   "pattern": "tooled",
+   "iridescence": 0.0,
+   "relief": 0.2,
+   "look": "polished ivory engraved with fine dark lines that take colour 2",
+   "defaultColor2": {
+    "neutral": "soot"
+   },
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   },
+   "patternScale": 0.6
+  },
+  {
+   "id": "ossuary-bone",
+   "type": "bone",
+   "nameKey": "armor-paint.material.ossuary-bone.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 5,
+   "baseColor": [
+    "#8a8476",
+    "#a8a294"
+   ],
+   "roughness": 0.55,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.7,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#b4ae9e",
+   "blend1": 0.1,
+   "blend2": 0.25,
+   "pattern": "crackle",
+   "iridescence": 0.0,
+   "relief": 0.45,
+   "look": "pale bone with soot driven deep into every crack",
+   "accent": {
+    "floors": [
+     5
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Dressing/Biome Direction Drafts.md, Auric Ossuary: dense ivory-toned mass locked by blackened iron, soot in the recesses"
+   },
+   "trim": {
+    "style": "band",
+    "with": "blackened-iron"
+   }
+  },
+  {
+   "id": "rough-pine",
+   "type": "wood",
+   "nameKey": "armor-paint.material.rough-pine.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6e5232",
+    "#a8875c"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.7,
+   "edgeHighlight": 0.2,
+   "edgeColor": "#dfb582",
+   "blend1": 0.15,
+   "blend2": 0.4,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "pale splintery softwood, open grain, dirty"
+  },
+  {
+   "id": "oak",
+   "type": "wood",
+   "nameKey": "armor-paint.material.oak.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4e3520",
+    "#80593a"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.45,
+   "grime": 0.5,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#a97748",
+   "blend1": 0.2,
+   "blend2": 0.5,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "brown oak, strong grain, oiled",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "ash-wood",
+   "type": "wood",
+   "nameKey": "armor-paint.material.ash-wood.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8f7a58",
+    "#c4ae86"
+   ],
+   "roughness": 0.65,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.4,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#ffeab5",
+   "blend1": 0.2,
+   "blend2": 0.55,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "pale straight-grained wood, smooth"
+  },
+  {
+   "id": "bog-oak",
+   "type": "wood",
+   "nameKey": "armor-paint.material.bog-oak.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#2a2117",
+    "#3a2e20"
+   ],
+   "roughness": 0.5,
+   "metallic": 0,
+   "wear": 0.2,
+   "grime": 0.25,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#4e3e2b",
+   "blend1": 0.2,
+   "blend2": 0.5,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "near-black ancient oak, faint grain, waxed",
+   "trim": {
+    "style": "band",
+    "with": "wrought-iron"
+   }
+  },
+  {
+   "id": "ebony",
+   "type": "wood",
+   "nameKey": "armor-paint.material.ebony.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#1a1411",
+    "#241c17"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#31261f",
+   "blend1": 0.15,
+   "blend2": 0.4,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.3,
+   "look": "black polished hardwood, tight grain",
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   }
+  },
+  {
+   "id": "rosewood",
+   "type": "wood",
+   "nameKey": "armor-paint.material.rosewood.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#3e1a14",
+    "#62301f"
+   ],
+   "roughness": 0.22,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.05,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#783b26",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.25,
+   "look": "deep red-brown hardwood, tight dark grain, mirror-polished",
+   "trim": {
+    "style": "band",
+    "with": "brass"
+   }
+  },
+  {
+   "id": "pew-oak",
+   "type": "wood",
+   "nameKey": "armor-paint.material.pew-oak.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#3e2c1a",
+    "#6e5234"
+   ],
+   "roughness": 0.8,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.7,
+   "edgeHighlight": 0.3,
+   "edgeColor": "#9b7348",
+   "blend1": 0.15,
+   "blend2": 0.45,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.7,
+   "look": "old dark church oak, split and worn pale where hands rubbed it",
+   "accent": {
+    "floors": [
+     1
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 1: broken wood in sacred spaces picked nearly clean"
+   }
+  },
+  {
+   "id": "puppet-lacquer",
+   "type": "wood",
+   "nameKey": "armor-paint.material.puppet-lacquer.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 3,
+   "baseColor": [
+    "#5a2e22",
+    "#74402e"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.4,
+   "grime": 0.3,
+   "edgeHighlight": 0.45,
+   "edgeColor": "#8e4e38",
+   "blend1": 0.25,
+   "blend2": 0.75,
+   "pattern": "grain",
+   "iridescence": 0.0,
+   "relief": 0.2,
+   "look": "glossy lacquered wood, chipped to the pale wood at the joints",
+   "accent": {
+    "floors": [
+     3
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 3: lesser animators and wooden constructs in the House of Animation"
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze",
+    "width": 0.2
+   }
+  },
+  {
+   "id": "bottle-glass",
+   "type": "glass",
+   "nameKey": "armor-paint.material.bottle-glass.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#3e523c",
+    "#57704f"
+   ],
+   "roughness": 0.15,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.5,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#75976b",
+   "blend1": 0.1,
+   "blend2": 0.4,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.1,
+   "look": "thick green-brown glass, scratched and cloudy",
+   "defaultColor2": {
+    "hue": "olive",
+    "saturation": 0.2,
+    "value": 0.35
+   }
+  },
+  {
+   "id": "smoked-glass",
+   "type": "glass",
+   "nameKey": "armor-paint.material.smoked-glass.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#34343a",
+    "#4a4a52"
+   ],
+   "roughness": 0.12,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.3,
+   "edgeHighlight": 0.55,
+   "edgeColor": "#64646f",
+   "blend1": 0.1,
+   "blend2": 0.5,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.1,
+   "look": "dark grey glass, bright rim highlights"
+  },
+  {
+   "id": "leaded-glass",
+   "type": "glass",
+   "nameKey": "armor-paint.material.leaded-glass.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#1c1e22",
+    "#8898a8"
+   ],
+   "roughness": 0.1,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.2,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#b8cde3",
+   "blend1": 0.2,
+   "blend2": 0.9,
+   "pattern": "leaded",
+   "iridescence": 0.0,
+   "relief": 0.1,
+   "look": "stained glass panes held in dark lead lines, takes strong colour",
+   "defaultColor2": {
+    "hue": "teal",
+    "saturation": 0.45,
+    "value": 0.5
+   }
+  },
+  {
+   "id": "opaline-glass",
+   "type": "glass",
+   "nameKey": "armor-paint.material.opaline-glass.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#d4d8dc",
+    "#e6e9ec"
+   ],
+   "roughness": 0.12,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.1,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#ffffff",
+   "blend1": 0.2,
+   "blend2": 0.7,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.1,
+   "look": "milky pale glass with a soft inner glow at the rims",
+   "defaultColor2": {
+    "hue": "sky",
+    "saturation": 0.15,
+    "value": 0.85
+   }
+  },
+  {
+   "id": "cut-crystal",
+   "type": "glass",
+   "nameKey": "armor-paint.material.cut-crystal.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#4e5662",
+    "#c4cad4"
+   ],
+   "roughness": 0.05,
+   "metallic": 0,
+   "wear": 0.02,
+   "grime": 0.02,
+   "edgeHighlight": 0.7,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.1,
+   "look": "clear cut crystal, bright facet edges, a faint wash of colour 2",
+   "defaultColor2": {
+    "hue": "sky",
+    "saturation": 0.2,
+    "value": 0.85
+   },
+   "trim": {
+    "style": "polish"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "cobalt-porcelain",
+   "type": "glass",
+   "nameKey": "armor-paint.material.cobalt-porcelain.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#c4c7c6",
+    "#dcdfde"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.95,
+   "pattern": "filigree",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "white glazed porcelain with deep blue filigree",
+   "defaultColor2": {
+    "hue": "indigo",
+    "saturation": 0.8,
+    "value": 0.32
+   },
+   "accent": {
+    "floors": [
+     4
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Dressing/Biome Direction Drafts.md, Porcelain Water Garden (Cathedral brief): blue porcelain with fine pale filigree"
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "filigree": "rosette"
+  },
+  {
+   "id": "fret-porcelain",
+   "type": "glass",
+   "nameKey": "armor-paint.material.fret-porcelain.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#c4c7c6",
+    "#dcdfde"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.95,
+   "pattern": "filigree",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "white porcelain banded with a cobalt key fret between ruled lines",
+   "defaultColor2": {
+    "hue": "indigo",
+    "saturation": 0.8,
+    "value": 0.32
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "filigree": "fret"
+  },
+  {
+   "id": "lotus-porcelain",
+   "type": "glass",
+   "nameKey": "armor-paint.material.lotus-porcelain.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#c4c7c6",
+    "#dcdfde"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.95,
+   "pattern": "filigree",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "white porcelain painted with a running lotus scroll in bands",
+   "defaultColor2": {
+    "hue": "indigo",
+    "saturation": 0.75,
+    "value": 0.35
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "filigree": "lotus"
+  },
+  {
+   "id": "damask-porcelain",
+   "type": "glass",
+   "nameKey": "armor-paint.material.damask-porcelain.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#c4c7c6",
+    "#dcdfde"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.95,
+   "pattern": "filigree",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "white porcelain with cobalt quatrefoil medallions",
+   "defaultColor2": {
+    "hue": "woad",
+    "saturation": 0.8,
+    "value": 0.3
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   },
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "filigree": "damask"
+  },
+  {
+   "id": "gilt-lace-porcelain",
+   "type": "glass",
+   "nameKey": "armor-paint.material.gilt-lace-porcelain.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 4,
+   "baseColor": [
+    "#c4c7c6",
+    "#dcdfde"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.1,
+   "grime": 0.1,
+   "edgeHighlight": 0.15,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.95,
+   "pattern": "filigree",
+   "iridescence": 0.0,
+   "relief": 0.05,
+   "look": "white porcelain laced with fine gold lines",
+   "defaultColor2": {
+    "hue": "saffron",
+    "saturation": 0.7,
+    "value": 0.55
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze",
+    "width": 0.25
+   },
+   "defaultColor1": {
+    "neutral": "bone"
+   },
+   "filigree": "lace"
+  },
+  {
+   "id": "glass-paste",
+   "type": "gem",
+   "nameKey": "armor-paint.material.glass-paste.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7e7266",
+    "#968a7c"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.5,
+   "edgeHighlight": 0.35,
+   "edgeColor": "#cabaa7",
+   "blend1": 0.15,
+   "blend2": 0.5,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.15,
+   "look": "a cheap moulded fake stone, scratched dull",
+   "defaultColor2": {
+    "hue": "amber",
+    "saturation": 0.2,
+    "value": 0.5
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "rough-quartz",
+   "type": "gem",
+   "nameKey": "armor-paint.material.rough-quartz.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8f8c86",
+    "#aaa69e"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.3,
+   "grime": 0.3,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.45,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.15,
+   "look": "cloudy pale crystal, uneven facets",
+   "defaultColor2": {
+    "hue": "woad",
+    "saturation": 0.15,
+    "value": 0.75
+   },
+   "patternScale": 0.45
+  },
+  {
+   "id": "cabochon",
+   "type": "gem",
+   "nameKey": "armor-paint.material.cabochon.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7a6a6a",
+    "#968585"
+   ],
+   "roughness": 0.15,
+   "metallic": 0,
+   "wear": 0.15,
+   "grime": 0.2,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#cab4b4",
+   "blend1": 0.15,
+   "blend2": 0.8,
+   "pattern": "plain",
+   "iridescence": 0.0,
+   "relief": 0.15,
+   "look": "a smooth domed stone with one soft highlight",
+   "defaultColor2": {
+    "hue": "crimson",
+    "saturation": 0.45,
+    "value": 0.42
+   },
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   }
+  },
+  {
+   "id": "cut-gem",
+   "type": "gem",
+   "nameKey": "armor-paint.material.cut-gem.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 2,
+   "baseColor": [
+    "#8a8a9a",
+    "#a6a6b6"
+   ],
+   "roughness": 0.08,
+   "metallic": 0,
+   "wear": 0.05,
+   "grime": 0.1,
+   "edgeHighlight": 0.25,
+   "edgeColor": "#e0e0f6",
+   "blend1": 0.15,
+   "blend2": 0.9,
+   "pattern": "facet",
+   "iridescence": 0.0,
+   "relief": 0.15,
+   "look": "a sharply cut stone that sparkles at every facet edge",
+   "defaultColor2": {
+    "hue": "indigo",
+    "saturation": 0.6,
+    "value": 0.5
+   },
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "opal",
+   "type": "gem",
+   "nameKey": "armor-paint.material.opal.name",
+   "tiers": [
+    "masterwork",
+    "masterwork"
+   ],
+   "fromFloor": 5,
+   "baseColor": [
+    "#c4c0c8",
+    "#e6e2ea"
+   ],
+   "roughness": 0.12,
+   "metallic": 0,
+   "wear": 0.02,
+   "grime": 0.02,
+   "edgeHighlight": 0.5,
+   "edgeColor": "#f08a5a",
+   "blend1": 0.1,
+   "blend2": 0.3,
+   "pattern": "facet",
+   "iridescence": 0.8,
+   "relief": 0.15,
+   "look": "milky stone with a play of warm colour as it turns",
+   "trim": {
+    "style": "band",
+    "with": "reliquary-gold"
+   },
+   "patternScale": 0.6
+  },
+  {
+   "id": "verdigris-bronze",
+   "type": "metal",
+   "nameKey": "armor-paint.material.verdigris-bronze.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2e5a48",
+    "#6a6a40"
+   ],
+   "roughness": 0.55,
+   "metallic": 0.7,
+   "wear": 0.45,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#c09060",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "bronze bloomed blue-green with verdigris, bright metal where it rubs",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "ravenglass",
+   "type": "glass",
+   "nameKey": "armor-paint.material.ravenglass.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#14101e",
+    "#2f5f6a"
+   ],
+   "roughness": 0.15,
+   "metallic": 0,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#366d7a",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "plain",
+   "iridescence": 0.5,
+   "relief": 0.1,
+   "look": "black glass whose edges shift violet to teal",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "band",
+    "with": "night-steel"
+   }
+  },
+  {
+   "id": "caiman-hide",
+   "type": "leather",
+   "nameKey": "armor-paint.material.caiman-hide.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#1f2a22",
+    "#4a5a44"
+   ],
+   "roughness": 0.45,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#55674e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "pebble",
+   "iridescence": 0,
+   "relief": 0.98,
+   "look": "wet dark scaled river hide with a paler underside",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "terra-cotta",
+   "type": "gem",
+   "nameKey": "armor-paint.material.terra-cotta.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a3220",
+    "#9a5236"
+   ],
+   "roughness": 0.85,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#b15e3e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "crackle",
+   "iridescence": 0,
+   "relief": 0.28,
+   "look": "fired red clay, dry and matte, mended cracks",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "pyrite",
+   "type": "gem",
+   "nameKey": "armor-paint.material.pyrite.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a5a22",
+    "#c8b050"
+   ],
+   "roughness": 0.35,
+   "metallic": 0.75,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#e6ca5c",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "facet",
+   "iridescence": 0,
+   "relief": 0.2,
+   "look": "brassy cubic crystal faces with black joints",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "patternScale": 0.4
+  },
+  {
+   "id": "star-metal",
+   "type": "metal",
+   "nameKey": "armor-paint.material.star-metal.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#9aa4b8",
+    "#d8e0f0"
+   ],
+   "roughness": 0.3,
+   "metallic": 0.95,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#f0f5ff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "folded",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "pale cold star-metal, faintly banded",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "scroll",
+    "with": "silvered-steel"
+   }
+  },
+  {
+   "id": "aurora-cloth",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.aurora-cloth.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#0e1430",
+    "#3a3a80"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#434393",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "weave",
+   "iridescence": 0.3,
+   "relief": 0.8,
+   "look": "night-blue cloth with cold shimmering seams",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "dartglass-cloth",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.dartglass-cloth.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a2618",
+    "#c8a828"
+   ],
+   "roughness": 0.35,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#e6c12e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "weave",
+   "iridescence": 0,
+   "relief": 1.0,
+   "look": "glossy saturated textile, frog-skin bright",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "bead-shell",
+   "type": "bone",
+   "nameKey": "armor-paint.material.bead-shell.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a3a22",
+    "#c08048"
+   ],
+   "roughness": 0.45,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#dd9353",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "pebble",
+   "iridescence": 0,
+   "relief": 0.5,
+   "look": "warm bead-like segmented shell",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "rib-shell",
+   "type": "bone",
+   "nameKey": "armor-paint.material.rib-shell.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2e5a34",
+    "#7aa068"
+   ],
+   "roughness": 0.4,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#8cb878",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0,
+   "relief": 0.5,
+   "look": "green ribbed reptile shell with a pale underside",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "foxed-rubber",
+   "type": "leather",
+   "nameKey": "armor-paint.material.foxed-rubber.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#1e1e1e",
+    "#343432"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#40403e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.98,
+   "look": "black vulcanised rubber guards, scuffed grey at the edges",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "terrapin-scute",
+   "type": "bone",
+   "nameKey": "armor-paint.material.terrapin-scute.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a2218",
+    "#8a5a2a"
+   ],
+   "roughness": 0.4,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#9f6730",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "facet",
+   "iridescence": 0,
+   "relief": 0.5,
+   "look": "dark turtle scutes in plates, amber at the edges",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "console-plastic",
+   "type": "gem",
+   "nameKey": "armor-paint.material.console-plastic.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5e5e64",
+    "#a8a4b0"
+   ],
+   "roughness": 0.6,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#c1bdca",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "pebble",
+   "iridescence": 0,
+   "relief": 0.28,
+   "look": "matte moulded housing, grey-lilac",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "raised-knit",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.raised-knit.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a3a50",
+    "#b08048"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ca9353",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "quilt",
+   "iridescence": 0,
+   "relief": 1.0,
+   "look": "thick relief knit in bright blocks",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "black-titanium",
+   "type": "metal",
+   "nameKey": "armor-paint.material.black-titanium.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#14161c",
+    "#3a3c48"
+   ],
+   "roughness": 0.35,
+   "metallic": 0.9,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#747784",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.25,
+   "relief": 0.4,
+   "look": "near-black titanium, heat-blue at the edges",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Aerospace Plate Armor Candidates.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "charcoal-coating",
+   "type": "metal",
+   "nameKey": "armor-paint.material.charcoal-coating.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a2c30",
+    "#4e5056"
+   ],
+   "roughness": 0.75,
+   "metallic": 0.5,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#8e9096",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "flat graphite coating over steel, chipped at edges",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Aerospace Plate Armor Candidates.md"
+  },
+  {
+   "id": "sport-weave",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.sport-weave.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5a2a3a",
+    "#a04060"
+   ],
+   "roughness": 0.5,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#b84a6e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "weave",
+   "iridescence": 0,
+   "relief": 1.0,
+   "look": "stretch fabric in saturated blocks",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "perforated-leatherette",
+   "type": "leather",
+   "nameKey": "armor-paint.material.perforated-leatherette.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#c8c8c4",
+    "#e6e6e2"
+   ],
+   "roughness": 0.5,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "pitted",
+   "iridescence": 0,
+   "relief": 0.98,
+   "look": "white leatherette punched with perforations",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "stitched",
+    "with": "funeral-leather"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "walnut",
+   "type": "wood",
+   "nameKey": "armor-paint.material.walnut.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#3a2418",
+    "#6a402a"
+   ],
+   "roughness": 0.35,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#7a4a30",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0,
+   "relief": 0.5,
+   "look": "mid-brown walnut, close grain, oiled",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "band",
+    "with": "brass"
+   }
+  },
+  {
+   "id": "cobalt-ceramic",
+   "type": "gem",
+   "nameKey": "armor-paint.material.cobalt-ceramic.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#1a3a7a",
+    "#4a70b8"
+   ],
+   "roughness": 0.3,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#5581d4",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "pebble",
+   "iridescence": 0,
+   "relief": 0.2,
+   "look": "cobalt-blue ceramic composite, pale face panels",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "white-lacquer",
+   "type": "wood",
+   "nameKey": "armor-paint.material.white-lacquer.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#d6dade",
+    "#eef0f2"
+   ],
+   "roughness": 0.1,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffff",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0,
+   "relief": 0.5,
+   "look": "glossy white lacquer over wood",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   }
+  },
+  {
+   "id": "black-glass-lacquer",
+   "type": "glass",
+   "nameKey": "armor-paint.material.black-glass-lacquer.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#050507",
+    "#1a1a22"
+   ],
+   "roughness": 0.08,
+   "metallic": 0,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#1e1e27",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.1,
+   "look": "glossy black like wet glass",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md",
+   "trim": {
+    "style": "band",
+    "with": "silvered-steel"
+   }
+  },
+  {
+   "id": "rose-quartz",
+   "type": "gem",
+   "nameKey": "armor-paint.material.rose-quartz.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#c89098",
+    "#e8c0c8"
+   ],
+   "roughness": 0.25,
+   "metallic": 0,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffdde6",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "facet",
+   "iridescence": 0,
+   "relief": 0.2,
+   "look": "milky pink quartz",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "band",
+    "with": "rose-gold"
+   },
+   "patternScale": 0.5
+  },
+  {
+   "id": "rose-gold",
+   "type": "metal",
+   "nameKey": "armor-paint.material.rose-gold.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#a86a5a",
+    "#e0a898"
+   ],
+   "roughness": 0.25,
+   "metallic": 1,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffd9ce",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "warm pink gold",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "mirror-tile",
+   "type": "metal",
+   "nameKey": "armor-paint.material.mirror-tile.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7a7a84",
+    "#d0d0dc"
+   ],
+   "roughness": 0.15,
+   "metallic": 1,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#f7f7ff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "leaded",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "small silver mirror tiles in black channels",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Theme Board Explorations.md"
+  },
+  {
+   "id": "thermal-foil",
+   "type": "metal",
+   "nameKey": "armor-paint.material.thermal-foil.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8a8a8a",
+    "#d8c070"
+   ],
+   "roughness": 0.2,
+   "metallic": 0.9,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffeeb5",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "folded",
+   "iridescence": 0,
+   "relief": 0.56,
+   "look": "crinkled silver-gold foil",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Aesthetic Explorations.md"
+  },
+  {
+   "id": "sailcloth",
+   "type": "cloth",
+   "nameKey": "armor-paint.material.sailcloth.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#c8c0a8",
+    "#e4dec8"
+   ],
+   "roughness": 0.55,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffe6",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "weave",
+   "iridescence": 0,
+   "relief": 1.0,
+   "look": "taut pale laminate, stiff and slightly glossy",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Armor Aesthetic Explorations.md",
+   "trim": {
+    "style": "stitched",
+    "with": "hemp-canvas"
+   },
+   "patternScale": 0.8
+  },
+  {
+   "id": "candle-wax",
+   "type": "bone",
+   "nameKey": "armor-paint.material.candle-wax.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#8c6c42",
+    "#c6a678"
+   ],
+   "roughness": 0.55,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#d9bd90",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "crackle",
+   "iridescence": 0,
+   "relief": 0.7,
+   "look": "amber-ivory wax with soot and fine crazing",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Human Body Reskin Candidates.md"
+  },
+  {
+   "id": "ivory-glaze",
+   "type": "gem",
+   "nameKey": "armor-paint.material.ivory-glaze.name",
+   "tiers": [
+    "normal",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#c8b890",
+    "#e0d2ac"
+   ],
+   "roughness": 0.2,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffffeb",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "crackle",
+   "iridescence": 0,
+   "relief": 0.28,
+   "look": "ivory glazed ceramic, small chips",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Blueware Equipment Candidate.md",
+   "trim": {
+    "style": "band",
+    "with": "cobalt-porcelain"
+   },
+   "patternScale": 0.7
+  },
+  {
+   "id": "red-china",
+   "type": "gem",
+   "nameKey": "armor-paint.material.red-china.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a1015",
+    "#a02028"
+   ],
+   "roughness": 0.15,
+   "metallic": 0,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#b8252e",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "crackle",
+   "iridescence": 0,
+   "relief": 0.2,
+   "look": "deep red glazed china with ivory edges",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Ash-Sealed Reskin Explorations.md",
+   "trim": {
+    "style": "band",
+    "with": "gilt-bronze"
+   }
+  },
+  {
+   "id": "teal-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.teal-iron.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a4a44",
+    "#5a8a7e"
+   ],
+   "roughness": 0.8,
+   "metallic": 0.45,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#acdace",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0,
+   "relief": 0.56,
+   "look": "iron eaten teal by cold corrosion",
+   "codexSource": "design-notebook/Strangedeep/Visual Direction/Ash-Sealed Reskin Explorations.md"
+  },
+  {
+   "id": "worn-copper",
+   "type": "metal",
+   "nameKey": "armor-paint.material.worn-copper.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#7a4228",
+    "#c07848"
+   ],
+   "roughness": 0.4,
+   "metallic": 1,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffc69f",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.56,
+   "look": "worn copper, brighter where handled (Copperwatch)",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Approved Weapon Retexture Candidates.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "kiln-tempered-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.kiln-tempered-iron.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#2a2030",
+    "#7a2a30"
+   ],
+   "roughness": 0.35,
+   "metallic": 0.9,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#c5777d",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "folded",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "iron tempered aubergine to ember-red (Kiln-Tempered)",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Approved Weapon Retexture Candidates.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "redgrain-ash",
+   "type": "wood",
+   "nameKey": "armor-paint.material.redgrain-ash.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6a2a1e",
+    "#94523a"
+   ],
+   "roughness": 0.7,
+   "metallic": 0,
+   "wear": 0.49,
+   "grime": 0.51,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#aa5e43",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0,
+   "relief": 0.7,
+   "look": "red-stained ash (Redgrain)",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Approved Weapon Retexture Candidates.md",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "chalkward-limewash",
+   "type": "wood",
+   "nameKey": "armor-paint.material.chalkward-limewash.name",
+   "tiers": [
+    "janky",
+    "normal"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5e5648",
+    "#cac6b8"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.5,
+   "grime": 0.65,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#e8e4d4",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "grain",
+   "iridescence": 0,
+   "relief": 0.7,
+   "look": "chipped limewash, dark grain showing through (Chalkward)",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Approved Weapon Retexture Candidates.md",
+   "patternScale": 0.6
+  },
+  {
+   "id": "tarnished-silver",
+   "type": "metal",
+   "nameKey": "armor-paint.material.tarnished-silver.name",
+   "tiers": [
+    "excellent",
+    "pristine"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#4a4a52",
+    "#a0a0a8"
+   ],
+   "roughness": 0.5,
+   "metallic": 1,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#f8f8ff",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "silver gone dark in the hollows",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md",
+   "trim": {
+    "style": "polish"
+   }
+  },
+  {
+   "id": "oil-sheen-iron",
+   "type": "metal",
+   "nameKey": "armor-paint.material.oil-sheen-iron.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#0a1418",
+    "#1a5a52"
+   ],
+   "roughness": 0.12,
+   "metallic": 0.95,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#599b93",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "plain",
+   "iridescence": 0.6,
+   "relief": 0.4,
+   "look": "dark iron under a slick oil sheen",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md"
+  },
+  {
+   "id": "ashed-bone",
+   "type": "bone",
+   "nameKey": "armor-paint.material.ashed-bone.name",
+   "tiers": [
+    "normal",
+    "excellent"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#6e6a62",
+    "#8e8a80"
+   ],
+   "roughness": 0.9,
+   "metallic": 0,
+   "wear": 0.45,
+   "grime": 0.5,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#a6a298",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "crackle",
+   "iridescence": 0,
+   "relief": 0.7,
+   "look": "bone under a pale coat of ash",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md"
+  },
+  {
+   "id": "gilded-rot",
+   "type": "metal",
+   "nameKey": "armor-paint.material.gilded-rot.name",
+   "tiers": [
+    "excellent",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#5a4a1a",
+    "#b89838"
+   ],
+   "roughness": 0.6,
+   "metallic": 0.8,
+   "wear": 0.38,
+   "grime": 0.38,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#ffe495",
+   "blend1": 0.0,
+   "blend2": 0.7,
+   "pattern": "pitted",
+   "iridescence": 0,
+   "relief": 0.4,
+   "look": "gilding eaten through by corrosion",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md",
+   "trim": {
+    "style": "burnish"
+   }
+  },
+  {
+   "id": "blood-lacquer",
+   "type": "glass",
+   "nameKey": "armor-paint.material.blood-lacquer.name",
+   "tiers": [
+    "pristine",
+    "masterwork"
+   ],
+   "fromFloor": 1,
+   "baseColor": [
+    "#3a060c",
+    "#7a1620"
+   ],
+   "roughness": 0.1,
+   "metallic": 0,
+   "wear": 0.26,
+   "grime": 0.24,
+   "edgeHighlight": 0.4,
+   "edgeColor": "#8c1925",
+   "blend1": 0.1,
+   "blend2": 0.35,
+   "pattern": "plain",
+   "iridescence": 0,
+   "relief": 0.1,
+   "look": "deep red lacquer, wet-looking",
+   "codexSource": "design-notebook/Strangedeep/Systems/Items and Economy/Generated Armor.md",
+   "trim": {
+    "style": "band",
+    "with": "reliquary-gold"
+   }
+  }
+ ],
+ "neutrals": [
+  {
+   "id": "undyed",
+   "nameKey": "armor-paint.colour.undyed.name",
+   "color": "#c9bda3"
+  },
+  {
+   "id": "bone",
+   "nameKey": "armor-paint.colour.bone.name",
+   "color": "#e0d6bf"
+  },
+  {
+   "id": "ash",
+   "nameKey": "armor-paint.colour.ash.name",
+   "color": "#8f8c86"
+  },
+  {
+   "id": "charcoal",
+   "nameKey": "armor-paint.colour.charcoal.name",
+   "color": "#3a3836"
+  },
+  {
+   "id": "soot",
+   "nameKey": "armor-paint.colour.soot.name",
+   "color": "#1e1c1b"
+  },
+  {
+   "id": "earth",
+   "nameKey": "armor-paint.colour.earth.name",
+   "color": "#5b4632"
+  },
+  {
+   "id": "umber",
+   "nameKey": "armor-paint.colour.umber.name",
+   "color": "#3f2e22"
+  },
+  {
+   "id": "ochre",
+   "nameKey": "armor-paint.colour.ochre.name",
+   "color": "#a87c3c"
+  },
+  {
+   "id": "rust",
+   "nameKey": "armor-paint.colour.rust.name",
+   "color": "#7c3f25"
+  },
+  {
+   "id": "moss",
+   "nameKey": "armor-paint.colour.moss.name",
+   "color": "#5a5a3a"
+  }
+ ],
+ "hues": [
+  {
+   "id": "crimson",
+   "nameKey": "armor-paint.colour.crimson.name",
+   "hue": 355,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "vermilion",
+   "nameKey": "armor-paint.colour.vermilion.name",
+   "hue": 12,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "orange",
+   "nameKey": "armor-paint.colour.orange.name",
+   "hue": 26,
+   "natural": true,
+   "fromFloor": 1
+  },
+  {
+   "id": "amber",
+   "nameKey": "armor-paint.colour.amber.name",
+   "hue": 38,
+   "natural": true,
+   "fromFloor": 1
+  },
+  {
+   "id": "saffron",
+   "nameKey": "armor-paint.colour.saffron.name",
+   "hue": 48,
+   "natural": true,
+   "fromFloor": 1
+  },
+  {
+   "id": "olive",
+   "nameKey": "armor-paint.colour.olive.name",
+   "hue": 62,
+   "natural": true,
+   "fromFloor": 1
+  },
+  {
+   "id": "green",
+   "nameKey": "armor-paint.colour.green.name",
+   "hue": 105,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "jade",
+   "nameKey": "armor-paint.colour.jade.name",
+   "hue": 150,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "teal",
+   "nameKey": "armor-paint.colour.teal.name",
+   "hue": 180,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "sky",
+   "nameKey": "armor-paint.colour.sky.name",
+   "hue": 200,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "woad",
+   "nameKey": "armor-paint.colour.woad.name",
+   "hue": 215,
+   "natural": true,
+   "fromFloor": 1
+  },
+  {
+   "id": "indigo",
+   "nameKey": "armor-paint.colour.indigo.name",
+   "hue": 235,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "violet",
+   "nameKey": "armor-paint.colour.violet.name",
+   "hue": 265,
+   "natural": false,
+   "fromFloor": 4,
+   "accent": {
+    "floors": [
+     4
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Dressing/Biome Direction Drafts.md, Acoustic Reliquary: sparse cool-violet resonance; Auric Ossuary: violet aurora deep inside (the Catacombs approach of Floors 4 and 5)"
+   }
+  },
+  {
+   "id": "plum",
+   "nameKey": "armor-paint.colour.plum.name",
+   "hue": 295,
+   "natural": false,
+   "fromFloor": 1
+  },
+  {
+   "id": "rose",
+   "nameKey": "armor-paint.colour.rose.name",
+   "hue": 335,
+   "natural": false,
+   "fromFloor": 5,
+   "accent": {
+    "floors": [
+     5
+    ],
+    "inspiredBy": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md, Floor 5: unwilting flowers along the opened burial routes"
+   }
+  }
+ ],
+ "picker": {
+  "grid": 7,
+  "saturationExponent": 1.0,
+  "valueExponent": 0.65,
+  "note": "each hue opens a 7 by 7 grid of saturation and brightness, cut at its tier's ceiling"
+ },
+ "tierColors": [
+  {
+   "tier": "janky",
+   "neutrals": [
+    "undyed",
+    "bone",
+    "ash",
+    "charcoal",
+    "soot",
+    "earth",
+    "umber",
+    "ochre",
+    "rust",
+    "moss"
+   ],
+   "hues": [
+    "amber",
+    "olive"
+   ],
+   "saturationMax": 0.2,
+   "valueMin": 0.1,
+   "valueMax": 0.88,
+   "neutralShare": 0.9,
+   "bellWidth": 0.07
+  },
+  {
+   "tier": "normal",
+   "neutrals": [
+    "undyed",
+    "bone",
+    "ash",
+    "charcoal",
+    "soot",
+    "earth",
+    "umber",
+    "ochre",
+    "rust",
+    "moss"
+   ],
+   "hues": [
+    "amber",
+    "olive",
+    "orange",
+    "saffron",
+    "woad"
+   ],
+   "saturationMax": 0.35,
+   "valueMin": 0.1,
+   "valueMax": 0.88,
+   "neutralShare": 0.8,
+   "bellWidth": 0.11
+  },
+  {
+   "tier": "excellent",
+   "neutrals": [
+    "undyed",
+    "bone",
+    "ash",
+    "charcoal",
+    "soot",
+    "earth",
+    "umber",
+    "ochre",
+    "rust",
+    "moss"
+   ],
+   "hues": [
+    "amber",
+    "olive",
+    "orange",
+    "saffron",
+    "woad",
+    "crimson",
+    "vermilion",
+    "green",
+    "teal"
+   ],
+   "saturationMax": 0.5,
+   "valueMin": 0.1,
+   "valueMax": 0.88,
+   "neutralShare": 0.7,
+   "bellWidth": 0.16
+  },
+  {
+   "tier": "pristine",
+   "neutrals": [
+    "undyed",
+    "bone",
+    "ash",
+    "charcoal",
+    "soot",
+    "earth",
+    "umber",
+    "ochre",
+    "rust",
+    "moss"
+   ],
+   "hues": [
+    "amber",
+    "olive",
+    "orange",
+    "saffron",
+    "woad",
+    "crimson",
+    "vermilion",
+    "green",
+    "teal",
+    "jade",
+    "sky",
+    "indigo",
+    "plum",
+    "rose"
+   ],
+   "saturationMax": 0.65,
+   "valueMin": 0.1,
+   "valueMax": 0.88,
+   "neutralShare": 0.6,
+   "bellWidth": 0.21
+  },
+  {
+   "tier": "masterwork",
+   "neutrals": [
+    "undyed",
+    "bone",
+    "ash",
+    "charcoal",
+    "soot",
+    "earth",
+    "umber",
+    "ochre",
+    "rust",
+    "moss"
+   ],
+   "hues": [
+    "amber",
+    "olive",
+    "orange",
+    "saffron",
+    "woad",
+    "crimson",
+    "vermilion",
+    "green",
+    "teal",
+    "jade",
+    "sky",
+    "indigo",
+    "plum",
+    "rose",
+    "violet"
+   ],
+   "saturationMax": 0.82,
+   "valueMin": 0.1,
+   "valueMax": 0.88,
+   "neutralShare": 0.5,
+   "bellWidth": 0.27
+  }
+ ],
+ "floorRules": {
+  "genericShareMin": 0.8,
+  "accentsPerFloorMax": 4,
+  "coreMaterialsPerTierMin": 2
+ },
+ "floors": [
+  {
+   "floor": 1,
+   "title": "The Stripped Ruin",
+   "accents": [
+    "bookbinding-buckram",
+    "pew-oak"
+   ],
+   "source": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md"
+  },
+  {
+   "floor": 2,
+   "title": "The Claimed Galleries",
+   "accents": [
+    "tarred-canvas"
+   ],
+   "source": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md"
+  },
+  {
+   "floor": 3,
+   "title": "The House of Animation",
+   "accents": [
+    "stitched-patchwork",
+    "puppet-lacquer"
+   ],
+   "source": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md"
+  },
+  {
+   "floor": 4,
+   "title": "The Sealed Interior",
+   "accents": [
+    "altar-linen",
+    "cobalt-porcelain",
+    "violet"
+   ],
+   "source": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md"
+  },
+  {
+   "floor": 5,
+   "title": "The Reliquary Descent",
+   "accents": [
+    "reliquary-gold",
+    "funeral-leather",
+    "ossuary-bone",
+    "rose"
+   ],
+   "source": "design-notebook/Strangedeep/Dungeon/Floors/Floor Progression Drafts.md"
+  }
+ ],
+ "themes": [
+  {
+   "id": "scavenger",
+   "nameKey": "armor-paint.theme.scavenger.name",
+   "tier": "janky",
+   "kind": "complete",
+   "look": "scrap iron and tin held on with rawhide, sacking underneath",
+   "paints": {
+    "plate": {
+     "material": "scrap-iron"
+    },
+    "second-plate": {
+     "material": "patched-tin"
+    },
+    "strap": {
+     "material": "rawhide",
+     "color1": {
+      "neutral": "earth"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    },
+    "trim": {
+     "material": "pig-iron"
+    },
+    "padding": {
+     "material": "padded-jack",
+     "color1": {
+      "neutral": "earth"
+     },
+     "color2": {
+      "neutral": "earth"
+     }
+    },
+    "lining": {
+     "material": "rag",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "neutral": "charcoal"
+     }
+    }
+   }
+  },
+  {
+   "id": "grave-robber",
+   "nameKey": "armor-paint.theme.grave-robber.name",
+   "tier": "janky",
+   "kind": "complete",
+   "look": "pig iron, gnawed bone trim and cracked leather over rags, rusted butted mail beneath",
+   "paints": {
+    "plate": {
+     "material": "pig-iron"
+    },
+    "second-plate": {
+     "material": "cracked-leather",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "neutral": "umber"
+     }
+    },
+    "strap": {
+     "material": "patched-hide",
+     "color1": {
+      "neutral": "earth"
+     },
+     "color2": {
+      "neutral": "rust"
+     }
+    },
+    "trim": {
+     "material": "gnawed-bone",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "bone"
+     }
+    },
+    "padding": {
+     "material": "butted-mail"
+    },
+    "lining": {
+     "material": "sackcloth",
+     "color1": {
+      "neutral": "ash"
+     },
+     "color2": {
+      "neutral": "ash"
+     }
+    }
+   }
+  },
+  {
+   "id": "garrison",
+   "nameKey": "armor-paint.theme.garrison.name",
+   "tier": "normal",
+   "kind": "complete",
+   "look": "plain steel over wrought iron, bronze rivets, brown leather, undyed quilting",
+   "paints": {
+    "plate": {
+     "material": "plain-steel"
+    },
+    "second-plate": {
+     "material": "wrought-iron"
+    },
+    "strap": {
+     "material": "tanned-leather",
+     "color1": {
+      "neutral": "earth"
+     },
+     "color2": {
+      "neutral": "earth"
+     }
+    },
+    "trim": {
+     "material": "bronze"
+    },
+    "padding": {
+     "material": "quilted-cotton",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "ash"
+     }
+    },
+    "lining": {
+     "material": "linen",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    }
+   }
+  },
+  {
+   "id": "pilgrim",
+   "nameKey": "armor-paint.theme.pilgrim.name",
+   "tier": "normal",
+   "kind": "complete",
+   "look": "plates wrapped in woad herringbone twill over plain steel, suede straps, undyed canvas",
+   "paints": {
+    "plate": {
+     "material": "herringbone-twill",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "hue": "woad",
+      "saturation": 0.34,
+      "value": 0.5
+     }
+    },
+    "second-plate": {
+     "material": "plain-steel"
+    },
+    "strap": {
+     "material": "suede",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "earth"
+     }
+    },
+    "trim": {
+     "material": "wrought-iron"
+    },
+    "padding": {
+     "material": "quilted-cotton",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    },
+    "lining": {
+     "material": "linen",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "bone"
+     }
+    }
+   }
+  },
+  {
+   "id": "chapter-knight",
+   "nameKey": "armor-paint.theme.chapter-knight.name",
+   "tier": "excellent",
+   "kind": "complete",
+   "look": "blued steel plate over bright steel lames, brass trim, oxblood straps, a surcoat per pale saffron and woad",
+   "paints": {
+    "plate": {
+     "material": "blued-steel"
+    },
+    "second-plate": {
+     "material": "hardened-steel"
+    },
+    "strap": {
+     "material": "waxed-leather",
+     "color1": {
+      "neutral": "umber"
+     },
+     "color2": {
+      "hue": "crimson",
+      "saturation": 0.45,
+      "value": 0.4
+     }
+    },
+    "trim": {
+     "material": "brass"
+    },
+    "padding": {
+     "material": "quilted-cotton",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "hue": "saffron",
+      "saturation": 0.45,
+      "value": 0.42
+     },
+     "finish": {
+      "style": "per-pale",
+      "to": {
+       "hue": "woad",
+       "saturation": 0.5,
+       "value": 0.5
+      }
+     }
+    },
+    "lining": {
+     "material": "linen",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "bone"
+     }
+    }
+   }
+  },
+  {
+   "id": "ossuary-warden",
+   "nameKey": "armor-paint.theme.ossuary-warden.name",
+   "tier": "excellent",
+   "kind": "complete",
+   "look": "soot-stained ossuary bone bound in blackened iron and oxblood leather",
+   "paints": {
+    "plate": {
+     "material": "ossuary-bone",
+     "color1": {
+      "neutral": "ash"
+     },
+     "color2": {
+      "neutral": "umber"
+     }
+    },
+    "second-plate": {
+     "material": "blackened-iron"
+    },
+    "strap": {
+     "material": "boiled-leather",
+     "color1": {
+      "neutral": "umber"
+     },
+     "color2": {
+      "neutral": "rust"
+     }
+    },
+    "trim": {
+     "material": "blackened-iron"
+    },
+    "padding": {
+     "material": "quilted-cotton",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "neutral": "soot"
+     }
+    },
+    "lining": {
+     "material": "wool",
+     "color1": {
+      "neutral": "ash"
+     },
+     "color2": {
+      "neutral": "charcoal"
+     }
+    }
+   }
+  },
+  {
+   "id": "brigandine",
+   "nameKey": "armor-paint.theme.brigandine.name",
+   "tier": "excellent",
+   "kind": "complete",
+   "look": "oxblood broadcloth over the plates, brass rivets, riveted mail beneath",
+   "paints": {
+    "plate": {
+     "material": "broadcloth",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "hue": "crimson",
+      "saturation": 0.45,
+      "value": 0.3
+     },
+     "finish": {
+      "style": "fade",
+      "to": {
+       "hue": "crimson",
+       "saturation": 0.45,
+       "value": 0.18
+      }
+     }
+    },
+    "second-plate": {
+     "material": "riveted-mail"
+    },
+    "strap": {
+     "material": "tanned-leather",
+     "color1": {
+      "neutral": "umber"
+     },
+     "color2": {
+      "neutral": "earth"
+     },
+     "finish": {
+      "style": "fade",
+      "to": {
+       "hue": "crimson",
+       "saturation": 0.45,
+       "value": 0.3
+      }
+     }
+    },
+    "trim": {
+     "material": "brass"
+    },
+    "padding": {
+     "material": "riveted-mail"
+    },
+    "lining": {
+     "material": "linen",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    }
+   }
+  },
+  {
+   "id": "cathedral",
+   "nameKey": "armor-paint.theme.cathedral.name",
+   "tier": "pristine",
+   "kind": "complete",
+   "look": "fine steel gilded upward into gilt bronze at the shoulders, gilt bronze trim, indigo doublet",
+   "paints": {
+    "plate": {
+     "material": "fine-steel",
+     "finish": {
+      "style": "fade",
+      "toMaterial": "gilt-bronze"
+     }
+    },
+    "second-plate": {
+     "material": "fine-steel"
+    },
+    "strap": {
+     "material": "lacquered-leather",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "neutral": "umber"
+     }
+    },
+    "trim": {
+     "material": "gilt-bronze"
+    },
+    "padding": {
+     "material": "arming-doublet",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "hue": "indigo",
+      "saturation": 0.55,
+      "value": 0.32
+     }
+    },
+    "lining": {
+     "material": "silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "neutral": "bone"
+     }
+    }
+   }
+  },
+  {
+   "id": "porcelain-choir",
+   "nameKey": "armor-paint.theme.porcelain-choir.name",
+   "tier": "pristine",
+   "kind": "complete",
+   "look": "fine white china plates and lames painted with cobalt scrollwork, silvered steel trim, indigo calfskin, silk dip-dyed indigo",
+   "paints": {
+    "plate": {
+     "material": "cobalt-porcelain",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "indigo",
+      "saturation": 0.62,
+      "value": 0.45
+     }
+    },
+    "second-plate": {
+     "material": "cobalt-porcelain",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "indigo",
+      "saturation": 0.62,
+      "value": 0.45
+     }
+    },
+    "strap": {
+     "material": "dyed-calfskin",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "hue": "indigo",
+      "saturation": 0.35,
+      "value": 0.4
+     }
+    },
+    "trim": {
+     "material": "silvered-steel"
+    },
+    "padding": {
+     "material": "dip-dyed-silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "indigo",
+      "saturation": 0.62,
+      "value": 0.35
+     }
+    },
+    "lining": {
+     "material": "silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "sky",
+      "saturation": 0.2,
+      "value": 0.75
+     }
+    }
+   }
+  },
+  {
+   "id": "gilded-reliquary",
+   "nameKey": "armor-paint.theme.gilded-reliquary.name",
+   "tier": "masterwork",
+   "kind": "complete",
+   "look": "night steel and gilt with crimson velvet and set stones, the doublet fading crimson into plum",
+   "paints": {
+    "plate": {
+     "material": "night-steel"
+    },
+    "second-plate": {
+     "material": "gilt-bronze"
+    },
+    "strap": {
+     "material": "lacquered-leather",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "hue": "crimson",
+      "saturation": 0.6,
+      "value": 0.38
+     }
+    },
+    "trim": {
+     "material": "cut-gem",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "crimson",
+      "saturation": 0.75,
+      "value": 0.45
+     }
+    },
+    "padding": {
+     "material": "arming-doublet",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "hue": "crimson",
+      "saturation": 0.8,
+      "value": 0.3
+     },
+     "finish": {
+      "style": "fade",
+      "to": {
+       "hue": "plum",
+       "saturation": 0.7,
+       "value": 0.18
+      }
+     }
+    },
+    "lining": {
+     "material": "silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "neutral": "ochre"
+     }
+    }
+   }
+  },
+  {
+   "id": "bannerlord",
+   "nameKey": "armor-paint.theme.bannerlord.name",
+   "tier": "masterwork",
+   "kind": "complete",
+   "look": "folded steel plate warming into electrum toward the shoulders under a silver sash, electrum trim, deep jade brocade",
+   "paints": {
+    "plate": {
+     "material": "folded-steel",
+     "finish": {
+      "style": "fade",
+      "toMaterial": "electrum"
+     }
+    },
+    "second-plate": {
+     "material": "hardened-steel"
+    },
+    "strap": {
+     "material": "silvered-steel"
+    },
+    "trim": {
+     "material": "electrum"
+    },
+    "padding": {
+     "material": "brocade",
+     "color1": {
+      "neutral": "charcoal"
+     },
+     "color2": {
+      "hue": "jade",
+      "saturation": 0.55,
+      "value": 0.28
+     }
+    },
+    "lining": {
+     "material": "silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "neutral": "ochre"
+     }
+    }
+   }
+  },
+  {
+   "id": "rose-quartz",
+   "nameKey": "armor-paint.theme.rose-quartz.name",
+   "tier": "masterwork",
+   "kind": "complete",
+   "look": "cut rose stone plates set in silvered steel over fine mail",
+   "paints": {
+    "plate": {
+     "material": "cut-gem",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "hue": "rose",
+      "saturation": 0.2,
+      "value": 0.42
+     }
+    },
+    "second-plate": {
+     "material": "silvered-steel"
+    },
+    "strap": {
+     "material": "lacquered-leather",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "hue": "plum",
+      "saturation": 0.4,
+      "value": 0.42
+     }
+    },
+    "trim": {
+     "material": "silvered-steel"
+    },
+    "padding": {
+     "material": "fine-mail"
+    },
+    "lining": {
+     "material": "silk",
+     "color1": {
+      "neutral": "bone"
+     },
+     "color2": {
+      "neutral": "bone"
+     }
+    }
+   }
+  },
+  {
+   "id": "brass-trim",
+   "nameKey": "armor-paint.theme.brass-trim.name",
+   "tier": "excellent",
+   "kind": "partial",
+   "look": "trim only: brass rims and rivets",
+   "paints": {
+    "trim": {
+     "material": "brass"
+    }
+   }
+  },
+  {
+   "id": "black-straps",
+   "nameKey": "armor-paint.theme.black-straps.name",
+   "tier": "normal",
+   "kind": "partial",
+   "look": "straps only: black boiled leather",
+   "paints": {
+    "strap": {
+     "material": "boiled-leather",
+     "color1": {
+      "neutral": "soot"
+     },
+     "color2": {
+      "neutral": "soot"
+     }
+    }
+   }
+  },
+  {
+   "id": "undyed-padding",
+   "nameKey": "armor-paint.theme.undyed-padding.name",
+   "tier": "janky",
+   "kind": "partial",
+   "look": "padding and lining only: plain sacking",
+   "paints": {
+    "padding": {
+     "material": "sackcloth",
+     "color1": {
+      "neutral": "undyed"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    },
+    "lining": {
+     "material": "sackcloth",
+     "color1": {
+      "neutral": "ash"
+     },
+     "color2": {
+      "neutral": "undyed"
+     }
+    }
+   }
+  }
+ ],
+ "randomTheme": {
+  "rule": "for each paintable slot, pick a material of the piece's tier allowed in that slot and on this floor, weighted by the slot's type weights below; the second plate repeats the plate's paint at the given share, so most suits are one harness rather than a patchwork of metals; then roll colour 2 on the tier's bell curve (a neutral by the neutral share, otherwise an open hue with saturation from a half-bell of the tier's width, capped at its ceiling) and colour 1 as a neutral; metals take no colour; a paint takes a colour finish (a fade or per pale, or on bare metal a fade into another metal) at finishShareByTier, none at Janky and more often at each tier up",
+  "slotTypeWeights": {
+   "plate": {
+    "metal": 6,
+    "leather": 2,
+    "cloth": 1,
+    "bone": 1,
+    "wood": 1,
+    "glass": 0.4,
+    "gem": 0.2
+   },
+   "second-plate": {
+    "metal": 5,
+    "leather": 2,
+    "cloth": 1,
+    "bone": 0.6,
+    "wood": 0.6,
+    "glass": 0.3,
+    "gem": 0.2
+   },
+   "strap": {
+    "leather": 6,
+    "cloth": 2,
+    "metal": 1
+   },
+   "trim": {
+    "metal": 6,
+    "bone": 0.5,
+    "wood": 0.5,
+    "gem": 0.3,
+    "leather": 0.5
+   },
+   "padding": {
+    "cloth": 6,
+    "leather": 1,
+    "metal": 1.5
+   },
+   "lining": {
+    "cloth": 5,
+    "leather": 1
+   }
+  },
+  "secondPlateMatchesPlate": 0.7,
+  "finishShareByTier": [
+   0,
+   0.08,
+   0.16,
+   0.28,
+   0.42
+  ],
+  "valueRange": [
+   0.25,
+   0.7
+  ]
+ },
+ "shippingRule": {
+  "rule": "Armor that ships in the game (generated pieces, enemy and loot armor) keeps material relevance: each region takes a material of its authored class (cloth regions cloth, metal regions metal, leather regions leather). Mail counts as an underlayer: it may go wherever padding goes, also on armor that ships (Adam, October 22: \"underlayers can absolutely be types of mail\"). Crossovers (a metal sash, a cloth-wrapped plate) are legal in the editor only. Adam, October 22.",
+  "matchAuthoredClass": true,
+  "underlayerPatterns": [
+   "mail"
+  ]
+ }
+}

@@ -1,0 +1,418 @@
+{
+ "schemaVersion": 1,
+ "effect": "dual-wield-proficiency",
+ "source": "Generated from DUAL_WIELD_PROFICIENCY_MATRIX_CASES in test/helpers/dual-wield-proficiency-matrix.ts; do not edit by hand.",
+ "integrationRequirements": {
+  "equipment": "Two equipped legal one-handed weapons; the current arena baseline equips only one. Pair staging belongs to integration.",
+  "content": "Admit a new immutable inventory catalog with dualWieldVersion:1 via loadPrototypeItemContent(undefined,undefined,{dualWield:true}); legacy catalogs retain main-hand strikes."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-dual-wield-proficiency-mastery",
+  "weapon": "sword",
+  "preview": {
+   "operation": "preview-attack",
+   "fields": {
+    "targetId": "$unit:primary",
+    "actionKind": "melee"
+   },
+   "previewKey": "preview"
+  },
+  "cast": {
+   "operation": "attack-actor",
+   "fields": {
+    "targetId": "$unit:primary",
+    "actionKind": "melee",
+    "previewId": "$preview.previewId"
+   }
+  },
+  "cases": [
+   {
+    "id": "dual-wield-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "damage": 100,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 7,
+     "damagePercent": 100,
+     "damage": 100,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 9,
+     "damagePercent": 100,
+     "damage": 100,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 100,
+     "damage": 100,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 105,
+     "damage": 105,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 110,
+     "damage": 110,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 110,
+     "damage": 110,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-8-precision",
+    "level": 8,
+    "fork": "precision",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 14,
+     "damagePercent": 110,
+     "damage": 110,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-9-precision",
+    "level": 9,
+    "fork": "precision",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 16,
+     "damagePercent": 110,
+     "damage": 110,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-10-precision",
+    "level": 10,
+    "fork": "precision",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 18,
+     "damagePercent": 110,
+     "damage": 110,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-8-force",
+    "level": 8,
+    "fork": "force",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 112,
+     "damage": 112,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-9-force",
+    "level": 9,
+    "fork": "force",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 114,
+     "damage": 114,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   },
+   {
+    "id": "dual-wield-10-force",
+    "level": 10,
+    "fork": "force",
+    "units": {},
+    "rng": [
+     49,
+     0,
+     0
+    ],
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 116,
+     "damage": 116,
+     "retainedHand": "main",
+     "strikes": 1,
+     "arenaNote": "Automated damage uses declared +98/+20 weapon modifiers. Rendered runs use actual equipped sources and production randomness after paired equipment staging.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "attackComposition": "two-equipped-weapons-v1"
+      }
+     ]
+    },
+    "requiredEquipment": {
+     "main": "short-sword",
+     "off": "short-sword"
+    }
+   }
+  ]
+ }
+}

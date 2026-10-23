@@ -1,0 +1,1925 @@
+{
+ "schemaVersion": 1,
+ "effect": "grappling-hook",
+ "source": "Generated from GRAPPLING_HOOK_MATRIX_CASES in test/helpers/grappling-hook-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    10,
+    2
+   ]
+  },
+  "forkId": "reviewed-grappling-hook-path",
+  "targetHitPoints": 200,
+  "preview": {
+   "operation": "preview-grappling-hook",
+   "fields": {
+    "targetId": "mark:$unit:primary"
+   },
+   "previewKey": "grapplingHookPreview"
+  },
+  "cast": {
+   "operation": "grappling-hook",
+   "fields": {
+    "targetId": "mark:$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1-base-travel",
+    "level": 1,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "deployments": 1,
+     "accuracyBonus": 0,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2-base-travel",
+    "level": 2,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 0,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3-base-travel",
+    "level": 3,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 0,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3-base-pull",
+    "level": 3,
+    "fork": null,
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 0,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4-base-travel",
+    "level": 4,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4-base-pull",
+    "level": 4,
+    "fork": null,
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5-base-travel",
+    "level": 5,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5-base-pull",
+    "level": 5,
+    "fork": null,
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5-base-mark",
+    "level": 5,
+    "fork": null,
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6-base-travel",
+    "level": 6,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6-base-pull",
+    "level": 6,
+    "fork": null,
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6-base-mark",
+    "level": 6,
+    "fork": null,
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 1,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7-base-travel",
+    "level": 7,
+    "fork": null,
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7-base-pull",
+    "level": 7,
+    "fork": null,
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7-base-mark",
+    "level": 7,
+    "fork": null,
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-predator-travel",
+    "level": 8,
+    "fork": "predator",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 3,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-predator-pull",
+    "level": 8,
+    "fork": "predator",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 3,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-predator-mark",
+    "level": 8,
+    "fork": "predator",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 3,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-acrobat-travel",
+    "level": 8,
+    "fork": "acrobat",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-acrobat-pull",
+    "level": 8,
+    "fork": "acrobat",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-acrobat-mark",
+    "level": 8,
+    "fork": "acrobat",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-predator-travel",
+    "level": 9,
+    "fork": "predator",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-predator-pull",
+    "level": 9,
+    "fork": "predator",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-predator-mark",
+    "level": 9,
+    "fork": "predator",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-acrobat-travel",
+    "level": 9,
+    "fork": "acrobat",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-acrobat-pull",
+    "level": 9,
+    "fork": "acrobat",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-acrobat-mark",
+    "level": 9,
+    "fork": "acrobat",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": 2,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-predator-travel",
+    "level": 10,
+    "fork": "predator",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-predator-pull",
+    "level": 10,
+    "fork": "predator",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-predator-mark",
+    "level": 10,
+    "fork": "predator",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 4,
+     "opportunityExemption": false,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-acrobat-travel",
+    "level": 10,
+    "fork": "acrobat",
+    "mode": "travel",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      8,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "travel"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "travel:$boundary:anchor"
+    },
+    "walls": {
+     "anchor": [
+      [
+       8,
+       2
+      ],
+      [
+       9,
+       2
+      ]
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-acrobat-pull",
+    "level": 10,
+    "fork": "acrobat",
+    "mode": "pull",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "pull"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "pull:$unit:primary"
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-acrobat-mark",
+    "level": 10,
+    "fork": "acrobat",
+    "mode": "mark",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      10,
+      2
+     ],
+     "wallFace": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      11
+     ]
+    },
+    "expected": {
+     "rangeCells": 10,
+     "deployments": null,
+     "accuracyBonus": 5,
+     "markRounds": 2,
+     "opportunityExemption": true,
+     "movementCost": 0,
+     "landing": [
+      9,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-hook-cast",
+       "mode": "mark"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-marked-applied",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "Travel needs the declared wall-face anchor. Object/wall staging and pit routes are guarded by the automated matrix; rendered staging belongs to integration."
+    },
+    "fields": {
+     "targetId": "mark:$unit:primary"
+    },
+    "units": {}
+   }
+  ]
+ }
+}

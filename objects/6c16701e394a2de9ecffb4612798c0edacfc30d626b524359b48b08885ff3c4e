@@ -1,0 +1,82 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "hamstring-blow",
+  "aliases": [
+    "preview-hamstring-blow"
+  ],
+  "textKeys": {
+    "name": "ability.hamstring-blow.name",
+    "summary": "ability.hamstring-blow.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "hamstringBlows",
+  "params": {"baseSlowPenalty": 3, "baseSlowTurns": 1, "lastSharedLevel": 7},
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"damagePercent": 75, "accuracyBonus": 0, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 2, "cost": 1, "numbers": {"damagePercent": 80, "accuracyBonus": 0, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 3, "cost": 1, "numbers": {"damagePercent": 85, "accuracyBonus": 0, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 4, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 0, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 5, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 6, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}},
+    {"level": 7, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns"}}
+  ],
+  "paths": {
+    "forkId": "reviewed-hamstring-blow-slow",
+    "level": 8,
+    "options": [
+      {
+        "id": "intensity",
+        "nameKey": "ability.hamstring-blow.path.intensity",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty + lvl - lastSharedLevel", "slowTurns": "baseSlowTurns"}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty + lvl - lastSharedLevel", "slowTurns": "baseSlowTurns"}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty + lvl - lastSharedLevel", "slowTurns": "baseSlowTurns"}}
+        ]
+      },
+      {
+        "id": "duration",
+        "nameKey": "ability.hamstring-blow.path.duration",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns + lvl - lastSharedLevel"}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns + lvl - lastSharedLevel"}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 100, "accuracyBonus": 5, "slowPenalty": "baseSlowPenalty", "slowTurns": "baseSlowTurns + lvl - lastSharedLevel"}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId"
+    ]
+  },
+  "presentation": {
+    "key": "hamstring-blow",
+    "clips": [
+      {"clip": "crouch-slash"}
+    ],
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/hamstring-blow.ts",
+    "src/floor/hamstring-blow-source.ts",
+    "src/campaign/reviewed-hamstring-blow.ts",
+    "src/campaign/reviewed-hamstring-blow-content.ts"
+  ]
+}

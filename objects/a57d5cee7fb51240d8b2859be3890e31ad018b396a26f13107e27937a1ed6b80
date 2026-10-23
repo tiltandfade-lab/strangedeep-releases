@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "assetId": "prop.storage-barrel.rustbound.intact.v1",
+  "admissionStatus": "FOUNDER_APPROVED_RUNTIME_AUDITION",
+  "materialReviewStatus": "2026-09-07 geometry/material correction implemented under review; original founder asset approval is not approval of this revision",
+  "geometryCorrection": {
+    "retainedAttempt": "source-assets/props/cathedral-storage-barrel-rustbound/models/blender/2026-09-07/hardware-orientation-v1",
+    "originalRuntimeSha256": "c7ac8cc211649c4102b55d9c301c27ec8eb9fcf3dbfe97465737b9e31fe596ea",
+    "operation": "Reverse only 260 hardware triangles and their normals; wood, positions, UVs, textures, materials and footprint unchanged",
+    "editableBuilder": "tools/blender_bake_barrel_retopology_proof.py",
+    "reproduce": "node tools/repair-barrel-hardware-orientation.mjs --check"
+  },
+  "source": {
+    "path": "source-assets/meshy/cathedral-storage-barrel-rustbound/2026-08-22/models/barrel-retopo-740.glb",
+    "sha256": "9c74f2030eb0bad67fd5d79ef75b6a429e30caf31c438f865bdfd59454f69dab",
+    "triangles": 740
+  },
+  "runtime": {
+    "path": "godot/assets/props/barrels/rustbound/barrel-retopo-740-runtime.glb",
+    "sha256": "05dacacfb4a5d2d2191d41409393c3ba41e886d5e6aed12b805b4f414efee0af",
+    "embeddedTextures": [
+      {
+        "role": "base-color",
+        "sha256": "3974b512e6ffc8ad4aedb4cc800b2cc5cfadab0f3c329a9dc4a7540ded0cf656"
+      },
+      {
+        "role": "metallic-roughness",
+        "sha256": "cc9c8bbc0f3fdf998f0dfcb626e629576ae69e76d7ab3ae7e82ad29250777e39"
+      }
+    ],
+    "dimensionsMetres": [0.76, 0.76, 0.91],
+    "pivot": "XY_CENTER_BOTTOM",
+    "front": "NEGATIVE_Z_IN_GODOT",
+    "validation": "Khronos glTF Validator: 0 errors, 0 warnings, 1 informational unused UV on untextured hardware",
+    "nativeGridHome": "F1",
+    "footprintCells": [1, 1],
+    "allowedQuarterTurns": [0, 1, 2, 3]
+  },
+  "registration": {
+    "primitiveCollision": "cylinder radius 0.38 m height 0.91 m",
+    "tacticalOccupancyAuthority": "seeded packet full five-foot cell",
+    "interactionAnchorPresent": true,
+    "lootSpawnAnchorPresent": true,
+    "explosionOriginPresent": true,
+    "interactionBehaviorRegistered": false,
+    "breakStateRegistered": false,
+    "lootRegistered": false,
+    "damageRegistered": false,
+    "productionPlacementAuthorized": false
+  }
+}

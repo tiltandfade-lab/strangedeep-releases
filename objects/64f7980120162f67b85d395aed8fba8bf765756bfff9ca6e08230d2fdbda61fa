@@ -1,0 +1,335 @@
+{
+ "schemaVersion": 1,
+ "effect": "disengage",
+ "source": "Generated from DISENGAGE_MATRIX_CASES in test/helpers/disengage-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-disengage-path",
+  "targetHitPoints": 200,
+  "preview": {
+   "operation": "preview-disengage",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "disengagePreview"
+  },
+  "cast": {
+   "operation": "disengage",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "cost": "action",
+     "evasionBonus": 0,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "cost": "action",
+     "evasionBonus": 2,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "cost": "action",
+     "evasionBonus": 4,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-tactical-changed"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 4,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 6,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 8,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 10,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv8-avoidance",
+    "level": 8,
+    "fork": "avoidance",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 12,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv9-avoidance",
+    "level": 9,
+    "fork": "avoidance",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 14,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv10-avoidance",
+    "level": 10,
+    "fork": "avoidance",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 16,
+     "reductionPercent": 0,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv8-braced",
+    "level": 8,
+    "fork": "braced",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 10,
+     "reductionPercent": 10,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv9-braced",
+    "level": 9,
+    "fork": "braced",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 10,
+     "reductionPercent": 20,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   },
+   {
+    "id": "lv10-braced",
+    "level": 10,
+    "fork": "braced",
+    "expected": {
+     "cost": "bonus-action",
+     "evasionBonus": 10,
+     "reductionPercent": 30,
+     "arenaNote": "Movement response defenses and end-turn expiry use the automated matrix.",
+     "events": [
+      {
+       "type": "floor-bonus-action-spent"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ]
+    }
+   }
+  ]
+ }
+}

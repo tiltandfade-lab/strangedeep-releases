@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-lame",
+  "displayName": "Lame",
+  "kind": "piece",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "any"
+  ],
+  "slot": "inherits",
+  "attach": "lames",
+  "bones": "any",
+  "allowedRegions": [
+    "waist",
+    "thigh",
+    "upper arm"
+  ],
+  "defaultRegion": "waist",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": {
+    "morph": "Fit",
+    "innerRadiusM": [
+      0.03,
+      0.18
+    ],
+    "rule": "Fit = (girth radius + clearance - innerRadiusM[0]) / (innerRadiusM[1] - innerRadiusM[0])"
+  },
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "one plate",
+      "at1": "five overlapping",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Radius",
+      "at0": "narrow",
+      "at1": "wide",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisLeft",
+      "at0": "straight",
+      "at1": "flared",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 340,
+  "mutateTags": [
+    "heavy",
+    "plain"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-fauld-lames/turnaround.jpg",
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-sabaton/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "4d1d97ed407aaab0dfca8727adb791a18348e346646b62531eb00fbecfe8d1a0",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-lame.glb",
+    "glbSha256": "203cd2b0f13e18b27a7e49184fc2eac171a98b7be44f2dce2fd4a2ba6bf3a3ab",
+    "glbBytes": 43320,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-lame.glb",
+      "targetNames": [
+        "BoneLength",
+        "Radius",
+        "AxisLeft",
+        "Fit"
+      ],
+      "primitives": [
+        {
+          "vertices": 400,
+          "triangles": 340,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 340,
+      "vertices": 400,
+      "targets": {
+        "BoneLength": {
+          "maxDeltaM": 0.096,
+          "verticesMoved": 320
+        },
+        "Radius": {
+          "maxDeltaM": 0.0172,
+          "verticesMoved": 360
+        },
+        "AxisLeft": {
+          "maxDeltaM": 0.008,
+          "verticesMoved": 200
+        },
+        "Fit": {
+          "maxDeltaM": 0.15,
+          "verticesMoved": 400
+        }
+      },
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      }
+    },
+    "budget": {
+      "triangles": 340,
+      "limit": 400,
+      "pass": true
+    }
+  },
+  "notes": {
+    "makes": "fauld, tasset, spaulder, foot lames, skirt",
+    "fit": "Fit sets the curve of the bottom (innermost) plate to the body it hangs on.",
+    "bones": "attach lames: plate k rides the k-th bone of the placement's bone list."
+  }
+}

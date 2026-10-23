@@ -1,0 +1,55 @@
+# Cathedral runtime fonts
+
+These are unmodified upstream WOFF2 binaries. They are self-hosted so the Cathedral HUD has the
+same letterforms and metrics on every supported desktop; no network font service is used at runtime.
+
+## Inscription role — Alegreya Medium
+
+- Runtime file: `alegreya-medium-v2.008.woff2`
+- Family: Alegreya Medium
+- Upstream release tag: `v2.008`; binary internal TrueType version reported by `file`: `2.524`
+- Designer/publisher: Juan Pablo del Peral / Huerta Tipográfica
+- Official source: <https://github.com/huertatipografica/Alegreya/tree/v2.008/fonts/webfonts>
+- Source tag/commit: `v2.008` / `254c16b651af6926154b9af159c7af8eb908a6ea`
+- License: SIL Open Font License 1.1; the upstream notice is retained as `OFL-Alegreya.txt`
+- SHA-256: `e9033d282c9c12ea9438bd361b122adf65b309b82f47ea3e7189f798b0f3b9d8`
+
+Alegreya supplies action names, location names, forecasts, and other inscriptional verdicts. Its
+old-style, visibly drawn rhythm avoids the default fantasy mapping of Cinzel/Trajan plus gold trim.
+
+## Instrument role — IBM Plex Sans Condensed
+
+- Runtime files:
+  - `ibm-plex-sans-condensed-regular-v3.0.woff2`
+  - `ibm-plex-sans-condensed-medium-v3.0.woff2`
+  - `ibm-plex-sans-condensed-semibold-v3.0.woff2`
+- Family/font version: IBM Plex Sans Condensed 3.0
+- Package/release: `@ibm/plex-sans-condensed@2.0.0`, 2025-09-23 font build
+- Designer/publisher: IBM
+- Official source: <https://github.com/IBM/plex/releases/tag/%40ibm%2Fplex-sans-condensed%402.0.0>
+- Release commit: `bb3ab6404e1881ea286f8742dc839e09057db6dd`
+- Published package integrity:
+  `sha512-dzgR4Npf/JJMiTYf6iOBQJpTDQfllZFLN0A0FkW5gtWhNr9JeQNvRrIRwJvbZHfL0I8wae8kIhO/ukYdeXW54g==`
+- License: SIL Open Font License 1.1 with reserved font name `Plex`; the upstream notice is retained
+  as `OFL-IBM-Plex.txt`
+- SHA-256:
+  - Regular: `a71a56e516751883cb7877112d39f9c13b92c2dc15caaf00277b7f9d941d673a`
+  - Medium: `eb93da02ace70c39e4c4e811b8b02dd5f5d4804d186202d6668bea60d22f57d0`
+  - SemiBold: `385a082a1eac88343eab01fb6746be04b7175dacaf4550b17dee76ea0f78126d`
+
+Plex Sans Condensed supplies metadata, measurements, shortcuts, and diagnostic copy. It is a
+working instrument face rather than generic app UI or faux-medieval display type.
+
+## Delivery and fallback policy
+
+- No custom glyph subset, outline edit, conversion, or family rename was performed. These are the
+  publishers' complete WOFF2 files, so the OFL reserved-name conditions and upstream language
+  coverage remain intact.
+- Alegreya Medium and Plex Sans Condensed SemiBold are preloaded because the first frame uses them
+  for the location/action voice and uppercase tactical metadata. The remaining weights load only
+  when the stylesheet requests them.
+- `font-display: swap` preserves immediate readable text. Metric-adjusted local Georgia and Arial
+  Narrow faces are transient fallbacks only; `size-adjust`, ascent, descent, and line-gap overrides
+  reduce reflow if a bundled font is delayed or corrupt.
+- `font-synthesis: none` prevents browser-invented bold or italic forms. The shipped static weights
+  are the only production faces.

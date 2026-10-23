@@ -1,0 +1,397 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-immobilize",
+ "source": "Generated from IMMOBILIZE_MATRIX_CASES in test/helpers/immobilize-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-immobilize-path",
+  "contentFlag": "reviewedImmobilize",
+  "targetHitPoints": 50,
+  "livingHostiles": [
+   "primary",
+   "second"
+  ],
+  "preview": {
+   "operation": "preview-immobilize",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "immobilizePreview"
+  },
+  "cast": {
+   "operation": "reviewed-immobilize",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "immobilize-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "chance": 70,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "chance": 70,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "chance": 75,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 75,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 80,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 85,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "chance": 85,
+     "duration": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-8-duration",
+    "level": 8,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "chance": 85,
+     "duration": 3,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-8-pair",
+    "level": 8,
+    "fork": "pair",
+    "units": {
+     "second": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "chance": 85,
+     "duration": 2,
+     "maximumTargets": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-9-duration",
+    "level": 9,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "chance": 85,
+     "duration": 3,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-9-pair",
+    "level": 9,
+    "fork": "pair",
+    "units": {
+     "second": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "chance": 85,
+     "duration": 2,
+     "maximumTargets": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-10-duration",
+    "level": 10,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "chance": 90,
+     "duration": 3,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "immobilize-10-pair",
+    "level": 10,
+    "fork": "pair",
+    "units": {
+     "second": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "chance": 90,
+     "duration": 2,
+     "maximumTargets": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   }
+  ]
+ }
+}

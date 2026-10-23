@@ -1,0 +1,624 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-shield-throw",
+ "source": "Generated from SHIELD_THROW_MATRIX_CASES in test/helpers/shield-throw-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-shield-throw-path",
+  "targetHitPoints": 50,
+  "offHand": "shield",
+  "frameNote": "Each case may move the primary and add units (units).",
+  "preview": {
+   "operation": "preview-shield-throw",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "shieldThrowPreview"
+  },
+  "cast": {
+   "operation": "reviewed-shield-throw",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "rangeCells": 4,
+     "damage": 12,
+     "stunChancePercent": 0,
+     "struck": [
+      [
+       "primary",
+       12
+      ]
+     ],
+     "stunned": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "rangeCells": 4,
+     "damage": 13,
+     "stunChancePercent": 0,
+     "struck": [
+      [
+       "primary",
+       13
+      ]
+     ],
+     "stunned": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 100
+     }
+    },
+    "expected": {
+     "rangeCells": 5,
+     "damage": 13,
+     "stunChancePercent": 0,
+     "struck": [
+      [
+       "primary",
+       13
+      ]
+     ],
+     "stunned": [],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 25
+     }
+    },
+    "expected": {
+     "rangeCells": 5,
+     "damage": 13,
+     "stunChancePercent": 25,
+     "struck": [
+      [
+       "primary",
+       13
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 25
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 13,
+     "stunChancePercent": 25,
+     "struck": [
+      [
+       "primary",
+       13
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 13,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       13
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-ricochet",
+    "level": 8,
+    "fork": "ricochet",
+    "units": {
+     "b": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ],
+      [
+       "b",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary",
+      "b"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       9,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-hammer",
+    "level": 8,
+    "fork": "hammer",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       9,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-ricochet",
+    "level": 9,
+    "fork": "ricochet",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      11,
+      2
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ],
+      [
+       "b",
+       14
+      ],
+      [
+       "c",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary",
+      "b",
+      "c"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       9,
+       2
+      ],
+      "c": [
+       11,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-hammer",
+    "level": 9,
+    "fork": "hammer",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       10,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-ricochet",
+    "level": 10,
+    "fork": "ricochet",
+    "units": {
+     "b": [
+      9,
+      2
+     ],
+     "c": [
+      11,
+      2
+     ],
+     "d": [
+      12,
+      2
+     ]
+    },
+    "rng": {
+     "roll": {
+      "primary": 35,
+      "b": 35,
+      "c": 35,
+      "d": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ],
+      [
+       "b",
+       14
+      ],
+      [
+       "c",
+       14
+      ],
+      [
+       "d",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary",
+      "b",
+      "c",
+      "d"
+     ],
+     "positions": {
+      "primary": [
+       8,
+       2
+      ],
+      "b": [
+       9,
+       2
+      ],
+      "c": [
+       11,
+       2
+      ],
+      "d": [
+       12,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:b"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:c"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:d"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-hammer",
+    "level": 10,
+    "fork": "hammer",
+    "units": {},
+    "rng": {
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "rangeCells": 6,
+     "damage": 14,
+     "stunChancePercent": 35,
+     "struck": [
+      [
+       "primary",
+       14
+      ]
+     ],
+     "stunned": [
+      "primary"
+     ],
+     "positions": {
+      "primary": [
+       11,
+       2
+      ]
+     },
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

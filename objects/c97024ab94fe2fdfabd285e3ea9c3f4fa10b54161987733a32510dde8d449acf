@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "assetId": "prop.fountain.circle.2x2.dry.v1",
+  "status": "BASIN_ORIENTATION_CORRECTION_IMPLEMENTED_UNDER_REVIEW",
+  "source": {
+    "path": "source-assets/meshy/cathedral-fountain-circular-f4/2026-08-22/models/circular-fountain-f4-v1-1692.glb",
+    "sha256": "987f32136005234294229bd8e39c35e8ea9e26650700a3688ea1351dd939b9b8"
+  },
+  "correction": {
+    "retainedAttempt": "source-assets/props/cathedral-fountain-circular-f4/models/blender/2026-09-07/basin-orientation-v1",
+    "originalRuntimeSha256": "cc1afe45951eb65f56f3668e7d8705a5c006e26f25add1f12c986a23557c3c76",
+    "operation": "Reverse only the 144 downward basin triangles and their normals; remove 48 zero-area center triangles. Preserve every position, wall and drain face, UV, texture, material, dimension, pivot and gameplay footprint.",
+    "reproduce": "node tools/install-large-fountain-basin-repair.mjs --check",
+    "editableMaster": "source-assets/props/cathedral-fountain-circular-f4/models/blender/2026-09-07/basin-orientation-v1/fountain-basin-outward.blend"
+  },
+  "runtime": {
+    "path": "godot/assets/props/fountains/circular/f4/circular-fountain-f4-v1-runtime.glb",
+    "sha256": "114a5762c26d468c9c1f33b7b4aea5761e7e3616be6af91da067a5d5d6fdd10d",
+    "dimensionsMetres": [2.74, 2.74, 0.99],
+    "triangles": 1644,
+    "pivot": "BOTTOM_CENTER",
+    "footprintCells": [2, 2],
+    "primitiveCollision": "unchanged cylinder radius 1.37 m, height 0.99 m, center height 0.495 m"
+  },
+  "review": {
+    "cpuViews": 6,
+    "neutralNativeStage": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f4-basin-01",
+    "installedNeutralStage": "godot/artifacts/floor-generator-lighting/2026-09-08-fountain-f4-installed-neutral-01",
+    "installedNeutralResult": "Eleven inspected native images, exact restoration. Outside-face basin is complete; double-sided control restores false dark wedges. Rim brightness and stretched inner-wall finish remain unresolved.",
+    "roomComparison": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f4-light-pairing-01",
+    "roomComparisonResult": "Thirteen inspected images; exact original and candidate fixed-camera restoration after diagnostic-only light-pairing reset. Unchanged lights and restored geometry. Whole-context return remains nonidentical and is not an exact material comparison.",
+    "materialComparison": "godot/artifacts/floor-generator-lighting/2026-09-08-fountain-f4-installed-response-03",
+    "materialComparisonResult": "Twelve inspected actual Floor 5 images, exact fixed-camera and whole-context restoration. Source albedo lift 1.0 is preferred to 1.25/1.34 rim brightness. Roughness trial is not promoted; metal/normal controls are unchanged because those channels are absent.",
+    "implementedResponse": "Back-face culling after the independently inspected basin repair; source albedo lift 1.0. Existing ceiling 1.34, white tint, roughness floor 0.62, normal cap 0.70, source roughness 0.82 and source maps are preserved. Rim and inner-wall texture quality remain under review.",
+    "sourceGainInstalledNeutralStage": "godot/artifacts/floor-generator-lighting/2026-09-08-fountain-f4-final-neutral-01",
+    "sourceGainInstalledNeutralResult": "Eleven native images inspected; exact front restoration and complete basin at source brightness. Stretched inner rim and repeated inner-wall texture remain unfinished.",
+    "finalRoomRetry": "2026-09-08-fountain-f4-final-source-gain-01 fails the unchanged 30-second generation deadline before images. This does not supersede the successful twelve-image material comparison or certify final installed room verification.",
+    "materialReviewComplete": false,
+    "founderApproval": false
+  },
+  "registration": {
+    "tacticalOccupancyAuthority": "unchanged seeded packet four-cell footprint",
+    "productionPlacementAuthorized": false
+  }
+}

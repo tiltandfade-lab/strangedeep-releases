@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strangedeep:ability-stats",
+  "title": "Ability stat list",
+  "description": "Every stat name ability rank numbers may use: godot/content/abilities/_stats.json. See docs/ABILITY-REGISTRY.md. Read by src/abilities/registry.ts; checked by tools/verify-ability-registry.mjs; docs/ABILITY-STATS.md is generated from it by tools/export-ability-records.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "stats"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "what": { "type": "string" },
+    "stats": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "unit", "range", "group", "textKeys"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][A-Za-z0-9]*$", "description": "The stat name rank numbers use (damagePercent, slowPenalty ...)." },
+          "unit": { "enum": ["percent", "tiles", "turns", "uses", "flat", "flag"], "description": "flag: an on/off number, range within 0 to 1, whose two text keys are whole lines with no {n}." },
+          "range": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["min", "max"],
+            "properties": {
+              "min": { "type": "integer" },
+              "max": { "type": "integer" }
+            },
+            "description": "The lowest and highest value any rank may hold, inclusive."
+          },
+          "group": { "type": "integer", "description": "Sort order for lines that list several stats, lowest first." },
+          "textKeys": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["positive", "negative"],
+            "properties": {
+              "positive": { "type": "string", "pattern": "^stat\\.[a-z0-9-]+\\.pos$" },
+              "negative": { "type": "string", "pattern": "^stat\\.[a-z0-9-]+\\.neg$" }
+            },
+            "description": "Keys in godot/text/abilities.csv whose English words a rise or a fall of {n}; for a flag, the whole line when it is 1 (positive) and when it is 0 (negative)."
+          }
+        }
+      }
+    }
+  }
+}

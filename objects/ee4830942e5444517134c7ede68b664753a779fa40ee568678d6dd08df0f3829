@@ -1,0 +1,434 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-decrepify",
+ "source": "Generated from DECREPIFY_MATRIX_CASES in test/helpers/decrepify-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-decrepify-path",
+  "contentFlag": "reviewedDecrepify",
+  "targetHitPoints": 50,
+  "livingHostiles": [
+   "primary",
+   "second",
+   "third"
+  ],
+  "preview": {
+   "operation": "preview-decrepify",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "decrepifyPreview"
+  },
+  "cast": {
+   "operation": "reviewed-decrepify",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "decrepify-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "chance": 75,
+     "duration": 2,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "chance": 75,
+     "duration": 2,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "chance": 80,
+     "duration": 2,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 80,
+     "duration": 2,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 85,
+     "duration": 2,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 85,
+     "duration": 3,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-8-weaken",
+    "level": 8,
+    "fork": "weaken",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 25,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-8-spread",
+    "level": 8,
+    "fork": "spread",
+    "units": {
+     "second": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-9-weaken",
+    "level": 9,
+    "fork": "weaken",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 30,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-9-spread",
+    "level": 9,
+    "fork": "spread",
+    "units": {
+     "second": [
+      8,
+      2
+     ],
+     "third": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 3,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-10-weaken",
+    "level": 10,
+    "fork": "weaken",
+    "units": {},
+    "rng": {
+     "application": [
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 35,
+     "movementPenalty": 2,
+     "maximumTargets": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "decrepify-10-spread",
+    "level": 10,
+    "fork": "spread",
+    "units": {
+     "second": [
+      8,
+      2
+     ],
+     "third": [
+      9,
+      2
+     ]
+    },
+    "rng": {
+     "application": [
+      20,
+      20,
+      20
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "chance": 90,
+     "duration": 3,
+     "weakening": 20,
+     "movementPenalty": 2,
+     "maximumTargets": 3,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   }
+  ]
+ }
+}

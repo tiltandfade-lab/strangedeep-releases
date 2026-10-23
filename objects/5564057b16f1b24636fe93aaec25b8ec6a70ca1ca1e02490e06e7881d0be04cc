@@ -1,0 +1,443 @@
+{
+ "schemaVersion": 1,
+ "effect": "first-strike",
+ "source": "Generated from FIRST_STRIKE_MATRIX_CASES in test/helpers/first-strike-matrix.ts; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "Explicit reactionVersion:1 acceptance on a new campaign fixture.",
+  "trigger": "Preparation is a separate command. Then end the hero turn and advance an adjacent disclosed melee hostile; inspect the response before the incoming roll. Rendered trigger sequencing belongs to integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-first-strike-path",
+  "weapon": "none",
+  "preview": {
+   "operation": "preview-first-strike",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "firstStrikePreview"
+  },
+  "cast": {
+   "operation": "prepare-first-strike",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 0,
+     "damagePercent": 100,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 100,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 100,
+     "maximumUses": 2,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 15,
+     "damagePercent": 100,
+     "maximumUses": 2,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 20,
+     "damagePercent": 100,
+     "maximumUses": 2,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 20,
+     "damagePercent": 100,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-precision",
+    "level": 8,
+    "fork": "precision",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 25,
+     "damagePercent": 100,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-precision",
+    "level": 9,
+    "fork": "precision",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 30,
+     "damagePercent": 100,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-precision",
+    "level": 10,
+    "fork": "precision",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 35,
+     "damagePercent": 100,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-impact",
+    "level": 8,
+    "fork": "impact",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 20,
+     "damagePercent": 110,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-impact",
+    "level": 9,
+    "fork": "impact",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 20,
+     "damagePercent": 120,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-impact",
+    "level": 10,
+    "fork": "impact",
+    "frame": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "attackRoll": 10,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 20,
+     "damagePercent": 125,
+     "maximumUses": 3,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "Automated matrix also resolves the actual enemy turn and validates scoped source, use allowance, ordered draws and saved receipt. Preparation alone is not reaction playback proof."
+    },
+    "units": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-rage",
+ "source": "Generated from RAGE_MATRIX_CASES; do not edit.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-rage-path",
+  "contentFlag": "reviewedRage",
+  "targetHitPoints": 50,
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "preview": {
+   "operation": "preview-rage",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "ragePreview"
+  },
+  "cast": {
+   "operation": "reviewed-rage",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "rage-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "outgoingBonus": 10,
+     "reduction": 10,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "outgoingBonus": 12,
+     "reduction": 10,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "outgoingBonus": 12,
+     "reduction": 12,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 12,
+     "reduction": 12,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 15,
+     "reduction": 12,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 15,
+     "reduction": 15,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 20,
+     "reduction": 15,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-8-endurance",
+    "level": 8,
+    "fork": "endurance",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 5,
+     "outgoingBonus": 20,
+     "reduction": 15,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-8-protection",
+    "level": 8,
+    "fork": "protection",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 20,
+     "reduction": 20,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-9-endurance",
+    "level": 9,
+    "fork": "endurance",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 6,
+     "outgoingBonus": 20,
+     "reduction": 15,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-9-protection",
+    "level": 9,
+    "fork": "protection",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 20,
+     "reduction": 25,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-10-endurance",
+    "level": 10,
+    "fork": "endurance",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 7,
+     "outgoingBonus": 20,
+     "reduction": 15,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "rage-10-protection",
+    "level": 10,
+    "fork": "protection",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "outgoingBonus": 20,
+     "reduction": 30,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

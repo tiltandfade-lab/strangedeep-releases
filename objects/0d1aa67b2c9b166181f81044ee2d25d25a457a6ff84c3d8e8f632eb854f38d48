@@ -1,0 +1,476 @@
+{
+ "schemaVersion": 1,
+ "effect": "defensive-stance",
+ "source": "Generated from DEFENSIVE_STANCE_MATRIX_CASES by tools/ability-lane/export-arena-matrix.mjs",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-defensive-stance-path",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-defensive",
+   "fields": {},
+   "previewKey": "defensivePreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-defensive",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "defensive-1-base",
+    "level": 1,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 50,
+     "reduction": 50,
+     "cost": "Action",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-2-base",
+    "level": 2,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 55,
+     "reduction": 50,
+     "cost": "Action",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-3-base",
+    "level": 3,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 55,
+     "reduction": 50,
+     "cost": "Bonus Action",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-4-base",
+    "level": 4,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 60,
+     "reduction": 50,
+     "cost": "Bonus Action",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-5-base",
+    "level": 5,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 65,
+     "reduction": 50,
+     "cost": "Bonus Action",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-6-base",
+    "level": 6,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 65,
+     "reduction": 50,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-7-base",
+    "level": 7,
+    "fork": null,
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 70,
+     "reduction": 50,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-8-reliability",
+    "level": 8,
+    "fork": "reliability",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 80,
+     "reduction": 50,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-8-absorption",
+    "level": 8,
+    "fork": "absorption",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 70,
+     "reduction": 55,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-9-reliability",
+    "level": 9,
+    "fork": "reliability",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 90,
+     "reduction": 50,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-9-absorption",
+    "level": 9,
+    "fork": "absorption",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 70,
+     "reduction": 60,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-10-reliability",
+    "level": 10,
+    "fork": "reliability",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 100,
+     "reduction": 50,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   },
+   {
+    "id": "defensive-10-absorption",
+    "level": 10,
+    "fork": "absorption",
+    "layout": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      6,
+      6
+     ],
+     "mitigation": 6
+    },
+    "expected": {
+     "chance": 70,
+     "reduction": 65,
+     "cost": "Free",
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ],
+     "arenaNote": "The automated suite attacks from the side, checks mitigation and real next-turn expiry; this arena case prepares the same paid profile."
+    },
+    "units": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "assetId": "prop.fountain.circle.1x1.dry.v1",
+  "status": "FOUNDER_REQUESTED_PROPORTION_CORRECTION_IMPLEMENTED_UNDER_REVIEW",
+  "admissionStatus": "TECHNICAL_ART_CANDIDATE_RUNTIME_AUDITION",
+  "source": {
+    "path": "source-assets/meshy/cathedral-fountain-circular-f1/2026-08-22/models/circular-fountain-f1-v4-1332.glb",
+    "sha256": "bb3a4df13a7e12ffa61bdd571ef14a9a1114b27ae769d29b9a504e9c3111fec2"
+  },
+  "correction": {
+    "retainedAttempt": "source-assets/props/cathedral-fountain-circular-f1/models/blender/2026-09-07/source-proportions-v1",
+    "basinRepairAttempt": "source-assets/props/cathedral-fountain-circular-f1/models/blender/2026-09-07/basin-orientation-v1",
+    "originalRuntimeSha256": "e1bc81909f5c9df473a1b510c7717035f8eba9975e9ef71723cbb98d4bd72006",
+    "originalHeightMetres": 0.99,
+    "sourceProportionalHeightMetres": 0.32287056,
+    "operation": "Restore source height-to-diameter ratio to the nearest millimetre; inverse-transform normals; include separately retained outward basin/degenerate-center repair. Preserve horizontal positions, UVs, textures and materials.",
+    "reproduce": "node tools/restore-small-fountain-proportions.mjs --check",
+    "editableMaster": "source-assets/props/cathedral-fountain-circular-f1/models/blender/2026-09-07/source-proportions-v1/small-fountain-source-proportions.blend"
+  },
+  "runtime": {
+    "path": "godot/assets/props/fountains/circular/f1/circular-fountain-f1-v4-runtime.glb",
+    "sha256": "9746acaa778565c4f3f2e4e7f06decd4887a0ae2f71ccc3508884dc8248b7353",
+    "dimensionsMetres": [1.22, 1.22, 0.323],
+    "triangles": 1300,
+    "pivot": "BOTTOM_CENTER",
+    "footprintCells": [1, 1],
+    "primitiveCollision": "cylinder radius 0.61 m, height 0.323 m, center height 0.1615 m"
+  },
+  "review": {
+    "cpuViews": 6,
+    "neutralNativeStage": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f1-proportions-01",
+    "neutralExactRestoration": true,
+    "roomComparisonLimitations": "Room-02 fixed-camera controls pass but the main angle is wall-obstructed. Clear room-04/05 geometry comparisons fail exact old-image restoration by one channel step; preserve them as failed tests, not accepted lighting evidence.",
+    "materialReviewComplete": false,
+    "implementedResponse": "Back-face culling enabled only after the basin winding repair and all-side inspection; albedo lift 1.0, ceiling 1.34, white tint, roughness floor 0.62 and normal cap 0.70. Source-albedo rendering is preferred over the brighter 1.25/1.34 trials in the exact-restoring installed Floor 1 S6 comparison.",
+    "installedFaceComparison": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f1-installed-faces-01",
+    "finalInstalledNeutralStage": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f1-final-neutral-01",
+    "finalInstalledRoomStage": "godot/artifacts/floor-generator-lighting/2026-09-07-fountain-f1-final-floor3-01",
+    "finalInstalledRoomResult": "All twelve images inspected; exact detail and context restoration, unchanged geometry/lights. Primary and high views show the complete low basin; opposite and whole-segment views are wall-obstructed. Not integrated beauty approval.",
+    "nativeGeometryVerifier": "godot/tools/verify_small_fountain_geometry.gd",
+    "retainedInstalledEvidence": "source-assets/props/cathedral-fountain-circular-f1/models/blender/2026-09-07/source-proportions-v1/installed-godot-proof/retention.json",
+    "founderApproval": false
+  },
+  "registration": {
+    "coverProfile": "UNASSIGNED",
+    "coverBehaviorRegistered": false,
+    "tacticalOccupancyAuthority": "unchanged seeded packet full five-foot cell",
+    "productionPlacementAuthorized": false
+  }
+}

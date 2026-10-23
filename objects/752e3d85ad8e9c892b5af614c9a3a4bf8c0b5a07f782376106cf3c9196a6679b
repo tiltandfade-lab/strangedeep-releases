@@ -1,0 +1,405 @@
+{
+ "schemaVersion": 1,
+ "effect": "crosscut",
+ "source": "Generated from CROSSCUT_MATRIX_CASES; do not edit by hand.",
+ "integrationRequirements": {
+  "equipment": "Admitted dualWieldVersion:1 catalog and two legal equipped weapons; integration stages split targets.",
+  "damage": "Exact +98/+97 arithmetic is declared in automated tests, not asserted for production arena weapons."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-crosscut-targeting",
+  "weapon": "dagger",
+  "offHand": "second-weapon",
+  "preview": {
+   "operation": "preview-crosscut",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "crosscutPreview"
+  },
+  "cast": {
+   "operation": "crosscut",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 1,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 1,
+      "damagePercent": 60,
+      "accuracyBonus": 0,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 2,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 2,
+      "damagePercent": 65,
+      "accuracyBonus": 0,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 3,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 3,
+      "damagePercent": 70,
+      "accuracyBonus": 0,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 4,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 4,
+      "damagePercent": 70,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 5,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 5,
+      "damagePercent": 75,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 6,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 6,
+      "damagePercent": 80,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 7,
+         "fork": null
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 7,
+      "damagePercent": 85,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {},
+    "fork": null
+   },
+   {
+    "id": "focused8",
+    "level": 8,
+    "fork": "focused",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 8,
+         "fork": "focused"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 8,
+      "damagePercent": 85,
+      "accuracyBonus": 5,
+      "criticalBonus": 3
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   },
+   {
+    "id": "focused9",
+    "level": 9,
+    "fork": "focused",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 9,
+         "fork": "focused"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 9,
+      "damagePercent": 90,
+      "accuracyBonus": 5,
+      "criticalBonus": 3
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   },
+   {
+    "id": "focused10",
+    "level": 10,
+    "fork": "focused",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 10,
+         "fork": "focused"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 10,
+      "damagePercent": 90,
+      "accuracyBonus": 5,
+      "criticalBonus": 5
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   },
+   {
+    "id": "split8",
+    "level": 8,
+    "fork": "split",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 8,
+         "fork": "split"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 8,
+      "damagePercent": 85,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   },
+   {
+    "id": "split9",
+    "level": 9,
+    "fork": "split",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 9,
+         "fork": "split"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 9,
+      "damagePercent": 90,
+      "accuracyBonus": 5,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   },
+   {
+    "id": "split10",
+    "level": 10,
+    "fork": "split",
+    "expected": {
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "crosscut": {
+        "rank": {
+         "level": 10,
+         "fork": "split"
+        },
+        "hand": "main"
+       }
+      }
+     ],
+     "ability": {
+      "id": "crosscut",
+      "level": 10,
+      "damagePercent": 90,
+      "accuracyBonus": 10,
+      "criticalBonus": 0
+     },
+     "arenaNote": "Exact two-strike hit/miss/kill and selected split target plan is proven by automated tests; production rendered staging remains integration."
+    },
+    "units": {}
+   }
+  ]
+ }
+}

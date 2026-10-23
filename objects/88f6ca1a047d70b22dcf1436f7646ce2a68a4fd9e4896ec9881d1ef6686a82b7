@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3]
+
+[ext_resource type="Shader" path="res://shaders/void_sky.gdshader" id="1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_void"]
+noise_type = 3
+seed = 7
+frequency = 0.02
+fractal_octaves = 4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_void"]
+width = 256
+height = 256
+generate_mipmaps = true
+seamless = true
+noise = SubResource("FastNoiseLite_void")
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_void")
+shader_parameter/brightness = 1.0
+shader_parameter/milky_way = 1.0
+shader_parameter/aurora_strength = 1.0
+shader_parameter/mist_strength = 1.0
+shader_parameter/drift_speed = 0.05

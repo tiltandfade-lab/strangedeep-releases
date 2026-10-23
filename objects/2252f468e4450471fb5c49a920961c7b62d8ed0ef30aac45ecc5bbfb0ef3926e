@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "effect": "sweeping-kick",
+  "cases": [
+    {
+      "name": "Sweep two front targets",
+      "levels": [
+        1
+      ],
+      "formation": "arc",
+      "weapon": "none",
+      "preview": {
+        "operation": "preview-reviewed-sweeping-kick",
+        "fields": {
+          "targetIds": [
+            "$target:0",
+            "$target:1"
+          ]
+        },
+        "previewKey": "sweepingKickPreview"
+      },
+      "cast": {
+        "operation": "cast-reviewed-sweeping-kick",
+        "fields": {
+          "targetIds": [
+            "$target:0",
+            "$target:1"
+          ],
+          "previewId": "$preview.floor.previewId",
+          "contextId": "$preview.contextId"
+        }
+      }
+    },
+    {
+      "name": "Sweep the front arc",
+      "levels": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "formation": "arc",
+      "weapon": "none",
+      "preview": {
+        "operation": "preview-reviewed-sweeping-kick",
+        "fields": {
+          "targetIds": [
+            "$target:0",
+            "$target:1",
+            "$target:2"
+          ]
+        },
+        "previewKey": "sweepingKickPreview"
+      },
+      "cast": {
+        "operation": "cast-reviewed-sweeping-kick",
+        "fields": {
+          "targetIds": [
+            "$target:0",
+            "$target:1",
+            "$target:2"
+          ],
+          "previewId": "$preview.floor.previewId",
+          "contextId": "$preview.contextId"
+        }
+      }
+    }
+  ]
+}

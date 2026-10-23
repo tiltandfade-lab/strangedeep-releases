@@ -1,0 +1,455 @@
+{
+ "schemaVersion": 1,
+ "effect": "disarming-attack",
+ "source": "Generated from DISARMING_ATTACK_MATRIX_CASES in test/helpers/disarming-attack-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-disarming-attack-path",
+  "targetHitPoints": 50,
+  "hostileGear": [
+   "weapon"
+  ],
+  "preview": {
+   "operation": "preview-disarming-attack",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "disarmingAttackPreview"
+  },
+  "cast": {
+   "operation": "disarming-attack",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 35
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 35,
+     "accuracy": 90,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 40
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 40,
+     "accuracy": 90,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 40
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 40,
+     "accuracy": 93,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 45
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 45,
+     "accuracy": 93,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 45
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 45,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 50
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 50,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "segment",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 50
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 50,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv8-reliability",
+    "level": 8,
+    "fork": "reliability",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 55
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 55,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv8-strike",
+    "level": 8,
+    "fork": "strike",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 50
+    },
+    "expected": {
+     "damagePercent": 85,
+     "chancePercent": 50,
+     "accuracy": 95,
+     "strikeDamage": 17,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv9-reliability",
+    "level": 9,
+    "fork": "reliability",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 60
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 60,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv9-strike",
+    "level": 9,
+    "fork": "strike",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 50
+    },
+    "expected": {
+     "damagePercent": 95,
+     "chancePercent": 50,
+     "accuracy": 95,
+     "strikeDamage": 19,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv10-reliability",
+    "level": 10,
+    "fork": "reliability",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 65
+    },
+    "expected": {
+     "damagePercent": 75,
+     "chancePercent": 65,
+     "accuracy": 95,
+     "strikeDamage": 15,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   },
+   {
+    "id": "lv10-strike",
+    "level": 10,
+    "fork": "strike",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ],
+     "roll": 50
+    },
+    "expected": {
+     "damagePercent": 105,
+     "chancePercent": 50,
+     "accuracy": 95,
+     "strikeDamage": 21,
+     "usePeriod": "encounter",
+     "dropped": true,
+     "dropCell": [
+      7,
+      2
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ],
+     "arenaNote": "The arena hostile wears or holds the live loot item; the strike, the application or disarm roll and the exact item figures use production random state, so the scripted outcome is the automated matrix's job."
+    }
+   }
+  ]
+ }
+}

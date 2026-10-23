@@ -1,0 +1,417 @@
+{
+ "schemaVersion": 1,
+ "effect": "corpse-explosion",
+ "source": "Generated from CORPSE_EXPLOSION_MATRIX_CASES; integration owns actual accepted-death arena source construction.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "attributes": {
+   "strength": 5,
+   "magic": 20,
+   "dexterity": 3,
+   "vitality": 3
+  },
+  "sourcePrerequisites": {
+   "corpse": {
+    "actor": "$unit:corpse",
+    "permanentMaximumHealthUnits": 1001,
+    "acceptedLethalReceipt": true
+   },
+   "missingHeroHealth": false,
+   "freshDeath": false
+  },
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    8,
+    2
+   ]
+  },
+  "forkId": "reviewed-corpse-explosion-path",
+  "targetHitPoints": 30,
+  "preview": {
+   "operation": "preview-corpse-explosion",
+   "fields": {
+    "bodyId": "$body:corpse"
+   },
+   "previewKey": "corpseExplosionPreview"
+  },
+  "cast": {
+   "operation": "corpse-explosion",
+   "fields": {
+    "bodyId": "$body:corpse",
+    "previewId": "$preview.floor.id",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 255,
+     "rangeCells": 4,
+     "radiusCells": 1,
+     "damagePercent": 25,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 255,
+     "rangeCells": 5,
+     "radiusCells": 1,
+     "damagePercent": 25,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 306,
+     "rangeCells": 5,
+     "radiusCells": 1,
+     "damagePercent": 30,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 306,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 30,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 357,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 35,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 408,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 40,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 511,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 50,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-practice",
+    "level": 8,
+    "fork": "practice",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 511,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 50,
+     "cadence": "encounter",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-practice",
+    "level": 9,
+    "fork": "practice",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 511,
+     "rangeCells": 6,
+     "radiusCells": 2,
+     "damagePercent": 50,
+     "cadence": "encounter",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-practice",
+    "level": 10,
+    "fork": "practice",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 511,
+     "rangeCells": 7,
+     "radiusCells": 2,
+     "damagePercent": 50,
+     "cadence": "encounter",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-potency",
+    "level": 8,
+    "fork": "potency",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 562,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 55,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-potency",
+    "level": 9,
+    "fork": "potency",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 613,
+     "rangeCells": 6,
+     "radiusCells": 1,
+     "damagePercent": 60,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-potency",
+    "level": 10,
+    "fork": "potency",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ],
+     "victim": [
+      8,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "damageUnits": 613,
+     "rangeCells": 6,
+     "radiusCells": 2,
+     "damagePercent": 60,
+     "cadence": "segment",
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

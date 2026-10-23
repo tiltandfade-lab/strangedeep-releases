@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "status": "Approved draft (Adam, October 5: \"these are good ideas and should become default\"). The rhythms and which rooms use them are approved; the weights below stay tunable.",
+  "notebook": "design-notebook/Strangedeep/Dungeon/Dressing/Shared Modular Dungeon Kit.md",
+  "about": "Pendulum wall windows by rhythm. A wall run is cut into half-cell panels; each rhythm picks which panels keep their lancet, counted from the run's feature point (the panel beside its middle, or the room's focus on the focus wall). Never a window in a run's first or last panel, never three in a row, never four within seven panels, never behind a wall-placed piece, a wall light or an opening's frame.",
+  "rhythms": {
+    "sentinel": {"name": "Sentinel", "pattern": "sentinel", "spacing": 4,
+      "about": "One window beside the middle, then one every fourth panel (two cells) outward. The October 2 candidate rule."},
+    "sparse-sentinel": {"name": "Sparse sentinel", "pattern": "sentinel", "spacing": 6,
+      "about": "As the sentinel, one window every sixth panel (three cells): long dark walls with single lights."},
+    "paired": {"name": "Paired lancets", "pattern": "paired", "period": 8,
+      "about": "Two lancets side by side astride the middle, then a wide plain gap (three cells) before the next pair."},
+    "triplet": {"name": "Feature triplet", "pattern": "triplet", "gaps": [2, 3, 4],
+      "about": "Three windows grouped at the wall's middle or behind the room's focus, one cell apart, or up to two cells apart where something stands between them (the shrine's braziers), plain elsewhere."},
+    "bookends": {"name": "Bookends", "pattern": "bookends", "inset": 2,
+      "about": "A window near each end of the wall framing a long plain stretch: wall space for what stands against it."},
+    "cadence": {"name": "Cadence", "pattern": "cadence", "short": 2, "long": 4,
+      "about": "Alternating short and long gaps: two windows a half cell apart, a cell and a half of plain wall, two more."}
+  },
+  "purposes": {
+    "hall": {"sentinel": 3, "sparse-sentinel": 1, "paired": 2, "triplet": 2, "bookends": 1, "cadence": 2},
+    "library": {"bookends": 3, "sparse-sentinel": 1, "paired": 1},
+    "crypt": {"sparse-sentinel": 3, "bookends": 1},
+    "camp": {"sentinel": 2, "cadence": 2},
+    "armory": {"paired": 3, "sentinel": 1},
+    "shrine": {"triplet": 3, "paired": 1}
+  },
+  "focus": {
+    "shrine": "occupied-shroud"
+  }
+}

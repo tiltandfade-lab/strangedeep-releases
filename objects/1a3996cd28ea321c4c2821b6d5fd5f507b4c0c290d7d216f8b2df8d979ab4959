@@ -1,0 +1,93 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "cleave",
+  "aliases": [
+    "preview-cleave",
+    "preview-reviewed-cleave",
+    "cast-reviewed-cleave"
+  ],
+  "textKeys": {
+    "name": "ability.cleave.name",
+    "summary": "ability.cleave.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "cleaves",
+  "params": {"forceBaseDamage": 60, "forceDamageStep": 5},
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"arcCells": 2, "damagePercent": 50, "accuracyBonus": 0}},
+    {"level": 2, "cost": 1, "numbers": {"arcCells": 3, "damagePercent": 50, "accuracyBonus": 0}},
+    {"level": 3, "cost": 1, "numbers": {"arcCells": 3, "damagePercent": 55, "accuracyBonus": 0}},
+    {"level": 4, "cost": 1, "numbers": {"arcCells": 4, "damagePercent": 55, "accuracyBonus": 0}},
+    {"level": 5, "cost": 1, "numbers": {"arcCells": 4, "damagePercent": 60, "accuracyBonus": 0}},
+    {"level": 6, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": 60, "accuracyBonus": 0}},
+    {"level": 7, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": 60, "accuracyBonus": 5}}
+  ],
+  "paths": {
+    "forkId": "reviewed-cleave-mastery",
+    "level": 8,
+    "options": [
+      {
+        "id": "force",
+        "nameKey": "ability.cleave.path.force",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": "forceBaseDamage + forceDamageStep * (lvl - 7)", "accuracyBonus": 5}},
+          {"level": 9, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": "forceBaseDamage + forceDamageStep * (lvl - 7)", "accuracyBonus": 5}},
+          {"level": 10, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": "forceBaseDamage + forceDamageStep * (lvl - 7)", "accuracyBonus": 5}}
+        ]
+      },
+      {
+        "id": "precision",
+        "nameKey": "ability.cleave.path.precision",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": 60, "accuracyBonus": 7}},
+          {"level": 9, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": 60, "accuracyBonus": 9}},
+          {"level": 10, "cost": 1, "numbers": {"arcCells": 5, "damagePercent": 60, "accuracyBonus": 12}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "arc",
+    "range": {
+      "minimum": 1,
+      "maximum": 2
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetIds"
+    ]
+  },
+  "presentation": {
+    "key": "cleave",
+    "clips": null,
+    "strikeDelay": null,
+    "effectRecipe": "cleave",
+    "timingKey": "cleave",
+    "timingPropertyPrefix": "Cleave",
+    "sound": "ability.cleave",
+    "actionCamera": true,
+    "travelMotion": false,
+    "knockback": [
+      {"key": "cleave-force", "minLevel": 8, "path": "force"}
+    ],
+    "icon": "cleave",
+    "webEffectKind": "horizontal-cleave"
+  },
+  "ai": {
+    "learnOrder": {
+      "careful": 7,
+      "ability": 1
+    },
+    "aimRule": "first-arc-with-min-targets",
+    "minTargets": 2
+  },
+  "ownFiles": [
+    "src/floor/cleave.ts",
+    "src/floor/reviewed-cleave.ts",
+    "src/floor/reviewed-cleave-source.ts",
+    "src/floor/reviewed-cleave-preview.ts",
+    "src/campaign/reviewed-cleave.ts",
+    "src/campaign/reviewed-cleave-content.ts"
+  ]
+}

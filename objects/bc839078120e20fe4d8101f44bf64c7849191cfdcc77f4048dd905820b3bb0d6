@@ -1,0 +1,275 @@
+{
+ "schemaVersion": 1,
+ "effect": "weapon-block",
+ "source": "Generated from WEAPON_BLOCK_MATRIX_CASES; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "New reactionInterceptionVersion:1 fixture and two actually equipped eligible weapons.",
+  "trigger": "Prepare then execute a disclosed direct hostile attack. Riposte follows a successful adjacent block; rendered sequencing remains integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-weapon-block-path",
+  "weapon": "dagger",
+  "offHand": "second-weapon",
+  "preview": {
+   "operation": "preview-weapon-block",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "weaponBlockPreview"
+  },
+  "cast": {
+   "operation": "prepare-weapon-block",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "chancePercent": 25,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": false,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "chancePercent": 30,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": false,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "chancePercent": 35,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": false,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "chancePercent": 35,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "chancePercent": 40,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "chancePercent": 45,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": false,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "chancePercent": 45,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-defense",
+    "level": 8,
+    "fork": "defense",
+    "expected": {
+     "chancePercent": 50,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-defense",
+    "level": 9,
+    "fork": "defense",
+    "expected": {
+     "chancePercent": 55,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-defense",
+    "level": 10,
+    "fork": "defense",
+    "expected": {
+     "chancePercent": 60,
+     "ripostePercent": 0,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-riposte",
+    "level": 8,
+    "fork": "riposte",
+    "expected": {
+     "chancePercent": 45,
+     "ripostePercent": 75,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-riposte",
+    "level": 9,
+    "fork": "riposte",
+    "expected": {
+     "chancePercent": 45,
+     "ripostePercent": 90,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-riposte",
+    "level": 10,
+    "fork": "riposte",
+    "expected": {
+     "chancePercent": 45,
+     "ripostePercent": 100,
+     "allowsPhysicalMissiles": true,
+     "allowsMagicMissiles": true,
+     "maximumUses": 1,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   }
+  ]
+ }
+}

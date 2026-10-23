@@ -1,0 +1,305 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-demolition-terrain",
+ "source": "Generated from lane3-terrain-matrix.ts; legacy cases remain unchanged.",
+ "matrix": {
+  "contentFlag": "reviewedDemolitionTerrain",
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-demolition",
+   "fields": {
+    "ability": "reviewed-demolition",
+    "cellId": "$cell:4,6",
+    "direction": 0
+   },
+   "previewKey": "reviewedDemolitionPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-demolition",
+   "fields": {
+    "ability": "reviewed-demolition",
+    "cellId": "$cell:4,6",
+    "direction": 0,
+    "previewId": "$preview.previewId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 4,
+     "radius": 1,
+     "damage": 6,
+     "targetHitPointsAfter": 44,
+     "heroHitPointsAfter": 14,
+     "period": "segment",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 5,
+     "radius": 1,
+     "damage": 6,
+     "targetHitPointsAfter": 44,
+     "heroHitPointsAfter": 14,
+     "period": "segment",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 5,
+     "radius": 1,
+     "damage": 8,
+     "targetHitPointsAfter": 42,
+     "heroHitPointsAfter": 12,
+     "period": "segment",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 5,
+     "radius": 1,
+     "damage": 8,
+     "targetHitPointsAfter": 42,
+     "heroHitPointsAfter": 12,
+     "period": "encounter",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 6,
+     "radius": 1,
+     "damage": 8,
+     "targetHitPointsAfter": 42,
+     "heroHitPointsAfter": 12,
+     "period": "encounter",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 6,
+     "radius": 1,
+     "damage": 10,
+     "targetHitPointsAfter": 40,
+     "heroHitPointsAfter": 10,
+     "period": "encounter",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "hero": [
+      6,
+      2
+     ],
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "range": 6,
+     "radius": 2,
+     "damage": 10,
+     "targetHitPointsAfter": 40,
+     "heroHitPointsAfter": 10,
+     "period": "encounter",
+     "struckBodies": 2,
+     "ticks": 1,
+     "events": [
+      {
+       "type": "floor-priority-cast"
+      },
+      {
+       "type": "floor-tactical-changed"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ],
+     "arenaNote": "Reviewed side-by-side identity; integration must bind this reviewed skill rather than its legacy consumer."
+    }
+   }
+  ]
+ }
+}

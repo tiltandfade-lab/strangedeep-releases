@@ -1,0 +1,274 @@
+{
+ "schemaVersion": 1,
+ "effect": "offensive-stance",
+ "source": "Generated from OFFENSIVE_STANCE_MATRIX_CASES; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "New reactionMovementVersion:1 fixture.",
+  "trigger": "Prepare then advance a disclosed hostile from outside melee reach. Entry reactions and all independent hits are automated; rendered sequencing remains integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    10,
+    2
+   ]
+  },
+  "forkId": "reviewed-offensive-stance-path",
+  "weapon": "none",
+  "preview": {
+   "operation": "preview-offensive-stance",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "offensiveStancePreview"
+  },
+  "cast": {
+   "operation": "prepare-offensive-stance",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "cost": "Action",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 0,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "cost": "Action",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "cost": "Bonus Action",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 5,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "cost": "Bonus Action",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 10,
+     "damagePercent": 100,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "cost": "Bonus Action",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 10,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 10,
+     "damagePercent": 110,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 1,
+     "hits": 1,
+     "accuracyBonus": 10,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-responses",
+    "level": 8,
+    "fork": "responses",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 2,
+     "hits": 1,
+     "accuracyBonus": 10,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-responses",
+    "level": 9,
+    "fork": "responses",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 2,
+     "hits": 1,
+     "accuracyBonus": 15,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-responses",
+    "level": 10,
+    "fork": "responses",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 3,
+     "hits": 1,
+     "accuracyBonus": 15,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-flurry",
+    "level": 8,
+    "fork": "flurry",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 1,
+     "hits": 2,
+     "accuracyBonus": 10,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-flurry",
+    "level": 9,
+    "fork": "flurry",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 1,
+     "hits": 2,
+     "accuracyBonus": 15,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-flurry",
+    "level": 10,
+    "fork": "flurry",
+    "expected": {
+     "cost": "Free",
+     "maximumUses": 1,
+     "hits": 3,
+     "accuracyBonus": 15,
+     "damagePercent": 120,
+     "events": [
+      {
+       "type": "floor-stance-prepared"
+      }
+     ]
+    },
+    "units": {}
+   }
+  ]
+ }
+}

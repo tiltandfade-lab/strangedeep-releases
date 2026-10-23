@@ -1,0 +1,339 @@
+{
+ "schemaVersion": 1,
+ "effect": "corpse-eater",
+ "source": "Generated from CORPSE_EATER_MATRIX_CASES; integration owns actual accepted-death arena source construction.",
+ "matrix": {
+  "engineVersion": 1,
+  "healthUnitsPerPoint": 100,
+  "attributes": {
+   "strength": 5,
+   "magic": 20,
+   "dexterity": 3,
+   "vitality": 3
+  },
+  "sourcePrerequisites": {
+   "corpse": {
+    "actor": "$unit:corpse",
+    "permanentMaximumHealthUnits": 1001,
+    "acceptedLethalReceipt": true
+   },
+   "missingHeroHealth": true,
+   "freshDeath": true
+  },
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    8,
+    2
+   ]
+  },
+  "forkId": "reviewed-corpse-eater-path",
+  "targetHitPoints": 30,
+  "preview": {
+   "operation": "preview-corpse-eater",
+   "fields": {
+    "bodyId": "$body:corpse"
+   },
+   "previewKey": "corpseEaterPreview"
+  },
+  "cast": {
+   "operation": "corpse-eater",
+   "fields": {
+    "bodyId": "$body:corpse",
+    "previewId": "$preview.floor.id",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 300,
+     "rangeCells": 2,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 400,
+     "rangeCells": 2,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 500,
+     "rangeCells": 2,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 500,
+     "rangeCells": 3,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 600,
+     "rangeCells": 3,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 700,
+     "rangeCells": 3,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 3,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-reach",
+    "level": 8,
+    "fork": "reach",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 4,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-reach",
+    "level": 9,
+    "fork": "reach",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 5,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-reach",
+    "level": 10,
+    "fork": "reach",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 6,
+     "dedicatedActivations": 0,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-independence",
+    "level": 8,
+    "fork": "independence",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 3,
+     "dedicatedActivations": 1,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-independence",
+    "level": 9,
+    "fork": "independence",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 3,
+     "dedicatedActivations": 2,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-independence",
+    "level": 10,
+    "fork": "independence",
+    "units": {
+     "corpse": [
+      7,
+      2
+     ]
+    },
+    "rng": {},
+    "expected": {
+     "healUnits": 800,
+     "rangeCells": 3,
+     "dedicatedActivations": 3,
+     "events": [
+      {
+       "type": "floor-body-ability-committed"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,873 @@
+{
+ "schemaVersion": 1,
+ "effect": "hamstring-shot",
+ "source": "Generated from HAMSTRING_SHOT_MATRIX_CASES in test/helpers/hamstring-shot-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    9,
+    2
+   ]
+  },
+  "forkId": "reviewed-hamstring-shot-slow",
+  "targetHitPoints": 50,
+  "weapon": "bow",
+  "preview": {
+   "operation": "preview-hamstring-shot",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "hamstringShotPreview"
+  },
+  "cast": {
+   "operation": "hamstring-shot",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 75,
+     "accuracyPercent": 90,
+     "damage": 15,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 80,
+     "accuracyPercent": 90,
+     "damage": 16,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 85,
+     "accuracyPercent": 90,
+     "damage": 17,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 90,
+     "accuracyPercent": 90,
+     "damage": 18,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 90,
+     "accuracyPercent": 95,
+     "damage": 18,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-intensity",
+    "level": 8,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      4,
+      1
+     ],
+     "targetTurns": [
+      2,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-intensity",
+    "level": 9,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      5,
+      1
+     ],
+     "targetTurns": [
+      1,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-intensity",
+    "level": 10,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      6,
+      1
+     ],
+     "targetTurns": [
+      0,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-duration",
+    "level": 8,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      3,
+      2
+     ],
+     "targetTurns": [
+      3,
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-duration",
+    "level": 9,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      3,
+      3
+     ],
+     "targetTurns": [
+      3,
+      3,
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-duration",
+    "level": 10,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      3,
+      4
+     ],
+     "targetTurns": [
+      3,
+      3,
+      3,
+      3,
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-intensity-floor-zero",
+    "level": 10,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      2,
+      1
+     ],
+     "targetTurns": [
+      0,
+      2
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv1-no-movement",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 75,
+     "accuracyPercent": 90,
+     "damage": 15,
+     "usePeriod": "segment",
+     "slow": null,
+     "unavailable": "no-movement",
+     "targetTurns": [
+      0
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv1-under-stronger-slow",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 85,
+     "damagePercent": 75,
+     "accuracyPercent": 90,
+     "damage": 15,
+     "usePeriod": "segment",
+     "slow": null,
+     "unavailable": "stronger-slow",
+     "targetTurns": [
+      2,
+      6
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-duration-extends-equal-slow",
+    "level": 8,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      3,
+      2
+     ],
+     "targetTurns": [
+      3,
+      3,
+      6
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-intensity-replaces-weaker-slow",
+    "level": 8,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "encounter",
+     "slow": [
+      4,
+      1
+     ],
+     "targetTurns": [
+      2,
+      6
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-miss",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      100,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 0,
+     "usePeriod": "segment",
+     "slow": null,
+     "targetTurns": [
+      6
+     ],
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-lethal",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 3,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "segment",
+     "slow": null,
+     "targetTurns": [],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv1-half-cover",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 5,
+     "cover": "half",
+     "hitChancePercent": 60,
+     "damagePercent": 75,
+     "accuracyPercent": 90,
+     "damage": 15,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6-maximum-range",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": [
+      10,
+      20
+     ]
+    },
+    "expected": {
+     "distanceCells": 6,
+     "cover": "none",
+     "hitChancePercent": 90,
+     "damagePercent": 100,
+     "accuracyPercent": 95,
+     "damage": 20,
+     "usePeriod": "segment",
+     "slow": [
+      3,
+      1
+     ],
+     "targetTurns": [
+      3,
+      6
+     ],
+     "arenaNote": "The arena casts this row at the frame primary with its own target; target cell, cover, body, present Slow and health are checked by the automated matrix.",
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-action-spent"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,356 @@
+{
+ "schemaVersion": 1,
+ "effect": "auto-potion",
+ "source": "Generated from AUTO_POTION_MATRIX_CASES in test/helpers/auto-potion-matrix.ts; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "Explicit new Reaction-window fixture with actual carried healing item and injured surviving hero at the selected HP threshold.",
+  "trigger": "Prepare, end turn and advance a damaging hostile attack; inspect actual item disposition and healing. Rendered sequencing belongs to integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-auto-potion-path",
+  "weapon": "none",
+  "preview": {
+   "operation": "preview-auto-potion",
+   "fields": {
+    "targetId": "$healing:50"
+   },
+   "previewKey": "autoPotionPreview"
+  },
+  "cast": {
+   "operation": "prepare-auto-potion",
+   "fields": {
+    "targetId": "$healing:50",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 100,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 105,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 110,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 110,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 115,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 1,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-reserves",
+    "level": 8,
+    "fork": "reserves",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 2,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-reserves",
+    "level": 9,
+    "fork": "reserves",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 3,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-reserves",
+    "level": 10,
+    "fork": "reserves",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 4,
+     "period": "segment",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-frequency",
+    "level": 8,
+    "fork": "frequency",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 120,
+     "maximumUses": 1,
+     "period": "encounter",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-frequency",
+    "level": 9,
+    "fork": "frequency",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 125,
+     "maximumUses": 1,
+     "period": "encounter",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-frequency",
+    "level": 10,
+    "fork": "frequency",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "healingPercent": 130,
+     "maximumUses": 1,
+     "period": "encounter",
+     "thresholds": [
+      50,
+      40,
+      30
+     ],
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ]
+    },
+    "units": {}
+   }
+  ]
+ }
+}

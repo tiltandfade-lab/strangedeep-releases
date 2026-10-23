@@ -1,0 +1,444 @@
+{
+ "schemaVersion": 1,
+ "effect": "duelists-advance",
+ "source": "Generated from DUELISTS_ADVANCE_MATRIX_CASES; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "New courseVersion:1 fixture and two actual eligible equipped weapons.",
+  "trigger": "Native forecast commits a disclosed two-checkpoint course. Hazard/opportunity interruption and retained movement use are automated; rendered sequencing remains integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-duelists-advance-path",
+  "weapon": "dagger",
+  "offHand": "second-weapon",
+  "preview": {
+   "operation": "preview-duelists-advance",
+   "fields": {
+    "targetId": "$target:0"
+   },
+   "previewKey": "duelistsAdvancePreview"
+  },
+  "cast": {
+   "operation": "duelists-advance",
+   "fields": {
+    "targetId": "$target:0",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 0,
+     "retentionPercent": 0,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 0,
+     "distinctTargetAccuracyBonus": 0,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 0,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 3,
+     "retentionPercent": 0,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 3,
+     "distinctTargetAccuracyBonus": 3,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 0,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 3,
+     "retentionPercent": 25,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 3,
+     "distinctTargetAccuracyBonus": 3,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 1,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 5,
+     "retentionPercent": 25,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 5,
+     "distinctTargetAccuracyBonus": 5,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 1,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 5,
+     "retentionPercent": 50,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 5,
+     "distinctTargetAccuracyBonus": 5,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "segment",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 10,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 10,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-concentration",
+    "level": 8,
+    "fork": "concentration",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 5,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 105,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 10,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-concentration",
+    "level": 9,
+    "fork": "concentration",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 10,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 110,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 10,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-concentration",
+    "level": 10,
+    "fork": "concentration",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 15,
+     "traversalAccuracy": 0,
+     "sameTargetDamagePercent": 115,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 10,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-traversal",
+    "level": 8,
+    "fork": "traversal",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 3,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 13,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-traversal",
+    "level": 9,
+    "fork": "traversal",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 6,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 16,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-traversal",
+    "level": 10,
+    "fork": "traversal",
+    "expected": {
+     "accuracyBonus": 10,
+     "retentionPercent": 50,
+     "period": "encounter",
+     "concentrationPercent": 0,
+     "traversalAccuracy": 10,
+     "sameTargetDamagePercent": 100,
+     "distinctTargetDamagePercent": 100,
+     "sameTargetAccuracyBonus": 10,
+     "distinctTargetAccuracyBonus": 20,
+     "maximumUses": 1,
+     "startingMovement": 6,
+     "routeCost": 2,
+     "checkpointAttacks": 2,
+     "walkedCells": 2,
+     "retainedMovement": 3,
+     "events": [
+      {
+       "type": "floor-course-started"
+      },
+      {
+       "type": "floor-course-finished"
+      }
+     ]
+    },
+    "units": {}
+   }
+  ]
+ }
+}

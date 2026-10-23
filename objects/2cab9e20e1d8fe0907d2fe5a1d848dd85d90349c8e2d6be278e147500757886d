@@ -1,0 +1,258 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-frozen-armor",
+ "source": "Generated from FROZEN_ARMOR_MATRIX_CASES; do not edit.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-frozen-armor-path",
+  "contentFlag": "reviewedFrozenArmor",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-frozen-armor",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "frozenArmorPreview"
+  },
+  "cast": {
+   "operation": "reviewed-frozen-armor",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "frozen-armor-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 25,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 30,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 35,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 40,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 45,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 3,
+     "slowChance": 55,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 55,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-8-chill",
+    "level": 8,
+    "fork": "chill",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 65,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-8-freeze",
+    "level": 8,
+    "fork": "freeze",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 40,
+     "frozenChance": 15,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-9-chill",
+    "level": 9,
+    "fork": "chill",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 75,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-9-freeze",
+    "level": 9,
+    "fork": "freeze",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 30,
+     "frozenChance": 25,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-10-chill",
+    "level": 10,
+    "fork": "chill",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 85,
+     "frozenChance": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   },
+   {
+    "id": "frozen-armor-10-freeze",
+    "level": 10,
+    "fork": "freeze",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "duration": 4,
+     "slowChance": 20,
+     "frozenChance": 35,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0
+    }
+   }
+  ]
+ }
+}

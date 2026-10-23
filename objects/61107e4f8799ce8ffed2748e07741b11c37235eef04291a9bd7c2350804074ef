@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "assetId": "rib-porter-review",
+  "displayName": "Rib Porter",
+  "reviewLabel": null,
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/rib-porter/2026-08-23/models/rib-porter-retopo-voxel-t12000.glb",
+    "sha256": "9d66d56b0adb4d06a7200ec239c1317d1535b63ed5ab476159f2435250c286b8",
+    "family": "design-notebook/Strangedeep/Dungeon/Monsters and Bosses/candidates/R2 Humanoid Candidates/Made/M10 Jointbone Doll to Ossuary Bastion.md"
+  },
+  "rig": {
+    "provider": null,
+    "note": "Static Meshy model; no rig. Stands in its modelled A-pose."
+  },
+  "godot": {
+    "model": "res://assets/characters/rib-porter/review/rib-porter-retopo-voxel-t12000.glb",
+    "wrapper": "res://assets/characters/rib-porter/review/rib_porter_review_candidate.tscn",
+    "material": "res://assets/characters/rib-porter/review/rib-porter-matte-review.tres",
+    "materialNote": "External review material replaces the provider material: bone finish, roughness 0.8, metallic 0, specular 0.35, double-sided as the source declares. Base-color and normal textures are the untouched provider images; the provider metallic-roughness map (roughness about 0.35 to 0.45, reading as plastic) is not connected.",
+    "emission": "none in the source; no eye or emissive region is obvious in the provider texture, so no mask was added",
+    "heightMetres": 1.8288,
+    "heightNote": "6 feet",
+    "footprintCells": 1,
+    "modelScale": 0.961652,
+    "floorOffsetMeters": 0.91796
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG",
+    "ANIMATION",
+    "RUNTIME_PROMOTION"
+  ]
+}

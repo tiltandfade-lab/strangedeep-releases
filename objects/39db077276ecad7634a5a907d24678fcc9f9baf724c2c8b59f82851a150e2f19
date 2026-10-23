@@ -1,0 +1,164 @@
+{
+ "schemaVersion": 1,
+ "effect": "quick-swap",
+ "source": "Generated from QUICK_SWAP_MATRIX_CASES in test/helpers/quick-swap-matrix.ts; do not edit by hand.",
+ "cases": [
+  {
+   "name": "swap-carried-weapon",
+   "levels": "all",
+   "forks": "all",
+   "weapon": "none",
+   "preview": {
+    "operation": "preview-quick-swap",
+    "fields": {
+     "itemId": "$carried-weapon"
+    },
+    "previewKey": "quickSwapPreview"
+   },
+   "cast": {
+    "operation": "quick-swap",
+    "fields": {
+     "itemId": "$carried-weapon",
+     "previewId": "$preview.previewId",
+     "contextId": "$preview.contextId"
+    }
+   }
+  }
+ ],
+ "passiveMatrix": {
+  "forkId": "reviewed-quick-swap-path",
+  "engineVersion": 1,
+  "cases": [
+   {
+    "id": "base-1",
+    "level": 1,
+    "fork": null,
+    "accuracyBonus": 0,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": false,
+    "twoHanded": false
+   },
+   {
+    "id": "base-2",
+    "level": 2,
+    "fork": null,
+    "accuracyBonus": 2,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": false,
+    "twoHanded": false
+   },
+   {
+    "id": "base-3",
+    "level": 3,
+    "fork": null,
+    "accuracyBonus": 4,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": false,
+    "twoHanded": false
+   },
+   {
+    "id": "base-4",
+    "level": 4,
+    "fork": null,
+    "accuracyBonus": 6,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": false,
+    "twoHanded": false
+   },
+   {
+    "id": "base-5",
+    "level": 5,
+    "fork": null,
+    "accuracyBonus": 6,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": true,
+    "twoHanded": false
+   },
+   {
+    "id": "base-6",
+    "level": 6,
+    "fork": null,
+    "accuracyBonus": 6,
+    "movementGrant": 0,
+    "cost": "bonus-action",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "base-7",
+    "level": 7,
+    "fork": null,
+    "accuracyBonus": 6,
+    "movementGrant": 0,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "ready-aim-8",
+    "level": 8,
+    "fork": "ready-aim",
+    "accuracyBonus": 8,
+    "movementGrant": 0,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "ready-aim-9",
+    "level": 9,
+    "fork": "ready-aim",
+    "accuracyBonus": 10,
+    "movementGrant": 0,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "ready-aim-10",
+    "level": 10,
+    "fork": "ready-aim",
+    "accuracyBonus": 12,
+    "movementGrant": 0,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "reposition-8",
+    "level": 8,
+    "fork": "reposition",
+    "accuracyBonus": 6,
+    "movementGrant": 1,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "reposition-9",
+    "level": 9,
+    "fork": "reposition",
+    "accuracyBonus": 6,
+    "movementGrant": 2,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   },
+   {
+    "id": "reposition-10",
+    "level": 10,
+    "fork": "reposition",
+    "accuracyBonus": 6,
+    "movementGrant": 3,
+    "cost": "free",
+    "shields": true,
+    "twoHanded": true
+   }
+  ]
+ }
+}

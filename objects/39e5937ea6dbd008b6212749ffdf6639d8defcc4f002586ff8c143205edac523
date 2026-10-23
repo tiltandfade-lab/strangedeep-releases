@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "assetId": "quilt-bastion-elite-meshy-demo-rig-review",
+  "displayName": "Quilt Bastion (elite)",
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/quilt-bastion-elite-demo-rig/2026-08-28/CHR_Fighter_MeshyRig.glb",
+    "sha256": "23eddea000e2d5e4b21591ded2c8e56f426b6f40ae2585fb8e9b52b3a1de4e00",
+    "texturedModel": "source-assets/meshy/quilt-bastion-elite-red-rag-cloth-detail-enhanced/2026-08-28/model.glb",
+    "rigReceipt": "source-assets/meshy/quilt-bastion-elite-demo-rig/2026-08-28/receipt.json"
+  },
+  "rig": {
+    "provider": "Meshy rigging-and-animation (Meshy Basic)",
+    "bones": 24,
+    "handBones": false,
+    "registryDecision": "quilt-bastion-elite-meshy-basic-rig-no-hand-bones: REJECTED_RIG_MISSING_HAND_BONES for production; used here only to pose the review model"
+  },
+  "godot": {
+    "model": "res://assets/characters/quilt-bastion/review/quilt-bastion-elite-meshy-demo-rig.glb",
+    "wrapper": "res://assets/characters/quilt-bastion/review/quilt_bastion_elite_review_candidate.tscn",
+    "material": "res://assets/characters/quilt-bastion/review/quilt-bastion-elite-cloth-review.tres",
+    "materialNote": "External review material replaces the Meshy rig export's material, which drew the whole base-color texture as emission (emissive factor 1,1,1) with specular x2: emission off, roughness 0.92, metallic 0, specular 0.35, double-sided as the source declares. Base-color texture is the untouched provider image.",
+    "heightMetres": 3.048,
+    "footprintCells": 2,
+    "floorOffsetMeters": 0.0
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG_WITH_HAND_BONES",
+    "EYE_GLOW_MASK",
+    "RUNTIME_PROMOTION"
+  ]
+}

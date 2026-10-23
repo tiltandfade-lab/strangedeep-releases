@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="EffectRecipe" format=3]
+
+[ext_resource type="Script" path="res://src/EffectLayer.cs" id="1_1m60r"]
+[ext_resource type="Texture2D" path="res://assets/vfx/library/kenney-particles/smoke_04.png" id="2_23jy7"]
+[ext_resource type="Texture2D" path="res://assets/vfx/library/kenney-particles/dirt_02.png" id="3_sauix"]
+[ext_resource type="Script" path="res://src/EffectRecipe.cs" id="4_2s2mi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a655"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_23jy7")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_oud6j"]
+material = SubResource("StandardMaterial3D_6a655")
+
+[sub_resource type="Curve" id="Curve_etfco"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_awv7g"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.68, 0.59, 0.48, 0, 0.68, 0.59, 0.48, 0.5, 0.68, 0.59, 0.48, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_hm5vw"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "damping_min", "damping_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(2065228399),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 25, 0, -1, 24, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 23, 20, 24, 21, 0),
+"variants": [0, 5, 0.55, true, 1.0, 31, SubResource("QuadMesh_oud6j"), 1, 0.08, Vector3(0.8574929, 0.5144958, 0), 60.0, Vector3(0, 0, 0), 0.48000002, 1.12, 1.2800001, 1.6, -180.0, 180.0, 0.28, 0.52, SubResource("Curve_etfco"), SubResource("Gradient_awv7g")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_63olu"]
+script = ExtResource("1_1m60r")
+Label = "Wall dust"
+Duration = 0.55
+Offset = Vector3(0, 0.4, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_hm5vw")
+AlignToFloorTravel = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4dxa"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_sauix")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_b6mde"]
+material = SubResource("StandardMaterial3D_d4dxa")
+
+[sub_resource type="Curve" id="Curve_5nhw8"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_fe7cw"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.36, 0.29, 0.22, 0, 0.36, 0.29, 0.22, 0.95, 0.36, 0.29, 0.22, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_xam0u"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(1803268976),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 23, 0, -1, 22, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 0),
+"variants": [0, 4, 0.4, true, 1.0, 31, SubResource("QuadMesh_b6mde"), 1, 0.08, Vector3(0.8944272, 0.4472136, 0), 50.0, Vector3(0, -6, 0), 0.96000004, 2.24, -180.0, 180.0, 0.055999998, 0.103999995, SubResource("Curve_5nhw8"), SubResource("Gradient_fe7cw")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_5lw6h"]
+script = ExtResource("1_1m60r")
+Label = "Grit"
+Duration = 0.4
+Offset = Vector3(0, 0.5, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_xam0u")
+AlignToFloorTravel = true
+
+[resource]
+script = ExtResource("4_2s2mi")
+Title = "Soft Wall Dust"
+Layers = Array[ExtResource("1_1m60r")]([SubResource("Resource_63olu"), SubResource("Resource_5lw6h")])

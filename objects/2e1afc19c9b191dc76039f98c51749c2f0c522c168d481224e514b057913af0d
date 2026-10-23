@@ -1,0 +1,343 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-life-tap",
+ "source": "Generated from independent LIFE_TAP_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    4,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-life-tap-path",
+  "contentFlag": "reviewedLifeTap",
+  "targetHitPoints": 200,
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "livingHostiles": [
+   "primary"
+  ],
+  "preview": {
+   "operation": "preview-life-tap",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "lifeTapPreview"
+  },
+  "cast": {
+   "operation": "reviewed-life-tap",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "life-tap-1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 4,
+     "duration": 2,
+     "recoveryCap": 3,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "duration": 2,
+     "recoveryCap": 3,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 5,
+     "duration": 2,
+     "recoveryCap": 4,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 2,
+     "recoveryCap": 4,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 3,
+     "recoveryCap": 4,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 3,
+     "recoveryCap": 5,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "recoveryCap": 5,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-8-recovery",
+    "level": 8,
+    "fork": "recovery",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "recoveryCap": 6,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-9-recovery",
+    "level": 9,
+    "fork": "recovery",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "recoveryCap": 7,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-10-recovery",
+    "level": 10,
+    "fork": "recovery",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "recoveryCap": 8,
+     "spellEligible": false,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-8-spell",
+    "level": 8,
+    "fork": "spell-tap",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "recoveryCap": 5,
+     "spellEligible": true,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-9-spell",
+    "level": 9,
+    "fork": "spell-tap",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "duration": 3,
+     "recoveryCap": 5,
+     "spellEligible": true,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   },
+   {
+    "id": "life-tap-10-spell",
+    "level": 10,
+    "fork": "spell-tap",
+    "units": {
+     "primary": [
+      7,
+      2
+     ]
+    },
+    "expected": {
+     "rangeCells": 8,
+     "duration": 3,
+     "recoveryCap": 6,
+     "spellEligible": true,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Applies the finite curse without immediate healing. Genuine ordinary/multi-hit/spell payoff, lethal-body loss, once-own-turn zero-heal consumption, DOT exclusions, caster expiry and cold physiology custody use focused suites."
+    }
+   }
+  ]
+ }
+}

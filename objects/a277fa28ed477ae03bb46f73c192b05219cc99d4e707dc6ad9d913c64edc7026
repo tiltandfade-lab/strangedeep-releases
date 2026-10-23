@@ -1,0 +1,447 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-reclaim",
+ "source": "Generated from RECLAIM_MATRIX_CASES; do not edit.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-reclaim-path",
+  "contentFlag": "reviewedReclaim",
+  "hero": {
+   "normalVision": 30,
+   "darkPerception": 30
+  },
+  "targetHitPoints": 50,
+  "willingAllies": {
+   "ally": 10
+  },
+  "preview": {
+   "operation": "preview-reclaim",
+   "fields": {
+    "targetId": "$unit:ally"
+   },
+   "previewKey": "reclaimPreview"
+  },
+  "cast": {
+   "operation": "reviewed-reclaim",
+   "fields": {
+    "targetId": "$unit:ally",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "reclaim-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 4,
+     "payment": 2,
+     "tickHealing": 3,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 5,
+     "payment": 2,
+     "tickHealing": 3,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 5,
+     "payment": 2,
+     "tickHealing": 4,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 6,
+     "payment": 2,
+     "tickHealing": 4,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 6,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 8,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-8-duration",
+    "level": 8,
+    "fork": "duration",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 8,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 3,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-8-economy",
+    "level": 8,
+    "fork": "economy",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 8,
+     "payment": 1,
+     "tickHealing": 5,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-9-duration",
+    "level": 9,
+    "fork": "duration",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 9,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 3,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-9-economy",
+    "level": 9,
+    "fork": "economy",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 9,
+     "payment": 1,
+     "tickHealing": 5,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-10-duration",
+    "level": 10,
+    "fork": "duration",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 9,
+     "payment": 2,
+     "tickHealing": 5,
+     "duration": 4,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   },
+   {
+    "id": "reclaim-10-economy",
+    "level": 10,
+    "fork": "economy",
+    "units": {
+     "ally": [
+      6,
+      3
+     ]
+    },
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 9,
+     "payment": 1,
+     "tickHealing": 6,
+     "duration": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-resource-paid"
+      },
+      {
+       "type": "floor-timed-cast"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

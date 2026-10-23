@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "id": "strangedeep-brick-set-reskin-trial-2026-10-03",
+  "status": "REVIEW_ONLY_TRIAL_NOT_PLACEABLE",
+  "request": "Adam (October 2): keep the 11 brick-set props brick-only, but \"i would like to see an attempt to reskin them using existing textures from the other skin packs\" and \"we could also try shaders to recontextualize them\".",
+  "rules": [
+    "Review only: nothing here is read by a catalog, generator, presenter or placement pool. godot/src/PropReskinTrial.cs builds the variants only inside its own capture scene.",
+    "Shapes never change: each variant is the prop's own mesh. The swap re-projects UVs (object-space box projection, metres) and assigns the skin's own surfaces by role; the shader keeps the prop's own textures and remaps them.",
+    "Swap surfaces are crops of the finished skin packs' existing atlases (godot/assets/shared-modules/concept-kit-v2/skins/<skin>/<role>_0.jpg base colour, _1.jpg glTF metallic-roughness, _2.jpg normal, and the authored local-colour emission PNG where a role has one). Rects are pixels in those 2048 x 2048 atlases.",
+    "Roles follow the kit's material roles: stone (body), trim (frames, rims, dark wood), iron (metal) and glow (lantern glass).",
+    "A prop may override its role mapping per skin (skins.<skin>: default, tops, rimTop, materials). tops sends every upward face to that role; rimTop only the upward faces near the prop's top.",
+    "Captures stand each variant on the same free block (three cells clear toward the camera so no cut-away wall overlays it) under one identical neutral review fill light in every skin's room."
+  ],
+  "metresPerPixel": 0.001488,
+  "skins": {
+    "opal-lanternhouse": {
+      "slots": {
+        "stone": {
+          "atlas": "G02",
+          "rect": [
+            50,
+            1000,
+            520,
+            1000
+          ],
+          "source": "G02 low-cover pale opal panel"
+        },
+        "trim": {
+          "atlas": "A03",
+          "rect": [
+            715,
+            200,
+            255,
+            880
+          ],
+          "source": "A03 black lacquer pilaster"
+        },
+        "iron": {
+          "atlas": "G01",
+          "rect": [
+            815,
+            430,
+            75,
+            1500
+          ],
+          "source": "G01 dark door-frame metal"
+        },
+        "glow": {
+          "atlas": "G02",
+          "rect": [
+            1460,
+            350,
+            60,
+            520
+          ],
+          "emission": true,
+          "source": "G02 iridescent opal glass slot"
+        }
+      },
+      "palette": {
+        "shadow": "#1a1714",
+        "mid": "#8f8579",
+        "light": "#efe4d6",
+        "mix": 0.82,
+        "detailKeep": 0.25,
+        "valueGain": 1.4,
+        "valueBias": 0.06,
+        "grime": "#14110e",
+        "grimeAmount": 0.35,
+        "grimeHeight": 0.3,
+        "glow": "#ffd9b8",
+        "glowStrength": 0.5,
+        "glowPower": 3.0,
+        "source": "Opal kit: black lacquer, warm nacre, peach lantern glow"
+      }
+    },
+    "pendulum-conservatory": {
+      "slots": {
+        "stone": {
+          "atlas": "G02",
+          "rect": [
+            20,
+            980,
+            1200,
+            1060
+          ],
+          "source": "G02 low-cover dark walnut planks"
+        },
+        "trim": {
+          "atlas": "A03",
+          "rect": [
+            133,
+            190,
+            94,
+            900
+          ],
+          "source": "A03 brass-banded walnut moulding"
+        },
+        "iron": {
+          "atlas": "G01",
+          "rect": [
+            640,
+            905,
+            80,
+            320
+          ],
+          "source": "G01 brass door plate"
+        },
+        "glow": {
+          "atlas": "A03",
+          "rect": [
+            260,
+            1215,
+            430,
+            130
+          ],
+          "emission": true,
+          "source": "A03 blue stained-glass band"
+        }
+      },
+      "palette": {
+        "shadow": "#120b07",
+        "mid": "#5a3b25",
+        "light": "#e0b46a",
+        "mix": 0.8,
+        "detailKeep": 0.3,
+        "valueGain": 1.25,
+        "valueBias": 0.0,
+        "grime": "#0b0705",
+        "grimeAmount": 0.3,
+        "grimeHeight": 0.3,
+        "glow": "#7fd2e0",
+        "glowStrength": 0.4,
+        "glowPower": 3.0,
+        "source": "Pendulum kit: walnut, brass, cyan lantern glass"
+      }
+    }
+  },
+  "props": [
+    {
+      "id": "prop.pew.wood.2x1.intact.v1",
+      "kind": "catalog",
+      "propKind": "pew-2x1-wood",
+      "default": "stone",
+      "skins": {
+        "opal-lanternhouse": {
+          "default": "trim",
+          "tops": "stone"
+        }
+      }
+    },
+    {
+      "id": "prop.pew.wood.3x1.intact.v1",
+      "kind": "catalog",
+      "propKind": "pew-3x1-wood",
+      "default": "stone",
+      "skins": {
+        "opal-lanternhouse": {
+          "default": "trim",
+          "tops": "stone"
+        }
+      }
+    },
+    {
+      "id": "prop.pew.stone.2x1.intact.v1",
+      "kind": "catalog",
+      "propKind": "pew-2x1-stone",
+      "default": "stone",
+      "skins": {
+        "opal-lanternhouse": {
+          "default": "trim",
+          "tops": "stone"
+        }
+      }
+    },
+    {
+      "id": "prop.pew.stone.3x1.intact.v1",
+      "kind": "catalog",
+      "propKind": "pew-3x1-stone",
+      "default": "stone",
+      "skins": {
+        "opal-lanternhouse": {
+          "default": "trim",
+          "tops": "stone"
+        }
+      }
+    },
+    {
+      "id": "prop.fountain.circle.2x2.dry.v1",
+      "kind": "catalog",
+      "propKind": "fountain-2x2-circle",
+      "default": "stone",
+      "rimTop": "trim",
+      "skins": {
+        "pendulum-conservatory": {
+          "rimTop": "iron"
+        }
+      }
+    },
+    {
+      "id": "model-candidate.structural-support.slender-octagonal-a.v1",
+      "kind": "scene",
+      "scene": "res://assets/model-candidates/structural-supports/slender-octagonal-a/slender_octagonal_a.tscn",
+      "default": "stone",
+      "materials": {
+        "MAT_SupportStone_TextureTarget": "stone"
+      }
+    },
+    {
+      "id": "model-candidate.structural-support.slender-clustered-repair-b.v2",
+      "kind": "scene",
+      "scene": "res://assets/model-candidates/structural-supports/slender-clustered-repair-b/slender_clustered_repair_b.tscn",
+      "default": "stone",
+      "materials": {
+        "MAT_SupportStone_TextureTarget": "stone",
+        "MAT_SupportIron_TextureTarget": "iron"
+      }
+    },
+    {
+      "id": "model-candidate.retained-donor.wall-flame-sconce.v1",
+      "kind": "torch",
+      "default": "iron"
+    },
+    {
+      "id": "map-item.short-wooden-pew-intact",
+      "kind": "scene",
+      "scene": "res://assets/map-items/grid-v1/short-wooden-pew-intact.tscn",
+      "default": "stone",
+      "materials": {
+        "oak": "stone",
+        "oak-dark": "trim",
+        "iron": "iron",
+        "fracture": "trim"
+      },
+      "skins": {
+        "opal-lanternhouse": {
+          "tops": "stone",
+          "materials": {
+            "oak": "trim",
+            "oak-dark": "trim",
+            "iron": "iron",
+            "fracture": "trim"
+          }
+        }
+      }
+    },
+    {
+      "id": "map-item.short-wooden-pew-damaged",
+      "kind": "scene",
+      "scene": "res://assets/map-items/grid-v1/short-wooden-pew-damaged.tscn",
+      "default": "stone",
+      "materials": {
+        "oak": "stone",
+        "oak-dark": "trim",
+        "iron": "iron",
+        "fracture": "trim"
+      },
+      "skins": {
+        "opal-lanternhouse": {
+          "tops": "stone",
+          "materials": {
+            "oak": "trim",
+            "oak-dark": "trim",
+            "iron": "iron",
+            "fracture": "trim"
+          }
+        }
+      }
+    },
+    {
+      "id": "map-item.short-wooden-pew-collapsed",
+      "kind": "scene",
+      "scene": "res://assets/map-items/grid-v1/short-wooden-pew-collapsed.tscn",
+      "default": "stone",
+      "materials": {
+        "oak": "stone",
+        "oak-dark": "trim",
+        "iron": "iron",
+        "fracture": "trim"
+      },
+      "skins": {
+        "opal-lanternhouse": {
+          "tops": "stone",
+          "materials": {
+            "oak": "trim",
+            "oak-dark": "trim",
+            "iron": "iron",
+            "fracture": "trim"
+          }
+        }
+      }
+    }
+  ]
+}

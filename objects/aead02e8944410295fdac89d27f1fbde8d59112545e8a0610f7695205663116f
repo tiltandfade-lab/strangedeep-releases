@@ -1,0 +1,67 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "sweeping-kick",
+  "aliases": [
+    "preview-reviewed-sweeping-kick",
+    "cast-reviewed-sweeping-kick"
+  ],
+  "textKeys": {
+    "name": "ability.sweeping-kick.name",
+    "summary": "ability.sweeping-kick.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "sweepingKicks",
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"maximumTargets": 2, "damagePercent": 75}},
+    {"level": 2, "cost": 1, "numbers": {"maximumTargets": 3, "damagePercent": 75}},
+    {"level": 3, "cost": 1, "numbers": {"maximumTargets": 4, "damagePercent": 75}},
+    {"level": 4, "cost": 1, "numbers": {"maximumTargets": 5, "damagePercent": 75}},
+    {"level": 5, "cost": 1, "numbers": {"maximumTargets": 6, "damagePercent": 75}},
+    {"level": 6, "cost": 1, "numbers": {"maximumTargets": 7, "damagePercent": 75}},
+    {"level": 7, "cost": 1, "numbers": {"maximumTargets": 8, "damagePercent": 75}},
+    {"level": 8, "cost": 1, "numbers": {"maximumTargets": 8, "damagePercent": 75, "stunChancePercent": 25}},
+    {"level": 9, "cost": 1, "numbers": {"maximumTargets": 8, "damagePercent": 75, "stunChancePercent": 35}},
+    {"level": 10, "cost": 1, "numbers": {"maximumTargets": 8, "damagePercent": 75, "stunChancePercent": 50}}
+  ],
+  "paths": null,
+  "aim": {
+    "shape": "arc",
+    "range": {
+      "minimum": 1,
+      "maximum": 2
+    },
+    "requestProperty": "request",
+    "requestFields": [
+      "targetIds"
+    ]
+  },
+  "presentation": {
+    "key": "sweeping-kick",
+    "clips": [
+      {"clip": "mma-kick"},
+      {"clip": "leg-sweep", "minLevel": 10}
+    ],
+    "strikeDelay": 0.05,
+    "effectRecipe": "sweeping-kick",
+    "timingKey": "sweepingKick",
+    "timingPropertyPrefix": "Sweep",
+    "sound": "ability.sweeping-kick",
+    "actionCamera": true,
+    "travelMotion": false,
+    "knockback": [
+      {"key": "kick"},
+      {"key": "kick-heavy", "minLevel": 6}
+    ],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/sweeping-kick.ts",
+    "src/campaign/sweeping-kick.ts",
+    "src/campaign/reviewed-sweeping-kick.ts",
+    "src/campaign/reviewed-sweeping-kick-content.ts",
+    "godot/src/ReviewedAbilities.SweepingKick.cs"
+  ]
+}

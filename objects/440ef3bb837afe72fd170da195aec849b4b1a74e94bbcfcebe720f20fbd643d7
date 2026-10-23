@@ -1,0 +1,530 @@
+{
+  "signature": {
+    "fitSha256": "017c409636e72decce196564f7e4c900e017aa0a998f9d6544980d8e3be05021",
+    "catalogSha256": "804ef844e9dbd1098e1a27da00021792def93ca906f59c3869da4c3022f7a773",
+    "projectPath": "/Volumes/GAMEDEV/Strangedeep/workspace/into-the-strangedeep/artifacts/character-workshop/loadout-v4/godot-final-2",
+    "sources": {
+      "tools/review-workshop-loadout.mjs": "e0f83c6800f188a5b1b9ba23c19438599baea35f80b1197f338085457d884b9f",
+      "tools/workshop-contact-gates.mjs": "2c440580d44521e1a22b05653016222689e35072618877a628417f7945e3b4c7",
+      "tools/blender_measure_workshop_contact.py": "703dc771e584c0adbef8d6fa7fc6c829699662ae67bbccec6a01ce2a3fa24288",
+      "tools/workshop_contact_surface.py": "a707948805acf3f103f608566373d9ef71878b2f0528d6d39af508097db54037",
+      "tools/blender_render_workshop_contact.py": "e2aee1a095725e8d8617841632bcc6a4be6b20d00ffc750753df347aa6d78194",
+      "godot/src/CharacterWorkshopContactCapture.cs": "e13a9b6f1d1cbf20563589e137c387336badfedd5dae2262c4397d8d8fb4779b",
+      "godot/src/CharacterWorkshopStage.cs": "f22bb6ee298403921d21fa8fff68ecb8e0811aa836a93253724db1b1f0127f0b",
+      "godot/src/CharacterWorkshopGrounding.cs": "05b5251204ebededeb818bc69c7bfa2e4b679a710fbd34d5c1b975fc9093755b"
+    },
+    "items": [
+      "shield"
+    ],
+    "variants": [
+      "bare",
+      "gloved"
+    ],
+    "render": true
+  },
+  "status": "SAMPLED_METRICS_PASS",
+  "visualReview": "REQUIRES_AGENT_OR_HUMAN_INSPECTION; never accepted automatically",
+  "completed": {
+    "shield-bare": {
+      "item": "shield",
+      "variant": "bare",
+      "rows": [
+        {
+          "pose": "idle",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.000046566128730773926,
+            "fingerSurfaceGapsMm": {
+              "index": 1.5089379739947617,
+              "middle": 1.5031200018711388,
+              "ring": 1.7361849313601851,
+              "pinky": 2.3906450951471925,
+              "thumb": 1.598961263274153
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 4667,
+              "medianSignedDistanceMm": 12.822814751416445,
+              "maximumSeparationMm": 71.78579270839691,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 129.49340077252413,
+              "middle": 133.60305803955194,
+              "ring": 152.51763411133814,
+              "pinky": 121.33049056020067
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 1.1555001062030594
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 171.7723309993744,
+              "maximumSeparationMm": 351.1478006839752,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.21126884314587063,
+                -0.3250000223254696,
+                -0.06215883583684803
+              ],
+              [
+                0.21126881661170888,
+                0.3249999620974565,
+                0.12500008608348762
+              ]
+            ]
+          },
+          "captureSha256": "12db972adb0b2661479ed556785e538ff209b38dff466e8640367b1df902899c",
+          "metadataSha256": "0cec301bfb057004b8cb5353907bade6b8fd9eceddb093e36cb227a1a82f42db"
+        },
+        {
+          "pose": "slash",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00004470348358154297,
+            "fingerSurfaceGapsMm": {
+              "index": 1.5089246056353052,
+              "middle": 1.503703436659028,
+              "ring": 1.736170961521566,
+              "pinky": 2.391850071338316,
+              "thumb": 1.5989946356664102
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 4667,
+              "medianSignedDistanceMm": 12.822206132113934,
+              "maximumSeparationMm": 71.78681343793869,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 129.49390394020588,
+              "middle": 133.6027701326448,
+              "ring": 152.51731016627605,
+              "pinky": 121.34695267466829
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 1.1538907031839092
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 171.877920627594,
+              "maximumSeparationMm": 351.1508107185364,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.2112687543067924,
+                -0.3249999765477474,
+                -0.06215891435827636
+              ],
+              [
+                0.21126887676891035,
+                0.32499998394257257,
+                0.12499997874232946
+              ]
+            ]
+          },
+          "captureSha256": "b24e41180eb4f67532af2dade22ac088b99da5c2783a98d9199a32979f328953",
+          "metadataSha256": "e86b7f5dd9f1424ccf36da5c66b07b0f099d38b9a2dd7a5dd54a6b4535c2f02e"
+        },
+        {
+          "pose": "block",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00008754432201385498,
+            "fingerSurfaceGapsMm": {
+              "index": 1.5088588115759194,
+              "middle": 1.5032636971833806,
+              "ring": 1.7362122501557071,
+              "pinky": 2.390692514988283,
+              "thumb": 1.5988776382679741
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 4664,
+              "medianSignedDistanceMm": 12.82515935599804,
+              "maximumSeparationMm": 71.78393751382828,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 129.49355801430914,
+              "middle": 133.60257402123867,
+              "ring": 152.5188248180393,
+              "pinky": 121.33758570074062
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 1.1551595719841619
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 172.28133976459503,
+              "maximumSeparationMm": 351.1449992656708,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.211268818087833,
+                -0.32500000617352137,
+                -0.06215884300196242
+              ],
+              [
+                0.2112687582302876,
+                0.3249998935611823,
+                0.12500011729746988
+              ]
+            ]
+          },
+          "captureSha256": "630cc20f1c84333fb4b0147736a041fc9da58642f47bc5e53e1253ad914bee3e",
+          "metadataSha256": "f25c876472b40c2f1c5e212b89b8a97e90781c5ecdb20ac3c8fce50027437295"
+        },
+        {
+          "pose": "walk",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00007078051567077637,
+            "fingerSurfaceGapsMm": {
+              "index": 1.5089185520385702,
+              "middle": 1.5034519989664357,
+              "ring": 1.7360244722416003,
+              "pinky": 2.3909866577014327,
+              "thumb": 1.5989262998724978
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 4666,
+              "medianSignedDistanceMm": 12.822989374399185,
+              "maximumSeparationMm": 71.78446650505066,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 129.4934849110841,
+              "middle": 133.6028931442924,
+              "ring": 152.5181905740267,
+              "pinky": 121.35276790754396
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 1.1547583853825927
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 171.92912846803665,
+              "maximumSeparationMm": 351.1474132537842,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.21126880237745221,
+                -0.32500001573899673,
+                -0.062158863746289615
+              ],
+              [
+                0.21126876719645238,
+                0.3249999846937138,
+                0.12500004801866332
+              ]
+            ]
+          },
+          "captureSha256": "2849ea2670bdae82d6135131de8d05c9dafa018822180ef29689a739ec973aa7",
+          "metadataSha256": "83f6ec47d2d3ffebe345310cd6d81a429dcf58bea21b11812c5f99e256735202"
+        }
+      ],
+      "visualReview": "PENDING",
+      "fitSha256": "85ba3e404814c96ff6db94d793efab45110352b6f1c34872cbec6caf63942add"
+    },
+    "shield-gloved": {
+      "item": "shield",
+      "variant": "gloved",
+      "rows": [
+        {
+          "pose": "idle",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00004842877388000488,
+            "fingerSurfaceGapsMm": {
+              "index": 0.21649580715651004,
+              "middle": 0.8348827250301838,
+              "ring": 0.7579200937470887,
+              "pinky": 1.2910773511976004,
+              "thumb": 0.9089597297133878
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0.5900769028812647,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 8431,
+              "medianSignedDistanceMm": 11.662662029266357,
+              "maximumSeparationMm": 70.59575617313385,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 131.48427680168516,
+              "middle": 134.65509126452216,
+              "ring": 155.83572973777427,
+              "pinky": 125.17533662970452
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 0.014130070060976626
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 170.62653601169586,
+              "maximumSeparationMm": 350.0017821788788,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.21126884314587063,
+                -0.3250000223254696,
+                -0.06215883583684803
+              ],
+              [
+                0.21126881661170888,
+                0.3249999620974565,
+                0.12500008608348762
+              ]
+            ]
+          },
+          "captureSha256": "4955e27aa02affbdc252c081d9b735a42000e8f6774f6711e2871cf80538fc5e",
+          "metadataSha256": "17ee53c26778ccda3e6c623074f60c348ecd7904a82518ccb8581bf3e23e4398"
+        },
+        {
+          "pose": "slash",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00004563480615615845,
+            "fingerSurfaceGapsMm": {
+              "index": 0.21645502420142293,
+              "middle": 0.8354882011190057,
+              "ring": 0.7579208019402964,
+              "pinky": 1.292801578529179,
+              "thumb": 0.9089329105336219
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0.5891789332963526,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 8433,
+              "medianSignedDistanceMm": 11.661946773529053,
+              "maximumSeparationMm": 70.59680670499802,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 131.4849439643223,
+              "middle": 134.65530520125589,
+              "ring": 155.83577877030234,
+              "pinky": 125.1932587186911
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 0.01250888453796506
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 170.76824605464935,
+              "maximumSeparationMm": 350.0048518180847,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.2112687543067924,
+                -0.3249999765477474,
+                -0.06215891435827636
+              ],
+              [
+                0.21126887676891035,
+                0.32499998394257257,
+                0.12499997874232946
+              ]
+            ]
+          },
+          "captureSha256": "99ac1dcb3bb5ce5f5ae7439f339c4269c08e944fce781462fd926a4db2ee4fdc",
+          "metadataSha256": "91836a4063f3bf5f90b32cd76b70174a86085772788eee5c07e9fddb6dc8b0fe"
+        },
+        {
+          "pose": "block",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00006705522537231445,
+            "fingerSurfaceGapsMm": {
+              "index": 0.2167848160752328,
+              "middle": 0.8349550577501456,
+              "ring": 0.7578858203487471,
+              "pinky": 1.2913154205307364,
+              "thumb": 0.908877860638313
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0.5908925668336451,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 8430,
+              "medianSignedDistanceMm": 11.663729790598154,
+              "maximumSeparationMm": 70.59390097856522,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 131.4852269497251,
+              "middle": 134.65513455310304,
+              "ring": 155.83632635957136,
+              "pinky": 125.18243141587492
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 0.013557782343317134
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 171.217143535614,
+              "maximumSeparationMm": 349.99880194664,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.2112688979077781,
+                -0.3250000061735214,
+                -0.06215884300196244
+              ],
+              [
+                0.21126875823028765,
+                0.3250000098331674,
+                0.12500013307643992
+              ]
+            ]
+          },
+          "captureSha256": "8aed4a54122cff1b81b61f503ea8fb30d20be4c839a737efa3d2cc81caa8579b",
+          "metadataSha256": "14b7c51379eed777977876d86729db2f0d51ea72bee789132bf777aa7e9591b6"
+        },
+        {
+          "pose": "walk",
+          "failures": [],
+          "metrics": {
+            "coordinateInvarianceMaxMm": 0.00007450580596923828,
+            "fingerSurfaceGapsMm": {
+              "index": 0.21641492397369197,
+              "middle": 0.835078360978514,
+              "ring": 0.7579362039299061,
+              "pinky": 1.291557486789922,
+              "thumb": 0.9088900260394439
+            },
+            "handle": {
+              "samples": 59348,
+              "deepestPenetrationMm": 0.5918179522268474,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 8433,
+              "medianSignedDistanceMm": 11.661546304821968,
+              "maximumSeparationMm": 70.59439271688461,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "fingerContactRegion": "far 40 percent of terminal phalanx skin",
+            "fingerWrapDegrees": {
+              "index": 131.48525606738343,
+              "middle": 134.6568907475712,
+              "ring": 155.83685518656569,
+              "pinky": 125.20000063132153
+            },
+            "selfContact": {
+              "distalPalmCrossings": 0,
+              "distalFingerCrossings": 0,
+              "palmGapMm": 0.013287031075985093
+            },
+            "handleSamplingSpacingMm": 4,
+            "handleVertexCount": 240,
+            "guardOrBody": {
+              "samples": 8590,
+              "deepestPenetrationMm": 0,
+              "penetratingOver2Mm": 0,
+              "within3MmOfSkin": 0,
+              "medianSignedDistanceMm": 170.83414644002914,
+              "maximumSeparationMm": 350.00139474868774,
+              "intrudingSurfaceGroupsMaxMm": {}
+            },
+            "recoveredModelBounds": [
+              [
+                -0.21126880237745221,
+                -0.32500001573899673,
+                -0.062158863746289615
+              ],
+              [
+                0.21126876719645238,
+                0.3249999846937138,
+                0.12500004801866332
+              ]
+            ]
+          },
+          "captureSha256": "25f2a3613c87173060c4e8469c9c6e29a4e641f146928f9848111f9be3fbfa38",
+          "metadataSha256": "71e2de1721c7c332701ca238677143ca4aebeb7d2d45d94b496ed539f6c2f03d"
+        }
+      ],
+      "visualReview": "PENDING",
+      "fitSha256": "eb140ad59424cc1925be57c488844161411bbb1c2906f9ae09dbd9a53ead6019"
+    }
+  },
+  "limitations": [
+    "Four sampled motions per loadout",
+    "Handle surface sampling at 4 mm; guard/body vertices only",
+    "No whole-body collision or weapon-specific motion approval"
+  ]
+}

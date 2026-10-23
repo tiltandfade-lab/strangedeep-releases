@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "assetId": "splinter-guard-review",
+  "displayName": "Splinter Guard",
+  "reviewLabel": null,
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/splinter-guard/2026-08-23/models/splinter-guard-retopo-voxel-t12000.glb",
+    "sha256": "4c5063be356d313d812a6cf1e9a3b0a0ec591c5a4ce0788c2c497d4b83012a85",
+    "family": "design-notebook/Strangedeep/Dungeon/Monsters and Bosses/candidates/R2 Humanoid Candidates/Made/M19 Carven Page to Gallows Idol.md"
+  },
+  "rig": {
+    "provider": null,
+    "note": "Static Meshy model; no rig. Stands in its modelled A-pose."
+  },
+  "godot": {
+    "model": "res://assets/characters/splinter-guard/review/splinter-guard-retopo-voxel-t12000.glb",
+    "wrapper": "res://assets/characters/splinter-guard/review/splinter_guard_review_candidate.tscn",
+    "material": "res://assets/characters/splinter-guard/review/splinter-guard-matte-review.tres",
+    "materialNote": "External review material replaces the provider material: carved wood finish, roughness 0.8, metallic 0, specular 0.35, double-sided as the source declares. Base-color and normal textures are the untouched provider images; the provider metallic-roughness map (roughness about 0.35 to 0.45, reading as plastic) is not connected.",
+    "emission": "none in the source; no eye or emissive region is obvious in the provider texture, so no mask was added",
+    "heightMetres": 1.8288,
+    "heightNote": "6 feet",
+    "footprintCells": 1,
+    "modelScale": 0.9608,
+    "floorOffsetMeters": 0.914308
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG",
+    "ANIMATION",
+    "RUNTIME_PROMOTION"
+  ]
+}

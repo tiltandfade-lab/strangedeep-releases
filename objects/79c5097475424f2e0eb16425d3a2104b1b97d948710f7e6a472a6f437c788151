@@ -1,0 +1,154 @@
+[gd_resource type="Resource" script_class="StrangedeepModelCandidateCatalog" load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://src/StrangedeepModelCandidateCatalog.cs" id="1_catalog"]
+[ext_resource type="Script" path="res://src/StrangedeepModelCandidateDefinition.cs" id="2_definition"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/structural-supports/slender-octagonal-a/slender_octagonal_a.tscn" id="3_support_a"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/structural-supports/slender-clustered-repair-b/slender_clustered_repair_b.tscn" id="4_support_b"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/prop-components/stone-sarcophagus-loose-lid/stone_sarcophagus_loose_lid.tscn" id="7_lid"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/wall-flame-sconce/wall_flame_sconce.tscn" id="12_donor_sconce"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/beacon-signal-fire-basket/beacon_signal_fire_basket.tscn" id="13_donor_basket"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/archive-lectern/archive_lectern.tscn" id="14_donor_lectern"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/timber-holding-cage/timber_holding_cage.tscn" id="15_donor_cage"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/hand-windlass/hand_windlass.tscn" id="16_donor_windlass"]
+[ext_resource type="PackedScene" path="res://assets/model-candidates/retained-cathedral-donors/timber-repair-brace/timber_repair_brace.tscn" id="17_donor_brace"]
+
+[sub_resource type="Resource" id="Resource_support_a"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.structural-support.slender-octagonal-a.v1"
+DisplayName = "Slender Octagonal Support A"
+CandidateFamily = "STRUCTURAL_SUPPORT"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("3_support_a")
+RuntimeMeshPath = "res://assets/model-candidates/structural-supports/slender-octagonal-a/structural-support-slender-octagonal-a-runtime.glb"
+RuntimeMeshSha256 = "800b2ac9edee96caa5c9e5fd5df6d2d48d58f6e830c37ef4bbb6a61663f711d5"
+SourcePath = "source-assets/dungeon-parts/structural-support-slender-octagonal-a/models/blender/2026-09-01/texture-ready-v1/structural-support-slender-octagonal-a-texture-ready.glb"
+SourceSha256 = "800b2ac9edee96caa5c9e5fd5df6d2d48d58f6e830c37ef4bbb6a61663f711d5"
+DimensionsMetres = Vector3(0.74, 0.74, 3.6576)
+VisualHost = "UNSELECTED_MID_ROOM_SLENDER_SUPPORT"
+OccupancyStatus = "FOUNDER_SELECTION_AND_TACTICAL_FOOTPRINT_PENDING"
+
+[sub_resource type="Resource" id="Resource_support_b"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.structural-support.slender-clustered-repair-b.v2"
+DisplayName = "Slender Clustered Repair Support B"
+CandidateFamily = "STRUCTURAL_SUPPORT"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("4_support_b")
+RuntimeMeshPath = "res://assets/model-candidates/structural-supports/slender-clustered-repair-b/structural-support-slender-clustered-repair-b-runtime.glb"
+RuntimeMeshSha256 = "a37cc04884bcb0e2b761bbb12575f7721e7928bda9e090534f124d608b517694"
+SourcePath = "source-assets/dungeon-parts/structural-support-slender-clustered-repair-b/models/blender/2026-09-01/texture-ready-v2/structural-support-slender-clustered-repair-b-texture-ready.glb"
+SourceSha256 = "a37cc04884bcb0e2b761bbb12575f7721e7928bda9e090534f124d608b517694"
+DimensionsMetres = Vector3(0.82, 0.82, 3.6576)
+VisualHost = "UNSELECTED_MID_ROOM_SLENDER_SUPPORT"
+OccupancyStatus = "FOUNDER_SELECTION_AND_TACTICAL_FOOTPRINT_PENDING"
+
+[sub_resource type="Resource" id="Resource_loose_lid"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.sarcophagus.stone.loose-lid.v1"
+DisplayName = "Stone Sarcophagus Loose Lid"
+CandidateFamily = "PROP_STATE_COMPONENT"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("7_lid")
+RuntimeMeshPath = "res://assets/model-candidates/prop-components/stone-sarcophagus-loose-lid/stone-sarcophagus-loose-lid-runtime.glb"
+RuntimeMeshSha256 = "6da79b58f4a1ec19d9bfaf077ee8575c2709ffe9ba832b28f93390f34d183d02"
+SourcePath = "source-assets/meshy/cathedral-sarcophagus-stone-state-family/2026-08-22/models/sarcophagus-lid-484.glb"
+SourceSha256 = "6da79b58f4a1ec19d9bfaf077ee8575c2709ffe9ba832b28f93390f34d183d02"
+DimensionsMetres = Vector3(2.44, 1.07, 0.2)
+VisualHost = "STONE_SARCOPHAGUS_OPEN_STATE_ASSEMBLY"
+OccupancyStatus = "COMPONENT_ONLY_NO_STANDALONE_GAMEPLAY_PROP"
+
+[sub_resource type="Resource" id="Resource_donor_sconce"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.wall-flame-sconce.v1"
+DisplayName = "Wall Flame Sconce"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("12_donor_sconce")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/wall-flame-sconce/wall-flame-sconce-runtime.glb"
+RuntimeMeshSha256 = "bc4fa41ad455e2f10751904fab75b351060639b14a4664d4f632916f81ce3e78"
+SourcePath = "web/assets/environment/cathedral-donor-assay/wall-flame-sconce.glb"
+SourceSha256 = "bc4fa41ad455e2f10751904fab75b351060639b14a4664d4f632916f81ce3e78"
+DimensionsMetres = Vector3(0.263455, 0.42, 0.486818)
+VisualHost = "LIGHTING_WALL_SOCKET"
+OccupancyStatus = "GENERATED_FLOOR_INTEGRATED__EXACT_WALL_FACE_NO_FLOOR_OWNER"
+
+[sub_resource type="Resource" id="Resource_donor_basket"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.beacon-signal-fire-basket.v1"
+DisplayName = "Beacon Signal Fire Basket"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("13_donor_basket")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/beacon-signal-fire-basket/beacon-signal-fire-basket-runtime.glb"
+RuntimeMeshSha256 = "e4a0d3b7b018ea7136a43c9b05aed89053fc727ae0d37e196f50b0bd7b8bb450"
+SourcePath = "web/assets/environment/cathedral-donor-assay/beacon-signal-fire-basket.glb"
+SourceSha256 = "e4a0d3b7b018ea7136a43c9b05aed89053fc727ae0d37e196f50b0bd7b8bb450"
+DimensionsMetres = Vector3(0.936399, 1.45, 0.834247)
+VisualHost = "STANDING_PRACTICAL_VERTEX"
+OccupancyStatus = "BLOCKED_ON_SPATIAL_AUTHORITY__FOUR_ADJACENT_CELL_SWEEP_ZERO_OCCUPANCY"
+
+[sub_resource type="Resource" id="Resource_donor_lectern"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.archive-lectern.v1"
+DisplayName = "Archive Lectern"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("14_donor_lectern")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/archive-lectern/archive-lectern-runtime.glb"
+RuntimeMeshSha256 = "42acdbd101812525bb3c1c460c241d234236da664166345c9e4d1bbd460b5d29"
+SourcePath = "web/assets/environment/cathedral-donor-assay/archive-lectern.glb"
+SourceSha256 = "42acdbd101812525bb3c1c460c241d234236da664166345c9e4d1bbd460b5d29"
+DimensionsMetres = Vector3(0.789537, 0.92, 0.676407)
+VisualHost = "EXCLUSIVE_FREESTANDING_PROP"
+OccupancyStatus = "BLOCKED_ON_SPATIAL_AUTHORITY__ONE_CELL_BLOCKING"
+
+[sub_resource type="Resource" id="Resource_donor_cage"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.timber-holding-cage.v1"
+DisplayName = "Timber Holding Cage"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("15_donor_cage")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/timber-holding-cage/timber-holding-cage-runtime.glb"
+RuntimeMeshSha256 = "4b1c0534cce04d26d34bb1805aa29e516280d6750ccd179bf6c80f6222a791ba"
+SourcePath = "web/assets/environment/cathedral-donor-assay/timber-holding-cage.glb"
+SourceSha256 = "4b1c0534cce04d26d34bb1805aa29e516280d6750ccd179bf6c80f6222a791ba"
+DimensionsMetres = Vector3(1.353054, 1.12, 1.09087)
+VisualHost = "EXCLUSIVE_FREESTANDING_PROP"
+OccupancyStatus = "BLOCKED_ON_SPATIAL_AUTHORITY__ONE_CELL_BLOCKING"
+
+[sub_resource type="Resource" id="Resource_donor_windlass"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.hand-windlass.v1"
+DisplayName = "Hand Windlass"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("16_donor_windlass")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/hand-windlass/hand-windlass-runtime.glb"
+RuntimeMeshSha256 = "6068baf46fcb599b9a4808404493211ed93f28fd18c5eb401ed37e14e8663cd7"
+SourcePath = "web/assets/environment/cathedral-donor-assay/hand-windlass.glb"
+SourceSha256 = "6068baf46fcb599b9a4808404493211ed93f28fd18c5eb401ed37e14e8663cd7"
+DimensionsMetres = Vector3(1.55, 0.914258, 0.974805)
+VisualHost = "EXCLUSIVE_FREESTANDING_PROP"
+OccupancyStatus = "BLOCKED_ON_SPATIAL_AUTHORITY__TWO_BY_ONE_BLOCKING"
+
+[sub_resource type="Resource" id="Resource_donor_brace"]
+script = ExtResource("2_definition")
+AssetId = "model-candidate.retained-donor.timber-repair-brace.v1"
+DisplayName = "Timber Repair Brace"
+CandidateFamily = "RETAINED_CATHEDRAL_DONOR"
+AdmissionStatus = "PRESENTATION_ONLY_MODEL_CANDIDATE"
+RuntimeScene = ExtResource("17_donor_brace")
+RuntimeMeshPath = "res://assets/model-candidates/retained-cathedral-donors/timber-repair-brace/timber-repair-brace-runtime.glb"
+RuntimeMeshSha256 = "a51d9428422e9e0ef5c1b68624a9651f957a2091aac5d21939bcffb78f1cbd3e"
+SourcePath = "web/assets/environment/cathedral-donor-assay/timber-repair-brace.glb"
+SourceSha256 = "a51d9428422e9e0ef5c1b68624a9651f957a2091aac5d21939bcffb78f1cbd3e"
+DimensionsMetres = Vector3(1.040148, 1.45, 0.302879)
+VisualHost = "DAMAGED_WALL_RUN"
+OccupancyStatus = "GENERATED_FLOOR_INTEGRATED__WALL_ATTACHED_NO_FLOOR_OWNER"
+
+[resource]
+script = ExtResource("1_catalog")
+CatalogId = "strangedeep-model-candidate-catalog-v1"
+SchemaVersion = 1
+Definitions = Array[ExtResource("2_definition")]([SubResource("Resource_support_a"), SubResource("Resource_support_b"), SubResource("Resource_loose_lid"), SubResource("Resource_donor_sconce"), SubResource("Resource_donor_basket"), SubResource("Resource_donor_lectern"), SubResource("Resource_donor_cage"), SubResource("Resource_donor_windlass"), SubResource("Resource_donor_brace")])

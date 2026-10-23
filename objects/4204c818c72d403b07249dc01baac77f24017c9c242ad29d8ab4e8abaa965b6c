@@ -1,0 +1,155 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "evasive-stance",
+  "aliases": [
+    "preview-reviewed-evasive",
+    "cast-reviewed-evasive"
+  ],
+  "textKeys": {
+    "name": "ability.evasive-stance.name",
+    "summary": "ability.evasive-stance.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "evasiveStances",
+  "ranks": [
+    {
+      "level": 1,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 15
+      }
+    },
+    {
+      "level": 2,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 18
+      }
+    },
+    {
+      "level": 3,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 18
+      }
+    },
+    {
+      "level": 4,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 21
+      }
+    },
+    {
+      "level": 5,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 21
+      }
+    },
+    {
+      "level": 6,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 21
+      }
+    },
+    {
+      "level": 7,
+      "cost": 1,
+      "numbers": {
+        "evasionBonus": 25
+      }
+    }
+  ],
+  "paths": {
+    "forkId": "reviewed-evasive-coverage",
+    "level": 8,
+    "options": [
+      {
+        "id": "precision",
+        "nameKey": "ability.evasive-stance.path.precision",
+        "ranks": [
+          {
+            "level": 8,
+            "cost": 1,
+            "numbers": {
+              "evasionBonus": 28
+            }
+          },
+          {
+            "level": 9,
+            "cost": 1,
+            "numbers": {
+              "evasionBonus": 31
+            }
+          },
+          {
+            "level": 10,
+            "cost": 1,
+            "numbers": {
+              "evasionBonus": 35
+            }
+          }
+        ]
+      },
+      {
+        "id": "arcane",
+        "nameKey": "ability.evasive-stance.path.arcane",
+        "ranks": [
+          {
+            "level": 8,
+            "cost": 1,
+            "numbers": {}
+          },
+          {
+            "level": 9,
+            "cost": 1,
+            "numbers": {}
+          },
+          {
+            "level": 10,
+            "cost": 1,
+            "numbers": {}
+          }
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "self",
+    "range": {
+      "minimum": 0,
+      "maximum": 0
+    },
+    "requestProperty": null,
+    "requestFields": []
+  },
+  "presentation": {
+    "key": "evasive-stance",
+    "clips": [
+      {
+        "clip": "dodge-back"
+      }
+    ],
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/reviewed-evasive-source.ts",
+    "src/floor/reviewed-evasive-stance.ts",
+    "src/campaign/evasive-stance.ts",
+    "src/campaign/reviewed-evasive.ts",
+    "src/campaign/reviewed-evasive-content.ts"
+  ]
+}

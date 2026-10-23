@@ -1,0 +1,417 @@
+{
+ "schemaVersion": 1,
+ "effect": "shield-break",
+ "source": "Generated from SHIELD_BREAK_MATRIX_CASES in test/helpers/shield-break-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-shield-break-path",
+  "targetHitPoints": 50,
+  "hostileGear": [
+   "shield"
+  ],
+  "frameNote": "Each case may move the primary and add units (units).",
+  "preview": {
+   "operation": "preview-shield-break",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "shieldBreakPreview"
+  },
+  "cast": {
+   "operation": "shield-break",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 35
+     }
+    },
+    "expected": {
+     "chancePercent": 35,
+     "suppressionPercent": 50,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 6,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 40
+     }
+    },
+    "expected": {
+     "chancePercent": 40,
+     "suppressionPercent": 50,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 6,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 40
+     }
+    },
+    "expected": {
+     "chancePercent": 40,
+     "suppressionPercent": 55,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 6,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 45
+     }
+    },
+    "expected": {
+     "chancePercent": 45,
+     "suppressionPercent": 55,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 6,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 45
+     }
+    },
+    "expected": {
+     "chancePercent": 45,
+     "suppressionPercent": 60,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 60,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 65,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-intensity",
+    "level": 8,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 70,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 4,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv8-duration",
+    "level": 8,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 65,
+     "turns": 3,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-intensity",
+    "level": 9,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 75,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 3,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv9-duration",
+    "level": 9,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 65,
+     "turns": 4,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-intensity",
+    "level": 10,
+    "fork": "intensity",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 80,
+     "turns": 2,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 3,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv10-duration",
+    "level": 10,
+    "fork": "duration",
+    "units": {},
+    "rng": {
+     "strike": {
+      "primary": 10
+     },
+     "roll": {
+      "primary": 50
+     }
+    },
+    "expected": {
+     "chancePercent": 50,
+     "suppressionPercent": 65,
+     "turns": 5,
+     "strikeDamage": 10,
+     "applied": true,
+     "blockBefore": 12,
+     "blockAfter": 5,
+     "events": [
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,349 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-protect",
+ "source": "Generated from PROTECT_MATRIX_CASES in test/helpers/protect-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-protect-path",
+  "contentFlag": "reviewedProtect",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-protect",
+   "fields": {
+    "targetId": "$hero"
+   },
+   "previewKey": "protectPreview"
+  },
+  "cast": {
+   "operation": "reviewed-protect",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "protect-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 4,
+     "duration": 2,
+     "reduction": 20,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 5,
+     "duration": 2,
+     "reduction": 20,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 5,
+     "duration": 2,
+     "reduction": 25,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 2,
+     "reduction": 25,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 2,
+     "reduction": 30,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 6,
+     "duration": 3,
+     "reduction": 30,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 30,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-8-fortify",
+    "level": 8,
+    "fork": "fortify",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 35,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-8-share",
+    "level": 8,
+    "fork": "share",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 20,
+     "radius": 1,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-9-fortify",
+    "level": 9,
+    "fork": "fortify",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 40,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-9-share",
+    "level": 9,
+    "fork": "share",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 20,
+     "radius": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-10-fortify",
+    "level": 10,
+    "fork": "fortify",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 45,
+     "radius": 0,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   },
+   {
+    "id": "protect-10-share",
+    "level": 10,
+    "fork": "share",
+    "units": {},
+    "rng": {
+     "application": []
+    },
+    "expected": {
+     "rangeCells": 7,
+     "duration": 3,
+     "reduction": 25,
+     "radius": 2,
+     "uses": 1,
+     "cost": "Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Living eligibility must be authored in the fixture; independent target rolls and all bound movement guards use the automated matrix."
+    }
+   }
+  ]
+ }
+}

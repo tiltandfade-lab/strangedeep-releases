@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "protocol": "strangedeep-cathedral-donor-integration-v1",
+  "rule": "A retained donor may appear on a generated floor only through its declared mechanical host. Import/gallery success is not spatial approval.",
+  "technicalEvidence": [
+    "design-notebook/Strangedeep/Visual Direction/assets/visual-milestones/2026-08-25/cathedral-donor-audit/asset-import-report.json",
+    "design-notebook/Strangedeep/Visual Direction/assets/visual-milestones/2026-08-25/cathedral-donor-audit/donor-gallery-all-20.png",
+    "godot/retained-cathedral-donor-aa-audit.json"
+  ],
+  "technicalEvidenceSha256": [
+    "805d9cfeeaac12fabd142f2d095ec7155ae63a7b13acc4c13e1db0deb06d7d94",
+    "c285e8f5df91fa7e9ec7c881644072a63799c1fbfadbf0149e6099fd4872201a",
+    "918a9cad3e3b4f4424df538075f3adbb4da9dfe301013c2ea08acf9f34265b94"
+  ],
+  "items": [
+    {"id":"dungeon-gate-frame","materialProjection":"triplanar","hostPolicy":"doorway-assembly","footprintPolicy":"door-aperture-owned","integration":"imported-gallery-only","nextAuthority":"replace-not-overlay the procedural threshold frame","technical":"passed","approval":"open"},
+    {"id":"dungeon-gate-door","materialProjection":"triplanar","hostPolicy":"door-state","footprintPolicy":"door-aperture-owned","integration":"imported-gallery-only","nextAuthority":"live open/closed/locked door-state adapter","technical":"passed","approval":"open"},
+    {"id":"dungeon-gate-bars","materialProjection":"triplanar","hostPolicy":"door-state","footprintPolicy":"door-aperture-owned","integration":"imported-gallery-only","nextAuthority":"live portcullis-state adapter","technical":"passed","approval":"open"},
+    {"id":"dungeon-stairs","materialProjection":"triplanar","hostPolicy":"elevation-transition","footprintPolicy":"excluded-from-flat-five-floor-demo","integration":"retained-not-floor-integrated","nextAuthority":"founder excluded elevation gameplay from the demo","technical":"passed","approval":"open"},
+    {"id":"wall-flame-sconce","materialProjection":"triplanar","hostPolicy":"lighting-wall-socket","footprintPolicy":"exact-wall-face-no-floor-owner","integration":"generated-floor-integrated","nextAuthority":"founder visual review","technical":"passed","approval":"open"},
+    {"id":"beacon-signal-fire-basket","materialProjection":"triplanar","hostPolicy":"standing-practical-vertex","footprintPolicy":"four-adjacent-cell-sweep-with-zero-cell-occupancy","integration":"blocked-on-spatial-authority","nextAuthority":"seeded vertex-practical schema and adjacent attack-sweep contract","technical":"passed","approval":"open"},
+    {"id":"archive-lectern","materialProjection":"triplanar","hostPolicy":"exclusive-freestanding-prop","footprintPolicy":"one-cell-blocking","integration":"blocked-on-spatial-authority","nextAuthority":"lectern prop family and approach socket","technical":"passed","approval":"open"},
+    {"id":"timber-holding-cage","materialProjection":"triplanar","hostPolicy":"exclusive-freestanding-prop","footprintPolicy":"one-cell-blocking","integration":"blocked-on-spatial-authority","nextAuthority":"cage prop family and interaction clearance","technical":"passed","approval":"open"},
+    {"id":"hand-windlass","materialProjection":"triplanar","hostPolicy":"exclusive-freestanding-prop","footprintPolicy":"two-by-one-blocking","integration":"blocked-on-spatial-authority","nextAuthority":"windlass prop family and interaction clearance","technical":"passed","approval":"open"},
+    {"id":"timber-repair-brace","materialProjection":"triplanar","hostPolicy":"damaged-wall-run","footprintPolicy":"wall-attached-no-floor-owner","integration":"generated-floor-integrated","nextAuthority":"founder visual review","technical":"passed","approval":"open"},
+    {"id":"low-cover-boulder-cluster","materialProjection":"triplanar","hostPolicy":"threat-cover-corner","footprintPolicy":"one-cell-low-cover","integration":"blocked-on-spatial-authority","nextAuthority":"mechanical half-cover authority","technical":"passed","approval":"open"},
+    {"id":"graveyard-altar-stone","materialProjection":"uv1","hostPolicy":"exclusive-freestanding-prop","footprintPolicy":"one-cell-blocking","integration":"blocked-on-spatial-authority","nextAuthority":"altar prop family and approach socket","technical":"passed","approval":"open"},
+    {"id":"graveyard-bench","materialProjection":"uv1","hostPolicy":"pew-compatible-prop-variant","footprintPolicy":"exclusive-blocking-owner","integration":"blocked-on-spatial-authority","nextAuthority":"catalog variant bound to an exact pew footprint","technical":"passed","approval":"open"},
+    {"id":"graveyard-bench-damaged","materialProjection":"uv1","hostPolicy":"pew-compatible-prop-variant","footprintPolicy":"exclusive-blocking-owner","integration":"blocked-on-spatial-authority","nextAuthority":"damaged/burning pew state authority","technical":"passed","approval":"open"},
+    {"id":"graveyard-candle","materialProjection":"uv1","hostPolicy":"hosted-small-dressing","footprintPolicy":"nonblocking-only-on-an-owned-prop-or-vertex","integration":"blocked-on-spatial-authority","nextAuthority":"tabletop or vertex host socket","technical":"passed","approval":"open"},
+    {"id":"graveyard-candle-group","materialProjection":"uv1","hostPolicy":"nonblocking-room-dressing","footprintPolicy":"zero-cell-occupancy","integration":"generated-floor-integrated","nextAuthority":"damage-state ownership remains unclaimed","technical":"passed","approval":"open"},
+    {"id":"graveyard-coffin","materialProjection":"uv1","hostPolicy":"sarcophagus-compatible-prop-variant","footprintPolicy":"two-by-one-blocking","integration":"blocked-on-spatial-authority","nextAuthority":"catalog variant bound to an exact sarcophagus footprint","technical":"passed","approval":"open"},
+    {"id":"graveyard-debris","materialProjection":"triplanar","hostPolicy":"nonblocking-room-dressing","footprintPolicy":"zero-cell-occupancy","integration":"generated-floor-integrated","nextAuthority":"damage-state ownership remains unclaimed","technical":"passed","approval":"open"},
+    {"id":"graveyard-chalice","materialProjection":"uv1","hostPolicy":"hosted-small-dressing","footprintPolicy":"nonblocking-only-on-an-owned-prop","integration":"blocked-on-spatial-authority","nextAuthority":"altar, lectern, chest, or sarcophagus host socket","technical":"passed","approval":"open"},
+    {"id":"graveyard-urn-round","materialProjection":"uv1","hostPolicy":"nonblocking-room-dressing","footprintPolicy":"zero-cell-occupancy","integration":"generated-floor-integrated","nextAuthority":"damage-state ownership remains unclaimed","technical":"passed","approval":"open"}
+  ]
+}

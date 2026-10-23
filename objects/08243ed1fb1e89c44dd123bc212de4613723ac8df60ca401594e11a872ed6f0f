@@ -1,0 +1,55 @@
+# Initiative portrait sets
+
+The six PNG files beside this README are stable runtime aliases. They currently contain the
+promoted `matched-bust-v2` set. The truthful former live-figure crops under `v1/` are the permanent
+recovery path used if a production alias fails to load.
+
+## Matched bust v2 intake
+
+Production replacement art may arrive as one three-up Fighter/Zombie/Skeleton sheet or as three
+separate sources. Every art-directed crop must be square and at least 384 × 384 source pixels. The
+spec records an exact source hash, crop, hand-placed eye Y, alpha/matte policy, and provenance for
+each identity. Use [`v2-source.example.json`](v2-source.example.json) as the editable schema.
+An art-directed square may extend beyond the source canvas; that region becomes transparent
+padding, is recorded in the receipt, and is allowed only when at least 384 governed source pixels
+remain on both axes.
+
+The default alpha path expects transparent-background PNG source art. An opaque, truly flat source
+may instead declare an explicit color matte:
+
+```json
+"matte": { "mode": "color", "rgb": [12, 12, 13], "threshold": 18, "softness": 20 }
+```
+
+Do not use color-matte removal on a textured or graduated background; regenerate or isolate the
+source first. The validator rejects a source crop below 384 px, a hash mismatch, an eye outside the
+shared normalized band, a silhouette outside 70–85% vertical occupancy, any silhouette touching
+the outer 1% safe edge, an incomplete identity set, or missing provenance. Occupancy means the
+visible silhouette's top-to-bottom extent divided by the square crop height—not opaque pixel area.
+
+Build a candidate without changing production aliases:
+
+```sh
+python3 tools/build-initiative-portraits.py build-v2 path/to/edited-spec.json
+```
+
+This writes `v2/` transactionally only after all three identities pass. Inspect that complete set
+at 56 CSS px and DPR2, then promote it:
+
+```sh
+python3 tools/build-initiative-portraits.py contact-sheet path/to/contact-sheet.png
+python3 tools/build-initiative-portraits.py promote-v2
+```
+
+Promotion rechecks source and output hashes before replacing the six stable aliases and their
+manifest. It never alters `v1/`. The runtime retries the versioned v1 pair once if a stable alias
+cannot load. Unknown figure IDs continue to use the existing letter fallback.
+
+Reproduce the pipeline's acceptance and failure cases with:
+
+```sh
+python3 tools/build-initiative-portraits.py self-test
+```
+
+The production manifest is the receipt. Generated source art still requires the founder's visual
+approval; passing geometry and hash checks cannot approve identity, lighting, armor, or expression.

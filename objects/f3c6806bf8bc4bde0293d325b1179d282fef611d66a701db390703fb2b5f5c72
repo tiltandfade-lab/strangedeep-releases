@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-base-hood",
+  "displayName": "Sack hood (base layer)",
+  "layer": "base",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "head",
+    "neck_01",
+    "spine_03"
+  ],
+  "vertices": 289,
+  "weightClass": "light",
+  "triangles": 552,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_family.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "13a434c2d951bb7057f9cf663b9ae7e42afdc0e37cf46739904aac1649ee12fb",
+    "librarySha256": "ef4dbf24969fb3f8dd312ab23e531ed2984e70211a9f1a8db2577f8a321d342e",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-base-hood.glb",
+    "glbBytes": 34744,
+    "glbSha256": "3529083f724217c92aab18c4d8be0603a9b506afaf0974495466dfdecec50dd4"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-base-hood.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 37,
+        "clavicle_r": 34,
+        "head": 299,
+        "neck_01": 154,
+        "spine_03": 88
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Base layer (founder ruling, October 11). Every vertex carries the body's own bone blend (at most four bones), so it bends exactly like the skin under it."
+}

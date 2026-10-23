@@ -1,0 +1,401 @@
+{
+ "schemaVersion": 1,
+ "effect": "dislodge",
+ "source": "Generated from DISLODGE_MATRIX_CASES in test/helpers/dislodge-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    4,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-dislodge-path",
+  "targetHitPoints": 200,
+  "weapon": "bow",
+  "preview": {
+   "operation": "preview-dislodge",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "dislodgePreview"
+  },
+  "cast": {
+   "operation": "dislodge",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "expected": {
+     "damagePercent": 25,
+     "damage": 5,
+     "accuracyBonus": 20,
+     "chancePercent": 50,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "expected": {
+     "damagePercent": 30,
+     "damage": 6,
+     "accuracyBonus": 20,
+     "chancePercent": 50,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "expected": {
+     "damagePercent": 30,
+     "damage": 6,
+     "accuracyBonus": 20,
+     "chancePercent": 55,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "expected": {
+     "damagePercent": 40,
+     "damage": 8,
+     "accuracyBonus": 20,
+     "chancePercent": 55,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "expected": {
+     "damagePercent": 40,
+     "damage": 8,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "segment",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv8-distance",
+    "level": 8,
+    "fork": "distance",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 3,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv9-distance",
+    "level": 9,
+    "fork": "distance",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 4,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv10-distance",
+    "level": 10,
+    "fork": "distance",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 20,
+     "chancePercent": 65,
+     "flushTiles": 5,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv8-precision",
+    "level": 8,
+    "fork": "precision",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 23,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv9-precision",
+    "level": 9,
+    "fork": "precision",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 26,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   },
+   {
+    "id": "lv10-precision",
+    "level": 10,
+    "fork": "precision",
+    "expected": {
+     "damagePercent": 50,
+     "damage": 10,
+     "accuracyBonus": 30,
+     "chancePercent": 65,
+     "flushTiles": 2,
+     "usePeriod": "encounter",
+     "arenaNote": "Needs named Cover staging in the arena; the automated matrix includes the crate.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "dislodge"
+      }
+     ]
+    },
+    "units": {},
+    "rng": {
+     "strike": [
+      50,
+      20
+     ],
+     "flush": 1
+    }
+   }
+  ]
+ }
+}

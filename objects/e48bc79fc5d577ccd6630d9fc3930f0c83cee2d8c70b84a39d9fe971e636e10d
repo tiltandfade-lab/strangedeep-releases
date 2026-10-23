@@ -1,0 +1,1376 @@
+{
+  "schemaVersion": 1,
+  "packId": "kenney-food-suite-v1",
+  "sourceCsv": "design/balance/food-suite/foods.csv",
+  "sourceSha256": "8f8105dc480a5bc6b1a2fbf9567ab1ddcdb0c2167c89b1661cc174b6a0bc9c03",
+  "definitions": [
+    {
+      "id": "food-definition_3c1c796fa4cd7313",
+      "label": "Apple",
+      "nameKey": "food.apple.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "apple"
+    },
+    {
+      "id": "food-definition_7093e2868477246c",
+      "label": "Pear",
+      "nameKey": "food.pear.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pear"
+    },
+    {
+      "id": "food-definition_c1fa6b5b94f5cf47",
+      "label": "Carrot",
+      "nameKey": "food.carrot.name",
+      "rank": "Normal",
+      "healing": 2,
+      "appearance": "carrot"
+    },
+    {
+      "id": "food-definition_2d8edcdd1adc31e1",
+      "label": "Toast",
+      "nameKey": "food.bread.name",
+      "rank": "Normal",
+      "healing": 4,
+      "appearance": "bread"
+    },
+    {
+      "id": "food-definition_db1ac20fd58f7f33",
+      "label": "Cheese wedge",
+      "nameKey": "food.cheese-cut.name",
+      "rank": "Normal",
+      "healing": 5,
+      "appearance": "cheese-cut"
+    },
+    {
+      "id": "food-definition_05b0cbaf73fb6953",
+      "label": "Cherries",
+      "nameKey": "food.cherries.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "cherries"
+    },
+    {
+      "id": "food-definition_3aa7d5faf090c9f8",
+      "label": "Strawberry",
+      "nameKey": "food.strawberry.name",
+      "rank": "Normal",
+      "healing": 2,
+      "appearance": "strawberry"
+    },
+    {
+      "id": "food-definition_9bb09270f4e7758e",
+      "label": "Grapes",
+      "nameKey": "food.grapes.name",
+      "rank": "Normal",
+      "healing": 4,
+      "appearance": "grapes"
+    },
+    {
+      "id": "food-definition_007ebc919880741d",
+      "label": "Radish",
+      "nameKey": "food.radish.name",
+      "rank": "Normal",
+      "healing": 2,
+      "appearance": "radish"
+    },
+    {
+      "id": "food-definition_6eb8be7c80ffe1e2",
+      "label": "Mushroom",
+      "nameKey": "food.mushroom.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "mushroom"
+    },
+    {
+      "id": "food-definition_b8d4dfe25dd76980",
+      "label": "Onion",
+      "nameKey": "food.onion.name",
+      "rank": "Normal",
+      "healing": 2,
+      "appearance": "onion"
+    },
+    {
+      "id": "food-definition_018e24361d4d485c",
+      "label": "Tomato",
+      "nameKey": "food.tomato.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "tomato"
+    },
+    {
+      "id": "food-definition_760c11f6b9b4ce1c",
+      "label": "Cabbage",
+      "nameKey": "food.cabbage.name",
+      "rank": "Normal",
+      "healing": 5,
+      "appearance": "cabbage"
+    },
+    {
+      "id": "food-definition_d32c8f9aca361718",
+      "label": "Beetroot",
+      "nameKey": "food.beet.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "beet"
+    },
+    {
+      "id": "food-definition_1eb5c2ee5c703ef4",
+      "label": "Orange",
+      "nameKey": "food.orange.name",
+      "rank": "Normal",
+      "healing": 4,
+      "appearance": "orange"
+    },
+    {
+      "id": "food-definition_02939eb552a3aa79",
+      "label": "Banana",
+      "nameKey": "food.banana.name",
+      "rank": "Hearty",
+      "healing": 7,
+      "appearance": "banana"
+    },
+    {
+      "id": "food-definition_44834c25a914cd29",
+      "label": "Broccoli",
+      "nameKey": "food.broccoli.name",
+      "rank": "Hearty",
+      "healing": 7,
+      "appearance": "broccoli"
+    },
+    {
+      "id": "food-definition_ca563fbb5378e527",
+      "label": "Cauliflower",
+      "nameKey": "food.cauliflower.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "cauliflower"
+    },
+    {
+      "id": "food-definition_c93287ecb1df6692",
+      "label": "Corn cob",
+      "nameKey": "food.corn.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "corn"
+    },
+    {
+      "id": "food-definition_df6233c887c49cc6",
+      "label": "Egg",
+      "nameKey": "food.egg.name",
+      "rank": "Hearty",
+      "healing": 7,
+      "appearance": "egg"
+    },
+    {
+      "id": "food-definition_76053926d713808c",
+      "label": "Fried egg",
+      "nameKey": "food.egg-cooked.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "egg-cooked"
+    },
+    {
+      "id": "food-definition_c6bc01c311cf322f",
+      "label": "Boiled egg half",
+      "nameKey": "food.egg-half.name",
+      "rank": "Hearty",
+      "healing": 7,
+      "appearance": "egg-half"
+    },
+    {
+      "id": "food-definition_7c4bb164ec14abca",
+      "label": "Bread loaf",
+      "nameKey": "food.loaf.name",
+      "rank": "Hearty",
+      "healing": 10,
+      "appearance": "loaf"
+    },
+    {
+      "id": "food-definition_14033c8c9fb743b2",
+      "label": "Round loaf",
+      "nameKey": "food.loaf-round.name",
+      "rank": "Hearty",
+      "healing": 10,
+      "appearance": "loaf-round"
+    },
+    {
+      "id": "food-definition_d6b57b04c3a914ea",
+      "label": "Baguette",
+      "nameKey": "food.loaf-baguette.name",
+      "rank": "Hearty",
+      "healing": 10,
+      "appearance": "loaf-baguette"
+    },
+    {
+      "id": "food-definition_c9d599ea02aa98a8",
+      "label": "Sausage",
+      "nameKey": "food.sausage.name",
+      "rank": "Hearty",
+      "healing": 9,
+      "appearance": "sausage"
+    },
+    {
+      "id": "food-definition_502542166b3d71bc",
+      "label": "Cut sausage",
+      "nameKey": "food.sausage-half.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "sausage-half"
+    },
+    {
+      "id": "food-definition_86aab1480bfe9946",
+      "label": "Grilled sausage",
+      "nameKey": "food.meat-sausage.name",
+      "rank": "Hearty",
+      "healing": 10,
+      "appearance": "meat-sausage"
+    },
+    {
+      "id": "food-definition_2096501b6d96b807",
+      "label": "Roast leg",
+      "nameKey": "food.roast-leg.name",
+      "rank": "Hearty",
+      "healing": 12,
+      "appearance": "roast-leg"
+    },
+    {
+      "id": "food-definition_d733fd3c7acde3a2",
+      "label": "Bacon",
+      "nameKey": "food.bacon.name",
+      "rank": "Hearty",
+      "healing": 9,
+      "appearance": "bacon"
+    },
+    {
+      "id": "food-definition_c5b72c075938432b",
+      "label": "Cooked steak",
+      "nameKey": "food.meat-cooked.name",
+      "rank": "Fine",
+      "healing": 18,
+      "appearance": "meat-cooked"
+    },
+    {
+      "id": "food-definition_1ed6a843742c01af",
+      "label": "Ribs",
+      "nameKey": "food.meat-ribs.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "meat-ribs"
+    },
+    {
+      "id": "food-definition_102aafd4cbecb3ba",
+      "label": "Whole fish",
+      "nameKey": "food.fish.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "fish"
+    },
+    {
+      "id": "food-definition_cbe4cdf3445ffcdf",
+      "label": "Ham joint",
+      "nameKey": "food.whole-ham.name",
+      "rank": "Fine",
+      "healing": 22,
+      "appearance": "whole-ham"
+    },
+    {
+      "id": "food-definition_46800b72dae6a490",
+      "label": "Roast turkey",
+      "nameKey": "food.turkey.name",
+      "rank": "Fine",
+      "healing": 24,
+      "appearance": "turkey"
+    },
+    {
+      "id": "food-definition_5adfb7c7546b09eb",
+      "label": "Soup",
+      "nameKey": "food.bowl-soup.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "bowl-soup"
+    },
+    {
+      "id": "food-definition_027ac973e9fd435f",
+      "label": "Broth",
+      "nameKey": "food.bowl-broth.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "bowl-broth"
+    },
+    {
+      "id": "food-definition_caafe717dbe2ee7b",
+      "label": "Pan of stew",
+      "nameKey": "food.pan-stew.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "pan-stew"
+    },
+    {
+      "id": "food-definition_dc2763e72a832a8b",
+      "label": "Pot of stew",
+      "nameKey": "food.pot-stew.name",
+      "rank": "Fine",
+      "healing": 24,
+      "appearance": "pot-stew"
+    },
+    {
+      "id": "food-definition_5255b672fab12d90",
+      "label": "Mincemeat pie",
+      "nameKey": "food.mincemeat-pie.name",
+      "rank": "Fine",
+      "healing": 22,
+      "appearance": "mincemeat-pie"
+    },
+    {
+      "id": "food-definition_b40604ab15ef1957",
+      "label": "Pie",
+      "nameKey": "food.pie.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "pie"
+    },
+    {
+      "id": "food-definition_d35f89d5d00f8619",
+      "label": "Meat skewer",
+      "nameKey": "food.skewer.name",
+      "rank": "Fine",
+      "healing": 18,
+      "appearance": "skewer"
+    },
+    {
+      "id": "food-definition_2e7c243ae85f9438",
+      "label": "Vegetable skewer",
+      "nameKey": "food.skewer-vegetables.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "skewer-vegetables"
+    },
+    {
+      "id": "food-definition_f374eed20b976670",
+      "label": "Salad",
+      "nameKey": "food.salad.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "salad"
+    },
+    {
+      "id": "food-definition_fb260967eca75f0b",
+      "label": "Sandwich",
+      "nameKey": "food.sandwich.name",
+      "rank": "Fine",
+      "healing": 16,
+      "appearance": "sandwich"
+    },
+    {
+      "id": "food-definition_f944353261488250",
+      "label": "Cake",
+      "nameKey": "food.cake.name",
+      "rank": "Gourmet",
+      "healing": 36,
+      "appearance": "cake"
+    },
+    {
+      "id": "food-definition_9e502b34dfe5799a",
+      "label": "Celebration cake",
+      "nameKey": "food.cake-birthday.name",
+      "rank": "Gourmet",
+      "healing": 48,
+      "appearance": "cake-birthday"
+    },
+    {
+      "id": "food-definition_a3bfe779ee0ac085",
+      "label": "Cupcake",
+      "nameKey": "food.cupcake.name",
+      "rank": "Gourmet",
+      "healing": 28,
+      "appearance": "cupcake"
+    },
+    {
+      "id": "food-definition_9256c5c95cb792d5",
+      "label": "Muffin",
+      "nameKey": "food.muffin.name",
+      "rank": "Gourmet",
+      "healing": 28,
+      "appearance": "muffin"
+    },
+    {
+      "id": "food-definition_349ca78228ce30a0",
+      "label": "Cookie",
+      "nameKey": "food.cookie.name",
+      "rank": "Gourmet",
+      "healing": 28,
+      "appearance": "cookie"
+    },
+    {
+      "id": "food-definition_ad5e90c4a4576aaa",
+      "label": "Chocolate cookie",
+      "nameKey": "food.cookie-chocolate.name",
+      "rank": "Gourmet",
+      "healing": 30,
+      "appearance": "cookie-chocolate"
+    },
+    {
+      "id": "food-definition_b87ad5c350a98e2f",
+      "label": "Croissant",
+      "nameKey": "food.croissant.name",
+      "rank": "Gourmet",
+      "healing": 30,
+      "appearance": "croissant"
+    },
+    {
+      "id": "food-definition_e6af0d2514d6a829",
+      "label": "Chocolate",
+      "nameKey": "food.chocolate.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "chocolate"
+    },
+    {
+      "id": "food-definition_8b096fc871f5f0c6",
+      "label": "Pudding",
+      "nameKey": "food.pudding.name",
+      "rank": "Gourmet",
+      "healing": 36,
+      "appearance": "pudding"
+    },
+    {
+      "id": "food-definition_2c1c957ec784c404",
+      "label": "Pancakes",
+      "nameKey": "food.pancakes.name",
+      "rank": "Gourmet",
+      "healing": 36,
+      "appearance": "pancakes"
+    },
+    {
+      "id": "food-definition_f5a0302f0e9f42d3",
+      "label": "Waffle",
+      "nameKey": "food.waffle.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "waffle"
+    },
+    {
+      "id": "food-definition_fd5413c37caa182f",
+      "label": "Sugar doughnut",
+      "nameKey": "food.donut.name",
+      "rank": "Gourmet",
+      "healing": 28,
+      "appearance": "donut"
+    },
+    {
+      "id": "food-definition_afdd6b1f8f998003",
+      "label": "Chocolate doughnut",
+      "nameKey": "food.donut-chocolate.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "donut-chocolate"
+    },
+    {
+      "id": "food-definition_9253c3227f826ac0",
+      "label": "Sprinkled doughnut",
+      "nameKey": "food.donut-sprinkles.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "donut-sprinkles"
+    },
+    {
+      "id": "food-definition_4a2bf443a90105af",
+      "label": "Salmon rice rolls",
+      "nameKey": "food.maki-salmon.name",
+      "rank": "Gourmet",
+      "healing": 40,
+      "appearance": "maki-salmon"
+    },
+    {
+      "id": "food-definition_07e631e5f980ece9",
+      "label": "Avocado half",
+      "nameKey": "food.advocado-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "advocado-half"
+    },
+    {
+      "id": "food-definition_0cd0aa19b5e8aea5",
+      "label": "Apple half",
+      "nameKey": "food.apple-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "apple-half"
+    },
+    {
+      "id": "food-definition_781d3af82205ee36",
+      "label": "Avocado",
+      "nameKey": "food.avocado.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "avocado"
+    },
+    {
+      "id": "food-definition_ee345ddf163250c3",
+      "label": "Bacon raw",
+      "nameKey": "food.bacon-raw.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "bacon-raw"
+    },
+    {
+      "id": "food-definition_804925ff9ef72563",
+      "label": "Empty paper bag",
+      "nameKey": "food.bag.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "bag"
+    },
+    {
+      "id": "food-definition_6e29ab306152094e",
+      "label": "Folded paper bag",
+      "nameKey": "food.bag-flat.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "bag-flat"
+    },
+    {
+      "id": "food-definition_92c6a6406f48821e",
+      "label": "Ketchup",
+      "nameKey": "food.bottle-ketchup.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "bottle-ketchup"
+    },
+    {
+      "id": "food-definition_a2638eac12df1452",
+      "label": "Mustard",
+      "nameKey": "food.bottle-musterd.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "bottle-musterd"
+    },
+    {
+      "id": "food-definition_86b296be7baaf344",
+      "label": "Cooking oil",
+      "nameKey": "food.bottle-oil.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "bottle-oil"
+    },
+    {
+      "id": "food-definition_fba30cce89c11054",
+      "label": "Empty bowl",
+      "nameKey": "food.bowl.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "bowl"
+    },
+    {
+      "id": "food-definition_9c45841f9544a303",
+      "label": "Bowl cereal",
+      "nameKey": "food.bowl-cereal.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "bowl-cereal"
+    },
+    {
+      "id": "food-definition_8a2bdc0167116a8d",
+      "label": "Burger",
+      "nameKey": "food.burger.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "burger"
+    },
+    {
+      "id": "food-definition_91639e87bf0b96ab",
+      "label": "Burger cheese",
+      "nameKey": "food.burger-cheese.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "burger-cheese"
+    },
+    {
+      "id": "food-definition_541c30abb70bbd57",
+      "label": "Burger cheese double",
+      "nameKey": "food.burger-cheese-double.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "burger-cheese-double"
+    },
+    {
+      "id": "food-definition_6d2ad9175c9b747b",
+      "label": "Burger double",
+      "nameKey": "food.burger-double.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "burger-double"
+    },
+    {
+      "id": "food-definition_c43753bb98100127",
+      "label": "Tinned food",
+      "nameKey": "food.can.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "can"
+    },
+    {
+      "id": "food-definition_be5506d3e5edec3f",
+      "label": "Empty tin",
+      "nameKey": "food.can-open.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "can-open"
+    },
+    {
+      "id": "food-definition_4028df173e01167b",
+      "label": "Small food tin",
+      "nameKey": "food.can-small.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "can-small"
+    },
+    {
+      "id": "food-definition_dc9a4a3eeca2a1c4",
+      "label": "Candy bar",
+      "nameKey": "food.candy-bar.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "candy-bar"
+    },
+    {
+      "id": "food-definition_ebbf99ad73e3c731",
+      "label": "Wrapped candy bar",
+      "nameKey": "food.candy-bar-wrapper.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "candy-bar-wrapper"
+    },
+    {
+      "id": "food-definition_6656548b6bcc8cb7",
+      "label": "Drink carton",
+      "nameKey": "food.carton.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "carton"
+    },
+    {
+      "id": "food-definition_05239444bf8e892a",
+      "label": "Small drink carton",
+      "nameKey": "food.carton-small.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "carton-small"
+    },
+    {
+      "id": "food-definition_7896525ee65e7564",
+      "label": "Celery stick",
+      "nameKey": "food.celery-stick.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "celery-stick"
+    },
+    {
+      "id": "food-definition_1497bbf9932a6a05",
+      "label": "Cheese",
+      "nameKey": "food.cheese.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "cheese"
+    },
+    {
+      "id": "food-definition_3fdb075e190c0c64",
+      "label": "Takeaway meal",
+      "nameKey": "food.chinese.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "chinese"
+    },
+    {
+      "id": "food-definition_640a94d6908a627c",
+      "label": "Wrapped chocolate",
+      "nameKey": "food.chocolate-wrapper.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "chocolate-wrapper"
+    },
+    {
+      "id": "food-definition_76b0e9b8ba62e5f6",
+      "label": "Cocktail",
+      "nameKey": "food.cocktail.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "cocktail"
+    },
+    {
+      "id": "food-definition_8b05bcfa4ec7a6f8",
+      "label": "Coconut",
+      "nameKey": "food.coconut.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "coconut"
+    },
+    {
+      "id": "food-definition_f4e4d3e61815364c",
+      "label": "Coconut half",
+      "nameKey": "food.coconut-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "coconut-half"
+    },
+    {
+      "id": "food-definition_94731f3b105237a7",
+      "label": "Corn dog",
+      "nameKey": "food.corn-dog.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "corn-dog"
+    },
+    {
+      "id": "food-definition_4cc16b699f4130f5",
+      "label": "Empty cup",
+      "nameKey": "food.cup.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "cup"
+    },
+    {
+      "id": "food-definition_26f484a0b89fa5fe",
+      "label": "Cup coffee",
+      "nameKey": "food.cup-coffee.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "cup-coffee"
+    },
+    {
+      "id": "food-definition_7d85702790b595cb",
+      "label": "Empty cup saucer",
+      "nameKey": "food.cup-saucer.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "cup-saucer"
+    },
+    {
+      "id": "food-definition_6182c4ee7b1874f4",
+      "label": "Cup tea",
+      "nameKey": "food.cup-tea.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "cup-tea"
+    },
+    {
+      "id": "food-definition_230cb1ddf6a028e1",
+      "label": "Dim sum",
+      "nameKey": "food.dim-sum.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "dim-sum"
+    },
+    {
+      "id": "food-definition_cb389a1d3c613121",
+      "label": "Empty egg cup",
+      "nameKey": "food.egg-cup.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "egg-cup"
+    },
+    {
+      "id": "food-definition_31ea5c00c4b424de",
+      "label": "Eggplant",
+      "nameKey": "food.eggplant.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "eggplant"
+    },
+    {
+      "id": "food-definition_57e92483e4d8a4ef",
+      "label": "Fishbones",
+      "nameKey": "food.fish-bones.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "fish-bones"
+    },
+    {
+      "id": "food-definition_d7c0d08a519cc2c8",
+      "label": "Frappe",
+      "nameKey": "food.frappe.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "frappe"
+    },
+    {
+      "id": "food-definition_07c1d5ec2b5ba092",
+      "label": "Fries",
+      "nameKey": "food.fries.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "fries"
+    },
+    {
+      "id": "food-definition_84c41b4f2b518c73",
+      "label": "Empty fries carton",
+      "nameKey": "food.fries-empty.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "fries-empty"
+    },
+    {
+      "id": "food-definition_6a62b40c99429e32",
+      "label": "Frikandel special",
+      "nameKey": "food.frikandel-speciaal.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "frikandel-speciaal"
+    },
+    {
+      "id": "food-definition_afea4dd844b3db96",
+      "label": "Empty frying pan",
+      "nameKey": "food.frying-pan.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "frying-pan"
+    },
+    {
+      "id": "food-definition_894f41ee111c23f4",
+      "label": "Ginger bread",
+      "nameKey": "food.ginger-bread.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "ginger-bread"
+    },
+    {
+      "id": "food-definition_ef0013bbd29c4127",
+      "label": "Empty glass",
+      "nameKey": "food.glass.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "glass"
+    },
+    {
+      "id": "food-definition_e69ece99156ac825",
+      "label": "Empty wine glass",
+      "nameKey": "food.glass-wine.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "glass-wine"
+    },
+    {
+      "id": "food-definition_197858d89ca08496",
+      "label": "Honey",
+      "nameKey": "food.honey.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "honey"
+    },
+    {
+      "id": "food-definition_afb4ea5960a6fde5",
+      "label": "Hot dog",
+      "nameKey": "food.hot-dog.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "hot-dog"
+    },
+    {
+      "id": "food-definition_a49bf8738890b85f",
+      "label": "Hot dog raw",
+      "nameKey": "food.hot-dog-raw.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "hot-dog-raw"
+    },
+    {
+      "id": "food-definition_6a87e1a33235ab8f",
+      "label": "Ice cream",
+      "nameKey": "food.ice-cream.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "ice-cream"
+    },
+    {
+      "id": "food-definition_02b3050f148c1033",
+      "label": "Empty ice cream cone",
+      "nameKey": "food.ice-cream-cne.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "ice-cream-cne"
+    },
+    {
+      "id": "food-definition_f18e79b38f34629f",
+      "label": "Empty ice cream cup",
+      "nameKey": "food.ice-cream-cup.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "ice-cream-cup"
+    },
+    {
+      "id": "food-definition_f628f805568b5e89",
+      "label": "Ice cream scoop chocolate",
+      "nameKey": "food.ice-cream-scoop-chocolate.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "ice-cream-scoop-chocolate"
+    },
+    {
+      "id": "food-definition_f52125de909a83e4",
+      "label": "Ice cream scoop mint",
+      "nameKey": "food.ice-cream-scoop-mint.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "ice-cream-scoop-mint"
+    },
+    {
+      "id": "food-definition_bd33324110e478cd",
+      "label": "Leek",
+      "nameKey": "food.leek.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "leek"
+    },
+    {
+      "id": "food-definition_c9ab32bc0d314822",
+      "label": "Lemon",
+      "nameKey": "food.lemon.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "lemon"
+    },
+    {
+      "id": "food-definition_c827e1e00803b33e",
+      "label": "Lemon half",
+      "nameKey": "food.lemon-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "lemon-half"
+    },
+    {
+      "id": "food-definition_e07e6e4d05690451",
+      "label": "Lollypop",
+      "nameKey": "food.lollypop.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "lollypop"
+    },
+    {
+      "id": "food-definition_41414d2b0615fed7",
+      "label": "Maki roe",
+      "nameKey": "food.maki-roe.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "maki-roe"
+    },
+    {
+      "id": "food-definition_2b9196bf0940d323",
+      "label": "Maki vegetable",
+      "nameKey": "food.maki-vegetable.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "maki-vegetable"
+    },
+    {
+      "id": "food-definition_04023a230ccb410f",
+      "label": "Meat patty",
+      "nameKey": "food.meat-patty.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "meat-patty"
+    },
+    {
+      "id": "food-definition_c1ce5f0699f285ec",
+      "label": "Meat raw",
+      "nameKey": "food.meat-raw.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "meat-raw"
+    },
+    {
+      "id": "food-definition_f75965bab5bc3cb8",
+      "label": "Empty mug",
+      "nameKey": "food.mug.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "mug"
+    },
+    {
+      "id": "food-definition_2552d6ee46db5af4",
+      "label": "Mushroom half",
+      "nameKey": "food.mushroom-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "mushroom-half"
+    },
+    {
+      "id": "food-definition_20b6f5dd36c754e1",
+      "label": "Mussel",
+      "nameKey": "food.mussel.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "mussel"
+    },
+    {
+      "id": "food-definition_63ca9d408e4b0f1e",
+      "label": "Mussel open",
+      "nameKey": "food.mussel-open.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "mussel-open"
+    },
+    {
+      "id": "food-definition_5241482e11d48334",
+      "label": "Onion half",
+      "nameKey": "food.onion-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "onion-half"
+    },
+    {
+      "id": "food-definition_6e5ef3fe9ccdfb84",
+      "label": "Empty pan",
+      "nameKey": "food.pan.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "pan"
+    },
+    {
+      "id": "food-definition_87e46bddaaa5c6e1",
+      "label": "Paprika",
+      "nameKey": "food.paprika.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "paprika"
+    },
+    {
+      "id": "food-definition_283329c993b81ed5",
+      "label": "Paprika slice",
+      "nameKey": "food.paprika-slice.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "paprika-slice"
+    },
+    {
+      "id": "food-definition_519e9fa48e0cc20a",
+      "label": "Peanut butter",
+      "nameKey": "food.peanut-butter.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "peanut-butter"
+    },
+    {
+      "id": "food-definition_d999dc953de1cad9",
+      "label": "Pear half",
+      "nameKey": "food.pear-half.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pear-half"
+    },
+    {
+      "id": "food-definition_ffb84550f19442ee",
+      "label": "Pepper",
+      "nameKey": "food.pepper.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pepper"
+    },
+    {
+      "id": "food-definition_b880599d27b023a1",
+      "label": "Pineapple",
+      "nameKey": "food.pineapple.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pineapple"
+    },
+    {
+      "id": "food-definition_4f9743bd01c5fb41",
+      "label": "Pizza",
+      "nameKey": "food.pizza.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "pizza"
+    },
+    {
+      "id": "food-definition_033675c95ee722d5",
+      "label": "Empty pizza box",
+      "nameKey": "food.pizza-box.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "pizza-box"
+    },
+    {
+      "id": "food-definition_6f639ba3d8a7498f",
+      "label": "Empty plate",
+      "nameKey": "food.plate.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "plate"
+    },
+    {
+      "id": "food-definition_c7bd5357d8487dbb",
+      "label": "Broken plate",
+      "nameKey": "food.plate-broken.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "plate-broken"
+    },
+    {
+      "id": "food-definition_fa6b9436dd20185c",
+      "label": "Empty plate deep",
+      "nameKey": "food.plate-deep.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "plate-deep"
+    },
+    {
+      "id": "food-definition_ab27fff654d5e81c",
+      "label": "Empty plate dinner",
+      "nameKey": "food.plate-dinner.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "plate-dinner"
+    },
+    {
+      "id": "food-definition_19ab8198e4f2c856",
+      "label": "Empty plate rectangle",
+      "nameKey": "food.plate-rectangle.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "plate-rectangle"
+    },
+    {
+      "id": "food-definition_48a494672931880b",
+      "label": "Plate sauerkraut",
+      "nameKey": "food.plate-sauerkraut.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "plate-sauerkraut"
+    },
+    {
+      "id": "food-definition_9a1fc01103eb929d",
+      "label": "Popsicle",
+      "nameKey": "food.popsicle.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "popsicle"
+    },
+    {
+      "id": "food-definition_9501f27384b7165f",
+      "label": "Popsicle chocolate",
+      "nameKey": "food.popsicle-chocolate.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "popsicle-chocolate"
+    },
+    {
+      "id": "food-definition_08f6f9d13c928a5d",
+      "label": "Ice lolly stick",
+      "nameKey": "food.popsicle-stick.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "popsicle-stick"
+    },
+    {
+      "id": "food-definition_0ba5228a5aa268c8",
+      "label": "Empty cooking pot",
+      "nameKey": "food.pot.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "pot"
+    },
+    {
+      "id": "food-definition_0709b7b5a0c8cd79",
+      "label": "Pumpkin",
+      "nameKey": "food.pumpkin.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pumpkin"
+    },
+    {
+      "id": "food-definition_a962641df1567f21",
+      "label": "Small pumpkin",
+      "nameKey": "food.pumpkin-basic.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "pumpkin-basic"
+    },
+    {
+      "id": "food-definition_25f107c2977576e0",
+      "label": "Rice ball",
+      "nameKey": "food.rice-ball.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "rice-ball"
+    },
+    {
+      "id": "food-definition_58d1edc135cdff4d",
+      "label": "Shaker pepper",
+      "nameKey": "food.shaker-pepper.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "shaker-pepper"
+    },
+    {
+      "id": "food-definition_a83f8f3faa9848a3",
+      "label": "Shaker salt",
+      "nameKey": "food.shaker-salt.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "shaker-salt"
+    },
+    {
+      "id": "food-definition_12b7046f554b9c13",
+      "label": "Soda",
+      "nameKey": "food.soda.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "soda"
+    },
+    {
+      "id": "food-definition_b7f778f4fc52f65a",
+      "label": "Soda bottle",
+      "nameKey": "food.soda-bottle.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "soda-bottle"
+    },
+    {
+      "id": "food-definition_78d37d086c4b5f06",
+      "label": "Soda can",
+      "nameKey": "food.soda-can.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "soda-can"
+    },
+    {
+      "id": "food-definition_a4606b9ca700a082",
+      "label": "Crushed soda can",
+      "nameKey": "food.soda-can-crushed.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "soda-can-crushed"
+    },
+    {
+      "id": "food-definition_98b5d54fcc152a73",
+      "label": "Soda glass",
+      "nameKey": "food.soda-glass.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "soda-glass"
+    },
+    {
+      "id": "food-definition_04a9f7fce753b262",
+      "label": "Soy",
+      "nameKey": "food.soy.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "soy"
+    },
+    {
+      "id": "food-definition_53efd0be5b251144",
+      "label": "Empty steamer",
+      "nameKey": "food.steamer.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "steamer"
+    },
+    {
+      "id": "food-definition_2e56908f739f86b3",
+      "label": "Empty takeaway container",
+      "nameKey": "food.styrofoam.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "styrofoam"
+    },
+    {
+      "id": "food-definition_3618b086ea97de6c",
+      "label": "Styrofoam dinner",
+      "nameKey": "food.styrofoam-dinner.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "styrofoam-dinner"
+    },
+    {
+      "id": "food-definition_0cbaa4d3a36c963f",
+      "label": "Sub",
+      "nameKey": "food.sub.name",
+      "rank": "Fine",
+      "healing": 20,
+      "appearance": "sub"
+    },
+    {
+      "id": "food-definition_b9423ab8fde2f0f6",
+      "label": "Sundae",
+      "nameKey": "food.sundae.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "sundae"
+    },
+    {
+      "id": "food-definition_9e55cec9da8605d5",
+      "label": "Sushi egg",
+      "nameKey": "food.sushi-egg.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "sushi-egg"
+    },
+    {
+      "id": "food-definition_ec0da4ce0aab1854",
+      "label": "Sushi salmon",
+      "nameKey": "food.sushi-salmon.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "sushi-salmon"
+    },
+    {
+      "id": "food-definition_38d601e7f234d48b",
+      "label": "Taco",
+      "nameKey": "food.taco.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "taco"
+    },
+    {
+      "id": "food-definition_d83a9dc35ae7a62f",
+      "label": "Empty tagine",
+      "nameKey": "food.tajine.name",
+      "rank": "Empty",
+      "healing": 0,
+      "appearance": "tajine"
+    },
+    {
+      "id": "food-definition_5de04d9ca7767682",
+      "label": "Tomato slice",
+      "nameKey": "food.tomato-slice.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "tomato-slice"
+    },
+    {
+      "id": "food-definition_5d8ba6b1a689dfbd",
+      "label": "Watermelon",
+      "nameKey": "food.watermelon.name",
+      "rank": "Normal",
+      "healing": 3,
+      "appearance": "watermelon"
+    },
+    {
+      "id": "food-definition_ef8fa75ef5e8ec64",
+      "label": "Whipped cream",
+      "nameKey": "food.whipped-cream.name",
+      "rank": "Gourmet",
+      "healing": 32,
+      "appearance": "whipped-cream"
+    },
+    {
+      "id": "food-definition_9b3e3eade565ae31",
+      "label": "Wine red",
+      "nameKey": "food.wine-red.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "wine-red"
+    },
+    {
+      "id": "food-definition_a516d6fa7a0a64f8",
+      "label": "Wine white",
+      "nameKey": "food.wine-white.name",
+      "rank": "Hearty",
+      "healing": 8,
+      "appearance": "wine-white"
+    }
+  ]
+}

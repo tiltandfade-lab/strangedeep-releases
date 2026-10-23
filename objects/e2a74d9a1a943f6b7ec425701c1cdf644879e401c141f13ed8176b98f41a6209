@@ -1,0 +1,283 @@
+{
+ "schemaVersion": 1,
+ "effect": "split-shot",
+ "source": "Generated from SPLIT_SHOT_MATRIX_CASES; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    8,
+    2
+   ]
+  },
+  "weapon": "bow",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-reviewed-split-shot",
+   "fields": {
+    "skillId": "$skill",
+    "direction": "east"
+   },
+   "previewKey": "splitShotPreview"
+  },
+  "cast": {
+   "operation": "cast-reviewed-split-shot",
+   "fields": {
+    "skillId": "$skill",
+    "direction": "east",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 50,
+     "accuracyBonus": 0,
+     "uses": 1,
+     "farWidth": 5,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "accuracyBonus": 0,
+     "uses": 1,
+     "farWidth": 5,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "accuracyBonus": 0,
+     "uses": 1,
+     "farWidth": 7,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "accuracyBonus": 5,
+     "uses": 1,
+     "farWidth": 7,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "accuracyBonus": 5,
+     "uses": 1,
+     "farWidth": 9,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 55,
+     "accuracyBonus": 5,
+     "uses": 2,
+     "farWidth": 9,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "units": {
+     "primary": [
+      8,
+      2
+     ]
+    },
+    "rng": {
+     "strike": [
+      50,
+      1
+     ]
+    },
+    "expected": {
+     "damagePercent": 60,
+     "accuracyBonus": 5,
+     "uses": 2,
+     "farWidth": 9,
+     "events": [
+      {
+       "type": "floor-split-shot-cast"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      },
+      {
+       "type": "floor-turn-advanced"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

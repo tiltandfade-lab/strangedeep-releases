@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 2,
+  "setId": "matched-bust-v2",
+  "purpose": "Matched production initiative busts with shared art direction and eyeline",
+  "generator": "tools/build-initiative-portraits.py",
+  "method": "validated >=384px square source crop; governed alpha/matte; premultiplied-alpha Lanczos resize; straight-alpha PNG output",
+  "cssSize": [
+    56,
+    56
+  ],
+  "densities": [
+    1,
+    2
+  ],
+  "validation": {
+    "minimumSourceCropPx": 384,
+    "verticalSilhouetteOccupancy": [
+      0.7,
+      0.85
+    ],
+    "sharedEyelineNormalized": 0.3,
+    "eyelineTolerance": 0.012,
+    "alphaThreshold": 16
+  },
+  "provenance": {
+    "generator": "Built-in ImageGen stylized-concept; isolated by governed remove_chroma_key.py receipt",
+    "promptRecord": "docs/assets/initiative-portraits-v2/source/manifest.json",
+    "promptRecordSha256": "af2f771ab61b72452b98d1a6f52f8b0576d3f61e51e201548cecadceb63ab0d1",
+    "rights": "Project-owned generated source; founder visual approval remains the final art gate"
+  },
+  "portraits": [
+    {
+      "id": "fighter-basic",
+      "source": "docs/assets/initiative-portraits-v2/isolated/fighter-armored-bust-v1.png",
+      "sourceSha256": "94d5ed22ab6fe495d0ae66234cade390c51311f3fa560a4be88b3814c9a2395b",
+      "status": "matched-production-bust-candidate",
+      "sourceCropLTRB": [
+        -140,
+        -117,
+        1420,
+        1443
+      ],
+      "sourceCropSize": [
+        1560,
+        1560
+      ],
+      "transparentPaddingLTRB": [
+        140,
+        117,
+        166,
+        189
+      ],
+      "eyeY": 351.0,
+      "normalizedEyeline": 0.3,
+      "silhouetteBoundsLTRB": [
+        192,
+        181,
+        1394,
+        1371
+      ],
+      "verticalSilhouetteOccupancy": 0.762821,
+      "matte": {
+        "mode": "alpha"
+      },
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "fighter-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 4489,
+          "sha256": "76a9291261a596e1f0604ef355b73a1184184d91bdac27ee5701b68fb88220ae"
+        },
+        {
+          "density": "2x",
+          "file": "fighter-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 13921,
+          "sha256": "f2c1b09714f794c9dd1f11cef2fc44ea3662b69de2c0de6766c7590146b01c42"
+        }
+      ]
+    },
+    {
+      "id": "zombie-basic",
+      "source": "docs/assets/initiative-portraits-v2/isolated/zombie-basic-bust-v1.png",
+      "sourceSha256": "0a3c7639e04c2accfb5295807d81b1fbe6c374349460a320fc1c774adb18bcd6",
+      "status": "matched-production-bust-candidate",
+      "sourceCropLTRB": [
+        -140,
+        -98,
+        1420,
+        1462
+      ],
+      "sourceCropSize": [
+        1560,
+        1560
+      ],
+      "transparentPaddingLTRB": [
+        140,
+        98,
+        166,
+        208
+      ],
+      "eyeY": 370.0,
+      "normalizedEyeline": 0.3,
+      "silhouetteBoundsLTRB": [
+        166,
+        136,
+        1331,
+        1352
+      ],
+      "verticalSilhouetteOccupancy": 0.779487,
+      "matte": {
+        "mode": "alpha"
+      },
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "zombie-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 4228,
+          "sha256": "4c942c99d0c81576af588b05d79ad334e153450a611af7759c09924dd9050fa4"
+        },
+        {
+          "density": "2x",
+          "file": "zombie-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 13290,
+          "sha256": "e50a0c3051ac472a78d150499b2365428a802c9eb5249a5c10c9dd7f6128e551"
+        }
+      ]
+    },
+    {
+      "id": "skeleton-basic",
+      "source": "docs/assets/initiative-portraits-v2/isolated/skeleton-basic-bust-v1.png",
+      "sourceSha256": "f801235a4f448fe9e0e1cfe19dafeb4a52ba61af4159c9867fe16a856d465be2",
+      "status": "matched-production-bust-candidate",
+      "sourceCropLTRB": [
+        -145,
+        -113,
+        1415,
+        1447
+      ],
+      "sourceCropSize": [
+        1560,
+        1560
+      ],
+      "transparentPaddingLTRB": [
+        145,
+        113,
+        161,
+        193
+      ],
+      "eyeY": 355.0,
+      "normalizedEyeline": 0.3,
+      "silhouetteBoundsLTRB": [
+        232,
+        153,
+        1194,
+        1367
+      ],
+      "verticalSilhouetteOccupancy": 0.778205,
+      "matte": {
+        "mode": "alpha"
+      },
+      "outputs": [
+        {
+          "density": "1x",
+          "file": "skeleton-basic.png",
+          "size": [
+            56,
+            56
+          ],
+          "bytes": 4388,
+          "sha256": "39c27f231b65dd3b63482aea2a2ba139c3dcf067c3a558862fd8ada744a348ed"
+        },
+        {
+          "density": "2x",
+          "file": "skeleton-basic@2x.png",
+          "size": [
+            112,
+            112
+          ],
+          "bytes": 13721,
+          "sha256": "9dd47a65473616ce256b24b3cc27a3a9ba39f79818c8e91901efd9b96cfaf36c"
+        }
+      ]
+    }
+  ]
+}

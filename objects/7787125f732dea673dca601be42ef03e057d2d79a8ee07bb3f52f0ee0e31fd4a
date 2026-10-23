@@ -1,0 +1,326 @@
+{
+ "schemaVersion": 1,
+ "effect": "return-fire",
+ "source": "Generated from RETURN_FIRE_MATRIX_CASES in test/helpers/return-fire-matrix.ts; do not edit by hand.",
+ "integrationRequirements": {
+  "fixture": "Explicit new Reaction-window fixture; the attacker needs an authored ranged weapon turn or, for Arcane, an explicitly classified direct magical missile.",
+  "trigger": "Preparation is followed by end-turn and advance-enemy. Rendered enemy sequencing and result checks belong to integration."
+ },
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    9,
+    2
+   ]
+  },
+  "forkId": "reviewed-return-fire-path",
+  "weapon": "bow",
+  "preview": {
+   "operation": "preview-return-fire",
+   "fields": {
+    "targetId": "$equipped:main-hand"
+   },
+   "previewKey": "returnFirePreview"
+  },
+  "cast": {
+   "operation": "prepare-return-fire",
+   "fields": {
+    "targetId": "$equipped:main-hand",
+    "previewId": "$preview.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 0,
+     "damagePercent": 100,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 3,
+     "damagePercent": 100,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 3,
+     "damagePercent": 105,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 5,
+     "damagePercent": 105,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 5,
+     "damagePercent": 110,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 110,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 120,
+     "criticalBonus": 0,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-critical",
+    "level": 8,
+    "fork": "critical",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 120,
+     "criticalBonus": 2,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-critical",
+    "level": 9,
+    "fork": "critical",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 120,
+     "criticalBonus": 4,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-critical",
+    "level": 10,
+    "fork": "critical",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 120,
+     "criticalBonus": 6,
+     "allowsMagic": false,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv8-arcane",
+    "level": 8,
+    "fork": "arcane",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 8,
+     "damagePercent": 120,
+     "criticalBonus": 0,
+     "allowsMagic": true,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv9-arcane",
+    "level": 9,
+    "fork": "arcane",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 10,
+     "damagePercent": 120,
+     "criticalBonus": 0,
+     "allowsMagic": true,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   },
+   {
+    "id": "lv10-arcane",
+    "level": 10,
+    "fork": "arcane",
+    "rng": {
+     "attackRoll": 8,
+     "damageDraw": 0
+    },
+    "expected": {
+     "accuracyBonus": 12,
+     "damagePercent": 120,
+     "criticalBonus": 0,
+     "allowsMagic": true,
+     "events": [
+      {
+       "type": "floor-reaction-choice"
+      }
+     ],
+     "arenaNote": "The automated matrix resolves actual incoming/response strikes, source bonuses and critical bands, and production cold reopen. Preparation alone is not rendered response proof."
+    },
+    "units": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "assetId": "patch-knight-regular-meshy-demo-rig-review",
+  "displayName": "Patch Knight",
+  "status": "REVIEW_ONLY",
+  "productionApproval": false,
+  "placement": "Review rooms only (MonsterReviewModels, Retro gallery review-monsters section). Not in any gameplay spawn pool, encounter roster or enemy presentation.",
+  "source": {
+    "path": "source-assets/meshy/patch-knight-regular-demo-rig/2026-08-28/CHR_Fighter_MeshyRig.glb",
+    "sha256": "1e4fa0c2cf12849701db960db5d316aafd5ff646bfb76af90732b4d82172b8f4",
+    "texturedModel": "source-assets/meshy/patch-knight-direct-retexture/2026-08-28/model.glb",
+    "rigReceipt": "source-assets/meshy/patch-knight-regular-demo-rig/2026-08-28/receipt.json"
+  },
+  "rig": {
+    "provider": "Meshy rigging-and-animation (Meshy Basic)",
+    "bones": 24,
+    "handBones": false,
+    "registryDecision": "patch-knight-regular-meshy-basic-rig-no-hand-bones: REJECTED_RIG_MISSING_HAND_BONES for production; used here only to pose the review model"
+  },
+  "godot": {
+    "model": "res://assets/characters/patch-knight/review/patch-knight-regular-meshy-demo-rig.glb",
+    "wrapper": "res://assets/characters/patch-knight/review/patch_knight_regular_review_candidate.tscn",
+    "material": "res://assets/characters/patch-knight/review/patch-knight-regular-cloth-review.tres",
+    "materialNote": "External review material replaces the Meshy rig export's material, which drew the whole base-color texture as emission (emissive factor 1,1,1) with specular x2: emission off, roughness 0.92, metallic 0, specular 0.35, double-sided as the source declares. Base-color texture is the untouched provider image.",
+    "heightMetres": 1.8288,
+    "footprintCells": 1,
+    "floorOffsetMeters": 0.0
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG_WITH_HAND_BONES",
+    "EYE_GLOW_MASK",
+    "RUNTIME_PROMOTION"
+  ]
+}

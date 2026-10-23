@@ -1,0 +1,347 @@
+{
+ "schemaVersion": 1,
+ "effect": "reviewed-venom",
+ "source": "Generated from VENOM_MATRIX_CASES in test/helpers/venom-matrix.ts; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    7,
+    2
+   ]
+  },
+  "forkId": "reviewed-venom-path",
+  "contentFlag": "reviewedVenom",
+  "targetHitPoints": 50,
+  "preview": {
+   "operation": "preview-venom",
+   "fields": {},
+   "previewKey": "venomPreview"
+  },
+  "cast": {
+   "operation": "reviewed-venom",
+   "fields": {
+    "targetId": "$hero",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "venom-1-base",
+    "level": 1,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 35,
+     "tickDamage": 1,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-2-base",
+    "level": 2,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 40,
+     "tickDamage": 1,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-3-base",
+    "level": 3,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 45,
+     "tickDamage": 1,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-4-base",
+    "level": 4,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 50,
+     "tickDamage": 1,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-5-base",
+    "level": 5,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 50,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-6-base",
+    "level": 6,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 55,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-7-base",
+    "level": 7,
+    "fork": null,
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-8-lingering",
+    "level": 8,
+    "fork": "lingering",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 3,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-8-preparation",
+    "level": 8,
+    "fork": "preparation",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 4,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-9-lingering",
+    "level": 9,
+    "fork": "lingering",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 4,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-9-preparation",
+    "level": 9,
+    "fork": "preparation",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 5,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-10-lingering",
+    "level": 10,
+    "fork": "lingering",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 5,
+     "coatingDuration": 3,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   },
+   {
+    "id": "venom-10-preparation",
+    "level": 10,
+    "fork": "preparation",
+    "units": {},
+    "rng": {
+     "contact": 20
+    },
+    "expected": {
+     "chance": 60,
+     "tickDamage": 2,
+     "poisonDuration": 2,
+     "coatingDuration": 6,
+     "uses": 1,
+     "cost": "Bonus Action",
+     "damage": 0,
+     "events": [
+      {
+       "type": "floor-timed-cast"
+      }
+     ],
+     "arenaNote": "Requires actual equipped melee gear; ordinary contact and finite Poisoned ticks are automated, not an extra poison strike on preparation."
+    }
+   }
+  ]
+ }
+}

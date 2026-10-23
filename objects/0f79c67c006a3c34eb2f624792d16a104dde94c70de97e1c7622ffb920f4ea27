@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "effect": "cleave",
+  "cases": [
+    {
+      "name": "Arc from the north, every rank and mastery path",
+      "levels": "all",
+      "forks": "all",
+      "formation": "arc",
+      "preview": {"operation": "preview-reviewed-cleave", "fields": {"skillId": "$skill", "arcStart": 0}, "previewKey": "reviewedAbilityPreview"},
+      "cast": {"operation": "cast-reviewed-cleave", "fields": {"skillId": "$skill", "arcStart": 0, "previewId": "$preview.floor.previewId", "contextId": "$preview.contextId"}}
+    }
+  ]
+}

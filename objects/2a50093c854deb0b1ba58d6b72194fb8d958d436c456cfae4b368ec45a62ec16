@@ -1,0 +1,492 @@
+{
+ "schemaVersion": 1,
+ "effect": "charge",
+ "source": "Generated from CHARGE_MATRIX_CASES in test/helpers/charge-matrix.ts by tools/ability-lane/export-arena-matrix.mjs; do not edit by hand.",
+ "matrix": {
+  "frame": {
+   "hero": [
+    6,
+    2
+   ],
+   "primary": [
+    10,
+    2
+   ]
+  },
+  "forkId": "reviewed-charge-path",
+  "targetHitPoints": 200,
+  "weapon": "sword",
+  "preview": {
+   "operation": "preview-charge",
+   "fields": {
+    "targetId": "$unit:primary"
+   },
+   "previewKey": "chargePreview"
+  },
+  "cast": {
+   "operation": "charge",
+   "fields": {
+    "targetId": "$unit:primary",
+    "previewId": "$preview.floor.previewId",
+    "contextId": "$preview.contextId"
+   }
+  },
+  "cases": [
+   {
+    "id": "lv1",
+    "level": 1,
+    "fork": null,
+    "tiles": 4,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 4,
+     "accuracyBonus": 0,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      11,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv2",
+    "level": 2,
+    "fork": null,
+    "tiles": 5,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 5,
+     "accuracyBonus": 0,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv3",
+    "level": 3,
+    "fork": null,
+    "tiles": 5,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 5,
+     "accuracyBonus": 3,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv4",
+    "level": 4,
+    "fork": null,
+    "tiles": 6,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 6,
+     "accuracyBonus": 3,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv5",
+    "level": 5,
+    "fork": null,
+    "tiles": 6,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 6,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv6",
+    "level": 6,
+    "fork": null,
+    "tiles": 7,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 7,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv7",
+    "level": 7,
+    "fork": null,
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv8-impact",
+    "level": 8,
+    "fork": "impact",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 35,
+     "damage": 27,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv9-impact",
+    "level": 9,
+    "fork": "impact",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 40,
+     "damage": 28,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv10-impact",
+    "level": 10,
+    "fork": "impact",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 50,
+     "damage": 30,
+     "usePeriod": "segment",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv8-frequency",
+    "level": 8,
+    "fork": "frequency",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "encounter",
+     "uses": 1,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv9-frequency",
+    "level": 9,
+    "fork": "frequency",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "encounter",
+     "uses": 2,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   },
+   {
+    "id": "lv10-frequency",
+    "level": 10,
+    "fork": "frequency",
+    "tiles": 8,
+    "rng": {
+     "d100": 50,
+     "damage": 20
+    },
+    "expected": {
+     "approachTiles": 8,
+     "accuracyBonus": 5,
+     "impactCap": 30,
+     "damage": 26,
+     "usePeriod": "encounter",
+     "uses": 3,
+     "arenaNote": "The ordinary arena caps this route at five tiles. Exact long approaches and impact caps use the scripted Cathedral matrix.",
+     "events": [
+      {
+       "type": "floor-movement-ability-cast",
+       "kind": "charge"
+      },
+      {
+       "type": "floor-attack-resolved",
+       "targetId": "$unit:primary"
+      }
+     ]
+    },
+    "units": {
+     "primary": [
+      12,
+      2
+     ]
+    }
+   }
+  ]
+ }
+}
