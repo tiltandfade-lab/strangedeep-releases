@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "what": "The level shell's roll ranges (lane level-shell, October 30, 2026; spec: design-notebook/Strangedeep/Dungeon/Dressing/Dressing.md, 'October 30 — level objects rebuilt low poly, with handles that roll'). The one home for these values: the game reads them (LevelShell.cs) and the review page's handle extremes are drawn from them. Starting values; Adam judges the ranges on sight.",
+  "review": "pending",
+  "floorStyle": {
+    "what": "Rolled once per floor from the floor id; every shell piece on the floor inherits them, so the walls match each other.",
+    "chamfer": [0.0, 1.0],
+    "arch": [0.0, 1.0],
+    "sag": [0.0, 0.8],
+    "wallHeight": [0.9, 1.3],
+    "wallDepth": [0.85, 1.4]
+  },
+  "age": {
+    "what": "New (0) to ruined (1): rolled from the floor depth, deeper floors older, with a small jitter per piece.",
+    "byFloorDepth": [0.15, 0.35, 0.55, 0.75, 0.9],
+    "jitter": 0.15
+  },
+  "damage": {
+    "what": "Chance of each damage state per piece, at age 0 and at age 1 (interpolated by the piece's age). Only roles with damage meshes take it.",
+    "states": ["intact", "cracked", "broken", "collapsed"],
+    "weightsAtAge0": [0.92, 0.06, 0.02, 0.0],
+    "weightsAtAge1": [0.55, 0.22, 0.15, 0.08]
+  },
+  "freeStanding": {
+    "what": "Pieces that stand alone (the full-height blocker) roll their own size, stretched in the plain middle.",
+    "width": [0.7, 1.4],
+    "height": [0.85, 1.3],
+    "depth": [0.8, 1.4]
+  }
+}

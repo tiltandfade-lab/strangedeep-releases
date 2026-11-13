@@ -1,0 +1,96 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "kick",
+  "aliases": [
+    "preview-reviewed-kick",
+    "cast-reviewed-kick",
+    "kick-push",
+    "kick-rank"
+  ],
+  "textKeys": {
+    "name": "ability.kick.name",
+    "summary": "ability.kick.summary"
+  },
+  "textKeysPending": true,
+  "listKey": null,
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 0, "damagePercent": 100, "accuracyBonus": 0, "collisionPercent": 0, "displacesCollided": 0}},
+    {"level": 2, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 1, "damagePercent": 100, "accuracyBonus": 0, "collisionPercent": 0, "displacesCollided": 0}},
+    {"level": 3, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 1, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 0, "displacesCollided": 0}}
+  ],
+  "paths": {
+    "forkId": "reviewed-kick-form",
+    "level": 4,
+    "options": [
+      {
+        "id": "crowd",
+        "nameKey": "ability.kick.path.crowd",
+        "ranks": [
+          {"level": 4, "cost": 1, "numbers": {"maximumTargets": 2, "pushTiles": 1, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 0, "displacesCollided": 0}},
+          {"level": 5, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 1, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 0, "displacesCollided": 0}},
+          {"level": 6, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 1, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 25, "displacesCollided": 0}},
+          {"level": 7, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 2, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 25, "displacesCollided": 0}},
+          {"level": 8, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 2, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 0}},
+          {"level": 9, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 3, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 0}},
+          {"level": 10, "cost": 1, "numbers": {"maximumTargets": 3, "pushTiles": 3, "damagePercent": 75, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 1}}
+        ]
+      },
+      {
+        "id": "distance",
+        "nameKey": "ability.kick.path.distance",
+        "ranks": [
+          {"level": 4, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 2, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 0, "displacesCollided": 0}},
+          {"level": 5, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 3, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 0, "displacesCollided": 0}},
+          {"level": 6, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 3, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 25, "displacesCollided": 0}},
+          {"level": 7, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 4, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 25, "displacesCollided": 0}},
+          {"level": 8, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 4, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 0}},
+          {"level": 9, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 6, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 0}},
+          {"level": 10, "cost": 1, "numbers": {"maximumTargets": 1, "pushTiles": 6, "damagePercent": 100, "accuracyBonus": 5, "collisionPercent": 50, "displacesCollided": 1}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId",
+      "targetIds"
+    ]
+  },
+  "presentation": {
+    "key": "kick",
+    "clips": [
+      {"clip": "pontera-kick"}
+    ],
+    "strikeDelay": null,
+    "effectRecipe": "kick",
+    "timingKey": "kick",
+    "timingPropertyPrefix": "Kick",
+    "sound": "ability.kick",
+    "actionCamera": false,
+    "travelMotion": true,
+    "knockback": [
+      {"key": "kick"},
+      {"key": "kick-heavy", "minLevel": 6},
+      {"key": "kick-distance", "minLevel": 4, "path": "distance"}
+    ],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/kick.ts",
+    "src/floor/kick-push.ts",
+    "src/floor/kick-rank.ts",
+    "src/floor/kick-attack-source.ts",
+    "src/campaign/kick.ts",
+    "src/campaign/reviewed-kick.ts",
+    "src/campaign/reviewed-kick-content.ts"
+  ]
+}

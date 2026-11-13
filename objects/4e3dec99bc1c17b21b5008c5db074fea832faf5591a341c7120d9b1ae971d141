@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "id": "sm-sack-hood",
+  "displayName": "Sack hood (empty head)",
+  "family": "SM",
+  "familyName": "Starter masks",
+  "tier": 1,
+  "category": "head",
+  "slot": "helm",
+  "attach": "rigid",
+  "bones": [
+    "head"
+  ],
+  "allowedRegions": [
+    "head"
+  ],
+  "defaultRegion": "head",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.644,
+      0.2017
+    ],
+    "normal": [
+      0.0,
+      -0.0282,
+      0.9996
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0.0,
+      -0.0282,
+      0.9996
+    ]
+  },
+  "handles": [
+    {
+      "name": "Width",
+      "at0": "narrow",
+      "at1": "wide",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Height",
+      "at0": "low",
+      "at1": "tall",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Corners",
+      "at0": "flat top",
+      "at1": "dog-eared",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Slump",
+      "at0": "stiff",
+      "at1": "slumped",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "regionClasses": {
+    "0": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "coverageCm2": 1216.1,
+  "mass": 1216.1,
+  "weightClass": "light",
+  "triangles": 1792,
+  "complexity": 18,
+  "mutateTags": [
+    "light",
+    "weird"
+  ],
+  "references": [],
+  "build": {
+    "glb": "sm-sack-hood.glb",
+    "glbSha256": "dc2a7c14a04238a6c7f149a89f94971cb5c66aa8bb6e90d04d2715fd0c0148be",
+    "glbBytes": 171172,
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sm-sack-hood.glb",
+      "targetNames": [
+        "Width",
+        "Height",
+        "Corners",
+        "Slump"
+      ],
+      "primitives": [
+        {
+          "vertices": 1154,
+          "triangles": 1792,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 1792,
+      "vertices": 1154,
+      "targets": {
+        "Width": {
+          "maxDeltaM": 0.024,
+          "verticesMoved": 992
+        },
+        "Height": {
+          "maxDeltaM": 0.028,
+          "verticesMoved": 566
+        },
+        "Corners": {
+          "maxDeltaM": 0.03165,
+          "verticesMoved": 476
+        },
+        "Slump": {
+          "maxDeltaM": 0.01529,
+          "verticesMoved": 1152
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 1154
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "basis",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Width=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.128,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Width=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.294,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Height=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.105,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Height=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.22,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Corners=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.212,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Corners=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.465,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.21,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Slump=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.049,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.58,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Slump=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.098,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.94,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.287,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.58,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.613,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.94,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.268,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.724,
+        "minClearanceMm": 12.43,
+        "minClearanceAt": {
+          "vertex": 816,
+          "at": [
+            0.01,
+            0.044,
+            1.609
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "mask": true,
+    "ruling": "Starter masks round 2, Adam, October 28: no eggheads, handles, materials.",
+    "eyeHoles": "None: the October 11 eyeless sack hood; the head under it is darkness.",
+    "shields": "The frayed mouth hangs over the neck."
+  },
+  "materialSlots": [
+    "sack"
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "id": "light-robe-wizard-sleeve-bag-l",
+  "displayName": "Wizard robe, left sleeve bag",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "chest",
+  "slot": "chest",
+  "attach": "spring",
+  "bones": [
+    "light-robe-wizard-sleeve-bag-l-c1",
+    "light-robe-wizard-sleeve-bag-l-c2",
+    "light-robe-wizard-sleeve-bag-l-root"
+  ],
+  "allowedRegions": [
+    "lowerarm_l"
+  ],
+  "defaultRegion": "lowerarm_l",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.4339,
+      1.0754,
+      0.1307
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "fitted sleeves",
+      "at1": "wide bell sleeves",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.4682,
+          1.0486,
+          0.147
+        ],
+        "end": [
+          0.4674,
+          0.9978,
+          0.1134
+        ],
+        "lengthMm": 60.9
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 108.6,
+  "mass": 16.29,
+  "weightClass": "light",
+  "triangles": 104,
+  "complexity": 2,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "garment",
+    "robe",
+    "sleeve-bag"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "chain": {
+    "parent": "lowerarm_l",
+    "bones": [
+      {
+        "name": "light-robe-wizard-sleeve-bag-l-root",
+        "head": [
+          0.433915,
+          -0.130669,
+          1.075371
+        ],
+        "tail": [
+          0.429737,
+          -0.124775,
+          1.062226
+        ]
+      },
+      {
+        "name": "light-robe-wizard-sleeve-bag-l-c1",
+        "head": [
+          0.429737,
+          -0.124775,
+          1.062226
+        ],
+        "tail": [
+          0.414415,
+          -0.103162,
+          1.014027
+        ]
+      },
+      {
+        "name": "light-robe-wizard-sleeve-bag-l-c2",
+        "head": [
+          0.414415,
+          -0.103162,
+          1.014027
+        ],
+        "tail": [
+          0.386559,
+          -0.063866,
+          0.926392
+        ]
+      }
+    ],
+    "stiffness": 0.25,
+    "simulator": "SpringBoneSimulator3D (Godot), capsule colliders on the limbs"
+  },
+  "doubleSided": true,
+  "references": [],
+  "build": {
+    "glb": "light-robe-wizard-sleeve-bag-l.glb",
+    "glbSha256": "f03f145c46a81174a8efc9a7d47ada15b46a5f1cdd1ad22f59bb522d40d4cd91",
+    "glbBytes": 21532,
+    "generator": "tools/armor-kit/garments/build_garments.py",
+    "generatorSha256": "3f38b829d1e9f00cef1e1d66a5cbf75d363baddf6c6b9ad0cdb77843b389d99d",
+    "library": "tools/armor-kit/garments/cage.py",
+    "librarySha256": "14972ef22628f742540651834f902e4cf88e9fade6fe7e8ddd2d1e68478c5b82",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "a box-modelled cage (rings of control points, the arms extruded from the trunk's side faces with Blender's extrude), its hem rings moved for the folds, under a Subdivision Surface; Shrinkwrap (outside) and Smooth fit the shoulders and chest over the body; Solidify gives the cloth its thickness; Data Transfer and vertex group Smooth give it the body's bone weights. Handles: the same cage with moved control points through the same stack.",
+    "specs": {
+      "robes": "tools/armor-kit/garments/robes.py",
+      "robesSha256": "6133d7a88d34c08761a135e32bc7e6246036ff86bdea2d88dbceedb160b71657",
+      "clothes": "tools/armor-kit/garments/clothes.py",
+      "clothesSha256": "d8b47aac8f744fcf2cbe19b09f2a7847fb1fb9f369099e70706cb753d177e3a8"
+    }
+  },
+  "verification": {
+    "glb": {
+      "file": "light-robe-wizard-sleeve-bag-l.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 110,
+          "triangles": 104,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 104,
+      "vertices": 110,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.03742,
+          "verticesMoved": 110
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.01871,
+          "verticesMoved": 110
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00707,
+          "verticesMoved": 110
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.01414,
+          "verticesMoved": 110
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 3,
+      "verticesPerBone": {
+        "light-robe-wizard-sleeve-bag-l-c1": 16,
+        "light-robe-wizard-sleeve-bag-l-c2": 20,
+        "light-robe-wizard-sleeve-bag-l-root": 74
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 21.1,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.72,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.14,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 15.33,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.16,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 22.28,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 23.48,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 24.7,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 25.94,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.72,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 25.94,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 21.1,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "Adam, October 30: the big wizard sleeves hang, and respond to gravity if possible; the goldsmith's bag sleeve and the Arnolfini Portrait's hanging sleeve (REFERENCES.md)",
+    "fit": "the robe's own sleeve faces under the forearm, 1.5 mm proud of them, on a root fixed on the forearm and two hanging bones (each vertex on one bone, by how far it hangs)",
+    "cloth": "a spring chain (Godot's SpringBoneSimulator3D): with the chain at rest it lies on the sleeve"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "fitted",
+      "bell",
+      "wide bell"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

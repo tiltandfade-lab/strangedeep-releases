@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "sl-coverall-boots",
+  "displayName": "Work boots",
+  "layer": "starter",
+  "attach": "soft",
+  "bones": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "foot_l",
+    "foot_r"
+  ],
+  "vertices": 703,
+  "weightClass": "light",
+  "triangles": 1398,
+  "materials": [
+    "cloth"
+  ],
+  "materialSlots": [
+    "boot",
+    "boot-sole"
+  ],
+  "handles": [],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 2001.4,
+  "mass": 300.21,
+  "countsTowardItem": true,
+  "boundsMm": [
+    550.4,
+    297.6,
+    342.1
+  ],
+  "build": {
+    "family": "SM",
+    "familyName": "Starter masks",
+    "weightClass": "light",
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "sl-coverall-boots.glb",
+    "glbBytes": 71320,
+    "glbSha256": "c4625a4d8a9005cbcf663a42dc4978084d4291f57a264d4d4479177f5d58da3c",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "starter-look lane output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sl-coverall-boots.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "ball_l": 161,
+        "ball_r": 151,
+        "calf_l": 261,
+        "calf_r": 244,
+        "foot_l": 396,
+        "foot_r": 245
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "rest",
+        "pass": true
+      }
+    ]
+  },
+  "notes": "Starter coveralls (Adam, September 29 and October 2). Every vertex carries the body's own bone blend, so it bends exactly like the skin under it."
+}

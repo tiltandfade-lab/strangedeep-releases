@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "source": "Direction B, glyph on a tint (Adam's pick, November 5). Each glyph is one colour, bone, drawn full, at 50% over its plate, in halftone, or a mixture of those (Adam, November 5: \"only one color and either the halftones or a 50% transparency or a mixture of those three\"); no outline round the glyph and no second hue. The plate colour shows what the ability costs, Baldur's Gate style; auras get their own, and so do the three stances, listed here because a stance's plate wins over its card's action_type (Adam, November 5: \"the stances should still get their own plates. All three\"). Adam approved the first five colours on November 5. Plates differ in value as well as hue, so they read in grayscale: Reaction darkest (luminance 0.19), Aura (0.29), Stance (0.33), Passive (0.37), Action (0.45), Bonus Action lightest (0.57). The tool derives each plate's 50% bone itself. Stance is closest in value to Aura and Passive (0.04 each way), so the tray's notched cost shape separates those in grayscale.",
+  "transparentKey": ".",
+  "reserved": [
+    {
+      "name": "pink",
+      "hex": "#FF2E88",
+      "why": "S16 keeps hot pink for the one primary action per screen; no ability icon, plate or glyph uses it. One exception (Adam confirmed November 5): the edge of a stat modifier rolled Legendary, a rare find, listed as allowedAs.",
+      "allowedAs": "p"
+    },
+    {
+      "name": "enemy",
+      "hex": "#C6FF00",
+      "why": "S16 keeps chartreuse for enemies; no icon or plate uses it (and no green plate, too near it)."
+    },
+    {
+      "name": "cyan",
+      "hex": "#6FD6FF",
+      "why": "S16's cyan ink is interface chrome; the Aura plate's teal stays darker and greener so the two never merge."
+    }
+  ],
+  "tiers": {
+    "Action": {
+      "plate": "a"
+    },
+    "Bonus Action": {
+      "plate": "m"
+    },
+    "Reaction": {
+      "plate": "v"
+    },
+    "Passive": {
+      "plate": "s"
+    },
+    "Aura": {
+      "plate": "e"
+    },
+    "Stance": {
+      "plate": "r",
+      "abilities": [
+        "Defensive Stance",
+        "Evasive Stance",
+        "Offensive Stance"
+      ]
+    }
+  },
+  "colors": [
+    {
+      "key": "K",
+      "name": "ink",
+      "hex": "#070A12",
+      "from": "card swatch INK",
+      "role": "the plate's dark edge"
+    },
+    {
+      "key": "B",
+      "name": "bone",
+      "hex": "#E6E1D3",
+      "from": "card swatch BONE",
+      "role": "the glyph's one colour"
+    },
+    {
+      "key": "a",
+      "name": "Action plate",
+      "hex": "#4479D0",
+      "from": "survey blue, lighter than card GRID so it reads as a button",
+      "role": "plate of an Action (Magic Action included)"
+    },
+    {
+      "key": "m",
+      "name": "Bonus Action plate",
+      "hex": "#CC8A22",
+      "from": "amber, deep enough that 50% bone still reads on it",
+      "role": "plate of a Bonus Action"
+    },
+    {
+      "key": "v",
+      "name": "Reaction plate",
+      "hex": "#40188E",
+      "from": "violet, toward card ULTRAVIOLET",
+      "role": "plate of a Reaction"
+    },
+    {
+      "key": "s",
+      "name": "Passive plate",
+      "hex": "#56606F",
+      "from": "slate grey, muted so it does not look like a button",
+      "role": "plate of a Passive (shown in the skill choice, never on the tray)"
+    },
+    {
+      "key": "e",
+      "name": "Aura plate",
+      "hex": "#10645C",
+      "from": "deep teal, darker and greener than the S16 cyan ink",
+      "role": "plate of an Aura (a card whose use limit says one Aura active)"
+    },
+    {
+      "key": "r",
+      "name": "Stance plate",
+      "hex": "#9A3A22",
+      "from": "rust red, apart in hue from the amber Bonus plate",
+      "role": "plate of a stance (the tier's abilities list names them)"
+    },
+    {
+      "key": "c",
+      "name": "Modifier plate",
+      "hex": "#6F8C74",
+      "from": "sage, the one hue no tier uses; grey-green far from the enemy chartreuse in value and saturation",
+      "role": "plate of a stat modifier rolled Common or Magic"
+    },
+    {
+      "key": "q",
+      "name": "Rare Modifier plate",
+      "hex": "#64244F",
+      "from": "plum, the magenta side no tier uses; dark so the hot-pink Legendary edge reads on it",
+      "role": "plate of a stat modifier rolled Rare or Legendary"
+    },
+    {
+      "key": "p",
+      "name": "Legendary edge",
+      "hex": "#FF2E88",
+      "from": "S16 hot pink, the one accent per screen",
+      "role": "the plate edge of a stat modifier rolled Legendary (never a plate, never a glyph)"
+    }
+  ],
+  "plateHatch": "Adam, November 5: the plates carry a faint S16 hatch at 64 and 32 (plateHatchSizes); at 16 the plate is flat (\"We can drop hatch at 16\"). The tool derives each plate's hatch colour (the plate 22% toward ink) and lays it on the bare plate before the glyph, so the glyph keeps its one colour.",
+  "plateHatchSizes": [
+    64,
+    32
+  ],
+  "modifierPlates": {
+    "_why": "Stat modifiers (design-notebook/Strangedeep/Systems/Skill Tree/Stat Modifier Rarity Pool.md) get plates too (Adam, November 5). The tier belongs to the roll, not the modifier, so the tool draws each modifier glyph once and renders it on every variant here. Adam confirmed the split on November 5 (\"Yes that matches what i meant\"): one Modifier plate for Common and Magic rolls, a Rare Modifier plate for Rare and Legendary, and a hot-pink edge for Legendary. Grey values: Modifier 0.50 (nearest Action 0.45 and Bonus Action 0.57), Rare Modifier 0.24 (nearest Reaction 0.19, the closest new pair at 0.04, as close as Stance and Aura).",
+    "modifier": {
+      "plate": "c",
+      "rolls": [
+        "Common",
+        "Magic"
+      ]
+    },
+    "rare": {
+      "plate": "q",
+      "rolls": [
+        "Rare"
+      ]
+    },
+    "legendary": {
+      "plate": "q",
+      "edge": "p",
+      "rolls": [
+        "Legendary"
+      ]
+    }
+  }
+}

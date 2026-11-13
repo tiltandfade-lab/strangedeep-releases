@@ -1,0 +1,79 @@
+{
+  "comment": "The shield stance's legs (lane kit-weapons; Adam's pick, October 28): while a hero holds a shield, each listed clip's leg bones turn by these degrees (Euler, in the bone's own frame, after the clip's pose) so the board, carried by the shield arm's hold (godot/src/KitWeaponShieldHold.cs), clears the legs. Every other weapon keeps the clip's own stance. Read by godot/src/KitWeaponShieldStance.cs; checked by the kit weapon proof's shield guard. Solved October 28 with the arm hold on, per clip, by the proof's search (--shield-stance-search --clips=...): the idle's lead thigh 30 in and 20 out (x, z), the slash's 20 and 20 with the back thigh 15 to the side, the kick's 40 in; guard, walk, run and stab keep both thighs 10 in. The arm-forward turns of the first stance are gone: the arm hold places the board.",
+  "clips": {
+    "sword-and-shield-idle": {
+      "thigh_l": [
+        30,
+        0,
+        -20
+      ]
+    },
+    "sword-and-shield-block": {
+      "thigh_l": [
+        10,
+        0,
+        0
+      ],
+      "thigh_r": [
+        10,
+        0,
+        0
+      ]
+    },
+    "sword-and-shield-walk": {
+      "thigh_l": [
+        10,
+        0,
+        0
+      ],
+      "thigh_r": [
+        10,
+        0,
+        0
+      ]
+    },
+    "sword-and-shield-run": {
+      "thigh_l": [
+        10,
+        0,
+        0
+      ],
+      "thigh_r": [
+        10,
+        0,
+        0
+      ]
+    },
+    "sword-and-shield-slash": {
+      "thigh_l": [
+        20,
+        0,
+        20
+      ],
+      "thigh_r": [
+        0,
+        0,
+        15
+      ]
+    },
+    "knife-stab-right": {
+      "thigh_l": [
+        10,
+        0,
+        0
+      ],
+      "thigh_r": [
+        10,
+        0,
+        0
+      ]
+    },
+    "sword-and-shield-kick": {
+      "thigh_l": [
+        40,
+        0,
+        0
+      ]
+    }
+  }
+}

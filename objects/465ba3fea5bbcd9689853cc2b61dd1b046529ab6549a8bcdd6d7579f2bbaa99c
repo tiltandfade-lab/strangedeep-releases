@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "version": "depth-curve-proposal-1",
+  "status": "proposal",
+  "maximumDepth": 500,
+  "anchorDepths": [1, 50, 150, 500],
+  "lines": {
+    "enemyHealthPercent": [[1, 100], [50, 175], [150, 255], [410, 370], [500, 380]],
+    "enemyDamagePercent": [[1, 100], [50, 180], [150, 285], [410, 800], [500, 820]],
+    "enemyAccuracyPoints": [[1, 0], [50, 4], [150, 12], [500, 38]],
+    "enemyArmorPoints": [[1, 0], [50, 4], [150, 12], [500, 36]],
+    "roomBudgetPercent": [[1, 100], [50, 130], [150, 200], [500, 260]],
+    "enemyGearAddedChancePoints": [[1, 0], [50, 0], [150, 30], [500, 60]],
+    "heroHealthPercent": [[1, 100], [50, 220], [150, 450], [410, 1100], [500, 1200]],
+    "heroDamagePercent": [[1, 100], [50, 220], [150, 450], [410, 1100], [500, 1200]],
+    "heroAccuracyPoints": [[1, 0], [50, 4], [150, 12], [410, 34], [500, 36]],
+    "heroArmorPoints": [[1, 0], [50, 4], [150, 12], [410, 36], [500, 38]],
+    "heroLevel": [[1, 1], [50, 10], [150, 30], [500, 100]],
+    "targetRounds": [[1, 6], [50, 7], [150, 8], [500, 9]],
+    "targetDamageTakenPercent": [[1, 60], [50, 62], [150, 65], [500, 70]],
+    "targetWinPercent": [[1, 90], [50, 88], [150, 85], [500, 80]]
+  },
+  "floorSteps": {
+    "enemyAbilities": [[1, 0], [2, 1], [3, 2], [5, 3], [10, 4], [15, 5], [20, 6]],
+    "enemyGearQualityDraws": [[1, 1], [5, 2], [15, 3], [30, 4]],
+    "eliteOneInPastPolicy": [[1, 3], [15, 2]],
+    "lootRarityDrawsAdded": [[1, 0], [42, 1], [46, 2]]
+  },
+  "room": {
+    "always": ["human-melee", "human-ranged"],
+    "budgetByPartySize": [11, 14, 23, 32],
+    "bodyCapByPartySize": [4, 6, 9, 11],
+    "dearestFirstPercent": 50,
+    "kinds": [
+      {"kind": "human-melee", "cost": 5, "fromFloor": 3},
+      {"kind": "human-ranged", "cost": 6, "fromFloor": 3},
+      {"kind": "small-green", "cost": 3, "fromFloor": 1},
+      {"kind": "small-red", "cost": 3, "fromFloor": 1},
+      {"kind": "small-blue", "cost": 2, "fromFloor": 1},
+      {"kind": "green", "cost": 6, "fromFloor": 1},
+      {"kind": "blue", "cost": 3, "fromFloor": 1},
+      {"kind": "red", "cost": 8, "fromFloor": 1},
+      {"kind": "cube", "cost": 2, "fromFloor": 2},
+      {"kind": "large-green", "cost": 12, "fromFloor": 2},
+      {"kind": "large-cube", "cost": 4, "fromFloor": 3},
+      {"kind": "large-red", "cost": 13, "fromFloor": 3}
+    ]
+  },
+  "stacking": {"otherBonusCapPercent": 200},
+  "gold": {"percentPerFloor": 100}
+}

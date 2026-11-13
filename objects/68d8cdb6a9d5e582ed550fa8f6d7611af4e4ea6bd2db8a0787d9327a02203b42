@@ -1,0 +1,883 @@
+{
+  "schemaVersion": 1,
+  "id": "heavy-breastplate-fluted",
+  "displayName": "Breastplate (fluted)",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "chest",
+  "slot": "chest",
+  "attach": "rigid",
+  "bones": [
+    "spine_03"
+  ],
+  "allowedRegions": [
+    "spine_03"
+  ],
+  "defaultRegion": "spine_03",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.249,
+      0.1904
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "RadiusTop",
+      "at0": "narrow chest",
+      "at1": "broad chest",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.0,
+          1.4193,
+          0.1351
+        ],
+        "end": [
+          -0.0,
+          1.4192,
+          0.1511
+        ],
+        "lengthMm": 16.04
+      },
+      "animation": {
+        "name": "RadiusTop",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "AxisForward",
+      "at0": "flat",
+      "at1": "barrel",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.0,
+          1.249,
+          0.1754
+        ],
+        "end": [
+          0.0,
+          1.249,
+          0.2204
+        ],
+        "lengthMm": 45.0
+      },
+      "animation": {
+        "name": "AxisForward",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "BoneLength",
+      "at0": "ends at ribs",
+      "at1": "reaches the waist",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.1793,
+          1.2096,
+          0.0514
+        ],
+        "end": [
+          -0.1875,
+          1.0896,
+          0.0527
+        ],
+        "lengthMm": 120.34
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "Radius",
+      "at0": "narrow plate",
+      "at1": "wraps round the flanks",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1594,
+          1.1157,
+          0.1276
+        ],
+        "end": [
+          0.2074,
+          1.1158,
+          0.0201
+        ],
+        "lengthMm": 117.71
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "Detail",
+      "at0": "plain",
+      "at1": "bold details",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1833,
+          1.2013,
+          0.0884
+        ],
+        "end": [
+          0.1933,
+          1.2012,
+          0.0919
+        ],
+        "lengthMm": 10.66
+      },
+      "animation": {
+        "name": "Detail",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "metal",
+    "1": "leather",
+    "2": "metal"
+  },
+  "materialClasses": [
+    "leather",
+    "metal"
+  ],
+  "coverageCm2": 1257.4,
+  "mass": 1192.62,
+  "weightClass": "heavy",
+  "triangles": 7182,
+  "complexity": 72,
+  "mutateTags": [
+    "heavy",
+    "round",
+    "fluted"
+  ],
+  "references": [],
+  "build": {
+    "glb": "heavy-breastplate-fluted.glb",
+    "glbSha256": "40865ce8ec632b4d8f9f0c4f37644d0940e3d9f9774b9ccdc83df48f34321922",
+    "glbBytes": 2743768,
+    "generator": "tools/armor-forms/build_fluted.py",
+    "generatorSha256": "06792abfdffd421cf5600aba6f2458b517b75a10ca2bfc481dc70a6c17b323a7",
+    "library": "tools/armor-forms/fluted.py",
+    "librarySha256": "70fc380653891606f0170f37c13f745c22936992c7fea89ef0f5f319bdf45629",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": 18.0,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "heavy-breastplate-fluted.glb",
+      "targetNames": [
+        "RadiusTop@0",
+        "RadiusTop@0.25",
+        "RadiusTop@0.75",
+        "RadiusTop@1",
+        "AxisForward@0",
+        "AxisForward@0.25",
+        "AxisForward@0.75",
+        "AxisForward@1",
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1",
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "Detail@0",
+        "Detail@0.25",
+        "Detail@0.75",
+        "Detail@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 3386,
+          "triangles": 5946,
+          "targets": 20,
+          "material": 0
+        },
+        {
+          "vertices": 354,
+          "triangles": 304,
+          "targets": 20,
+          "material": 1
+        },
+        {
+          "vertices": 446,
+          "triangles": 356,
+          "targets": 20,
+          "material": 2
+        },
+        {
+          "vertices": 1728,
+          "triangles": 576,
+          "targets": 20,
+          "material": 3
+        }
+      ],
+      "triangles": 7182,
+      "vertices": 5914,
+      "targets": {
+        "RadiusTop@0": {
+          "maxDeltaM": 0.00642,
+          "verticesMoved": 5914
+        },
+        "RadiusTop@0.25": {
+          "maxDeltaM": 0.00321,
+          "verticesMoved": 5914
+        },
+        "RadiusTop@0.75": {
+          "maxDeltaM": 0.00481,
+          "verticesMoved": 5914
+        },
+        "RadiusTop@1": {
+          "maxDeltaM": 0.00962,
+          "verticesMoved": 5914
+        },
+        "AxisForward@0": {
+          "maxDeltaM": 0.015,
+          "verticesMoved": 5914
+        },
+        "AxisForward@0.25": {
+          "maxDeltaM": 0.0075,
+          "verticesMoved": 5914
+        },
+        "AxisForward@0.75": {
+          "maxDeltaM": 0.015,
+          "verticesMoved": 5914
+        },
+        "AxisForward@1": {
+          "maxDeltaM": 0.03,
+          "verticesMoved": 5914
+        },
+        "BoneLength@0": {
+          "maxDeltaM": 0.11046,
+          "verticesMoved": 5914
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.0551,
+          "verticesMoved": 5914
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.00933,
+          "verticesMoved": 5914
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.00959,
+          "verticesMoved": 5914
+        },
+        "Radius@0": {
+          "maxDeltaM": 0.05419,
+          "verticesMoved": 5400
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.02845,
+          "verticesMoved": 5229
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.02698,
+          "verticesMoved": 5001
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.05537,
+          "verticesMoved": 5216
+        },
+        "Detail@0": {
+          "maxDeltaM": 0.00751,
+          "verticesMoved": 766
+        },
+        "Detail@0.25": {
+          "maxDeltaM": 0.00375,
+          "verticesMoved": 766
+        },
+        "Detail@0.75": {
+          "maxDeltaM": 0.00145,
+          "verticesMoved": 597
+        },
+        "Detail@1": {
+          "maxDeltaM": 0.0029,
+          "verticesMoved": 597
+        }
+      },
+      "animations": {
+        "AxisForward": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "Detail": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusTop": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "spine_03": 5914
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "RadiusTop=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "foldedFaces": 0,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "docs/production/armor-forms-2026-11-11/unit-3/BRIEF.md (Cleveland Museum of Art 1916.1714.c and 2012.38, Maximilian style)",
+    "from": "hero/f1-breastplate",
+    "made": "the F1 breastplate, welded; Bisect along the flute bands and three level cuts; Displace with a Wood texture (Bands, Sine) through an Empty, along the body's forward axis, weighted to the lower chest"
+  },
+  "keyframing": "the f1-breastplate keyframes, fluted with it (the same Displace offsets on every keyframe)",
+  "rolledRim": {
+    "surface": "metal rim (region 2)",
+    "profile": "flat lip, rolled at the top",
+    "spec": {
+      "rim": "top",
+      "band": 0.2,
+      "version": 6,
+      "widthM": 0.016,
+      "riseM": 0.0035,
+      "overhangM": 0.0015,
+      "minChainM": 0.12,
+      "roll": {
+        "above": 0.55,
+        "radiusM": 0.0065
+      }
+    },
+    "trianglesAdded": 576,
+    "rolledVertices": 25,
+    "chains": [
+      {
+        "edges": 50,
+        "lengthM": 1.6319,
+        "meanZ": 1.27
+      }
+    ],
+    "by": "tools/armor-kit/add_rim_to_glb.py (lane mm-followups, Adam, October 28; flat lips, lane kit-geometry, October 30)",
+    "rolled": "per item, godot/content/armor-kit-rims.json via ArmorKitRims.cs",
+    "carried": "from hero/f1-breastplate, unchanged (no flutes on the rim)"
+  },
+  "charmSeats": [
+    {
+      "name": "hero",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        0.0163,
+        1.2648,
+        0.1851
+      ],
+      "normal": [
+        -0.072,
+        0.1256,
+        0.9895
+      ],
+      "up": [
+        0.0091,
+        0.9921,
+        -0.1253
+      ],
+      "scale": 4.0,
+      "clearanceMm": 126.1,
+      "pin": {
+        "triangle": [
+          2365,
+          2374,
+          2388
+        ],
+        "bary": [
+          0.333332,
+          0.333326,
+          0.333343
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 166.985
+      }
+    },
+    {
+      "name": "accent1",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.1762,
+        1.146,
+        0.0929
+      ],
+      "normal": [
+        -0.9323,
+        0.0321,
+        0.3602
+      ],
+      "up": [
+        0.0299,
+        0.9995,
+        -0.0116
+      ],
+      "scale": 1.0,
+      "clearanceMm": 17.7,
+      "pin": {
+        "triangle": [
+          1118,
+          1129,
+          1132
+        ],
+        "bary": [
+          0.333334,
+          0.333333,
+          0.333333
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 159.199
+      }
+    },
+    {
+      "name": "accent2",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        0.1773,
+        1.1411,
+        0.0913
+      ],
+      "normal": [
+        0.9246,
+        0.0365,
+        0.3792
+      ],
+      "up": [
+        -0.0337,
+        0.9993,
+        -0.0138
+      ],
+      "scale": 1.0,
+      "clearanceMm": 17.8,
+      "pin": {
+        "triangle": [
+          3620,
+          3639,
+          3633
+        ],
+        "bary": [
+          0.333334,
+          0.333333,
+          0.333333
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 141.04
+      }
+    },
+    {
+      "name": "accent3",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.0868,
+        1.4076,
+        0.1315
+      ],
+      "normal": [
+        -0.1425,
+        0.4922,
+        0.8588
+      ],
+      "up": [
+        0.0806,
+        0.8705,
+        -0.4855
+      ],
+      "scale": 1.0,
+      "clearanceMm": 13.8,
+      "pin": {
+        "triangle": [
+          18,
+          36,
+          19
+        ],
+        "bary": [
+          0.333334,
+          0.333332,
+          0.333333
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 172.336
+      }
+    }
+  ],
+  "charmSeatsWhy": [],
+  "rimFolds": {
+    "worstFaces": 2,
+    "cases": [
+      "BoneLength=0",
+      "BoneLength=0.125",
+      "all=low"
+    ],
+    "why": "the rolled rim carried from hero/f1-breastplate folds the same faces there (its checks predate the rim)"
+  },
+  "bakedShade": {
+    "spec": {
+      "version": 2,
+      "distanceM": 0.06,
+      "samples": 32,
+      "rivetsCastNoShade": {
+        "widestM": 0.0125,
+        "minPoints": 5
+      }
+    },
+    "points": 5914,
+    "mean": 0.72,
+    "shutIn": 1362,
+    "channel": "COLOR_0 red (1 open, 0 shut in)",
+    "by": "tools/armor-forms/bake_shade.py (Blender Cycles Ambient Occlusion bake)"
+  }
+}

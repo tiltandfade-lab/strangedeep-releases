@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "id": "f1-base-padding",
+  "displayName": "Padded layer (arming doublet and hose)",
+  "layer": "base",
+  "attach": "soft",
+  "bones": [
+    "calf_l",
+    "calf_r",
+    "clavicle_l",
+    "clavicle_r",
+    "foot_l",
+    "foot_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 2805,
+  "weightClass": "light",
+  "triangles": 4619,
+  "materials": [
+    "cloth"
+  ],
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "thin doublet",
+      "at1": "thick gambeson",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.1696,
+          1.2653,
+          0.0279
+        ],
+        "end": [
+          -0.1885,
+          1.2608,
+          0.0285
+        ],
+        "lengthMm": 19.46
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "tucked skirt",
+      "at1": "full skirt",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.0762,
+          0.84,
+          -0.11
+        ],
+        "end": [
+          0.1176,
+          0.84,
+          -0.1859
+        ],
+        "lengthMm": 86.51
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 14206.1,
+  "mass": 2130.92,
+  "countsTowardItem": true,
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "weightClass": "heavy",
+    "generator": "tools/armor-kit/build_f1_hero.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "c068e67af654371b6fb10e67b0a02d7db528e64fe6bbcc4fb2520cf124739306",
+    "librarySha256": "de639b4b62efcfe49a434319acb963f5cd56e60264a66e31f8439d375050b688",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-base-padding.glb",
+    "glbBytes": 322976,
+    "glbSha256": "53f368e9d8d0d1e5bcc694fed5cdd0700c7ad5b679a58863f2ec13218be7c463",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0."
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-base-padding.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 3161,
+          "triangles": 4619,
+          "targets": 8,
+          "material": 0
+        }
+      ],
+      "triangles": 4619,
+      "vertices": 3161,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.00852,
+          "verticesMoved": 410
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00426,
+          "verticesMoved": 387
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00521,
+          "verticesMoved": 404
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.01041,
+          "verticesMoved": 433
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.03562,
+          "verticesMoved": 140
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.01781,
+          "verticesMoved": 94
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.02137,
+          "verticesMoved": 76
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.04274,
+          "verticesMoved": 76
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "calf_l": 281,
+        "calf_r": 279,
+        "clavicle_l": 306,
+        "clavicle_r": 295,
+        "foot_l": 148,
+        "foot_r": 41,
+        "hand_l": 79,
+        "hand_r": 80,
+        "head": 67,
+        "lowerarm_l": 201,
+        "lowerarm_r": 202,
+        "neck_01": 214,
+        "pelvis": 1155,
+        "spine_01": 804,
+        "spine_02": 437,
+        "spine_03": 840,
+        "thigh_l": 508,
+        "thigh_r": 489,
+        "thumb_01_l": 4,
+        "thumb_01_r": 4,
+        "upperarm_l": 384,
+        "upperarm_r": 390
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    }
+  },
+  "notes": "Base layer under plate (ruling 21): an arming doublet and hose with a split padded skirt (step 2), filled up to the plates of the set it was built for. Handles: Radius is the gambeson's depth under the torso plates, RadiusBottom the skirt's fullness.",
+  "liftMm": {
+    "min": 4.0,
+    "max": 39.0,
+    "base": 8.0,
+    "torso": 17.0
+  },
+  "skirt": {
+    "rows": 8,
+    "cols": 15,
+    "panels": 2,
+    "topZ": 1.04,
+    "hemZ": 0.84,
+    "liftMm": {
+      "min": 4.0,
+      "max": 95.6
+    }
+  },
+  "keyframing": "sampled from the builder at every keyframe"
+}

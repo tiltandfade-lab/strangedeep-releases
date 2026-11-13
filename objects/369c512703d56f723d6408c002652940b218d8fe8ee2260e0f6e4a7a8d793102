@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "sl-num-crown-0",
+  "displayName": "Coverall number, crown, place 1",
+  "layer": "starter",
+  "attach": "soft",
+  "bones": [
+    "head"
+  ],
+  "vertices": 392,
+  "weightClass": "light",
+  "triangles": 294,
+  "materials": [
+    "cloth"
+  ],
+  "materialSlots": [
+    "digit 0",
+    "digit 1",
+    "digit 2",
+    "digit 3",
+    "digit 4",
+    "digit 5",
+    "digit 6",
+    "digit 7",
+    "digit 8",
+    "digit 9"
+  ],
+  "handles": [
+    {
+      "name": "Width",
+      "at0": "narrow",
+      "at1": "wide",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Crown",
+      "at0": "low",
+      "at1": "high crown",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Round",
+      "at0": "square",
+      "at1": "rounded",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "cloth",
+    "2": "cloth",
+    "3": "cloth",
+    "4": "cloth",
+    "5": "cloth",
+    "6": "cloth",
+    "7": "cloth",
+    "8": "cloth",
+    "9": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 0.0,
+  "mass": 0.0,
+  "countsTowardItem": false,
+  "boundsMm": [
+    36.9,
+    59.1,
+    1.9
+  ],
+  "seat": {
+    "seat": "crown",
+    "place": 0,
+    "glyphHeightMm": 58.0,
+    "on": "sm-fencing-back"
+  },
+  "ridesOn": "sm-fencing-back",
+  "build": {
+    "family": "SM",
+    "familyName": "Starter masks",
+    "weightClass": "light",
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "sl-num-crown-0.glb",
+    "glbBytes": 87036,
+    "glbSha256": "52d2b37d0bf2f689b0f6e6b7bc5798c7a78af7a23078d6f1aaceb4a936e18fa4",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "starter-look lane output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sl-num-crown-0.glb",
+      "targetNames": [
+        "Width",
+        "Crown",
+        "Round"
+      ],
+      "primitives": [
+        {
+          "vertices": 48,
+          "triangles": 36,
+          "targets": 3,
+          "material": 0
+        },
+        {
+          "vertices": 16,
+          "triangles": 12,
+          "targets": 3,
+          "material": 1
+        },
+        {
+          "vertices": 40,
+          "triangles": 30,
+          "targets": 3,
+          "material": 2
+        },
+        {
+          "vertices": 40,
+          "triangles": 30,
+          "targets": 3,
+          "material": 3
+        },
+        {
+          "vertices": 32,
+          "triangles": 24,
+          "targets": 3,
+          "material": 4
+        },
+        {
+          "vertices": 40,
+          "triangles": 30,
+          "targets": 3,
+          "material": 5
+        },
+        {
+          "vertices": 48,
+          "triangles": 36,
+          "targets": 3,
+          "material": 6
+        },
+        {
+          "vertices": 24,
+          "triangles": 18,
+          "targets": 3,
+          "material": 7
+        },
+        {
+          "vertices": 56,
+          "triangles": 42,
+          "targets": 3,
+          "material": 8
+        },
+        {
+          "vertices": 48,
+          "triangles": 36,
+          "targets": 3,
+          "material": 9
+        }
+      ],
+      "triangles": 294,
+      "vertices": 392,
+      "targets": {
+        "Width": {
+          "maxDeltaM": 0.00091,
+          "verticesMoved": 392
+        },
+        "Crown": {
+          "maxDeltaM": 0.0259,
+          "verticesMoved": 392
+        },
+        "Round": {
+          "maxDeltaM": 0.00094,
+          "verticesMoved": 392
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 392
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "rest",
+        "pass": true,
+        "offMm": [
+          4.5,
+          4.5
+        ],
+        "facesOutward": true
+      }
+    ]
+  },
+  "notes": "A stencilled number place: ten glyph regions, the game keeps the wearer's digit and leaves the rest unpainted."
+}

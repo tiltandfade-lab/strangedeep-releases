@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "status": "Draft for Adam's review (lane dice-arena, October 28, 2026). Design note: design-notebook/Strangedeep/Visual Direction/Dungeon and Interface Presentation.md, 'October 28 - the dice arena'. Look and timing only: no rule reads this file, and the number on the die is always the rules' roll.",
+  "edge": "right",
+  "throw": "auto",
+  "fast": false,
+  "timing": {
+    "slideIn": 0.3,
+    "tumbleMin": 1.2,
+    "tumbleMax": 1.8,
+    "hold": 0.6,
+    "slideOut": 0.3
+  },
+  "die": {
+    "material": { "paint": "ivory" },
+    "numerals": "#1c140e",
+    "numeralRole": "big"
+  },
+  "arena": {
+    "floor": { "paint": "bog-oak" },
+    "walls": { "material": "res://assets/materials-mm/692-carved-wooden-panel/material.tres" },
+    "screenShare": 0.4,
+    "retroPixelShare": 0.5,
+    "settleZoom": 0.5
+  },
+  "open": {
+    "edge": "Which screen edge the arena slides from: right (default), left, top or bottom.",
+    "throw": "auto (default): the die throws itself. click: the die waits in the arena until the player clicks it.",
+    "fast": "false (default). true skips the tumble and shows the settled die at once, for players who have seen it many times.",
+    "die.material": "Any material of the armor paint library (godot/resources/armor-paint/armor-paint-library.json) by id; ivory by default, ivory-glaze for enamel. Numerals stay dark.",
+    "arena.retroPixelShare": "In Retro the tray is drawn in pixels this share of the board's Retro pixel (0.5: half as big), so the numerals stay readable; 1 matches the board exactly.",
+    "arena.settleZoom": "Once the die settles the camera closes this share of its distance to the die (0.25 s; 0.5 shows the die twice as big), so its number reads at the game's size; 0 keeps the whole tray in view.",
+    "arena": "Floor and walls each take a paint library id ({\"paint\": id}) or a Material Maker material ({\"material\": path}); stone is res://assets/materials-mm/685-carved-stone-wall/material.tres, the occultist's lacquer {\"paint\": \"puppet-lacquer\"}."
+  }
+}

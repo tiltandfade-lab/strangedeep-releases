@@ -1,0 +1,49 @@
+{
+ "part": "saint-statue",
+ "builtBy": "tools/floor1-models/build_floor1_models.py",
+ "blender": "5.2.2 LTS",
+ "boundsGodotMetres": {
+  "min": [
+   -0.26,
+   0.0,
+   -0.21
+  ],
+  "max": [
+   0.26,
+   2.074,
+   0.347
+  ]
+ },
+ "triangles": 6820,
+ "materials": [
+  "f1m_stone",
+  "f1m_stone_dark"
+ ],
+ "front": "front (the saint's face and book) faces Godot +Z",
+ "madeBy": [
+  {
+   "form": "plinth: base and cap mouldings and a sunk panel on the die",
+   "tool": "cubes, Bevel; Inset Faces and Extrude on the front"
+  },
+  {
+   "form": "the saint's head and hands",
+   "tool": "the hero body (mpfb-human.glb), posed with its armature (pose bones turned to hold a book) and the Armature modifier applied"
+  },
+  {
+   "form": "robe and sleeves",
+   "tool": "a stick skeleton under the Skin modifier, Subdivision Surface, Displace with a band-noise texture for the folds"
+  },
+  {
+   "form": "veil over the head and down the back",
+   "tool": "UV sphere opened at the face with Boolean; a three-point Skin drape, Subdivision Surface"
+  },
+  {
+   "form": "a closed book in both hands",
+   "tool": "cube, Bevel, tilted"
+  },
+  {
+   "form": "the figure as one weathered stone",
+   "tool": "Remesh (voxel 9 mm), Smooth, Displace with a clouds texture, Decimate"
+  }
+ ]
+}

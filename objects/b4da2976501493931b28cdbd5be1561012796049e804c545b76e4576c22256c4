@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "id": "sm-doll-face",
+  "displayName": "Doll face (porcelain)",
+  "family": "SM",
+  "familyName": "Starter masks",
+  "tier": 1,
+  "category": "head",
+  "slot": "helm",
+  "attach": "rigid",
+  "bones": [
+    "head"
+  ],
+  "allowedRegions": [
+    "head"
+  ],
+  "defaultRegion": "head",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.648,
+      0.1989
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.85,
+    1.2
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 10,
+    "yaw": 10,
+    "roll": 10
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "small eyes",
+      "at1": "big doll eyes",
+      "default": 1.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisForward",
+      "at0": "flat",
+      "at1": "round cheeks",
+      "default": 0.9,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Width",
+      "at0": "narrow",
+      "at1": "wide",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Chin",
+      "at0": "short",
+      "at1": "long chin",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "regionClasses": {
+    "0": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "coverageCm2": 629.8,
+  "mass": 629.8,
+  "weightClass": "light",
+  "triangles": 664,
+  "complexity": 7,
+  "mutateTags": [
+    "light",
+    "weird"
+  ],
+  "references": [],
+  "build": {
+    "glb": "sm-doll-face.glb",
+    "glbSha256": "00743e48dd562182a5d843fd2505dfe79a7d89964b9b51ea37ddda64383c1129",
+    "glbBytes": 76836,
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sm-doll-face.glb",
+      "targetNames": [
+        "Radius",
+        "AxisForward",
+        "Width",
+        "Chin"
+      ],
+      "primitives": [
+        {
+          "vertices": 474,
+          "triangles": 664,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 664,
+      "vertices": 474,
+      "targets": {
+        "Radius": {
+          "maxDeltaM": 0.0081,
+          "verticesMoved": 86
+        },
+        "AxisForward": {
+          "maxDeltaM": 0.01251,
+          "verticesMoved": 376
+        },
+        "Width": {
+          "maxDeltaM": 0.02356,
+          "verticesMoved": 448
+        },
+        "Chin": {
+          "maxDeltaM": 0.02206,
+          "verticesMoved": 200
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 474
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "basis",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.0,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.01,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.209,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.01,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.419,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.01,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.091,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.02,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "AxisForward=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.186,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.03,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Width=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.07,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.974,
+        "minClearanceMm": 27.01,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Width=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.139,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 24.83,
+        "minClearanceAt": {
+          "vertex": 255,
+          "at": [
+            -0.111,
+            -0.048,
+            1.634
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Chin=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.11,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.54,
+        "minClearanceAt": {
+          "vertex": 172,
+          "at": [
+            0.0,
+            -0.133,
+            1.757
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "Chin=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.221,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.945,
+        "minClearanceMm": 27.54,
+        "minClearanceAt": {
+          "vertex": 172,
+          "at": [
+            0.0,
+            -0.133,
+            1.757
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=0.5",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.24,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.961,
+        "minClearanceMm": 27.54,
+        "minClearanceAt": {
+          "vertex": 172,
+          "at": [
+            0.0,
+            -0.133,
+            1.757
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "all=1.0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.482,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.908,
+        "minClearanceMm": 24.91,
+        "minClearanceAt": {
+          "vertex": 255,
+          "at": [
+            -0.111,
+            -0.048,
+            1.631
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "maxEdgeStretch": 1.473,
+        "ringFailures": 0,
+        "minOwnBoneWeight": 0.97,
+        "minClearanceMm": 27.02,
+        "minClearanceAt": {
+          "vertex": 322,
+          "at": [
+            0.0,
+            -0.161,
+            1.504
+          ]
+        },
+        "bodyPokesThrough": 0,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "mask": true,
+    "ruling": "Starter masks round 2, Adam, October 28: no eggheads, handles, materials.",
+    "eyeHoles": "Two cells each side at eye level go through; the head behind is darkness.",
+    "paint": "The painted face (sm-doll-paint) rides these handles.",
+    "material": "Porcelain, glossy; glass class until the kit has a ceramic class."
+  },
+  "materialSlots": [
+    "porcelain"
+  ]
+}

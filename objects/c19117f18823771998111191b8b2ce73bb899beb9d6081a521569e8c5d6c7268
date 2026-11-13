@@ -1,0 +1,38 @@
+{
+ "source": "godot/assets/armor-kit/f1/hero/f1-pauldron-l.glb",
+ "parts": {
+  "f1-pauldron-l": {
+   "vertices": 2446,
+   "convexSamples": 6477,
+   "concaveSamples": 21,
+   "verticesWithin30mm": 2445,
+   "downTurns": [
+    1894,
+    173,
+    130,
+    249
+   ],
+   "reachM": 0.25,
+   "sharpDeg": 55.0,
+   "rimTrianglesAdded": 432,
+   "rim": "bottom"
+  },
+  "Icosphere": {
+   "vertices": 42,
+   "convexSamples": 0,
+   "concaveSamples": 0,
+   "verticesWithin30mm": 0,
+   "downTurns": [
+    32,
+    4,
+    2,
+    4
+   ],
+   "reachM": 0.25,
+   "sharpDeg": 55.0,
+   "rimTrianglesAdded": 0,
+   "rim": "bottom"
+  }
+ },
+ "bakedBy": "blender -b -P tools/armor-kit/armor_kit_edge_bake.py -- <source, its rim stripped by add_rim_to_glb.strip_rim> <this> --rim bottom --band 0.15 (a flat lip since lane kit-geometry, October 30)"
+}

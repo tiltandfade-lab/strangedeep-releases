@@ -1,0 +1,56 @@
+{
+ "part": "scavenger-barricade",
+ "builtBy": "tools/floor1-models/build_floor1_models.py",
+ "blender": "5.2.2 LTS",
+ "boundsGodotMetres": {
+  "min": [
+   -1.252,
+   -0.01,
+   -0.293
+  ],
+  "max": [
+   1.23,
+   1.591,
+   0.304
+  ]
+ },
+ "triangles": 3540,
+ "materials": [
+  "f1m_iron",
+  "f1m_stone",
+  "f1m_stone_dark",
+  "f1m_wood",
+  "f1m_wood_dark"
+ ],
+ "front": "front (the boards and setts) faces Godot +Z; the back stands against the wall",
+ "madeBy": [
+  {
+   "form": "two crates with board grooves",
+   "tool": "cube, Bevel, Array of groove bars, Boolean difference"
+  },
+  {
+   "form": "a broken door leant back, its corner torn away, two iron straps",
+   "tool": "cube, Bevel, Boolean difference, joined straps"
+  },
+  {
+   "form": "a pew end and a stub of its seat on their side",
+   "tool": "cube, Bevel (two segments)"
+  },
+  {
+   "form": "a cart wheel leant at the end: rim, hub, eight spokes and an iron tyre",
+   "tool": "torus, cylinders, cubes, Boolean difference for the tyre"
+  },
+  {
+   "form": "three boards nailed across at angles, one snapped",
+   "tool": "cube, Bevel, Boolean difference"
+  },
+  {
+   "form": "a heap of paving setts at the foot",
+   "tool": "cube, Bevel, scattered by a seeded script"
+  },
+  {
+   "form": "a barrel rolled on its side, two iron hoops",
+   "tool": "cylinder, Bevel, joined hoop cylinders"
+  }
+ ]
+}

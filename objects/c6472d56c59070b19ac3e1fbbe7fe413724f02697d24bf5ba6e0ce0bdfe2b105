@@ -1,0 +1,16 @@
+{
+ "schemaVersion": 1,
+ "kind": "glove-types",
+ "comment": "Each glove item in godot/content/prototype-standard-equipment.json is its own type (lane gloves, November 11; Adam: the gloves 'need to be split into types the same way weapons were'; lead: the nine existing items become the types, no new items, names or drop changes). With the new gloves on (GlovesSwitch), an item's rolled gloves look keeps its template (arm pieces, paint) and wears its own form; a light item wears the leather glove at its own thickness. 'forms' are drawn by share from the item's seed (Full Plate wears the mitten as a roll variant). Read by godot/src/GlovesSwitch.cs and test/glove-types.test.ts.",
+ "types": [
+  {"definitionId": "item-definition_7590fb04a6c49879", "item": "Patched Gambeson Gloves", "glove": 0.7, "forms": []},
+  {"definitionId": "item-definition_1556ce3e69905fd8", "item": "Studded Leather Jack Gloves", "glove": 0.5, "forms": []},
+  {"definitionId": "item-definition_1785e65fd0edf666", "item": "Hooded Leather Wrap Gloves", "glove": 0.3, "forms": []},
+  {"definitionId": "item-definition_3e05c603cddbb1b9", "item": "Iron-Plated Gauntlets", "forms": [{"part": "hero/medium-gauntlet-banded", "share": 1}]},
+  {"definitionId": "item-definition_50964dad1b6a230c", "item": "Brigandine Gauntlets", "forms": [{"part": "hero/medium-backhand-banded", "share": 1}]},
+  {"definitionId": "item-definition_380b489467763607", "item": "Lamellar Gauntlets", "forms": [{"part": "hero/medium-glove-cuffed", "share": 1}]},
+  {"definitionId": "item-definition_8a4afaab67971499", "item": "Half Plate Gauntlets", "forms": [{"part": "hero/heavy-gauntlet-banded", "share": 1}]},
+  {"definitionId": "item-definition_943bf82f8ed02b52", "item": "Full Plate Gauntlets", "forms": [{"part": "hero/heavy-gauntlet-block-banded", "share": 3}, {"part": "hero/heavy-gauntlet-mitten", "share": 1}]},
+  {"definitionId": "item-definition_f7250d8d702d1c2f", "item": "Fluted Plate Gauntlets", "forms": [{"part": "hero/heavy-gauntlet-crested-banded", "share": 1}]}
+ ]
+}

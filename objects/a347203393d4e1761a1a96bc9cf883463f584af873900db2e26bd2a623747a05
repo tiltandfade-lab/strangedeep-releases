@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-helm-bowl",
+  "displayName": "Helm bowl",
+  "kind": "shell",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "head"
+  ],
+  "slot": "helm",
+  "attach": "rigid",
+  "bones": [
+    "head"
+  ],
+  "allowedRegions": [
+    "any"
+  ],
+  "defaultRegion": "any",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": null,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "AxisUp",
+      "at0": "low flat crown",
+      "at1": "tall crown",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "close",
+      "at1": "wide cheek",
+      "default": 0.2,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisBack",
+      "at0": "no tail",
+      "at1": "long tail",
+      "default": 0.0,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 860,
+  "mutateTags": [
+    "heavy",
+    "square"
+  ],
+  "references": [
+    "docs/production/armor-kit-f1-references-2026-10-19/parts/f1-helm-closed-visor/turnaround.jpg"
+  ],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-helm-bowl.glb",
+    "glbSha256": "6d5281a50427706d1b0684d3b0fd9e7275cc525c5ef9be4defc8bee4b2e21dd3",
+    "glbBytes": 72888,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-helm-bowl.glb",
+      "targetNames": [
+        "AxisUp",
+        "RadiusBottom",
+        "AxisBack"
+      ],
+      "primitives": [
+        {
+          "vertices": 576,
+          "triangles": 860,
+          "targets": 3,
+          "material": 0
+        }
+      ],
+      "triangles": 860,
+      "vertices": 576,
+      "targets": {
+        "AxisUp": {
+          "maxDeltaM": 0.055,
+          "verticesMoved": 348
+        },
+        "RadiusBottom": {
+          "maxDeltaM": 0.02677,
+          "verticesMoved": 216
+        },
+        "AxisBack": {
+          "maxDeltaM": 0.04424,
+          "verticesMoved": 110
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 576
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      },
+      "body": {
+        "pass": true,
+        "worst": {
+          "flippedFaces": 0,
+          "degenerateFaces": 0,
+          "selfIntersections": 0,
+          "ringFailures": 0,
+          "bodyPokesThrough": 0,
+          "minClearanceMm": 15.96,
+          "minOwnBoneWeight": 0.534,
+          "maxEdgeStretch": 10.296
+        }
+      }
+    },
+    "budget": {
+      "triangles": 860,
+      "limit": 1200,
+      "pass": true
+    }
+  },
+  "notes": {
+    "opening": "Open at the face (within 58\u00b0 of the front, below the brow): a face mask snaps inside, or the head under it shows darkness."
+  }
+}

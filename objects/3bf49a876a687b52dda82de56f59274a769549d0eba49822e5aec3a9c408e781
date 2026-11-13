@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "sl-coverall-collar",
+  "displayName": "Coveralls (collar)",
+  "layer": "starter",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "head",
+    "neck_01",
+    "spine_03",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 280,
+  "weightClass": "light",
+  "triangles": 556,
+  "materials": [
+    "cloth"
+  ],
+  "materialSlots": [
+    "coverall-dark"
+  ],
+  "handles": [],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 348.0,
+  "mass": 52.2,
+  "countsTowardItem": true,
+  "boundsMm": [
+    271.0,
+    231.1,
+    44.0
+  ],
+  "build": {
+    "family": "SM",
+    "familyName": "Starter masks",
+    "weightClass": "light",
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "sl-coverall-collar.glb",
+    "glbBytes": 42396,
+    "glbSha256": "268cd4e6fd5e24236c7702316722191e75e4a7a9a05c14374d03f8e6c615558b",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "starter-look lane output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sl-coverall-collar.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 195,
+        "clavicle_r": 195,
+        "head": 237,
+        "neck_01": 470,
+        "spine_03": 431,
+        "upperarm_l": 115,
+        "upperarm_r": 120
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "rest",
+        "pass": true
+      }
+    ]
+  },
+  "notes": "Starter coveralls (Adam, September 29 and October 2). Every vertex carries the body's own bone blend, so it bends exactly like the skin under it."
+}

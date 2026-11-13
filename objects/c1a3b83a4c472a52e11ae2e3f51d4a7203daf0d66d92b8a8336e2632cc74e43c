@@ -1,0 +1,5 @@
+{
+  "comment": "Colour on dropped kit weapons (lane kit-weapons, October 28; Adam's rulings). reach.mode is 'scaled' (Adam: \"we have already established that the gradient runs up to 66\"): the gradient runs from reach.scaled[0] of the blade at the strongest stat's weakest roll to reach.scaled[1] at its strongest, never past 0.66 (KitWeaponColour.MaxReach), so the grade metal always shows at the tip; 'fixed' runs every identified blade's gradient reach.fixed of the blade. Clashes are allowed (Adam: \"i like the red on crimson sword ... clashes are allowed\"): a drop keeps its metal whatever its stat's colour. statRanges are each stat's roll range, the same numbers as MAGIC_PROPERTIES in src/items/magic-properties.ts (test/kit-weapons.test.ts holds them equal).",
+  "reach": { "mode": "scaled", "fixed": 0.5, "scaled": [0.4, 0.66] },
+  "statRanges": { "mighty": [1, 4], "deft": [1, 4], "vital": [1, 4], "arcane": [1, 4] }
+}

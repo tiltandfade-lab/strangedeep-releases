@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "status": "kit-weapons-phase-1",
+  "comment": "Kit weapons and shields that join the loot beside the fitted weapons (lane kit-weapons, October 28; design note Visual Direction/Kit Weapons and Shields.md). Each copies its base item's rules whole; only the loot weights are its own (proposed, for the lead). Ids come from kitWeaponIds (src/items/kit-weapons.ts). The model hashes are written by tools/kit-weapons/build_kit_weapons.py --pair. The pair paints from the library's dark-knight theme (Adam, October 28): bright steel blade or shield face, black iron guard, pommel, rim, boss and spikes (its grip rolls).",
+  "items": [
+    {
+      "kitId": "kit_dark_knight_greatsword",
+      "definitionId": "item-definition_5e4f8b561fc5a1fc",
+      "actionId": "action_ffaeae13751f2c7f",
+      "baseDefinitionId": "item-definition_78ebf085bfe1d2cd",
+      "nameKey": "item.kit-dark-knight-greatsword.name",
+      "workshopAssetId": "twohand_kit_dark_knight_greatsword",
+      "dropWeightByDepth": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "theme": "dark-knight",
+      "model": {
+        "assetId": "weapon.kit-dark-knight-greatsword",
+        "source": "godot/assets/character-workshop/twohand_kit_dark_knight_greatsword.glb",
+        "sha256": "300c1f8fa74d65ec969130fbf413d0cb1b09fdb37a0a1886ee7c5ab56d480b90"
+      }
+    },
+    {
+      "kitId": "kit_dark_knight_kite_shield",
+      "definitionId": "item-definition_15f29ba44bd6560a",
+      "actionId": null,
+      "baseDefinitionId": "item-definition_269f8656d321e3ba",
+      "nameKey": "item.kit-dark-knight-kite-shield.name",
+      "workshopAssetId": "kit_dark_knight_kite_shield",
+      "dropWeightByDepth": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "theme": "dark-knight",
+      "model": {
+        "assetId": "weapon.kit-dark-knight-kite-shield",
+        "source": "godot/assets/character-workshop/kit_dark_knight_kite_shield.glb",
+        "sha256": "b8fdd5ca73e6f13d087f72af0179fd5f21e93678a64f7cf459f6150bd6ad10cb"
+      }
+    }
+  ]
+}

@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "id": "heavy-tasset-long-r",
+  "displayName": "Long tasset (right)",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "leg",
+  "slot": "legs",
+  "attach": "rigid",
+  "bones": [
+    "thigh_r"
+  ],
+  "allowedRegions": [
+    "thigh_r"
+  ],
+  "defaultRegion": "thigh_r",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      -0.19,
+      0.72,
+      0.11
+    ],
+    "normal": [
+      -0.4718,
+      0.1205,
+      0.8734
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "mirror",
+    "pairedId": "heavy-tasset-long-l"
+  },
+  "scaleLimits": [
+    0.9,
+    1.15
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 6,
+    "yaw": 6,
+    "roll": 6
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      -0.0996,
+      -0.9918,
+      0.0803
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "short, lames telescoped",
+      "at1": "long, to the knee",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.0979,
+          0.6568,
+          0.1616
+        ],
+        "end": [
+          -0.1207,
+          0.5282,
+          0.1366
+        ],
+        "lengthMm": 132.98
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "Radius",
+      "at0": "close round the thigh",
+      "at1": "standing off",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.227,
+          0.8763,
+          0.1098
+        ],
+        "end": [
+          -0.2437,
+          0.8793,
+          0.1262
+        ],
+        "lengthMm": 23.64
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "Detail",
+      "at0": "straight hem",
+      "at1": "hem turned out",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.1102,
+          0.5543,
+          0.1028
+        ],
+        "end": [
+          -0.0527,
+          0.5578,
+          0.2176
+        ],
+        "lengthMm": 128.42
+      },
+      "animation": {
+        "name": "Detail",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "metal",
+    "2": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "coverageCm2": 487.1,
+  "mass": 487.1,
+  "weightClass": "heavy",
+  "triangles": 2040,
+  "complexity": 21,
+  "mutateTags": [
+    "heavy",
+    "plain"
+  ],
+  "references": [],
+  "build": {
+    "glb": "heavy-tasset-long-r.glb",
+    "glbSha256": "ea045dc43acf36f48623a20440bac5ec9ef69485f4b7caf4a36591aa61a7965e",
+    "glbBytes": 627136,
+    "generator": "tools/armor-forms/build_legs.py",
+    "generatorSha256": "2f3952198f142b24c917647a6c1715f19be87d7ad51e0515e236d9662f6c3810",
+    "library": "tools/armor-forms/leg_forms.py",
+    "librarySha256": "8cc7aca36f995dce6aa4555d88cc435cebe47c872fad90b36f51a9271d764e3e",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": 1.0,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pilot output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "heavy-tasset-long-r.glb",
+      "targetNames": [
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1",
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "Detail@0",
+        "Detail@0.25",
+        "Detail@0.75",
+        "Detail@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1020,
+          "triangles": 1224,
+          "targets": 12,
+          "material": 0
+        },
+        {
+          "vertices": 864,
+          "triangles": 816,
+          "targets": 12,
+          "material": 1
+        }
+      ],
+      "triangles": 2040,
+      "vertices": 1884,
+      "targets": {
+        "BoneLength@0": {
+          "maxDeltaM": 0.10329,
+          "verticesMoved": 1884
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.05164,
+          "verticesMoved": 1884
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.01408,
+          "verticesMoved": 1830
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.02817,
+          "verticesMoved": 1830
+        },
+        "Radius@0": {
+          "maxDeltaM": 0.00039,
+          "verticesMoved": 1884
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00019,
+          "verticesMoved": 1884
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.01158,
+          "verticesMoved": 1884
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.02316,
+          "verticesMoved": 1884
+        },
+        "Detail@0": {
+          "maxDeltaM": 0.02774,
+          "verticesMoved": 1321
+        },
+        "Detail@0.25": {
+          "maxDeltaM": 0.01387,
+          "verticesMoved": 1321
+        },
+        "Detail@0.75": {
+          "maxDeltaM": 0.04993,
+          "verticesMoved": 1321
+        },
+        "Detail@1": {
+          "maxDeltaM": 0.09986,
+          "verticesMoved": 1321
+        }
+      },
+      "animations": {
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "Detail": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "thigh_r": 1884
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.125",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.25",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.375",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.625",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.75",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=0.875",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "Detail=1",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "foldedFaces": 0,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "foldedFaces": 0,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "docs/production/armor-forms-2026-11-11/unit-2/BRIEF.md (Cleveland 1916.1867.a, tasset: 39.4 x 26.1 cm, six to seven lames; Cleveland 1916.1511.h: 28.2 x 22.3 cm)",
+    "fit": "shrinkwrapped onto the hero's leg and the clothes worn under it as the templates wear them: f1-base-padding, medium-gambeson, medium-padded-jack, light-quilted-jacket, light-trousers, medium-hose",
+    "made": "Spin (a line of points swept round the thigh, one per lame), Translate out until clear of the leg as worn and the cuisse, Join, Solidify, Bevel; handles by Scale in the thigh's space and Simple Deform (Taper)"
+  },
+  "mirrorOf": "heavy-tasset-long-l",
+  "keyframing": "each end is the finished mesh deformed in Blender (Scale in the bone's space, Simple Deform Taper, Shrinkwrap off the clothes); the quarter keys are halfway to the ends",
+  "charmSeats": [
+    {
+      "name": "accent1",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.2015,
+        0.7689,
+        0.1386
+      ],
+      "normal": [
+        -0.4966,
+        0.1182,
+        0.8599
+      ],
+      "up": [
+        0.0591,
+        0.993,
+        -0.1023
+      ],
+      "scale": 1.0,
+      "clearanceMm": 14.7,
+      "pin": {
+        "triangle": [
+          54,
+          53,
+          55
+        ],
+        "bary": [
+          0.333332,
+          0.333334,
+          0.333334
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": -139.499
+      }
+    },
+    {
+      "name": "accent2",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.1094,
+        0.5714,
+        0.1316
+      ],
+      "normal": [
+        0.3147,
+        0.0456,
+        0.9481
+      ],
+      "up": [
+        -0.0144,
+        0.999,
+        -0.0433
+      ],
+      "scale": 1.0,
+      "clearanceMm": 13.3,
+      "pin": {
+        "triangle": [
+          131,
+          129,
+          632
+        ],
+        "bary": [
+          0.333334,
+          0.333334,
+          0.333332
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": -83.116
+      }
+    },
+    {
+      "name": "accent3",
+      "space": "part (glTF, +Y up, metres)",
+      "point": [
+        -0.2614,
+        0.6374,
+        0.0483
+      ],
+      "normal": [
+        -0.9637,
+        0.1185,
+        0.2392
+      ],
+      "up": [
+        0.115,
+        0.993,
+        -0.0285
+      ],
+      "scale": 1.0,
+      "clearanceMm": 11.8,
+      "pin": {
+        "triangle": [
+          525,
+          532,
+          89
+        ],
+        "bary": [
+          0.333333,
+          0.333332,
+          0.333335
+        ],
+        "offsetMm": 0.0,
+        "angleDeg": 136.573
+      }
+    }
+  ],
+  "charmSeatsWhy": [
+    "no hero seat: its widest clear spot is 26.1 mm, the hero needs 46.2 mm, flat and facing the way the part shows"
+  ],
+  "bakedShade": {
+    "spec": {
+      "version": 2,
+      "distanceM": 0.06,
+      "samples": 32,
+      "rivetsCastNoShade": {
+        "widestM": 0.0125,
+        "minPoints": 5
+      }
+    },
+    "points": 1884,
+    "mean": 0.76,
+    "shutIn": 391,
+    "channel": "COLOR_0 red (1 open, 0 shut in)",
+    "by": "tools/armor-forms/bake_shade.py (Blender Cycles Ambient Occlusion bake)"
+  }
+}

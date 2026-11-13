@@ -1,0 +1,341 @@
+{
+ "gate": {
+  "depthStepMm": 50.0,
+  "faults": [
+   "zeroArea",
+   "openEdges",
+   "nonManifold",
+   "flipped",
+   "tJunctions"
+  ],
+  "maxBoundaryMm": 40.0,
+  "maxDepthMeanMm": 20.0,
+  "maxOverStepShare": 0.02,
+  "minIou": 0.85
+ },
+ "meshes": {
+  "paired-iron-gate-breached": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "7502c372245c924429158c27801273107e2eb37ecac717e0b5a88e0da5d07adc",
+   "match": {
+    "depth": {
+     "meanMm": 0.3,
+     "onlyOneShare": 0.0241,
+     "overStepShare": 0.0,
+     "p95Mm": 0.9
+    },
+    "front": {
+     "boundaryMm": 32.0,
+     "iou": 0.9753
+    },
+    "side": {
+     "boundaryMm": 5.0,
+     "iou": 0.9932
+    },
+    "top": {
+     "boundaryMm": 21.2,
+     "iou": 0.9525
+    }
+   },
+   "matchReportedOnly": "a breached closure's broken planks and bars are judged by eye",
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "paired-iron-gate-breached",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.25,
+    "slivers": 300,
+    "tJunctions": 0,
+    "triangles": 1200,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 1200
+  },
+  "paired-iron-gate-intact": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "5212a63196a4879196ed41460bcd4acde4681a2a6a27ab70585a9e12ba5929f2",
+   "match": {
+    "depth": {
+     "meanMm": 0.3,
+     "onlyOneShare": 0.0934,
+     "overStepShare": 0.0002,
+     "p95Mm": 0.9
+    },
+    "front": {
+     "boundaryMm": 28.3,
+     "iou": 0.9412
+    },
+    "side": {
+     "boundaryMm": 5.0,
+     "iou": 0.9088
+    },
+    "top": {
+     "boundaryMm": 21.2,
+     "iou": 0.9765
+    }
+   },
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "paired-iron-gate-intact",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.2277,
+    "slivers": 348,
+    "tJunctions": 0,
+    "triangles": 1528,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 1528
+  },
+  "paired-timber-door-breached": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "654b6ab99da9dd2cec6d695a738f1854287f9ba1e1000d6da7484d5a6805b6c5",
+   "match": {
+    "depth": {
+     "meanMm": 0.3,
+     "onlyOneShare": 0.0071,
+     "overStepShare": 0.0003,
+     "p95Mm": 0.0
+    },
+    "front": {
+     "boundaryMm": 35.4,
+     "iou": 0.9923
+    },
+    "side": {
+     "boundaryMm": 25.0,
+     "iou": 0.9086
+    },
+    "top": {
+     "boundaryMm": 28.3,
+     "iou": 0.8616
+    }
+   },
+   "matchReportedOnly": "a breached closure's broken planks and bars are judged by eye",
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "paired-timber-door-breached",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.5559,
+    "slivers": 1134,
+    "tJunctions": 0,
+    "triangles": 2040,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 2040
+  },
+  "paired-timber-door-intact": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "9174a5fc2fe9a2f460c63a7c3e73f2948f1f9500e6cb1af21d4fa5605ee17605",
+   "match": {
+    "depth": {
+     "meanMm": 0.1,
+     "onlyOneShare": 0.0,
+     "overStepShare": 0.0002,
+     "p95Mm": 0.0
+    },
+    "front": {
+     "boundaryMm": 5.0,
+     "iou": 0.9992
+    },
+    "side": {
+     "boundaryMm": 25.0,
+     "iou": 0.9086
+    },
+    "top": {
+     "boundaryMm": 28.3,
+     "iou": 0.8616
+    }
+   },
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "paired-timber-door-intact",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.5443,
+    "slivers": 1032,
+    "tJunctions": 0,
+    "triangles": 1896,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 1896
+  },
+  "single-timber-door-breached": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "9bc8fb38c5847b66832a4f7d3c3c4fc74d139423aa190530a53444c1012fc11a",
+   "match": {
+    "depth": {
+     "meanMm": 0.3,
+     "onlyOneShare": 0.0065,
+     "overStepShare": 0.0003,
+     "p95Mm": 0.0
+    },
+    "front": {
+     "boundaryMm": 35.0,
+     "iou": 0.9918
+    },
+    "side": {
+     "boundaryMm": 29.2,
+     "iou": 0.9087
+    },
+    "top": {
+     "boundaryMm": 28.3,
+     "iou": 0.8612
+    }
+   },
+   "matchReportedOnly": "a breached closure's broken planks and bars are judged by eye",
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "single-timber-door-breached",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.5588,
+    "slivers": 570,
+    "tJunctions": 0,
+    "triangles": 1020,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 1020
+  },
+  "single-timber-door-intact": {
+   "bands": {
+    "y": [
+     0.4,
+     1.4,
+     true
+    ]
+   },
+   "glbSha256": "4542f6e8ae270d575682b1d7f96349c35d7d2fd4b34f045a6a61570f9f1e0d68",
+   "match": {
+    "depth": {
+     "meanMm": 0.1,
+     "onlyOneShare": 0.0,
+     "overStepShare": 0.0003,
+     "p95Mm": 0.0
+    },
+    "front": {
+     "boundaryMm": 5.0,
+     "iou": 0.9995
+    },
+    "side": {
+     "boundaryMm": 29.2,
+     "iou": 0.9087
+    },
+    "top": {
+     "boundaryMm": 28.3,
+     "iou": 0.8612
+    }
+   },
+   "morphs": [
+    "stretch_y"
+   ],
+   "overlaps": 0,
+   "replaces": "single-timber-door-intact",
+   "topology": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "sliverShare": 0.5443,
+    "slivers": 516,
+    "tJunctions": 0,
+    "triangles": 948,
+    "zeroArea": 0
+   },
+   "topologyAtHandleEnds": {
+    "flipped": 0,
+    "nonManifold": 0,
+    "openEdges": 0,
+    "tJunctions": 0,
+    "zeroArea": 0
+   },
+   "triangles": 948
+  }
+ },
+ "units": "metres at real size, Godot axes (x across the aperture, y up, z through it); a hinge node's meshes are relative to the hinge",
+ "what": "The grid closures (doors and gates) rebuilt in shard mode, built by tools/level-shell/build_level_shell.py from door_roles.py (lane level-shell phase 2, October 30, 2026), each leaf under its hinge node, closed, matched to its v1 closure by silhouette and relief (the breached ones reported). Pending Adam's review; no game scene uses them yet."
+}

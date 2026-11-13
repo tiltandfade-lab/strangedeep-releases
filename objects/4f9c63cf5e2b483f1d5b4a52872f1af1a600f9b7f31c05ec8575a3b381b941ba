@@ -1,0 +1,69 @@
+{
+ "part": "reliquary-shrine",
+ "builtBy": "tools/floor1-models/build_floor1_models.py",
+ "blender": "5.2.2 LTS",
+ "boundsGodotMetres": {
+  "min": [
+   -1.2,
+   0.0,
+   -0.326
+  ],
+  "max": [
+   1.2,
+   2.175,
+   0.321
+  ]
+ },
+ "triangles": 11110,
+ "materials": [
+  "f1m_enamel",
+  "f1m_gilt",
+  "f1m_iron",
+  "f1m_stone",
+  "f1m_stone_dark",
+  "f1m_wax"
+ ],
+ "front": "front (the niches and the chasse's enamel side) faces Godot +Z",
+ "madeBy": [
+  {
+   "form": "plinth step",
+   "tool": "cube, Bevel"
+  },
+  {
+   "form": "base block with five arched niches",
+   "tool": "cube, Bevel; arched cutter (cube + half cylinder) arrayed and cut with Boolean"
+  },
+  {
+   "form": "top slab",
+   "tool": "cube, Bevel (two segments)"
+  },
+  {
+   "form": "chasse body with sunk enamel panels",
+   "tool": "cube; Inset Faces and Extrude on the long sides"
+  },
+  {
+   "form": "gabled roof",
+   "tool": "cube with its top edges merged to one ridge (mesh merge), Solidify"
+  },
+  {
+   "form": "gilt strips dividing each side into three panels, gilt roundels with enamel bosses",
+   "tool": "cubes and cylinders"
+  },
+  {
+   "form": "pierced cresting along the ridge",
+   "tool": "cube cut by a cylinder (Boolean), Array of fourteen"
+  },
+  {
+   "form": "finials",
+   "tool": "UV spheres on cylinder stems"
+  },
+  {
+   "form": "two iron chains strapping the chasse to the slab (the animators' claim)",
+   "tool": "torus link, Array fit to length, Curve deform"
+  },
+  {
+   "form": "candle stubs on iron prickets",
+   "tool": "cylinders"
+  }
+ ]
+}

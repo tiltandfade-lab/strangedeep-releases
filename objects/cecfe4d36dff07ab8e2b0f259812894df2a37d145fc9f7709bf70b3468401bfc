@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lane": "floor1-models",
+  "date": "2026-11-12",
+  "status": "Pending review: every part here lands switched on (Adam, November 11) behind one rollback, STRANGEDEEP_PENDING=-dressing (LevelShell.Pending(\"dressing\")).",
+  "note": "The Floors 1 to 5 dressing parts the lane built or switched on, where each stands, and how it reaches play. Built parts come from tools/floor1-models/build_floor1_models.py (Blender, script-first); placements are presentation only (room themes): no rule, save or generator change.",
+  "parts": {
+    "reliquary-shrine": { "kind": "built", "scene": "res://assets/level-dressing/floor1-models/reliquary-shrine/reliquary_shrine.tscn", "rooms": ["crypt"], "floors": [1, 2, 3, 4, 5] },
+    "animation-rig": { "kind": "built", "scene": "res://assets/level-dressing/floor1-models/animation-rig/animation_rig.tscn", "rooms": ["workshop"], "floors": [3, 5] },
+    "timber-repair-brace": { "kind": "switched-on", "scene": "res://assets/model-candidates/retained-cathedral-donors/timber-repair-brace/timber_repair_brace.tscn", "rooms": ["armory", "camp"], "floors": [1, 2, 3, 4, 5] },
+    "equipment-rack": { "kind": "switched-on", "scene": "res://assets/map-items/grid-v1/equipment-rack.tscn", "rooms": ["armory", "camp"], "floors": [1, 2, 3, 4, 5] },
+    "occupied-shroud": { "kind": "switched-on", "scene": "res://assets/map-items/grid-v1/occupied-shroud.tscn", "rooms": ["shrine", "workshop"], "floors": [1, 2, 3, 4, 5] },
+    "ritual-bowl": { "kind": "switched-on", "scene": "res://assets/map-items/grid-v1/ritual-bowl.tscn", "rooms": ["crypt", "shrine"], "floors": [1, 2, 3, 4, 5] },
+    "floor-brazier": { "kind": "switched-on", "scene": "res://assets/level-dressing/floor1-models/floor-brazier/floor_brazier_dressing.tscn", "rooms": ["shrine", "workshop"], "floors": [1, 2, 3, 4, 5], "scale": 0.65 },
+    "fire-basket": { "kind": "switched-on", "scene": "res://assets/level-dressing/floor1-models/fire-basket/fire_basket_dressing.tscn", "rooms": ["camp"], "floors": [1, 2, 3, 4, 5], "scale": 0.75 },
+    "dry-basin": { "kind": "switched-on", "catalog": "prop.fountain.circle.2x2.dry.v1", "rooms": ["rules fountain theme"], "floors": [1, 2, 3, 4, 5], "tilesets": "every Cathedral tileset (CATHEDRAL_SET_PROPS)" },
+    "stone-altar": { "kind": "built", "scene": "res://assets/level-dressing/floor1-models/stone-altar/stone_altar.tscn", "rooms": ["shrine"], "floors": [1, 2, 3, 4, 5] },
+    "saint-statue": { "kind": "built", "scene": "res://assets/level-dressing/floor1-models/saint-statue/saint_statue.tscn", "rooms": ["shrine"], "floors": [1, 2, 3, 4, 5] },
+    "scavenger-barricade": { "kind": "built", "scene": "res://assets/level-dressing/floor1-models/scavenger-barricade/scavenger_barricade.tscn", "rooms": ["camp"], "floors": [1, 2, 3, 4, 5] },
+    "burial-niche-bones": { "kind": "re-skin", "scene": "res://assets/level-dressing/floor1-models/burial-niche-bones/burial_niche_bones.tscn", "from": "wall.bc-v3.recess-proportions.low-broad-square", "rooms": ["crypt"], "floors": [1, 2, 3, 4, 5], "note": "The burial niche bay (loculus) as an ossuary: a low broad recess bay placed in a crypt holds bones stacked on its sill (LockedSharedModuleRenderer.Pending.cs AddPendingBay)." },
+    "bone-scatter": { "kind": "re-skin", "scene": "res://assets/level-dressing/floor1-models/bone-scatter/bone_scatter.tscn", "from": "rubble.sparse-scatter", "rooms": ["crypt"], "floors": [1, 2, 3, 4, 5], "note": "The sparse rubble scatter re-cut in bone: a crypt wall that rolls the sparse scatter draws bones instead (LockedSharedModuleRenderer.Pending.cs AddRubble)." },
+    "hand-windlass": { "kind": "set-aside", "scene": "res://assets/model-candidates/retained-cathedral-donors/hand-windlass/hand_windlass.tscn", "reason": "1.55 m deep (right for a windlass) against the 0.73 m wall strip: it needs a rules blocking cell, the queued dressing-blocker lane." }
+  },
+  "basinStone": {
+    "note": "The 2x2 basin in each Cathedral tileset's own stone: an albedo multiplier on its stone surfaces, picked from each tileset's identity (prop-retirement.json CATHEDRAL_SET_PROPS). Brick keeps the catalog stone.",
+    "cathedral": [1.0, 1.0, 1.0],
+    "opal-lanternhouse": [1.06, 0.93, 0.86],
+    "pendulum-conservatory": [0.74, 0.78, 0.84],
+    "cinder-eye": [0.46, 0.43, 0.41]
+  }
+}

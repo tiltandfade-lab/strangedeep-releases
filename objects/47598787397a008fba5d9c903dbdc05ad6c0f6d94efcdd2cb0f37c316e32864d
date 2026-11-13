@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "what": "The world paint's library (lane world-paint, November 9, 2026; pending Adam's review). The rebuilt props (godot/assets/level-props) are painted by godot/shaders/world_prop_paint.gdshader, which shares its layers with the armor paint; this file is the one home of the props' materials, the wood species a floor's props are made of and how far the handles (age, each prop's own drift) push the paint. Colours are sRGB hex, as a painter picks them. kind is the armor paint's kind (0 metal, 1 leather, 2 cloth, 3 bone and other hard matt things, 4 wood). pattern is the world pattern (0 plain, 1 wood grain with plank seams, 2 forged iron, 3 hammered gilt, 4 stone and fired clay, 5 cloth, 6 leather, 7 a book's binding, 8 page edges). plank is the width in metres a board is divided into planks at (0: never divided); stave is the same for a round thing's staves. The game reads it through WorldPaint.cs; nothing here reaches a rule or a save.",
+  "review": "pending",
+  "materials": {
+    "wood": {
+      "index": 0,
+      "low": "#4f3620",
+      "high": "#8a6238",
+      "edge": "#b08a58",
+      "roughness": 0.82,
+      "metallic": 0.0,
+      "relief": 0.75,
+      "kind": 4,
+      "wear": 0.5,
+      "grime": 0.4,
+      "edgeHighlight": 0.3,
+      "pattern": 1,
+      "plank": 0.15,
+      "stave": 0.075
+    },
+    "darkwood": {
+      "index": 1,
+      "low": "#4f3620",
+      "high": "#8a6238",
+      "edge": "#b08a58",
+      "roughness": 0.78,
+      "metallic": 0.0,
+      "relief": 0.7,
+      "kind": 4,
+      "wear": 0.55,
+      "grime": 0.45,
+      "edgeHighlight": 0.3,
+      "pattern": 1,
+      "plank": 0.18,
+      "stave": 0.09
+    },
+    "iron": {
+      "index": 2,
+      "low": "#1c1d21",
+      "high": "#3a3c42",
+      "edge": "#8d9096",
+      "roughness": 0.52,
+      "metallic": 0.85,
+      "relief": 0.55,
+      "kind": 0,
+      "wear": 0.55,
+      "grime": 0.3,
+      "edgeHighlight": 0.45,
+      "pattern": 2,
+      "plank": 0
+    },
+    "gold": {
+      "index": 3,
+      "low": "#8a6520",
+      "high": "#c79a3a",
+      "edge": "#f0d58a",
+      "roughness": 0.3,
+      "metallic": 1.0,
+      "relief": 0.45,
+      "kind": 0,
+      "wear": 0.35,
+      "grime": 0.25,
+      "edgeHighlight": 0.5,
+      "pattern": 3,
+      "plank": 0
+    },
+    "stone": {
+      "index": 4,
+      "low": "#55524c",
+      "high": "#7d7870",
+      "edge": "#a39d92",
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "relief": 0.8,
+      "kind": 3,
+      "wear": 0.4,
+      "grime": 0.45,
+      "edgeHighlight": 0.3,
+      "pattern": 4,
+      "plank": 0
+    },
+    "clay": {
+      "index": 5,
+      "low": "#6e4632",
+      "high": "#9a6648",
+      "edge": "#b98a68",
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "relief": 0.5,
+      "kind": 3,
+      "wear": 0.4,
+      "grime": 0.4,
+      "edgeHighlight": 0.25,
+      "pattern": 4,
+      "plank": 0
+    },
+    "cloth": {
+      "index": 6,
+      "low": "#5b5140",
+      "high": "#857a60",
+      "edge": "#9c927a",
+      "roughness": 0.95,
+      "metallic": 0.0,
+      "relief": 0.6,
+      "kind": 2,
+      "wear": 0.25,
+      "grime": 0.45,
+      "edgeHighlight": 0.1,
+      "pattern": 5,
+      "plank": 0
+    },
+    "leather": {
+      "index": 7,
+      "low": "#3f2716",
+      "high": "#6a442a",
+      "edge": "#93694a",
+      "roughness": 0.6,
+      "metallic": 0.0,
+      "relief": 0.6,
+      "kind": 1,
+      "wear": 0.5,
+      "grime": 0.4,
+      "edgeHighlight": 0.25,
+      "pattern": 6,
+      "plank": 0
+    },
+    "bookred": {
+      "index": 8,
+      "low": "#4a1712",
+      "high": "#7c2a20",
+      "edge": "#a8604c",
+      "roughness": 0.55,
+      "metallic": 0.0,
+      "relief": 0.6,
+      "kind": 1,
+      "wear": 0.55,
+      "grime": 0.35,
+      "edgeHighlight": 0.25,
+      "pattern": 7,
+      "plank": 0
+    },
+    "bookblue": {
+      "index": 9,
+      "low": "#172536",
+      "high": "#2c4260",
+      "edge": "#6c7f96",
+      "roughness": 0.55,
+      "metallic": 0.0,
+      "relief": 0.6,
+      "kind": 1,
+      "wear": 0.55,
+      "grime": 0.35,
+      "edgeHighlight": 0.25,
+      "pattern": 7,
+      "plank": 0
+    },
+    "bookgreen": {
+      "index": 10,
+      "low": "#1a2c1b",
+      "high": "#34512f",
+      "edge": "#748a66",
+      "roughness": 0.55,
+      "metallic": 0.0,
+      "relief": 0.6,
+      "kind": 1,
+      "wear": 0.55,
+      "grime": 0.35,
+      "edgeHighlight": 0.25,
+      "pattern": 7,
+      "plank": 0
+    },
+    "parchment": {
+      "index": 11,
+      "low": "#a08a62",
+      "high": "#cbb98e",
+      "edge": "#ddd0ac",
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "relief": 0.4,
+      "kind": 3,
+      "wear": 0.2,
+      "grime": 0.4,
+      "edgeHighlight": 0.1,
+      "pattern": 8,
+      "plank": 0
+    },
+    "wax": {
+      "index": 12,
+      "low": "#c9b88e",
+      "high": "#e6dab4",
+      "edge": "#f2ead0",
+      "roughness": 0.45,
+      "metallic": 0.0,
+      "relief": 0.2,
+      "kind": 3,
+      "wear": 0.1,
+      "grime": 0.3,
+      "edgeHighlight": 0.1,
+      "pattern": 0,
+      "plank": 0
+    }
+  },
+  "species": {
+    "oak": {
+      "low": "#3d2a1a",
+      "high": "#6e4e2e",
+      "edge": "#a88458"
+    },
+    "pine": {
+      "low": "#644a2a",
+      "high": "#967244",
+      "edge": "#c4a472"
+    },
+    "chestnut": {
+      "low": "#47301c",
+      "high": "#774c2c",
+      "edge": "#ac7c52"
+    },
+    "elm": {
+      "low": "#54422f",
+      "high": "#84704e",
+      "edge": "#a8966e"
+    },
+    "walnut": {
+      "low": "#33231a",
+      "high": "#5e402b",
+      "edge": "#86654a"
+    },
+    "ebonised": {
+      "low": "#1f1a18",
+      "high": "#3b302b",
+      "edge": "#6c5a4a"
+    },
+    "cherry": {
+      "low": "#3e1e14",
+      "high": "#74402a",
+      "edge": "#a87452"
+    },
+    "figured-walnut": {
+      "low": "#2a1a12",
+      "high": "#6a4630",
+      "edge": "#96704e"
+    },
+    "yew": {
+      "low": "#6a4420",
+      "high": "#a67a40",
+      "edge": "#c8a674"
+    }
+  },
+  "darkStain": 0.55,
+  "floors": {
+    "what": "By floor depth (a deeper floor without an entry reads the deepest above it): the species its props are made of, and how far the floor's own stone colour tints them (godot/resources/level-materials/palettes.json, read only; the floor's moss and gilt come from there too).",
+    "1": {
+      "species": ["oak", "pine", "chestnut", "elm"],
+      "cast": 0.1
+    },
+    "2": {
+      "species": ["walnut", "oak", "ebonised", "elm"],
+      "cast": 0.14
+    }
+  },
+  "rust": "#3a2a24",
+  "weathered": "#635d54",
+  "freshBreak": "#c9a878",
+  "age": {
+    "what": "How far age greys the wood, splits it, stains it and grows moss at its foot (each times the prop's age handle, 0 new to 1 rotten).",
+    "grey": 0.8,
+    "split": 1.0,
+    "stain": 0.7,
+    "moss": 1.0
+  },
+  "vary": {
+    "what": "Each prop's own drift, from its saved identity: value, hue warmth, wear and grime, as shares either way.",
+    "value": 0.16,
+    "hue": 0.06,
+    "wear": 0.35,
+    "grime": 0.35
+  },
+  "edges": {
+    "what": "The bake's edge finder: two faces of a board meet in a sharp edge when they turn by more than sharpDegrees; breakMetres is the damage movement that reads as a full break; a fitting thinner than smallMetres (a lid's cleat, a stud) has its edge distances multiplied by smallScale, so its little face is not all worn edge.",
+    "sharpDegrees": 35,
+    "breakMetres": 0.07,
+    "smallMetres": 0.06,
+    "smallScale": 3
+  },
+  "palette": {
+    "what": "The short palettes (lane world-paint-3, November 10; Adam: the PlayStation's limits are the guideline). tools/world-paint/build-world-paint-palettes.mjs derives a run of 16 colours for every material and wood species from the colours in this file and writes them to world-paint-palettes.png, which the paint snaps to. grime: the dirt colour the plain materials' runs carry.",
+    "grime": "#2a231b"
+  },
+  "round3": {
+    "what": "Round 3 (lane world-paint-3, November 10). fittings: thin iron and gilt fittings (straps, plates, hasps, hoops; thinner than thinMetres) are drawn wide times wider across their length (stand scales how far they stand proud; 1 keeps the built depth, since a deeper strap stepped at the lid's joints), so they read at the game camera (the notebook's Diablo 1 route). ironGap: iron keeps at most (1 - ironGap) of its wood's lightness, or at least (1 + ironGap) of a wood too dark to go under, at every condition. inside: how dark the inside of a container goes. weatherKeep: how much of the wood's own colour weathering keeps (0 goes to the flat weathered grey). streak: how strong the fine pore streaks are (round 2 drew 0.4). ironRim: how pale a strap's rubbed long edge stays above the iron gap. wood (third pass, the lead's review): value and saturation scale wood below the palette's middle, cap is the lightest it may go however near a torch (encoded lightness), lean how far each prop leans grey-brown, red-brown or dark. paletteDither: 1 dithers wood between its palette's two nearest steps. mossBroad: 1 grows moss in a few broad clumps, not specks. ironLine: 1 draws iron dark blue-grey with a hard dark line along both edges, 0 keeps the pale rubbed edge. rivet: a rivet head's radius as a share of its strap's width, and its least radius in metres.",
+    "fittings": { "wide": 1.5, "stand": 1.0, "thinMetres": 0.03 },
+    "ironGap": 0.6,
+    "inside": 0.3,
+    "weatherKeep": 0.5,
+    "streak": 0.22,
+    "ironRim": 0.7,
+    "wood": { "value": 0.8, "saturation": 0.7, "cap": 0.42, "lean": 1.0 },
+    "paletteDither": 1.0,
+    "mossBroad": 1.0,
+    "ironLine": 1.0,
+    "rivet": [0.36, 0.02],
+    "bookcase": {
+      "what": "The bookcase's make (the lead, November 10, after Adam: a bookshelf should not always look built from a crate). makeShares: how often each step is rolled, worst to best (0 crate-built: planks with gaps, pale and knocked about; 1 a joiner's case: solid sides, a bead on every edge; 2 panelled: a frame and raised panel on each upright, moulded cornice and plinth, red-brown; 3 a fine library case: the same in a dark fine wood with a sheen). crateAge: the least age a crate-built case is painted at. bead and its width, moulding, frame and bevel in metres from each sharp edge; panelShade how dark a panel's field sits; value the wood's value on the panelled and the fine case. form: how far each make sets the bookcase builder's make handle (the cornice rises and overhangs, the plinth steps out round the foot; no extra triangles).",
+      "makeShares": [0.3, 0.35, 0.25, 0.1],
+      "form": [0.0, 0.35, 0.75, 1.0],
+      "crateAge": 0.55,
+      "bead": [0.008, 0.0025],
+      "moulding": 0.022,
+      "frame": 0.075,
+      "bevel": 0.03,
+      "panelShade": 0.9,
+      "value": [0.82, 0.72]
+    }
+  },
+  "spreadReview": {
+    "what": "Review only (STRANGEDEEP_WORLD_PAINT_SPREAD=1): each wood species in turn leans this share toward one of the floor palette's own colours, keeping its lightness, so the props separate more in hue. Off in the game.",
+    "toward": ["straw", "terracotta", "lacquer", "straw"],
+    "share": 0.4
+  },
+  "condition": {
+    "what": "A prop's condition is its own roll from its saved identity at every depth (Adam, November 10: not every bookshelf is aged and worn; some are in great condition, made from a beautiful wood). classes: the paint's age range for fine, ordinary, worn and ancient. shareByDepth: the share of each class by floor depth (a deeper floor without an entry reads the deepest above it); deeper floors lean older and never lose the fine end. fineWood: the species kept for chests and bookcases, the share of each chest tier and of bookcases made of one, and how a fine wood is finished (roughness; wear and grime as shares of the ordinary wood's).",
+    "classes": [
+      [0.0, 0.08],
+      [0.25, 0.45],
+      [0.55, 0.75],
+      [0.88, 1.0]
+    ],
+    "shareByDepth": {
+      "1": [0.25, 0.45, 0.25, 0.05],
+      "2": [0.2, 0.4, 0.28, 0.12],
+      "3": [0.16, 0.34, 0.3, 0.2],
+      "4": [0.13, 0.29, 0.31, 0.27],
+      "5": [0.1, 0.25, 0.33, 0.32]
+    },
+    "fineWood": {
+      "species": ["cherry", "figured-walnut", "yew"],
+      "chestTierShare": [0.12, 0.4, 0.75],
+      "bookcaseShare": 0.3,
+      "roughness": 0.4,
+      "wear": 0.4,
+      "grime": 0.35
+    }
+  }
+}

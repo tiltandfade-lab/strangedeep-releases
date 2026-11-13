@@ -1,0 +1,7058 @@
+{
+ "schemaVersion": 2,
+ "kind": "armor-kit-templates",
+ "family": "F1",
+ "generatedBy": "tools/armor-kit-templates/build-armor-kit-templates.mjs",
+ "rulings": "docs/production/kit-outfits-2026-10-26/RULINGS.md",
+ "rolls": {
+  "styleHandles": [
+   "Detail",
+   "BendTip",
+   "BendMiddle"
+  ],
+  "rule": "godot/src/ArmorKitOutfitTemplates.cs",
+  "swapGroups": 35,
+  "torsoCategories": [
+   "chest",
+   "back",
+   "waist"
+  ],
+  "links": "a mirrored entry's twin takes the same part and values; torso entries share their girth handles; robe entries (a robe and its back panel, the belted tunic and its skirt panels) are torso entries that also share their length"
+ },
+ "leftOut": {
+  "sets": {
+   "full-kit": "every hero part at once (the editor proof set)",
+   "helm-great": "the great helm's set: out of the rolls until Adam approves its redo (Adam via the lead, November 7)"
+  },
+  "charms": "charms are left out until armor looks carry properties",
+  "thin": {
+   "brigandine/gloves": "264 cm²: medium-bracer-l",
+   "helm-bucket/chest": "481 cm²: f1-ring-stack-neck",
+   "helm-kettle/chest": "481 cm²: f1-ring-stack-neck",
+   "helm-open/helm": "315 cm²: f1-bevor",
+   "light-set/chest": "481 cm²: f1-ring-stack-neck",
+   "light-set/legs": "672 cm²: f1-tasset-l",
+   "light-set/feet": "339 cm²: f1-cuff-ankle-l",
+   "light-wizard/helm": "499 cm²: light-wizard-hat",
+   "medium-chest/chest": "703 cm²: medium-plate-panel, medium-half-pauldron-l",
+   "medium-chest/gloves": "264 cm²: medium-bracer-l",
+   "splint-greave/legs": "513 cm²: medium-splint-greave-l",
+   "splint-greave/feet": "349 cm²: f1-poleyn-l"
+  }
+ },
+ "layering": {
+  "overSkirt": {
+   "tags": [
+    "tabard",
+    "surcoat"
+   ],
+   "parts": [
+    "hero/f1-cuisse-l",
+    "hero/f1-cuisse-r",
+    "hero/f1-tasset-l",
+    "hero/f1-tasset-r",
+    "hero/heavy-tasset-dagged-l",
+    "hero/heavy-tasset-dagged-r",
+    "hero/light-belt",
+    "hero/light-coat-tail",
+    "hero/light-hip-drape",
+    "hero/light-sash",
+    "hero/light-sash-tails",
+    "hero/light-skirt-tiers-back",
+    "hero/light-thigh-panel-l",
+    "hero/light-thigh-panel-r",
+    "hero/light-thigh-rig-l",
+    "hero/light-thigh-rig-r",
+    "hero/medium-tasset-l",
+    "hero/medium-tasset-r",
+    "hero/medium-thigh-plate-l",
+    "hero/medium-thigh-plate-r"
+   ],
+   "handle": "RadiusBottom",
+   "value": 0,
+   "why": "Layer order (the lead, October 30, on Adam's \"there is still so much chest piece clipping happening\"): a tabard or surcoat goes over a gambeson. When any worn part carries one of these tags, every soft layer with a skirt (RadiusBottom: tucked skirt to full skirt) is drawn with its skirt tucked, so it sits under the tabard instead of over it.",
+   "partsWhy": "Chosen by docs/production/armor-leg-clip-2026-10-30/tuck_from_legs.py from the legs fit table (lane armor-leg-clip, October 30): these legs parts clip the chest layer's skirt less with it tucked, by more than 1.0 cm2 over some chest layer and never worse by more than 0.3. The refit F1 cuisses join them (lane armor-leg-refit, October 30): fitted over the skirts, they clear a tucked one better than a full one."
+  },
+  "fitOver": {
+   "why": "Refit legs pieces (lane armor-leg-refit, October 30, the lead's option a) carry a Fit morph: their basis hugs the thin under-layers (the tunic, trousers and hose), Fit 1 clears the thick ones. The game sets a part's Fit from the chest layer the outfit wears (its template's layer key); no chest layer, or one not listed, is 0. Values from the clipping proof's legs fit table. The F1 padding is 0 (lane armor-fit, November 8; Adam, November 7: \"we need to get those thigh plates to fit much tighter\"): it hugs the thigh (8.5 mm over the skin, tools/armor-kit/fit_standoff.py) about as the hose does, and at 1 the heavy cuisses stood 46 mm (median) off it, clearing gambeson skirts the heavy sets do not wear; every fitted legs piece measured no closer to clipping it at 0.",
+   "layers": {
+    "light-tunic": 0,
+    "f1-padding": 0,
+    "medium-gambeson": 1,
+    "medium-padded-jack": 1,
+    "light-quilted-jacket": 1
+   }
+  },
+  "bootCover": {
+   "tags": [
+    "trousers"
+   ],
+   "parts": [
+    "hero/light-boot-wrapped-l",
+    "hero/light-boot-wrapped-r",
+    "hero/medium-boot-courtside-l",
+    "hero/medium-boot-courtside-r",
+    "hero/medium-boot-l",
+    "hero/medium-boot-r",
+    "hero/medium-boot-plated-l",
+    "hero/medium-boot-plated-r",
+    "hero/f1-greave-l",
+    "hero/f1-greave-r",
+    "hero/f1-sabaton-l",
+    "hero/f1-sabaton-r",
+    "hero/f1-footwear-l",
+    "hero/f1-footwear-r",
+    "hero/heavy-sabaton-spurred-l",
+    "hero/heavy-sabaton-spurred-r"
+   ],
+   "overlapMetres": 0.03,
+   "why": "Boots cover trousers (Adam, November 3: \"we can basically just hide the trousers below the boots if the player is wearing boots that covers the trousers, save some polys\"). While a worn feet look holds one of these parts (boots, greaves and sabatons that go round the leg; not the sandal boot or the poleyns), a part with one of these tags is drawn without its triangles below that boot's rim, measured from the boot's own rolled shape (the lowest of its highest points round the leg), less overlapMetres so the trouser runs on inside the rim. ArmorKitOutfit.BootCover.cs; LightGearProof's boots check holds it."
+  },
+  "robeCover": {
+   "tags": [
+    "trousers",
+    "hakama"
+   ],
+   "parts": [
+    "hero/light-robe-wizard",
+    "hero/light-robe-scholar",
+    "hero/light-robe-wizard-hooded",
+    "hero/light-robe-scholar-hooded",
+    "hero/light-robe-monk",
+    "hero/light-robe-sorcerer",
+    "hero/light-robe-hermit",
+    "hero/light-robe-ceremonial"
+   ],
+   "overlapMetres": 0.03,
+   "why": "A long robe covers the trousers and the hakama (the lead, November 11, on lane light-gear's finding: in the crouched idle the bent leg came through the robe's closed skirt, as it did through the old robe; the boots' rule mirrored, inside the armour pipeline's hide-what-is-covered contract). While a worn look holds one of these parts (the closed robes, never the coats, which open at the front), a part with one of these tags is drawn without its triangles above the robe's hem, measured from the robe's own rolled shape (the highest of its lowest points round the column), plus overlapMetres so the trouser runs on up inside the hem. The body's legs stay hidden under the trousers (LightGearCovers), so nothing shows under the robe. ArmorKitOutfit.BootCover.cs; LightGearProof's robe check holds it, with the short coat as its negative control."
+  },
+  "bodyCover": {
+   "partTag": "garment",
+   "regions": [
+    {
+     "region": "Body_legs",
+     "tags": [
+      "trousers",
+      "hakama"
+     ]
+    },
+    {
+     "region": "Body_legs",
+     "tags": [
+      "floor-robe"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "tunic"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "wrist-sleeve"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "shirt"
+     ],
+     "handle": "BoneLength",
+     "atLeast": 0.5
+    }
+   ],
+   "why": "The stand-in body regions a kit garment hides (lane light-gear; the lead, October 30, and November 11: one fact the game, the builder and fit_poses read). The body's own skin-tight undershirt and leggings (Body_torso, Body_legs) came through a shirt or a vest as pale patches, so a worn part with partTag and one of a row's tags hides that row's region; a row with a handle hides it only while the part's handle is at least atLeast. A region hides only when the garment covers all of it, so nothing shows a hole: trousers and the hakama run to the ankle, and a closed floor robe (tag floor-robe: hemmed below the body's boots region, 0.29 m, at every length and every tear) covers the legs whole; Body_torso runs down the arms to the wrist, so it hides under a tunic or a shirt with its sleeves to the wrist or longer (BoneLength 0.5, the shirt's standard), a robe whose closed sleeves reach the wrist at every handle value (tag wrist-sleeve: the monk's habit, the sorcerer's robe, the ceremonial robe; measured at every handle extreme, each leaves less of the arm uncovered than the shirt at 0.5) hides it too; a rolled shirt sleeve, a robe's open bell sleeve, the hermit's sleeve to mid-forearm or a vest alone keep it, because the body has no separate upper-arm region (Body_bare is only the neck) and hiding the arm would leave a hole. LightGearCovers.cs and tools/armor-kit/fit_standoff.py dress() read it; fit_poses leaves the hidden regions out of the body it tests against (the soft layers still count), so its motion check tests what the game draws."
+  },
+  "helmOver": {
+   "parts": [
+    "hero/medium-mail-hood"
+   ],
+   "slot": "helm",
+   "why": "Helms fitted to what is worn under them (lane helm-overhaul, November 6; Adam: \"we have to figure out a way for the helms to fit the head if there is no underlayer to force the size\"): every helm's basis is fitted to the bare head (the skin plus a 12 mm arming cap) and its Fit morph over the mail hood plus 3 mm (tools/armor-kit/f1_helm_fit.py). While the helm slot's look holds one of these parts, its helms are drawn at Fit 1, otherwise 0; the Armor Kit builder dresses through the same code. The helm leads and the hood follows (phase 2, Adam, November 6: \"we shouldn't be limiting the design of our helms just to accomodate for this weird underlayer\"): the hood takes the same Fit, its coif tucked onto the head and neck down to the jaw (f1_medium_mail_hood; its Fit+ corrective targets keep each handle setting tucked), and the helms are fitted over that."
+  },
+  "cowlOver": {
+   "cowls": [
+    "hero/light-cowl"
+   ],
+   "parts": [
+    "hero/light-plastron"
+   ],
+   "slot": "chest",
+   "why": "A cowl fitted to what it lies on (lane cloth, November 12; the lead: rebuild the cowl with a Fit morph, set over a plastron, on the helmOver pattern). The cowl's basis lies on the tunic and the jerkin, as it was drawn; its Fit morph carries the end on the chest 16 mm further out (tools/armor-kit/f1_light_cowl.py). While the chest look holds one of these parts, its cowls are drawn at Fit 1, otherwise 0; the chest layer's legs Fit (fitOver) never reaches a cowl. The armor builder dresses through the same code."
+  }
+ },
+ "clearance": {
+  "why": "Measured clear ranges (the lead, October 30: a data-driven clearance floor): each part alone over the under-layer a chest set brings, each rolled handle at its min and max; an end that clips more than 0.5 cm2 beyond the part's own default is cut back to the default. The roll draws only inside these ranges (ArmorKitOutfitTemplates.Roll); handles not listed keep their whole range.",
+  "addedCm2": 0.5,
+  "layers": {
+   "f1-padding": {
+    "hero/f1-backplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate-keeled": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-couter-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/f1-fauld-lames": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/f1-gorget": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/f1-pauldron-dome-l": {
+     "Radius": [
+      0.5,
+      0.5
+     ],
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/f1-pauldron-l": {
+     "AxisUp": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      0.5
+     ],
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/f1-rerebrace-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      1
+     ]
+    },
+    "hero/heavy-pauldron-swept-l": {
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/medium-surcoat-front": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "wraps/f1-ring-stack-neck": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "wraps/f1-tube-upperarm-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      1
+     ]
+    }
+   },
+   "light-trousers": {
+    "hero/light-belt": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-hip-drape": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "AxisRight": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-sash": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-skirt-tiers-front": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-tabard-back": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-thigh-panel-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-thigh-rig-l": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "light-tunic": {
+    "hero/light-leather-jerkin": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin-v2": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-neck-scarf": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "medium-gambeson": {
+    "hero/f1-backplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate-keeled": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-fauld-lames": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/f1-gorget": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin-v2": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-brigandine-body": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-brigandine-v2": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-mail-tippet": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-scale-vest": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/medium-standing-collar": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-surcoat-front": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "wraps/f1-ring-stack-neck": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "medium-hose": {
+    "hero/light-belt": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-hip-drape": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "AxisRight": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-sash": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-belt-plated": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-thigh-plate-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "none": {
+    "hero/f1-cuisse-l": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/medium-thigh-plate-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   }
+  }
+ },
+ "templates": [
+  {
+   "id": "demo-charms-light/helm",
+   "label": "Demo: charms, light: helm",
+   "slot": "helm",
+   "weight": "light",
+   "fromSet": "sets/demo-charms-light",
+   "alsoFrom": [
+    "sets/demo-light-skirmisher"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-head-wrap",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.8,
+      "Radius": 0.8,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-head-wrap",
+      "hero/light-hood-sculpted",
+      "hero/light-hood-sculpted-crown",
+      "hero/light-wizard-hat",
+      "hero/light-hat-mitre",
+      "hero/light-hat-broad",
+      "hero/light-hat-stargazer",
+      "hero/light-hat-phrygian"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-light-drifter/helm",
+   "label": "Demo: light, drifter: helm",
+   "slot": "helm",
+   "weight": "light",
+   "fromSet": "sets/demo-light-drifter",
+   "alsoFrom": [
+    "sets/demo-light-forester-v2",
+    "sets/demo-light-wayfarer",
+    "sets/light-gear-hood"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-hood-sculpted",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-hood-sculpted",
+      "hero/light-hood-sculpted-crown",
+      "hero/light-head-wrap",
+      "hero/light-wizard-hat",
+      "hero/light-hat-mitre",
+      "hero/light-hat-broad",
+      "hero/light-hat-stargazer",
+      "hero/light-hat-phrygian"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-medium/helm",
+   "label": "Demo: charms, medium: helm",
+   "slot": "helm",
+   "weight": "medium",
+   "fromSet": "sets/demo-charms-medium",
+   "alsoFrom": [
+    "sets/demo-medium-sergeant"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-spangenhelm",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "Round": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-spangenhelm",
+      "hero/medium-kettle-helm",
+      "hero/medium-nasal-helm",
+      "hero/medium-war-hat"
+     ]
+    },
+    {
+     "part": "hero/medium-face-mask",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Round": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-face-mask"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-medium-man-at-arms-v2/helm",
+   "label": "Demo: medium, man-at-arms v2: helm",
+   "slot": "helm",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-man-at-arms-v2",
+   "alsoFrom": [
+    "sets/demo-mix-sellsword"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-mail-hood",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisForward": 0.7,
+      "BoneLength": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/medium-mail-hood"
+     ]
+    },
+    {
+     "part": "hero/medium-nasal-helm",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.7,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-nasal-helm",
+      "hero/medium-kettle-helm",
+      "hero/medium-spangenhelm",
+      "hero/medium-war-hat"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-medium-padded-jack/helm",
+   "label": "Demo: medium, padded jack: helm",
+   "slot": "helm",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-padded-jack",
+   "alsoFrom": [
+    "sets/demo-mix-knight-errant",
+    "sets/helm-kettle"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-kettle-helm",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisBack": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-kettle-helm",
+      "hero/medium-nasal-helm",
+      "hero/medium-spangenhelm",
+      "hero/medium-war-hat"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-medium/helm",
+   "label": "Demo: medium, full set: helm",
+   "slot": "helm",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium",
+   "alsoFrom": [
+    "sets/demo-mix-ranger",
+    "sets/face-mask"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-kettle-helm",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisBack": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-kettle-helm",
+      "hero/medium-nasal-helm",
+      "hero/medium-spangenhelm",
+      "hero/medium-war-hat"
+     ]
+    },
+    {
+     "part": "hero/medium-face-mask",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Round": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-face-mask"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "medium-crested-kettle/helm",
+   "label": "Crested kettle helm: helm",
+   "slot": "helm",
+   "weight": "medium",
+   "fromSet": "sets/medium-crested-kettle",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-kettle-helm",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisBack": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-kettle-helm",
+      "hero/medium-war-hat"
+     ]
+    },
+    {
+     "part": "hero/medium-crest-plume",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "BendTip": 0.5,
+      "AxisLeft": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/medium-crest-plume",
+      "hero/medium-crest-comb",
+      "hero/medium-crest-wings",
+      "hero/medium-rhino-horn"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-heavy/helm",
+   "label": "Demo: charms, heavy: helm",
+   "slot": "helm",
+   "weight": "heavy",
+   "fromSet": "sets/demo-charms-heavy",
+   "alsoFrom": [
+    "sets/demo-heavy-crusader",
+    "sets/demo-heavy-f1",
+    "sets/cops-spiked",
+    "sets/gorget-collared",
+    "sets/heavy-watertight",
+    "sets/plate-ornamented",
+    "sets/sabaton-spurred",
+    "sets/tasset-dagged"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-helm-closed-visor",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-helm-closed-visor",
+      "hero/heavy-helm-bucket",
+      "hero/heavy-great-helm"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-heavy-ethos/helm",
+   "label": "Demo: heavy, the new-ethos parts: helm",
+   "slot": "helm",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-ethos",
+   "alsoFrom": [
+    "sets/demo-mix-brigand",
+    "sets/helm-bucket"
+   ],
+   "entries": [
+    {
+     "part": "hero/heavy-helm-bucket",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-helm-bucket",
+      "hero/f1-helm-closed-visor",
+      "hero/heavy-great-helm"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "heavy-crested-visor/helm",
+   "label": "Crested visor helm: helm",
+   "slot": "helm",
+   "weight": "heavy",
+   "fromSet": "sets/heavy-crested-visor",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-helm-closed-visor",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-helm-closed-visor",
+      "hero/heavy-helm-bucket",
+      "hero/heavy-great-helm"
+     ]
+    },
+    {
+     "part": "hero/medium-crest-comb",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-crest-comb",
+      "hero/medium-crest-plume",
+      "hero/medium-crest-wings",
+      "hero/medium-rhino-horn"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "heavy-horned-bucket/helm",
+   "label": "Horned bucket helm: helm",
+   "slot": "helm",
+   "weight": "heavy",
+   "fromSet": "sets/heavy-horned-bucket",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-helm-bucket",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-helm-bucket",
+      "hero/f1-helm-closed-visor",
+      "hero/heavy-great-helm"
+     ]
+    },
+    {
+     "part": "hero/heavy-horns-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "BendMiddle": 0.5,
+      "AxisLeft": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/heavy-horns-l",
+      "hero/heavy-antlers-l",
+      "hero/heavy-ram-horns-l",
+      "hero/heavy-studs-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "heavy-horned-visor/helm",
+   "label": "Horned closed helm: helm",
+   "slot": "helm",
+   "weight": "heavy",
+   "fromSet": "sets/heavy-horned-visor",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-helm-closed-visor",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "RadiusBottom": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-helm-closed-visor",
+      "hero/heavy-helm-bucket",
+      "hero/heavy-great-helm"
+     ]
+    },
+    {
+     "part": "hero/heavy-horns-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "BendMiddle": 0.5,
+      "AxisLeft": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/heavy-horns-l",
+      "hero/heavy-antlers-l",
+      "hero/heavy-ram-horns-l",
+      "hero/heavy-studs-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-light/chest",
+   "label": "Demo: charms, light: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-charms-light",
+   "alsoFrom": [
+    "sets/demo-light-skirmisher"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-plastron",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.7,
+      "AxisForward": 1,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-plastron",
+      "hero/light-leather-jerkin",
+      "hero/light-leather-jerkin-v2"
+     ]
+    },
+    {
+     "part": "hero/light-armlet-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-armlet-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-drifter/chest",
+   "label": "Demo: light, drifter: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light-drifter",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-mantle-tiered",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-mantle-tiered",
+      "hero/light-half-cape",
+      "hero/light-mantle"
+     ]
+    },
+    {
+     "part": "hero/light-rib-bands",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-rib-bands"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-forester-v2/chest",
+   "label": "Demo: light, forester v2: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light-forester-v2",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-cowl",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-cowl",
+      "hero/light-neck-scarf"
+     ]
+    },
+    {
+     "part": "hero/light-leather-jerkin-v2",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leather-jerkin-v2",
+      "hero/light-leather-jerkin",
+      "hero/light-plastron"
+     ]
+    },
+    {
+     "part": "hero/light-spaulder-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "AxisLeft": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-spaulder-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-quilted-jacket/chest",
+   "label": "Demo: light, quilted jacket: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light-quilted-jacket",
+   "alsoFrom": [],
+   "entries": [],
+   "soft": {
+    "top": [
+     {
+      "part": "base/light-quilted-jacket",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-scout/chest",
+   "label": "Demo: light, scout: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light-scout",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-cowl",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-cowl",
+      "hero/light-neck-scarf"
+     ]
+    },
+    {
+     "part": "hero/light-plastron",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.3,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-plastron",
+      "hero/light-leather-jerkin",
+      "hero/light-leather-jerkin-v2"
+     ]
+    },
+    {
+     "part": "hero/light-neck-scarf",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "BoneLength": 0.3,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5
+     },
+     "options": [
+      "hero/light-neck-scarf",
+      "hero/light-cowl"
+     ]
+    },
+    {
+     "part": "hero/light-armlet-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-armlet-l"
+     ]
+    },
+    {
+     "part": "hero/light-elbow-pad-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-elbow-pad-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-wayfarer/chest",
+   "label": "Demo: light, wayfarer: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light-wayfarer",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-half-cape",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.6,
+      "AxisRight": 0.8,
+      "RadiusBottom": 0.5
+     },
+     "options": [
+      "hero/light-half-cape",
+      "hero/light-mantle-tiered",
+      "hero/light-mantle"
+     ]
+    },
+    {
+     "part": "hero/light-rib-bands",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-rib-bands"
+     ]
+    },
+    {
+     "part": "hero/light-armlet-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.2,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-armlet-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light/chest",
+   "label": "Demo: light, full set: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/demo-light",
+   "alsoFrom": [
+    "sets/light-forester"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-leather-jerkin",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leather-jerkin",
+      "hero/light-leather-jerkin-v2",
+      "hero/light-plastron"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "light-gear-coat/chest",
+   "label": "Light gear: short coat over a shirt: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-coat",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-shirt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-shirt"
+     ]
+    },
+    {
+     "part": "hero/light-coat-short",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5,
+      "Cuff": 0.5
+     },
+     "options": [
+      "hero/light-coat-short",
+      "hero/light-coat-long",
+      "hero/light-coat-frock"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-jerkin/chest",
+   "label": "Light gear: jerkin and wrapped trousers: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-jerkin",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-shirt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-shirt"
+     ]
+    },
+    {
+     "part": "hero/light-jerkin",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-jerkin"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-long-coat/chest",
+   "label": "Light gear: long coat over a shirt: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-long-coat",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-shirt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-shirt"
+     ]
+    },
+    {
+     "part": "hero/light-coat-long",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5,
+      "Cuff": 0.5
+     },
+     "options": [
+      "hero/light-coat-long",
+      "hero/light-coat-short",
+      "hero/light-coat-frock"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-robe-ceremonial/chest",
+   "label": "Light gear: ceremonial tabard robe: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-robe-ceremonial",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-ceremonial",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-ceremonial"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-robe-hermit/chest",
+   "label": "Light gear: hermit's ragged robe: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-robe-hermit",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-hermit",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-hermit"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-robe-monk/chest",
+   "label": "Light gear: monk's habit: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-robe-monk",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-monk",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-monk"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-robe-sorcerer/chest",
+   "label": "Light gear: sorcerer's robe: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-robe-sorcerer",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-sorcerer",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-sorcerer"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-scholar/chest",
+   "label": "Light gear: scholar robe: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-scholar",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-scholar",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-scholar",
+      "hero/light-robe-scholar-hooded"
+     ]
+    },
+    {
+     "part": "hero/light-robe-scholar-sleeve-bag-l",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-robe-scholar-sleeve-bag-l"
+     ]
+    },
+    {
+     "part": "hero/light-robe-scholar-sleeve-bag-r",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-robe-scholar-sleeve-bag-r"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-shirt/chest",
+   "label": "Light gear: shirt and trousers: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-shirt",
+   "alsoFrom": [
+    "sets/light-gear-shirt-hakama"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-shirt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-shirt"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-smock/chest",
+   "label": "Light gear: peasant smock: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-smock",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-smock",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-smock"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-tunic/chest",
+   "label": "Light gear: belted tunic: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-tunic",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-tunic-belted",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tunic-belted"
+     ]
+    },
+    {
+     "part": "hero/light-tunic-belted-skirt-back",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5
+     },
+     "options": [
+      "hero/light-tunic-belted-skirt-back"
+     ]
+    },
+    {
+     "part": "hero/light-tunic-belted-skirt-front",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5
+     },
+     "options": [
+      "hero/light-tunic-belted-skirt-front"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-vest/chest",
+   "label": "Light gear: vest over a shirt: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-vest",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-shirt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-shirt"
+     ]
+    },
+    {
+     "part": "hero/light-vest",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Width": 0.5
+     },
+     "options": [
+      "hero/light-vest"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-wizard/chest",
+   "label": "Light gear: wizard robe: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-gear-wizard",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-robe-wizard",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-robe-wizard",
+      "hero/light-robe-wizard-hooded"
+     ]
+    },
+    {
+     "part": "hero/light-robe-wizard-sleeve-bag-l",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-robe-wizard-sleeve-bag-l"
+     ]
+    },
+    {
+     "part": "hero/light-robe-wizard-sleeve-bag-r",
+     "mirror": false,
+     "link": "robe",
+     "set": {
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-robe-wizard-sleeve-bag-r"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-pilgrim/chest",
+   "label": "Light pilgrim: chest",
+   "slot": "chest",
+   "weight": "light",
+   "fromSet": "sets/light-pilgrim",
+   "alsoFrom": [
+    "sets/light-wanderer"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-mantle",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-mantle",
+      "hero/light-half-cape",
+      "hero/light-mantle-tiered"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-charms-medium/chest",
+   "label": "Demo: charms, medium: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-charms-medium",
+   "alsoFrom": [
+    "sets/demo-medium-sergeant"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-standing-collar",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-standing-collar",
+      "hero/medium-mail-tippet"
+     ]
+    },
+    {
+     "part": "hero/medium-brigandine-v2",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.8,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-brigandine-v2",
+      "hero/medium-brigandine-body",
+      "hero/medium-scale-vest"
+     ]
+    },
+    {
+     "part": "hero/medium-spaulder-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-spaulder-l",
+      "hero/medium-half-pauldron-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-quilted/chest",
+   "label": "Demo: light, quilted jacket: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-light-quilted",
+   "alsoFrom": [],
+   "entries": [],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {
+       "Radius": 0,
+       "RadiusBottom": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium-jack/chest",
+   "label": "Demo: medium, padded jack: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-jack",
+   "alsoFrom": [],
+   "entries": [],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {
+       "Radius": 1,
+       "RadiusBottom": 0.6
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium-man-at-arms-v2/chest",
+   "label": "Demo: medium, man-at-arms v2: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-man-at-arms-v2",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-mail-tippet",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "RadiusBottom": 1
+     },
+     "options": [
+      "hero/medium-mail-tippet",
+      "hero/medium-standing-collar"
+     ]
+    },
+    {
+     "part": "hero/medium-brigandine-body",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "RadiusTop": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-brigandine-body",
+      "hero/medium-brigandine-v2",
+      "hero/medium-scale-vest"
+     ]
+    },
+    {
+     "part": "hero/medium-spine-ridge",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisUp": 0.8,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-spine-ridge"
+     ]
+    },
+    {
+     "part": "hero/medium-surcoat-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.4,
+      "RadiusBottom": 0.5,
+      "Radius": 1
+     },
+     "options": [
+      "hero/medium-surcoat-front"
+     ]
+    },
+    {
+     "part": "hero/medium-surcoat-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.4,
+      "RadiusBottom": 0.5,
+      "Radius": 1
+     },
+     "options": [
+      "hero/medium-surcoat-back"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-sleeve-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-sleeve-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium-padded-jack/chest",
+   "label": "Demo: medium, padded jack: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-padded-jack",
+   "alsoFrom": [],
+   "entries": [],
+   "soft": {
+    "top": [
+     {
+      "part": "base/medium-padded-jack",
+      "handles": {
+       "Radius": 0.6,
+       "AxisUp": 0.6
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium/chest",
+   "label": "Demo: medium, full set: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-brigandine-body",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "RadiusTop": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-brigandine-body",
+      "hero/medium-brigandine-v2",
+      "hero/medium-scale-vest"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-sleeve-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-sleeve-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-brigand/chest",
+   "label": "Demo mix: brigand: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-brigand",
+   "alsoFrom": [
+    "sets/brigandine"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-brigandine-body",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "RadiusTop": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-brigandine-body",
+      "hero/medium-brigandine-v2",
+      "hero/medium-scale-vest"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-ranger/chest",
+   "label": "Demo mix: ranger: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-ranger",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-leather-jerkin",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leather-jerkin",
+      "hero/light-leather-jerkin-v2",
+      "hero/light-plastron"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-tunic",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-sellsword/chest",
+   "label": "Demo: mix, sellsword: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-sellsword",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-plastron",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.8,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-plastron",
+      "hero/light-leather-jerkin",
+      "hero/light-leather-jerkin-v2"
+     ]
+    },
+    {
+     "part": "hero/medium-spaulder-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-spaulder-l",
+      "hero/medium-half-pauldron-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "scale-vest/chest",
+   "label": "Scale vest: chest",
+   "slot": "chest",
+   "weight": "medium",
+   "fromSet": "sets/scale-vest",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-scale-vest",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-scale-vest",
+      "hero/medium-brigandine-body",
+      "hero/medium-brigandine-v2"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-sleeve-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-sleeve-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "breastplate-keeled/chest",
+   "label": "Keeled breastplate: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/breastplate-keeled",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-breastplate-keeled",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 1,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate-keeled",
+      "hero/f1-breastplate",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "cops-spiked/chest",
+   "label": "Spiked couters and poleyns: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/cops-spiked",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.75,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-couter-spiked-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 1,
+      "AxisBack": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-couter-spiked-l",
+      "hero/f1-couter-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/f1-plackart",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-plackart"
+     ]
+    },
+    {
+     "part": "hero/f1-gussets",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gussets"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "demo-charms-heavy/chest",
+   "label": "Demo: charms, heavy: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/demo-charms-heavy",
+   "alsoFrom": [
+    "sets/demo-heavy-f1",
+    "sets/heavy-watertight"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-gorget",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared",
+      "wraps/f1-ring-stack-neck"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-plackart",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-plackart"
+     ]
+    },
+    {
+     "part": "hero/f1-gussets",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gussets"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "hero/f1-rerebrace-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-rerebrace-l",
+      "wraps/f1-tube-upperarm-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "demo-heavy-crusader/chest",
+   "label": "Demo: heavy, crusader: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-crusader",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-gorget",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared",
+      "wraps/f1-ring-stack-neck"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "hero/f1-rerebrace-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-rerebrace-l",
+      "wraps/f1-tube-upperarm-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/medium-surcoat-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.6,
+      "RadiusBottom": 0.5,
+      "Radius": 0.8
+     },
+     "options": [
+      "hero/medium-surcoat-front"
+     ]
+    },
+    {
+     "part": "hero/medium-surcoat-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.6,
+      "RadiusBottom": 0.5,
+      "Radius": 0.8
+     },
+     "options": [
+      "hero/medium-surcoat-back"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "demo-heavy-ethos/chest",
+   "label": "Demo: heavy, the new-ethos parts: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-ethos",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-gorget-collared",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-gorget-collared",
+      "hero/f1-gorget",
+      "wraps/f1-ring-stack-neck"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate-keeled",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate-keeled",
+      "hero/f1-breastplate",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/heavy-pauldron-swept-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisBack": 0.5,
+      "AxisUp": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-pauldron-swept-l",
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l"
+     ]
+    },
+    {
+     "part": "hero/f1-rerebrace-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-rerebrace-l",
+      "wraps/f1-tube-upperarm-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-couter-spiked-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "AxisBack": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-couter-spiked-l",
+      "hero/f1-couter-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "demo-mix-knight-errant/chest",
+   "label": "Demo mix: knight errant: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/demo-mix-knight-errant",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-sleeve-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-sleeve-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "domed-pauldron/chest",
+   "label": "Domed pauldron: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/domed-pauldron",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-dome-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "BoneLength": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-dome-l",
+      "hero/f1-pauldron-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "gorget-collared/chest",
+   "label": "Collared gorget: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/gorget-collared",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-gorget-collared",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "AxisUp": 1,
+      "AxisForward": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-gorget-collared",
+      "hero/f1-gorget",
+      "wraps/f1-ring-stack-neck"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.75,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/f1-plackart",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-plackart"
+     ]
+    },
+    {
+     "part": "hero/f1-gussets",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gussets"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "half-pauldron/chest",
+   "label": "Half pauldron: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/half-pauldron",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 1,
+      "AxisLeft": 1,
+      "BoneLength": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "heavy-ornaments/chest",
+   "label": "Heavy ornaments: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/heavy-ornaments",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "medium-arms/chest",
+   "label": "Medium arms: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/medium-arms",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/medium-half-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-half-pauldron-l",
+      "hero/medium-spaulder-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-sleeve-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-sleeve-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-gambeson",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "pauldron-swept/chest",
+   "label": "Swept pauldron: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/pauldron-swept",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/heavy-pauldron-swept-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisBack": 0.5,
+      "AxisUp": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-pauldron-swept-l",
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "plate-ornamented/chest",
+   "label": "Ornamented plate: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/plate-ornamented",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.75,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/f1-plackart",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-plackart"
+     ]
+    },
+    {
+     "part": "hero/f1-gussets",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gussets"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "sabaton-spurred/chest",
+   "label": "Spurred sabatons: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/sabaton-spurred",
+   "alsoFrom": [
+    "sets/tasset-dagged"
+   ],
+   "entries": [
+    {
+     "part": "wraps/f1-ring-stack-neck",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-ring-stack-neck",
+      "hero/f1-gorget",
+      "hero/heavy-gorget-collared"
+     ]
+    },
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-pauldron-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.75,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-pauldron-l",
+      "hero/f1-pauldron-dome-l",
+      "hero/heavy-pauldron-swept-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-upperarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-upperarm-l",
+      "hero/f1-rerebrace-l"
+     ]
+    },
+    {
+     "part": "hero/f1-couter-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-couter-l",
+      "hero/heavy-couter-spiked-l"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    },
+    {
+     "part": "hero/f1-plackart",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-plackart"
+     ]
+    },
+    {
+     "part": "hero/f1-gussets",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gussets"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "scale-cluster/chest",
+   "label": "Scale clusters: chest",
+   "slot": "chest",
+   "weight": "heavy",
+   "fromSet": "sets/scale-cluster",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-breastplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "RadiusTop": 0.5,
+      "AxisForward": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-breastplate",
+      "hero/f1-breastplate-keeled",
+      "hero/heavy-breastplate-fluted"
+     ],
+     "lateOptions": [
+      "hero/f1-breastplate-peascod"
+     ]
+    },
+    {
+     "part": "hero/f1-backplate",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisBack": 0.5,
+      "BendTip": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-backplate"
+     ]
+    },
+    {
+     "part": "hero/f1-fauld-lames",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-fauld-lames"
+     ]
+    }
+   ],
+   "soft": {
+    "padding": true
+   }
+  },
+  {
+   "id": "demo-charms-light/gloves",
+   "label": "Demo: charms, light: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-charms-light",
+   "alsoFrom": [
+    "sets/demo-light-skirmisher"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-bracer-lamellar-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-bracer-lamellar-l",
+      "hero/light-arm-guard-l",
+      "hero/light-arm-wraps-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-light-drifter/gloves",
+   "label": "Demo: light, drifter: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-light-drifter",
+   "alsoFrom": [
+    "sets/demo-light-quilted",
+    "sets/demo-light-wayfarer",
+    "sets/light-pilgrim"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-arm-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-arm-wraps-l",
+      "hero/light-arm-guard-l",
+      "hero/light-bracer-lamellar-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-light/gloves",
+   "label": "Demo: light, full set: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-light",
+   "alsoFrom": [
+    "sets/demo-light-forester-v2",
+    "sets/demo-light-scout",
+    "sets/light-arms",
+    "sets/light-forester",
+    "sets/light-wanderer"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-arm-guard-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-arm-guard-l",
+      "hero/light-arm-wraps-l",
+      "hero/light-bracer-lamellar-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-mix-brigand/gloves",
+   "label": "Demo mix: brigand: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-mix-brigand",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-arm-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-arm-wraps-l",
+      "hero/light-arm-guard-l",
+      "hero/light-bracer-lamellar-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-mix-knight-errant/gloves",
+   "label": "Demo mix: knight errant: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-mix-knight-errant",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-arm-guard-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-arm-guard-l",
+      "hero/light-arm-wraps-l",
+      "hero/light-bracer-lamellar-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-mix-sellsword/gloves",
+   "label": "Demo: mix, sellsword: gloves",
+   "slot": "gloves",
+   "weight": "light",
+   "fromSet": "sets/demo-mix-sellsword",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-bracer-lamellar-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-bracer-lamellar-l",
+      "hero/light-arm-guard-l",
+      "hero/light-arm-wraps-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-charms-medium/gloves",
+   "label": "Demo: charms, medium: gloves",
+   "slot": "gloves",
+   "weight": "medium",
+   "fromSet": "sets/demo-charms-medium",
+   "alsoFrom": [
+    "sets/demo-medium-sergeant"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-vambrace-strapped-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-vambrace-strapped-l",
+      "hero/medium-bracer-l"
+     ]
+    },
+    {
+     "part": "hero/medium-gauntlet-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-gauntlet-l",
+      "hero/medium-backhand-plate-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-medium-jack/gloves",
+   "label": "Demo: medium, padded jack: gloves",
+   "slot": "gloves",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-jack",
+   "alsoFrom": [
+    "sets/demo-medium-man-at-arms-v2",
+    "sets/demo-medium-padded-jack"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-glove-cuff-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusTop": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-glove-cuff-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-medium/gloves",
+   "label": "Demo: medium, full set: gloves",
+   "slot": "gloves",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium",
+   "alsoFrom": [
+    "sets/medium-arms"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-bracer-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-bracer-l",
+      "hero/medium-vambrace-strapped-l"
+     ]
+    },
+    {
+     "part": "hero/medium-backhand-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-backhand-plate-l",
+      "hero/medium-gauntlet-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "demo-mix-ranger/gloves",
+   "label": "Demo mix: ranger: gloves",
+   "slot": "gloves",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-ranger",
+   "alsoFrom": [
+    "sets/glove-cuff"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-glove-cuff-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusTop": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-glove-cuff-l"
+     ]
+    },
+    {
+     "part": "hero/medium-backhand-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-backhand-plate-l",
+      "hero/medium-gauntlet-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.25
+   }
+  },
+  {
+   "id": "bracer-fluted/gloves",
+   "label": "Fluted bracer: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/bracer-fluted",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-bracer-fluted-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 1,
+      "RadiusBottom": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-bracer-fluted-l",
+      "hero/f1-vambrace-l",
+      "wraps/f1-tube-lowerarm-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "BendTip": 0.5
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "cops-spiked/gloves",
+   "label": "Spiked couters and poleyns: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/cops-spiked",
+   "alsoFrom": [
+    "sets/gorget-collared",
+    "sets/sabaton-spurred",
+    "sets/tasset-dagged"
+   ],
+   "entries": [
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-cuff-forearm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-cuff-forearm-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "BendTip": 0.5
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "demo-charms-heavy/gloves",
+   "label": "Demo: charms, heavy: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/demo-charms-heavy",
+   "alsoFrom": [
+    "sets/demo-heavy-crusader",
+    "sets/demo-heavy-f1",
+    "sets/heavy-watertight"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-vambrace-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l",
+      "wraps/f1-tube-lowerarm-l"
+     ]
+    },
+    {
+     "part": "hero/f1-gauntlet-cuff-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-gauntlet-cuff-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "BendTip": 0.5
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "demo-heavy-ethos/gloves",
+   "label": "Demo: heavy, the new-ethos parts: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-ethos",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-bracer-fluted-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-bracer-fluted-l",
+      "hero/f1-vambrace-l",
+      "wraps/f1-tube-lowerarm-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-gauntlet-block-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "BendTip": 0.5,
+      "RadiusTop": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-gauntlet-block-l",
+      "hero/heavy-gauntlet-crested-l",
+      "wraps/f1-mitten-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "domed-pauldron/gloves",
+   "label": "Domed pauldron: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/domed-pauldron",
+   "alsoFrom": [
+    "sets/half-pauldron",
+    "sets/pauldron-swept"
+   ],
+   "entries": [
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-cuff-forearm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-cuff-forearm-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "gauntlet-block/gloves",
+   "label": "Block gauntlet: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/gauntlet-block",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-gauntlet-block-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "BendTip": 0.5,
+      "RadiusTop": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-gauntlet-block-l",
+      "hero/heavy-gauntlet-crested-l",
+      "wraps/f1-mitten-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "gauntlet-claw/gloves",
+   "label": "Claw gauntlet: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/gauntlet-claw",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.3,
+      "BoneLength": 0.5,
+      "BendTip": 1
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 1,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-ring-stack-wrist-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 1
+     },
+     "options": [
+      "wraps/f1-ring-stack-wrist-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 1
+   }
+  },
+  {
+   "id": "gauntlet-crested/gloves",
+   "label": "Crested gauntlet: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/gauntlet-crested",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-gauntlet-crested-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "BendTip": 0.5,
+      "RadiusTop": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-gauntlet-crested-l",
+      "hero/heavy-gauntlet-block-l",
+      "wraps/f1-mitten-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "gauntlet-mitten/gloves",
+   "label": "Mitten gauntlet: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/gauntlet-mitten",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-mitten-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisUp": 0.5
+     },
+     "options": [
+      "wraps/f1-mitten-l",
+      "hero/heavy-gauntlet-block-l",
+      "hero/heavy-gauntlet-crested-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-cuff-forearm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 1,
+      "BoneLength": 1
+     },
+     "options": [
+      "wraps/f1-cuff-forearm-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.75
+   }
+  },
+  {
+   "id": "gauntlet-plated/gloves",
+   "label": "Plated gauntlet: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/gauntlet-plated",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "BendTip": 0.5
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    },
+    {
+     "part": "hero/f1-knuckle-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-knuckle-plate-l"
+     ]
+    },
+    {
+     "part": "wraps/f1-cuff-forearm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-cuff-forearm-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "light-set/gloves",
+   "label": "Light set: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/light-set",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.208
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    },
+    {
+     "part": "hero/f1-finger-plates-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0,
+      "BoneLength": 0.4,
+      "BendTip": 0.5
+     },
+     "options": [
+      "hero/f1-finger-plates-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "plate-ornamented/gloves",
+   "label": "Ornamented plate: gloves",
+   "slot": "gloves",
+   "weight": "heavy",
+   "fromSet": "sets/plate-ornamented",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "wraps/f1-tube-lowerarm-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "wraps/f1-tube-lowerarm-l",
+      "hero/f1-vambrace-l",
+      "hero/heavy-bracer-fluted-l"
+     ]
+    }
+   ],
+   "soft": {
+    "glove": 0.5
+   }
+  },
+  {
+   "id": "demo-charms-light/legs",
+   "label": "Demo: charms, light: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-charms-light",
+   "alsoFrom": [
+    "sets/demo-light-skirmisher"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-belt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-belt",
+      "hero/light-sash"
+     ]
+    },
+    {
+     "part": "hero/light-hip-drape",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisRight": 0.7,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-hip-drape"
+     ]
+    },
+    {
+     "part": "hero/light-thigh-rig-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-thigh-rig-l"
+     ]
+    },
+    {
+     "part": "hero/light-knee-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-knee-wraps-l"
+     ]
+    },
+    {
+     "part": "hero/light-shin-guard-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-shin-guard-l",
+      "hero/light-leg-wraps-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-drifter/legs",
+   "label": "Demo: light, drifter: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light-drifter",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-sash",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5
+     },
+     "options": [
+      "hero/light-sash",
+      "hero/light-belt"
+     ]
+    },
+    {
+     "part": "hero/light-sash-tails",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-sash-tails"
+     ]
+    },
+    {
+     "part": "hero/light-skirt-tiers-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-skirt-tiers-front",
+      "hero/light-tabard-front"
+     ]
+    },
+    {
+     "part": "hero/light-coat-tail",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisRight": 0.5,
+      "RadiusBottom": 0.5
+     },
+     "options": [
+      "hero/light-coat-tail"
+     ]
+    },
+    {
+     "part": "hero/light-leg-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leg-wraps-l",
+      "hero/light-shin-guard-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-forester-v2/legs",
+   "label": "Demo: light, forester v2: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light-forester-v2",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-belt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-belt",
+      "hero/light-sash"
+     ]
+    },
+    {
+     "part": "hero/light-skirt-tiers-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-skirt-tiers-front",
+      "hero/light-tabard-front"
+     ]
+    },
+    {
+     "part": "hero/light-skirt-tiers-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-skirt-tiers-back",
+      "hero/light-tabard-back"
+     ]
+    },
+    {
+     "part": "hero/light-thigh-panel-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-thigh-panel-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-quilted/legs",
+   "label": "Demo: light, quilted jacket: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light-quilted",
+   "alsoFrom": [
+    "sets/demo-light-quilted-jacket"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-belt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-belt",
+      "hero/light-sash"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-scout/legs",
+   "label": "Demo: light, scout: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light-scout",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-belt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-belt",
+      "hero/light-sash"
+     ]
+    },
+    {
+     "part": "hero/light-thigh-rig-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-thigh-rig-l"
+     ]
+    },
+    {
+     "part": "hero/light-shin-guard-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-shin-guard-l",
+      "hero/light-leg-wraps-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light-wayfarer/legs",
+   "label": "Demo: light, wayfarer: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light-wayfarer",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-sash",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5
+     },
+     "options": [
+      "hero/light-sash",
+      "hero/light-belt"
+     ]
+    },
+    {
+     "part": "hero/light-sash-tails",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-sash-tails"
+     ]
+    },
+    {
+     "part": "hero/light-thigh-panel-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-thigh-panel-l"
+     ]
+    },
+    {
+     "part": "hero/light-leg-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leg-wraps-l",
+      "hero/light-shin-guard-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-light/legs",
+   "label": "Demo: light, full set: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/demo-light",
+   "alsoFrom": [
+    "sets/light-wanderer"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-sash",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5
+     },
+     "options": [
+      "hero/light-sash",
+      "hero/light-belt"
+     ]
+    },
+    {
+     "part": "hero/light-sash-tails",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-sash-tails"
+     ]
+    },
+    {
+     "part": "hero/light-tabard-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-front",
+      "hero/light-skirt-tiers-front"
+     ]
+    },
+    {
+     "part": "hero/light-tabard-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-back",
+      "hero/light-skirt-tiers-back"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "light-forester/legs",
+   "label": "Light forester: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/light-forester",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-tabard-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-front",
+      "hero/light-skirt-tiers-front"
+     ]
+    },
+    {
+     "part": "hero/light-tabard-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-back",
+      "hero/light-skirt-tiers-back"
+     ]
+    },
+    {
+     "part": "hero/light-belt",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-belt",
+      "hero/light-sash"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "light-gear-coat/legs",
+   "label": "Light gear: short coat over a shirt: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/light-gear-coat",
+   "alsoFrom": [
+    "sets/light-gear-long-coat",
+    "sets/light-gear-robe-ceremonial",
+    "sets/light-gear-robe-hermit",
+    "sets/light-gear-robe-monk",
+    "sets/light-gear-robe-sorcerer",
+    "sets/light-gear-scholar",
+    "sets/light-gear-shirt",
+    "sets/light-gear-smock",
+    "sets/light-gear-tunic",
+    "sets/light-gear-vest",
+    "sets/light-gear-wizard"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-trousers-loose",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-trousers-loose"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-jerkin/legs",
+   "label": "Light gear: jerkin and wrapped trousers: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/light-gear-jerkin",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-trousers-wrapped",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-trousers-wrapped"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-shirt-hakama/legs",
+   "label": "Light gear: hakama over a shirt: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/light-gear-shirt-hakama",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-hakama",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "RadiusBottom": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-hakama"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-pilgrim/legs",
+   "label": "Light pilgrim: legs",
+   "slot": "legs",
+   "weight": "light",
+   "fromSet": "sets/light-pilgrim",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-sash",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5
+     },
+     "options": [
+      "hero/light-sash",
+      "hero/light-belt"
+     ]
+    },
+    {
+     "part": "hero/light-sash-tails",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-sash-tails"
+     ]
+    },
+    {
+     "part": "hero/light-leg-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leg-wraps-l",
+      "hero/light-shin-guard-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "brigandine/legs",
+   "label": "Brigandine: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/brigandine",
+   "alsoFrom": [
+    "sets/half-pauldron",
+    "sets/medium-arms",
+    "sets/scale-vest"
+   ],
+   "entries": [],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "courtside-legs/legs",
+   "label": "Courtside legs: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/courtside-legs",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-thigh-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 1,
+      "BoneLength": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-thigh-plate-l",
+      "hero/medium-tasset-l"
+     ]
+    },
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-medium/legs",
+   "label": "Demo: charms, medium: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-charms-medium",
+   "alsoFrom": [
+    "sets/demo-medium-sergeant"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-belt-plated",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-belt-plated"
+     ]
+    },
+    {
+     "part": "hero/medium-tasset-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-tasset-l",
+      "hero/medium-thigh-plate-l"
+     ]
+    },
+    {
+     "part": "hero/medium-greave-buckled-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-greave-buckled-l",
+      "hero/medium-splint-greave-l",
+      "hero/medium-greave-long-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium-jack/legs",
+   "label": "Demo: medium, padded jack: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-jack",
+   "alsoFrom": [
+    "sets/demo-medium-padded-jack"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-belt-plated",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-belt-plated"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {
+       "Radius": 0.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium-man-at-arms-v2/legs",
+   "label": "Demo: medium, man-at-arms v2: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-man-at-arms-v2",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-greave-l",
+      "hero/medium-greave-buckled-l",
+      "hero/medium-greave-long-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-medium/legs",
+   "label": "Demo: medium, full set: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium",
+   "alsoFrom": [
+    "sets/demo-mix-knight-errant"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-thigh-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-thigh-plate-l",
+      "hero/medium-tasset-l"
+     ]
+    },
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-brigand/legs",
+   "label": "Demo mix: brigand: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-brigand",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-sash",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5
+     },
+     "options": [
+      "hero/light-sash",
+      "hero/light-belt"
+     ]
+    },
+    {
+     "part": "hero/light-sash-tails",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-sash-tails"
+     ]
+    },
+    {
+     "part": "hero/medium-thigh-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-thigh-plate-l",
+      "hero/medium-tasset-l"
+     ]
+    },
+    {
+     "part": "hero/light-leg-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-leg-wraps-l",
+      "hero/light-shin-guard-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-ranger/legs",
+   "label": "Demo mix: ranger: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-ranger",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/light-tabard-front",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-front",
+      "hero/light-skirt-tiers-front"
+     ]
+    },
+    {
+     "part": "hero/light-tabard-back",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-tabard-back",
+      "hero/light-skirt-tiers-back"
+     ]
+    },
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/light-trousers",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "demo-mix-sellsword/legs",
+   "label": "Demo: mix, sellsword: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/demo-mix-sellsword",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-belt-plated",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-belt-plated"
+     ]
+    },
+    {
+     "part": "hero/light-hip-drape",
+     "mirror": false,
+     "link": "torso",
+     "set": {
+      "BoneLength": 0.5,
+      "AxisRight": 1,
+      "Radius": 0.5
+     },
+     "options": [
+      "hero/light-hip-drape"
+     ]
+    },
+    {
+     "part": "hero/medium-tasset-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-tasset-l",
+      "hero/medium-thigh-plate-l"
+     ]
+    },
+    {
+     "part": "hero/light-knee-wraps-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-knee-wraps-l"
+     ]
+    },
+    {
+     "part": "hero/medium-greave-buckled-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-greave-buckled-l",
+      "hero/medium-splint-greave-l",
+      "hero/medium-greave-long-l"
+     ]
+    }
+   ],
+   "soft": {
+    "under": [
+     {
+      "part": "base/medium-hose",
+      "handles": {}
+     }
+    ]
+   }
+  },
+  {
+   "id": "medium-legs/legs",
+   "label": "Medium legs: legs",
+   "slot": "legs",
+   "weight": "medium",
+   "fromSet": "sets/medium-legs",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/medium-thigh-plate-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 1,
+      "BoneLength": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-thigh-plate-l",
+      "hero/medium-tasset-l"
+     ]
+    },
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    },
+    {
+     "part": "hero/medium-splint-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-splint-greave-l",
+      "hero/medium-greave-buckled-l",
+      "hero/medium-greave-long-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "cops-spiked/legs",
+   "label": "Spiked couters and poleyns: legs",
+   "slot": "legs",
+   "weight": "heavy",
+   "fromSet": "sets/cops-spiked",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-tasset-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-tasset-l",
+      "hero/heavy-tasset-dagged-l",
+      "hero/heavy-tasset-long-l"
+     ]
+    },
+    {
+     "part": "hero/f1-cuisse-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-cuisse-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-poleyn-spiked-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 1,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-poleyn-spiked-l",
+      "hero/heavy-poleyn-winged-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-heavy/legs",
+   "label": "Demo: charms, heavy: legs",
+   "slot": "legs",
+   "weight": "heavy",
+   "fromSet": "sets/demo-charms-heavy",
+   "alsoFrom": [
+    "sets/demo-heavy-crusader",
+    "sets/demo-heavy-f1",
+    "sets/gorget-collared",
+    "sets/heavy-watertight",
+    "sets/sabaton-spurred"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-tasset-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-tasset-l",
+      "hero/heavy-tasset-dagged-l",
+      "hero/heavy-tasset-long-l"
+     ]
+    },
+    {
+     "part": "hero/f1-cuisse-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-cuisse-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-heavy-ethos/legs",
+   "label": "Demo: heavy, the new-ethos parts: legs",
+   "slot": "legs",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-ethos",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-tasset-dagged-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.5,
+      "RadiusBottom": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-tasset-dagged-l",
+      "hero/f1-tasset-l",
+      "hero/heavy-tasset-long-l"
+     ]
+    },
+    {
+     "part": "hero/f1-cuisse-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-cuisse-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-poleyn-spiked-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "AxisLeft": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-poleyn-spiked-l",
+      "hero/heavy-poleyn-winged-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "knee-cop/legs",
+   "label": "Medium knee cops: legs",
+   "slot": "legs",
+   "weight": "heavy",
+   "fromSet": "sets/knee-cop",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-cuisse-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-cuisse-l"
+     ]
+    },
+    {
+     "part": "hero/medium-knee-cop-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "Radius": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-knee-cop-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "tasset-dagged/legs",
+   "label": "Dagged tassets: legs",
+   "slot": "legs",
+   "weight": "heavy",
+   "fromSet": "sets/tasset-dagged",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-tasset-dagged-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 1,
+      "RadiusBottom": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-tasset-dagged-l",
+      "hero/f1-tasset-l",
+      "hero/heavy-tasset-long-l"
+     ]
+    },
+    {
+     "part": "hero/f1-cuisse-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-cuisse-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-light/feet",
+   "label": "Demo: charms, light: feet",
+   "slot": "feet",
+   "weight": "light",
+   "fromSet": "sets/demo-charms-light",
+   "alsoFrom": [
+    "sets/demo-light-scout",
+    "sets/demo-light-skirmisher"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-sandal-boot-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "BoneLength": 0.8,
+      "Radius": 0.5,
+      "AxisForward": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-sandal-boot-l",
+      "hero/light-boot-wrapped-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-light/feet",
+   "label": "Demo: light, full set: feet",
+   "slot": "feet",
+   "weight": "light",
+   "fromSet": "sets/demo-light",
+   "alsoFrom": [
+    "sets/demo-light-forester-v2",
+    "sets/demo-light-quilted",
+    "sets/demo-light-quilted-jacket",
+    "sets/demo-light-wayfarer",
+    "sets/demo-mix-ranger",
+    "sets/light-forester",
+    "sets/light-wanderer"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-boot-wrapped-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/light-boot-wrapped-l",
+      "hero/light-sandal-boot-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "light-gear-jerkin/feet",
+   "label": "Light gear: jerkin and wrapped trousers: feet",
+   "slot": "feet",
+   "weight": "light",
+   "fromSet": "sets/light-gear-jerkin",
+   "alsoFrom": [
+    "sets/light-gear-smock"
+   ],
+   "entries": [
+    {
+     "part": "hero/light-turnshoe-l",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "Detail": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-turnshoe-l"
+     ]
+    },
+    {
+     "part": "hero/light-turnshoe-r",
+     "mirror": false,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "Detail": 0.5,
+      "BoneLength": 0.5
+     },
+     "options": [
+      "hero/light-turnshoe-r"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-medium/feet",
+   "label": "Demo: charms, medium: feet",
+   "slot": "feet",
+   "weight": "medium",
+   "fromSet": "sets/demo-charms-medium",
+   "alsoFrom": [
+    "sets/demo-medium-man-at-arms-v2",
+    "sets/demo-medium-sergeant",
+    "sets/demo-mix-sellsword"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-boot-plated-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-boot-plated-l",
+      "hero/medium-boot-courtside-l",
+      "hero/medium-boot-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-medium-jack/feet",
+   "label": "Demo: medium, padded jack: feet",
+   "slot": "feet",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium-jack",
+   "alsoFrom": [
+    "sets/demo-medium-padded-jack",
+    "sets/medium-legs"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-boot-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-boot-l",
+      "hero/medium-boot-courtside-l",
+      "hero/medium-boot-plated-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-medium/feet",
+   "label": "Demo: medium, full set: feet",
+   "slot": "feet",
+   "weight": "medium",
+   "fromSet": "sets/demo-medium",
+   "alsoFrom": [
+    "sets/demo-mix-knight-errant",
+    "sets/courtside-legs"
+   ],
+   "entries": [
+    {
+     "part": "hero/medium-boot-courtside-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisUp": 0.5,
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/medium-boot-courtside-l",
+      "hero/medium-boot-l",
+      "hero/medium-boot-plated-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "cops-spiked/feet",
+   "label": "Spiked couters and poleyns: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/cops-spiked",
+   "alsoFrom": [
+    "sets/knee-cop"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-greave-l"
+     ]
+    },
+    {
+     "part": "hero/f1-sabaton-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.75,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-sabaton-l",
+      "hero/f1-footwear-l",
+      "hero/heavy-sabaton-spurred-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-charms-heavy/feet",
+   "label": "Demo: charms, heavy: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/demo-charms-heavy",
+   "alsoFrom": [
+    "sets/demo-heavy-crusader",
+    "sets/demo-heavy-f1",
+    "sets/heavy-watertight"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-poleyn-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-poleyn-l"
+     ]
+    },
+    {
+     "part": "hero/f1-footwear-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-footwear-l",
+      "hero/f1-sabaton-l",
+      "hero/heavy-sabaton-spurred-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-heavy-ethos/feet",
+   "label": "Demo: heavy, the new-ethos parts: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/demo-heavy-ethos",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-greave-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-sabaton-spurred-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-sabaton-spurred-l",
+      "hero/f1-footwear-l",
+      "hero/f1-sabaton-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "demo-mix-brigand/feet",
+   "label": "Demo mix: brigand: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/demo-mix-brigand",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/heavy-sabaton-spurred-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "AxisBack": 0.5,
+      "AxisUp": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-sabaton-spurred-l",
+      "hero/f1-footwear-l",
+      "hero/f1-sabaton-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "gorget-collared/feet",
+   "label": "Collared gorget: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/gorget-collared",
+   "alsoFrom": [
+    "sets/tasset-dagged"
+   ],
+   "entries": [
+    {
+     "part": "hero/f1-poleyn-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-poleyn-l"
+     ]
+    },
+    {
+     "part": "hero/f1-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-greave-l"
+     ]
+    },
+    {
+     "part": "hero/f1-sabaton-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.75,
+      "Radius": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-sabaton-l",
+      "hero/f1-footwear-l",
+      "hero/heavy-sabaton-spurred-l"
+     ]
+    }
+   ],
+   "soft": null
+  },
+  {
+   "id": "sabaton-spurred/feet",
+   "label": "Spurred sabatons: feet",
+   "slot": "feet",
+   "weight": "heavy",
+   "fromSet": "sets/sabaton-spurred",
+   "alsoFrom": [],
+   "entries": [
+    {
+     "part": "hero/f1-poleyn-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "Radius": 0.5,
+      "AxisLeft": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-poleyn-l"
+     ]
+    },
+    {
+     "part": "hero/f1-greave-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "RadiusTop": 0.5,
+      "BoneLength": 0.5,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/f1-greave-l"
+     ]
+    },
+    {
+     "part": "hero/heavy-sabaton-spurred-l",
+     "mirror": true,
+     "link": null,
+     "set": {
+      "AxisForward": 0.5,
+      "Radius": 0.5,
+      "AxisBack": 1,
+      "AxisUp": 1,
+      "Detail": 0.5
+     },
+     "options": [
+      "hero/heavy-sabaton-spurred-l",
+      "hero/f1-footwear-l",
+      "hero/f1-sabaton-l"
+     ]
+    }
+   ],
+   "soft": null
+  }
+ ]
+}

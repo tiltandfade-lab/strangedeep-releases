@@ -1,0 +1,101 @@
+{
+  "comment": "A bow's arrows (lane weapon-forms, November 12; Adam, November 6, Kit Weapons and Shields, \"Bows approved\": \"a bow that adds poison will have an arrow that has a green tip, the more the poison, the brighter and more toxic the green. and those gradients should stack the same way as they do on the swords\"; arrows \"roll materials like bows, so there is more than one arrow\"). Every arrow a bow looses wears its bow's look, rolled from the bow item's id and grade (godot/src/ArrowLooks.cs): the shaft a wood of the grade's pool, from its lighter plain woods (shaftShare: the lightest half of the unpainted woods, at least two; the Mary Rose's war arrows are poplar, ash, birch, beech and hazel, pale woods, and a dark shaft reads as a black stick at the game camera), the head a metal of the grade's rung, the fletching one of these feathers that wears the grade. An identified bow's tip carries its colours as a gradient from the point back over the head, two at most, the status properties first and then the four stats, strongest roll first (the stat colours are the blades', KitWeaponColour.Stats). The first colour's roll, as a share of its range, sets how far back the gradient runs (reach, a share of the head) and how brightly the tip glows (glow). A status colour is read from the colour the game already shows for that effect (\"from\": poison is PoisonPresentation.Glow, the poisoned actor's green; ember and ice are AbilityVfxProfile's EmberDeep and IceGlow, the fire and frost effects), so there is one palette (lead, November 12). The blades colour only the four stats, so no sword gradient owns these. Storm and vampire have no existing colour: theirs are the lane's proposal for Adam's look (\"proposal\": true). Ranges are the property's own (src/items/magic-properties.ts; test/kit-weapons.test.ts holds them equal).",
+  "shaftShare": 0.5,
+  "status": {
+    "venom": {
+      "from": "poison",
+      "range": [
+        15,
+        30
+      ]
+    },
+    "ember": {
+      "from": "ember",
+      "range": [
+        1,
+        3
+      ]
+    },
+    "rime": {
+      "from": "ice",
+      "range": [
+        1,
+        3
+      ]
+    },
+    "storm": {
+      "colour": "#c9b5ff",
+      "proposal": true,
+      "range": [
+        3,
+        5
+      ]
+    },
+    "vampire": {
+      "colour": "#9b1030",
+      "proposal": true,
+      "range": [
+        10,
+        20
+      ]
+    }
+  },
+  "reach": [
+    0.55,
+    1.0
+  ],
+  "glow": [
+    0.35,
+    1.4
+  ],
+  "fletching": [
+    {
+      "id": "grey-goose",
+      "colour": "#8d8c86",
+      "tiers": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "white-goose",
+      "colour": "#e4dfd2",
+      "tiers": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "barred-brown",
+      "colour": "#7a5434",
+      "tiers": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "black-crow",
+      "colour": "#26262b",
+      "tiers": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "dyed-red",
+      "colour": "#a2302a",
+      "tiers": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "dyed-blue",
+      "colour": "#2f4f8e",
+      "tiers": [
+        3,
+        4
+      ]
+    }
+  ]
+}

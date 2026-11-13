@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "note": "Enemy introductions (lane enemy-intros, October 30; design-notebook/Strangedeep/Visual Direction/Visual Vocabulary.md, 'Every new enemy type gets an introduction'). Adam: \"if a player encounters a new enemy, that enemy should get a cool introduction. xcom does it! xcom does it regularly even after the first encounter\". The first time the party sees a type, the camera breaks the three-quarter view for a short reveal of it, built from a few framings picked by the enemy's size and the room (never a hand-made scene, except the first slime feeding on a corpse). Later, a lighter reveal recurs now and then when a fight starts. Played by the camera beats director (CombatCameraBeats), so input waits, any press skips, and the view comes back exactly. Presentation only: it reads committed responses (the response's enemyTypes) and never touches a rule, a command, a save or a gameplay number. Every number here is a draft for Adam: how often recurring reveals fire is open. Adam, October 30, on the first reveals: every reveal moves the whole time (\"it should always have some motion to it, whether pan, zoom, orbit, or a combination\"): each shot's orbit (degrees round the subject over the shot) and push (the share of the distance closed, a perspective camera; an isometric shot only orbits) are eased, a few degrees, never a turn. A reveal camera never sits in or behind a wall or shoots through one (\"the camera should never shoot through a wall\"): a blocked framing falls back to the next, the last a near-top-down view. Every shot cuts in and cuts back: an ease from or to the tactical view would pass through views the wall test never approved. In a narrow space (a corridor) the camera stands along its length at low-to-mid height and pushes in slowly, before an isometric or top-down view is tried. Adam, October 30, on the human's reveal: \"You put him in a closet!\" A reveal's camera and its subject each need clear cells on both sides of the camera line (settings.clearCells; a one-cell space is a closet); a first reveal waits for a body of its type standing in the open. Two cells either side (the lead's brief) left four of five reveals unplayed in the recorded run, so the draft is one; the number is Adam's to set. Adam, October 30, on how often: the introduction plays on the first view of an enemy type, and at about half of the later fight starts with that type (settings.recurringPercent 50; a boss or a large body still always). The lead, October 30, on blue's reveal (a barrel's lid big in the foreground): no prop's bounds come within settings.propNearMeters of a reveal camera, and none covers more than settings.propFrameShareMax of the frame, at the start, middle or end of its motion. Adam, October 31, on blue's reveal: \"we can have a low reveal whats the controversy\". The first reveal seen through a doorway is a low shot (framing doorway-low): the camera may stand in the doorway or just past its threshold, a prop in its lens or between it and the enemy is hidden while the reveal plays and restored after, and a figure in the way is framed past; walls, shut doors and half-cover still rule it out. The prop rule is then a check on the drawn frame, not a veto on the camera.",
+  "settings": {
+    "default": "on",
+    "recurringPercent": 50,
+    "alwaysRanks": [
+      "boss",
+      "large"
+    ],
+    "ownBeatTypes": [
+      "boss-cube"
+    ],
+    "playerCommandsBetween": 1,
+    "clearCells": 1,
+    "propNearMeters": 0.6,
+    "propFrameShareMax": 0.1,
+    "recurringOnlyAtFightStart": true,
+    "firstPriority": 65,
+    "recurringPriority": 25
+  },
+  "limits": {
+    "note": "What EnemyIntros.Parse accepts.",
+    "percent": [
+      0,
+      100
+    ],
+    "priority": [
+      1,
+      99
+    ],
+    "revealSeconds": [
+      1.0,
+      3.2
+    ],
+    "recurringSecondsMax": 2.0,
+    "shotsMax": 3,
+    "orbitDegreesMax": 10,
+    "pushMax": 0.3,
+    "clearCells": [
+      1,
+      3
+    ],
+    "propNearMeters": [
+      0.2,
+      2.0
+    ],
+    "propFrameShareMax": [
+      0.02,
+      0.5
+    ],
+    "intimidationHold": [
+      0.05,
+      1.0
+    ]
+  },
+  "reveals": {
+    "first-small": {
+      "use": "a first sighting of a small body (a small slime): push in on it",
+      "shots": [
+        {
+          "framing": "push-in",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.9,
+          "inShort": true,
+          "orbit": 5,
+          "push": 0.12
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "first-medium": {
+      "use": "a first sighting of a one-square body: cut to a low angle",
+      "shots": [
+        {
+          "framing": "low",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 2.0,
+          "inShort": true,
+          "orbit": 6,
+          "push": 0.15
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "first-large": {
+      "use": "a first sighting of a 2x2 body or a boss: its room, then a low angle",
+      "shots": [
+        {
+          "framing": "establishing",
+          "subject": "enemy-room",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.2,
+          "inShort": false,
+          "orbit": 8,
+          "push": 0.0
+        },
+        {
+          "framing": "low",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.5,
+          "inShort": true,
+          "orbit": 5,
+          "push": 0.12
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "first-doorway": {
+      "use": "a first sighting of a one-square body in another room: framed in the doorway the party sees it through",
+      "shots": [
+        {
+          "framing": "doorway-low",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 2.1,
+          "inShort": true,
+          "orbit": 4,
+          "push": 0.18
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "first-slime-feeding": {
+      "use": "the player's first slime, found feeding on a dead Fresh Meat (the death scene 'slime-feeding'): a low angle across the corpse",
+      "shots": [
+        {
+          "framing": "low-feeding",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 2.6,
+          "inShort": true,
+          "orbit": 6,
+          "push": 0.18
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "again-small": {
+      "use": "a recurring reveal of a small or one-square body: a short push in",
+      "shots": [
+        {
+          "framing": "push-in",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.2,
+          "inShort": true,
+          "orbit": 4,
+          "push": 0.1
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "again-large": {
+      "use": "a recurring reveal of a 2x2 body or a boss: a short low angle",
+      "shots": [
+        {
+          "framing": "low",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.3,
+          "inShort": true,
+          "orbit": 5,
+          "push": 0.12
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    },
+    "again-doorway": {
+      "use": "a recurring reveal of a body seen through a doorway",
+      "shots": [
+        {
+          "framing": "doorway",
+          "subject": "enemy",
+          "move": "cut",
+          "ease": 0,
+          "hold": 1.3,
+          "inShort": true,
+          "orbit": 3,
+          "push": 0.12
+        }
+      ],
+      "return": {
+        "move": "cut",
+        "seconds": 0
+      }
+    }
+  },
+  "moods": {
+    "first": "reveal",
+    "again": null
+  },
+  "fallbacks": {
+    "low": [
+      "corridor",
+      "push-in",
+      "top"
+    ],
+    "low-feeding": [
+      "low",
+      "corridor",
+      "push-in",
+      "top"
+    ],
+    "doorway-low": [
+      "doorway",
+      "low",
+      "corridor",
+      "push-in",
+      "top"
+    ],
+    "doorway": [
+      "low",
+      "corridor",
+      "push-in",
+      "top"
+    ],
+    "push-in": [
+      "corridor",
+      "top"
+    ],
+    "establishing": [
+      "top"
+    ]
+  },
+  "intimidation": {
+    "use": "what the revealed enemy does while its reveal plays (Adam, October 30). Slimes rise and puff toward the camera (built in, not a clip). A human plays its trait's clip, drawn to 'hold' of the way through and held: 'bow' for a human with a bow, 'other' for any other weapon. Draft: no war cry, taunt or gesture clip exists yet.",
+    "bow": "bow-standing-draw-arrow",
+    "other": "sword-and-shield-block",
+    "hold": 0.55
+  }
+}

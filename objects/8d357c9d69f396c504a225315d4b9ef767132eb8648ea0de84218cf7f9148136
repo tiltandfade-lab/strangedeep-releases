@@ -1,0 +1,82 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "disarming-attack",
+  "aliases": [
+    "preview-disarming-attack"
+  ],
+  "textKeys": {
+    "name": "ability.disarming-attack.name",
+    "summary": "ability.disarming-attack.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "disarmingAttacks",
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 35, "accuracyBonus": 0, "oncePerEncounter": 0}},
+    {"level": 2, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 40, "accuracyBonus": 0, "oncePerEncounter": 0}},
+    {"level": 3, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 40, "accuracyBonus": 3, "oncePerEncounter": 0}},
+    {"level": 4, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 45, "accuracyBonus": 3, "oncePerEncounter": 0}},
+    {"level": 5, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 45, "accuracyBonus": 5, "oncePerEncounter": 0}},
+    {"level": 6, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 50, "accuracyBonus": 5, "oncePerEncounter": 0}},
+    {"level": 7, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 50, "accuracyBonus": 5, "oncePerEncounter": 1}}
+  ],
+  "paths": {
+    "forkId": "reviewed-disarming-attack-path",
+    "level": 8,
+    "options": [
+      {
+        "id": "reliability",
+        "nameKey": "ability.disarming-attack.path.reliability",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 55, "accuracyBonus": 5, "oncePerEncounter": 1}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 60, "accuracyBonus": 5, "oncePerEncounter": 1}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 75, "chancePercent": 65, "accuracyBonus": 5, "oncePerEncounter": 1}}
+        ]
+      },
+      {
+        "id": "strike",
+        "nameKey": "ability.disarming-attack.path.strike",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 85, "chancePercent": 50, "accuracyBonus": 5, "oncePerEncounter": 1}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 95, "chancePercent": 50, "accuracyBonus": 5, "oncePerEncounter": 1}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 105, "chancePercent": 50, "accuracyBonus": 5, "oncePerEncounter": 1}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId",
+      "itemId"
+    ]
+  },
+  "presentation": {
+    "key": "disarming-attack",
+    "clips": [
+      {"clip": "melee-backhand"}
+    ],
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/disarming-attack.ts",
+    "src/floor/disarming-attack-source.ts",
+    "src/campaign/reviewed-disarming-attack.ts",
+    "src/campaign/reviewed-disarming-attack-content.ts"
+  ]
+}

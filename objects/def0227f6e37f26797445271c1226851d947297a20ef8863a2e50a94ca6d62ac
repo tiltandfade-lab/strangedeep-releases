@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "sl-coverall-belt",
+  "displayName": "Coveralls (belt)",
+  "layer": "starter",
+  "attach": "soft",
+  "bones": [
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r"
+  ],
+  "vertices": 256,
+  "weightClass": "light",
+  "triangles": 512,
+  "materials": [
+    "cloth"
+  ],
+  "materialSlots": [
+    "belt"
+  ],
+  "handles": [],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 364.6,
+  "mass": 54.69,
+  "countsTowardItem": true,
+  "boundsMm": [
+    334.8,
+    265.0,
+    45.0
+  ],
+  "build": {
+    "family": "SM",
+    "familyName": "Starter masks",
+    "weightClass": "light",
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "sl-coverall-belt.glb",
+    "glbBytes": 38248,
+    "glbSha256": "8cc2afac7c7b042567ea5152deaf0061efd5e62f9c706b50db9cc65b9f939851",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "starter-look lane output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sl-coverall-belt.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "pelvis": 384,
+        "spine_01": 384,
+        "spine_02": 320,
+        "spine_03": 124,
+        "thigh_l": 154,
+        "thigh_r": 154
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "rest",
+        "pass": true
+      }
+    ]
+  },
+  "notes": "Starter coveralls (Adam, September 29 and October 2). Every vertex carries the body's own bone blend, so it bends exactly like the skin under it."
+}

@@ -1,0 +1,710 @@
+{
+  "schemaVersion": 1,
+  "id": "light-robe-wizard-trial",
+  "displayName": "Wizard robe (model trial)",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "chest",
+  "slot": "chest",
+  "attach": "soft",
+  "bones": [
+    "calf_l",
+    "calf_r",
+    "clavicle_l",
+    "clavicle_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "thumb_01_l",
+    "thumb_01_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "allowedRegions": [
+    "spine_03"
+  ],
+  "defaultRegion": "spine_03",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.1579,
+      0.2827
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "mid-calf",
+      "at1": "the ankle",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.2906,
+          0.3,
+          0.0386
+        ],
+        "end": [
+          0.3114,
+          0.1,
+          0.0407
+        ],
+        "lengthMm": 201.09
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "a spare hem",
+      "at1": "a full hem",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.3167,
+          0.19,
+          0.1061
+        ],
+        "end": [
+          -0.4646,
+          0.19,
+          0.1509
+        ],
+        "lengthMm": 154.51
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "leather"
+  },
+  "materialClasses": [
+    "cloth",
+    "leather"
+  ],
+  "coverageCm2": 11853.7,
+  "mass": 1952.02,
+  "weightClass": "light",
+  "triangles": 7180,
+  "complexity": 72,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "garment",
+    "robe"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "light-robe-wizard-trial.glb",
+    "glbSha256": "224200510ed160822a567fe4f833988cda4b9ec3595ce6b9c43392965252bcdf",
+    "glbBytes": 972876,
+    "generator": "tools/model-trial/robe/build_robe_trial.py",
+    "generatorSha256": "8f1127ff2690b4356b5302cd94dd5e417b6181607e4202e91c37bcfe7cbe6ee5",
+    "library": "tools/armor-kit/f1_light_gear.py",
+    "librarySha256": "b8059ed2e54c39218dd323c7dae90f759d7fa0a03a4a3e5dba01d13087568334",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "model trial: pending review, in no roll, loot list or saved set",
+    "patternSha256": "bf9a2e59249ecce6f18e61918d58a9eeb987dd192c594c37e725751aecab319d"
+  },
+  "verification": {
+    "glb": {
+      "file": "light-robe-wizard-trial.glb",
+      "targetNames": [
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 3861,
+          "triangles": 6458,
+          "targets": 8,
+          "material": 0
+        },
+        {
+          "vertices": 891,
+          "triangles": 722,
+          "targets": 8,
+          "material": 1
+        }
+      ],
+      "triangles": 7180,
+      "vertices": 4752,
+      "targets": {
+        "BoneLength@0": {
+          "maxDeltaM": 0.11,
+          "verticesMoved": 2956
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.055,
+          "verticesMoved": 2956
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.045,
+          "verticesMoved": 2956
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.09,
+          "verticesMoved": 2956
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.07129,
+          "verticesMoved": 2850
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.03651,
+          "verticesMoved": 2836
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.03794,
+          "verticesMoved": 2848
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.07657,
+          "verticesMoved": 2862
+        }
+      },
+      "animations": {
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "calf_l": 1364,
+        "calf_r": 1364,
+        "clavicle_l": 295,
+        "clavicle_r": 289,
+        "hand_l": 93,
+        "hand_r": 95,
+        "head": 57,
+        "lowerarm_l": 221,
+        "lowerarm_r": 222,
+        "neck_01": 201,
+        "pelvis": 3056,
+        "spine_01": 874,
+        "spine_02": 376,
+        "spine_03": 803,
+        "thigh_l": 1772,
+        "thigh_r": 1768,
+        "thumb_01_l": 4,
+        "thumb_01_r": 4,
+        "upperarm_l": 374,
+        "upperarm_r": 378
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.66,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "the Herjolfsnes gown (Nationalmuseet, Copenhagen); the cut in tools/model-trial/robe/pattern.json",
+    "fit": "the body panel 14 to 18 mm off the skin, cut at the waist; below it one closed skirt, never split, riding the pelvis at the top and the legs toward the hem, the cloth between the legs shared by both",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "BoneLength": [
+      "mid-calf",
+      "lower calf",
+      "the ankle"
+    ],
+    "RadiusBottom": [
+      "spare",
+      "as the gown",
+      "full"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending",
+  "pattern": {
+    "garment": "A gored gown of the Herjolfsnes kind (Norse Greenland, 14th century): two body panels cut shoulder to hem with no waist seam, widened by eight gores, set-in sleeves tapered to the wrist.",
+    "reference": {
+      "photo": "docs/production/model-trial-2026-11-10/robe/refs/herjolfsnes-gown-nationalmuseet.jpg",
+      "publishedCut": "docs/production/light-gear-2026-10-30/REFERENCES.md (Herjolfsnes 42: eight gores, hem 333.5 cm, 4.1 times the girth at the armpit)"
+    },
+    "units": "Lengths are shares of the garment's length L, shoulder point to hem, read from the photograph; hem widths in centimetres are the published cut's.",
+    "measured": {
+      "lengthOverBodyHeight": 0.75,
+      "shoulderWidthOverL": 0.39,
+      "chestLaidFlatOverL": 0.28,
+      "hemLaidFlatOverL": 0.93,
+      "sleeveLengthOverL": 0.32,
+      "sideGoreTipFromShoulderOverL": 0.4,
+      "centreGoreTipFromShoulderOverL": 0.42,
+      "hemGirthOverChestGirth": 4.1
+    },
+    "panels": [
+      {
+        "id": "front",
+        "count": 1,
+        "cutOnFold": true,
+        "grain": "down the centre front",
+        "outline": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.195,
+            0.03
+          ],
+          [
+            0.14,
+            0.22
+          ],
+          [
+            0.16,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "note": "Half shown, x from the centre front, y down from the shoulder. Slit from the hem to the waist for the centre gores."
+      },
+      {
+        "id": "back",
+        "count": 1,
+        "cutOnFold": true,
+        "grain": "down the centre back",
+        "outline": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.195,
+            0.03
+          ],
+          [
+            0.14,
+            0.22
+          ],
+          [
+            0.16,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "note": "As the front, with a higher neck."
+      },
+      {
+        "id": "side-gore",
+        "count": 4,
+        "grain": "down one long edge",
+        "outline": [
+          [
+            0.0,
+            0.4
+          ],
+          [
+            0.015,
+            0.4
+          ],
+          [
+            0.165,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "hemWidthCm": 40,
+        "seamAtDegrees": [
+          72,
+          108
+        ],
+        "tipHeight": "armpit",
+        "note": "Two a side, one before and one behind the side seam; the fullness is mostly here."
+      },
+      {
+        "id": "centre-gore",
+        "count": 4,
+        "grain": "down one long edge",
+        "outline": [
+          [
+            0.0,
+            0.42
+          ],
+          [
+            0.095,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "hemWidthCm": 23,
+        "seamAtDegrees": [
+          12,
+          168
+        ],
+        "tipHeight": "waist",
+        "note": "Two at the centre front and two at the centre back, in the panels' slits."
+      },
+      {
+        "id": "sleeve",
+        "count": 2,
+        "grain": "down the arm",
+        "outline": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.17,
+            0.0
+          ],
+          [
+            0.1,
+            0.32
+          ],
+          [
+            0.07,
+            0.32
+          ]
+        ],
+        "note": "Set in at the shoulder, tapered to the wrist, seam under the arm with a small gusset. The twist: a modest bell from the elbow."
+      }
+    ],
+    "seams": [
+      {
+        "id": "shoulder",
+        "joins": [
+          "front",
+          "back"
+        ],
+        "where": "shoulder point to neck"
+      },
+      {
+        "id": "side",
+        "joins": [
+          "front",
+          "side-gore",
+          "side-gore",
+          "back"
+        ],
+        "where": "armpit to hem, the two side gores between the panels"
+      },
+      {
+        "id": "centre-front",
+        "joins": [
+          "front",
+          "centre-gore",
+          "centre-gore",
+          "front"
+        ],
+        "where": "waist to hem, in the front panel's slit"
+      },
+      {
+        "id": "centre-back",
+        "joins": [
+          "back",
+          "centre-gore",
+          "centre-gore",
+          "back"
+        ],
+        "where": "waist to hem, in the back panel's slit"
+      },
+      {
+        "id": "armhole",
+        "joins": [
+          "sleeve",
+          "front",
+          "back"
+        ],
+        "where": "round the shoulder"
+      },
+      {
+        "id": "neck",
+        "joins": [
+          "front",
+          "back"
+        ],
+        "where": "a plain round neck, bound; no standing collar"
+      },
+      {
+        "id": "hem",
+        "joins": [
+          "front",
+          "side-gore",
+          "back",
+          "centre-gore"
+        ],
+        "where": "one continuous hem, bound; never split"
+      }
+    ],
+    "fullness": "From the shoulders the panels fall straight; the gores open from the armpit (sides) and the waist (centre) and carry all the width, so the hem hangs in folds at the eight gore seams. A belt worn over it gathers the same cloth at the waist.",
+    "twist": [
+      "a modest bell sleeve from the elbow",
+      "a leather binding at neck, cuff and hem",
+      "a narrow girdle line at the waist where the body panel overlaps the skirt"
+    ]
+  },
+  "trialMeasures": {
+    "bodyHeightM": 1.747,
+    "lengthShoulderToHemM": 1.249,
+    "lengthOverBodyHeight": 0.715,
+    "hemHeightM": 0.19,
+    "hemWidthSideToSideM": 0.786,
+    "hemDepthFrontToBackM": 0.521,
+    "hipWidthSideToSideM": 0.418,
+    "hemOverHipWidth": 1.88,
+    "hemGirthM": 2.587,
+    "chestGirthM": 1.062,
+    "hemGirthOverChestGirth": 2.44,
+    "patternHemGirthOverChestGirth": 4.1,
+    "neckStandOffMaxMm": 18.0,
+    "windingFaults": 0,
+    "edgesOnMoreThanTwoFaces": 0,
+    "openEdges": 146
+  }
+}

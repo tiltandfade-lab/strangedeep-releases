@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "id": "light-tunic-belted-skirt-front",
+  "displayName": "Belted tunic, front panel",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "waist",
+  "slot": "chest",
+  "attach": "spring",
+  "bones": [
+    "light-tunic-belted-skirt-front-c1",
+    "light-tunic-belted-skirt-front-c2",
+    "light-tunic-belted-skirt-front-c3",
+    "light-tunic-belted-skirt-front-root"
+  ],
+  "allowedRegions": [
+    "pelvis"
+  ],
+  "defaultRegion": "pelvis",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      0.9383,
+      0.1946
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "to the hip",
+      "at1": "to the knee",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.2787,
+          0.8,
+          0.01
+        ],
+        "end": [
+          0.2919,
+          0.58,
+          0.01
+        ],
+        "lengthMm": 220.4
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "straight",
+      "at1": "flared",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.2611,
+          0.7,
+          0.01
+        ],
+        "end": [
+          0.3311,
+          0.7,
+          0.01
+        ],
+        "lengthMm": 70.0
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "leather"
+  },
+  "materialClasses": [
+    "cloth",
+    "leather"
+  ],
+  "coverageCm2": 1481.9,
+  "mass": 261.83,
+  "weightClass": "light",
+  "triangles": 888,
+  "complexity": 9,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "garment",
+    "tunic",
+    "skirt"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "chain": {
+    "parent": "pelvis",
+    "bones": [
+      {
+        "name": "light-tunic-belted-skirt-front-root",
+        "head": [
+          0.0,
+          -0.173032,
+          1.04
+        ],
+        "tail": [
+          0.0,
+          -0.172926,
+          1.0
+        ]
+      },
+      {
+        "name": "light-tunic-belted-skirt-front-c1",
+        "head": [
+          0.0,
+          -0.172926,
+          1.0
+        ],
+        "tail": [
+          0.0,
+          -0.163044,
+          0.9
+        ]
+      },
+      {
+        "name": "light-tunic-belted-skirt-front-c2",
+        "head": [
+          0.0,
+          -0.163044,
+          0.9
+        ],
+        "tail": [
+          0.0,
+          -0.044,
+          0.8
+        ]
+      },
+      {
+        "name": "light-tunic-belted-skirt-front-c3",
+        "head": [
+          0.0,
+          -0.044,
+          0.8
+        ],
+        "tail": [
+          0.0,
+          -0.044,
+          0.7
+        ]
+      }
+    ],
+    "stiffness": 0.25,
+    "simulator": "SpringBoneSimulator3D (Godot), capsule colliders on the limbs"
+  },
+  "doubleSided": true,
+  "references": [],
+  "build": {
+    "glb": "light-tunic-belted-skirt-front.glb",
+    "glbSha256": "3445c40872cd3bd6c5365f852703b5ebc545a881cd2c109d040dd4ac175a1d53",
+    "glbBytes": 176492,
+    "generator": "tools/armor-kit/build_light_gear.py",
+    "generatorSha256": "626790aba836ff06aea00fd149f3e51f00302e7e89c6c8340751dbadb0836b23",
+    "library": "tools/armor-kit/f1_light_gear.py",
+    "librarySha256": "13f51ddd96adcbd64f06a0eeaaaa2059d1837095d49b682418787dcd4e191017",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art (Adam approves the look before it joins loot)",
+    "clothes": "tools/armor-kit/f1_light_clothes.py",
+    "clothesSha256": "8b835f6372b77b767741ce7a0289fac5bf378989ca13810ce0d779ef4d4921e3"
+  },
+  "verification": {
+    "glb": {
+      "file": "light-tunic-belted-skirt-front.glb",
+      "targetNames": [
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 525,
+          "triangles": 732,
+          "targets": 8,
+          "material": 0
+        },
+        {
+          "vertices": 152,
+          "triangles": 156,
+          "targets": 8,
+          "material": 1
+        }
+      ],
+      "triangles": 888,
+      "vertices": 677,
+      "targets": {
+        "BoneLength@0": {
+          "maxDeltaM": 0.1,
+          "verticesMoved": 605
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.05,
+          "verticesMoved": 605
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.06,
+          "verticesMoved": 605
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.12,
+          "verticesMoved": 605
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.03,
+          "verticesMoved": 605
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.015,
+          "verticesMoved": 605
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.02,
+          "verticesMoved": 605
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.04,
+          "verticesMoved": 605
+        }
+      },
+      "animations": {
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 4,
+      "verticesPerBone": {
+        "light-tunic-belted-skirt-front-c1": 168,
+        "light-tunic-belted-skirt-front-c2": 160,
+        "light-tunic-belted-skirt-front-c3": 232,
+        "light-tunic-belted-skirt-front-root": 117
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.44,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.61,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.82,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.82,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.79,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.79,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.79,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.66,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.86,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.8,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "Adam, October 30: regular clothes; lane cloth-2: the tunic's skirt on hanging chains",
+    "fit": "the tunic's skirt's front sheets from under the belt to the hem, hung from the pelvis on a root and three bones down the panel's middle, tucked under the tunic's belt"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "BoneLength": [
+      "to the hip",
+      "mid-thigh",
+      "to the knee"
+    ],
+    "RadiusBottom": [
+      "straight",
+      "A-line",
+      "flared"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

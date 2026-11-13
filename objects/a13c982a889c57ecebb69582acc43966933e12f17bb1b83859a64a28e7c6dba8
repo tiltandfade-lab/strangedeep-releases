@@ -1,0 +1,136 @@
+{
+ "what": "The Material Maker level layers of lane level-materials, in texture-array order (mm_level_layers, layer n). Each tile repeats every tileMetres of the surface. Written by tools/material-maker/level/build_graphs.py; pack.py checks the export against it; godot/shaders/level_surface.gdshader's LAYER_TILE and LAYER_MODE must match (LevelMaterialsProof).",
+ "slice": 512,
+ "layers": [
+  {
+   "layer": 0,
+   "id": "plaster-lime",
+   "what": "clean lime plaster, trowelled: overlapping trowel laps 150 to 350 mm across, each a flat patch a shade lighter or darker than its neighbours with a soft raised lip where it ends, a slow cloud of lighter and darker lime a metre across, a fine sand grain, a faint second wash showing through in a few soft patches; no cracks, no brick, no stains",
+   "for": [
+    "shell plaster field"
+   ],
+   "tileMetres": 1.0,
+   "mode": 0
+  },
+  {
+   "layer": 1,
+   "id": "stone-dressed",
+   "what": "dressed limestone for the shell's plinths, caps, jambs and voussoirs (each a solid of its own, so the texture draws no joints): broad soft mineral clouds 100 to 300 mm across, soft bedding, a low-relief tooled face of shallow claw marks too fine to read as stripes at the game camera; no pits, no cracks",
+   "for": [
+    "shell stone"
+   ],
+   "tileMetres": 0.75,
+   "mode": 0
+  },
+  {
+   "layer": 2,
+   "id": "stone-slab",
+   "what": "worn floor slab: the same limestone walked smooth, broad clouds, a faint polish where feet pass (glossier, a touch lighter) and grit settled in the low ground; no pits, no cracks",
+   "for": [
+    "shell floor slabs"
+   ],
+   "tileMetres": 1.5,
+   "mode": 0
+  },
+  {
+   "layer": 3,
+   "id": "moss-damp",
+   "what": "moss and damp for stone, laid over it by the level shader (amount rolled by floor depth and age): R the moss's own cushions (rounded clumps 20 to 60 mm, darker between), G where moss grows (soft-edged colonies that thin out in flecks), B damp runs (a few broad soft runs down the face), A the cushions' height",
+   "for": [
+    "moss and damp on stone"
+   ],
+   "tileMetres": 1.0,
+   "mode": 1
+  },
+  {
+   "layer": 4,
+   "id": "coin-gold",
+   "what": "a pile of coins seen from above: overlapping discs about 22 mm across, each with a raised rim and a low stamped boss, the nearer coins over the farther, each its own shade of gold; the gaps between them dark; a few coins tarnished",
+   "for": [
+    "coin piles"
+   ],
+   "tileMetres": 0.3,
+   "mode": 0
+  },
+  {
+   "layer": 5,
+   "id": "wax-drips",
+   "what": "tallow and beeswax: a smooth slightly translucent body with a soft mottle, and rounded drips running down from their own heights, tapering to a bead, a few long and many short, each a little lighter and glossier than the body",
+   "for": [
+    "candles",
+    "wax pools"
+   ],
+   "tileMetres": 0.3,
+   "mode": 0
+  },
+  {
+   "layer": 6,
+   "id": "parchment",
+   "what": "parchment and rag paper: a fine fibre and a soft cloud of lighter and darker skin, a few faint foxing spots, and blocks of faded handwriting as short broken ink dashes in lines 9 mm apart (G, the ink), never long stripes",
+   "for": [
+    "books",
+    "loose pages",
+    "scrolls"
+   ],
+   "tileMetres": 0.5,
+   "mode": 0
+  },
+  {
+   "layer": 7,
+   "id": "terracotta",
+   "what": "fired clay (pots, urns): faint wheel-thrown ridges round the pot that come and go (never an even stripe), a fine grog speckle, and the darker fire-clouding of a wood kiln in broad soft patches (G); low contrast, no cracks",
+   "for": [
+    "urns",
+    "pots",
+    "jars"
+   ],
+   "tileMetres": 0.4,
+   "mode": 0
+  },
+  {
+   "layer": 8,
+   "id": "lacquer-wet",
+   "what": "wet lacquer (the Floor 2 painter-captain's arena): a deep glossy coat laid in long soft brush sweeps, pooled thicker and glossier in places, with a second colour (G) splashed across it in a few broad soft-edged patches. No drips: a world-laid texture cannot know where a form's lower edge is, and Adam's drips hang from lower edges only (rule 10)",
+   "for": [
+    "lacquered floors and walls",
+    "paint pools"
+   ],
+   "tileMetres": 0.6,
+   "mode": 0
+  },
+  {
+   "layer": 9,
+   "id": "straw",
+   "what": "straw bedding and thatch: separate stalks 3 to 5 mm wide and 60 to 120 mm long, lying mostly one way in clumps with each stalk turned a little, round in section, crossing over one another, pale over dark gaps, a few older greyer stalks (G)",
+   "for": [
+    "bedding",
+    "sacks of straw",
+    "thatch"
+   ],
+   "tileMetres": 0.3,
+   "mode": 0
+  },
+  {
+   "layer": 10,
+   "id": "rope",
+   "what": "hemp rope for binding: three strands twisting round the rope's length (the object's up), each strand of fine twisted fibres, dark in the grooves between strands; for ties, lashings and coils",
+   "for": [
+    "rope",
+    "binding",
+    "sack ties"
+   ],
+   "tileMetres": 0.15,
+   "mode": 0
+  },
+  {
+   "layer": 11,
+   "id": "limewash-ashlar",
+   "what": "limewashed ashlar for the shell's wall fields (round two, with the old Meshy walls as the bar): running-bond courses 250 mm tall of blocks 500 to 750 mm long, joints about 12 mm, dark and recessed and never ruler-straight, each block its own shade with chipped, softened arrises and a slightly domed, uneven face, under a lime wash that lies thick and pale in places and wears thin over the blocks elsewhere (G: where the darker stone shows through); no cracks",
+   "for": [
+    "shell wall fields"
+   ],
+   "tileMetres": 1.5,
+   "mode": 0
+  }
+ ]
+}

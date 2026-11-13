@@ -1,0 +1,54 @@
+#!/bin/bash
+# The Mac passes of the app's self-measurement (lane app-diagnostics, 2026-10-29; runbook:
+# docs/production/app-diagnostics-2026-10-29/MAC-RUNBOOK.md). Runs the installed app on Adam's Intel Mac with diagnostics on:
+#   soak-mac.sh plugged|battery|lowpower [soak spec, default mac-1]   the self-play soak of the Floor 1 arc (AppSoak.cs)
+#   soak-mac.sh play                                                   diagnostics only: Adam (or anyone) plays; the report is written at quit
+# It checks the power state matches the pass (pmset), refuses while the app is already open, warns when the machine is busy, keeps
+# the Mac awake (caffeinate) and writes everything to ~/Strangedeep-diagnostics/<UTC stamp>-<pass>/: report.md (the ranked
+# chokepoints), report.json, diagnostics.jsonl (every frame, span, spike and error), soak-summary.md/json, session.json, app.log,
+# then packs that folder (without the soak's own saves) as <folder>.tar.gz. It prints the report's top for the reader.
+# Environment: STRANGEDEEP_APP (default "/Applications/Strangedeep Studio.app"), SOAK_FORCE=1 (run despite a power mismatch),
+# SOAK_CLOTH=1 (the capes on for a play pass; a soak pass takes cloth=on in its spec).
+# Shipped inside the app at Contents/Resources/strangedeep-runtime/tools/export/soak-mac.sh (tools/export/runtime-files.txt).
+set -uo pipefail
+PASS="${1:-}"; SPEC="${2:-mac-1}"
+case "$PASS" in plugged|battery|lowpower|play) ;; *) echo "usage: soak-mac.sh plugged|battery|lowpower|play [soak spec]" >&2; exit 2 ;; esac
+APP="${STRANGEDEEP_APP:-/Applications/Strangedeep Studio.app}"
+[[ -d "$APP/Contents/MacOS" ]] || { echo "No app at $APP (set STRANGEDEEP_APP to the .app's path)" >&2; exit 2; }
+EXE="$(find "$APP/Contents/MacOS" -maxdepth 1 -type f -perm -u+x | head -1)"
+[[ -x "$EXE" ]] || { echo "No executable in $APP/Contents/MacOS" >&2; exit 2; }
+if pgrep -f "$EXE" >/dev/null; then echo "The app is already open: quit it first (one game window at a time)." >&2; exit 2; fi
+
+battery="$(pmset -g batt 2>/dev/null)"; low="$(pmset -g 2>/dev/null | awk '/lowpowermode/ {print $2}')"
+source="unknown"; grep -q "'AC Power'" <<<"$battery" && source="ac"; grep -q "'Battery Power'" <<<"$battery" && source="battery"
+echo "power: $source, Low Power Mode: ${low:-unknown}"
+want_source="ac"; want_low="0"
+[[ "$PASS" == battery ]] && want_source="battery"
+[[ "$PASS" == lowpower ]] && { want_source="battery"; want_low="1"; }
+if [[ "$PASS" != play && ( "$source" != "$want_source" || ( -n "$low" && "$low" != "$want_low" ) ) && "${SOAK_FORCE:-0}" != 1 ]]; then
+  echo "The $PASS pass needs power $want_source with Low Power Mode $want_low (System Settings > Battery). Unplug or plug in, set it, and run again (or SOAK_FORCE=1)." >&2
+  exit 3
+fi
+load="$(sysctl -n vm.loadavg 2>/dev/null | awk '{print $2}')"
+echo "load average (1 min): ${load:-unknown}"
+if [[ -n "$load" ]] && awk "BEGIN {exit !($load > 2.0)}"; then
+  echo "warning: the Mac is busy (load $load); the timings will be noisy. Busiest processes:"; ps -Ao pcpu,comm -r | head -6
+fi
+
+STAMP="$(date -u +%Y%m%d-%H%M%S)"
+OUT="$HOME/Strangedeep-diagnostics/$STAMP-$PASS"
+mkdir -p "$OUT"
+echo "pass $PASS, spec ${SPEC}, app $APP, results $OUT"
+args=("--strangedeep-diagnostics=$OUT")
+[[ "$PASS" != play ]] && args+=("--strangedeep-soak=$SPEC")
+# cloth=on in the spec, or SOAK_CLOTH=1 for a play pass (lane cape-cloth): the capes' switch is read at launch.
+CLOTH=0; [[ ",$SPEC," == *",cloth=on,"* || "${SOAK_CLOTH:-}" == 1 ]] && CLOTH=1
+status=0
+STRANGEDEEP_KIT_CLOTH="$CLOTH" caffeinate -dimsu "$EXE" -- "${args[@]}" > "$OUT/app.log" 2>&1 || status=$?
+echo "app exit code: $status (0 pass, 1 failed, 2 stalled, 3 setup, 4 the party fell before the floor exit)"
+grep -E "APP_SOAK_(PASS|FAIL|STALL|SETUP|INCOMPLETE|MILESTONE)" "$OUT/app.log" | tail -20
+rm -rf "$OUT/soak-user"
+tar -czf "$OUT.tar.gz" -C "$(dirname "$OUT")" "$(basename "$OUT")"
+echo "packed: $OUT.tar.gz ($(du -h "$OUT.tar.gz" | cut -f1))"
+[[ -f "$OUT/report.md" ]] && sed -n '/^## Frames/,/^## Errors/p' "$OUT/report.md" | head -60
+exit "$status"

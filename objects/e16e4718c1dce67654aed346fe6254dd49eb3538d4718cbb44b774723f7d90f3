@@ -1,0 +1,41 @@
+{
+ "comment": "Where the sigil look puts an item's signs (lane sigils, round three, November 11; hand-written, the one home of these numbers). Read by MagicLooks.cs (MagicLooks.Sigils) and checked by tools/sigils/build-sigils.test.mjs. A PROPOSAL for Adam. Adam on round two: one big sign on every item 'is a little too much like superheroes'; then 'I don't know that everything needs to be in a circle... on the breast, in the center, in some kind of pattern, whether that's a vertical stripe or a horizontal stripe... small little logos, like on clothes... bottom right side, bottom left side, upper right side, upper left side. Think about like Nike symbols'. So each item rolls ONE spot from its part's list below, by the shares, from its own id (the same item always looks the same). A spot is a single sign ('sign') or a stripe of small signs ('stripe'). MagicLooks then checks the spot against the piece itself: rays from the front must meet one surface of the body (not a rim, boss, strap, buckle or a seam between two surfaces) with no step in depth, at the middle and round the edge of every sign. A spot that does not fit is moved toward the middle and made a little smaller, step by step; if it still does not fit, the item takes its next spot in its own rolled order.",
+ "ring": {
+  "comment": "The ring is an option, not the default: a centred sign wears its ring this often (rolled from the item's id). Small marks and stripes never have one.",
+  "share": 0.35
+ },
+ "parts": {
+  "comment": "Per part type. Left and right are the wearer's, as on clothes and in heraldry (a shield's: its bearer's), so a left mark shows on the viewer's right. A sign off the middle keeps its side when it is moved. On a shield, 'u' is across, a share of the board's half-width from its middle line (-1 left edge, 1 right edge), and 'v' up, a share of the board's height from its bottom; sizes are metres, except a centred sign's, which is a share ('size') of the largest circle the board holds, from 'min' to 'max'. On worn pieces, 'x' is metres from the hero's middle line and 'height' metres up the hero (every hero shares one skeleton); a stripe runs 'from' one height 'to' another (or round the piece at one 'height' or 'at' a share of the piece's own height, for 'round' stripes). 'sign' is a stripe's sign height (metres), 'gap' the space between signs (a share of a sign), 'rows' 1 or 2 (the second offset by half a sign), 'rules' thin lines along both sides. 'face' back puts a sign on the back; 'needs' back means only a chest piece with a part over the back (a cape, mantle, surcoat or backplate) offers it (the game camera looks down on the hero's back, so this is the spot that reads in play). Gloves have no spots yet: the worn pieces are placed in the skeleton's rest pose, where the arms are not upright (owed). Feet have only the stripe round the ankle: in the November 11 capture no boot or sandal offered a flat patch facing out for a toe mark.",
+  "shield": [
+   {"id": "centre", "share": 0.22, "mark": "sign", "size": 0.62, "min": 0.05, "max": 0.17, "ring": true},
+   {"id": "stripe-across", "share": 0.2, "mark": "stripe", "run": "across", "v": 0.84, "sign": 0.05, "gap": 0.35, "rows": 1, "rules": true},
+   {"id": "stripe-down", "share": 0.14, "mark": "stripe", "run": "down", "u": 0, "from": 0.2, "to": 0.86, "sign": 0.045, "gap": 0.3, "rows": 1, "rules": true},
+   {"id": "upper-left", "share": 0.11, "mark": "sign", "u": 0.5, "v": 0.8, "radius": 0.04},
+   {"id": "upper-right", "share": 0.11, "mark": "sign", "u": -0.5, "v": 0.8, "radius": 0.04},
+   {"id": "lower-left", "share": 0.11, "mark": "sign", "u": 0.36, "v": 0.42, "radius": 0.034},
+   {"id": "lower-right", "share": 0.11, "mark": "sign", "u": -0.36, "v": 0.42, "radius": 0.034}
+  ],
+  "chest": [
+   {"id": "centre", "share": 0.14, "mark": "sign", "x": 0, "height": 1.27, "radius": 0.1, "ring": true},
+   {"id": "breast-left", "share": 0.11, "mark": "sign", "x": 0.085, "height": 1.36, "radius": 0.038},
+   {"id": "breast-right", "share": 0.11, "mark": "sign", "x": -0.085, "height": 1.36, "radius": 0.038},
+   {"id": "stripe-across", "share": 0.14, "mark": "stripe", "run": "round", "height": 1.43, "sign": 0.042, "gap": 0.3, "rows": 2, "rules": true},
+   {"id": "stripe-down", "share": 0.12, "mark": "stripe", "run": "down", "x": 0, "from": 0.98, "to": 1.42, "sign": 0.036, "gap": 0.3, "rows": 1, "rules": true},
+   {"id": "lower-left", "share": 0.09, "mark": "sign", "x": 0.09, "height": 1.12, "radius": 0.032},
+   {"id": "lower-right", "share": 0.09, "mark": "sign", "x": -0.09, "height": 1.12, "radius": 0.032},
+   {"id": "back", "share": 0.2, "mark": "sign", "face": "back", "x": 0, "height": 1.24, "radius": 0.11, "ring": true, "needs": "back"}
+  ],
+  "helm": [
+   {"id": "stripe-across", "share": 0.6, "mark": "stripe", "run": "round", "at": 0.42, "sign": 0.03, "gap": 0.35, "rows": 1, "rules": true},
+   {"id": "brow", "share": 0.4, "mark": "sign", "x": 0, "at": 0.55, "radius": 0.03}
+  ],
+  "legs": [
+   {"id": "stripe-across", "share": 0.5, "mark": "stripe", "run": "round", "at": 0.72, "sign": 0.034, "gap": 0.3, "rows": 2, "rules": true},
+   {"id": "upper-left", "share": 0.25, "mark": "sign", "x": 0.1, "height": 0.82, "radius": 0.03},
+   {"id": "upper-right", "share": 0.25, "mark": "sign", "x": -0.1, "height": 0.82, "radius": 0.03}
+  ],
+  "feet": [
+   {"id": "stripe-across", "share": 1, "mark": "stripe", "run": "round", "at": 0.66, "sign": 0.03, "gap": 0.3, "rows": 1, "rules": true}
+  ]
+ }
+}

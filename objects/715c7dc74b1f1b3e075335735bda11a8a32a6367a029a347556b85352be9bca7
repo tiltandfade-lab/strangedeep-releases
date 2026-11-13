@@ -1,0 +1,37 @@
+{
+  "what": "Signed-distance motif texture for godot/shaders/surface_lab.gdshader (lane mm-materials, lab only, pending Adam's review).",
+  "made_by": "docs/production/mm-materials-2026-10-27/tools/bake_motif_sdf.py",
+  "input_mask": "docs/production/ornament-sources-2026-10-27/converted/verneuil-freesia-nouveau/mask.png",
+  "input_mask_sha256": "1c18bf0711721637dccd81faf52a3e6fdeb58f8b29b491cb0975f1f61d555ded",
+  "output_sha256": "e87b64e95c1086d96532f52324f1f963fe4fa5276f02a9a5b4e4df8fb28904d7",
+  "channels": {
+    "R": "signed distance to every tone above the ground",
+    "G": "signed distance to the top tone",
+    "B": "plain mask"
+  },
+  "range_px": 24.0,
+  "tile_px": [
+    512,
+    512
+  ],
+  "tone_levels": [
+    0,
+    127,
+    254
+  ],
+  "uv_aspect_note": "the cell is resized to a 512 px square; sample with uv.y scaled by 1.159 to restore the original proportions",
+  "licence": "Public domain (see source)",
+  "source": {
+    "work": "Etude de la plante: son application aux industries d'art (1903), fig. 217, \"Freesia a inflorescence refractee. Raccord droit.\"",
+    "creator": "Maurice Pillard Verneuil (1869-1942)",
+    "published": "Paris: Librairie Centrale des Beaux-Arts, 1903",
+    "holder": "Caroline Simpson Library, Museums of History NSW, via the Internet Archive",
+    "page": "https://archive.org/details/Verneuil39187/page/n172/mode/1up",
+    "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "licence_statement": "Internet Archive item metadata, licenseurl: \"https://creativecommons.org/publicdomain/mark/1.0/\" (Public Domain Mark 1.0).",
+    "age_rule": "Author died 1942 (more than 70 years ago) and the book was published in 1903 (before 1930): public domain everywhere."
+  },
+  "source_image_url": "https://archive.org/download/Verneuil39187/page/n172_w1400.jpg",
+  "source_image_sha256": "d85974b1fd3aa12a04282f4aefe4c4ddc98656be3192b13bf657bddd449600b3",
+  "converted_by": "docs/production/ornament-sources-2026-10-27/tools/convert_ornament.py"
+}

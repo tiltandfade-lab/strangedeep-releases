@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "kind": "armor-kit-lacquer-variants",
+  "status": "in play since lane captain-build (October 28, 2026): the captain-* coats dress the Lacquered Captain (godot/src/CaptainOutfit.cs) and the sick-coat-* coats are the Painter-Stainer's repaint on a hero, one per paint colour (CombatInputLab.Captain.cs); captain-amber-strata is the rejected fourth look, kept for the lab",
+  "comment": "Lacquer coats for the armor kit colour system, laid over a kit surface or body region and taken off again (godot/src/ArmorKitLacquer.cs, godot/shaders/armor_kit_lacquer.gdshader). The four captain-* coats are the Lacquered Captain's concept looks for Adam to judge; sick-coat-red and sick-coat-cobalt are the Painter-Stainer's repaint on a hero for a red and a blue pot. Colours are sRGB hex. stainLayers, dripAmount, patchy and gloss run 0 to 1; shine 0 to 2; pourSpan is metres up the figure; stainScale bands per metre; dripColumns runs around the body.",
+  "variants": [
+    {
+      "id": "captain-vermilion-patches",
+      "look": "one vermilion paint slapped over plain iron, thin in places so the metal shows through, a few runs from the shoulders",
+      "deep": "#a3170c",
+      "rim": "#3a0503",
+      "stainA": "#a3170c",
+      "stainB": "#a3170c",
+      "stainLayers": 0.0,
+      "drip": "#c8261a",
+      "dripAmount": 0.6,
+      "dripColumns": 9,
+      "pourSpan": [
+        1.3,
+        1.62
+      ],
+      "dripLength": 0.35,
+      "gloss": 0.95,
+      "shine": 1.0,
+      "patchy": 0.55,
+      "under": "#5a5856",
+      "seed": 1.0
+    },
+    {
+      "id": "captain-amber-strata",
+      "look": "layered stains: amber, umber and oxblood poured over one another in wandering bands, like a varnished pew",
+      "deep": "#5a1208",
+      "rim": "#1a0402",
+      "stainA": "#b0670f",
+      "stainB": "#3b1c08",
+      "stainLayers": 1.0,
+      "drip": "#c27a16",
+      "dripAmount": 0.35,
+      "dripColumns": 12,
+      "pourSpan": [
+        1.2,
+        1.55
+      ],
+      "dripLength": 0.45,
+      "stainScale": 3.4,
+      "gloss": 1.0,
+      "shine": 1.1,
+      "patchy": 0.0,
+      "under": "#4a4644",
+      "seed": 2.0
+    },
+    {
+      "id": "captain-black-runs",
+      "look": "black glass lacquer with bright vermilion poured over his head and shoulders, running down to the knees",
+      "deep": "#0d0b0c",
+      "rim": "#000000",
+      "stainA": "#0d0b0c",
+      "stainB": "#0d0b0c",
+      "stainLayers": 0.0,
+      "drip": "#c41c10",
+      "dripAmount": 1.0,
+      "dripColumns": 11,
+      "pourSpan": [
+        1.25,
+        1.6
+      ],
+      "dripLength": 0.75,
+      "gloss": 1.0,
+      "shine": 1.2,
+      "patchy": 0.0,
+      "under": "#3a3a3a",
+      "seed": 3.0
+    },
+    {
+      "id": "captain-oxblood-shell",
+      "look": "one oxblood shell over everything, skin and armour alike, with darker stains pooled in it and thick runs",
+      "deep": "#5e0a14",
+      "rim": "#14010a",
+      "stainA": "#3a0410",
+      "stainB": "#7a1420",
+      "stainLayers": 0.55,
+      "drip": "#86121c",
+      "dripAmount": 0.7,
+      "dripColumns": 13,
+      "pourSpan": [
+        1.1,
+        1.6
+      ],
+      "dripLength": 0.6,
+      "stainScale": 1.6,
+      "gloss": 1.0,
+      "shine": 1.1,
+      "patchy": 0.0,
+      "under": "#4a4644",
+      "seed": 4.0
+    },
+    {
+      "id": "sick-coat-cobalt",
+      "look": "the Painter-Stainer's repaint on a hero: cobalt gloss with a few gold runs (later; the same coat, another colour)",
+      "deep": "#123a9a",
+      "rim": "#04123a",
+      "stainA": "#123a9a",
+      "stainB": "#123a9a",
+      "stainLayers": 0.0,
+      "drip": "#d8a520",
+      "dripAmount": 0.4,
+      "dripColumns": 10,
+      "pourSpan": [
+        1.25,
+        1.55
+      ],
+      "dripLength": 0.3,
+      "gloss": 1.0,
+      "shine": 1.0,
+      "patchy": 0.0,
+      "under": "#4a4644",
+      "seed": 5.0
+    },
+    {
+      "id": "sick-coat-red",
+      "look": "the Painter-Stainer's repaint on a hero hit by a red pot: vermilion gloss with a few gold runs",
+      "deep": "#b3170d",
+      "rim": "#3d0603",
+      "stainA": "#b3170d",
+      "stainB": "#b3170d",
+      "stainLayers": 0.0,
+      "drip": "#d8a520",
+      "dripAmount": 0.4,
+      "dripColumns": 10,
+      "pourSpan": [
+        1.25,
+        1.55
+      ],
+      "dripLength": 0.3,
+      "gloss": 1.0,
+      "shine": 1.0,
+      "patchy": 0.0,
+      "under": "#4a4644",
+      "seed": 6.0
+    }
+  ]
+}

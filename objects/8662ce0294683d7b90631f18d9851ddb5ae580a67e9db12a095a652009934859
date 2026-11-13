@@ -1,0 +1,444 @@
+{
+ "what": "Material Maker level layers, lane level-materials (October 30, 2026). Every layer is pending Adam's review.",
+ "licence": "Our own graphs (tools/material-maker/level/build_graphs.py, with mm-materials-2's noise library and graph wiring), built from Material Maker's own nodes and custom nodes of ours; no website material, scan or third-party image is in them. Material Maker itself is MIT (github.com/RodZill4/material-maker).",
+ "exporter": "tools/material-maker/export.sh (Material Maker 1.8 source, commit 7d6daae3, target Godot/Godot 4 Standard, --size 512)",
+ "exportSeconds": 23.1,
+ "builtUtc": "2026-10-30T16:56:07Z",
+ "texture": {
+  "file": "godot/assets/materials-level/mm-level-layers.png",
+  "bytes": 2879809,
+  "sha256": "1d8a43842a477676801b56d0c5c15c2e3f107ae22ac83319b3fa12656a042d47",
+  "layers": 12,
+  "slice": [
+   512,
+   512
+  ],
+  "memoryEstimate": {
+   "rgba8WithMipsBytes": 16777216,
+   "s3tcDxt5WithMipsBytes": 4194304,
+   "note": "what the GPU holds: LevelMaterialsProof --cost measures Godot's own figure in each renderer"
+  }
+ },
+ "layers": [
+  {
+   "layer": 0,
+   "id": "plaster-lime",
+   "tileMetres": 1.0,
+   "graph": "tools/material-maker/level/graphs/plaster-lime.ptex",
+   "graphSha256": "7a38469d826f6f175babd2e3820e9376a1d12c311171cfd4489bd3d3ecee3e3a",
+   "exports": {
+    "plaster-lime_albedo.png": {
+     "bytes": 158404,
+     "sha256": "7b7fd39b0bafb9f6b6307ff02ed6acddea52a18cd05404ad5b7f7a36c1062030"
+    },
+    "plaster-lime_heightmap.png": {
+     "bytes": 54595,
+     "sha256": "a77ab33331561251a235d017ac1733ba9718c2e9dc6eba136a482e9c7d66d4a0"
+    }
+   },
+   "channelMeans": {
+    "R": 0.555,
+    "G": 0.055,
+    "B": 0.49,
+    "A": 0.505
+   },
+   "channelSpread": {
+    "R": 0.032,
+    "G": 0.172,
+    "B": 0.019,
+    "A": 0.007
+   },
+   "seam": {
+    "R": 0.34,
+    "G": 0.0,
+    "B": 0.32,
+    "A": 0.17
+   }
+  },
+  {
+   "layer": 1,
+   "id": "stone-dressed",
+   "tileMetres": 0.75,
+   "graph": "tools/material-maker/level/graphs/stone-dressed.ptex",
+   "graphSha256": "9d1f5aaabca2201562fe11bd52e1f29d7f44d1a4e2392433530dc12b1b148f59",
+   "exports": {
+    "stone-dressed_albedo.png": {
+     "bytes": 289512,
+     "sha256": "9bb6400dace9b0bd352467bb90d8fe8afe7d2c17710dfa9e191950153238ba49"
+    },
+    "stone-dressed_heightmap.png": {
+     "bytes": 139309,
+     "sha256": "c5d15a8fc8a24cde1588b7b207a188a17304275cf8d80f44265bb91542136616"
+    }
+   },
+   "channelMeans": {
+    "R": 0.534,
+    "G": 0.107,
+    "B": 0.448,
+    "A": 0.484
+   },
+   "channelSpread": {
+    "R": 0.049,
+    "G": 0.222,
+    "B": 0.015,
+    "A": 0.018
+   },
+   "seam": {
+    "R": 0.63,
+    "G": 0.07,
+    "B": 0.49,
+    "A": 0.65
+   }
+  },
+  {
+   "layer": 2,
+   "id": "stone-slab",
+   "tileMetres": 1.5,
+   "graph": "tools/material-maker/level/graphs/stone-slab.ptex",
+   "graphSha256": "a2032228f8ee7f1967ad612b8485d7ad1d46996ac4fc0aa272f23b3bd4b1ac51",
+   "exports": {
+    "stone-slab_albedo.png": {
+     "bytes": 241962,
+     "sha256": "b8f6786944f2d6a75d338e5c4bdbcb7ceabea0f2bb00822731bc1e88997c3e72"
+    },
+    "stone-slab_heightmap.png": {
+     "bytes": 69024,
+     "sha256": "fd6b260ddb7b36ce8d7a06c05516c742b6ccc8fa8ec57cac7deabc3076166460"
+    }
+   },
+   "channelMeans": {
+    "R": 0.536,
+    "G": 0.064,
+    "B": 0.484,
+    "A": 0.472
+   },
+   "channelSpread": {
+    "R": 0.05,
+    "G": 0.168,
+    "B": 0.08,
+    "A": 0.016
+   },
+   "seam": {
+    "R": 0.53,
+    "G": 0.32,
+    "B": 0.46,
+    "A": 0.23
+   }
+  },
+  {
+   "layer": 3,
+   "id": "moss-damp",
+   "tileMetres": 1.0,
+   "graph": "tools/material-maker/level/graphs/moss-damp.ptex",
+   "graphSha256": "04a9a318526a20847d0979f3ded65f5898bb25409140e758734a5590e31ecaa4",
+   "exports": {
+    "moss-damp_albedo.png": {
+     "bytes": 354809,
+     "sha256": "6fec57f1d76d731493136ab4cd74647124a1181ddd4614131f8490f7bd99ad96"
+    },
+    "moss-damp_heightmap.png": {
+     "bytes": 132884,
+     "sha256": "0a7523529d26881688f7d245ded7df166c354f7c613f7d42be76e5ff7c3ff935"
+    }
+   },
+   "channelMeans": {
+    "R": 0.57,
+    "G": 0.352,
+    "B": 0.049,
+    "A": 0.564
+   },
+   "channelSpread": {
+    "R": 0.144,
+    "G": 0.264,
+    "B": 0.088,
+    "A": 0.066
+   },
+   "seam": {
+    "R": 0.75,
+    "G": 0.65,
+    "B": 0.3,
+    "A": 0.47
+   }
+  },
+  {
+   "layer": 4,
+   "id": "coin-gold",
+   "tileMetres": 0.3,
+   "graph": "tools/material-maker/level/graphs/coin-gold.ptex",
+   "graphSha256": "95763b46146e8aac10325c2c410d83bd56e2db86b56de5bc7e831dfd18959333",
+   "exports": {
+    "coin-gold_albedo.png": {
+     "bytes": 255369,
+     "sha256": "36d73845b77977eb9c486522b451852907f56b6f23ad2f0eb74336a471fba0b4"
+    },
+    "coin-gold_heightmap.png": {
+     "bytes": 157102,
+     "sha256": "2586e6002845c024bf0e6b44670b8c327db75e85e8f91ca13d32fb0e6aed07e8"
+    }
+   },
+   "channelMeans": {
+    "R": 0.556,
+    "G": 0.127,
+    "B": 0.605,
+    "A": 0.647
+   },
+   "channelSpread": {
+    "R": 0.256,
+    "G": 0.334,
+    "B": 0.244,
+    "A": 0.247
+   },
+   "seam": {
+    "R": 0.7,
+    "G": 0.21,
+    "B": 0.37,
+    "A": 0.51
+   }
+  },
+  {
+   "layer": 5,
+   "id": "wax-drips",
+   "tileMetres": 0.3,
+   "graph": "tools/material-maker/level/graphs/wax-drips.ptex",
+   "graphSha256": "ef7f870ad4ee3b8b77d7a5d7ac2e26bae216af41cbc0e4c8e86379e379cba87f",
+   "exports": {
+    "wax-drips_albedo.png": {
+     "bytes": 70462,
+     "sha256": "df64693817ce9ed981767d6c181121a27cd1f971021d73176886c473a9ccf9f7"
+    },
+    "wax-drips_heightmap.png": {
+     "bytes": 21987,
+     "sha256": "9b7e3df0b51920ff3a5cdc5a33a9f390b3b75eef479884714cb402ca75714ff3"
+    }
+   },
+   "channelMeans": {
+    "R": 0.553,
+    "G": 0.0,
+    "B": 0.558,
+    "A": 0.514
+   },
+   "channelSpread": {
+    "R": 0.037,
+    "G": 0.0,
+    "B": 0.045,
+    "A": 0.051
+   },
+   "seam": {
+    "R": 0.05,
+    "G": 0.0,
+    "B": 0.02,
+    "A": 0.01
+   }
+  },
+  {
+   "layer": 6,
+   "id": "parchment",
+   "tileMetres": 0.5,
+   "graph": "tools/material-maker/level/graphs/parchment.ptex",
+   "graphSha256": "921116f5471ae9b39965b1a3af660be095fa4651bc0e9c49a3b2df71294bbd75",
+   "exports": {
+    "parchment_albedo.png": {
+     "bytes": 293847,
+     "sha256": "311ffb3427c30138ecd052edd47b8ca7db002c5295b830533867797594c3a0e1"
+    },
+    "parchment_heightmap.png": {
+     "bytes": 66884,
+     "sha256": "778e65e7f9fa826135a44f26671ecba0b79d7818b35b083b7198a861ca95e013"
+    }
+   },
+   "channelMeans": {
+    "R": 0.578,
+    "G": 0.116,
+    "B": 0.448,
+    "A": 0.502
+   },
+   "channelSpread": {
+    "R": 0.032,
+    "G": 0.253,
+    "B": 0.01,
+    "A": 0.003
+   },
+   "seam": {
+    "R": 0.48,
+    "G": 0.4,
+    "B": 0.56,
+    "A": 0.19
+   }
+  },
+  {
+   "layer": 7,
+   "id": "terracotta",
+   "tileMetres": 0.4,
+   "graph": "tools/material-maker/level/graphs/terracotta.ptex",
+   "graphSha256": "03d44cc4cd8ec68a49eca38c73b676de3cc651c475068e398f1a09fa0da4acc3",
+   "exports": {
+    "terracotta_albedo.png": {
+     "bytes": 86625,
+     "sha256": "56e89dd8e9b22a4e8af936fdcbf79dd8a199b11f3a2c1442f39a710d33b3b000"
+    },
+    "terracotta_heightmap.png": {
+     "bytes": 12256,
+     "sha256": "188101d4364f97f5340438fa93a7e8252e37e83a2f65b121b28036062ca08084"
+    }
+   },
+   "channelMeans": {
+    "R": 0.547,
+    "G": 0.045,
+    "B": 0.498,
+    "A": 0.502
+   },
+   "channelSpread": {
+    "R": 0.027,
+    "G": 0.144,
+    "B": 0.009,
+    "A": 0.004
+   },
+   "seam": {
+    "R": 0.2,
+    "G": 0.11,
+    "B": 0.08,
+    "A": 0.01
+   }
+  },
+  {
+   "layer": 8,
+   "id": "lacquer-wet",
+   "tileMetres": 0.6,
+   "graph": "tools/material-maker/level/graphs/lacquer-wet.ptex",
+   "graphSha256": "7258bf51e805e25ef5fd48869de09c39068dc848b90d9c015c57136154082702",
+   "exports": {
+    "lacquer-wet_albedo.png": {
+     "bytes": 64017,
+     "sha256": "ff14a83c0d91fe14fc167d0242d6b5dac63654b52043a3fa2cf1b4e5689bdd1e"
+    },
+    "lacquer-wet_heightmap.png": {
+     "bytes": 13286,
+     "sha256": "59af570d9a3f48bdef5de206739bb3f8213708865e52031cef2e242aa73b013f"
+    }
+   },
+   "channelMeans": {
+    "R": 0.502,
+    "G": 0.032,
+    "B": 0.806,
+    "A": 0.506
+   },
+   "channelSpread": {
+    "R": 0.021,
+    "G": 0.15,
+    "B": 0.026,
+    "A": 0.011
+   },
+   "seam": {
+    "R": 0.12,
+    "G": 0.02,
+    "B": 0.05,
+    "A": 0.01
+   }
+  },
+  {
+   "layer": 9,
+   "id": "straw",
+   "tileMetres": 0.3,
+   "graph": "tools/material-maker/level/graphs/straw.ptex",
+   "graphSha256": "a83a16f535647a452b9de9dfce7882bc69fcd35d26146495693a2b1e52d15278",
+   "exports": {
+    "straw_albedo.png": {
+     "bytes": 229179,
+     "sha256": "c18b5ea4b0512afb5612dda4c448ae80700cc24ff42e0bb33cef25eaac7b31c2"
+    },
+    "straw_heightmap.png": {
+     "bytes": 148529,
+     "sha256": "cb703894e5d9998bde60b355bafc12f4d46a623a0e3475aee9cbf61e286cc795"
+    }
+   },
+   "channelMeans": {
+    "R": 0.541,
+    "G": 0.129,
+    "B": 0.531,
+    "A": 0.619
+   },
+   "channelSpread": {
+    "R": 0.253,
+    "G": 0.335,
+    "B": 0.168,
+    "A": 0.235
+   },
+   "seam": {
+    "R": 0.69,
+    "G": 0.44,
+    "B": 0.59,
+    "A": 0.55
+   }
+  },
+  {
+   "layer": 10,
+   "id": "rope",
+   "tileMetres": 0.15,
+   "graph": "tools/material-maker/level/graphs/rope.ptex",
+   "graphSha256": "352bd515f320a0981479755b772786f207d1f7f3558156411572d800bff9a344",
+   "exports": {
+    "rope_albedo.png": {
+     "bytes": 181416,
+     "sha256": "2a86ffc9f9cc7d251b80124ff566b88b014d211ba7b5bdb716b0bab436c92130"
+    },
+    "rope_heightmap.png": {
+     "bytes": 103882,
+     "sha256": "a82000e24b4496a09972d5c7dd976305246ba51f0dc34041f7d57d08dfc54249"
+    }
+   },
+   "channelMeans": {
+    "R": 0.539,
+    "G": 0.0,
+    "B": 0.525,
+    "A": 0.648
+   },
+   "channelSpread": {
+    "R": 0.177,
+    "G": 0.0,
+    "B": 0.061,
+    "A": 0.216
+   },
+   "seam": {
+    "R": 0.88,
+    "G": 0.0,
+    "B": 0.44,
+    "A": 0.75
+   }
+  },
+  {
+   "layer": 11,
+   "id": "limewash-ashlar",
+   "tileMetres": 1.5,
+   "graph": "tools/material-maker/level/graphs/limewash-ashlar.ptex",
+   "graphSha256": "e380256b36fb0d7687f04592f19624385681943f5cb46542924d8c2d718df304",
+   "exports": {
+    "limewash-ashlar_albedo.png": {
+     "bytes": 222633,
+     "sha256": "229f1b559496d2c2b305ff3fe4215d3a23517c2b5fd117978f0ef56f3adb99a1"
+    },
+    "limewash-ashlar_heightmap.png": {
+     "bytes": 100220,
+     "sha256": "78364cc62e353255babf13bf867368193d0af462026d537e8ee3d3d40bf96993"
+    }
+   },
+   "channelMeans": {
+    "R": 0.516,
+    "G": 0.264,
+    "B": 0.533,
+    "A": 0.639
+   },
+   "channelSpread": {
+    "R": 0.128,
+    "G": 0.269,
+    "B": 0.064,
+    "A": 0.175
+   },
+   "seam": {
+    "R": 0.13,
+    "G": 1.15,
+    "B": 0.13,
+    "A": 0.22
+   }
+  }
+ ]
+}

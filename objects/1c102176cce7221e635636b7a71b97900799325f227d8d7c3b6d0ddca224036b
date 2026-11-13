@@ -1,0 +1,9 @@
+{
+  "comment": "Kit shield face brightness (lane kit-weapons, October 28). faceFloor is the linear luma a shield's face is lifted toward, in its own hue and shaded by the camera-side wrap (kit_weapon_paint.gdshader kit_face_floor); the weapon fill on blades is unchanged. Measured with KitWeaponReviewCapture --measure-fill: at 0.18 a held face reads 0.22 (Forward+) and 0.21 (Compatibility) mean luma against 0.12 with none. 0.18 is the proposed default, pending Adam's pick on shields-upright.html.",
+  "faceFloor": 0.18,
+  "faceRoll": {
+    "why": "lane materials, November 11 (Adam, November 6: \"some shields can be all metal or all wood; the wooden shield stays wood\"): the share of dropped shields with a metal board (a metal of the grade's rung; never the Wooden Shield) and the share with wooden fittings as well as a wooden board. The rest have a wooden board and the grade's metal on the rim, boss and fittings. Read by godot/src/KitShieldPaint.cs; the lane's defaults.",
+    "allMetal": 0.15,
+    "allWood": 0.1
+  }
+}

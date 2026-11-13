@@ -1,0 +1,36 @@
+{
+  "what": "Signed-distance motif texture for godot/shaders/surface_lab.gdshader (lane mm-materials, lab only, pending Adam's review).",
+  "made_by": "docs/production/mm-materials-2026-10-27/tools/bake_motif_sdf.py",
+  "input_mask": "docs/production/ornament-sources-2026-10-27/converted/combinaisons-whiplash-swirl-nouveau/mask.png",
+  "input_mask_sha256": "f50ce65454ecccfe1c596f1aee46413dd83050351dde36c25f7b2ce66b5d56ae",
+  "output_sha256": "90cfbbb60859ba85e58f8375f4469c1236d7a6acff1aed604fe9a413f4d49970",
+  "channels": {
+    "R": "signed distance to every tone above the ground",
+    "G": "signed distance to the top tone",
+    "B": "plain mask"
+  },
+  "range_px": 24.0,
+  "tile_px": [
+    512,
+    512
+  ],
+  "tone_levels": [
+    0,
+    255
+  ],
+  "uv_aspect_note": "the cell is resized to a 512 px square; sample with uv.y scaled by 0.965 to restore the original proportions",
+  "licence": "Public domain (see source)",
+  "source": {
+    "work": "Combinaisons ornementales se multipliant a l'infini a l'aide du miroir, plate 8 (upper right swatch)",
+    "creator": "Maurice Pillard Verneuil (1869-1942), Georges Auriol (1863-1938), Alphonse Mucha (1860-1939); the plate is signed MPV (Verneuil)",
+    "published": "Paris: Librairie Centrale des Beaux-Arts, c. 1901",
+    "holder": "Internet Archive (user upload)",
+    "page": "https://archive.org/details/CombinaisonsOrnementales/page/n7/mode/1up",
+    "licence_url": "http://creativecommons.org/licenses/publicdomain/",
+    "licence_statement": "Internet Archive item metadata, licenseurl: \"http://creativecommons.org/licenses/publicdomain/\" (the uploader's public domain declaration).",
+    "age_rule": "All three authors died by 1939 (more than 70 years ago) and the book was published about 1901 (before 1930): public domain everywhere; the uploader's declaration agrees."
+  },
+  "source_image_url": "https://archive.org/download/CombinaisonsOrnementales/page/n7_w1400.jpg",
+  "source_image_sha256": "dfe3db7cd37c51d12d6b072ac440fa44a8640c7d43995f275fc1e3461934ab2c",
+  "converted_by": "docs/production/ornament-sources-2026-10-27/tools/convert_ornament.py"
+}

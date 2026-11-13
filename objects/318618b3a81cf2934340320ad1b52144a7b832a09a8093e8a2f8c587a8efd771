@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "comment": "Wood finishes and wood wear for every rolled wooden part (lane materials, November 11). Adam, November 6: \"the same wood having several different finishes, tones, and values just like wood is treated in real life\"; \"i would imagine the lower quality bows more frequently roll without any kind of finish and utilize the raw wood, but even higher qualitiy bows should be able to roll with high quality wood sometimes\"; \"each wood and each metal should be able to get their own finishes as long as that's not a costly addition\". A finish is a handful of settings on the wood's own procedural material (no texture, no mesh): it keeps the species' grain and changes tone, value and shine. Read by godot/src/WoodFinishes.cs; the shares and weights are the lane's defaults (the notebook leaves them open).",
+  "finishes": [
+    {
+      "id": "raw",
+      "why": "bare wood: a little greyer than the library's oiled colour, dry and matte",
+      "tint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "desaturate": 0.12,
+      "value": 1.0,
+      "roughness": 0.88,
+      "grime": 1.0
+    },
+    {
+      "id": "oiled",
+      "why": "linseed: deepens and warms the wood, a soft sheen",
+      "tint": [
+        1.04,
+        0.96,
+        0.86
+      ],
+      "desaturate": 0.0,
+      "value": 0.82,
+      "roughness": 0.55,
+      "grime": 0.8
+    },
+    {
+      "id": "waxed",
+      "why": "beeswax: the wood's own colour, a little deeper, a low buffed shine",
+      "tint": [
+        1.02,
+        0.99,
+        0.94
+      ],
+      "desaturate": 0.0,
+      "value": 0.93,
+      "roughness": 0.42,
+      "grime": 0.7
+    },
+    {
+      "id": "stained-light",
+      "why": "a honey stain",
+      "tint": [
+        1.06,
+        0.86,
+        0.6
+      ],
+      "desaturate": 0.0,
+      "value": 0.9,
+      "roughness": 0.6,
+      "grime": 0.8
+    },
+    {
+      "id": "stained-dark",
+      "why": "a walnut-brown stain",
+      "tint": [
+        0.82,
+        0.62,
+        0.46
+      ],
+      "desaturate": 0.0,
+      "value": 0.6,
+      "roughness": 0.55,
+      "grime": 0.8
+    },
+    {
+      "id": "varnished",
+      "why": "a clear amber varnish: warm and glossy",
+      "tint": [
+        1.04,
+        0.9,
+        0.66
+      ],
+      "desaturate": 0.0,
+      "value": 0.85,
+      "roughness": 0.2,
+      "grime": 0.5
+    },
+    {
+      "id": "ebonised",
+      "why": "iron-blackened: a near-black brown, the grain still there",
+      "tint": [
+        0.95,
+        0.86,
+        0.8
+      ],
+      "desaturate": 0.4,
+      "value": 0.32,
+      "roughness": 0.4,
+      "grime": 0.6
+    }
+  ],
+  "rawShareByTier": [
+    0.7,
+    0.5,
+    0.35,
+    0.25,
+    0.2
+  ],
+  "weights": {
+    "oiled": 3,
+    "waxed": 2,
+    "stained-light": 2,
+    "stained-dark": 2,
+    "varnished": 2,
+    "ebonised": 1
+  },
+  "species": {
+    "rough-pine": {
+      "why": "a pale softwood darkens a lot when oiled",
+      "overrides": {
+        "oiled": {
+          "value": 0.72
+        }
+      }
+    },
+    "ash-wood": {
+      "why": "a pale wood darkens when oiled",
+      "overrides": {
+        "oiled": {
+          "value": 0.75
+        }
+      }
+    },
+    "oak": {
+      "why": "oak's tannin takes ebonising well: deeper black",
+      "overrides": {
+        "ebonised": {
+          "value": 0.24
+        }
+      }
+    },
+    "pew-oak": {
+      "why": "oak's tannin takes ebonising well: deeper black",
+      "overrides": {
+        "ebonised": {
+          "value": 0.24
+        }
+      }
+    },
+    "bog-oak": {
+      "why": "already near black: never ebonised or stained dark",
+      "exclude": [
+        "ebonised",
+        "stained-dark"
+      ]
+    },
+    "ebony": {
+      "why": "already black: never ebonised or stained",
+      "exclude": [
+        "ebonised",
+        "stained-dark",
+        "stained-light"
+      ]
+    },
+    "rosewood": {
+      "why": "a deep red wood: never ebonised",
+      "exclude": [
+        "ebonised"
+      ]
+    },
+    "walnut": {
+      "why": "already dark: a dark stain would hide it",
+      "exclude": [
+        "stained-dark"
+      ]
+    },
+    "redgrain-ash": {
+      "why": "already a red stain over ash: no second stain",
+      "exclude": [
+        "stained-light",
+        "stained-dark"
+      ]
+    },
+    "puppet-lacquer": {
+      "why": "lacquer is its finish",
+      "noFinish": true
+    },
+    "white-lacquer": {
+      "why": "lacquer is its finish",
+      "noFinish": true
+    },
+    "chalkward-limewash": {
+      "why": "limewash is its finish",
+      "noFinish": true
+    }
+  },
+  "wearByTier": [
+    1.0,
+    0.55,
+    0.2,
+    0.0,
+    0.0
+  ],
+  "wearWhy": "Wood wear (the lead's ruling, November 10): a low-grade board, stave, limb or haft weathers as wood does, never with a blade's forging marks or its metal wear layer: sun and rain grey the raw surface in broad patches, dirt settles into the grain lines, small dents and gouges run with the grain, and the surface dries matte. A finish that seals the wood (varnished, waxed, oiled) greys less.",
+  "sealedWear": {
+    "raw": 1.0,
+    "oiled": 0.7,
+    "waxed": 0.6,
+    "stained-light": 0.8,
+    "stained-dark": 0.8,
+    "varnished": 0.6,
+    "ebonised": 0.7
+  }
+}

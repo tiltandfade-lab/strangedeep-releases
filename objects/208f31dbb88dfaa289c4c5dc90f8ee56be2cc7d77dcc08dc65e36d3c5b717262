@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "note": "Ground pickups read in the dark (Adam, October 31; design-notebook Items and Inventory). After a pickup is placed, the floor around it is sampled from the next drawn frame on a ring of ringRadius world units (a cell is 1.0); its materials get an emission of their own colour at lift = maxLift x (1 - floorLuma / targetFloor), clamped to 0..1 and rounded to bucket so pickups share materials, plus a neutral liftFloor x lift so a dark item on a dark floor still rises. A pickup off screen, or placed while the look covers the screen, is measured on a later frame, up to retryFrames. Nothing on a floor at or above targetFloor; maxLift on a black floor.",
+  "targetFloor": 0.35,
+  "maxLift": 0.8,
+  "bucket": 0.05,
+  "ringRadius": 0.42,
+  "liftFloor": 0.25,
+  "retryFrames": 300
+}

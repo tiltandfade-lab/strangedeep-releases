@@ -1,0 +1,3253 @@
+{
+ "schemaVersion": 1,
+ "status": "kit-fittings-v1",
+ "hosts": {
+  "sword": {
+   "host": "sword",
+   "ownTriangles": [
+    3054
+   ],
+   "gripChance": [
+    0.45,
+    0.55,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "bandChance": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "gripTriangles": 600,
+   "bandTriangles": 0,
+   "onTop": true,
+   "wholeTriangles": [
+    3654
+   ]
+  },
+  "dagger": {
+   "host": "sword",
+   "ownTriangles": [
+    2670
+   ],
+   "gripChance": [
+    0.45,
+    0.55,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "bandChance": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "gripTriangles": 600,
+   "bandTriangles": 0,
+   "onTop": true,
+   "wholeTriangles": [
+    3270
+   ]
+  },
+  "axe": {
+   "host": "axe",
+   "ownTriangles": [
+    2000,
+    2500
+   ],
+   "gripChance": [
+    0.4,
+    0.55,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "bandChance": [
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.65
+   ],
+   "gripTriangles": 600,
+   "bandTriangles": 260,
+   "onTop": true,
+   "wholeTriangles": [
+    2860,
+    3360
+   ]
+  },
+  "blunt": {
+   "host": "mace",
+   "ownTriangles": [
+    2500
+   ],
+   "gripChance": [
+    0.4,
+    0.55,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "bandChance": [
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.65
+   ],
+   "gripTriangles": 900,
+   "bandTriangles": 360,
+   "onTop": false,
+   "wholeTriangles": [
+    2500
+   ]
+  },
+  "bow": {
+   "host": "bow",
+   "ownTriangles": [
+    2000
+   ],
+   "gripChance": [
+    0.4,
+    0.55,
+    0.7,
+    0.8,
+    0.9
+   ],
+   "bandChance": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "gripTriangles": 600,
+   "bandTriangles": 0,
+   "onTop": false,
+   "wholeTriangles": [
+    2000
+   ]
+  }
+ },
+ "generatedBy": "tools/kit-fittings/build_kit_fittings.py from grips.py and bands.py beside it; do not edit by hand",
+ "grips": {
+  "proudMax": 0.12,
+  "core": -0.04,
+  "quality": [
+   0.05,
+   0.3,
+   0.55,
+   0.8,
+   1.0
+  ],
+  "patterns": [
+   {
+    "id": "spiral-cord",
+    "name": "Spiral cord",
+    "recipe": "cord",
+    "reference": "grips/met-14-25-1096.jpg",
+    "measured": "sword 14.25.1096: 14 touching turns on a grip 2.5D long, pitch 0.17D, square to the axis (ours is two to three times as coarse so a turn is a few pixels)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.42,
+      0.6
+     ],
+     "Strands": [
+      1,
+      1
+     ]
+    },
+    "main": [
+     "cord"
+    ],
+    "under": [],
+    "metal": [],
+    "ends": [
+     "knot",
+     "whipping",
+     "tuck"
+    ],
+    "tops": [
+     "cord-knob",
+     "whipping",
+     "tassel",
+     "loop",
+     "knot"
+    ],
+    "minTier": 0,
+    "weight": [
+     4,
+     4,
+     3,
+     2,
+     2
+    ],
+    "paintWrap": 1,
+    "paintTurns": 140,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "two-colour-cord",
+    "name": "Two-colour cord",
+    "recipe": "cord",
+    "reference": "grips/cleveland-1916-719.jpg",
+    "measured": "Tlingit dagger 1916.719: fibre cord 0.06D wide, 17 turns a diameter (ours pairs two colours and is far coarser)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.7,
+      0.95
+     ],
+     "Strands": [
+      2,
+      2
+     ]
+    },
+    "main": [
+     "cord"
+    ],
+    "under": [
+     "cord"
+    ],
+    "metal": [],
+    "ends": [
+     "whipping",
+     "knot",
+     "collar"
+    ],
+    "tops": [
+     "cord-knob",
+     "whipping",
+     "tassel",
+     "loop"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ],
+    "paintWrap": 1,
+    "paintTurns": 140,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "leather-strap",
+    "name": "Spiral leather strap",
+    "recipe": "strap",
+    "reference": "",
+    "measured": "no open reference found; built from the brief's description (the nearest, saber 14.25.1064, is an open spiral at 0.5D a turn, not overlapped)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.5,
+      0.8
+     ]
+    },
+    "main": [
+     "leather",
+     "rawhide"
+    ],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "tack",
+     "collar"
+    ],
+    "tops": [
+     "collar",
+     "tack",
+     "loop",
+     "ferrule"
+    ],
+    "minTier": 0,
+    "weight": [
+     4,
+     4,
+     3,
+     2,
+     1
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "cloth-strip",
+    "name": "Cloth strip",
+    "recipe": "cloth",
+    "reference": "",
+    "measured": "no open reference found; built from the brief's description",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.8,
+      1.2
+     ]
+    },
+    "main": [
+     "cloth"
+    ],
+    "under": [],
+    "metal": [],
+    "ends": [
+     "frayed",
+     "knot",
+     "tuck"
+    ],
+    "tops": [
+     "frayed",
+     "knot",
+     "tail",
+     "loop"
+    ],
+    "minTier": 0,
+    "weight": [
+     5,
+     3,
+     1,
+     0,
+     0
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "crossed-thong",
+    "name": "Crossed thong",
+    "recipe": "cross",
+    "reference": "grips/met-36-25-1477.jpg",
+    "measured": "Chinese saber 36.25.1477: tape 0.17D wide, about 10 crossings on a grip 4.1D long (0.4D apart; ours 0.6 to 0.9D)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.6,
+      0.9
+     ],
+     "Width": [
+      0.15,
+      0.2
+     ]
+    },
+    "main": [
+     "leather",
+     "rawhide",
+     "cord"
+    ],
+    "under": [
+     "leather",
+     "cloth",
+     "rawhide"
+    ],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "knot",
+     "tack"
+    ],
+    "tops": [
+     "knot",
+     "tack",
+     "loop",
+     "collar"
+    ],
+    "minTier": 0,
+    "weight": [
+     2,
+     3,
+     3,
+     2,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "thonged-sleeve",
+    "name": "Thonged sleeve",
+    "recipe": "cross",
+    "reference": "",
+    "measured": "the Rusty Shortbow's own grip (Adam, November 6: \"the rusty shortbow has a very interesting grip that doesn't get replicated anywhere\"), measured from bow_trial_rusty_shortbow.glb at rest: a dark leather sleeve 4.2D long, one pale thong 0.1D wide spiralling over it about 1.2 turns (ours a third wider and about two turns, so a turn crosses the face in the middle of the grip as well as at its ends)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.9,
+      1.1
+     ],
+     "Width": [
+      0.13,
+      0.17
+     ],
+     "Strands": [
+      1,
+      1
+     ]
+    },
+    "main": [
+     "rawhide",
+     "cord"
+    ],
+    "under": [
+     "leather"
+    ],
+    "metal": [],
+    "ends": [
+     "tuck",
+     "collar"
+    ],
+    "tops": [
+     "collar",
+     "knot",
+     "tuck"
+    ],
+    "minTier": 0,
+    "weight": [
+     3,
+     3,
+     2,
+     2,
+     1
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "bow"
+    ]
+   },
+   {
+    "id": "diamond-lacing",
+    "name": "Diamond lacing over ray skin",
+    "recipe": "diamond",
+    "reference": "grips/met-91-1-876.jpg",
+    "measured": "Japanese short sword 91.1.876: 8 diamonds on a grip 3.3D long (0.41D apart), each gap 1 : 1.8, the braid about 30 degrees off square, pinched at each crossing",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.55,
+      0.75
+     ],
+     "Width": [
+      0.3,
+      0.36
+     ],
+     "Face": [
+      0,
+      0
+     ]
+    },
+    "main": [
+     "cord",
+     "leather"
+    ],
+    "under": [
+     "rayskin",
+     "leather"
+    ],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "ferrule",
+     "collar"
+    ],
+    "tops": [
+     "ferrule",
+     "turkshead",
+     "tassel"
+    ],
+    "minTier": 2,
+    "weight": [
+     0,
+     0,
+     2,
+     4,
+     5
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "twisted-wire",
+    "name": "Twisted wire",
+    "recipe": "wire",
+    "reference": "grips/met-14-25-1191.jpg",
+    "measured": "rapiers 14.25.1191 and 14.25.1052: wire ribbon 0.09 to 0.10D wide, 5.5 to 6.3 turns a diameter, 0.03 to 0.04D proud, a ferrule at the pommel end",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.42,
+      0.6
+     ]
+    },
+    "main": [],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "ferrule",
+     "turkshead"
+    ],
+    "tops": [
+     "turkshead",
+     "ferrule"
+    ],
+    "minTier": 0,
+    "weight": [
+     0,
+     1,
+     3,
+     3,
+     3
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "wire-turks-head",
+    "name": "Wire with Turk's head knots",
+    "recipe": "turkshead",
+    "reference": "grips/cleveland-1974-57.jpg",
+    "measured": "smallsword 1974.57: plaited ribbon turns 0.29D apart, 0.25D wide; heavier plaited bands of 0.2 to 0.4D at both ends",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.42,
+      0.6
+     ]
+    },
+    "main": [],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "turkshead"
+    ],
+    "tops": [
+     "turkshead"
+    ],
+    "minTier": 2,
+    "weight": [
+     0,
+     0,
+     2,
+     3,
+     4
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "plaited-sleeve",
+    "name": "Plaited sleeve",
+    "recipe": "plait",
+    "reference": "grips/met-36-25-880.jpg",
+    "measured": "dagger sheath 36.25.880: plaited rattan splints 0.08D wide at 45 degrees, meeting in chevrons (no open plaited leather sleeve was found)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.4,
+      0.6
+     ],
+     "Strands": [
+      2,
+      3
+     ]
+    },
+    "main": [
+     "leather",
+     "cord",
+     "rattan"
+    ],
+    "under": [],
+    "metal": [],
+    "ends": [
+     "collar",
+     "knot"
+    ],
+    "tops": [
+     "cord-knob",
+     "collar",
+     "tassel",
+     "loop"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "rattan-bands",
+    "name": "Rattan binding in bands",
+    "recipe": "rattan",
+    "reference": "grips/met-36-25-1630.jpg",
+    "measured": "dao 36.25.1630: cane 0.10D wide, turns touching, 8 turns a diameter (ours 3 to 4)",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.22,
+      0.32
+     ],
+     "Bands": [
+      3,
+      5
+     ],
+     "Cover": [
+      0.45,
+      0.7
+     ]
+    },
+    "main": [
+     "rattan"
+    ],
+    "under": [],
+    "metal": [],
+    "ends": [
+     "whipping",
+     "tuck"
+    ],
+    "tops": [
+     "whipping",
+     "collar"
+    ],
+    "minTier": 0,
+    "weight": [
+     2,
+     3,
+     3,
+     2,
+     1
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "stitched-rawhide",
+    "name": "Stitched rawhide",
+    "recipe": "rawhide",
+    "reference": "grips/met-2011-154-113.jpg",
+    "measured": "Plains club 2011.154.113: one rawhide sleeve, whip stitches 0.6D apart slanting 45 degrees, sinew 0.1D wide",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.6,
+      0.9
+     ]
+    },
+    "main": [
+     "rawhide",
+     "leather"
+    ],
+    "under": [
+     "cord"
+    ],
+    "metal": [],
+    "ends": [
+     "collar",
+     "tack"
+    ],
+    "tops": [
+     "collar",
+     "loop",
+     "tack"
+    ],
+    "minTier": 0,
+    "weight": [
+     5,
+     3,
+     1,
+     0,
+     0
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "studded-leather",
+    "name": "Studded leather",
+    "recipe": "studded",
+    "reference": "",
+    "measured": "no open reference found; built from the brief's description",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.6,
+      1.0
+     ],
+     "Around": [
+      4,
+      6
+     ],
+     "Width": [
+      0.1,
+      0.14
+     ],
+     "Layout": [
+      0,
+      2.49
+     ]
+    },
+    "main": [
+     "leather"
+    ],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "collar",
+     "ferrule"
+    ],
+    "tops": [
+     "ferrule",
+     "tack",
+     "collar"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "ribbed-leather",
+    "name": "Leather over cord risers",
+    "recipe": "ribbed",
+    "reference": "grips/met-14-25-1064.jpg",
+    "measured": "Swiss saber 14.25.1064: raised turns 0.09D wide, 0.5D apart, the grip showing between",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.5,
+      1.0
+     ],
+     "Swell": [
+      0,
+      1
+     ]
+    },
+    "main": [
+     "leather"
+    ],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "ferrule",
+     "collar"
+    ],
+    "tops": [
+     "ferrule",
+     "turkshead",
+     "collar"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     3,
+     3,
+     3,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "fluted-wood",
+    "name": "Fluted wood",
+    "recipe": "fluted",
+    "reference": "bands/met-14-25-1330.jpg",
+    "measured": "mace 14.25.1330: the shaft straight-fluted for 2.5D under the head",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Around": [
+      5,
+      7
+     ]
+    },
+    "main": [],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "bead"
+    ],
+    "tops": [
+     "bead",
+     "ferrule"
+    ],
+    "minTier": 0,
+    "weight": [
+     2,
+     1,
+     1,
+     0,
+     0
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "spiral-cut-wood",
+    "name": "Spiral-cut wood",
+    "recipe": "spiral-cut",
+    "reference": "grips/met-14-25-1201.jpg",
+    "measured": "rapier 14.25.1201: about 2.5 twists on a grip 3D long (1.2D a twist), swelling toward the middle",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Around": [
+      4,
+      6
+     ],
+     "Pitch": [
+      1.0,
+      1.6
+     ]
+    },
+    "main": [],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "bead"
+    ],
+    "tops": [
+     "bead",
+     "ferrule"
+    ],
+    "minTier": 1,
+    "weight": [
+     0,
+     1,
+     2,
+     2,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "checkered-wood",
+    "name": "Checkered wood",
+    "recipe": "checkered",
+    "reference": "",
+    "measured": "no open reference found; built from the brief's description",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.35,
+      0.5
+     ],
+     "Around": [
+      5,
+      7
+     ]
+    },
+    "main": [],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "bead"
+    ],
+    "tops": [
+     "bead",
+     "ferrule"
+    ],
+    "minTier": 1,
+    "weight": [
+     0,
+     2,
+     2,
+     2,
+     1
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "riveted-scales",
+    "name": "Riveted bone or horn scales",
+    "recipe": "scales",
+    "reference": "grips/met-91-16-92.jpg",
+    "measured": "Swiss hunting knife 91.16.92: slabs on a tang, three rivets on a handle 5.5 depths long, a collar plate",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      1.5,
+      2.2
+     ],
+     "Width": [
+      0.1,
+      0.14
+     ]
+    },
+    "main": [
+     "bone",
+     "horn"
+    ],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "ferrule"
+    ],
+    "tops": [
+     "ferrule"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "bare-ray-skin",
+    "name": "Bare ray skin",
+    "recipe": "shagreen",
+    "reference": "grips/met-91-1-876.jpg",
+    "measured": "Japanese short sword 91.1.876: the ray skin seen in the lacing's gaps, here left bare with its line of large nodes",
+    "handles": {
+     "Proud": [
+      0.75,
+      1.0
+     ],
+     "Hand": [
+      -1,
+      1
+     ],
+     "Pitch": [
+      0.5,
+      0.8
+     ],
+     "Around": [
+      4,
+      6
+     ],
+     "Strands": [
+      0,
+      1
+     ]
+    },
+    "main": [
+     "rayskin"
+    ],
+    "under": [],
+    "metal": [
+     "metal"
+    ],
+    "ends": [
+     "ferrule"
+    ],
+    "tops": [
+     "ferrule",
+     "turkshead",
+     "tassel"
+    ],
+    "minTier": 3,
+    "weight": [
+     0,
+     0,
+     0,
+     2,
+     4
+    ],
+    "paintWrap": 0,
+    "paintTurns": 0,
+    "hosts": [
+     "staff",
+     "sword",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   }
+  ],
+  "materials": [
+   {
+    "id": "rawhide",
+    "name": "rawhide",
+    "family": "rawhide",
+    "library": "rawhide",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "patched-hide",
+    "name": "patched hide",
+    "family": "rawhide",
+    "library": "patched-hide",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "cracked-leather",
+    "name": "cracked leather",
+    "family": "leather",
+    "library": "cracked-leather",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "tanned-leather",
+    "name": "tanned leather",
+    "family": "leather",
+    "library": "tanned-leather",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "suede",
+    "name": "suede",
+    "family": "leather",
+    "library": "suede",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "boiled-leather",
+    "name": "boiled leather",
+    "family": "leather",
+    "library": "boiled-leather",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "waxed-leather",
+    "name": "waxed leather",
+    "family": "leather",
+    "library": "waxed-leather",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "dyed-calfskin",
+    "name": "calfskin",
+    "family": "leather",
+    "library": "dyed-calfskin",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "lacquered-leather",
+    "name": "lacquered leather",
+    "family": "leather",
+    "library": "lacquered-leather",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "tooled-leather",
+    "name": "tooled leather",
+    "family": "leather",
+    "library": "tooled-leather",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "hemp-cord",
+    "name": "hemp cord",
+    "family": "cord",
+    "library": "hemp-canvas",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "linen-cord",
+    "name": "linen cord",
+    "family": "cord",
+    "library": "linen",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "wool-yarn",
+    "name": "wool yarn",
+    "family": "cord",
+    "library": "wool",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "silk-braid",
+    "name": "silk braid",
+    "family": "cord",
+    "library": "silk",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "rag",
+    "name": "rag",
+    "family": "cloth",
+    "library": "rag",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "sackcloth",
+    "name": "sackcloth",
+    "family": "cloth",
+    "library": "sackcloth",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "linen-strip",
+    "name": "linen strip",
+    "family": "cloth",
+    "library": "linen",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "broadcloth",
+    "name": "broadcloth",
+    "family": "cloth",
+    "library": "broadcloth",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "grade-metal",
+    "name": "wire",
+    "family": "metal",
+    "library": "grade-metal",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "brass",
+    "name": "brass",
+    "family": "metal",
+    "library": "brass",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "tarnished-silver",
+    "name": "tarnished silver",
+    "family": "metal",
+    "library": "tarnished-silver",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "worn-copper",
+    "name": "worn copper",
+    "family": "metal",
+    "library": "worn-copper",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "shagreen",
+    "name": "ray skin",
+    "family": "rayskin",
+    "library": "shagreen",
+    "dyes": true,
+    "tint": ""
+   },
+   {
+    "id": "white-ray-skin",
+    "name": "white ray skin",
+    "family": "rayskin",
+    "library": "shagreen",
+    "dyes": false,
+    "tint": "#d9d3bf"
+   },
+   {
+    "id": "rattan",
+    "name": "rattan",
+    "family": "rattan",
+    "library": "ash-wood",
+    "dyes": false,
+    "tint": "#c9a45c"
+   },
+   {
+    "id": "smoked-rattan",
+    "name": "smoked rattan",
+    "family": "rattan",
+    "library": "ash-wood",
+    "dyes": false,
+    "tint": "#6e4a2c"
+   },
+   {
+    "id": "gnawed-bone",
+    "name": "old bone",
+    "family": "bone",
+    "library": "gnawed-bone",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "polished-bone",
+    "name": "polished bone",
+    "family": "bone",
+    "library": "polished-bone",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "ivory",
+    "name": "ivory",
+    "family": "bone",
+    "library": "ivory",
+    "dyes": false,
+    "tint": ""
+   },
+   {
+    "id": "horn",
+    "name": "horn",
+    "family": "horn",
+    "library": "horn",
+    "dyes": false,
+    "tint": ""
+   }
+  ]
+ },
+ "bands": {
+  "kinds": [
+   {
+    "id": "plain-ferrule",
+    "name": "Plain ferrule",
+    "class": "minor",
+    "reference": "bands/met-14-25-1365.jpg",
+    "measured": "flail 14.25.1365: step ring 0.47D tall, 1.06D wide",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.08
+     ],
+     [
+      0.06,
+      1.06
+     ],
+     [
+      0.41,
+      1.06
+     ],
+     [
+      0.47,
+      1.08
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     3,
+     3,
+     2,
+     1,
+     1
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "lipped-collar",
+    "name": "Lipped collar",
+    "class": "major",
+    "reference": "bands/met-14-25-1330.jpg",
+    "measured": "mace 14.25.1330: turned-out lip 1.21D wide, 0.25D tall, on a sleeve",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.05
+     ],
+     [
+      0.3,
+      1.05
+     ],
+     [
+      0.38,
+      1.21
+     ],
+     [
+      0.5,
+      1.21
+     ],
+     [
+      0.55,
+      1.08
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     1,
+     3,
+     3,
+     2,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "bead-pair",
+    "name": "Pair of bead rings",
+    "class": "minor",
+    "reference": "bands/met-14-25-319.jpg",
+    "measured": "staff weapon 14.25.319: two beads of 0.2D, 1.19 to 1.26D wide, 0.44D the pair",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.04
+     ],
+     [
+      0.05,
+      1.2
+     ],
+     [
+      0.16,
+      1.2
+     ],
+     [
+      0.21,
+      1.05
+     ],
+     [
+      0.24,
+      1.05
+     ],
+     [
+      0.29,
+      1.2
+     ],
+     [
+      0.4,
+      1.2
+     ],
+     [
+      0.44,
+      1.04
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     2,
+     3,
+     3,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "stacked-rings",
+    "name": "Stacked rings",
+    "class": "major",
+    "reference": "bands/met-36-25-1868.jpg",
+    "measured": "elephant goad 36.25.1868: thin rings 0.2D tall, 1.19 to 1.22D wide",
+    "recipe": "stack",
+    "body": [
+     [
+      0,
+      1.03
+     ],
+     [
+      0.04,
+      1.15
+     ],
+     [
+      0.1,
+      1.15
+     ],
+     [
+      0.2,
+      1.03
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 3,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      2,
+      5
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     1,
+     3,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "langet-collar",
+    "name": "Collar with langets",
+    "class": "major",
+    "reference": "bands/met-14-25-340.jpg",
+    "measured": "pollaxes 14.25.302 and 14.25.340: straps 0.38 to 0.48D wide, at least 4.5 to 6.5D long, nail heads 0.27 to 0.31D at 1.2 to 1.7D",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.1
+     ],
+     [
+      0.5,
+      1.12
+     ],
+     [
+      0.6,
+      1.05
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "langets"
+    ],
+    "detailSize": 4.5,
+    "sides": 2,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Reach": [
+      0.2,
+      1
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     2,
+     3,
+     3,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace"
+    ]
+   },
+   {
+    "id": "studded-strap",
+    "name": "Studded strap",
+    "class": "minor",
+    "reference": "bands/met-14-25-24.jpg",
+    "measured": "pike 14.25.24 and pollaxe 14.25.340: domed rivets 0.27 to 0.31D across on a strap 0.31 to 0.38D wide",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.07
+     ],
+     [
+      0.5,
+      1.07
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "studs"
+    ],
+    "detailSize": 0.14,
+    "sides": 0,
+    "count": 5,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      4,
+      7
+     ]
+    },
+    "materials": [
+     "metal",
+     "leather"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     1,
+     3,
+     3,
+     2,
+     1
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "riveted-sleeve",
+    "name": "Riveted sleeve",
+    "class": "major",
+    "reference": "bands/met-36-25-1328a-top.jpg",
+    "measured": "sword cane 36.25.1328: brass sleeve 1.84D tall, 1.07D wide, lapped and riveted",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.07
+     ],
+     [
+      1.84,
+      1.07
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "seam"
+    ],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 3,
+    "handles": {
+     "Height": [
+      0.6,
+      1.1
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     2,
+     3,
+     2,
+     1,
+     0
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "roped-ring",
+    "name": "Roped ring",
+    "class": "minor",
+    "reference": "bands/met-29-156-44.jpg",
+    "measured": "halberd 29.156.44: neck of about 6 ribs reading as twisted cord; flail 04.3.48: twist ring 0.43D tall, 1.14D wide",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.03
+     ],
+     [
+      0.1,
+      1.16
+     ],
+     [
+      0.33,
+      1.16
+     ],
+     [
+      0.43,
+      1.03
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "rope"
+    ],
+    "detailSize": 0.6,
+    "sides": 0,
+    "count": 6,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     1,
+     3,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "flared-collar",
+    "name": "Flared collar",
+    "class": "major",
+    "reference": "bands/met-14-25-377.jpg",
+    "measured": "halberd 14.25.377: flange collars 1.44 and 1.65D wide, 0.53 and 0.68D tall",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.07
+     ],
+     [
+      0.3,
+      1.1
+     ],
+     [
+      0.5,
+      1.3
+     ],
+     [
+      0.62,
+      1.6
+     ],
+     [
+      0.68,
+      1.58
+     ],
+     [
+      0.69,
+      1.1
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     1,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "stepped-collar",
+    "name": "Stepped collar",
+    "class": "major",
+    "reference": "bands/met-14-25-232.jpg",
+    "measured": "pike 14.25.232: foot collar 1.26D wide, 0.48D tall; goad 36.25.1868: collar of three steps",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.08
+     ],
+     [
+      0.2,
+      1.08
+     ],
+     [
+      0.21,
+      1.18
+     ],
+     [
+      0.38,
+      1.18
+     ],
+     [
+      0.39,
+      1.3
+     ],
+     [
+      0.52,
+      1.3
+     ],
+     [
+      0.56,
+      1.1
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     2,
+     3,
+     3,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "scalloped-band",
+    "name": "Scalloped band",
+    "class": "minor",
+    "reference": "bands/met-36-25-2958-detail.jpg",
+    "measured": "mace 36.25.2958: edge band 1.04D wide, 0.18D tall, a beaded rim over scallops of 0.14D",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.06
+     ],
+     [
+      0.25,
+      1.06
+     ],
+     [
+      0.3,
+      1.1
+     ],
+     [
+      0.36,
+      1.06
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "dag-low"
+    ],
+    "detailSize": 0.14,
+    "sides": 0,
+    "count": 8,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      6,
+      10
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     0,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "crown-band",
+    "name": "Crown band",
+    "class": "major",
+    "reference": "bands/met-36-25-2958-detail.jpg",
+    "measured": "mace 36.25.2958: the same cut edge, turned up and grown into points (our twist)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.1
+     ],
+     [
+      0.08,
+      1.1
+     ],
+     [
+      0.3,
+      1.08
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "dag-high"
+    ],
+    "detailSize": 0.22,
+    "sides": 0,
+    "count": 6,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      5,
+      8
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     0,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "inlaid-ring",
+    "name": "Inlaid ring",
+    "class": "minor",
+    "reference": "bands/met-04-3-48-top.jpg",
+    "measured": "flail 04.3.48: brass ring let into an iron collar, 0.43D tall, 1.14D wide (ours is half again as tall and stands out to 1.22D so the let-in ring reads)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.05
+     ],
+     [
+      0.08,
+      1.22
+     ],
+     [
+      0.2,
+      1.22
+     ],
+     [
+      0.201,
+      1.1
+     ],
+     [
+      0.439,
+      1.1
+     ],
+     [
+      0.44,
+      1.22
+     ],
+     [
+      0.56,
+      1.22
+     ],
+     [
+      0.64,
+      1.05
+     ]
+    ],
+    "accent": [
+     [
+      0.2,
+      1.09
+     ],
+     [
+      0.23,
+      1.2
+     ],
+     [
+      0.41,
+      1.2
+     ],
+     [
+      0.44,
+      1.09
+     ]
+    ],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [
+     "metal"
+    ],
+    "minTier": 2,
+    "weight": [
+     0,
+     0,
+     2,
+     3,
+     4
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "whipped-section",
+    "name": "Whipping between rings",
+    "class": "major",
+    "reference": "bands/met-36-25-2029.jpg",
+    "measured": "javelin 36.25.2029: whipping 1.06D wide at 0.26D pitch between a socket and a lacquer ring (ours is coarser so the turns read)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.04
+     ],
+     [
+      0.05,
+      1.16
+     ],
+     [
+      0.2,
+      1.16
+     ],
+     [
+      0.25,
+      1.05
+     ],
+     [
+      1.25,
+      1.05
+     ],
+     [
+      1.3,
+      1.16
+     ],
+     [
+      1.45,
+      1.16
+     ],
+     [
+      1.5,
+      1.04
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "whip"
+    ],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 5,
+    "handles": {
+     "Height": [
+      0.7,
+      1.1
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      4,
+      7
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [
+     "cord",
+     "leather",
+     "rattan"
+    ],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "hanging-ring",
+    "name": "Collar with a hanging ring",
+    "class": "major",
+    "reference": "bands/met-36-25-2029-butt.jpg",
+    "measured": "javelin 36.25.2029: a lanyard eyelet at the butt (the only open example found)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.05
+     ],
+     [
+      0.08,
+      1.18
+     ],
+     [
+      0.3,
+      1.18
+     ],
+     [
+      0.38,
+      1.05
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "ring"
+    ],
+    "detailSize": 0.45,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Reach": [
+      0.2,
+      1
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 1,
+    "weight": [
+     0,
+     1,
+     2,
+     2,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace"
+    ]
+   },
+   {
+    "id": "melon-knop",
+    "name": "Ribbed knop",
+    "class": "major",
+    "reference": "bands/met-08-166-3-mid.jpg",
+    "measured": "sceptre 08.166.3: shaft knop 1.4D tall with beaded neck rings of 0.25D; swells to 2.7D (ours is held under 1.9D)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.05
+     ],
+     [
+      0.12,
+      1.25
+     ],
+     [
+      0.2,
+      1.1
+     ],
+     [
+      0.45,
+      1.6
+     ],
+     [
+      0.7,
+      1.8
+     ],
+     [
+      0.95,
+      1.6
+     ],
+     [
+      1.2,
+      1.1
+     ],
+     [
+      1.28,
+      1.25
+     ],
+     [
+      1.4,
+      1.05
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "lobes"
+    ],
+    "detailSize": 0.2,
+    "sides": 0,
+    "count": 6,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.6,
+      1.1
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 2,
+    "weight": [
+     0,
+     0,
+     1,
+     3,
+     4
+    ],
+    "hosts": [
+     "staff",
+     "mace"
+    ]
+   },
+   {
+    "id": "ball-knop",
+    "name": "Plain knop",
+    "class": "minor",
+    "reference": "bands/met-08-166-3-top.jpg",
+    "measured": "sceptre 08.166.3: the smaller knops under the head",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.04
+     ],
+     [
+      0.15,
+      1.3
+     ],
+     [
+      0.35,
+      1.42
+     ],
+     [
+      0.55,
+      1.3
+     ],
+     [
+      0.7,
+      1.04
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 1,
+    "weight": [
+     0,
+     1,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "mace"
+    ]
+   },
+   {
+    "id": "disc-stack",
+    "name": "Stacked discs",
+    "class": "major",
+    "reference": "bands/met-36-25-1328a-top.jpg",
+    "measured": "sword cane 36.25.1328: a beaded silver ring 0.21D tall between horn and brass (ours stacks the same washers)",
+    "recipe": "stack",
+    "body": [
+     [
+      0,
+      1.02
+     ],
+     [
+      0.02,
+      1.36
+     ],
+     [
+      0.12,
+      1.36
+     ],
+     [
+      0.14,
+      1.02
+     ]
+    ],
+    "accent": [],
+    "details": [
+     "alternate"
+    ],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 4,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      3,
+      6
+     ]
+    },
+    "materials": [
+     "bone",
+     "horn"
+    ],
+    "accents": [
+     "metal"
+    ],
+    "minTier": 1,
+    "weight": [
+     0,
+     1,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "barrel-collar",
+    "name": "Barrel collar",
+    "class": "major",
+    "reference": "bands/met-29-156-44.jpg",
+    "measured": "halberd 29.156.44: barrel collar 1.14D wide, 1.13D tall, three ridged rings (ours bellies out to 1.38D so it reads as a barrel)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.05
+     ],
+     [
+      0.1,
+      1.16
+     ],
+     [
+      0.3,
+      1.24
+     ],
+     [
+      0.36,
+      1.32
+     ],
+     [
+      0.42,
+      1.27
+     ],
+     [
+      0.54,
+      1.3
+     ],
+     [
+      0.6,
+      1.38
+     ],
+     [
+      0.66,
+      1.3
+     ],
+     [
+      0.78,
+      1.27
+     ],
+     [
+      0.84,
+      1.32
+     ],
+     [
+      0.9,
+      1.24
+     ],
+     [
+      1.05,
+      1.16
+     ],
+     [
+      1.13,
+      1.03
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     0,
+     1,
+     2,
+     3,
+     3
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "faceted-collar",
+    "name": "Faceted collar",
+    "class": "minor",
+    "reference": "bands/met-14-25-1365.jpg",
+    "measured": "flail 14.25.1365: octagonal step ring 0.47D tall, 1.06D wide (ours stands out to 1.3D and is cut six-sided so the faces read)",
+    "recipe": "turned",
+    "body": [
+     [
+      0,
+      1.04
+     ],
+     [
+      0.12,
+      1.3
+     ],
+     [
+      0.5,
+      1.3
+     ],
+     [
+      0.62,
+      1.04
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 6,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal",
+     "bone",
+     "horn"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     1,
+     2,
+     3,
+     2,
+     2
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "wire-binding",
+    "name": "Wire binding",
+    "class": "minor",
+    "reference": "bands/met-36-25-2029.jpg",
+    "measured": "javelin 36.25.2029: wire whipping 1.06D wide",
+    "recipe": "wire",
+    "body": [
+     [
+      0,
+      1.07
+     ],
+     [
+      0.8,
+      1.07
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 5,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ],
+     "Count": [
+      4,
+      7
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     2,
+     3,
+     2,
+     1,
+     1
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "bent-strap",
+    "name": "Bent strap and a nail",
+    "class": "strap",
+    "reference": "",
+    "measured": "no museum piece: a repair strap, as the brief asks for a Janky staff",
+    "recipe": "strap",
+    "body": [
+     [
+      0,
+      1.08
+     ],
+     [
+      0.35,
+      1.08
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 1,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal",
+     "leather"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     4,
+     2,
+     0,
+     0,
+     0
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   },
+   {
+    "id": "wire-lash",
+    "name": "Wire lashing",
+    "class": "strap",
+    "reference": "bands/met-36-25-2029.jpg",
+    "measured": "javelin 36.25.2029: wire whipping",
+    "recipe": "wire",
+    "body": [
+     [
+      0,
+      1.07
+     ],
+     [
+      0.5,
+      1.07
+     ]
+    ],
+    "accent": [],
+    "details": [],
+    "detailSize": 0,
+    "sides": 0,
+    "count": 3,
+    "handles": {
+     "Height": [
+      0.85,
+      1.25
+     ],
+     "Proud": [
+      0.8,
+      1.25
+     ]
+    },
+    "materials": [
+     "metal"
+    ],
+    "accents": [],
+    "minTier": 0,
+    "weight": [
+     3,
+     2,
+     0,
+     0,
+     0
+    ],
+    "hosts": [
+     "staff",
+     "axe",
+     "mace",
+     "bow"
+    ]
+   }
+  ],
+  "schemes": [
+   {
+    "id": "lone-strap",
+    "name": "One repair strap",
+    "slots": [
+     {
+      "zone": "top",
+      "class": "strap",
+      "count": 1,
+      "from": 0.45,
+      "to": 0.45,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     6,
+     2,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "id": "frame-grip",
+    "name": "A pair framing the grip",
+    "slots": [
+     {
+      "zone": "both",
+      "class": "major",
+      "count": 1,
+      "from": 0.0,
+      "to": 0.0,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     2,
+     4,
+     3,
+     2,
+     1
+    ]
+   },
+   {
+    "id": "thirds",
+    "name": "Marking the thirds",
+    "slots": [
+     {
+      "zone": "both",
+      "class": "major",
+      "count": 1,
+      "from": 0.38,
+      "to": 0.38,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     },
+     {
+      "zone": "both",
+      "class": "minor",
+      "count": 1,
+      "from": 0.0,
+      "to": 0.0,
+      "size0": 0.8,
+      "size1": 0.8,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     1,
+     3,
+     3,
+     2,
+     1
+    ]
+   },
+   {
+    "id": "step-to-head",
+    "name": "Stepping up to the head",
+    "slots": [
+     {
+      "zone": "top",
+      "class": "minor",
+      "count": 3,
+      "from": 0.35,
+      "to": 0.86,
+      "size0": 0.7,
+      "size1": 1.0,
+      "spacing": "close"
+     },
+     {
+      "zone": "top",
+      "class": "major",
+      "count": 1,
+      "from": 1.0,
+      "to": 1.0,
+      "size0": 1.15,
+      "size1": 1.15,
+      "spacing": "even"
+     },
+     {
+      "zone": "bottom",
+      "class": "minor",
+      "count": 1,
+      "from": 1.0,
+      "to": 1.0,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     0,
+     2,
+     3,
+     3,
+     3
+    ]
+   },
+   {
+    "id": "rhythm",
+    "name": "An even rhythm",
+    "slots": [
+     {
+      "zone": "both",
+      "class": "minor",
+      "count": 3,
+      "from": 0.12,
+      "to": 0.88,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     0,
+     1,
+     3,
+     3,
+     2
+    ]
+   },
+   {
+    "id": "ends",
+    "name": "Bound at both ends",
+    "slots": [
+     {
+      "zone": "both",
+      "class": "major",
+      "count": 1,
+      "from": 1.0,
+      "to": 1.0,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     },
+     {
+      "zone": "both",
+      "class": "minor",
+      "count": 1,
+      "from": 0.8,
+      "to": 0.8,
+      "size0": 0.8,
+      "size1": 0.8,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     1,
+     2,
+     3,
+     3,
+     2
+    ]
+   },
+   {
+    "id": "suite",
+    "name": "The full suite",
+    "slots": [
+     {
+      "zone": "both",
+      "class": "major",
+      "count": 1,
+      "from": 0.0,
+      "to": 0.0,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     },
+     {
+      "zone": "both",
+      "class": "minor",
+      "count": 3,
+      "from": 0.25,
+      "to": 0.8,
+      "size0": 0.8,
+      "size1": 0.95,
+      "spacing": "even"
+     },
+     {
+      "zone": "top",
+      "class": "major",
+      "count": 1,
+      "from": 1.0,
+      "to": 1.0,
+      "size0": 1.15,
+      "size1": 1.15,
+      "spacing": "even"
+     },
+     {
+      "zone": "bottom",
+      "class": "minor",
+      "count": 1,
+      "from": 1.0,
+      "to": 1.0,
+      "size0": 1.0,
+      "size1": 1.0,
+      "spacing": "even"
+     }
+    ],
+    "weight": [
+     0,
+     0,
+     1,
+     3,
+     6
+    ]
+   }
+  ]
+ }
+}

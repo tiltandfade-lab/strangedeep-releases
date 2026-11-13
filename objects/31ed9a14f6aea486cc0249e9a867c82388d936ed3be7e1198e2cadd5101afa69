@@ -1,0 +1,795 @@
+{
+ "what": "Palette parameters for the shader surfaces (lane shader-surfaces, October 29, 2026), written by tools/shader-surfaces/build-palettes.mjs from Adam's palette families. Each set recolours every shader surface (floors, walls, glass) by colour alone; the pattern, wear and relief never change with the set. Pending Adam's review; nothing in play reads it while the shader-surfaces switch is off.",
+ "families": "docs/production/palette-shape-study-2026-10-27/families.json",
+ "review": "pending",
+ "sets": {
+  "f1": {
+   "family": "Ochre and Oxblood",
+   "floor": "Floor 1",
+   "why": "Floor 1 is tense and torch-warm: ochre-grey and bone light for the walls, plum-brown darks underfoot, oxblood and ochre as quiet accents in the floor, the turquoise counter-accent only in the glass (the cool pocket).",
+   "colours": {
+    "wall_low": "#54504a",
+    "wall_high": "#73726c",
+    "wall_band": "#5c4947",
+    "wall_joint": "#211c1f",
+    "floor_low": "#262124",
+    "floor_high": "#423f3a",
+    "floor_accent": "#4d302d",
+    "floor_accent2": "#52493b",
+    "floor_grout": "#141213",
+    "grime": "#0b0a0b",
+    "brick_low": "#3d2a28",
+    "brick_high": "#57413d",
+    "glass_1": "#3a92ad",
+    "glass_2": "#bd462f",
+    "glass_3": "#d9af5e",
+    "glass_4": "#e8dfba",
+    "glass_lead": "#0f0d0e"
+   }
+  },
+  "f2": {
+   "family": "Nocturne to Ember",
+   "floor": "Floor 2",
+   "why": "Floor 2 is uncanny and lacquered: clay-grey and the pale grey on the walls, indigo and wine darks underfoot, wine and ember as quiet floor accents, amber, ember and violet in the glass.",
+   "colours": {
+    "wall_low": "#524c49",
+    "wall_high": "#686b70",
+    "wall_band": "#594547",
+    "wall_joint": "#1f161a",
+    "floor_low": "#1d2026",
+    "floor_high": "#403c42",
+    "floor_accent": "#4d2c30",
+    "floor_accent2": "#4f3f35",
+    "floor_grout": "#130e10",
+    "grime": "#0b0809",
+    "brick_low": "#38252d",
+    "brick_high": "#54383c",
+    "glass_1": "#d89d5d",
+    "glass_2": "#4b6bb1",
+    "glass_3": "#7e397b",
+    "glass_4": "#c7cdd7",
+    "glass_lead": "#0f0a0c"
+   }
+  },
+  "f6": {
+   "family": "Ice Blue Value Study",
+   "floor": "Floor 6 and deeper",
+   "why": "Past Floor 5 the colours shift (Adam, October 28: \"everything needs to shift a bit after that\"): cold slate and ice-blue grey for the field, mauve and clay as the floor accents (warm enough that torchlight never turns them olive), ice blue and clay in the glass.",
+   "colours": {
+    "wall_low": "#4b5057",
+    "wall_high": "#6f7375",
+    "wall_band": "#665758",
+    "wall_joint": "#1d2024",
+    "floor_low": "#232529",
+    "floor_high": "#453f3f",
+    "floor_accent": "#54453e",
+    "floor_accent2": "#33424d",
+    "floor_grout": "#111314",
+    "grime": "#090a0b",
+    "brick_low": "#4d3f3f",
+    "brick_high": "#66554d",
+    "glass_1": "#62adcd",
+    "glass_2": "#c0866b",
+    "glass_3": "#9cd7f0",
+    "glass_4": "#3f81a1",
+    "glass_lead": "#0d0e0f"
+   }
+  }
+ },
+ "palette": [
+  {
+   "set": "f1",
+   "use": "wall_low",
+   "family": "Ochre and Oxblood",
+   "from": "#c7964c",
+   "saturationScale": 0.2,
+   "value": 0.33,
+   "hex": "#54504a",
+   "rgb": [
+    0.33,
+    0.313749,
+    0.289206
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "wall_high",
+   "family": "Ochre and Oxblood",
+   "from": "#e8dfba",
+   "saturationScale": 0.28,
+   "value": 0.45,
+   "hex": "#73726c",
+   "rgb": [
+    0.45,
+    0.445112,
+    0.425017
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "wall_band",
+   "family": "Ochre and Oxblood",
+   "from": "#6d2e27",
+   "saturationScale": 0.35,
+   "value": 0.36,
+   "hex": "#5c4947",
+   "rgb": [
+    0.36,
+    0.287174,
+    0.279083
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "wall_joint",
+   "family": "Ochre and Oxblood",
+   "from": "#3b2c35",
+   "saturationScale": 0.6,
+   "value": 0.13,
+   "hex": "#211c1f",
+   "rgb": [
+    0.13,
+    0.110169,
+    0.122068
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "floor_low",
+   "family": "Ochre and Oxblood",
+   "from": "#3b2c35",
+   "saturationScale": 0.55,
+   "value": 0.15,
+   "hex": "#262124",
+   "rgb": [
+    0.15,
+    0.129025,
+    0.14161
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "floor_high",
+   "family": "Ochre and Oxblood",
+   "from": "#c7964c",
+   "saturationScale": 0.2,
+   "value": 0.26,
+   "hex": "#423f3a",
+   "rgb": [
+    0.26,
+    0.247196,
+    0.227859
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "floor_accent",
+   "family": "Ochre and Oxblood",
+   "from": "#6d2e27",
+   "saturationScale": 0.65,
+   "value": 0.3,
+   "hex": "#4d302d",
+   "rgb": [
+    0.3,
+    0.187294,
+    0.174771
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "floor_accent2",
+   "family": "Ochre and Oxblood",
+   "from": "#c7964c",
+   "saturationScale": 0.45,
+   "value": 0.32,
+   "hex": "#52493b",
+   "rgb": [
+    0.32,
+    0.284543,
+    0.230995
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "floor_grout",
+   "family": "Ochre and Oxblood",
+   "from": "#3b2c35",
+   "saturationScale": 0.5,
+   "value": 0.08,
+   "hex": "#141213",
+   "rgb": [
+    0.08,
+    0.069831,
+    0.075932
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "grime",
+   "family": "Ochre and Oxblood",
+   "from": "#3b2c35",
+   "saturationScale": 0.6,
+   "value": 0.045,
+   "hex": "#0b0a0b",
+   "rgb": [
+    0.045,
+    0.038136,
+    0.042254
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "brick_low",
+   "family": "Ochre and Oxblood",
+   "from": "#6d2e27",
+   "saturationScale": 0.55,
+   "value": 0.24,
+   "hex": "#3d2a28",
+   "rgb": [
+    0.24,
+    0.163706,
+    0.155229
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "brick_high",
+   "family": "Ochre and Oxblood",
+   "from": "#bd462f",
+   "saturationScale": 0.4,
+   "value": 0.34,
+   "hex": "#57413d",
+   "rgb": [
+    0.34,
+    0.25437,
+    0.23782
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "glass_1",
+   "family": "Ochre and Oxblood",
+   "from": "#3a92ad",
+   "saturationScale": 1,
+   "value": 0.6784313725490196,
+   "hex": "#3a92ad",
+   "rgb": [
+    0.227451,
+    0.572549,
+    0.678431
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "glass_2",
+   "family": "Ochre and Oxblood",
+   "from": "#bd462f",
+   "saturationScale": 1,
+   "value": 0.7411764705882353,
+   "hex": "#bd462f",
+   "rgb": [
+    0.741176,
+    0.27451,
+    0.184314
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "glass_3",
+   "family": "Ochre and Oxblood",
+   "from": "#d9ad57",
+   "saturationScale": 0.95,
+   "value": 0.8509803921568627,
+   "hex": "#d9af5e",
+   "rgb": [
+    0.85098,
+    0.687059,
+    0.366667
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "glass_4",
+   "family": "Ochre and Oxblood",
+   "from": "#e8dfba",
+   "saturationScale": 1,
+   "value": 0.9098039215686274,
+   "hex": "#e8dfba",
+   "rgb": [
+    0.909804,
+    0.87451,
+    0.729412
+   ]
+  },
+  {
+   "set": "f1",
+   "use": "glass_lead",
+   "family": "Ochre and Oxblood",
+   "from": "#3b2c35",
+   "saturationScale": 0.6,
+   "value": 0.06,
+   "hex": "#0f0d0e",
+   "rgb": [
+    0.06,
+    0.050847,
+    0.056339
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "wall_low",
+   "family": "Nocturne to Ember",
+   "from": "#c08357",
+   "saturationScale": 0.2,
+   "value": 0.32,
+   "hex": "#524c49",
+   "rgb": [
+    0.32,
+    0.299667,
+    0.285
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "wall_high",
+   "family": "Nocturne to Ember",
+   "from": "#c7cdd7",
+   "saturationScale": 1,
+   "value": 0.44,
+   "hex": "#686b70",
+   "rgb": [
+    0.407256,
+    0.419535,
+    0.44
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "wall_band",
+   "family": "Nocturne to Ember",
+   "from": "#70262f",
+   "saturationScale": 0.35,
+   "value": 0.35,
+   "hex": "#594547",
+   "rgb": [
+    0.35,
+    0.269063,
+    0.278906
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "wall_joint",
+   "family": "Nocturne to Ember",
+   "from": "#491f32",
+   "saturationScale": 0.5,
+   "value": 0.12,
+   "hex": "#1f161a",
+   "rgb": [
+    0.12,
+    0.085479,
+    0.101096
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "floor_low",
+   "family": "Nocturne to Ember",
+   "from": "#1e3e76",
+   "saturationScale": 0.32,
+   "value": 0.15,
+   "hex": "#1d2026",
+   "rgb": [
+    0.114203,
+    0.12722,
+    0.15
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "floor_high",
+   "family": "Nocturne to Ember",
+   "from": "#785691",
+   "saturationScale": 0.22,
+   "value": 0.26,
+   "hex": "#403c42",
+   "rgb": [
+    0.250138,
+    0.236726,
+    0.26
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "floor_accent",
+   "family": "Nocturne to Ember",
+   "from": "#70262f",
+   "saturationScale": 0.65,
+   "value": 0.3,
+   "hex": "#4d2c30",
+   "rgb": [
+    0.3,
+    0.171161,
+    0.18683
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "floor_accent2",
+   "family": "Nocturne to Ember",
+   "from": "#af663c",
+   "saturationScale": 0.5,
+   "value": 0.31,
+   "hex": "#4f3f35",
+   "rgb": [
+    0.31,
+    0.245343,
+    0.208143
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "floor_grout",
+   "family": "Nocturne to Ember",
+   "from": "#491f32",
+   "saturationScale": 0.5,
+   "value": 0.075,
+   "hex": "#130e10",
+   "rgb": [
+    0.075,
+    0.053425,
+    0.063185
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "grime",
+   "family": "Nocturne to Ember",
+   "from": "#491f32",
+   "saturationScale": 0.6,
+   "value": 0.045,
+   "hex": "#0b0809",
+   "rgb": [
+    0.045,
+    0.029466,
+    0.036493
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "brick_low",
+   "family": "Nocturne to Ember",
+   "from": "#491f32",
+   "saturationScale": 0.6,
+   "value": 0.22,
+   "hex": "#38252d",
+   "rgb": [
+    0.22,
+    0.144055,
+    0.178411
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "brick_high",
+   "family": "Nocturne to Ember",
+   "from": "#70262f",
+   "saturationScale": 0.5,
+   "value": 0.33,
+   "hex": "#54383c",
+   "rgb": [
+    0.33,
+    0.220982,
+    0.234241
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "glass_1",
+   "family": "Nocturne to Ember",
+   "from": "#d89d5d",
+   "saturationScale": 1,
+   "value": 0.8470588235294118,
+   "hex": "#d89d5d",
+   "rgb": [
+    0.847059,
+    0.615686,
+    0.364706
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "glass_2",
+   "family": "Nocturne to Ember",
+   "from": "#4b6bb1",
+   "saturationScale": 1,
+   "value": 0.6941176470588235,
+   "hex": "#4b6bb1",
+   "rgb": [
+    0.294118,
+    0.419608,
+    0.694118
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "glass_3",
+   "family": "Nocturne to Ember",
+   "from": "#7e397b",
+   "saturationScale": 1,
+   "value": 0.49411764705882355,
+   "hex": "#7e397b",
+   "rgb": [
+    0.494118,
+    0.223529,
+    0.482353
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "glass_4",
+   "family": "Nocturne to Ember",
+   "from": "#c7cdd7",
+   "saturationScale": 1,
+   "value": 0.8431372549019608,
+   "hex": "#c7cdd7",
+   "rgb": [
+    0.780392,
+    0.803922,
+    0.843137
+   ]
+  },
+  {
+   "set": "f2",
+   "use": "glass_lead",
+   "family": "Nocturne to Ember",
+   "from": "#491f32",
+   "saturationScale": 0.6,
+   "value": 0.06,
+   "hex": "#0f0a0c",
+   "rgb": [
+    0.06,
+    0.039288,
+    0.048658
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "wall_low",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.45,
+   "value": 0.34,
+   "hex": "#4b5057",
+   "rgb": [
+    0.295581,
+    0.312032,
+    0.34
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "wall_high",
+   "family": "Ice Blue Value Study",
+   "from": "#9cd7f0",
+   "saturationScale": 0.15,
+   "value": 0.46,
+   "hex": "#6f7375",
+   "rgb": [
+    0.43585,
+    0.452813,
+    0.46
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "wall_band",
+   "family": "Ice Blue Value Study",
+   "from": "#8a6667",
+   "saturationScale": 0.55,
+   "value": 0.4,
+   "hex": "#665758",
+   "rgb": [
+    0.4,
+    0.342609,
+    0.344203
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "wall_joint",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.6,
+   "value": 0.14,
+   "hex": "#1d2024",
+   "rgb": [
+    0.115613,
+    0.124645,
+    0.14
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "floor_low",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.5,
+   "value": 0.16,
+   "hex": "#232529",
+   "rgb": [
+    0.136774,
+    0.145376,
+    0.16
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "floor_high",
+   "family": "Ice Blue Value Study",
+   "from": "#8a6667",
+   "saturationScale": 0.35,
+   "value": 0.27,
+   "hex": "#453f3f",
+   "rgb": [
+    0.27,
+    0.245348,
+    0.246033
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "floor_accent",
+   "family": "Ice Blue Value Study",
+   "from": "#c0866b",
+   "saturationScale": 0.6,
+   "value": 0.33,
+   "hex": "#54453e",
+   "rgb": [
+    0.33,
+    0.270188,
+    0.242344
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "floor_accent2",
+   "family": "Ice Blue Value Study",
+   "from": "#375d7a",
+   "saturationScale": 0.6,
+   "value": 0.3,
+   "hex": "#33424d",
+   "rgb": [
+    0.201148,
+    0.257213,
+    0.3
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "floor_grout",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.5,
+   "value": 0.08,
+   "hex": "#111314",
+   "rgb": [
+    0.068387,
+    0.072688,
+    0.08
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "grime",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.6,
+   "value": 0.045,
+   "hex": "#090a0b",
+   "rgb": [
+    0.037161,
+    0.040065,
+    0.045
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "brick_low",
+   "family": "Ice Blue Value Study",
+   "from": "#8a6667",
+   "saturationScale": 0.7,
+   "value": 0.3,
+   "hex": "#4d3f3f",
+   "rgb": [
+    0.3,
+    0.245217,
+    0.246739
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "brick_high",
+   "family": "Ice Blue Value Study",
+   "from": "#c0866b",
+   "saturationScale": 0.55,
+   "value": 0.4,
+   "hex": "#66554d",
+   "rgb": [
+    0.4,
+    0.333542,
+    0.302604
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "glass_1",
+   "family": "Ice Blue Value Study",
+   "from": "#62adcd",
+   "saturationScale": 1,
+   "value": 0.803921568627451,
+   "hex": "#62adcd",
+   "rgb": [
+    0.384314,
+    0.678431,
+    0.803922
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "glass_2",
+   "family": "Ice Blue Value Study",
+   "from": "#c0866b",
+   "saturationScale": 1,
+   "value": 0.7529411764705882,
+   "hex": "#c0866b",
+   "rgb": [
+    0.752941,
+    0.52549,
+    0.419608
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "glass_3",
+   "family": "Ice Blue Value Study",
+   "from": "#9cd7f0",
+   "saturationScale": 1,
+   "value": 0.9411764705882353,
+   "hex": "#9cd7f0",
+   "rgb": [
+    0.611765,
+    0.843137,
+    0.941176
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "glass_4",
+   "family": "Ice Blue Value Study",
+   "from": "#3f81a1",
+   "saturationScale": 1,
+   "value": 0.6313725490196078,
+   "hex": "#3f81a1",
+   "rgb": [
+    0.247059,
+    0.505882,
+    0.631373
+   ]
+  },
+  {
+   "set": "f6",
+   "use": "glass_lead",
+   "family": "Ice Blue Value Study",
+   "from": "#424c5d",
+   "saturationScale": 0.6,
+   "value": 0.06,
+   "hex": "#0d0e0f",
+   "rgb": [
+    0.049548,
+    0.053419,
+    0.06
+   ]
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "comment": "How an item's single sign is changed to mark its second property (lane sigils, unit six; Adam, November 12, call 12: 'a changed sign marks a second property'; the pairings are the lane's proposal and Adam's to change). The one home of the pairings: tools/sigils/build-sigils.mjs reads it to draw the mark cells into the sigil atlas and names them in sigils.json; MagicLooks.Sigils reads sigils.json. Every magic property the game rolls is in exactly one family (checked by tools/sigils/build-sigils.test.mjs). An item's second property is the second in its stripe order (strongest stat first, then its properties in order); its family's mark changes the item's single sign. An item with one property is unchanged. Marks: 'ore' a small ring at the sign's free shoulder (Newton's ore); 'star' a six-spoked star at the free shoulder (Newton's sublimate star, drawn as his own three-bar sal ammoniac sextile); 'stroke' a short stroke across the free shoulder (Mars with a stroke, crocus of iron); 'dots' four dots round the sign (distilled vinegar); 'ring' a ring round the whole sign; 'turned' the whole sign upside down (fire turned over is water). Changing a family's mark here, then running node tools/sigils/build-sigils.mjs, changes the game.",
+ "families": {
+  "stat": {
+   "mark": "ore",
+   "properties": ["mighty", "deft", "vital", "arcane"],
+   "why": "A stat is the body's own stuff, like a metal before it is worked: Newton's ore ring, 'the metal as it comes out of the ground'."
+  },
+  "ward": {
+   "mark": "turned",
+   "properties": ["fireward", "frostward", "stormward", "venomward"],
+   "why": "A ward turns an element back on itself: the element signs are one triangle each way up, fire up and water down, so the turned sign reads as the opposite."
+  },
+  "guard": {
+   "mark": "ring",
+   "properties": ["hearty", "stalwart", "tempered", "guarding", "braced", "screened", "elusive", "veiled"],
+   "why": "A guard closes round the wearer: the ring round the sign is a wall round it. The ring no longer rolls as a plain look while these marks are on, so a ring always means a guard."
+  },
+  "reprisal": {
+   "mark": "star",
+   "properties": ["thorns", "reprisal", "repulsion"],
+   "why": "A reprisal flies back at the striker: Newton's sublimate star, the spiked sign of what is volatile and flies up out of the fire."
+  },
+  "boon": {
+   "mark": "dots",
+   "properties": ["harvest", "prosperity", "mending", "vampire"],
+   "why": "A boon gives back more than was put in: the four dots that make vinegar distilled vinegar, the stronger and richer form."
+  },
+  "weapon": {
+   "mark": "stroke",
+   "properties": ["keen", "precision", "steady", "violent", "savage", "heavy", "soldier", "penetrating", "longreach", "ember", "rime", "storm", "venom"],
+   "why": "A weapon's property cuts: Mars with a stroke, one of the two period signs for crocus of iron, iron through the fire. Rarely seen today: these properties roll on weapons, bows, gloves, amulets and rings, which wear no sign, so it shows only where a weapon's property is the second on a marked piece."
+  }
+ }
+}

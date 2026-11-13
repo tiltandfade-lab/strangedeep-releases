@@ -1,0 +1,9 @@
+{
+ "schemaVersion": 1,
+ "kind": "armor-kit-rims",
+ "status": "draft, pending Adam's review (lane mm-export, October 28, 2026): look only, behind ArmorKitRims.Enabled (off)",
+ "ruling": "Adam, October 28: \"can we make the rolled rims a probability of rolling vs guaranteed? that gives us that much more variation in the world of strangedeep\"",
+ "rule": "Each rim-capable part of a worn item rolls its rim once from the item's seed: draws(\"<seed>|rim|<part key>\").Next() < chance, where chance = byWeight[weight class] x byCategory[part category] (1 when the category is not listed), capped at 1. The draw stream is its own, so the look roll (armor-kit-templates.json) is unchanged, and the same item always rolls the same rim, so a saved piece keeps it with nothing new saved.",
+ "byWeight": { "heavy": 0.65, "medium": 0.5, "light": 0.3 },
+ "byCategory": { "head": 1.15, "shoulder": 1.15, "chest": 1.0, "back": 0.8, "arm": 1.0, "neck": 1.0, "waist": 0.7, "leg": 0.8, "foot": 0.6, "hand": 0.4, "detail": 0.0, "any": 0.0 }
+}

@@ -1,0 +1,1161 @@
+{
+ "what": "Floor palettes of the level materials (lane level-materials, October 30, 2026; pending Adam's review). A floor rolls one palette from its options by its id (weights), and every level surface on it reads its colours from that palette (godot/src/LevelMaterials.cs). Written by tools/level-materials/build_palettes.py from Adam's palette families; do not hand-edit. Moss and damp amounts roll in their ranges by the floor id and grow with age (LevelMaterials.MossFor).",
+ "schemaVersion": 1,
+ "families": "docs/production/palette-shape-study-2026-10-27/families.json",
+ "kinds": {
+  "plaster": {
+   "layer": "limewash-ashlar",
+   "objectSpace": false,
+   "moss": true,
+   "soot": true,
+   "for": "the shell's wall fields (limewashed ashlar)"
+  },
+  "stone": {
+   "layer": "stone-dressed",
+   "objectSpace": false,
+   "moss": true,
+   "soot": true,
+   "for": "the shell's plinths, caps, jambs, voussoirs, piers and kerbs"
+  },
+  "slab": {
+   "layer": "stone-slab",
+   "objectSpace": false,
+   "moss": true,
+   "for": "floor slabs and flags"
+  },
+  "gold": {
+   "layer": "coin-gold",
+   "objectSpace": true,
+   "moss": false,
+   "for": "coin piles"
+  },
+  "wax": {
+   "layer": "wax-drips",
+   "objectSpace": true,
+   "moss": false,
+   "for": "candles and wax pools"
+  },
+  "parchment": {
+   "layer": "parchment",
+   "objectSpace": true,
+   "moss": false,
+   "for": "books, loose pages and scrolls"
+  },
+  "terracotta": {
+   "layer": "terracotta",
+   "objectSpace": true,
+   "moss": false,
+   "for": "urns, pots and jars"
+  },
+  "lacquer": {
+   "layer": "lacquer-wet",
+   "objectSpace": false,
+   "moss": false,
+   "for": "the Floor 2 painter-captain's lacquered arena: floors, walls, paint pools"
+  },
+  "straw": {
+   "layer": "straw",
+   "objectSpace": true,
+   "moss": false,
+   "for": "bedding, straw sacks and thatch"
+  },
+  "rope": {
+   "layer": "rope",
+   "objectSpace": true,
+   "moss": false,
+   "for": "rope, binding and sack ties"
+  }
+ },
+ "floors": {
+  "1": {
+   "family": "Ochre and Oxblood",
+   "why": "Floor 1 is tense and torch-warm (Mood by Floor and Room): a bone-lime plaster that reads clean and light in a frame of warm grey stone a clear step darker, on plum-brown slabs darker still, so wall and floor separate by value (the harmony rule's step) and the room's saturated pockets stay its rug, window and lights.",
+   "palettes": [
+    {
+     "id": "f1-bone-lime",
+     "weight": 2,
+     "kinds": {
+      "plaster": {
+       "main": {
+        "hex": "#706e63",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.12,
+        "v": 0.44
+       },
+       "second": {
+        "hex": "#453f43",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.08,
+        "v": 0.27
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.75,
+        1.15
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.9,
+       "metallic": 0.0
+      },
+      "stone": {
+       "main": {
+        "hex": "#544e52",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.07,
+        "v": 0.33
+       },
+       "second": {
+        "hex": "#575249",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.16,
+        "v": 0.34
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.8,
+        1.15
+       ],
+       "roughness": 0.86,
+       "roughnessSpan": 0.1,
+       "relief": 0.55,
+       "metallic": 0.0
+      },
+      "slab": {
+       "main": {
+        "hex": "#40373c",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.14,
+        "v": 0.25
+       },
+       "second": {
+        "hex": "#403332",
+        "family": "Ochre and Oxblood",
+        "from": "#6d2e27",
+        "s": 0.22,
+        "v": 0.25
+       },
+       "secondAmount": 0.4,
+       "valueSpan": [
+        0.82,
+        1.14
+       ],
+       "roughness": 0.8,
+       "roughnessSpan": 0.15,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "gold": {
+       "main": {
+        "hex": "#c79b5a",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.55,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#736045",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.4,
+        "v": 0.45
+       },
+       "secondAmount": 0.6,
+       "valueSpan": [
+        0.75,
+        1.3
+       ],
+       "roughness": 0.38,
+       "roughnessSpan": 0.2,
+       "relief": 0.8,
+       "metallic": 0.55
+      },
+      "wax": {
+       "main": {
+        "hex": "#c7bf9f",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.2,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#b2a07d",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.3,
+        "v": 0.7
+       },
+       "secondAmount": 0.3,
+       "valueSpan": [
+        0.9,
+        1.1
+       ],
+       "roughness": 0.55,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "parchment": {
+       "main": {
+        "hex": "#b8b197",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.18,
+        "v": 0.72
+       },
+       "second": {
+        "hex": "#33292f",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.2,
+        "v": 0.2
+       },
+       "secondAmount": 0.9,
+       "valueSpan": [
+        0.85,
+        1.1
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.05,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "terracotta": {
+       "main": {
+        "hex": "#8c644d",
+        "family": "Ochre and Oxblood",
+        "from": "#c96025",
+        "s": 0.45,
+        "v": 0.55
+       },
+       "second": {
+        "hex": "#403039",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.25,
+        "v": 0.25
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.85,
+        1.12
+       ],
+       "roughness": 0.85,
+       "roughnessSpan": 0.08,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "lacquer": {
+       "main": {
+        "hex": "#522621",
+        "family": "Ochre and Oxblood",
+        "from": "#6d2e27",
+        "s": 0.6,
+        "v": 0.32
+       },
+       "second": {
+        "hex": "#99542e",
+        "family": "Ochre and Oxblood",
+        "from": "#c96025",
+        "s": 0.7,
+        "v": 0.6
+       },
+       "secondAmount": 0.38,
+       "valueSpan": [
+        0.88,
+        1.1
+       ],
+       "roughness": 0.12,
+       "roughnessSpan": 0.1,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "straw": {
+       "main": {
+        "hex": "#9e8657",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.45,
+        "v": 0.62
+       },
+       "second": {
+        "hex": "#807c6c",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.15,
+        "v": 0.5
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.8,
+       "metallic": 0.0
+      },
+      "rope": {
+       "main": {
+        "hex": "#806e53",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.35,
+        "v": 0.5
+       },
+       "second": {
+        "hex": "#4c3d46",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.2,
+        "v": 0.3
+       },
+       "secondAmount": 0.0,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.92,
+       "roughnessSpan": 0.06,
+       "relief": 0.9,
+       "metallic": 0.0
+      }
+     }
+    },
+    {
+     "id": "f1-ochre-lime",
+     "weight": 1,
+     "kinds": {
+      "plaster": {
+       "main": {
+        "hex": "#6b6558",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.18,
+        "v": 0.42
+       },
+       "second": {
+        "hex": "#42413c",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.1,
+        "v": 0.26
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.75,
+        1.15
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.9,
+       "metallic": 0.0
+      },
+      "stone": {
+       "main": {
+        "hex": "#525049",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.1,
+        "v": 0.32
+       },
+       "second": {
+        "hex": "#4c4349",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.12,
+        "v": 0.3
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.8,
+        1.15
+       ],
+       "roughness": 0.86,
+       "roughnessSpan": 0.1,
+       "relief": 0.55,
+       "metallic": 0.0
+      },
+      "slab": {
+       "main": {
+        "hex": "#3b3237",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.15,
+        "v": 0.23
+       },
+       "second": {
+        "hex": "#3d3531",
+        "family": "Ochre and Oxblood",
+        "from": "#c96025",
+        "s": 0.2,
+        "v": 0.24
+       },
+       "secondAmount": 0.35,
+       "valueSpan": [
+        0.82,
+        1.14
+       ],
+       "roughness": 0.8,
+       "roughnessSpan": 0.15,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "gold": {
+       "main": {
+        "hex": "#c79b5a",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.55,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#736045",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.4,
+        "v": 0.45
+       },
+       "secondAmount": 0.6,
+       "valueSpan": [
+        0.75,
+        1.3
+       ],
+       "roughness": 0.38,
+       "roughnessSpan": 0.2,
+       "relief": 0.8,
+       "metallic": 0.55
+      },
+      "wax": {
+       "main": {
+        "hex": "#c7bf9f",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.2,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#b2a07d",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.3,
+        "v": 0.7
+       },
+       "secondAmount": 0.3,
+       "valueSpan": [
+        0.9,
+        1.1
+       ],
+       "roughness": 0.55,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "parchment": {
+       "main": {
+        "hex": "#b8b197",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.18,
+        "v": 0.72
+       },
+       "second": {
+        "hex": "#33292f",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.2,
+        "v": 0.2
+       },
+       "secondAmount": 0.9,
+       "valueSpan": [
+        0.85,
+        1.1
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.05,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "terracotta": {
+       "main": {
+        "hex": "#8c644d",
+        "family": "Ochre and Oxblood",
+        "from": "#c96025",
+        "s": 0.45,
+        "v": 0.55
+       },
+       "second": {
+        "hex": "#403039",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.25,
+        "v": 0.25
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.85,
+        1.12
+       ],
+       "roughness": 0.85,
+       "roughnessSpan": 0.08,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "lacquer": {
+       "main": {
+        "hex": "#522621",
+        "family": "Ochre and Oxblood",
+        "from": "#6d2e27",
+        "s": 0.6,
+        "v": 0.32
+       },
+       "second": {
+        "hex": "#99542e",
+        "family": "Ochre and Oxblood",
+        "from": "#c96025",
+        "s": 0.7,
+        "v": 0.6
+       },
+       "secondAmount": 0.38,
+       "valueSpan": [
+        0.88,
+        1.1
+       ],
+       "roughness": 0.12,
+       "roughnessSpan": 0.1,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "straw": {
+       "main": {
+        "hex": "#9e8657",
+        "family": "Ochre and Oxblood",
+        "from": "#d9ad57",
+        "s": 0.45,
+        "v": 0.62
+       },
+       "second": {
+        "hex": "#807c6c",
+        "family": "Ochre and Oxblood",
+        "from": "#e8dfba",
+        "s": 0.15,
+        "v": 0.5
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.8,
+       "metallic": 0.0
+      },
+      "rope": {
+       "main": {
+        "hex": "#806e53",
+        "family": "Ochre and Oxblood",
+        "from": "#c7964c",
+        "s": 0.35,
+        "v": 0.5
+       },
+       "second": {
+        "hex": "#4c3d46",
+        "family": "Ochre and Oxblood",
+        "from": "#3b2c35",
+        "s": 0.2,
+        "v": 0.3
+       },
+       "secondAmount": 0.0,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.92,
+       "roughnessSpan": 0.06,
+       "relief": 0.9,
+       "metallic": 0.0
+      }
+     }
+    }
+   ],
+   "moss": {
+    "amount": [
+     0.45,
+     0.7
+    ],
+    "damp": [
+     0.3,
+     0.5
+    ],
+    "soot": 0.25,
+    "wetHeight": 0.75,
+    "cornerBoost": 0.6,
+    "color": {
+     "hex": "#33382c",
+     "family": "Lavender and Sage on Charcoal",
+     "from": "#94a97a",
+     "s": 0.21,
+     "v": 0.22
+    },
+    "colorLight": {
+     "hex": "#748066",
+     "family": "Lavender and Sage on Charcoal",
+     "from": "#94a97a",
+     "s": 0.2,
+     "v": 0.5
+    }
+   }
+  },
+  "2": {
+   "family": "Nocturne to Ember",
+   "why": "Floor 2 is uncanny and lacquered, with red-amber accents (Mood by Floor and Room): a cool pale-grey plaster in wine-dark stone on indigo slabs; the floor's red-amber pockets come from its lights and the painter-captain's lacquer, not its walls. Damper and less mossy than Floor 1.",
+   "palettes": [
+    {
+     "id": "f2-grey-lime",
+     "weight": 2,
+     "kinds": {
+      "plaster": {
+       "main": {
+        "hex": "#65676b",
+        "family": "Nocturne to Ember",
+        "from": "#c7cdd7",
+        "s": 0.06,
+        "v": 0.42
+       },
+       "second": {
+        "hex": "#40373b",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.14,
+        "v": 0.25
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.75,
+        1.15
+       ],
+       "roughness": 0.88,
+       "roughnessSpan": 0.1,
+       "relief": 0.9,
+       "metallic": 0.0
+      },
+      "stone": {
+       "main": {
+        "hex": "#54474d",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.16,
+        "v": 0.33
+       },
+       "second": {
+        "hex": "#3d434c",
+        "family": "Nocturne to Ember",
+        "from": "#1e3e76",
+        "s": 0.2,
+        "v": 0.3
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.8,
+        1.15
+       ],
+       "roughness": 0.82,
+       "roughnessSpan": 0.12,
+       "relief": 0.55,
+       "metallic": 0.0
+      },
+      "slab": {
+       "main": {
+        "hex": "#292d33",
+        "family": "Nocturne to Ember",
+        "from": "#1e3e76",
+        "s": 0.2,
+        "v": 0.2
+       },
+       "second": {
+        "hex": "#33262c",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.25,
+        "v": 0.2
+       },
+       "secondAmount": 0.4,
+       "valueSpan": [
+        0.82,
+        1.14
+       ],
+       "roughness": 0.7,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "gold": {
+       "main": {
+        "hex": "#c7925a",
+        "family": "Nocturne to Ember",
+        "from": "#d89d5d",
+        "s": 0.55,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#735d45",
+        "family": "Nocturne to Ember",
+        "from": "#d89d5d",
+        "s": 0.4,
+        "v": 0.45
+       },
+       "secondAmount": 0.6,
+       "valueSpan": [
+        0.75,
+        1.3
+       ],
+       "roughness": 0.38,
+       "roughnessSpan": 0.2,
+       "relief": 0.8,
+       "metallic": 0.55
+      },
+      "wax": {
+       "main": {
+        "hex": "#bbbfc7",
+        "family": "Nocturne to Ember",
+        "from": "#c7cdd7",
+        "s": 0.06,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#b29986",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.25,
+        "v": 0.7
+       },
+       "secondAmount": 0.3,
+       "valueSpan": [
+        0.9,
+        1.1
+       ],
+       "roughness": 0.55,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "parchment": {
+       "main": {
+        "hex": "#b2a092",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.18,
+        "v": 0.7
+       },
+       "second": {
+        "hex": "#33242b",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.3,
+        "v": 0.2
+       },
+       "secondAmount": 0.9,
+       "valueSpan": [
+        0.85,
+        1.1
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.05,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "terracotta": {
+       "main": {
+        "hex": "#85644d",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.42,
+        "v": 0.52
+       },
+       "second": {
+        "hex": "#382a30",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.25,
+        "v": 0.22
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.85,
+        1.12
+       ],
+       "roughness": 0.85,
+       "roughnessSpan": 0.08,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "lacquer": {
+       "main": {
+        "hex": "#4c1b21",
+        "family": "Nocturne to Ember",
+        "from": "#70262f",
+        "s": 0.65,
+        "v": 0.3
+       },
+       "second": {
+        "hex": "#9e582f",
+        "family": "Nocturne to Ember",
+        "from": "#af663c",
+        "s": 0.7,
+        "v": 0.62
+       },
+       "secondAmount": 0.38,
+       "valueSpan": [
+        0.88,
+        1.1
+       ],
+       "roughness": 0.12,
+       "roughnessSpan": 0.1,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "straw": {
+       "main": {
+        "hex": "#947259",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.4,
+        "v": 0.58
+       },
+       "second": {
+        "hex": "#797c80",
+        "family": "Nocturne to Ember",
+        "from": "#c7cdd7",
+        "s": 0.05,
+        "v": 0.5
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.8,
+       "metallic": 0.0
+      },
+      "rope": {
+       "main": {
+        "hex": "#7a6250",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.35,
+        "v": 0.48
+       },
+       "second": {
+        "hex": "#473940",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.2,
+        "v": 0.28
+       },
+       "secondAmount": 0.0,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.92,
+       "roughnessSpan": 0.06,
+       "relief": 0.9,
+       "metallic": 0.0
+      }
+     }
+    },
+    {
+     "id": "f2-violet-lime",
+     "weight": 1,
+     "kinds": {
+      "plaster": {
+       "main": {
+        "hex": "#625c66",
+        "family": "Nocturne to Ember",
+        "from": "#785691",
+        "s": 0.1,
+        "v": 0.4
+       },
+       "second": {
+        "hex": "#383b40",
+        "family": "Nocturne to Ember",
+        "from": "#1e3e76",
+        "s": 0.12,
+        "v": 0.25
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.75,
+        1.15
+       ],
+       "roughness": 0.88,
+       "roughnessSpan": 0.1,
+       "relief": 0.9,
+       "metallic": 0.0
+      },
+      "stone": {
+       "main": {
+        "hex": "#4a4e54",
+        "family": "Nocturne to Ember",
+        "from": "#1e3e76",
+        "s": 0.12,
+        "v": 0.33
+       },
+       "second": {
+        "hex": "#4c4046",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.16,
+        "v": 0.3
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.8,
+        1.15
+       ],
+       "roughness": 0.82,
+       "roughnessSpan": 0.12,
+       "relief": 0.55,
+       "metallic": 0.0
+      },
+      "slab": {
+       "main": {
+        "hex": "#332a2e",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.18,
+        "v": 0.2
+       },
+       "second": {
+        "hex": "#292d33",
+        "family": "Nocturne to Ember",
+        "from": "#1e3e76",
+        "s": 0.2,
+        "v": 0.2
+       },
+       "secondAmount": 0.4,
+       "valueSpan": [
+        0.82,
+        1.14
+       ],
+       "roughness": 0.7,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "gold": {
+       "main": {
+        "hex": "#c7925a",
+        "family": "Nocturne to Ember",
+        "from": "#d89d5d",
+        "s": 0.55,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#735d45",
+        "family": "Nocturne to Ember",
+        "from": "#d89d5d",
+        "s": 0.4,
+        "v": 0.45
+       },
+       "secondAmount": 0.6,
+       "valueSpan": [
+        0.75,
+        1.3
+       ],
+       "roughness": 0.38,
+       "roughnessSpan": 0.2,
+       "relief": 0.8,
+       "metallic": 0.55
+      },
+      "wax": {
+       "main": {
+        "hex": "#bbbfc7",
+        "family": "Nocturne to Ember",
+        "from": "#c7cdd7",
+        "s": 0.06,
+        "v": 0.78
+       },
+       "second": {
+        "hex": "#b29986",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.25,
+        "v": 0.7
+       },
+       "secondAmount": 0.3,
+       "valueSpan": [
+        0.9,
+        1.1
+       ],
+       "roughness": 0.55,
+       "roughnessSpan": 0.2,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "parchment": {
+       "main": {
+        "hex": "#b2a092",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.18,
+        "v": 0.7
+       },
+       "second": {
+        "hex": "#33242b",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.3,
+        "v": 0.2
+       },
+       "secondAmount": 0.9,
+       "valueSpan": [
+        0.85,
+        1.1
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.05,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "terracotta": {
+       "main": {
+        "hex": "#85644d",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.42,
+        "v": 0.52
+       },
+       "second": {
+        "hex": "#382a30",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.25,
+        "v": 0.22
+       },
+       "secondAmount": 0.45,
+       "valueSpan": [
+        0.85,
+        1.12
+       ],
+       "roughness": 0.85,
+       "roughnessSpan": 0.08,
+       "relief": 0.4,
+       "metallic": 0.0
+      },
+      "lacquer": {
+       "main": {
+        "hex": "#4c1b21",
+        "family": "Nocturne to Ember",
+        "from": "#70262f",
+        "s": 0.65,
+        "v": 0.3
+       },
+       "second": {
+        "hex": "#9e582f",
+        "family": "Nocturne to Ember",
+        "from": "#af663c",
+        "s": 0.7,
+        "v": 0.62
+       },
+       "secondAmount": 0.38,
+       "valueSpan": [
+        0.88,
+        1.1
+       ],
+       "roughness": 0.12,
+       "roughnessSpan": 0.1,
+       "relief": 0.2,
+       "metallic": 0.0
+      },
+      "straw": {
+       "main": {
+        "hex": "#947259",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.4,
+        "v": 0.58
+       },
+       "second": {
+        "hex": "#797c80",
+        "family": "Nocturne to Ember",
+        "from": "#c7cdd7",
+        "s": 0.05,
+        "v": 0.5
+       },
+       "secondAmount": 0.5,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.9,
+       "roughnessSpan": 0.1,
+       "relief": 0.8,
+       "metallic": 0.0
+      },
+      "rope": {
+       "main": {
+        "hex": "#7a6250",
+        "family": "Nocturne to Ember",
+        "from": "#c08357",
+        "s": 0.35,
+        "v": 0.48
+       },
+       "second": {
+        "hex": "#473940",
+        "family": "Nocturne to Ember",
+        "from": "#491f32",
+        "s": 0.2,
+        "v": 0.28
+       },
+       "secondAmount": 0.0,
+       "valueSpan": [
+        0.6,
+        1.2
+       ],
+       "roughness": 0.92,
+       "roughnessSpan": 0.06,
+       "relief": 0.9,
+       "metallic": 0.0
+      }
+     }
+    }
+   ],
+   "moss": {
+    "amount": [
+     0.25,
+     0.45
+    ],
+    "damp": [
+     0.4,
+     0.6
+    ],
+    "soot": 0.3,
+    "wetHeight": 0.6,
+    "cornerBoost": 0.5,
+    "color": {
+     "hex": "#2e3329",
+     "family": "Lavender and Sage on Charcoal",
+     "from": "#94a97a",
+     "s": 0.2,
+     "v": 0.2
+    },
+    "colorLight": {
+     "hex": "#67705b",
+     "family": "Lavender and Sage on Charcoal",
+     "from": "#94a97a",
+     "s": 0.19,
+     "v": 0.44
+    }
+   }
+  }
+ }
+}

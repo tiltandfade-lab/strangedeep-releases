@@ -1,0 +1,38 @@
+{
+ "source": "godot/assets/armor-kit/f1/hero/f1-gauntlet-cuff-l.glb",
+ "parts": {
+  "f1-gauntlet-cuff-l": {
+   "vertices": 908,
+   "convexSamples": 1477,
+   "concaveSamples": 30,
+   "verticesWithin30mm": 908,
+   "downTurns": [
+    725,
+    48,
+    65,
+    70
+   ],
+   "reachM": 0.25,
+   "sharpDeg": 55.0,
+   "rimTrianglesAdded": 192,
+   "rim": "top"
+  },
+  "Icosphere": {
+   "vertices": 42,
+   "convexSamples": 0,
+   "concaveSamples": 0,
+   "verticesWithin30mm": 0,
+   "downTurns": [
+    32,
+    4,
+    2,
+    4
+   ],
+   "reachM": 0.25,
+   "sharpDeg": 55.0,
+   "rimTrianglesAdded": 0,
+   "rim": "top"
+  }
+ },
+ "bakedBy": "blender -b -P tools/armor-kit/armor_kit_edge_bake.py -- <source, its rim stripped by add_rim_to_glb.strip_rim> <this> --rim top --band 0.25 (a flat lip since lane kit-geometry, October 30)"
+}

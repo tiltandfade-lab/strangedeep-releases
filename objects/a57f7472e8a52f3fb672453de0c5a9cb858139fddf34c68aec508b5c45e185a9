@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "note": "Camera beats (lane camera-beats, October 28): the moments the camera breaks the three-quarter view for drama (design-notebook/Strangedeep/Visual Direction/Visual Vocabulary.md, Camera and staging; Adam: \"the most exciting parts are when the camera starts to break the 3/4 angle for drama\"). Each beat names its trigger, its shots (framing, subject, move, ease and hold seconds), how it returns to the tactical view, and the small MoodDirector beat it pairs with (godot/resources/mood_profiles.json settings.beats; null for none). A beat's length is its shots plus its return; input waits exactly that long and no longer (any press skips the beat at once), and the view after a beat is the exact view before it. settings.modes is the player's choice (full, short, off); short keeps only the shots marked inShort and scales every ease, hold and return by shortScale. Presentation only: a beat reads committed responses and never touches a rule, a command, a save or a gameplay number. Lengths, whether conversations get a beat, and how often a floor's first room plays are open for Adam (defaults here). The push-in, doorway and low-feeding framings are the enemy introductions' (godot/resources/enemy_intros.json, lane enemy-intros).",
+  "settings": {
+    "modes": ["full", "short", "off"],
+    "default": "full",
+    "shortScale": 0.6,
+    "slackSeconds": 0.05,
+    "maxWaitSeconds": 4,
+    "firstRoomOncePer": "floor"
+  },
+  "limits": {
+    "note": "What CameraBeats.Parse accepts; a value outside these is refused at load. Ranges are [low, high].",
+    "shortScale": [0, 1],
+    "slackSeconds": [0.02, 0.25],
+    "maxWaitSeconds": [0, 10],
+    "elevation": [0, 89],
+    "fov": [20, 90],
+    "height": [0, 2],
+    "distanceMin": 0.5,
+    "frameHeightMin": 0.5,
+    "fitMin": 1,
+    "minScaleMin": 1,
+    "panMax": 90,
+    "shotSecondsMax": 4,
+    "dutchMax": 12,
+    "shotsMax": 4,
+    "returnSecondsMax": 1.5,
+    "beatSecondsMax": 6
+  },
+  "framings": {
+    "establishing": { "lens": "orthographic", "elevation": 52, "fit": 1.15, "minScale": 1.25, "pan": 24 },
+    "low": { "lens": "perspective", "height": 0.18, "distance": 2.6, "fov": 50, "lookAt": 0.62, "fill": 1.05 },
+    "close": { "lens": "orthographic", "elevation": 26, "frameHeight": 2.1, "turn": 18 },
+    "over-the-shoulder": { "lens": "orthographic", "elevation": 17, "frameHeight": 2.5, "shoulder": 22 },
+    "push-in": { "lens": "orthographic", "elevation": 30, "frameHeight": 2.0, "turn": 14 },
+    "doorway": { "lens": "perspective", "height": 0.85, "distance": 2.6, "fov": 44, "lookAt": 0.5, "fill": 1 },
+    "doorway-low": { "lens": "perspective", "height": 0.18, "distance": 2.6, "fov": 50, "lookAt": 0.62, "fill": 1.05 },
+    "low-feeding": { "lens": "perspective", "height": 0.14, "distance": 1.9, "fov": 46, "lookAt": 0.4, "fill": 1.6 },
+    "corridor": { "lens": "perspective", "height": 0.65, "distance": 2.4, "fov": 50, "lookAt": 0.55, "fill": 1 },
+    "top": { "lens": "orthographic", "elevation": 78, "frameHeight": 2.2, "turn": 0 }
+  },
+  "beats": {
+    "boss-reveal": {
+      "trigger": "boss-seen", "priority": 100, "mood": "reveal",
+      "shots": [
+        { "framing": "establishing", "subject": "boss-room", "move": "ease", "ease": 0.5, "hold": 1.3, "inShort": false },
+        { "framing": "low", "subject": "boss", "move": "cut", "ease": 0, "hold": 1.6, "inShort": true }
+      ],
+      "return": { "move": "cut", "seconds": 0 }
+    },
+    "hero-swallowed": {
+      "trigger": "cube-grabbed", "priority": 80, "mood": "swallow",
+      "shots": [
+        { "framing": "low", "subject": "cube", "move": "cut", "ease": 0, "hold": 1.0, "inShort": true, "dutch": 7 }
+      ],
+      "return": { "move": "cut", "seconds": 0 }
+    },
+    "hero-death": {
+      "trigger": "hero-fell", "priority": 70, "mood": "death",
+      "shots": [
+        { "framing": "close", "subject": "fallen-hero", "move": "ease", "ease": 0.35, "hold": 0.9, "inShort": true }
+      ],
+      "return": { "move": "ease", "seconds": 0.35 }
+    },
+    "rescue": {
+      "trigger": "captive-standing", "priority": 90, "mood": null,
+      "shots": [
+        { "framing": "low", "subject": "captive", "move": "cut", "ease": 0, "hold": 1.8, "inShort": true }
+      ],
+      "return": { "move": "cut", "seconds": 0 }
+    },
+    "conversation": {
+      "trigger": "conversation-started", "priority": 10, "mood": null,
+      "shots": [
+        { "framing": "over-the-shoulder", "subject": "speaker", "move": "ease", "ease": 0.45, "hold": 0.8, "inShort": true }
+      ],
+      "return": { "move": "ease", "seconds": 0.4 }
+    },
+    "first-room": {
+      "trigger": "floor-first-room", "priority": 20, "mood": null,
+      "shots": [
+        { "framing": "establishing", "subject": "arrival-room", "move": "ease", "ease": 0.6, "hold": 2.0, "inShort": true }
+      ],
+      "return": { "move": "ease", "seconds": 0.5 }
+    }
+  }
+}

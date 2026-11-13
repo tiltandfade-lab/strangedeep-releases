@@ -1,0 +1,6 @@
+{
+ "comment": "Which magic look a magic item wears in play (lane sigils, November 11; hand-written, the one home of these numbers). Adam, November 11, via the lead: 'we just need to by default turn the new stuff on'. Every identified magic item rolls one look from its own id (MagicLooks.ModeFor: FNV-1a of '<id>|magic-look' against these shares, so the same item always looks the same); an item with no magic, or not yet identified, draws nothing. The looks are MagicLooks.Looks (the shader's modes). Per kind: a shield, a worn armor piece, a bow. A bow has only its string band: the other looks draw on bodies and boards, and a bow's limbs are neither. The sigil's own spots and shares are sigil-looks.json. A PROPOSAL for Adam: the shares are the lane's pick.",
+ "shield": {"edge-band": 0.16, "lit-studs": 0.14, "stat-band": 0.12, "sigil": 0.22, "stitches": 0.1, "lining": 0.1, "full-gradient": 0.16},
+ "armor": {"edge-band": 0.16, "lit-studs": 0.12, "stat-band": 0.12, "sigil": 0.22, "stitches": 0.14, "lining": 0.12, "full-gradient": 0.12},
+ "bow": {"string-band": 1}
+}

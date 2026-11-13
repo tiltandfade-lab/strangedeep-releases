@@ -1,0 +1,76 @@
+{
+ "part": "animation-rig",
+ "builtBy": "tools/floor1-models/build_floor1_models.py",
+ "blender": "5.2.2 LTS",
+ "boundsGodotMetres": {
+  "min": [
+   -1.45,
+   0.0,
+   -0.32
+  ],
+  "max": [
+   1.45,
+   2.8,
+   0.32
+  ]
+ },
+ "triangles": 18792,
+ "materials": [
+  "f1m_iron",
+  "f1m_stone",
+  "f1m_stone_dark",
+  "f1m_wood",
+  "f1m_wood_dark"
+ ],
+ "front": "front (the hanging figure and the slab) faces Godot +Z",
+ "madeBy": [
+  {
+   "form": "two timber posts on sole plates",
+   "tool": "cubes, Bevel"
+  },
+  {
+   "form": "cross beam and two outrigger arms",
+   "tool": "cubes, Bevel"
+  },
+  {
+   "form": "corner braces",
+   "tool": "cubes rotated 45 degrees"
+  },
+  {
+   "form": "iron straps at the joints",
+   "tool": "cubes"
+  },
+  {
+   "form": "winch drum, axle and crank",
+   "tool": "cylinders and a cube"
+  },
+  {
+   "form": "marionette control cross",
+   "tool": "cubes, Bevel"
+  },
+  {
+   "form": "chains from the outriggers to the control cross",
+   "tool": "torus link, Array fit to length, Curve deform"
+  },
+  {
+   "form": "lay figure body, head and limbs",
+   "tool": "a twenty-one point stick skeleton under the Skin modifier and Subdivision Surface"
+  },
+  {
+   "form": "ball joints at shoulders, elbows, hips and knees",
+   "tool": "UV spheres"
+  },
+  {
+   "form": "strings to wrists, knees and head",
+   "tool": "torus link, Array fit to length, Curve deform"
+  },
+  {
+   "form": "meat hooks",
+   "tool": "bezier curves with a bevel depth, converted to mesh, on chains"
+  },
+  {
+   "form": "stone work slab on two blocks",
+   "tool": "cubes, Bevel"
+  }
+ ]
+}

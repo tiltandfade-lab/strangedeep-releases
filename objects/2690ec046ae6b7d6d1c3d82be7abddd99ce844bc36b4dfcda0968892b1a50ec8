@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "sl-coverall-top",
+  "displayName": "Coveralls (top)",
+  "layer": "starter",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "vertices": 1599,
+  "weightClass": "light",
+  "triangles": 3196,
+  "materials": [
+    "cloth"
+  ],
+  "materialSlots": [
+    "coverall",
+    "coverall-dark"
+  ],
+  "handles": [],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 7104.9,
+  "mass": 1065.73,
+  "countsTowardItem": true,
+  "boundsMm": [
+    1025.0,
+    320.4,
+    619.2
+  ],
+  "build": {
+    "family": "SM",
+    "familyName": "Starter masks",
+    "weightClass": "light",
+    "generator": "tools/armor-kit/build_starter_masks.py",
+    "library": "tools/armor-kit/armor_kit_lib.py",
+    "generatorSha256": "793a274c807cffacb840f791fd63d9b63701fe85c932481b4ad82693d4d6acee",
+    "librarySha256": "3b4fc8ef117a514acc48906bff7ca48d6e3fb8b4c76aa5a35cae6f31013e33ef",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "sl-coverall-top.glb",
+    "glbBytes": 134948,
+    "glbSha256": "85aa875527c5ae1f5cfb97104b34bb31e144a10cc8ec8e02cd3b9a043d4c2698",
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "starter-look lane output, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "sl-coverall-top.glb",
+      "targetNames": [],
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 320,
+        "clavicle_r": 320,
+        "hand_l": 147,
+        "hand_r": 161,
+        "head": 195,
+        "lowerarm_l": 325,
+        "lowerarm_r": 337,
+        "neck_01": 284,
+        "pelvis": 691,
+        "spine_01": 768,
+        "spine_02": 656,
+        "spine_03": 1014,
+        "thigh_l": 250,
+        "thigh_r": 242,
+        "upperarm_l": 380,
+        "upperarm_r": 405
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "rest",
+        "pass": true
+      }
+    ]
+  },
+  "notes": "Starter coveralls (Adam, September 29 and October 2). Every vertex carries the body's own bone blend, so it bends exactly like the skin under it."
+}

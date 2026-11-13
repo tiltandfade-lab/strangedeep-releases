@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "Trial for Adam's look (lane light-identity, November 12); off by default. STRANGEDEEP_SHADER_WALL_TRIAL=on draws the Cinder Eye straight wall from the shader with the cinder-eye set below, =variant with the variant set (the same shader for a second skin or biome, with no new texture).",
+  "shader": "res://shaders/shader_wall_trial_bake.gdshader",
+  "sources": ["res://assets/shared-modules/shell-v1-meshy/cinder-eye/A03-straight-wall.glb", "res://assets/shared-modules/shell-v1-meshy/cinder-eye/A03-straight-wall-damage-1.glb",
+    "res://assets/shared-modules/shell-v1-meshy/cinder-eye/A03-straight-wall-damage-2.glb", "res://assets/shared-modules/shell-v1-meshy/cinder-eye/A03-straight-wall-damage-3.glb"],
+  "sourcesNote": "The Cinder Eye straight wall the game draws: the level shell's wall and its damage states wearing the Cinder Eye Meshy texture (tools/level-shell/bake_meshy.py from concept-kit-v2/skins/cinder-eye/A03.glb).",
+  "size": 1024,
+  "sets": {
+    "cinder-eye": {
+      "stone_dark": "121110", "stone_light": "4e4842", "trim_color": "1e1b18", "trim_shadow": "0e0c0a", "soot_color": "0a0807", "ember_color": "8c3a10",
+      "panel_width": 1.0, "panel_height": 20.0, "field_bottom": 0.2, "cap_top": 1.0, "trim_width": 0.03, "groove_width": 0.012,
+      "stone_scale": 5.0, "streak": 4.0, "grain": 0.4, "contrast": 2.2, "crack_amount": 0.25, "soot_amount": 0.35, "grime_amount": 0.45, "ember_amount": 0.0,
+      "trim_metal": 0.35, "stone_roughness": 0.88, "trim_roughness": 0.55, "relief": 2.2, "seed": 0.0
+    },
+    "variant": {
+      "stone_dark": "3b2f26", "stone_light": "7a6450", "trim_color": "4f8c7a", "trim_shadow": "24453b", "soot_color": "1a1410", "ember_color": "4f8c7a",
+      "panel_width": 1.0, "panel_height": 20.0, "field_bottom": 0.2, "cap_top": 1.0, "trim_width": 0.03, "groove_width": 0.012,
+      "stone_scale": 5.0, "streak": 4.0, "grain": 0.3, "contrast": 1.6, "crack_amount": 0.35, "soot_amount": 0.2, "grime_amount": 0.5, "ember_amount": 0.0,
+      "trim_metal": 0.6, "stone_roughness": 0.9, "trim_roughness": 0.45, "relief": 2.2, "seed": 3.0
+    }
+  }
+}

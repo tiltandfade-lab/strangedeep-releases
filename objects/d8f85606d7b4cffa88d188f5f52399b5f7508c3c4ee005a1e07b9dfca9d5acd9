@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "note": "Retro colour curves (lane retro-curves; Adam, October 28: \"we should have variations of retro\", \"we don't want to change the ps1 style shifting or vertex snapping, just the actual color curves\"). Each preset is one stage in the Retro frame pass, before the palette cut: per-channel curves through five control points (the values at 0, 0.25, 0.5, 0.75 and 1; identity is 0, 0.25, 0.5, 0.75, 1), split toning (shadow and highlight colours with amounts and a balance) and a partial gradient map (two to five stops by brightness, blended 0 to 0.5). Resolution, vertex snapping, texture warp, the 32 levels, the ordered dither and the texture palette cut are not here and never change. today is today's Retro (the stage is skipped) and stays the default; the others are selectable (STRANGEDEEP_RETRO_CURVE or --retro-curve=<name>). Colours of d and e come from the palette study (docs/production/palette-shape-study-2026-10-27/families.json).",
+  "default": "today",
+  "presets": {
+    "today": { "label": "Today's Retro", "words": "the look as it is" },
+    "warm-cool": {
+      "label": "a. Warm shadows, cool highlights", "words": "amber in the dark, moonlight on the tops",
+      "curves": { "r": [0, 0.26, 0.5, 0.74, 0.98], "g": [0, 0.25, 0.5, 0.75, 1], "b": [0, 0.24, 0.5, 0.76, 1] },
+      "split": { "shadow": [1.0, 0.72, 0.48], "shadowAmount": 0.35, "highlight": [0.62, 0.8, 1.0], "highlightAmount": 0.25, "balance": 0 }
+    },
+    "torch": {
+      "label": "b. Cool shadows, amber highlights (Floor 1 torch)", "words": "blue dark, torchlit tops",
+      "curves": { "r": [0, 0.24, 0.51, 0.78, 1], "g": [0, 0.25, 0.5, 0.75, 0.99], "b": [0, 0.25, 0.49, 0.72, 0.96] },
+      "split": { "shadow": [0.52, 0.66, 1.0], "shadowAmount": 0.3, "highlight": [1.0, 0.72, 0.38], "highlightAmount": 0.3, "balance": 0.1 }
+    },
+    "lacquer": {
+      "label": "c. Lacquer (Floor 2)", "words": "oxblood toe, red-amber mids, a glossy hard shoulder",
+      "curves": { "r": [0.02, 0.27, 0.53, 0.84, 1], "g": [0, 0.21, 0.46, 0.79, 1], "b": [0, 0.2, 0.43, 0.75, 0.98] },
+      "split": { "shadow": [0.43, 0.18, 0.15], "shadowAmount": 0.35, "highlight": [0.87, 0.55, 0.25], "highlightAmount": 0.2, "balance": -0.1 }
+    },
+    "verdigris-bone": {
+      "label": "d. Verdigris and bone", "words": "Adam's Verdigris and Cream family: teal stone, bone light",
+      "curves": { "r": [0, 0.24, 0.49, 0.76, 1], "g": [0, 0.26, 0.51, 0.76, 1], "b": [0, 0.26, 0.5, 0.74, 0.97] },
+      "gradient": { "stops": [ { "at": 0, "colour": "#2a3943" }, { "at": 0.35, "colour": "#53838a" }, { "at": 0.65, "colour": "#8abbc1" }, { "at": 1, "colour": "#e8dcc0" } ], "blend": 0.3 }
+    },
+    "lavender-sage": {
+      "label": "e. Lavender stone, sage light", "words": "Adam's Lavender and Sage on Charcoal family",
+      "curves": { "r": [0, 0.25, 0.5, 0.75, 1], "g": [0, 0.25, 0.5, 0.75, 1], "b": [0, 0.25, 0.5, 0.75, 1] },
+      "split": { "shadow": [0.65, 0.635, 0.81], "shadowAmount": 0.35, "highlight": [0.58, 0.66, 0.48], "highlightAmount": 0.3, "balance": 0 },
+      "gradient": { "stops": [ { "at": 0, "colour": "#2e2e2e" }, { "at": 0.25, "colour": "#4d4d4b" }, { "at": 0.55, "colour": "#a6a2cf" }, { "at": 1, "colour": "#94a97a" } ], "blend": 0.2 }
+    },
+    "foreboding": {
+      "label": "f. Foreboding", "words": "a crushed toe and high contrast",
+      "curves": { "r": [0, 0.15, 0.48, 0.82, 1], "g": [0, 0.15, 0.48, 0.82, 1], "b": [0, 0.16, 0.49, 0.82, 1] },
+      "split": { "shadow": [0.6, 0.7, 1.0], "shadowAmount": 0.15, "highlight": [1, 1, 1], "highlightAmount": 0, "balance": 0 }
+    }
+  }
+}
