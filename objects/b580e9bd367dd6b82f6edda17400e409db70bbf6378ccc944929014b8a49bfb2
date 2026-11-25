@@ -1,0 +1,90 @@
+{
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "prop": "archive-lectern",
+  "script": "tools/world-paint/bake_base_map.py",
+  "blender": "5.2.2 LTS",
+  "runtime": {
+    "path": "godot/assets/model-candidates/retained-cathedral-donors/archive-lectern/archive-lectern-runtime.glb",
+    "sha256": "42acdbd101812525bb3c1c460c241d234236da664166345c9e4d1bbd460b5d29",
+    "parts": [
+      "M053-A-frame-03",
+      "M053-A-storage-02",
+      "M053-A-writing-slab-01"
+    ],
+    "triangles": 754
+  },
+  "meshy": {
+    "path": "source-assets/meshy/room-props-retexture/2026-11-19/archive-lectern/provider-source/Meshy_AI__1119024529_texture.glb@origin/lane/meshy-retexture-trial",
+    "sha256": "f5d213f6c790804cea96df58b3c0bb033d7866363124c60baa2009db93abfb65",
+    "triangles": 754,
+    "map": "Image_0",
+    "mapSize": [
+      2048,
+      2048
+    ]
+  },
+  "boundsMisfitMetres": 0.0,
+  "fit": {
+    "scale": 0.46,
+    "axisScales": [
+      0.46,
+      0.46,
+      0.46
+    ],
+    "offsetMetres": [
+      -0.0,
+      0.0,
+      0.46
+    ]
+  },
+  "status": "pending review (docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance)",
+  "uv": {
+    "layout": "new atlas",
+    "overlap": null,
+    "why": "our mesh has no UV map"
+  },
+  "weldedCorners": {
+    "M053-A-frame-03": 445,
+    "M053-A-storage-02": 525,
+    "M053-A-writing-slab-01": 494
+  },
+  "fillColour": [
+    0.3444,
+    0.2331,
+    0.1571
+  ],
+  "nearTexelShare": 0.6114,
+  "nearExtrusionMetres": 0.002,
+  "grazing": {
+    "ourTexels": 2564566,
+    "grazingTexels": 47352,
+    "share": 0.0185,
+    "patchAt": [
+      1392,
+      1008
+    ],
+    "patchSize": 192,
+    "grazeCos": 0.8
+  },
+  "method": "bake: our parts unwrapped into one Smart UV Project atlas, the Meshy map baked onto it selected-to-active (emission, Cycles CPU, 4 samples)",
+  "gapMetres": {
+    "median": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "vertices": 1923
+  },
+  "cageExtrusionMetres": 0.002,
+  "maxRayDistanceMetres": 0.004,
+  "outputs": {
+    "glb": {
+      "path": "godot/assets/world-paint/base-maps/archive-lectern/archive-lectern-uv.glb",
+      "sha256": "d8624f53b4821f2b375650af2e2e427bc67b2b605d543de48877da78b2c458be"
+    },
+    "map": {
+      "path": "godot/assets/world-paint/base-maps/archive-lectern/archive-lectern-base.png",
+      "sha256": "481f7ca06d85d48db801c2ba6d5b371d2b95ec27635392152e98df713f0a24d9",
+      "size": 2048
+    }
+  }
+}

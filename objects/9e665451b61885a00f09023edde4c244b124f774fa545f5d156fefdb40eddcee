@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "id": "light-hakama",
+  "displayName": "Hakama",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "leg",
+  "slot": "legs",
+  "attach": "soft",
+  "bones": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "foot_l",
+    "foot_r",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r"
+  ],
+  "allowedRegions": [
+    "pelvis"
+  ],
+  "defaultRegion": "pelvis",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      0.9383,
+      0.2083
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "shallow pleats, narrow legs",
+      "at1": "deep pleats, full legs",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.0005,
+          0.5752,
+          0.2105
+        ],
+        "end": [
+          -0.0007,
+          0.5753,
+          0.2348
+        ],
+        "lengthMm": 24.33
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "straight hem",
+      "at1": "flared hem",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.323,
+          0.0846,
+          0.0145
+        ],
+        "end": [
+          0.3549,
+          0.0842,
+          0.0145
+        ],
+        "lengthMm": 31.93
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "BoneLength",
+      "at0": "to the ankle bone",
+      "at1": "over the instep",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.084,
+          0.1332,
+          -0.197
+        ],
+        "end": [
+          0.084,
+          0.0576,
+          -0.197
+        ],
+        "lengthMm": 75.66
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 6168.4,
+  "mass": 925.26,
+  "weightClass": "light",
+  "triangles": 11648,
+  "complexity": 117,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "garment",
+    "hakama"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "light-hakama.glb",
+    "glbSha256": "71c96531c59fb020d7bd6b2331c783f3c2d37d626a9f9a7ac1646df7cc2148f4",
+    "glbBytes": 1782368,
+    "generator": "tools/armor-kit/garments/build_garments.py",
+    "generatorSha256": "481f6a5c51457901b2b8db5e6e71a91fd711a395a50ce5c7d658c8f14d3bc799",
+    "library": "tools/armor-kit/garments/cage.py",
+    "librarySha256": "d18e5d1e17baca78b4794d19d3f47e5d6d133c22b97d4bcd582fb55e11ba5b7c",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "a box-modelled cage (rings of control points, the arms extruded from the trunk's side faces with Blender's extrude), its hem rings moved for the folds, under a Subdivision Surface; Shrinkwrap (outside) and Smooth fit the shoulders and chest over the body; Solidify gives the cloth its thickness; Data Transfer and vertex group Smooth give it the body's bone weights. Handles: the same cage with moved control points through the same stack.",
+    "specs": {
+      "robes": "tools/armor-kit/garments/robes.py",
+      "robesSha256": "f095c842fcbf84a8904af822f4528938c4ee9c5018a7bc7e2b67ebb67f6e8ae3",
+      "clothes": "tools/armor-kit/garments/clothes.py",
+      "clothesSha256": "e326ae89d49af274b40a927bafbeb5366d7600a1dc68b2e388aa9af4f4f91662"
+    }
+  },
+  "verification": {
+    "glb": {
+      "file": "light-hakama.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1",
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 7019,
+          "triangles": 11648,
+          "targets": 12,
+          "material": 0
+        }
+      ],
+      "triangles": 11648,
+      "vertices": 7019,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.0109,
+          "verticesMoved": 6873
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00545,
+          "verticesMoved": 6873
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00672,
+          "verticesMoved": 6873
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.01343,
+          "verticesMoved": 6873
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.01396,
+          "verticesMoved": 2676
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.00698,
+          "verticesMoved": 2676
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.00898,
+          "verticesMoved": 2676
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.01796,
+          "verticesMoved": 2571
+        },
+        "BoneLength@0": {
+          "maxDeltaM": 0.04543,
+          "verticesMoved": 2571
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.0227,
+          "verticesMoved": 2676
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.01512,
+          "verticesMoved": 2569
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.03023,
+          "verticesMoved": 2571
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "ball_l": 168,
+        "ball_r": 168,
+        "calf_l": 1372,
+        "calf_r": 1408,
+        "foot_l": 849,
+        "foot_r": 467,
+        "pelvis": 3252,
+        "spine_01": 2454,
+        "spine_02": 904,
+        "spine_03": 494,
+        "thigh_l": 2518,
+        "thigh_r": 2565
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.77,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.8,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.83,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.85,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.88,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.91,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 19.04,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 17.96,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.82,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 14.84,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.77,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 7.47,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 18.86,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "docs/production/light-gear-2026-11-11/references/REFERENCES.md (hakama: the Met's 09.188, 1991.135 and 1999.247.3; the standard pleat count, five front and two back; the worn photos worn-*.jpg and the three-panel pattern for the hang); Adam, October 31: \"the samurai pants are pretty sick and would make for good light armor too\"; November 12: \"hakama got a weird groin thing going on\", \"dubble bubble butt\"",
+    "fit": "close at the waist under the ties (front 3.6 cm lower than the back), then a straight A-line: waist : hip : hem 1 : 1.27 : 1.82 across and 1 : 1.27 : 1.46 front to back (the worn references 1.33, 1.85 and 1.16, 1.53); seven knife pleats; a slit at each hip; the legs part at 0.40 m and overlap so no gap shows; no seat shape; the ties two 4 cm wraps; the koshi-ita a 20 by 8.5 cm board",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "narrow",
+      "plain",
+      "full"
+    ],
+    "RadiusBottom": [
+      "straight",
+      "plain",
+      "flared"
+    ],
+    "BoneLength": [
+      "short",
+      "to the ankle",
+      "long"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

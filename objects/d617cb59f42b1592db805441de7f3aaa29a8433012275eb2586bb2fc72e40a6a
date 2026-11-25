@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "status": "Founder decision (Adam, October 7): a normal launch mixes the finished skins by district (neighbouring rooms, one skin each), with equal weights, and Cathedral joins as a fourth skin; the brick arch stands in Cathedral districts by default (at most one per room; STRANGEDEEP_ARCH_TRIAL=off removes it). Presentation only: nothing here reaches a rule, save or rules random stream. Plan: scratch/rulings-2026-10-07/CINDER-DEFAULT-PLAN.md, Phase 1.",
+  "note": "The one place the default look is set. Godot reads it (DefaultSkinMix) and passes it to the rules program it starts (STRANGEDEEP_SHARED_MODULE_STYLE=hostStyle, STRANGEDEEP_FLOOR_COMPOSITION=id) when neither setting was given. Naming any style (neutral-greybox-v1 for the grey kit) or composition keeps today's behaviour for that name. Which skins a floor's districts wear, and how often, is that floor's recipe (godot/resources/floor-recipes.json, November 16: the floor identity plan); this file names the skins the recipes weigh. With the recipe's rollback switch (STRANGEDEEP_FLOOR_RECIPE=off) the district skins are a seeded shuffle of the list below, each equally likely.",
+  "id": "districts-v1",
+  "hostStyle": "opal-lanternhouse",
+  "skins": ["opal-lanternhouse", "pendulum-conservatory", "cathedral", "cinder-eye"],
+  "maxDistricts": 3,
+  "archTrial": true
+}

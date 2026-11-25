@@ -1,0 +1,577 @@
+{
+  "schemaVersion": 1,
+  "id": "light-smock",
+  "displayName": "Peasant smock",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "chest",
+  "slot": "chest",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "lowerarm_l",
+    "lowerarm_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "allowedRegions": [
+    "spine_03"
+  ],
+  "defaultRegion": "spine_03",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.1579,
+      0.2042
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "plain",
+      "at1": "full and gathered",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1658,
+          1.27,
+          0.0494
+        ],
+        "end": [
+          0.2228,
+          1.2867,
+          0.0404
+        ],
+        "lengthMm": 60.12
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "RadiusBottom",
+      "at0": "to mid-thigh",
+      "at1": "to the knee",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.283,
+          0.7,
+          0.0225
+        ],
+        "end": [
+          0.3005,
+          0.52,
+          0.0224
+        ],
+        "lengthMm": 180.85
+      },
+      "animation": {
+        "name": "RadiusBottom",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "BoneLength",
+      "at0": "rolled up",
+      "at1": "long",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.3954,
+          1.1233,
+          0.0785
+        ],
+        "end": [
+          -0.4675,
+          1.0549,
+          0.1802
+        ],
+        "lengthMm": 142.25
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 9740.5,
+  "mass": 1461.08,
+  "weightClass": "light",
+  "triangles": 7232,
+  "complexity": 73,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "garment",
+    "shirt",
+    "smock"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "light-smock.glb",
+    "glbSha256": "f56cad3f4ceb7eee0e0a19b40f516158d0191b524ec7b85f3ad046ce1a94df3f",
+    "glbBytes": 1027396,
+    "generator": "tools/armor-kit/garments/build_garments.py",
+    "generatorSha256": "481f6a5c51457901b2b8db5e6e71a91fd711a395a50ce5c7d658c8f14d3bc799",
+    "library": "tools/armor-kit/garments/cage.py",
+    "librarySha256": "d18e5d1e17baca78b4794d19d3f47e5d6d133c22b97d4bcd582fb55e11ba5b7c",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "a box-modelled cage (rings of control points, the arms extruded from the trunk's side faces with Blender's extrude), its hem rings moved for the folds, under a Subdivision Surface; Shrinkwrap (outside) and Smooth fit the shoulders and chest over the body; Solidify gives the cloth its thickness; Data Transfer and vertex group Smooth give it the body's bone weights. Handles: the same cage with moved control points through the same stack.",
+    "specs": {
+      "robes": "tools/armor-kit/garments/robes.py",
+      "robesSha256": "f095c842fcbf84a8904af822f4528938c4ee9c5018a7bc7e2b67ebb67f6e8ae3",
+      "clothes": "tools/armor-kit/garments/clothes.py",
+      "clothesSha256": "e326ae89d49af274b40a927bafbeb5366d7600a1dc68b2e388aa9af4f4f91662"
+    }
+  },
+  "verification": {
+    "glb": {
+      "file": "light-smock.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "RadiusBottom@0",
+        "RadiusBottom@0.25",
+        "RadiusBottom@0.75",
+        "RadiusBottom@1",
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 4101,
+          "triangles": 7232,
+          "targets": 12,
+          "material": 0
+        }
+      ],
+      "triangles": 7232,
+      "vertices": 4101,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.01624,
+          "verticesMoved": 3585
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00812,
+          "verticesMoved": 3566
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00949,
+          "verticesMoved": 3573
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.05701,
+          "verticesMoved": 3589
+        },
+        "RadiusBottom@0": {
+          "maxDeltaM": 0.09,
+          "verticesMoved": 1800
+        },
+        "RadiusBottom@0.25": {
+          "maxDeltaM": 0.045,
+          "verticesMoved": 1713
+        },
+        "RadiusBottom@0.75": {
+          "maxDeltaM": 0.045,
+          "verticesMoved": 1760
+        },
+        "RadiusBottom@1": {
+          "maxDeltaM": 0.09,
+          "verticesMoved": 1816
+        },
+        "BoneLength@0": {
+          "maxDeltaM": 0.08684,
+          "verticesMoved": 1085
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.04427,
+          "verticesMoved": 1061
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.00984,
+          "verticesMoved": 996
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.0192,
+          "verticesMoved": 1030
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "RadiusBottom": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 728,
+        "clavicle_r": 715,
+        "hand_l": 97,
+        "hand_r": 97,
+        "head": 302,
+        "lowerarm_l": 420,
+        "lowerarm_r": 420,
+        "neck_01": 793,
+        "pelvis": 995,
+        "spine_01": 866,
+        "spine_02": 862,
+        "spine_03": 1945,
+        "thigh_l": 653,
+        "thigh_r": 655,
+        "upperarm_l": 826,
+        "upperarm_r": 836
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "RadiusBottom=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.54,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.99,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.22,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.11,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.81,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.42,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.87,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 3.44,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "docs/production/light-gear-2026-11-11/references/REFERENCES.md (tunic-shirt: the Met's smock C.I.52.39: a smocked chest panel, a deep gathered skirt, full sleeves gathered into cuffs)",
+    "fit": "the shoulders shrinkwrapped 10 mm over the body, the panel and waist drawn three quarters onto it down to the seat; the skirt and the sleeves stand on their rings, the skirt over the loosest trousers",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "plain",
+      "gathered",
+      "full"
+    ],
+    "RadiusBottom": [
+      "mid-thigh",
+      "above the knee",
+      "to the knee"
+    ],
+    "BoneLength": [
+      "rolled up",
+      "to the wrist",
+      "long"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "stringling",
+  "label": "Stringling",
+  "builtBy": "tools/stringling/build_stringling.py",
+  "source": {
+    "path": "godot/assets/characters/stringling/review/stringling-retopo-voxel-t15000.glb",
+    "sha256": "68630269ed5702751c7e06ef145d18387301bf75a60585f7fc12943bc1ef22d5"
+  },
+  "file": "stringling.glb",
+  "sha256": "4b3deeddaab21ba0f098531e4cdcb0d5a995baabf02bd9ba253865ca570e031a",
+  "heightMetres": 0.9144,
+  "skeleton": {
+    "own": true,
+    "reason": "A 3-foot puppet with a head a quarter of its height and near-equal arms and legs, moving on all fours: the hero master skeleton's adult proportions and upright motions do not fit it.",
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "shoulder.L",
+      "upperarm.L",
+      "forearm.L",
+      "hand.L",
+      "fingers.L",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "toes.L",
+      "shoulder.R",
+      "upperarm.R",
+      "forearm.R",
+      "hand.R",
+      "fingers.R",
+      "thigh.R",
+      "shin.R",
+      "foot.R",
+      "toes.R"
+    ],
+    "feet": [
+      "toes.L",
+      "toes.R",
+      "fingers.L",
+      "fingers.R"
+    ]
+  },
+  "weights": {
+    "method": "bone heat on a 6 mm voxel remesh copy, copied by nearest face; at most 4 bones a point; smoothed where the crawl stretched an edge past 2x",
+    "points": 19943,
+    "crawlEdgesStretchedPast2xBeforeSmooth": 139,
+    "after": 24
+  },
+  "clips": {
+    "idle": {
+      "frames": 60,
+      "seconds": 2.0,
+      "loop": true,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 6.15
+    },
+    "skitter": {
+      "frames": 16,
+      "seconds": 0.5333,
+      "loop": true,
+      "lowestPointMetres": 0.0022,
+      "worstEdgeStretch": 6.41,
+      "groundSpeedMetresPerSecond": 0.6,
+      "plantedSlipMetresPerFrame": 1e-05,
+      "plantedSteps": 30
+    },
+    "claw": {
+      "frames": 30,
+      "seconds": 1.0,
+      "loop": false,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 7.51,
+      "contactFrame": 15
+    },
+    "hit": {
+      "frames": 14,
+      "seconds": 0.4667,
+      "loop": false,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 6.68
+    },
+    "hit_standing": {
+      "frames": 16,
+      "seconds": 0.5333,
+      "loop": false,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 6.77
+    },
+    "death": {
+      "frames": 40,
+      "seconds": 1.3333,
+      "loop": false,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 6.91
+    },
+    "death_standing": {
+      "frames": 40,
+      "seconds": 1.3333,
+      "loop": false,
+      "lowestPointMetres": 0.0023,
+      "worstEdgeStretch": 6.46
+    }
+  }
+}

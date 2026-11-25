@@ -1,0 +1,30 @@
+{
+  "id": "damaged-plaster-scan",
+  "kind": "wall",
+  "input": "scan",
+  "tileCells": 1.21875,
+  "tilePixels": 156,
+  "texelsPerCell": 128,
+  "periodMetres": 1.85,
+  "mortarLevel": 0.8263,
+  "stones": 250,
+  "mergedRegions": 5,
+  "mortarShare": 0.1726,
+  "heightFromNormal": false,
+  "wang": "16 tiles, 2 colours per edge; index = n*8 + e*4 + s*2 + w; column index % 4, row index // 4",
+  "stoneKey": {
+    "numbers": 42,
+    "parts": "0 north, 1 east, 2 south, 3 west, 4 corner, 5 merged",
+    "byte": "1 + part * numbers + number; 0 mortar",
+    "largestPiece": 0.1082,
+    "largestPieceMax": 0.15
+  },
+  "edgeCheck": {
+    "matchResidual": 0.05,
+    "worstMatchingEdge": 0.0,
+    "seamRatio": 1.0,
+    "mismatchedControlMin": 3.329,
+    "pass": true
+  },
+  "standIn": false
+}

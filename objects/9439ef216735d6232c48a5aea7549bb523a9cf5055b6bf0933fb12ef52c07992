@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "note": "Big kit creatures (lane champion-suit, November 17; phase 2 of docs/production/champion-brief-2026-11-17/BRIEF.md): a hostile drawn as the hero's own rig and motions scaled by `scale`, its body hidden, dressed in an armour kit set (`set`, placed as the set was saved, plus any `add` blocks for this kind only, in the saved set's block form; the set file stays as saved) and holding `weapon` (a registered weapon definition, held by the hero's own holding code with its saved grip). Presentation only: no rule, number or save reads this file. A figure takes a kind from its actor's `bigKit` field; no rule sends that field yet, so no fight in the game draws one (the Floor 3 boss phase seats it; it is on the built-but-unreachable list until then). Read by godot/src/CombatLabHuman.BigKit.cs. `walk`, `stand` and `strike` name the kind's own clips from the champion library (champion-motions.res, lane champion-motion, November 18); without them it plays its loadout's. Its `strike` replaces its weapon's own swing and plays on its own clock (2.25 times the hero's), the hit landing at the clip's contact.",
+  "kinds": [
+    {
+      "id": "empty-champion",
+      "what": "Floor 3's boss: an empty heavy suit twice a hero's height on a 2x2 square (Adam, November 16)",
+      "scale": 2,
+      "footprint": "2x2",
+      "set": "res://assets/armor-kit/f1/sets/demo-heavy-f1-placement.json",
+      "weapon": "item-definition_c7d1c93058a59f16",
+      "walk": "champion-great-sword-walk",
+      "stand": "champion-great-sword-idle",
+      "strike": "champion-great-sword-strike",
+      "add": [
+        {
+          "part": "f1-greave-l",
+          "mirror": true,
+          "scale": 1.0,
+          "handles": {
+            "RadiusTop": 0.5,
+            "BoneLength": 0.5,
+            "Detail": 0.5
+          },
+          "why": "the heavy set has no greave: with no body inside, the shin between poleyn and boot showed the floor (lane champion-leg-plates, November 18; the lead's go)"
+        }
+      ]
+    }
+  ]
+}

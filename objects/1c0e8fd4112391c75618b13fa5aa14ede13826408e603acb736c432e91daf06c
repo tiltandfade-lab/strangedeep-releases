@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "kind": "camp-clothes",
+  "why": "What the camp's people wear (godot/src/CampFigures.cs reads this). Each camper rolls one trade's work outfit from its fire's cell; a slot the trade leaves out is rolled from that slot's plain options, and a slot it names empty is worn bare. The blacksmith wears the smith's outfit. Parts are Armor Kit part ids (godot/assets/armor-kit/f1/hero). Lane camp-wardrobe, November 16: the weekend's Meshy work clothes fitted as kit parts (tools/camp-wardrobe/build_camp_wardrobe.py; work record docs/production/camp-wardrobe-2026-11/README.md).",
+  "plain": {
+    "helm": [["hero/light-hood"], ["hero/light-head-wrap"], ["hero/wardrobe-turban"]],
+    "chest": [["hero/light-leather-jerkin"], ["hero/light-leather-jerkin-v2"], ["hero/light-tunic-belted", "hero/light-tunic-belted-skirt-front", "hero/light-tunic-belted-skirt-back"], ["hero/light-shirt", "hero/light-vest"], ["hero/light-shirt"], ["hero/light-smock"], ["hero/light-shirt", "hero/light-jerkin"]],
+    "legs": [["hero/light-trousers-loose"], ["hero/light-trousers-loose", "hero/light-belt"]],
+    "feet": [["hero/light-boot-wrapped-l", "hero/light-boot-wrapped-r"]]
+  },
+  "trades": [
+    {
+      "id": "cook",
+      "outfit": {
+        "chest": ["hero/work-shirt-rolled", "hero/work-apron-bib"],
+        "legs": ["hero/work-breeches"],
+        "feet": ["hero/work-turnshoe-l", "hero/work-turnshoe-r"]
+      }
+    },
+    {
+      "id": "mender",
+      "outfit": {
+        "chest": ["hero/work-wrap-blouse"],
+        "legs": ["hero/work-skirt-gathered", "hero/work-thread-spool", "hero/work-tailor-shears"],
+        "feet": ["hero/work-turnshoe-l", "hero/work-turnshoe-r"]
+      }
+    },
+    {
+      "id": "porter",
+      "outfit": {
+        "chest": ["hero/work-shirt-rolled", "hero/work-backframe"],
+        "legs": ["hero/work-breeches"],
+        "feet": ["hero/work-boot-calf-l", "hero/work-boot-calf-r"]
+      }
+    },
+    {
+      "id": "healer",
+      "outfit": {
+        "chest": ["hero/work-wrap-blouse", "hero/work-overdress"],
+        "legs": ["hero/work-tool-carrier"],
+        "feet": ["hero/work-boot-cuffed-l", "hero/work-boot-cuffed-r"]
+      }
+    },
+    {
+      "id": "washer",
+      "outfit": {
+        "chest": ["hero/work-shirt-rolled", "hero/work-overdress"],
+        "legs": [],
+        "feet": ["hero/work-turnshoe-l", "hero/work-turnshoe-r"]
+      }
+    }
+  ],
+  "blacksmith": {
+    "chest": ["hero/work-shirt-rolled"],
+    "legs": ["hero/work-breeches", "hero/work-apron-split"],
+    "feet": ["hero/work-boot-ankle-l", "hero/work-boot-ankle-r"]
+  }
+}

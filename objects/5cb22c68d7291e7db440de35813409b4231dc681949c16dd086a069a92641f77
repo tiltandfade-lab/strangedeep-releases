@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "id": "work-glass-shoulder",
+  "displayName": "Glass shoulder segment",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "shoulder",
+  "slot": "chest",
+  "attach": "soft",
+  "bones": [
+    "upperarm_l"
+  ],
+  "allowedRegions": [
+    "upperarm_l"
+  ],
+  "defaultRegion": "upperarm_l",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.2945,
+      1.393,
+      0.0447
+    ],
+    "normal": [
+      1.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "smaller",
+      "at1": "larger",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.2904,
+          1.3832,
+          -0.0639
+        ],
+        "end": [
+          0.2895,
+          1.381,
+          -0.088
+        ],
+        "lengthMm": 24.25
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "metal"
+  },
+  "materialClasses": [
+    "metal"
+  ],
+  "coverageCm2": 78.2,
+  "mass": 78.2,
+  "weightClass": "light",
+  "triangles": 1572,
+  "complexity": 16,
+  "mutateTags": [
+    "light",
+    "glass",
+    "curio"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "work-glass-shoulder.glb",
+    "glbSha256": "585a6e486afd1c5b51392664d8f8968c2823df8e0c97e2c8dafec40f6248c2c6",
+    "glbBytes": 215008,
+    "generator": "tools/camp-wardrobe/build_camp_wardrobe.py",
+    "generatorSha256": "8f9bd29bddc45359ef315d5f85479b852a3dc807669777e23394ac322a91ffc1",
+    "library": "tools/camp-wardrobe/fit.py",
+    "librarySha256": "c514af3494bdc8fe3c80bf740c3ca44fabfbdba06bf3904360446467dbc6d9cd",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "the Meshy piece welded (every piece kept), Decimated to budget; Rotate, one Scale to its measured size and Translate to its seat on the body, a set gap off the skin; Shrinkwrap (outside) clear of the body and of what it is worn over; Solidify where it is open; carried whole by one bone. Handles: Scale about its middle (size), cleared again.",
+    "source": "source-assets/accessories/narrative-glass-shoulder-segment/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "sourceSha256": "59fe865f79239c484d52c55a5abb2ad189921962363a87362411c7edd5605533"
+  },
+  "verification": {
+    "glb": {
+      "file": "work-glass-shoulder.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1610,
+          "triangles": 1572,
+          "targets": 4,
+          "material": 0
+        }
+      ],
+      "triangles": 1572,
+      "vertices": 1610,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.01211,
+          "verticesMoved": 1610
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00605,
+          "verticesMoved": 1610
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00605,
+          "verticesMoved": 1610
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.01211,
+          "verticesMoved": 1610
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "upperarm_l": 1610
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.7,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 11.32,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 11.2,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 11.1,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.85,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.66,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.74,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.71,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 9.57,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 11.32,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 9.57,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 10.7,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "references.md: Unsourced and weak (no period glass shoulder piece; a lamellar shoulder guard's shape)",
+    "source": "source-assets/accessories/narrative-glass-shoulder-segment/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "fit": "fitted over the body by Shrinkwrap 6 mm",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "small",
+      "plain",
+      "large"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

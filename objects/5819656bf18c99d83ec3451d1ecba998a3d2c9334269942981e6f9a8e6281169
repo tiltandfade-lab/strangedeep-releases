@@ -1,0 +1,86 @@
+{
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "prop": "stone-altar",
+  "script": "tools/world-paint/bake_base_map.py",
+  "blender": "5.2.2 LTS",
+  "runtime": {
+    "path": "godot/assets/level-dressing/floor1-models/stone-altar/stone-altar-runtime.glb",
+    "sha256": "b0b3fccdeca0f61324053bab60f489276034eab6d90cadd971f31f21fcd29c59",
+    "parts": [
+      "stone-altar"
+    ],
+    "triangles": 2530
+  },
+  "meshy": {
+    "path": "source-assets/meshy/room-props-retexture/2026-11-19/stone-altar/provider-source/Meshy_AI__1119024351_texture.glb@origin/lane/meshy-retexture-trial",
+    "sha256": "36df93ac43eb94d7ba18d0c6d316e168cdbc4fbd115a94d59131aaa19a51ea8c",
+    "triangles": 2526,
+    "map": "Image_0",
+    "mapSize": [
+      2048,
+      2048
+    ]
+  },
+  "boundsMisfitMetres": 0.0,
+  "fit": {
+    "scale": 0.9,
+    "axisScales": [
+      0.9,
+      0.9,
+      0.9
+    ],
+    "offsetMetres": [
+      0.0,
+      -0.014,
+      0.8
+    ]
+  },
+  "status": "pending review (docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance)",
+  "uv": {
+    "layout": "new atlas",
+    "overlap": 0.9999,
+    "why": "our UV map stacks or mirrors faces"
+  },
+  "weldedCorners": {
+    "stone-altar": 3173
+  },
+  "fillColour": [
+    0.5977,
+    0.512,
+    0.3943
+  ],
+  "nearTexelShare": 0.7918,
+  "nearExtrusionMetres": 0.002,
+  "grazing": {
+    "ourTexels": 3320994,
+    "grazingTexels": 387556,
+    "share": 0.1167,
+    "patchAt": [
+      432,
+      1344
+    ],
+    "patchSize": 192,
+    "grazeCos": 0.8
+  },
+  "method": "bake: our parts unwrapped into one Smart UV Project atlas, the Meshy map baked onto it selected-to-active (emission, Cycles CPU, 4 samples)",
+  "gapMetres": {
+    "median": 0.0,
+    "p99": 0.0,
+    "max": 0.00077,
+    "vertices": 4466
+  },
+  "cageExtrusionMetres": 0.002,
+  "maxRayDistanceMetres": 0.004,
+  "outputs": {
+    "glb": {
+      "path": "godot/assets/world-paint/base-maps/stone-altar/stone-altar-uv.glb",
+      "sha256": "43ac80957264a6a066a074a4eacc1f259591c1cb07992fedcf00ac3866534d33"
+    },
+    "map": {
+      "path": "godot/assets/world-paint/base-maps/stone-altar/stone-altar-base.png",
+      "sha256": "a368ad4ece027fd24acdde4d5dab318c70a63729019fe353c61494fd8e416131",
+      "size": 2048
+    }
+  }
+}

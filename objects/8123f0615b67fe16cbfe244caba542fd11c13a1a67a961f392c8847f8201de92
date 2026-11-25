@@ -1,0 +1,87 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "armor-break",
+  "aliases": [
+    "preview-armor-break"
+  ],
+  "textKeys": {
+    "name": "ability.armor-break.name",
+    "summary": "ability.armor-break.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "armorBreaks",
+  "params": {"lastSharedSuppression": 65, "suppressionStep": 5, "baseEffectTurns": 2, "lastSharedLevel": 7},
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"chancePercent": 35, "suppressionPercent": 50, "effectTurns": 2}},
+    {"level": 2, "cost": 1, "numbers": {"chancePercent": 40, "suppressionPercent": 50, "effectTurns": 2}},
+    {"level": 3, "cost": 1, "numbers": {"chancePercent": 40, "suppressionPercent": 55, "effectTurns": 2}},
+    {"level": 4, "cost": 1, "numbers": {"chancePercent": 45, "suppressionPercent": 55, "effectTurns": 2}},
+    {"level": 5, "cost": 1, "numbers": {"chancePercent": 45, "suppressionPercent": 60, "effectTurns": 2}},
+    {"level": 6, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": 60, "effectTurns": 2}},
+    {"level": 7, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": 65, "effectTurns": 2}}
+  ],
+  "paths": {
+    "forkId": "reviewed-armor-break-path",
+    "level": 8,
+    "options": [
+      {
+        "id": "intensity",
+        "nameKey": "ability.armor-break.path.intensity",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": "lastSharedSuppression + suppressionStep * (lvl - lastSharedLevel)", "effectTurns": 2}},
+          {"level": 9, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": "lastSharedSuppression + suppressionStep * (lvl - lastSharedLevel)", "effectTurns": 2}},
+          {"level": 10, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": "lastSharedSuppression + suppressionStep * (lvl - lastSharedLevel)", "effectTurns": 2}}
+        ]
+      },
+      {
+        "id": "duration",
+        "nameKey": "ability.armor-break.path.duration",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": 65, "effectTurns": "baseEffectTurns + lvl - lastSharedLevel"}},
+          {"level": 9, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": 65, "effectTurns": "baseEffectTurns + lvl - lastSharedLevel"}},
+          {"level": 10, "cost": 1, "numbers": {"chancePercent": 50, "suppressionPercent": 65, "effectTurns": "baseEffectTurns + lvl - lastSharedLevel"}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId",
+      "itemId"
+    ]
+  },
+  "presentation": {
+    "key": "armor-break",
+    "clips": [
+      {"clip": "melee-downward"}
+    ],
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/armor-break.ts",
+    "src/floor/weapon-break.ts",
+    "src/floor/shield-break.ts",
+    "src/campaign/reviewed-armor-break.ts",
+    "src/campaign/reviewed-armor-break-content.ts",
+    "src/godot/campaign-reviewed-armor-break-session.ts",
+    "src/godot/campaign-reviewed-weapon-break-session.ts",
+    "src/godot/campaign-reviewed-shield-break-session.ts"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "./_schema.json",
+  "schemaVersion": 1,
+  "id": "crosscut",
+  "aliases": [
+    "preview-crosscut"
+  ],
+  "textKeys": {
+    "name": "ability.crosscut.name",
+    "summary": "ability.crosscut.summary"
+  },
+  "textKeysPending": true,
+  "listKey": "crosscuts",
+  "ranks": [
+    {"level": 1, "cost": 1, "numbers": {"damagePercent": 60, "accuracyBonus": 0, "criticalBonus": 0}},
+    {"level": 2, "cost": 1, "numbers": {"damagePercent": 65, "accuracyBonus": 0, "criticalBonus": 0}},
+    {"level": 3, "cost": 1, "numbers": {"damagePercent": 70, "accuracyBonus": 0, "criticalBonus": 0}},
+    {"level": 4, "cost": 1, "numbers": {"damagePercent": 70, "accuracyBonus": 5, "criticalBonus": 0}},
+    {"level": 5, "cost": 1, "numbers": {"damagePercent": 75, "accuracyBonus": 5, "criticalBonus": 0}},
+    {"level": 6, "cost": 1, "numbers": {"damagePercent": 80, "accuracyBonus": 5, "criticalBonus": 0}},
+    {"level": 7, "cost": 1, "numbers": {"damagePercent": 85, "accuracyBonus": 5, "criticalBonus": 0}}
+  ],
+  "paths": {
+    "forkId": "reviewed-crosscut-targeting",
+    "level": 8,
+    "options": [
+      {
+        "id": "focused",
+        "nameKey": "ability.crosscut.path.focused",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 85, "accuracyBonus": 5, "criticalBonus": 3}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 5, "criticalBonus": 3}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 5, "criticalBonus": 5}}
+        ]
+      },
+      {
+        "id": "split",
+        "nameKey": "ability.crosscut.path.split",
+        "ranks": [
+          {"level": 8, "cost": 1, "numbers": {"damagePercent": 85, "accuracyBonus": 5, "criticalBonus": 0}},
+          {"level": 9, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 5, "criticalBonus": 0}},
+          {"level": 10, "cost": 1, "numbers": {"damagePercent": 90, "accuracyBonus": 10, "criticalBonus": 0}}
+        ]
+      }
+    ]
+  },
+  "aim": {
+    "shape": "target",
+    "range": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "requestProperty": null,
+    "requestFields": [
+      "targetId",
+      "secondTargetId"
+    ]
+  },
+  "presentation": {
+    "key": "crosscut",
+    "clips": null,
+    "strikeDelay": null,
+    "effectRecipe": null,
+    "timingKey": null,
+    "timingPropertyPrefix": null,
+    "sound": null,
+    "actionCamera": false,
+    "travelMotion": false,
+    "knockback": [],
+    "icon": null,
+    "webEffectKind": null
+  },
+  "ai": null,
+  "ownFiles": [
+    "src/floor/crosscut.ts",
+    "src/floor/crosscut-source.ts",
+    "src/campaign/reviewed-crosscut.ts",
+    "src/campaign/reviewed-crosscut-content.ts",
+    "src/godot/campaign-reviewed-crosscut-session.ts"
+  ]
+}

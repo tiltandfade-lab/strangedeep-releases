@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "id": "work-apron-bib",
+  "displayName": "Bib apron",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "chest",
+  "slot": "chest",
+  "attach": "soft",
+  "bones": [
+    "clavicle_l",
+    "clavicle_r",
+    "neck_01",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "thigh_l",
+    "thigh_r",
+    "upperarm_l",
+    "upperarm_r"
+  ],
+  "allowedRegions": [
+    "spine_03"
+  ],
+  "defaultRegion": "spine_03",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.0,
+      1.1579,
+      0.1801
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "BoneLength",
+      "at0": "to the thigh",
+      "at1": "below the knee",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1278,
+          0.7896,
+          0.2217
+        ],
+        "end": [
+          0.1278,
+          0.6607,
+          0.2217
+        ],
+        "lengthMm": 128.94
+      },
+      "animation": {
+        "name": "BoneLength",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "cloth",
+    "1": "cloth"
+  },
+  "materialClasses": [
+    "cloth"
+  ],
+  "coverageCm2": 1299.6,
+  "mass": 194.94,
+  "weightClass": "light",
+  "triangles": 3328,
+  "complexity": 34,
+  "mutateTags": [
+    "light",
+    "cloth",
+    "apron"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "work-apron-bib.glb",
+    "glbSha256": "88fc3e847dfa6f9587f65ad3d29c5cfbe5bc6148ec51ffb95eeb9ca7f84fb54f",
+    "glbBytes": 360356,
+    "generator": "tools/camp-wardrobe/build_camp_wardrobe.py",
+    "generatorSha256": "8f9bd29bddc45359ef315d5f85479b852a3dc807669777e23394ac322a91ffc1",
+    "library": "tools/camp-wardrobe/fit.py",
+    "librarySha256": "c514af3494bdc8fe3c80bf740c3ca44fabfbdba06bf3904360446467dbc6d9cd",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "the Meshy shell welded, stray fragments deleted, Decimated to budget; Scale and Translate onto the front of the body by its measured width and bib height; its straps and ties laid onto the clothes under it by Shrinkwrap (nearest surface point); its skirt laid flat onto a Plane in front by Shrinkwrap (Project along Y, through a vertex group fading in below the ties); Shrinkwrap (outside) and Smooth clear of the body and the clothes under; Solidify; Data Transfer weights with the kit's skirt rig below the waist, on the pelvis alone. Handles: a Lattice (length) and Displace (stand-off).",
+    "source": "source-assets/accessories/narrative-bib-apron/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "sourceSha256": "57f0c93a5ae153cb7d81ad0e12c7cc5d3affeded3f33635f050a439f57bcbb99"
+  },
+  "verification": {
+    "glb": {
+      "file": "work-apron-bib.glb",
+      "targetNames": [
+        "BoneLength@0",
+        "BoneLength@0.25",
+        "BoneLength@0.75",
+        "BoneLength@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1002,
+          "triangles": 1034,
+          "targets": 4,
+          "material": 0
+        },
+        {
+          "vertices": 3878,
+          "triangles": 2294,
+          "targets": 4,
+          "material": 1
+        }
+      ],
+      "triangles": 3328,
+      "vertices": 4880,
+      "targets": {
+        "BoneLength@0": {
+          "maxDeltaM": 0.06447,
+          "verticesMoved": 438
+        },
+        "BoneLength@0.25": {
+          "maxDeltaM": 0.03223,
+          "verticesMoved": 438
+        },
+        "BoneLength@0.75": {
+          "maxDeltaM": 0.03223,
+          "verticesMoved": 438
+        },
+        "BoneLength@1": {
+          "maxDeltaM": 0.06447,
+          "verticesMoved": 438
+        }
+      },
+      "animations": {
+        "BoneLength": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "clavicle_l": 1657,
+        "clavicle_r": 1630,
+        "neck_01": 1708,
+        "pelvis": 1238,
+        "spine_01": 1472,
+        "spine_02": 1486,
+        "spine_03": 4440,
+        "thigh_l": 295,
+        "thigh_r": 326,
+        "upperarm_l": 1783,
+        "upperarm_r": 1747
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "BoneLength=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 2.73,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "references.md: aprons (a working bib apron, bib pinned or strapped, ties round the waist, to the knee)",
+    "source": "source-assets/accessories/narrative-bib-apron/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "fit": "fitted over work-shirt-rolled, work-breeches by Shrinkwrap 6 mm",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "BoneLength": [
+      "thigh",
+      "knee",
+      "below the knee"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

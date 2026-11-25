@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "what": "The level props' roll ranges (lane level-props, October 30, 2026; spec: design-notebook/Strangedeep/Dungeon/Dressing/Dressing.md, 'October 30 \u2014 level objects rebuilt low poly, with handles that roll'). The one home for these values: the game reads them (LevelProps.cs) and the review page's handle extremes are drawn from them. Sizes are scales of the rebuilt mesh (1 is the old mesh's size); the stretch happens in each mesh's plain middle. Starting values; Adam judges the ranges on sight.",
+  "review": "pending",
+  "age": {
+    "what": "New (0) to rotten (1): rolled from the floor depth, deeper floors older, with a small jitter per prop.",
+    "byFloorDepth": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.85
+    ],
+    "jitter": 0.15
+  },
+  "damage": {
+    "what": "Pushed by combat in steps from the prop's saved hit points: whole while unhurt, cracked (half the damage shape) once hit, staved in (all of it) at half its hit points or less. A destroyed prop bursts as before.",
+    "cracked": 0.5,
+    "stavedAtOrBelowShare": 0.5
+  },
+  "barrel": {
+    "what": "One builder, five kinds, picked by weight. height and girth are scales (girth pushes the staves out from the axis, so the hoops stay thin); bulge swells the belly; lidOff is the chance the lid stands against the barrel instead. The height cannot go under 0.4: the hoops ride the stretch whole, so only the 0.54 m of staves between them can shrink.",
+    "kinds": {
+      "barrel": {
+        "weight": 6,
+        "height": [
+          0.92,
+          1.12
+        ],
+        "girth": [
+          0.95,
+          1.08
+        ],
+        "bulge": [
+          0.0,
+          0.6
+        ],
+        "lidOff": 0.1
+      },
+      "keg": {
+        "weight": 2,
+        "height": [
+          0.66,
+          0.76
+        ],
+        "girth": [
+          0.8,
+          0.9
+        ],
+        "bulge": [
+          0.3,
+          0.8
+        ],
+        "lidOff": 0.0
+      },
+      "cask": {
+        "weight": 2,
+        "height": [
+          1.15,
+          1.3
+        ],
+        "girth": [
+          0.9,
+          0.98
+        ],
+        "bulge": [
+          0.2,
+          0.7
+        ],
+        "lidOff": 0.1
+      },
+      "vat": {
+        "weight": 1,
+        "height": [
+          1.0,
+          1.15
+        ],
+        "girth": [
+          1.2,
+          1.32
+        ],
+        "bulge": [
+          0.0,
+          0.3
+        ],
+        "lidOff": 0.5
+      },
+      "tub": {
+        "weight": 1,
+        "height": [
+          0.64,
+          0.7
+        ],
+        "girth": [
+          1.15,
+          1.3
+        ],
+        "bulge": [
+          0.0,
+          0.2
+        ],
+        "lidOff": 1.0
+      }
+    }
+  },
+  "crate": {
+    "what": "Width, height and depth are scales; gap widens the gaps between the boards; lidOff is the chance the lid leans against the back.",
+    "width": [
+      0.72,
+      0.98
+    ],
+    "height": [
+      0.62,
+      0.95
+    ],
+    "depth": [
+      0.72,
+      0.98
+    ],
+    "gap": [
+      0.0,
+      1.0
+    ],
+    "lidOff": 0.12
+  },
+  "chest": {
+    "what": "Loot tier: a chest's look follows what it can hold, honestly. Its contents are rolled when it is opened, so today the tier follows what does decide them, the floor's depth (deeper chests drop more often and better): plain, banded, then gilt-cornered. Each tier has its own size range; the dome follows the floor's arch point, so chests match the walls. The footprint stays one cell.",
+    "lookByChestTier": {
+      "what": "Chest tiers (chest-tiers-v1, Adam October 30; odds November 18): a chest the campaign gave a tier wears that tier's mesh (0 plain, 1 banded, 2 gilt-cornered) and adds sizeBonus to its rolled size and height. Rare and Legendary are the bigger of their mesh. Lane items-1 draft for Adam. A chest with no tier (an older campaign, a lab board) keeps the floor-depth look below.",
+      "common": {"mesh": 0, "sizeBonus": 0},
+      "sturdy": {"mesh": 1, "sizeBonus": 0},
+      "rare": {"mesh": 1, "sizeBonus": 0.08},
+      "ornate": {"mesh": 2, "sizeBonus": 0},
+      "legendary": {"mesh": 2, "sizeBonus": 0.08}
+    },
+    "tierByFloorDepth": [
+      0,
+      1,
+      1,
+      2,
+      2
+    ],
+    "sizeByTier": [
+      [
+        0.86,
+        0.96
+      ],
+      [
+        0.96,
+        1.06
+      ],
+      [
+        1.05,
+        1.15
+      ]
+    ],
+    "heightByTier": [
+      [
+        0.9,
+        1.0
+      ],
+      [
+        0.95,
+        1.08
+      ],
+      [
+        1.05,
+        1.18
+      ]
+    ]
+  },
+  "pew": {
+    "what": "A pew's length is its kind's footprint (2 or 3 cells, which the floor generator already rolls), wood or stone by kind; height is a scale; the seat and back sag with the floor's sag, so pews match the walls.",
+    "height": [
+      0.94,
+      1.06
+    ],
+    "depth": [
+      0.94,
+      1.04
+    ]
+  },
+  "vessel": {
+    "what": "The room themes' ritual vessels (bowl, lidded jar, narrow bottle): height and girth are scales; a jar may roll its lid off onto the floor.",
+    "height": [
+      0.85,
+      1.2
+    ],
+    "girth": [
+      0.9,
+      1.15
+    ],
+    "lidOff": 0.35
+  },
+  "sarcophagus": {
+    "what": "Length and height are scales (its footprint stays two cells); carve is how deep its panels stand out. Opened, its lid lies slid aside.",
+    "length": [
+      0.92,
+      1.08
+    ],
+    "height": [
+      0.92,
+      1.1
+    ],
+    "carve": [
+      0.0,
+      1.0
+    ]
+  },
+  "camp": {
+    "what": "The room themes' expedition bedroll and satchel: slump lets them sag (0 packed, 1 slumped); length is a scale of the bedroll's roll.",
+    "slump": [
+      0.0,
+      0.8
+    ],
+    "length": [
+      0.85,
+      1.15
+    ]
+  },
+  "bookcase": {
+    "what": "A bookcase's books follow its look, which the game already picks from the shelf's loot (fuller and tidier shelves for better loot, emptied once searched): each look draws one of the rebuilt fill kits. Height is a scale. Its length is its footprint, one to three cells, which the floor generator rolls (lane bookcase-lengths): a long case is its own mesh with a bay every 0.86 to 0.94 metres, never a stretched one.",
+    "height": [
+      0.92,
+      1.08
+    ],
+    "lengthCells": [
+      1,
+      3
+    ],
+    "looks": {
+      "intact-full-orderly": "bookcase-full",
+      "intact-full-disorderly": "bookcase-full-disorderly",
+      "intact-three-quarter": "bookcase-half",
+      "intact-sparse": "bookcase-sparse",
+      "intact-empty": "bookcase-empty",
+      "aged-full": "bookcase-crammed",
+      "ransacked-sparse": "bookcase-sparse"
+    },
+    "agedLooks": [
+      "aged-full",
+      "ransacked-sparse"
+    ]
+  },
+  "gold": {
+    "what": "A gold pile shows the largest coin count its amount covers (one gold piece is one coin; the counts are the gold meshes the builder makes, tools/level-props/families_dressing.py, and the 7-, 19- and 43-coin piles keep the old small, medium and large piles' coin layouts). spread slides the coins out and down, rolled per pile in spreadSteps even steps across the range, so a floor of piles shares a handful of meshes.",
+    "spread": [
+      0.0,
+      0.6
+    ],
+    "spreadSteps": 4
+  },
+  "candles": {
+    "what": "The room themes' candle clusters (placed only behind the review gate; three or five of our own tapers, pillars and stubs): how far each piece's candles have burnt down and how much wax has pooled at their feet, rolled per piece.",
+    "burn": [0.0, 0.8],
+    "drip": [0.0, 1.0]
+  },
+  "furniture": {
+    "what": "The room themes' furniture pieces (a cot in a camp, a bench in an armory, a chair by a library's lectern; placed only behind the review gate): only shape handles that keep each piece inside its rest bounds roll, so its planned footprint holds. slack lets a cot's canvas hang. squash presses a rock field's stones lower and a little wider, every stone together (lane rocks-flowers, November 17). haul raises a workshop rig's cross and lay figure by up to 0.12 m, the winch taking up its chains (lane library-workshop, November 17).",
+    "slack": [
+      0.0,
+      1.0
+    ],
+    "squash": [
+      0.0,
+      0.8
+    ],
+    "haul": [
+      0.0,
+      1.0
+    ]
+  }
+}

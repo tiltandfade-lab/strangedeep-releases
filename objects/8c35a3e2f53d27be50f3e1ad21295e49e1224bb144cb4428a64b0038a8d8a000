@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "Adam, November 19 (Dungeon/Authored Rooms): boss arenas are single, open, symmetrical rooms of a type chosen per boss in design, not generated: rectangles, diamonds or circles for now, with columns, pews and low walls in them so ranged heroes have cover. Shapes and sizes per boss are the lead's procedural call (AGENTS.md, November 9).",
+  "note": "The one owner of each floor's boss room. On a floor whose boss stands in the Grand host's grand room (seeded-floor-massive-segment.ts holdsStage), that room is generated in this shape and size instead of a rolled grand shape (seeded-floor-boss-arena.ts; BOSS_ARENAS_IN_PLAY is the rollback). shape: rectangle, diamond or circle. width and height in cells, odd so the room has a middle cell; the room must stay in the grand band (256 to 576 cells). tips (diamond only): the half-width, in cells, of the flat cut at each point, so a doorway fits there. arrivalInset (optional, lane boss-arenas-3): how many cells of the arena the party's arrival glyph keeps between itself and the rim, taking the inset place nearest its rolled one, so the game camera opens on the arena and not the void past its rim. Furnished from existing pieces only (segment-room-architecture.ts furnishBossArena): a ring of thick piers (full cover), mirrored low walls and pews (half cover); no full-height freestanding wall stands in the room.",
+  "floors": [
+    { "floor": 1, "boss": "The cube", "shape": "rectangle", "width": 21, "height": 21 },
+    { "floor": 2, "boss": "The Lacquered Captain, in his workshop", "shape": "rectangle", "width": 25, "height": 17 },
+    { "floor": 3, "boss": "Open (The Floor 3 Boss)", "shape": "circle", "width": 23, "height": 23 },
+    { "floor": 4, "boss": "The Floor 4 stand-in boss", "shape": "diamond", "width": 27, "height": 27, "tips": 2 },
+    { "floor": 5, "boss": "The master animator", "shape": "circle", "width": 25, "height": 25, "arrivalInset": 5 }
+  ]
+}

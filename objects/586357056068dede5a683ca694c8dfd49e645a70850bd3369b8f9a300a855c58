@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "what": "Trap and hazard kinds placed in ordinary rooms (lane traps-1, November 19, 2026; Adam, November 19: \"lets go ahead and start implementing the easy trap ideas\"). Rules: design-notebook/Strangedeep/Dungeon/Room Identities.md (works for both sides, shown a turn ahead, has a counterplay, placed by the room's seed, never hand-placed). The kinds list: docs/production/module-brainstorm-2026-11-13/traps.json. Every number here is the lead's starting value, open to tuning in play (Adam, November 2: \"It just depends on how fun it actually is\"); placement is resolved once when a segment is generated and saved with the floor, so a change here reaches only floors generated afterwards.",
+  "review": "pending",
+  "kinds": {
+    "powder-keg": {
+      "what": "A barrel of powder. Breaking it in a fight lights its fuse; the fuse burns for the rest of that round and fuseRounds whole rounds more, shown on the board, then the keg blows: blastDamage to everyone within blastRadiusCells (both sides), and every other powder keg in the blast blows with it.",
+      "switch": true,
+      "floors": [1, 2],
+      "carrier": "storage-barrel",
+      "piece": "piece.explodes",
+      "rulesSource": "docs/production/module-brainstorm-2026-11-13/traps.json powder-keg rows (Floor 1 and Floor 2); hazard-research SYNTHESIS.md row 1",
+      "roomRatePercentByFloor": {"1": 25, "2": 40},
+      "roomRateNote": "Rolled once for each room that holds at least one barrel. Room kinds (hall, library, crypt ...) are picked in presentation (RoomThemes.cs), so the rules side cannot yet weight by room kind.",
+      "kegsPerRoomByFloor": {"1": 1, "2": 3},
+      "kegsPerRoomNote": "Floor 1 keeps its first keg alone (SYNTHESIS: a blast must not wipe the party in the tutorial); Floor 2 stores them in stacks of neighbouring barrels.",
+      "fuseRoundsByFloor": {"1": 2, "2": 1},
+      "blastRadiusCells": 1,
+      "blastDamage": 5
+    },
+    "funerary-jar": {
+      "what": "A sealed burial jar. Smashing it, by any blow, in a fight releases what it holds over its own square and the eight round it (the cloud: cloudRadiusCells king steps through open edges, as a keg's blast reaches). Smoke blocks sight for the rest of that round and smokeRounds whole rounds more; poison is the catalog's poison ground (Demolition's, reused: its turns and damage are copied in at generation); sleep holds every body in the cloud for sleepTurns of its own turns (the immobilize hold). Smashed outside a fight its contents spill and do nothing. What a jar holds is described, never named, until a jar of that kind has been released on the floor (learn by use).",
+      "switch": true,
+      "floors": [4],
+      "carrier": "burial-room",
+      "carrierNote": "A burial room is a room that holds a stone sarcophagus (lead, November 19, option A: room kinds such as crypt are picked in presentation, RoomThemes.cs, so the rules side reads the tomb). The generator drafts at most one sarcophagus per floor today.",
+      "piece": "piece.explodes",
+      "rulesSource": "docs/production/module-brainstorm-2026-11-13/traps.json funerary-jars row; lead drafts, November 19 (Room Identities, easy traps)",
+      "roomRatePercent": 100,
+      "roomRateNote": "Rolled once for each burial room on a floor listed in floors. Lead, November 19: every burial room holds jars while a floor drafts one sarcophagus (Floor 4 keeps it on about 88% of runs); lower this if sarcophagi grow more common.",
+      "jarsPerRoomMinimum": 1,
+      "jarsPerRoomMaximum": 3,
+      "jarHitPoints": 1,
+      "jarHitPointsNote": "A jar breaks at one blow (lead draft: a normal breakable that any smash opens).",
+      "contentsWeights": {"smoke": 1, "poison": 1, "sleep": 1},
+      "cloudRadiusCells": 1,
+      "smokeRounds": 3,
+      "sleepTurns": 1,
+      "lookScale": 2.0,
+      "lookScaleNote": "The board draws the room themes' ritual lidded jar (0.369 m tall, 0.39 m across) at this scale, about 0.74 m tall, so a jar that blocks a square and gives half cover reads at cell size: between the Manunggul burial jar (66.5 cm tall, 51 cm across; National Museum of Anthropology, Manila) and the pithoi used as coffins on Crete and at El Argar (0.9 m and taller). Sources: en.wikipedia.org Manunggul_Jar and Pithos, read November 19. Presentation only."
+    },
+    "oil-jar": {
+      "what": "A clay jar of lamp oil. Smashing it, by any blow, in a fight spills a slick over its own square and slickExtraCells open squares beside it (straight steps through open edges, drawn from the room's seed at generation): oil surface tiles that Slow whoever touches them (src/floor/surface-tiles.ts holds the slick's own numbers: Slowed 1, never drying in its fight). Fire that lands on oil (Fire Wall, a burning ground, an ember slime's trail, a keg's blast) turns it into burning ground for 2 rounds. Smashed outside a fight it spills and does nothing. Slimes are hit by oil and its fire too: break it under a pack, then throw fire.",
+      "switch": true,
+      "floors": [1],
+      "carrier": "any-room",
+      "carrierNote": "Floor 1, the Stripped Ruin (docs/production/module-brainstorm-2026-11-13/traps.json oil-jar row). Room kinds are picked in presentation (RoomThemes.cs), so every room of the floor rolls once.",
+      "piece": "piece.surface",
+      "rulesSource": "docs/production/module-brainstorm-2026-11-13/traps.json oil-jar row; lead drafts, November 20 (traps-5 plan)",
+      "roomRatePercent": 20,
+      "roomRateNote": "Lead draft: about one room in five holds one oil jar. Open to tuning in play.",
+      "jarsPerRoom": 1,
+      "jarHitPoints": 1,
+      "slickExtraCells": 2,
+      "slickNote": "A 3-cell slick: the jar's square and two beside it. A jar with fewer open squares beside it is not placed there.",
+      "lookScale": 2.0,
+      "lookScaleNote": "The board draws the room themes' ritual narrow bottle (0.379 m tall, 0.244 m across) at this scale, about 0.76 m tall and 0.49 m across, in an oil-soaked darker clay (CombatLabBoard.OilJarLook): between a 19th-century Spanish terracotta olive-oil jar (61 cm tall, 38 to 46 cm across, dealer listings on 1stdibs read November 20) and an 18th-century Spanish tinaja, a large oil or wine jar, listed at 75 cm tall (dealer listings on 1stdibs and selency.nl read November 20; storage tinajas ran from about 30 cm to over a metre). Raised from 1.6 on the lead's look note, November 20 (the jar read too small and bright beside the hero). Presentation only."
+    }
+  }
+}

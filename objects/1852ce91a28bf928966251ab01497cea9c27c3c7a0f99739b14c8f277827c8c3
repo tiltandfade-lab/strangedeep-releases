@@ -1,0 +1,22 @@
+{
+  "note": "Rat swarm look proof (lane rat-swarm, November 16): the one home of every swarm setting, read by godot/src/RatSwarm.cs. A swarm is the kit's little rat (at the room rat's size) many times over, steered by simple rules; no gameplay numbers live here (fighting waits on Adam's design). Lengths are metres in the room, times seconds, angles degrees. Footprint shapes are fractions of the footprint, from its middle (-0.5 to 0.5 across and away).",
+  "model": "res://assets/rat-kit/rat-little.glb",
+  "seed": 1116,
+  "counts": [12, 24, 40],
+  "footprints": {
+    "one-cell": { "cells": [1, 1], "props": [] },
+    "two-by-two": { "cells": [2, 2], "props": [{ "glb": "res://assets/level-props/barrel.glb", "at": [0.2, -0.18], "radius": 0.32, "scale": 0.45 }] }
+  },
+  "body": { "length": 0.28, "height": 0.1, "spacing": 0.16 },
+  "motion": { "stepsPerSecond": 24, "turnDegreesPerSecond": 200, "accel": 4, "steady": 0.15, "speedSpread": 0.15, "idleBelow": 0.07, "wanderDegrees": 40, "wanderWeight": 0.18 },
+  "steer": { "separation": 2.2, "alignment": 0.35, "cohesion": 0.25, "neighbourRadius": 0.45, "edgeRange": 0.2, "edge": 3, "prop": 4, "propRange": 0.16 },
+  "heap": { "speed": 0.35, "climbSpeed": 0.35, "gravity": 4, "slide": 0.8, "layers": 4, "contact": 0.2, "climbBelow": 0.4, "settleRadius": 0.12, "aimRadius": 0.18, "aimSeconds": 3, "rummage": 0.8, "separation": 0.5, "rise": 0.6, "swirl": 1.0 },
+  "column": {
+    "speed": 1.15, "spacingShare": 0.95, "laneWidth": 0.12, "cornerRange": 0.3, "cornerSlow": 0.55, "seekGain": 3.5, "climbLayers": 0.6,
+    "paths": {
+      "one-cell": [[-0.3, -0.3], [0.3, -0.3], [0.3, 0.3], [-0.3, 0.3]],
+      "two-by-two": [[-0.36, -0.36], [0.36, -0.36], [0.36, 0.02], [-0.06, 0.02], [-0.06, 0.36], [-0.36, 0.36]]
+    }
+  },
+  "spread": { "speed": 1.2, "holdSpeed": 0.18, "fan": 2.2, "hold": 1.6, "regroup": 2.2, "gather": 1.2, "gatherAt": [-0.18, 0.18], "gatherRadius": 0.16, "seekGain": 3 }
+}

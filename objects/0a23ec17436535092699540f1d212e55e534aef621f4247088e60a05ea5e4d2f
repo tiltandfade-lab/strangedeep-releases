@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "status": "Lead's call on level dressing (November 18), carrying Adam's approved idea: \"if there's a wall missing, or a hole in the floor\" and open battlefields with \"no walls between you and falling infinitely into the void\". Presentation only: nothing here reaches a rule, save or rules random stream.",
+  "note": "The one owner of how often a wall facing the void draws as collapsed (lane aurora-sight). Read by src/godot/void-openings.ts. Adam, November 18: openings should be rare and feel scary. The rule: segmentShare is the share of floor segments with an opening at all (0.2, about one in five), and then at most maxRunsPerSegment collapsed wall runs (one room side on one line), chosen by seed; never in a camp, never in the floor's first room, and never on a run that carries a wall light, a full blocker or a prop's cell. enabled is the rollback switch (false draws every perimeter wall; the sky-through-openings switch, RetroLookProfile.VoidSight, is separate). openRoomShare is 0: whole-rim open battlefields left random rooms (lead, November 18) and come back only as a named set piece if Adam approves the massive-arena question; largeRoomRimEdges is how many void-facing edges make a room large enough for one. setPieces names the open rims drawn on purpose (lane boss-arenas, November 19, the lead's call): Floor 4's massive segment draws its massive room's whole rim open, every void-facing edge that carries no light, blocker or prop, so the fight stands at the edge of the void; drawing only, no falling, and the segment rolls no other collapsed run. minimumRimEdges finds that room: only a massive room (48 or more across, src/godot/seeded-floor-massive-segment.ts) has that many void-facing edges.",
+  "enabled": true,
+  "segmentShare": 0.2,
+  "maxRunsPerSegment": 1,
+  "openRoomShare": 0,
+  "largeRoomRimEdges": 24,
+  "setPieces": [
+    {"id": "massive-open-rim", "floorDepth": 4, "minimumRimEdges": 150}
+  ]
+}

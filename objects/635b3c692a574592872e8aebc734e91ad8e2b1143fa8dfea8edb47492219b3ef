@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "about": "Grand rooms (RoomLightComposer.GrandRoomCells or more cells) stand torches on a 7-cell lattice; every torch keeps its lit flame. In the Compatibility renderer (the Mac's potato mode, which limits the lights per object) only the liveTorchesPerRoom nearest the middle of the game camera's view keep a live light, so no floor mesh is reached by more than 8 lights; Forward+ lights them all (lane boss-arenas-3; docs/production/boss-arenas-3-2026-11-20/README.md).",
+  "liveTorchesPerRoom": 3,
+  "maximumLightsPerFloorMesh": 8,
+  "measured": [
+    {
+      "save": "Floor 3 massive review save, half the room revealed",
+      "renderer": "compatibility",
+      "cap": 3,
+      "mostLightsPerFloorMesh": 8,
+      "uncapped": 21,
+      "latticeTorches": 20
+    },
+    {
+      "save": "Floor 2 boss arena review save, half the room revealed",
+      "renderer": "compatibility",
+      "cap": 3,
+      "mostLightsPerFloorMesh": 7,
+      "uncapped": 7,
+      "latticeTorches": 2
+    }
+  ]
+}

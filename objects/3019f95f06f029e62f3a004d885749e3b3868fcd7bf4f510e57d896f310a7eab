@@ -1,0 +1,62 @@
+{
+  "about": "Ground fog trial (lane ground-fog, November 18; Adam: \"start a trial\"). Every number the fog uses lives here and nowhere else: godot/src/GroundFogSettings.cs reads this file and refuses it if a value is missing. On by default at Full quality (Adam, November 18: \"the fog is awesome, we keep it in game\"); the Settings row (graphics setting ground_fog) turns it off, and it is always off in potato mode (Compatibility) and in headless runs. The --ground-fog launch flag and STRANGEDEEP_GROUND_FOG override all of these. Distances are in board units (one cell is 1), times in seconds. look.interiorShare, wallBandCells and moveRangeShare keep the board readable (lead review, November 18): full thickness against the walls, thinner toward the middle and over the active hero's movement range. The shaders came from OrdinaryCicada's Cheap Ground Fog (CC0): godot/assets/vfx/ground-fog/PROVENANCE.md.",
+  "enabledByDefault": true,
+  "trialRoom": {
+    "floor": 1,
+    "segment": 1,
+    "room": "arrival",
+    "reviewSeed": "ground-fog-trial"
+  },
+  "area": {
+    "marginCells": 1,
+    "texelsPerCell": 8,
+    "maxTexels": 192,
+    "edgeSoftCells": 0.5
+  },
+  "look": {
+    "color": [0.76, 0.72, 0.69, 1.0],
+    "density": 5.2,
+    "height": 0.34,
+    "lighting": 0.8,
+    "groundSoftness": 0.65,
+    "hillScale": 0.03,
+    "wind": [0.03, 0.012],
+    "morphSpeed": 0.05,
+    "coverageScale": 0.015,
+    "coverageDrift": [0.006, 0.004],
+    "coverageCutoff": 0.0,
+    "coverageSoftness": 1.0,
+    "wakeLift": 0.0,
+    "streak": 0.25,
+    "ledgeDrape": 0.8,
+    "cameraFade": 1.5,
+    "detailStrength": 0.5,
+    "detailScale": 0.8,
+    "detailCycle": 1.2,
+    "interiorShare": 0.5,
+    "wallBandCells": 3.0,
+    "moveRangeShare": 0.6
+  },
+  "noise": {
+    "frequency": 0.02,
+    "octaves": 2,
+    "size": 256
+  },
+  "trail": {
+    "fillSeconds": 4.0,
+    "fillShare": 0.05,
+    "figureRadius": 0.3,
+    "fadeAboveFog": 0.5,
+    "carveSpeed": 14.0,
+    "maskSoftness": 0.2,
+    "footprintSpread": 0.2,
+    "flowSpeed": 0.5,
+    "vorticity": 1.0,
+    "pushSpeed": 0.4,
+    "pushReach": 0.5,
+    "drag": 0.8,
+    "velocityDamping": 3.0,
+    "diffusion": 0.2,
+    "injectRate": 6.0
+  }
+}

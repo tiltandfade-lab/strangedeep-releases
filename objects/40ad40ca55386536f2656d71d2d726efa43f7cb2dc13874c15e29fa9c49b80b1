@@ -1,0 +1,88 @@
+{
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "prop": "lectern",
+  "script": "tools/world-paint/bake_base_map.py",
+  "blender": "5.2.2 LTS",
+  "runtime": {
+    "path": "godot/assets/level-props/lectern.glb",
+    "sha256": "b0cf7c6a2da2c576cb59b6bf669cd7e95c5606bfe9b6911a66036920e886da0e",
+    "parts": [
+      "prop_lectern_darkwood",
+      "prop_lectern_wood"
+    ],
+    "triangles": 560
+  },
+  "meshy": {
+    "path": "source-assets/meshy/room-props-retexture/2026-11-19/archive-lectern/provider-source/Meshy_AI__1119024529_texture.glb@origin/lane/meshy-retexture-trial",
+    "sha256": "f5d213f6c790804cea96df58b3c0bb033d7866363124c60baa2009db93abfb65",
+    "triangles": 754,
+    "map": "Image_0",
+    "mapSize": [
+      2048,
+      2048
+    ]
+  },
+  "boundsMisfitMetres": 0.00476,
+  "fit": {
+    "scale": 0.45896,
+    "axisScales": [
+      0.45444,
+      0.46244,
+      0.46
+    ],
+    "offsetMetres": [
+      0.0,
+      0.0,
+      0.46
+    ]
+  },
+  "status": "pending review (docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance)",
+  "uv": {
+    "layout": "new atlas",
+    "overlap": null,
+    "why": "our mesh has no UV map"
+  },
+  "weldedCorners": {
+    "prop_lectern_darkwood": 888,
+    "prop_lectern_wood": 500
+  },
+  "fillColour": [
+    0.3444,
+    0.2331,
+    0.1571
+  ],
+  "nearTexelShare": 0.4592,
+  "nearExtrusionMetres": 0.03365,
+  "grazing": {
+    "ourTexels": 3172688,
+    "grazingTexels": 1147268,
+    "share": 0.3616,
+    "patchAt": [
+      1584,
+      1392
+    ],
+    "patchSize": 192,
+    "grazeCos": 0.8
+  },
+  "method": "bake: our parts unwrapped into one Smart UV Project atlas, the Meshy map baked onto it selected-to-active (emission, Cycles CPU, 4 samples)",
+  "gapMetres": {
+    "median": 0.01055,
+    "p99": 0.05677,
+    "max": 0.05862,
+    "vertices": 1680
+  },
+  "cageExtrusionMetres": 0.08716,
+  "maxRayDistanceMetres": 0.17432,
+  "outputs": {
+    "glb": {
+      "path": "godot/assets/world-paint/base-maps/lectern/lectern-uv.glb",
+      "sha256": "029f86171a6bc247dfa57206b94c8a184af61a9d663b541f0d203a07944708fa"
+    },
+    "map": {
+      "path": "godot/assets/world-paint/base-maps/lectern/lectern-base.png",
+      "sha256": "a78005f79cc2252e81057bd788503564cf5bfef8bfbb3fab2697d9d9fcc8fc12",
+      "size": 2048
+    }
+  }
+}

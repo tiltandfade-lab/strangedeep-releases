@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "assetId": "patch-knight-regular-meshy-demo-rig-review",
+  "displayName": "Patch Knight",
+  "status": "FLOOR3_ROSTER",
+  "productionApproval": false,
+  "placement": "Floor 3's cloth constructs (lane floor3-roster, November 18; Adam, November 17: \"yes, give the rag dolls a roster slot\"; the lead promoted the six cloth-trio wrappers on November 18): drawn on the combat board by godot/src/CombatLabClothConstruct.cs alone, through MonsterReviewModels' paint, and fielded by src/campaign/floor-three-roster-mix.ts. Also in the review rooms (MonsterReviewModels, Retro gallery review-monsters section).",
+  "source": {
+    "path": "source-assets/meshy/patch-knight-regular-demo-rig/2026-08-28/CHR_Fighter_MeshyRig.glb",
+    "sha256": "1e4fa0c2cf12849701db960db5d316aafd5ff646bfb76af90732b4d82172b8f4",
+    "texturedModel": "source-assets/meshy/patch-knight-direct-retexture/2026-08-28/model.glb",
+    "rigReceipt": "source-assets/meshy/patch-knight-regular-demo-rig/2026-08-28/receipt.json"
+  },
+  "rig": {
+    "provider": "Meshy rigging-and-animation (Meshy Basic)",
+    "bones": 24,
+    "handBones": false,
+    "registryDecision": "patch-knight-regular-meshy-basic-rig-no-hand-bones: REJECTED_RIG_MISSING_HAND_BONES for production; used here only to pose the review model"
+  },
+  "godot": {
+    "model": "res://assets/characters/patch-knight/review/patch-knight-regular-meshy-demo-rig.glb",
+    "wrapper": "res://assets/characters/patch-knight/review/patch_knight_regular_review_candidate.tscn",
+    "material": "res://assets/characters/patch-knight/review/patch-knight-regular-cloth-review.tres",
+    "materialNote": "External review material replaces the Meshy rig export's material, which drew the whole base-color texture as emission (emissive factor 1,1,1) with specular x2: emission off, roughness 0.92, metallic 0, specular 0.35, double-sided as the source declares. Base-color texture is the untouched provider image.",
+    "heightMetres": 1.8288,
+    "footprintCells": 1,
+    "floorOffsetMeters": 0.0,
+    "clothWeights": {
+      "model": "res://assets/characters/patch-knight/review/patch-knight-regular-meshy-cloth-weights.glb",
+      "note": "Lane cloth-trio-weights (November 17): the wrapper loads this GLB, the Meshy GLB above with its loose cloth re-weighted and six clips (idle, walk, run, hit, death, attack); same points in the same order. Built by tools/cloth-trio-weights/build.py; hashes and cloth points in docs/production/cloth-trio-weights-2026-11-17/cloth-points.json. Rollback: point the wrapper back at godot.model."
+    }
+  },
+  "openGates": [
+    "FOUNDER_VISUAL_REVIEW",
+    "PRODUCTION_RIG_WITH_HAND_BONES",
+    "EYE_GLOW_MASK"
+  ]
+}

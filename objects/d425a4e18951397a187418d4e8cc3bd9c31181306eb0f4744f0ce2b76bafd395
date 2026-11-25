@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "id": "wardrobe-thigh-boot-l",
+  "displayName": "Thigh boot, left",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "foot",
+  "slot": "feet",
+  "attach": "soft",
+  "bones": [
+    "ball_l",
+    "ball_r",
+    "calf_l",
+    "calf_r",
+    "foot_l",
+    "thigh_l"
+  ],
+  "allowedRegions": [
+    "foot_l"
+  ],
+  "defaultRegion": "foot_l",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      0.1966,
+      0.0723,
+      0.0187
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "mirror",
+    "pairedId": "wardrobe-thigh-boot-r"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "snug",
+      "at1": "easy",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.2152,
+          0.5753,
+          0.0204
+        ],
+        "end": [
+          0.2232,
+          0.5751,
+          0.0199
+        ],
+        "lengthMm": 8.0
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    },
+    {
+      "name": "AxisUp",
+      "at0": "shaft cut lower",
+      "at1": "shaft cut higher",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          0.1954,
+          0.7171,
+          -0.0377
+        ],
+        "end": [
+          0.1954,
+          0.7571,
+          -0.0377
+        ],
+        "lengthMm": 40.0
+      },
+      "animation": {
+        "name": "AxisUp",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "leather",
+    "1": "leather"
+  },
+  "materialClasses": [
+    "leather"
+  ],
+  "coverageCm2": 2520.4,
+  "mass": 756.12,
+  "weightClass": "light",
+  "triangles": 2538,
+  "complexity": 26,
+  "mutateTags": [
+    "light",
+    "leather",
+    "boot"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "wardrobe-thigh-boot-l.glb",
+    "glbSha256": "37ef518fa06105de33de619a54b1ed54db1ea5fb388bd7017ad437eff181a562",
+    "glbBytes": 373396,
+    "generator": "tools/wardrobe-kit/build_wardrobe_kit.py",
+    "generatorSha256": "ad904be57d7082229fdc37eee197d7dd49044dd20c90d1f7a3ac2751bf91a9d2",
+    "library": "tools/camp-wardrobe/fit.py",
+    "librarySha256": "f17ddd1e12efc66a04841ffbaede3ba19fd6c11c53e2d52b54ce77f90b66148c",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "the Meshy shoe welded, stray fragments deleted, Decimated to budget; Rotate (toe down the foot), Scale to the measured foot length and Translate onto the left foot's sole and heel; Shrinkwrap (outside) and Smooth clear of the foot; Data Transfer of the foot's, ball's and calf's weights; then mirrored (Scale x -1, Flip Normals) and refitted (Shrinkwrap and Data Transfer again) on the right foot. Handles: Displace (fit), a Lattice (shaft or collar height).",
+    "source": "source-assets/wardrobe/thigh-boot/models/meshy/2026-11-16/plain-01/provider-source/model.glb",
+    "sourceSha256": "f07c621895e9494a79aaf4c03fcbcfcae4520b28736f6086bbdb8c4df7d885c7",
+    "parts": "tools/wardrobe-kit/wardrobe_parts.py",
+    "partsSha256": "efcd96049550f710cfc7feb0e4f0c97f9430ca239125b4a3b105bee043beb54f",
+    "fitting": "tools/camp-wardrobe/build_camp_wardrobe.py",
+    "batchLabel": "W47"
+  },
+  "verification": {
+    "glb": {
+      "file": "wardrobe-thigh-boot-l.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1",
+        "AxisUp@0",
+        "AxisUp@0.25",
+        "AxisUp@0.75",
+        "AxisUp@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1518,
+          "triangles": 2302,
+          "targets": 8,
+          "material": 0
+        },
+        {
+          "vertices": 175,
+          "triangles": 236,
+          "targets": 8,
+          "material": 1
+        }
+      ],
+      "triangles": 2538,
+      "vertices": 1693,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.004,
+          "verticesMoved": 1689
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.002,
+          "verticesMoved": 1691
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.002,
+          "verticesMoved": 1693
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.004,
+          "verticesMoved": 1693
+        },
+        "AxisUp@0": {
+          "maxDeltaM": 0.02,
+          "verticesMoved": 697
+        },
+        "AxisUp@0.25": {
+          "maxDeltaM": 0.01,
+          "verticesMoved": 697
+        },
+        "AxisUp@0.75": {
+          "maxDeltaM": 0.01,
+          "verticesMoved": 697
+        },
+        "AxisUp@1": {
+          "maxDeltaM": 0.02,
+          "verticesMoved": 697
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        },
+        "AxisUp": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "ball_l": 192,
+        "ball_r": 3,
+        "calf_l": 1201,
+        "calf_r": 4,
+        "foot_l": 696,
+        "thigh_l": 849
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 4.93,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.13,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.31,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.63,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 6.21,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 6.46,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 6.72,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 6.99,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.52,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.69,
+        "pass": true
+      },
+      {
+        "case": "AxisUp=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 4.93,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 8.41,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.94,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "README.md, feet: the thigh boot (a soft shaft to above the knee)",
+    "source": "source-assets/wardrobe/thigh-boot/models/meshy/2026-11-16/plain-01/provider-source/model.glb",
+    "fit": "fitted over the body by Shrinkwrap 6 mm",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "snug",
+      "plain",
+      "easy"
+    ],
+    "AxisUp": [
+      "lower",
+      "plain",
+      "higher"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

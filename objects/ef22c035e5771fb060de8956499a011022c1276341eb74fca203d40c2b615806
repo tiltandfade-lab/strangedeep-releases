@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "work-boot-ankle-r",
+  "displayName": "Work ankle boot, right",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "category": "foot",
+  "slot": "feet",
+  "attach": "soft",
+  "bones": [
+    "ball_l",
+    "ball_r",
+    "calf_r",
+    "foot_r"
+  ],
+  "allowedRegions": [
+    "foot_r"
+  ],
+  "defaultRegion": "foot_r",
+  "pivot": {
+    "space": "part (glTF, +Y up, metres)",
+    "point": [
+      -0.1966,
+      0.0723,
+      0.0187
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "sinkDepthMm": 0.0,
+  "twin": {
+    "kind": "mirror",
+    "pairedId": "work-boot-ankle-l"
+  },
+  "scaleLimits": [
+    1.0,
+    1.0
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 0,
+    "yaw": 0,
+    "roll": 0
+  },
+  "nudgeAxis": {
+    "name": "bone",
+    "vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "snug",
+      "at1": "easy",
+      "default": 0.5,
+      "limits": [
+        0.0,
+        1.0
+      ],
+      "keyframes": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "line": {
+        "start": [
+          -0.1599,
+          0.1453,
+          0.0015
+        ],
+        "end": [
+          -0.1592,
+          0.1484,
+          0.0015
+        ],
+        "lengthMm": 3.11
+      },
+      "animation": {
+        "name": "Radius",
+        "frames": [
+          0,
+          30
+        ],
+        "framesPerSecond": 30
+      }
+    }
+  ],
+  "regionClasses": {
+    "0": "leather",
+    "1": "leather"
+  },
+  "materialClasses": [
+    "leather"
+  ],
+  "coverageCm2": 737.4,
+  "mass": 221.22,
+  "weightClass": "light",
+  "triangles": 2564,
+  "complexity": 26,
+  "mutateTags": [
+    "light",
+    "leather",
+    "boot"
+  ],
+  "pinRegions": [
+    0
+  ],
+  "references": [],
+  "build": {
+    "glb": "work-boot-ankle-r.glb",
+    "glbSha256": "3c8aadda76447ca89226d88c4881121e350136056917b15f1c89ffe0b7dc1ec9",
+    "glbBytes": 277316,
+    "generator": "tools/camp-wardrobe/build_camp_wardrobe.py",
+    "generatorSha256": "8f9bd29bddc45359ef315d5f85479b852a3dc807669777e23394ac322a91ffc1",
+    "library": "tools/camp-wardrobe/fit.py",
+    "librarySha256": "c514af3494bdc8fe3c80bf740c3ca44fabfbdba06bf3904360446467dbc6d9cd",
+    "body": "godot/assets/character-workshop/mpfb-human.glb",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "blender": "5.2.2 LTS",
+    "clearanceTargetMm": null,
+    "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+    "status": "pending review: not approved art",
+    "madeWith": "the Meshy shoe welded, stray fragments deleted, Decimated to budget; Rotate (toe down the foot), Scale to the measured foot length and Translate onto the left foot's sole and heel; Shrinkwrap (outside) and Smooth clear of the foot; Data Transfer of the foot's, ball's and calf's weights; then mirrored (Scale x -1, Flip Normals) and refitted (Shrinkwrap and Data Transfer again) on the right foot. Handles: Displace (fit), a Lattice (shaft or collar height).",
+    "source": "source-assets/accessories/camp-footwear-ankle-boot/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "sourceSha256": "b23fc5812b46932417839bb842d674193f7c101a5c4f3de48ef556538c8accdb"
+  },
+  "verification": {
+    "glb": {
+      "file": "work-boot-ankle-r.glb",
+      "targetNames": [
+        "Radius@0",
+        "Radius@0.25",
+        "Radius@0.75",
+        "Radius@1"
+      ],
+      "primitives": [
+        {
+          "vertices": 1306,
+          "triangles": 2043,
+          "targets": 4,
+          "material": 0
+        },
+        {
+          "vertices": 395,
+          "triangles": 521,
+          "targets": 4,
+          "material": 1
+        }
+      ],
+      "triangles": 2564,
+      "vertices": 1701,
+      "targets": {
+        "Radius@0": {
+          "maxDeltaM": 0.00077,
+          "verticesMoved": 1701
+        },
+        "Radius@0.25": {
+          "maxDeltaM": 0.00039,
+          "verticesMoved": 1701
+        },
+        "Radius@0.75": {
+          "maxDeltaM": 0.00116,
+          "verticesMoved": 1701
+        },
+        "Radius@1": {
+          "maxDeltaM": 0.00232,
+          "verticesMoved": 1701
+        }
+      },
+      "animations": {
+        "Radius": {
+          "start": 0.0,
+          "end": 1.0,
+          "samples": 31,
+          "peakWeight": 1.0
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "ball_l": 8,
+        "ball_r": 368,
+        "calf_r": 764,
+        "foot_r": 1463
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "checksPassed": true,
+    "cases": [
+      {
+        "case": "standard",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.75,
+        "pass": true
+      },
+      {
+        "case": "Radius=0",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.49,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.125",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.56,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.25",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.62,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.375",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.69,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.625",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.61,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.75",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.48,
+        "pass": true
+      },
+      {
+        "case": "Radius=0.875",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.34,
+        "pass": true
+      },
+      {
+        "case": "Radius=1",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.2,
+        "pass": true
+      },
+      {
+        "case": "all=low",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.49,
+        "pass": true
+      },
+      {
+        "case": "all=high",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.2,
+        "pass": true
+      },
+      {
+        "case": "defaults",
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "minClearanceMm": 5.75,
+        "pass": true
+      }
+    ]
+  },
+  "notes": {
+    "reference": "references.md: ankle-boot (strap and buckle over the instep)",
+    "source": "source-assets/accessories/camp-footwear-ankle-boot/models/meshy/2026-11-13/plain-01/provider-source/model.glb",
+    "fit": "fitted over the body by Shrinkwrap 6 mm",
+    "cloth": "rides the bones: no live cloth"
+  },
+  "keyframing": "sampled from the builder at every keyframe",
+  "ideas": {
+    "Radius": [
+      "snug",
+      "plain",
+      "easy"
+    ]
+  },
+  "charmSeats": [],
+  "charmSeatsWhy": [
+    "a soft garment: charms are seated on hard parts for now"
+  ],
+  "reviewStatus": "pending"
+}

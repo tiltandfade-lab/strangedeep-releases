@@ -1,0 +1,32 @@
+{
+  "id": "marble-checkerboard",
+  "kind": "floor",
+  "input": "pattern",
+  "tileCells": 2.0,
+  "tilePixels": 256,
+  "texelsPerCell": 128,
+  "periodMetres": 3.048,
+  "mortarLevel": 0.1119,
+  "stones": 16,
+  "mergedRegions": 0,
+  "mortarShare": 0.031,
+  "heightFromNormal": false,
+  "wang": "16 tiles, 2 colours per edge; index = n*8 + e*4 + s*2 + w; column index % 4, row index // 4",
+  "stoneKey": {
+    "mode": "owner",
+    "numbers": 28,
+    "parts": "(dy + 1) * 3 + (dx + 1): the tile round this one holding the unit's middle",
+    "byte": "1 + part * numbers + number; 0 mortar",
+    "largestPiece": 0.0606,
+    "largestPieceMax": 0.15
+  },
+  "edgeCheck": {
+    "cutUnitsMax": 0.002,
+    "worstCutShare": 0.0,
+    "controlMin": 0.05,
+    "halfUnitShiftControl": 0.9844,
+    "pass": true,
+    "method": "pattern: no unit is cut where two tiles meet"
+  },
+  "standIn": false
+}

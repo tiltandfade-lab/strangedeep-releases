@@ -1,0 +1,286 @@
+{
+ "schemaVersion": 1,
+ "id": "f1-glove-wrapped",
+ "displayName": "Leather glove with a cuff",
+ "layer": "glove",
+ "attach": "soft",
+ "bones": [
+  "Root",
+  "ball_l",
+  "ball_r",
+  "calf_l",
+  "calf_r",
+  "clavicle_l",
+  "clavicle_r",
+  "foot_l",
+  "foot_r",
+  "hand_l",
+  "hand_r",
+  "head",
+  "index_01_l",
+  "index_01_r",
+  "index_02_l",
+  "index_02_r",
+  "index_03_l",
+  "index_03_r",
+  "lowerarm_l",
+  "lowerarm_r",
+  "middle_01_l",
+  "middle_01_r",
+  "middle_02_l",
+  "middle_02_r",
+  "middle_03_l",
+  "middle_03_r",
+  "neck_01",
+  "pelvis",
+  "pinky_01_l",
+  "pinky_01_r",
+  "pinky_02_l",
+  "pinky_02_r",
+  "pinky_03_l",
+  "pinky_03_r",
+  "ring_01_l",
+  "ring_01_r",
+  "ring_02_l",
+  "ring_02_r",
+  "ring_03_l",
+  "ring_03_r",
+  "spine_01",
+  "spine_02",
+  "spine_03",
+  "thigh_l",
+  "thigh_r",
+  "thumb_01_l",
+  "thumb_01_r",
+  "thumb_02_l",
+  "thumb_02_r",
+  "thumb_03_l",
+  "thumb_03_r",
+  "upperarm_l",
+  "upperarm_r"
+ ],
+ "vertices": 974,
+ "weightClass": "light",
+ "triangles": 1940,
+ "materials": [
+  "leather"
+ ],
+ "handles": [
+  {
+   "name": "Radius",
+   "at0": "skin-tight glove",
+   "at1": "thick gauntlet glove",
+   "default": 0.5,
+   "limits": [
+    0.0,
+    1.0
+   ],
+   "keyframes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "line": {
+    "start": [
+     0.517,
+     1.0494,
+     0.207
+    ],
+    "end": [
+     0.5206,
+     1.0467,
+     0.2017
+    ],
+    "lengthMm": 6.95
+   },
+   "animation": {
+    "name": "Radius",
+    "frames": [
+     0,
+     30
+    ],
+    "framesPerSecond": 30
+   }
+  }
+ ],
+ "regionClasses": {
+  "0": "leather"
+ },
+ "materialClasses": [
+  "leather"
+ ],
+ "coverageCm2": 867.3,
+ "mass": 260.19,
+ "countsTowardItem": true,
+ "build": {
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "generator": "tools/gloves/build_gloves.py",
+  "generatorSha256": "2b732467dbfcbbe9ff6233f5e142145e3086cf9021d70faff5cc20d09f0ce557",
+  "library": "tools/gloves/glove_forms.py",
+  "librarySha256": "00c6eb652b2b241d36cdd63498d99a70d95da727b92a74b487049db8da8b8452",
+  "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+  "weightClass": "light",
+  "glb": "f1-glove-wrapped.glb",
+  "glbBytes": 182632,
+  "glbSha256": "e6ddbbdf8164839f1ad1cbde7d8b73bc8e977f3117c3570fe247c38e35b82982",
+  "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+  "blender": "5.2.2 LTS"
+ },
+ "notes": "Gloves slot. The hero's hand surface pushed out to a fitted leather glove's measured distances, with a cuff wrapped onto the forearm; bends with the hand. Made with Displace, Corrective Smooth, Decimate, Bisect (hand) and a cylinder, Shrinkwrap, Displace, Solidify (cuff).",
+ "keyframing": "each end is the finished mesh deformed in Blender; the quarter keys are halfway to the ends",
+ "verification": {
+  "glb": {
+   "file": "f1-glove-wrapped.glb",
+   "targetNames": [
+    "Radius@0",
+    "Radius@0.25",
+    "Radius@0.75",
+    "Radius@1"
+   ],
+   "primitives": [
+    {
+     "vertices": 1256,
+     "triangles": 1940,
+     "targets": 4,
+     "material": 0
+    }
+   ],
+   "triangles": 1940,
+   "vertices": 1256,
+   "targets": {
+    "Radius@0": {
+     "maxDeltaM": 0.0035,
+     "verticesMoved": 770
+    },
+    "Radius@0.25": {
+     "maxDeltaM": 0.00175,
+     "verticesMoved": 770
+    },
+    "Radius@0.75": {
+     "maxDeltaM": 0.0014,
+     "verticesMoved": 770
+    },
+    "Radius@1": {
+     "maxDeltaM": 0.0028,
+     "verticesMoved": 770
+    }
+   },
+   "animations": {
+    "Radius": {
+     "start": 0.0,
+     "end": 1.0,
+     "samples": 31,
+     "peakWeight": 1.0
+    }
+   },
+   "jointCount": 53,
+   "verticesPerBone": {
+    "hand_l": 370,
+    "hand_r": 370,
+    "index_01_l": 66,
+    "index_01_r": 66,
+    "index_02_l": 47,
+    "index_02_r": 47,
+    "index_03_l": 36,
+    "index_03_r": 36,
+    "lowerarm_l": 215,
+    "lowerarm_r": 215,
+    "middle_01_l": 85,
+    "middle_01_r": 85,
+    "middle_02_l": 45,
+    "middle_02_r": 45,
+    "middle_03_l": 33,
+    "middle_03_r": 33,
+    "pinky_01_l": 77,
+    "pinky_01_r": 77,
+    "pinky_02_l": 51,
+    "pinky_02_r": 51,
+    "pinky_03_l": 40,
+    "pinky_03_r": 40,
+    "ring_01_l": 91,
+    "ring_01_r": 91,
+    "ring_02_l": 45,
+    "ring_02_r": 45,
+    "ring_03_l": 36,
+    "ring_03_r": 36,
+    "thumb_01_l": 133,
+    "thumb_01_r": 133,
+    "thumb_02_l": 127,
+    "thumb_02_r": 127,
+    "thumb_03_l": 39,
+    "thumb_03_r": 39
+   },
+   "verticesNotSingleWeight": 0,
+   "verticesWeightNotOne": 0,
+   "problems": [],
+   "ok": true,
+   "exitCode": 0
+  },
+  "checksPassed": true,
+  "cases": [
+   {
+    "case": "standard",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.125",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.25",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.375",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.625",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.75",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.875",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=1",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "all=low",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "all=high",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "defaults",
+    "foldedFaces": 0,
+    "pass": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "schemaVersion": 2,
+ "version": "team-schemes-v3",
+ "status": "Rebuilt on the ten concept families (Adam, October 23: \"These 10 work\"; lead, November 5, after Adam rejected invented pairs). Each value here is a proposal Adam can change. Look only: no stat, drop or rule outcome reads it.",
+ "why": "design-notebook/Strangedeep/Visual Direction/Armor Materials and Colours.md, \"Themes are concept families (Adam, October 23)\" (the ten families and their rules); Character Presentation, November 5 (team colours belong to the team, not to the floor); Monsters and Bosses, the active roster.",
+ "families": {
+  "source": "godot/resources/armor-paint/armor-paint-library.json",
+  "why": "A rival faction wears one of the ten families as its uniform: the family's own primary, secondary, accent and base colours, the same at every tier (team colours are exempt from the tier colour rules, Adam, October 23); the tier shows in material, wear, grime and trim. No colour is chosen here: the families live in the armor paint library.",
+  "list": [
+   {
+    "id": "crimson-crest",
+    "name": "Crimson Crest",
+    "board": "Crimson Crest (male cardinal)",
+    "look": "cardinal red over charcoal, pale bars at the edges",
+    "colours": {
+     "primary": "#6b181f",
+     "secondary": "#3a3836",
+     "accent": "#e0d6bf",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "ember-wing",
+    "name": "Ember Wing",
+    "board": "Ember Wing (male oriole)",
+    "look": "orange-red and black, cream edges",
+    "colours": {
+     "primary": "#9e2f13",
+     "secondary": "#1e1c1b",
+     "accent": "#c9bda3",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "dartglass-runner",
+    "name": "Dartglass Runner",
+    "board": "Dartglass Runner (poison dart frog)",
+    "look": "poison yellow and royal blue on black",
+    "colours": {
+     "primary": "#b39315",
+     "secondary": "#153561",
+     "accent": "#1e1c1b",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "foresters-line",
+    "name": "Forester's Line",
+    "board": "Forester's Line (Robin Hood)",
+    "look": "Lincoln green and tan leather, ochre edges",
+    "colours": {
+     "primary": "#2d4d22",
+     "secondary": "#5b4632",
+     "accent": "#a87c3c",
+     "base": "#3f2e22"
+    }
+   },
+   {
+    "id": "azure-crest",
+    "name": "Azure Crest",
+    "board": "Azure Crest (blue jay)",
+    "look": "cobalt and pale blue, black collar, white bars",
+    "colours": {
+     "primary": "#173d73",
+     "secondary": "#7baec7",
+     "accent": "#e0d6bf",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "moonstar-veil",
+    "name": "Moonstar Veil",
+    "board": "Moonstar Veil (aurora night sky)",
+    "look": "deep indigo and violet with silver",
+    "colours": {
+     "primary": "#171b47",
+     "secondary": "#4e3473",
+     "accent": "#8f8c86",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "tideglass-drifter",
+    "name": "Tideglass Drifter",
+    "board": "Tideglass Drifter (sunset on the beach)",
+    "look": "coral and lavender over sand",
+    "colours": {
+     "primary": "#c76f5a",
+     "secondary": "#937db3",
+     "accent": "#c9bda3",
+     "base": "#5b4632"
+    }
+   },
+   {
+    "id": "olive-bastion",
+    "name": "Olive Bastion",
+    "board": "Olive Bastion (tank)",
+    "look": "olive drab and khaki, black fittings",
+    "colours": {
+     "primary": "#585928",
+     "secondary": "#a87c3c",
+     "accent": "#1e1c1b",
+     "base": "#5b4632"
+    }
+   },
+   {
+    "id": "white-stripe-jack",
+    "name": "White Stripe Jack",
+    "board": "White Stripe Jack (white tiger)",
+    "look": "bone white with black stripes",
+    "colours": {
+     "primary": "#e0d6bf",
+     "secondary": "#1e1c1b",
+     "accent": "#8f8c86",
+     "base": "#1e1c1b"
+    }
+   },
+   {
+    "id": "eight-ball-bastion",
+    "name": "Eight Ball Bastion",
+    "board": "Eight Ball Bastion (billiards)",
+    "look": "gloss black with red, green and gold panels",
+    "colours": {
+     "primary": "#1e1c1b",
+     "secondary": "#6b1b21",
+     "accent": "#9e8520",
+     "base": "#1e1c1b",
+     "felt": "#2c521f"
+    }
+   }
+  ]
+ },
+ "roles": [
+  {
+   "id": "leader",
+   "mark": "accent",
+   "step": 0,
+   "why": "The one to watch, marked lightly: its trim and padding wear the family's accent instead of their usual colour, so it reads as the same team with a brighter edge."
+  },
+  {
+   "id": "melee",
+   "mark": "none",
+   "step": -4,
+   "why": "The front line a little darker (4 lightness steps of 100)."
+  },
+  {
+   "id": "ranged",
+   "mark": "none",
+   "step": 0,
+   "why": "The family as it is."
+  },
+  {
+   "id": "caster",
+   "mark": "none",
+   "step": 4,
+   "why": "Casters a little lighter (4 lightness steps of 100), so they read apart from the bowmen."
+  }
+ ],
+ "roleWhy": "Adam, November 4: \"team members can vary the scheme slightly by role\". Each role moves every colour's CIELAB lightness by its step, at most maxRoleStep either way, and the leader alone carries a mark; the team proof checks every member stays within ΔE 10 of its squad's mean.",
+ "maxRoleStep": 6,
+ "leaderMarkSlots": [
+  "trim",
+  "padding"
+ ],
+ "roster": {
+  "factions": 4,
+  "why": "Four factions are rolled when the descent begins and kept until a full wipe (Monsters and Bosses, active roster), each a different family dealt from all ten. No two families share a colour pair (the library refuses one), so any four read apart.",
+  "wildcardProposal": {
+   "share": 0.1,
+   "status": "Proposal for Adam, not built: no roster deals a wildcard faction yet.",
+   "why": "Adam (October 23) names \"Wildcard factions\" that wear the whole rainbow, loud, at random per region of every piece. Proposal: any roster slot after the first comes up Wildcards about 1 time in 10; Adam picks the rate."
+  }
+ }
+}

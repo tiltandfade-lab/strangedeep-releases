@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "status": "Pending review (lanes masonry-pilot and masonry-variety, November 17): the masonry library of design-notebook/Strangedeep/Visual Direction/Masonry Library.md and docs/production/masonry-pipeline-2026-11-13/PLAN.md. Every look here is pending review under docs/GODOT-MATERIAL-QUALITY.md; none is approved.",
+  "note": "The one owner of which masonry a floor wears. sets: each built set's folder (maps-a.png, maps-n.png and set.json written by tools/masonry/build_masonry_sets.py; the game reads tile size, mortar level, stone key and the edge check from set.json). looks: a floor layout (flagstone: the look's floor set; skin-slabs: the skins' own one-slab-a-cell floor, so the floor set is null), a floor set and a wall set (either may be null: that surface keeps its skin), a palette the set's light-free value is mapped between (stoneDark to stoneLight), the mortar and grime colours, how much grime, wear, stone-to-stone variation and value contrast it shows, and its variety (lane masonry-variety: shares of dark and light tones and their step, and shares of worn, cracked, patched and accent stones, chosen per stone by the shader; no variety is the pilot's mono). A floor recipe (godot/resources/floor-recipes.json) names a look in its masonrySet; Floor 4 names floor4-ashlar-flagstone. floorings (lane floor-textures, November 17): a pattern set (tools/masonry/patterns.py) with its wear, grime and variety, and its colourways (the palette its value is mapped through, with the patch and accent stone colours); a floor recipe's roomFloorings names a flooring and colourway per room kind (MasonrySets.Floorings.cs). Read by godot/src/MasonrySets.cs.",
+  "sets": {
+    "flagstone-irregular-scan": { "dir": "res://resources/masonry/flagstone-irregular-scan" },
+    "ashlar-scan": { "dir": "res://resources/masonry/ashlar-scan" },
+    "coursed-rubble-scan": { "dir": "res://resources/masonry/coursed-rubble-scan" },
+    "red-brick-scan": { "dir": "res://resources/masonry/red-brick-scan" },
+    "damaged-plaster-scan": { "dir": "res://resources/masonry/damaged-plaster-scan" },
+    "flagstone-irregular-layout-stand-in": { "dir": "res://resources/masonry/flagstone-irregular-layout-stand-in" },
+    "marble-checkerboard": { "dir": "res://resources/masonry/marble-checkerboard" },
+    "marble-checkerboard-fine": { "dir": "res://resources/masonry/marble-checkerboard-fine" },
+    "quarry-tile": { "dir": "res://resources/masonry/quarry-tile" },
+    "wide-boards": { "dir": "res://resources/masonry/wide-boards" },
+    "herringbone-parquet": { "dir": "res://resources/masonry/herringbone-parquet" },
+    "herringbone-brick": { "dir": "res://resources/masonry/herringbone-brick" }
+  },
+  "floorings": {
+    "marble-checkerboard": {
+      "set": "marble-checkerboard",
+      "grime": 0.18, "wear": 0.04, "stoneVariation": 0.05, "valueContrast": 1.0,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.04, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "black-and-white-marble": { "stoneDark": "1a1715", "stoneLight": "9c927f", "mortar": "5a564e", "grime": "1c1915", "patchColor": "6f6a60", "accentColor": "6f6a60" },
+        "red-and-ochre-tile": { "stoneDark": "56291f", "stoneLight": "a3805a", "mortar": "3a2c22", "grime": "1e140e", "patchColor": "7a5a40", "accentColor": "7a5a40" },
+        "slate-and-limestone": { "stoneDark": "2f363a", "stoneLight": "9ea394", "mortar": "3b3833", "grime": "17150f", "patchColor": "6a6458", "accentColor": "6a6458" }
+      },
+      "status": "pending review (lane floor-textures, November 17): a marble checkerboard, 30-inch squares (two to a cell) with hairline joints, dark squares from a black-veined marble scan and light squares from a grey-veined white marble scan (ambientCG, CC0), recoloured by colourway; rare worn, cracked and patched squares"
+    },
+    "marble-checkerboard-fine": {
+      "set": "marble-checkerboard-fine",
+      "grime": 0.18, "wear": 0.04, "stoneVariation": 0.05, "valueContrast": 1.0,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.04, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "black-and-white-marble": { "stoneDark": "1a1715", "stoneLight": "9c927f", "mortar": "5a564e", "grime": "1c1915", "patchColor": "6f6a60", "accentColor": "6f6a60" },
+        "nero-border": { "stoneDark": "1a1715", "stoneLight": "211d1a", "mortar": "4a463f", "grime": "1c1915", "patchColor": "5a554c", "accentColor": "5a554c" },
+        "red-and-ochre-tile": { "stoneDark": "56291f", "stoneLight": "a3805a", "mortar": "3a2c22", "grime": "1e140e", "patchColor": "7a5a40", "accentColor": "7a5a40" },
+        "slate-and-limestone": { "stoneDark": "2f363a", "stoneLight": "9ea394", "mortar": "3b3833", "grime": "17150f", "patchColor": "6a6458", "accentColor": "6a6458" }
+      },
+      "status": "pending review (lane floor-textures, November 17): a marble checkerboard, 15-inch squares (four to a cell; Adam, November 17: \"both square sizes are fine\") with hairline joints, dark squares from a black-veined marble scan and light squares from a grey-veined white marble scan (ambientCG, CC0), recoloured by colourway; rare worn, cracked and patched squares"
+    },
+    "quarry-tile": {
+      "set": "quarry-tile",
+      "grime": 0.22, "wear": 0.06, "stoneVariation": 0.05, "valueContrast": 0.85,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.05, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "terracotta": { "stoneDark": "553028", "stoneLight": "9e6e52", "mortar": "4a3a2e", "grime": "1c140f", "patchColor": "7a6a58", "accentColor": "7a6a58" },
+        "ochre-and-umber": { "stoneDark": "4a3524", "stoneLight": "a08860", "mortar": "45392c", "grime": "1a140e", "patchColor": "6e6450", "accentColor": "6e6450" }
+      },
+      "status": "pending review (lane floor-textures, November 18): fired clay quarry tiles, 15-inch squares (four to a cell) with 1-inch joints, two kiln batches from CC0 clay scans (ambientCG), recoloured by colourway; rare worn, cracked and patched tiles"
+    },
+    "ruined-quarry-tile": {
+      "set": "quarry-tile",
+      "grime": 0.5, "wear": 0.35, "stoneVariation": 0.14, "valueContrast": 0.95,
+      "variety": {"tones": {"dark": 0.35, "light": 0.2, "step": 0.07}, "worn": 0.22, "cracked": 0.12, "patched": 0.06, "accent": 0.1},
+      "colourways": {
+        "pale-ash": { "stoneDark": "3e3d38", "stoneLight": "9b998e", "mortar": "3a3026", "grime": "16110c", "patchColor": "221e1a", "accentColor": "86705a" },
+        "ruined-terracotta": { "stoneDark": "4a2a22", "stoneLight": "92664c", "mortar": "3a2c22", "grime": "160f0b", "patchColor": "1f1915", "accentColor": "a07a5c" }
+      },
+      "status": "pending review (lane floor-textures, November 18; lead: the Floor 3 workshop tile read too clean and new, 'this is a ruined workshop floor'): the quarry tile set worn hard, uneven glaze (wider tone steps), heavy grime in the joints, worn and cracked tiles, chipped tiles showing the clay body (accent) and missing tiles showing the dark bed (patch)"
+    },
+    "wide-boards": {
+      "set": "wide-boards",
+      "grime": 0.24, "wear": 0.08, "stoneVariation": 0.05, "valueContrast": 0.9,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.03, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "worn-pine": { "stoneDark": "3a2c20", "stoneLight": "8c7254", "mortar": "1a140f", "grime": "15100c", "patchColor": "5e5040", "accentColor": "5e5040" },
+        "weathered-oak": { "stoneDark": "33312c", "stoneLight": "7d776a", "mortar": "171512", "grime": "13110e", "patchColor": "58544a", "accentColor": "58544a" }
+      },
+      "status": "pending review (lane floor-textures, November 18): wide floorboards, 15 inches wide (four rows to a cell) and 3.75 to 7.5 feet long, grain from a CC0 wood scan (ambientCG) cut per board, recoloured by colourway; rare worn, split and patched boards"
+    },
+    "herringbone-parquet": {
+      "set": "herringbone-parquet",
+      "grime": 0.18, "wear": 0.06, "stoneVariation": 0.05, "valueContrast": 0.8,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.02, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "honey-oak": { "stoneDark": "3d2a1a", "stoneLight": "9a7346", "mortar": "241a12", "grime": "17110c", "patchColor": "6a5038", "accentColor": "6a5038" },
+        "dark-lacquered": { "stoneDark": "1f1714", "stoneLight": "6b4a36", "mortar": "120d0b", "grime": "0e0a08", "patchColor": "4a3a30", "accentColor": "4a3a30" }
+      },
+      "status": "pending review (lane floor-textures, November 18): herringbone parquet, 3.75 by 15 inch oak blocks laid square to the walls (a 30-inch repeat), grain from a CC0 wood scan (ambientCG) turned along each block, recoloured by colourway; rare worn, cracked and patched blocks"
+    },
+    "herringbone-brick": {
+      "set": "herringbone-brick",
+      "grime": 0.26, "wear": 0.08, "stoneVariation": 0.05, "valueContrast": 0.85,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.035}, "worn": 0.08, "cracked": 0.05, "patched": 0.02, "accent": 0.0},
+      "colourways": {
+        "red-brick": { "stoneDark": "4a2a22", "stoneLight": "8e5a46", "mortar": "6a6056", "grime": "1a1310", "patchColor": "6e5a4c", "accentColor": "6e5a4c" },
+        "soot-brick": { "stoneDark": "2b2724", "stoneLight": "6e6258", "mortar": "4e4a44", "grime": "141210", "patchColor": "58504a", "accentColor": "58504a" },
+        "charred-brick": { "stoneDark": "1e1a18", "stoneLight": "6a5a50", "mortar": "4e4a44", "grime": "141210", "patchColor": "58504a", "accentColor": "58504a" }
+      },
+      "status": "pending review (lane floor-textures, November 18): herringbone brick paving, 7.5 by 15 inch clay pavers laid square to the walls (a 30-inch repeat) in lime mortar, surface from a CC0 clay scan (ambientCG), recoloured by colourway; rare worn, cracked and patched bricks"
+    },
+    "ruined-flagstone": {
+      "set": "flagstone-irregular-scan",
+      "grime": 0.22, "wear": 0.2, "stoneVariation": 0.06, "valueContrast": 0.5,
+      "variety": {"tones": {"dark": 0.3, "light": 0.2, "step": 0.16}, "worn": 0.12, "cracked": 0.06, "patched": 0.05, "accent": 0.015},
+      "colourways": {
+        "dried-blood": { "stoneDark": "1e1412", "stoneLight": "3d302a", "mortar": "4d4740", "grime": "0d0806", "patchColor": "2b221d", "accentColor": "441811" },
+        "deep-dried-blood": { "stoneDark": "1a110f", "stoneLight": "312722", "mortar": "3d3832", "grime": "0a0605", "patchColor": "241c18", "accentColor": "3a130d" }
+      },
+      "status": "pending review (lane floor-textures, November 18; lead approved dried-blood for Floor 5 crypts and shrines; the lead, November 25, lane backlog-4: Floors 1 to 4 crypts wear it too, so a sarcophagus room never falls to the plain floor field): Floor 4's irregular flagstone set and variety, brown-black dried-blood stone with bone-grey joints, darkened until the hero clears the floor's dark quarter by 10 L* (Full: crypt 11.6, shrine 10.9; Retro 11.7, 13.0). deep-dried-blood is unused, kept because FloorRecipeProof requires two colourways; measured at the 55% step (Full: crypt 12.4, shrine 12.3), a ready alternative if Floor 5 goes deeper"
+    }
+  },
+  "campGroundRuinWalling": { "walling": "coursed-rubble", "colourway": "weathered-ruin", "status": "pending review (lane wall-textures, November 18; lead: the camp ground's ruined ring reads as ruins, not as clean hall walls): every camp ground's ruined wall runs (camp-design's campGroundRuin walls) wear it, ahead of the room's walls" },
+  "wallings": {
+    "coursed-rubble": {
+      "set": "coursed-rubble-scan",
+      "grime": 0.4, "wear": 0.3, "stoneVariation": 0.2, "valueContrast": 0.85,
+      "variety": {"tones": {"dark": 0.3, "light": 0.2, "step": 0.12}, "worn": 0.14, "cracked": 0.06, "patched": 0.05, "accent": 0.02},
+      "colourways": {
+        "warm-limestone": { "stoneDark": "2d2520", "stoneLight": "72604e", "mortar": "231d18", "grime": "130f0c", "patchColor": "3a3028", "accentColor": "5e4a3a", "foot": 0.7 },
+        "smoked-limestone": { "stoneDark": "221c18", "stoneLight": "5a4c40", "mortar": "1a1512", "grime": "0e0b09", "patchColor": "2e2620", "accentColor": "4a3a2e" },
+        "weathered-ruin": { "stoneDark": "2a2622", "stoneLight": "6e6658", "mortar": "3a3630", "grime": "171512", "patchColor": "2a2e22", "accentColor": "4e5640", "wear": 0.6, "grimeLevel": 0.55, "stoneVariation": 0.3, "roughness": 0.15, "sheen": 0.2, "relief": 1.0 }
+      },
+      "status": "pending review (lane wall-textures, November 18): coursed rubble, roughly squared field stones laid in courses with wide lime joints, value and relief from the CC0 rubble scan, recoloured by colourway; rare worn, cracked and patched stones"
+    },
+    "dressed-ashlar": {
+      "set": "ashlar-scan",
+      "grime": 0.22, "wear": 0.2, "stoneVariation": 0.08, "valueContrast": 0.35,
+      "variety": {"tones": {"dark": 0.15, "light": 0.2, "step": 0.1}, "worn": 0.12, "cracked": 0, "patched": 0, "accent": 0.015},
+      "colourways": {
+        "cathedral-limestone": { "stoneDark": "6e6252", "stoneLight": "9e917c", "mortar": "544a3e", "grime": "2e271f", "patchColor": "5a5044", "accentColor": "7a6a54", "foot": 0.5, "grimeLevel": 0.12, "mortarLevel": 0.3, "jointReach": 0.15 },
+        "grey-sandstone": { "stoneDark": "2e2c28", "stoneLight": "746e62", "mortar": "22201c", "grime": "12110f", "patchColor": "403c35", "accentColor": "5c5448" }
+      },
+      "status": "pending review (lane wall-textures, November 18): dressed ashlar, squared blocks in level courses with fine joints, value and relief from the CC0 ashlar scan, recoloured by colourway; rare worn blocks; no cracked or patched blocks, and joints only near a stone's edge (jointReach), since the scan's irregular stone regions and spalled hollows read as dark blotches inside the blocks (lane wall-textures, November 19)"
+    },
+    "running-brick": {
+      "set": "red-brick-scan",
+      "grime": 0.3, "wear": 0.15, "stoneVariation": 0.25, "valueContrast": 0.6,
+      "variety": {"tones": {"dark": 0.25, "light": 0.25, "step": 0.12}, "worn": 0.08, "cracked": 0, "patched": 0, "accent": 0},
+      "colourways": {
+        "red-brick": { "stoneDark": "4a2218", "stoneLight": "8a4a34", "mortar": "6e655a", "grime": "1e140f", "patchColor": "5a3022", "accentColor": "3a2a22", "foot": 0.4 },
+        "soot-brick": { "stoneDark": "2c1812", "stoneLight": "5c3226", "mortar": "3a332c", "grime": "120c09", "patchColor": "3a2018", "accentColor": "2a1e18", "foot": 0.6, "grimeLevel": 0.45 },
+        "limewashed-brick": { "stoneDark": "988d7b", "stoneLight": "c6bba5", "mortar": "766a5b", "grime": "2e261c", "patchColor": "8a4a34", "accentColor": "8a4a34", "foot": 0.5 }
+      },
+      "status": "pending review (lane wall-textures, November 19): brick in running bond, small regular units with a clear lime mortar grid, value and relief from the CC0 medieval red brick scan, fired colour varying brick to brick by tone; no cracked, patched or accent bricks; drawn 1.5 times real size so the courses read at the game camera; limewashed brick is a pale lime coat over the courses, for rooms on a brick floor"
+    }
+  },
+  "looks": {
+    "floor4-flagstone": {
+      "floorLayout": "flagstone", "floor": "flagstone-irregular-scan", "wall": null,
+      "palette": { "stoneDark": "1b1f21", "stoneLight": "454f4e", "mortar": "181c1d", "grime": "101413" },
+      "grime": 0.3, "wear": 0.2, "stoneVariation": 0.14, "valueContrast": 0.6,
+      "status": "pending review: the checkpoint set (irregular flagstone floor from a CC0 scan) on Floor 4's grey-teal stone"
+    },
+    "floor4-ashlar-flagstone": {
+      "floorLayout": "flagstone", "floor": "flagstone-irregular-scan", "wall": "ashlar-scan",
+      "palette": { "stoneDark": "1b1f21", "stoneLight": "454f4e", "mortar": "181c1d", "grime": "101413" },
+      "grime": 0.22, "wear": 0.2, "stoneVariation": 0.06, "valueContrast": 0.5,
+      "variety": {"tones": {"dark": 0.3, "light": 0.2, "step": 0.16}, "worn": 0.12, "cracked": 0.06, "patched": 0.05, "accent": 0.015, "patchColor": "4a463e", "accentColor": "2b4a45"},
+      "status": "pending review, switched on for Floor 4 (lane masonry-variety, November 17; Adam called the Floor 4 masonry good and asked for variety within the set): ashlar walls over irregular flagstones (dungeon-refs plan: ashlar on Floors 4 and 5), each stone in one of three tones, with rare worn, cracked, patched and accent stones"
+    },
+    "floor1-rubble-flagstone": {
+      "floorLayout": "flagstone", "floor": "flagstone-irregular-scan", "wall": "coursed-rubble-scan",
+      "palette": { "stoneDark": "2d2520", "stoneLight": "72604e", "mortar": "231d18", "grime": "130f0c" },
+      "grime": 0.4, "wear": 0.3, "stoneVariation": 0.25, "valueContrast": 0.9,
+      "status": "review only (no recipe names it): Floor 1's ruined complex, coursed rubble over irregular flagstones, for comparison stills"
+    },
+    "floor4-ashlar-skin-slabs": {
+      "floorLayout": "skin-slabs", "floor": null, "wall": "ashlar-scan",
+      "palette": { "stoneDark": "1b1f21", "stoneLight": "454f4e", "mortar": "181c1d", "grime": "101413" },
+      "grime": 0.22, "wear": 0.2, "stoneVariation": 0.06, "valueContrast": 0.5,
+      "variety": {"tones": {"dark": 0.3, "light": 0.2, "step": 0.16}, "worn": 0.12, "cracked": 0.06, "patched": 0.05, "accent": 0.015, "patchColor": "4a463e", "accentColor": "2b4a45"},
+      "status": "review only (no recipe names it): the other floor layout, the skins' one-slab-a-cell floor (Adam's 'tetris slab' treatment, for some floor kinds) under Floor 4's ashlar walls"
+    },
+    "floor4-layout-stand-in": {
+      "floorLayout": "flagstone", "floor": "flagstone-irregular-layout-stand-in", "wall": null,
+      "palette": { "stoneDark": "1b1f21", "stoneLight": "454f4e", "mortar": "181c1d", "grime": "101413" },
+      "grime": 0.3, "wear": 0.2, "stoneVariation": 0.14, "valueContrast": 0.6,
+      "status": "review only: a STAND-IN layout sheet drawn by script (not Codex), proving the layout path; Codex's sheets replace it"
+    }
+  }
+}

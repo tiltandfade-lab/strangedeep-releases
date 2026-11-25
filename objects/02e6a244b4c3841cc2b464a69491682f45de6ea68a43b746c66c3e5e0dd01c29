@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "what": "The world paint's base colour maps (design-notebook Dressing, 'November 19 — Meshy textures under the rolled paint'). One row per prop mesh that takes a hand-painted colour map as its base: glb is the prop's GLB with the map's UVs added (tools/world-paint/bake_base_map.py writes it, with the map and provenance.json, into godot/assets/world-paint/base-maps/<mesh>/), map the 2K colour map. A row draws in play only when live is true; adding a Codex texture is a new row and a bake, never code. Every row is pending review under docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance and renews no approval fingerprint.",
+  "stretchLimit": 1.5,
+  "stretchLimitWhy": "Past 1.5 times its baked size along an axis a hand-painted map reads as smeared at the game camera; past it the map repeats along that axis, mirrored, at its own density (WorldPaint.BaseMaps.cs).",
+  "layer": 0.5,
+  "relief": 1.0,
+  "maps": {
+    "pew-stone": {
+      "glb": "res://assets/world-paint/base-maps/pew-stone/pew-stone-uv.glb",
+      "map": "res://assets/world-paint/base-maps/pew-stone/pew-stone-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/pew-stone/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    },
+    "sarcophagus": {
+      "glb": "res://assets/world-paint/base-maps/sarcophagus/sarcophagus-uv.glb",
+      "map": "res://assets/world-paint/base-maps/sarcophagus/sarcophagus-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/sarcophagus/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    },
+    "sarcophagus-open": {
+      "glb": "res://assets/world-paint/base-maps/sarcophagus-open/sarcophagus-open-uv.glb",
+      "map": "res://assets/world-paint/base-maps/sarcophagus-open/sarcophagus-open-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/sarcophagus-open/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    },
+    "wd-coffin-shut": {
+      "glb": "res://assets/world-paint/base-maps/wd-coffin-shut/wd-coffin-shut-uv.glb",
+      "map": "res://assets/world-paint/base-maps/wd-coffin-shut/wd-coffin-shut-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/coffin-shut/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py against the lane weekend-dressing mesh now on trunk (same file hash). Not live until Adam looks."
+    },
+    "wd-coffin-open": {
+      "glb": "res://assets/world-paint/base-maps/wd-coffin-open/wd-coffin-open-uv.glb",
+      "map": "res://assets/world-paint/base-maps/wd-coffin-open/wd-coffin-open-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/coffin-open/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py against the lane weekend-dressing mesh now on trunk (same file hash). Not live until Adam looks."
+    },
+    "wd-grave-rounded": {
+      "glb": "res://assets/world-paint/base-maps/wd-grave-rounded/wd-grave-rounded-uv.glb",
+      "map": "res://assets/world-paint/base-maps/wd-grave-rounded/wd-grave-rounded-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/grave-rounded/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py against the lane weekend-dressing mesh now on trunk (same file hash). Not live until Adam looks."
+    },
+    "wd-grave-squared": {
+      "glb": "res://assets/world-paint/base-maps/wd-grave-squared/wd-grave-squared-uv.glb",
+      "map": "res://assets/world-paint/base-maps/wd-grave-squared/wd-grave-squared-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/grave-squared/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py against the lane weekend-dressing mesh now on trunk (same file hash). Not live until Adam looks."
+    },
+    "wd-candelabrum": {
+      "glb": "res://assets/world-paint/base-maps/wd-candelabrum/wd-candelabrum-uv.glb",
+      "map": "res://assets/world-paint/base-maps/wd-candelabrum/wd-candelabrum-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this mesh (source-assets/meshy/room-props-retexture/2026-11-19/candelabrum/, lane meshy-retexture-trial), baked onto our UVs by tools/world-paint/bake_base_map.py against the lane weekend-dressing mesh now on trunk (same file hash). Not live until Adam looks."
+    },
+    "lectern": {
+      "glb": "res://assets/world-paint/base-maps/lectern/lectern-uv.glb",
+      "map": "res://assets/world-paint/base-maps/lectern/lectern-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of the archive lectern (source-assets/meshy/room-props-retexture/2026-11-19/archive-lectern/, lane meshy-retexture-trial), baked onto the rolled level prop that draws in its place with the level props' gate open, by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    }
+  },
+  "scenesWhat": "Room-theme dressing scenes that are not rolled props (WorldPaint.SceneMaps.cs), keyed by room-theme asset: with a row on, the scene's meshes take the baked parts (glb) and the map as their colour, each surface keeping its family's roughness and metallic. Same review rule as maps.",
+  "scenes": {
+    "reliquary-shrine": {
+      "glb": "res://assets/world-paint/base-maps/reliquary-shrine/reliquary-shrine-uv.glb",
+      "map": "res://assets/world-paint/base-maps/reliquary-shrine/reliquary-shrine-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this model (source-assets/meshy/room-props-retexture/2026-11-19/reliquary-shrine-image-reference/, lane meshy-retexture-trial), baked onto the scene's own GLB by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    },
+    "stone-altar": {
+      "glb": "res://assets/world-paint/base-maps/stone-altar/stone-altar-uv.glb",
+      "map": "res://assets/world-paint/base-maps/stone-altar/stone-altar-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this model (source-assets/meshy/room-props-retexture/2026-11-19/stone-altar/, lane meshy-retexture-trial), baked onto the scene's own GLB by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    },
+    "saint-statue": {
+      "glb": "res://assets/world-paint/base-maps/saint-statue/saint-statue-uv.glb",
+      "map": "res://assets/world-paint/base-maps/saint-statue/saint-statue-base.png",
+      "live": false,
+      "status": "pending-review",
+      "source": "Codex's image-guided Meshy retexture of this model (source-assets/meshy/room-props-retexture/2026-11-19/saint-statue/, lane meshy-retexture-trial), baked onto the scene's own GLB by tools/world-paint/bake_base_map.py. Not live until Adam looks."
+    }
+  }
+}

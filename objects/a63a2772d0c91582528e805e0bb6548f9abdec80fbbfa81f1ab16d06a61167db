@@ -1,0 +1,86 @@
+{
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "prop": "reliquary-shrine-prompt-control",
+  "script": "tools/world-paint/bake_base_map.py",
+  "blender": "5.2.2 LTS",
+  "runtime": {
+    "path": "godot/assets/level-dressing/floor1-models/reliquary-shrine/reliquary-shrine-runtime.glb",
+    "sha256": "f204b341ca2b1f520717400b2119012d7c5ddc94c5a1cb6fd43d84aeae0f049e",
+    "parts": [
+      "reliquary-shrine"
+    ],
+    "triangles": 11110
+  },
+  "meshy": {
+    "path": "source-assets/meshy/room-props-retexture/2026-11-19/reliquary-shrine/provider-source/Meshy_AI__1119010922_texture.glb@origin/lane/meshy-retexture-trial",
+    "sha256": "6af291857ea9cb1cb46cc6cd36ffd1b74467853ac402f761caf3f07bd0cf06df",
+    "triangles": 11110,
+    "map": "Image_0",
+    "mapSize": [
+      2048,
+      2048
+    ]
+  },
+  "boundsMisfitMetres": 0.0,
+  "fit": {
+    "scale": 1.2,
+    "axisScales": [
+      1.2,
+      1.2,
+      1.2
+    ],
+    "offsetMetres": [
+      0.0,
+      0.00256,
+      1.0875
+    ]
+  },
+  "status": "pending review (docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance)",
+  "uv": {
+    "layout": "new atlas",
+    "overlap": 1.0,
+    "why": "our UV map stacks or mirrors faces"
+  },
+  "weldedCorners": {
+    "reliquary-shrine": 15681
+  },
+  "fillColour": [
+    0.4804,
+    0.3376,
+    0.1718
+  ],
+  "nearTexelShare": 0.423,
+  "nearExtrusionMetres": 0.002,
+  "grazing": {
+    "ourTexels": 1774266,
+    "grazingTexels": 188647,
+    "share": 0.1063,
+    "patchAt": [
+      480,
+      48
+    ],
+    "patchSize": 192,
+    "grazeCos": 0.8
+  },
+  "method": "bake: our parts unwrapped into one Smart UV Project atlas, the Meshy map baked onto it selected-to-active (emission, Cycles CPU, 4 samples)",
+  "gapMetres": {
+    "median": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "vertices": 21312
+  },
+  "cageExtrusionMetres": 0.002,
+  "maxRayDistanceMetres": 0.004,
+  "outputs": {
+    "glb": {
+      "path": "godot/assets/world-paint/base-maps/reliquary-shrine-prompt-control/reliquary-shrine-prompt-control-uv.glb",
+      "sha256": "9e1e9b574a04e9f6a703aa64483731de50999aae64f4f9e2a28a6dd54410d01b"
+    },
+    "map": {
+      "path": "godot/assets/world-paint/base-maps/reliquary-shrine-prompt-control/reliquary-shrine-prompt-control-base.png",
+      "sha256": "5cccfda29789e1708a19a4012d0e0825206fb832e322c2ef12acb8ec612c227d",
+      "size": 2048
+    }
+  }
+}

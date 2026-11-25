@@ -1,0 +1,704 @@
+{
+ "schemaVersion": 1,
+ "id": "heavy-gauntlet-crested-banded-l",
+ "displayName": "Crested gauntlet (left)",
+ "family": "F1",
+ "familyName": "Riveted iron",
+ "tier": 1,
+ "category": "hand",
+ "slot": "gloves",
+ "attach": "lames",
+ "bones": [
+  "hand_l",
+  "index_01_l",
+  "index_02_l",
+  "index_03_l",
+  "lowerarm_l",
+  "middle_01_l",
+  "middle_02_l",
+  "middle_03_l",
+  "pinky_01_l",
+  "pinky_02_l",
+  "pinky_03_l",
+  "ring_01_l",
+  "ring_02_l",
+  "ring_03_l",
+  "thumb_01_l",
+  "thumb_02_l",
+  "thumb_03_l"
+ ],
+ "allowedRegions": [
+  "hand_l"
+ ],
+ "defaultRegion": "hand_l",
+ "pivot": {
+  "space": "part (glTF, +Y up, metres)",
+  "point": [
+   0.5243,
+   1.0712,
+   0.2447
+  ],
+  "normal": [
+   0.7473,
+   0.6643,
+   -0.017
+  ]
+ },
+ "sinkDepthMm": 0.0,
+ "twin": {
+  "kind": "mirror",
+  "pairedId": "heavy-gauntlet-crested-banded-r"
+ },
+ "scaleLimits": [
+  0.95,
+  1.1
+ ],
+ "rotateLimitsDeg": {
+  "pitch": 0,
+  "yaw": 0,
+  "roll": 0
+ },
+ "nudgeAxis": {
+  "name": "bone",
+  "vector": [
+   0.4338,
+   -0.4684,
+   0.7697
+  ]
+ },
+ "handles": [
+  {
+   "name": "Radius",
+   "at0": "a strip over the back of each finger",
+   "at1": "down the sides of each finger",
+   "default": 0.5,
+   "limits": [
+    0.0,
+    1.0
+   ],
+   "keyframes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "line": {
+    "start": [
+     0.5218,
+     1.0644,
+     0.2051
+    ],
+    "end": [
+     0.5114,
+     1.0451,
+     0.1992
+    ],
+    "lengthMm": 22.73
+   },
+   "animation": {
+    "name": "Radius",
+    "frames": [
+     0,
+     30
+    ],
+    "framesPerSecond": 30
+   }
+  },
+  {
+   "name": "BoneLength",
+   "at0": "short bands, open joints",
+   "at1": "long bands, deep overlap",
+   "default": 0.5,
+   "limits": [
+    0.0,
+    1.0
+   ],
+   "keyframes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "line": {
+    "start": [
+     0.4642,
+     1.0406,
+     0.3306
+    ],
+    "end": [
+     0.4691,
+     1.0571,
+     0.31
+    ],
+    "lengthMm": 26.8
+   },
+   "animation": {
+    "name": "BoneLength",
+    "frames": [
+     0,
+     30
+    ],
+    "framesPerSecond": 30
+   }
+  },
+  {
+   "name": "BendTip",
+   "at0": "blunt fingertips",
+   "at1": "hooked claws",
+   "default": 0.5,
+   "limits": [
+    0.0,
+    1.0
+   ],
+   "keyframes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "line": {
+    "start": [
+     0.5701,
+     0.9476,
+     0.3255
+    ],
+    "end": [
+     0.569,
+     0.9319,
+     0.3312
+    ],
+    "lengthMm": 16.74
+   },
+   "animation": {
+    "name": "BendTip",
+    "frames": [
+     0,
+     30
+    ],
+    "framesPerSecond": 30
+   }
+  },
+  {
+   "name": "RadiusTop",
+   "at0": "straight cuff",
+   "at1": "flared bell",
+   "default": 0.5,
+   "limits": [
+    0.0,
+    1.0
+   ],
+   "keyframes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "line": {
+    "start": [
+     0.379,
+     1.1348,
+     0.1674
+    ],
+    "end": [
+     0.3627,
+     1.1346,
+     0.1788
+    ],
+    "lengthMm": 19.88
+   },
+   "animation": {
+    "name": "RadiusTop",
+    "frames": [
+     0,
+     30
+    ],
+    "framesPerSecond": 30
+   }
+  }
+ ],
+ "regionClasses": {
+  "0": "metal"
+ },
+ "materialClasses": [
+  "metal"
+ ],
+ "coverageCm2": 392.6,
+ "mass": 392.6,
+ "weightClass": "heavy",
+ "triangles": 1320,
+ "complexity": 14,
+ "mutateTags": [
+  "heavy",
+  "plate",
+  "crested"
+ ],
+ "references": [],
+ "build": {
+  "glb": "heavy-gauntlet-crested-banded-l.glb",
+  "glbSha256": "2097fad58a4424f2c829eaae371f162539dd17a87c948d2e7175c7d67b3171c7",
+  "glbBytes": 485268,
+  "generator": "tools/gloves/build_gloves.py",
+  "generatorSha256": "2b732467dbfcbbe9ff6233f5e142145e3086cf9021d70faff5cc20d09f0ce557",
+  "library": "tools/gloves/glove_forms.py",
+  "librarySha256": "00c6eb652b2b241d36cdd63498d99a70d95da727b92a74b487049db8da8b8452",
+  "body": "godot/assets/character-workshop/mpfb-human.glb",
+  "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+  "blender": "5.2.2 LTS",
+  "clearanceTargetMm": 0.6,
+  "tagMethod": "coverage: from the centre of every face of the body (the skin and its underclothes) at rest, a ray along the face's normal; the face's area counts when the ray meets the part's standard shape within 15 cm. mass: coverage times the density of each paint region's material type (armor-material-types.json), weighted by that region's share of the part's surface. Pins (charms and fittings) weigh nothing: coverage 0, mass 0.",
+  "status": "pilot output, not approved art"
+ },
+ "verification": {
+  "glb": {
+   "file": "heavy-gauntlet-crested-banded-l.glb",
+   "targetNames": [
+    "Radius@0",
+    "Radius@0.25",
+    "Radius@0.75",
+    "Radius@1",
+    "BoneLength@0",
+    "BoneLength@0.25",
+    "BoneLength@0.75",
+    "BoneLength@1",
+    "BendTip@0",
+    "BendTip@0.25",
+    "BendTip@0.75",
+    "BendTip@1",
+    "RadiusTop@0",
+    "RadiusTop@0.25",
+    "RadiusTop@0.75",
+    "RadiusTop@1"
+   ],
+   "primitives": [
+    {
+     "vertices": 1698,
+     "triangles": 1320,
+     "targets": 16,
+     "material": 0
+    }
+   ],
+   "triangles": 1320,
+   "vertices": 1698,
+   "targets": {
+    "Radius@0": {
+     "maxDeltaM": 0.01596,
+     "verticesMoved": 1554
+    },
+    "Radius@0.25": {
+     "maxDeltaM": 0.00798,
+     "verticesMoved": 1554
+    },
+    "Radius@0.75": {
+     "maxDeltaM": 0.00338,
+     "verticesMoved": 1528
+    },
+    "Radius@1": {
+     "maxDeltaM": 0.00677,
+     "verticesMoved": 1533
+    },
+    "BoneLength@0": {
+     "maxDeltaM": 0.01273,
+     "verticesMoved": 1160
+    },
+    "BoneLength@0.25": {
+     "maxDeltaM": 0.00636,
+     "verticesMoved": 1160
+    },
+    "BoneLength@0.75": {
+     "maxDeltaM": 0.00392,
+     "verticesMoved": 1160
+    },
+    "BoneLength@1": {
+     "maxDeltaM": 0.00783,
+     "verticesMoved": 1160
+    },
+    "BendTip@0": {
+     "maxDeltaM": 0.00277,
+     "verticesMoved": 112
+    },
+    "BendTip@0.25": {
+     "maxDeltaM": 0.00138,
+     "verticesMoved": 112
+    },
+    "BendTip@0.75": {
+     "maxDeltaM": 0.00647,
+     "verticesMoved": 112
+    },
+    "BendTip@1": {
+     "maxDeltaM": 0.01293,
+     "verticesMoved": 112
+    },
+    "RadiusTop@0": {
+     "maxDeltaM": 0.00715,
+     "verticesMoved": 144
+    },
+    "RadiusTop@0.25": {
+     "maxDeltaM": 0.00358,
+     "verticesMoved": 144
+    },
+    "RadiusTop@0.75": {
+     "maxDeltaM": 0.00477,
+     "verticesMoved": 144
+    },
+    "RadiusTop@1": {
+     "maxDeltaM": 0.00954,
+     "verticesMoved": 144
+    }
+   },
+   "animations": {
+    "Radius": {
+     "start": 0.0,
+     "end": 1.0,
+     "samples": 31,
+     "peakWeight": 1.0
+    },
+    "BoneLength": {
+     "start": 0.0,
+     "end": 1.0,
+     "samples": 31,
+     "peakWeight": 1.0
+    },
+    "BendTip": {
+     "start": 0.0,
+     "end": 1.0,
+     "samples": 31,
+     "peakWeight": 1.0
+    },
+    "RadiusTop": {
+     "start": 0.0,
+     "end": 1.0,
+     "samples": 31,
+     "peakWeight": 1.0
+    }
+   },
+   "jointCount": 53,
+   "verticesPerBone": {
+    "hand_l": 394,
+    "index_01_l": 66,
+    "index_02_l": 104,
+    "index_03_l": 52,
+    "lowerarm_l": 144,
+    "middle_01_l": 100,
+    "middle_02_l": 78,
+    "middle_03_l": 48,
+    "pinky_01_l": 84,
+    "pinky_02_l": 86,
+    "pinky_03_l": 40,
+    "ring_01_l": 80,
+    "ring_02_l": 90,
+    "ring_03_l": 42,
+    "thumb_01_l": 146,
+    "thumb_02_l": 94,
+    "thumb_03_l": 50
+   },
+   "verticesNotSingleWeight": 0,
+   "verticesWeightNotOne": 0,
+   "problems": [],
+   "ok": true,
+   "exitCode": 0
+  },
+  "checksPassed": true,
+  "cases": [
+   {
+    "case": "standard",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.125",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.25",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.375",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.625",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.75",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=0.875",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "Radius=1",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.125",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.25",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.375",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.625",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.75",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=0.875",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BoneLength=1",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.125",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.25",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.375",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.625",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.75",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=0.875",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "BendTip=1",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.125",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.25",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.375",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.625",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.75",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=0.875",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "RadiusTop=1",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "all=low",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "all=high",
+    "foldedFaces": 0,
+    "pass": true
+   },
+   {
+    "case": "defaults",
+    "foldedFaces": 0,
+    "pass": true
+   }
+  ]
+ },
+ "notes": {
+  "reference": "docs/production/gloves-2026-11-10/references (crested gauntlet: a raised crest down the back of the hand and each finger)",
+  "fit": "each band is cut from the leather glove's own surface and rides one bone; worn over base/f1-glove-wrapped",
+  "made": "Bisect, Decimate, Smooth, Shrinkwrap, Displace (lift, knuckle ridge, crest), Solidify (bands); cylinder, Shrinkwrap, Displace, Solidify, Bevel (cuff); handles by scaling bands in their own space and by Lattice"
+ },
+ "keyframing": "each end is the finished mesh deformed in Blender; the quarter keys are halfway to the ends",
+ "charmSeats": [
+  {
+   "name": "accent1",
+   "space": "part (glTF, +Y up, metres)",
+   "point": [
+    0.5294,
+    1.0594,
+    0.2942
+   ],
+   "normal": [
+    0.5809,
+    0.6965,
+    0.4213
+   ],
+   "up": [
+    -0.5638,
+    0.7176,
+    -0.4089
+   ],
+   "scale": 1.0,
+   "clearanceMm": 12.3,
+   "pin": {
+    "triangle": [
+     663,
+     661,
+     670
+    ],
+    "bary": [
+     0.333333,
+     0.333334,
+     0.333333
+    ],
+    "offsetMm": 0.0,
+    "angleDeg": 138.304
+   }
+  },
+  {
+   "name": "accent2",
+   "space": "part (glTF, +Y up, metres)",
+   "point": [
+    0.4592,
+    1.0862,
+    0.108
+   ],
+   "normal": [
+    -0.4067,
+    0.8578,
+    0.3143
+   ],
+   "up": [
+    0.6787,
+    0.514,
+    -0.5245
+   ],
+   "scale": 1.0,
+   "clearanceMm": 14.2,
+   "pin": {
+    "triangle": [
+     116,
+     91,
+     114
+    ],
+    "bary": [
+     0.333336,
+     0.333334,
+     0.33333
+    ],
+    "offsetMm": 0.0,
+    "angleDeg": -109.456
+   }
+  },
+  {
+   "name": "accent3",
+   "space": "part (glTF, +Y up, metres)",
+   "point": [
+    0.4608,
+    1.1217,
+    0.219
+   ],
+   "normal": [
+    -0.0285,
+    0.8028,
+    0.5956
+   ],
+   "up": [
+    0.0384,
+    0.5963,
+    -0.8019
+   ],
+   "scale": 1.0,
+   "clearanceMm": 12.0,
+   "pin": {
+    "triangle": [
+     30,
+     55,
+     57
+    ],
+    "bary": [
+     0.333333,
+     0.333337,
+     0.333329
+    ],
+    "offsetMm": 0.0,
+    "angleDeg": -33.214
+   }
+  }
+ ],
+ "charmSeatsWhy": [
+  "no hero seat: its widest clear spot is 24.1 mm, the hero needs 46.2 mm, flat and facing the way the part shows"
+ ]
+}

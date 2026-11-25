@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "id": "f1-brim",
+  "displayName": "Brim",
+  "kind": "shell",
+  "family": "F1",
+  "familyName": "Riveted iron",
+  "tier": 1,
+  "weightClass": "heavy",
+  "sections": [
+    "head"
+  ],
+  "slot": "helm",
+  "attach": "rigid",
+  "bones": [
+    "head"
+  ],
+  "allowedRegions": [
+    "any"
+  ],
+  "defaultRegion": "any",
+  "pivot": {
+    "point": [
+      0,
+      0,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "space": "piece"
+  },
+  "sinkDepthMm": 1.0,
+  "fitToGirth": null,
+  "twin": {
+    "kind": "none"
+  },
+  "scaleLimits": [
+    0.5,
+    1.5
+  ],
+  "rotateLimitsDeg": {
+    "pitch": 180,
+    "yaw": 180,
+    "roll": 180
+  },
+  "nudgeAxis": {
+    "name": "surface",
+    "vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "handles": [
+    {
+      "name": "Radius",
+      "at0": "narrow",
+      "at1": "wide",
+      "default": 0.4,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "AxisDown",
+      "at0": "flat",
+      "at1": "drooped",
+      "default": 0.3,
+      "limits": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "materialClasses": [
+    "metal"
+  ],
+  "triangles": 288,
+  "mutateTags": [
+    "heavy",
+    "plain",
+    "needs-crown"
+  ],
+  "references": [],
+  "build": {
+    "family": "F1",
+    "familyName": "Riveted iron",
+    "generator": "tools/armor-kit/build_f1_kit.py",
+    "generatorSha256": "44b9f7c97e7143864b6673b5777f3d35162b9612cc759534b300c43436b02f31",
+    "librarySha256": "4e82df08553858ed3e627adb9fa8e957c30a5b80166e883d905f9439eef2ee4f",
+    "bodySha256": "397a42e00ffc8cec2e7a9eab3e7d08dff1a633d82a65a1838f4204ab695f8065",
+    "glb": "f1-brim.glb",
+    "glbSha256": "499d02ed6955e398833522c58ecae93fc7e2e0dfd9c7e21590ba1f3a02390879",
+    "glbBytes": 40488,
+    "blender": "5.2.2 LTS",
+    "status": "kit draft, not approved art"
+  },
+  "verification": {
+    "glb": {
+      "file": "f1-brim.glb",
+      "targetNames": [
+        "Radius",
+        "AxisDown"
+      ],
+      "primitives": [
+        {
+          "vertices": 248,
+          "triangles": 288,
+          "targets": 2,
+          "material": 0
+        }
+      ],
+      "triangles": 288,
+      "vertices": 248,
+      "targets": {
+        "Radius": {
+          "maxDeltaM": 0.04,
+          "verticesMoved": 148
+        },
+        "AxisDown": {
+          "maxDeltaM": 0.035,
+          "verticesMoved": 148
+        }
+      },
+      "jointCount": 53,
+      "verticesPerBone": {
+        "head": 248
+      },
+      "verticesNotSingleWeight": 0,
+      "verticesWeightNotOne": 0,
+      "problems": [],
+      "ok": true,
+      "exitCode": 0
+    },
+    "materials": {
+      "materials": [
+        "metal"
+      ],
+      "images": 0,
+      "textures": 0
+    },
+    "shapes": {
+      "shapes": {
+        "flippedFaces": 0,
+        "degenerateFaces": 0,
+        "selfIntersections": 0,
+        "failures": [],
+        "pass": true
+      },
+      "body": {
+        "pass": true,
+        "worst": {
+          "flippedFaces": 0,
+          "degenerateFaces": 0,
+          "selfIntersections": 0,
+          "ringFailures": 0,
+          "bodyPokesThrough": 0,
+          "minClearanceMm": 22.07,
+          "minOwnBoneWeight": 0.965,
+          "maxEdgeStretch": 2.972
+        }
+      }
+    },
+    "budget": {
+      "triangles": 288,
+      "limit": 1200,
+      "pass": true
+    }
+  },
+  "notes": {
+    "socket": "Sits round the helm bowl at brow height; its inner edge is 2 mm into the bowl wall (a deliberate overlap, ruling 17)."
+  }
+}

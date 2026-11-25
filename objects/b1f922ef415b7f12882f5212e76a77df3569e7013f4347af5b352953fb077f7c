@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "what": "Paint uses each admitted food’s atlas swatches as matte kit-paint parts. The appearance allowlist limits painting to reviewed food without changing catalog families, rules or saves. The atlas remains the fallback. Disable all paint with enabled false or STRANGEDEEP_FOOD_PAINT=0. Remove an appearance from the allowlist or add it to off to roll back one item. Use offFamilies to exclude a catalog family. maxPickupLift limits only the named painted pickup’s extra emission.",
+  "enabled": true,
+  "allowedAppearances": [
+    "cheese",
+    "cheese-cut",
+    "egg-cooked",
+    "eggplant",
+    "egg-half",
+    "cup-saucer"
+  ],
+  "off": [],
+  "offFamilies": [],
+  "offWhy": "Foods outside the allowlist stay on the atlas.",
+  "maxPickupLift": {
+    "cheese": 0.2,
+    "cheese-cut": 0.08,
+    "egg-cooked": 0.2,
+    "egg": 0.2,
+    "eggplant": 0.32,
+    "egg-half": 0.2,
+    "cup-saucer": 0.2
+  },
+  "lowValue": 0.97,
+  "highValue": 1.06,
+  "whiteValue": {},
+  "families": {
+    "fruit-vegetables": "felt",
+    "bread": "suede",
+    "eggs-cheese": "felt",
+    "meat": "rawhide",
+    "sea": "felt",
+    "dishes": "felt",
+    "sweets": "suede",
+    "scraps": "felt",
+    "pantry": "felt",
+    "drinks": "felt"
+  }
+}

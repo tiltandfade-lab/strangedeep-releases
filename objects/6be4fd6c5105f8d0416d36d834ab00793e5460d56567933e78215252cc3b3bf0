@@ -1,0 +1,1975 @@
+{
+ "schemaVersion": 1,
+ "what": "The camp designs (lane camp-design, November 18, 2026; Adam, November 18: \"let's get some good camp designs built for now\"). Each living camp (a floor's camp segment, src/campaign/camp.ts) is dressed from one of these plans, picked by its room's walkable size, by godot/src/RoomThemes.CampDesign.cs, and checked by tools/level-props/camp-designs.mjs (paths clear, fire focal, shelters facing the fire, the donkey's picket reserved). A plan is in squares (1.524 m) round the fire at 0,0: +u points from the fire toward the camp's blacksmith (the work side), +v is u turned a quarter left; the placer turns and mirrors the plan to fit the room and may nudge a piece up to half a square. Per piece: the room-theme asset, where it stands, which way its front faces (fire: toward the fire; away; along: across the bearing from the fire; or degrees from +u), whether the camp needs it, a smaller piece to lay in the same spot when the room refuses it (\"else\": a log seat for a bench beside the route), and the floors it appears on (props by depth: the deeper camps are poorer and more makeshift). The plot shelter is the free-standing tent the rules set aside a 2 by 2 plot for in a massive room (CampFigures pitches it there); the plan's slot for it is left empty when the plot exists and filled with that shelter when it does not. The picket is the pack donkey's spot (lane camp-donkey places the animal): kept empty, with a named marker. The spacings follow docs/production/camp-design-2026-11-18/RESEARCH.md, compressed to fit our rooms but kept in the research's order: seats nearest the fire, then shelters, then work, stores and wash, the picket furthest out.",
+ "spacing": {
+  "what": "The plans' spacing rules in squares, read by the checks (tools/level-props/camp-designs.mjs) and the placer alike: the research's margins (RESEARCH.md, Measured spacings) compressed to our rooms and measured from the fire's centre. zoneSpread and zoneGap (lead, November 18: each zone one cluster at the game camera): no piece of the work, stores or wash zone further than zoneSpread from its middle, and zones (the fire with its seats as one) at least zoneGap apart between their outermost pieces.",
+  "shelterFromFire": 2.6,
+  "picketFromFire": 3.2,
+  "picketFromShelter": 2.5,
+  "focalSlack": 1.5,
+  "zoneSpread": 1.2,
+  "zoneGap": 0.5
+ },
+ "designs": [
+  {
+   "id": "small",
+   "minRoomCells": 0,
+   "reach": 3.4,
+   "research": "Small camp: fire with seats, one lean-to opening on the fire with its bedding, a compact work corner opposite, stores beside it, the picket out past the stores (RESEARCH.md, What each layout takes; Darkest Dungeon's one fire and its circle of seats; the collier's hut facing his work).",
+   "paths": [
+    {
+     "id": "way-left",
+     "from": [
+      0,
+      1.6
+     ],
+     "to": [
+      0,
+      3.4
+     ]
+    },
+    {
+     "id": "way-right",
+     "from": [
+      0,
+      -1.6
+     ],
+     "to": [
+      0,
+      -3.4
+     ]
+    }
+   ],
+   "picket": {
+    "at": [
+     -1.6,
+     -2.9
+    ],
+    "size": [
+     1.4,
+     1
+    ]
+   },
+   "stations": [
+    {
+     "id": "fire",
+     "pieces": [
+      {
+       "asset": "camp-fire-pit",
+       "at": [
+        0,
+        0
+       ],
+       "face": 0,
+       "need": true
+      },
+      {
+       "asset": "camp-tripod",
+       "at": [
+        0,
+        0
+       ],
+       "face": 30,
+       "need": true
+      },
+      {
+       "asset": "camp-kettle",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-spit-pot",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        4,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seats",
+     "pieces": [
+      {
+       "asset": "armory-bench",
+       "at": [
+        -1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        1.05,
+        0.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "expedition-bedroll",
+       "at": [
+        1.05,
+        -0.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-cup",
+       "at": [
+        -0.45,
+        -0.85
+       ],
+       "face": 20
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        -0.75,
+        -0.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-plate",
+       "at": [
+        0.45,
+        0.85
+       ],
+       "face": 0
+      }
+     ]
+    },
+    {
+     "id": "shelter",
+     "pieces": [
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -2.8,
+        0
+       ],
+       "face": "fire",
+       "need": true,
+       "plot": true
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -2.75,
+        0
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-lantern",
+       "at": [
+        -2.2,
+        0.85
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "work",
+     "pieces": [
+      {
+       "asset": "camp-anvil",
+       "at": [
+        2.6,
+        0.45
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-grindstone",
+       "at": [
+        2.6,
+        -0.5
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-hammer",
+       "at": [
+        2.95,
+        0.9
+       ],
+       "face": 60
+      },
+      {
+       "asset": "camp-tongs",
+       "at": [
+        3,
+        -0.05
+       ],
+       "face": 110
+      }
+     ]
+    },
+    {
+     "id": "stores",
+     "pieces": [
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        1.5,
+        -2.4
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        2.2,
+        -2.35
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-slumped",
+       "at": [
+        1.9,
+        -1.85
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-purse",
+       "at": [
+        2.35,
+        -1.85
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        2.6,
+        -2.3
+       ],
+       "face": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "medium",
+   "minRoomCells": 100,
+   "reach": 4.9,
+   "research": "Medium camp: a fire ring with seats; an A-frame and a lean-to opening on the fire, side by side on the far arc; a work area with the anvil, grindstone and quench trough on the blacksmith's side; stores between work and the picket; a wash corner on the other side, away from the forge's smoke (RESEARCH.md, Measured spacings and What each layout takes; Dragon Age's fire, tent and supply groups; Wartales's one station, one worker).",
+   "paths": [
+    {
+     "id": "way-left",
+     "from": [
+      0,
+      1.7
+     ],
+     "to": [
+      0,
+      4.4
+     ]
+    },
+    {
+     "id": "way-right",
+     "from": [
+      0,
+      -1.7
+     ],
+     "to": [
+      0,
+      -4.4
+     ]
+    }
+   ],
+   "picket": {
+    "at": [
+     3,
+     -3.8
+    ],
+    "size": [
+     1.4,
+     1
+    ]
+   },
+   "stations": [
+    {
+     "id": "fire",
+     "pieces": [
+      {
+       "asset": "camp-fire-pit",
+       "at": [
+        0,
+        0
+       ],
+       "face": 0,
+       "need": true
+      },
+      {
+       "asset": "camp-tripod",
+       "at": [
+        0,
+        0
+       ],
+       "face": 30,
+       "need": true
+      },
+      {
+       "asset": "camp-kettle",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-spit-pot",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        4,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seats",
+     "pieces": [
+      {
+       "asset": "armory-bench",
+       "at": [
+        -1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "armory-bench",
+       "at": [
+        1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        0.8,
+        -0.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "expedition-bedroll",
+       "at": [
+        -0.75,
+        -0.5
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-plate",
+       "at": [
+        -0.45,
+        0.85
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-cup",
+       "at": [
+        0.45,
+        -0.85
+       ],
+       "face": 40
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        0.45,
+        0.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        -0.8,
+        0.75
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "shelter",
+     "pieces": [
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -3.2,
+        1.3
+       ],
+       "face": "fire",
+       "need": true,
+       "plot": true
+      },
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -3.1,
+        -1.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -3.05,
+        -1.6
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-lantern",
+       "at": [
+        -2.2,
+        -0.45
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        -1.9,
+        -2.9
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "work",
+     "pieces": [
+      {
+       "asset": "camp-anvil",
+       "at": [
+        3,
+        0.45
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-grindstone",
+       "at": [
+        3.05,
+        -0.55
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-trough",
+       "at": [
+        3.85,
+        -0.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-hammer",
+       "at": [
+        3.35,
+        0.9
+       ],
+       "face": 60
+      },
+      {
+       "asset": "camp-tongs",
+       "at": [
+        3.75,
+        0.65
+       ],
+       "face": 110
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        3.9,
+        1.2
+       ],
+       "face": "fire",
+       "floors": [
+        1,
+        4
+       ]
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        3.6,
+        -0.75
+       ],
+       "face": 0
+      }
+     ]
+    },
+    {
+     "id": "stores",
+     "pieces": [
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        1.3,
+        -3
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        2,
+        -2.95
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-half",
+       "at": [
+        1.6,
+        -2.45
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        2.3,
+        -2.4
+       ],
+       "face": 30
+      },
+      {
+       "asset": "camp-purse",
+       "at": [
+        2,
+        -2
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        2.55,
+        -2.95
+       ],
+       "face": 10
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        1,
+        -2.3
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "wash",
+     "pieces": [
+      {
+       "asset": "camp-drying-rack",
+       "at": [
+        1.5,
+        3.2
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-washboard",
+       "at": [
+        1.1,
+        2.55
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        1.75,
+        2.5
+       ],
+       "face": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "large",
+   "minRoomCells": 180,
+   "reach": 5.4,
+   "research": "Large camp: three shelters ringed on the far arc, each mouth on the fire, the round pavilion in the middle; a full forge on the blacksmith's side (stone hearth, anvil, grindstone, quench trough, bellows) about four squares from the fire; stores and the picket together on one side so the donkey is loaded where the stores are (Wartales); the wash corner and washing line on the other, away from the forge; two clear ways through the camp across the fire (RESEARCH.md; the Roman camp's open via principalis; The Banner Saga's one tent, one job).",
+   "paths": [
+    {
+     "id": "way-left",
+     "from": [
+      0,
+      1.7
+     ],
+     "to": [
+      0,
+      5.4
+     ]
+    },
+    {
+     "id": "way-right",
+     "from": [
+      0,
+      -1.7
+     ],
+     "to": [
+      0,
+      -5.4
+     ]
+    }
+   ],
+   "picket": {
+    "at": [
+     2.4,
+     -4.6
+    ],
+    "size": [
+     1.4,
+     1
+    ]
+   },
+   "stations": [
+    {
+     "id": "fire",
+     "pieces": [
+      {
+       "asset": "camp-fire-pit",
+       "at": [
+        0,
+        0
+       ],
+       "face": 0,
+       "need": true
+      },
+      {
+       "asset": "camp-tripod",
+       "at": [
+        0,
+        0
+       ],
+       "face": 30,
+       "need": true
+      },
+      {
+       "asset": "camp-kettle",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-spit-pot",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        4,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seats",
+     "pieces": [
+      {
+       "asset": "armory-bench",
+       "at": [
+        -1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "armory-bench",
+       "at": [
+        1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        -0.8,
+        -0.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-tray",
+       "at": [
+        -0.45,
+        0.85
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-cup",
+       "at": [
+        0.45,
+        -0.85
+       ],
+       "face": 40
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        0.45,
+        0.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-plate",
+       "at": [
+        -0.5,
+        -0.9
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        1.05,
+        1.1
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "shelter",
+     "pieces": [
+      {
+       "asset": "camp-pavilion",
+       "at": [
+        -3.65,
+        -0.09
+       ],
+       "face": "fire",
+       "need": true,
+       "plot": true
+      },
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -3.07,
+        2.97
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -2.58,
+        -2.64
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -2.53,
+        -2.59
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-candelabrum",
+       "at": [
+        -1.15,
+        1.75
+       ],
+       "face": "fire",
+       "floors": [
+        3,
+        5
+       ]
+      },
+      {
+       "asset": "camp-lantern",
+       "at": [
+        -1.5,
+        -1.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        -2.34,
+        -1.49
+       ],
+       "face": 40
+      },
+      {
+       "asset": "camp-sack-half",
+       "at": [
+        -2.4,
+        0.91
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        -2,
+        -3.57
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "work",
+     "pieces": [
+      {
+       "asset": "camp-forge",
+       "at": [
+        4,
+        0
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-anvil",
+       "at": [
+        3,
+        0.5
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-grindstone",
+       "at": [
+        3,
+        -0.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bellows",
+       "at": [
+        4.5,
+        0.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-trough",
+       "at": [
+        4,
+        -0.95
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-hammer",
+       "at": [
+        3.35,
+        0.95
+       ],
+       "face": 60
+      },
+      {
+       "asset": "camp-tongs",
+       "at": [
+        3.5,
+        -0.95
+       ],
+       "face": 110
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        3.85,
+        1.3
+       ],
+       "face": "fire",
+       "floors": [
+        1,
+        4
+       ]
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        4.95,
+        0
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        4.95,
+        0.55
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "stores",
+     "pieces": [
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        1.4,
+        -3.3
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-stump",
+       "at": [
+        1.2,
+        -2.6
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        2.2,
+        -3.4
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-half",
+       "at": [
+        2.75,
+        -3.15
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-slumped",
+       "at": [
+        1.9,
+        -2.75
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        2.85,
+        -3.75
+       ],
+       "face": 30
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        1.1,
+        -3.9
+       ],
+       "face": "fire",
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-yoke",
+       "at": [
+        2.55,
+        -2.6
+       ],
+       "face": 20
+      },
+      {
+       "asset": "camp-purse",
+       "at": [
+        2.3,
+        -2.95
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        1.5,
+        -2.49
+       ],
+       "face": 10
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        2.46,
+        -3.88
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        0.75,
+        -3.34
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "wash",
+     "pieces": [
+      {
+       "asset": "camp-washing-line",
+       "at": [
+        2.3,
+        3.9
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-drying-rack",
+       "at": [
+        1.5,
+        3.15
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-washboard",
+       "at": [
+        2.45,
+        3.05
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        2,
+        2.6
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        2.95,
+        3.35
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        2.6,
+        2.65
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        3.2,
+        2.4
+       ],
+       "face": "fire"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "grand",
+   "minRoomCells": 600,
+   "reach": 10.4,
+   "research": "Grand camp, for a camp ground of 600 squares or more (lane camp-design, November 18, after Adam's comparison with Path of Exile 2's and Baldur's Gate 3's camps): the large camp opened out, with five shelters on the far arc, each with its bundle, stacked crates and a second stores pile by the picket, and lantern posts at the camp's edges, so each station reads as a cluster round a big anchor (RESEARCH.md; the Roman camp's tent rows; Wartales' ring of stations); quality loop 5 fills the camp ground's outer quarters as the shipped camps do: a second ring of tents behind the first (the Roman camp's rows of tents; Battle Brothers' and Wartales' tent lines) and a supply yard of crates, barrels and sacks behind the forge (the baggage train's park).",
+   "paths": [
+    {
+     "id": "way-left",
+     "from": [
+      0,
+      1.7
+     ],
+     "to": [
+      0,
+      10.4
+     ]
+    },
+    {
+     "id": "way-right",
+     "from": [
+      0,
+      -1.7
+     ],
+     "to": [
+      0,
+      -10.4
+     ]
+    }
+   ],
+   "picket": {
+    "at": [
+     3.12,
+     -5.98
+    ],
+    "size": [
+     1.4,
+     1
+    ]
+   },
+   "stations": [
+    {
+     "id": "fire",
+     "pieces": [
+      {
+       "asset": "camp-fire-pit",
+       "at": [
+        0,
+        0
+       ],
+       "face": 0,
+       "need": true
+      },
+      {
+       "asset": "camp-tripod",
+       "at": [
+        0,
+        0
+       ],
+       "face": 30,
+       "need": true
+      },
+      {
+       "asset": "camp-kettle",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-spit-pot",
+       "at": [
+        0.3,
+        -0.25
+       ],
+       "face": 90,
+       "floors": [
+        4,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seats",
+     "pieces": [
+      {
+       "asset": "armory-bench",
+       "at": [
+        -1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "armory-bench",
+       "at": [
+        1.15,
+        0
+       ],
+       "face": "fire",
+       "else": "camp-log-seat"
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        -0.8,
+        -0.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-tray",
+       "at": [
+        -0.45,
+        0.85
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-cup",
+       "at": [
+        0.45,
+        -0.85
+       ],
+       "face": 40
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        0.45,
+        0.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-plate",
+       "at": [
+        -0.5,
+        -0.9
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-stool",
+       "at": [
+        1.05,
+        1.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-log-seat",
+       "at": [
+        -0.85,
+        1.61
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-log-seat",
+       "at": [
+        0.05,
+        -1
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "shelter",
+     "pieces": [
+      {
+       "asset": "camp-pavilion",
+       "at": [
+        -5.75,
+        -0.12
+       ],
+       "face": "fire",
+       "need": true,
+       "plot": true
+      },
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -4.99,
+        3.86
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -4.35,
+        -3.43
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -4.29,
+        -3.37
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-candelabrum",
+       "at": [
+        -2.49,
+        2.27
+       ],
+       "face": "fire",
+       "floors": [
+        3,
+        5
+       ]
+      },
+      {
+       "asset": "camp-lantern",
+       "at": [
+        -2.95,
+        -2.47
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        -4.04,
+        -1.94
+       ],
+       "face": 40
+      },
+      {
+       "asset": "camp-sack-half",
+       "at": [
+        -4.12,
+        1.18
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        -3.6,
+        -4.64
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -6,
+        4.6
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        -4.26,
+        5.69
+       ],
+       "face": 30
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        -4.6,
+        -5
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern",
+       "at": [
+        -4.36,
+        2.12
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -2,
+        5.6
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "work",
+     "pieces": [
+      {
+       "asset": "camp-forge",
+       "at": [
+        5.17,
+        0.05
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-anvil",
+       "at": [
+        4.17,
+        0.55
+       ],
+       "face": "fire",
+       "need": true
+      },
+      {
+       "asset": "camp-grindstone",
+       "at": [
+        4.17,
+        -0.55
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bellows",
+       "at": [
+        5.67,
+        0.74
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-trough",
+       "at": [
+        5.17,
+        -0.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-hammer",
+       "at": [
+        4.52,
+        0.99
+       ],
+       "face": 60
+      },
+      {
+       "asset": "camp-tongs",
+       "at": [
+        4.67,
+        -0.9
+       ],
+       "face": 110
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        5.02,
+        1.34
+       ],
+       "face": "fire",
+       "floors": [
+        1,
+        4
+       ]
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        6.12,
+        0.05
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-logs",
+       "at": [
+        6.12,
+        0.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        4.58,
+        0.18
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        5.15,
+        0.73
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "stores",
+     "pieces": [
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        1.97,
+        -4.25
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-stump",
+       "at": [
+        1.77,
+        -3.55
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        2.77,
+        -4.35
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-half",
+       "at": [
+        3.32,
+        -4.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-slumped",
+       "at": [
+        2.47,
+        -3.7
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        3.42,
+        -4.7
+       ],
+       "face": 30
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        1.67,
+        -4.85
+       ],
+       "face": "fire",
+       "floors": [
+        1,
+        3
+       ]
+      },
+      {
+       "asset": "camp-yoke",
+       "at": [
+        3.12,
+        -3.55
+       ],
+       "face": 20
+      },
+      {
+       "asset": "camp-purse",
+       "at": [
+        2.87,
+        -3.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        2.07,
+        -3.44
+       ],
+       "face": 10
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        3.03,
+        -4.83
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        1.32,
+        -4.29
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        2.45,
+        -4.91
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "wash",
+     "pieces": [
+      {
+       "asset": "camp-washing-line",
+       "at": [
+        3.03,
+        4.8
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-drying-rack",
+       "at": [
+        2.23,
+        4.05
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-washboard",
+       "at": [
+        3.18,
+        3.95
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        2.73,
+        3.5
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        3.68,
+        4.25
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        3.33,
+        3.55
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        3.93,
+        3.3
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        3.6,
+        3.6
+       ],
+       "face": 0
+      }
+     ]
+    },
+    {
+     "id": "tents",
+     "pieces": [
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -8.7,
+        2.4
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -8.7,
+        2.4
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -8.6,
+        -2.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bed",
+       "at": [
+        -8.6,
+        -2.6
+       ],
+       "face": "along"
+      },
+      {
+       "asset": "camp-a-frame",
+       "at": [
+        -8.4,
+        6.4
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lean-to",
+       "at": [
+        -7.2,
+        -6.8
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bundle",
+       "at": [
+        -7.4,
+        0.1
+       ],
+       "face": 30
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        -7.0,
+        4.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        -6.4,
+        -4.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        -9.6,
+        -0.2
+       ],
+       "face": "fire"
+      }
+     ]
+    },
+    {
+     "id": "yard",
+     "pieces": [
+      {
+       "asset": "camp-crate",
+       "at": [
+        8.4,
+        -1.6
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-crate",
+       "at": [
+        9.4,
+        -1.4
+       ],
+       "face": 15
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        8.5,
+        1.4
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-barrel",
+       "at": [
+        9.3,
+        1.9
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-sack-full",
+       "at": [
+        9.8,
+        0.3
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-sack-slumped",
+       "at": [
+        8.3,
+        -3.0
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-woodpile",
+       "at": [
+        7.9,
+        4.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-lantern-post",
+       "at": [
+        7.6,
+        0.0
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-basket",
+       "at": [
+        8.9,
+        3.1
+       ],
+       "face": 0
+      },
+      {
+       "asset": "camp-crate",
+       "at": [
+        7.9,
+        -4.8
+       ],
+       "face": 40
+      }
+     ]
+    },
+    {
+     "id": "kit",
+     "pieces": [
+      {
+       "asset": "armory-workbench",
+       "at": [
+        3.5,
+        -2.25
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "workshop-rack",
+       "at": [
+        5.6,
+        -2.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "camp-bucket",
+       "at": [
+        2.6,
+        -1.3
+       ],
+       "face": 0
+      }
+     ]
+    },
+    {
+     "id": "rim",
+     "pieces": [
+      {
+       "asset": "rubble-wall-a",
+       "at": [
+        6.7,
+        -4.1
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "rocks-scattered-a",
+       "at": [
+        7.3,
+        2.9
+       ],
+       "face": 30
+      },
+      {
+       "asset": "rubble-wall-a",
+       "at": [
+        5.4,
+        5.6
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "rocks-scattered-a",
+       "at": [
+        -6.9,
+        -1.9
+       ],
+       "face": "fire"
+      },
+      {
+       "asset": "rocks-scattered-a",
+       "at": [
+        1.7,
+        -7.0
+       ],
+       "face": 70
+      },
+      {
+       "asset": "rubble-wall-a",
+       "at": [
+        -4.6,
+        7.6
+       ],
+       "face": "fire"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

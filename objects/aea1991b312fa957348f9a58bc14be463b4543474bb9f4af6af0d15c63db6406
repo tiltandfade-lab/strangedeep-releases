@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="EffectRecipe" format=3]
+
+[ext_resource type="Script" path="res://src/EffectLayer.cs" id="1_fri4y"]
+[ext_resource type="Script" path="res://src/EffectRecipe.cs" id="4_ftm0q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jo00"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="PrismMesh" id="PrismMesh_s1tkq"]
+material = SubResource("StandardMaterial3D_8jo00")
+left_to_right = 0.2
+size = Vector3(0.55, 1, 0.001)
+
+[sub_resource type="Curve" id="Curve_o2qmd"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.8), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_r7m07"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.612, 0.53099996, 0.43199998, 0, 0.612, 0.53099996, 0.43199998, 0.9, 0.612, 0.53099996, 0.43199998, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_brkjt"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "spread", "flatness", "gravity", "initial_velocity_min", "initial_velocity_max", "angular_velocity_min", "angular_velocity_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(639118551),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 24, 0, -1, 23, 1, 0, 2, 1, 3, 2, 4, 3, 5, 2, 6, 4, 7, 2, 8, 5, 9, 6, 10, 7, 11, 8, 12, 3, 13, 9, 14, 3, 15, 10, 16, 11, 17, 12, 18, 13, 19, 8, 20, 14, 21, 7, 22, 15, 23, 16, 0),
+"variants": [0, 0.6, true, 1.0, 31, SubResource("PrismMesh_s1tkq"), 1, 0.08, 180.0, Vector3(0, -7, 0), 1.9, -220.0, 220.0, -180.0, 0.05, SubResource("Curve_o2qmd"), SubResource("Gradient_r7m07")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_uhddp"]
+script = ExtResource("1_fri4y")
+Label = "Ring flakes"
+Duration = 0.6
+Offset = Vector3(0, 0.048, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_brkjt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73ig6"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="PrismMesh" id="PrismMesh_vyo5s"]
+material = SubResource("StandardMaterial3D_73ig6")
+left_to_right = 0.2
+size = Vector3(0.55, 1, 0.001)
+
+[sub_resource type="Curve" id="Curve_cy8wb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mx6qu"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(0.36, 0.29, 0.22, 0, 0.36, 0.29, 0.22, 0.95, 0.36, 0.29, 0.22, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_ngra7"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Particles", "cast_shadow", "amount", "lifetime", "one_shot", "explosiveness", "use_fixed_seed", "seed", "local_coords", "mesh", "emission_shape", "emission_sphere_radius", "direction", "spread", "gravity", "initial_velocity_min", "initial_velocity_max", "angle_min", "angle_max", "scale_amount_min", "scale_amount_max", "scale_amount_curve", "color_ramp", "CPUParticles3D"),
+"node_count": 1,
+"node_ids": PackedInt32Array(1344305232),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 23, 0, -1, 22, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 3, 7, 5, 8, 3, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 15, 12, 16, 13, 17, 14, 18, 15, 19, 16, 20, 17, 21, 18, 22, 19, 0),
+"variants": [0, 5, 0.4, true, 1.0, 31, SubResource("PrismMesh_vyo5s"), 1, 0.08, Vector3(0, 1, 0), 60.0, Vector3(0, -6, 0), 0.96000004, 2.24, -180.0, 180.0, 0.028875, 0.053625003, SubResource("Curve_cy8wb"), SubResource("Gradient_mx6qu")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_ixwxo"]
+script = ExtResource("1_fri4y")
+Label = "Grit"
+Duration = 0.4
+Offset = Vector3(0, 0.1, 0)
+HideInReducedMotion = true
+Visual = SubResource("PackedScene_ngra7")
+
+[resource]
+script = ExtResource("4_ftm0q")
+Title = "Soft Landing Dust"
+Layers = Array[ExtResource("1_fri4y")]([SubResource("Resource_uhddp"), SubResource("Resource_ixwxo")])

@@ -1,0 +1,645 @@
+{
+ "schemaVersion": 2,
+ "kind": "armor-kit-templates",
+ "family": "F1",
+ "generatedBy": "tools/armor-kit-templates/build-armor-kit-templates.mjs",
+ "rulings": "docs/production/kit-outfits-2026-10-26/RULINGS.md",
+ "rolls": {
+  "styleHandles": [
+   "Detail",
+   "BendTip",
+   "BendMiddle"
+  ],
+  "rule": "godot/src/ArmorKitOutfitTemplates.cs",
+  "swapGroups": 35,
+  "torsoCategories": [
+   "chest",
+   "back",
+   "waist"
+  ],
+  "links": "a mirrored entry's twin takes the same part and values; torso entries share their girth handles; robe entries (a robe and its back panel, the belted tunic and its skirt panels) are torso entries that also share their length"
+ },
+ "leftOut": {
+  "sets": {
+   "full-kit": "every hero part at once (the editor proof set)",
+   "helm-great": "the great helm's set: out of the rolls until Adam approves its redo (Adam via the lead, November 7)"
+  },
+  "charms": "charms are left out until armor looks carry properties",
+  "thin": {}
+ },
+ "layering": {
+  "overSkirt": {
+   "tags": [
+    "tabard",
+    "surcoat"
+   ],
+   "parts": [
+    "hero/f1-cuisse-l",
+    "hero/f1-cuisse-r",
+    "hero/f1-tasset-l",
+    "hero/f1-tasset-r",
+    "hero/heavy-tasset-dagged-l",
+    "hero/heavy-tasset-dagged-r",
+    "hero/light-belt",
+    "hero/light-coat-tail",
+    "hero/light-hip-drape",
+    "hero/light-sash",
+    "hero/light-sash-tails",
+    "hero/light-skirt-tiers-back",
+    "hero/light-thigh-panel-l",
+    "hero/light-thigh-panel-r",
+    "hero/light-thigh-rig-l",
+    "hero/light-thigh-rig-r",
+    "hero/medium-tasset-l",
+    "hero/medium-tasset-r",
+    "hero/medium-thigh-plate-l",
+    "hero/medium-thigh-plate-r"
+   ],
+   "handle": "RadiusBottom",
+   "value": 0,
+   "why": "Layer order (the lead, October 30, on Adam's \"there is still so much chest piece clipping happening\"): a tabard or surcoat goes over a gambeson. When any worn part carries one of these tags, every soft layer with a skirt (RadiusBottom: tucked skirt to full skirt) is drawn with its skirt tucked, so it sits under the tabard instead of over it.",
+   "partsWhy": "Chosen by docs/production/armor-leg-clip-2026-10-30/tuck_from_legs.py from the legs fit table (lane armor-leg-clip, October 30): these legs parts clip the chest layer's skirt less with it tucked, by more than 1.0 cm2 over some chest layer and never worse by more than 0.3. The refit F1 cuisses join them (lane armor-leg-refit, October 30): fitted over the skirts, they clear a tucked one better than a full one."
+  },
+  "coatOver": [
+   {
+    "tags": [
+     "coat"
+    ],
+    "under": [
+     "shirt"
+    ],
+    "atMost": {
+     "Radius": 0.5,
+     "BoneLength": 0.5
+    },
+    "why": "A fitted coat compresses the shirt under it (the lead, November 19, lane floating-gear-5: \"a fitted coat compresses the shirt; nobody wears a billowing shirt inside one\"). While any worn part carries one of these tags, every worn part with one of the under tags is drawn with each handle in atMost at that value or below (its standard): a billowing shirt is drawn at standard fit under a coat and a long-sleeved one at standard length (the lead, November 19: the coat's sleeve takes the cuff), a close or short one stays as it is. The coat is then built to lie on the shirt at standard, and the layering check measures that pair; a shirt worn with no coat keeps its whole range. The game, the armor builder and the preview all dress through ArmorKitOutfit.Show; fit_standoff.dress and the garment build read the same row."
+   },
+   {
+    "tags": [
+     "vest"
+    ],
+    "under": [
+     "shirt"
+    ],
+    "atMost": {
+     "Radius": 0.5
+    },
+    "why": "A vest or a jerkin (both carry the vest tag) compresses the shirt's body as a coat does (the lead, November 19, lane floating-gear-5: per-tag rows; the vest and the jerkin hold the shirt's fit, not its sleeve length, since they have no sleeves of their own). Under one the shirt is drawn at standard fit or closer; its sleeves, which Radius also narrows, show at standard (accepted for now). The vest and the jerkin are built to lie on the shirt at standard, and the layering check measures that pair."
+   }
+  ],
+  "bareArm": {
+   "parts": [
+    "hero/light-arm-guard-l",
+    "hero/light-arm-guard-r"
+   ],
+   "sleeves": [
+    "base/light-tunic",
+    "base/medium-gambeson",
+    "base/light-quilted-jacket",
+    "base/medium-padded-jack",
+    "base/f1-base-padding"
+   ],
+   "sleeveTags": [
+    "shirt",
+    "tunic",
+    "robe",
+    "coat",
+    "blouse"
+   ],
+   "atMost": {
+    "Radius": 0
+   },
+   "why": "An arm guard with no sleeve under it is drawn at its skin fit (the lead, November 19, lane floating-gear-6: the inverse of coatOver). The guard's standard stands clear of a sleeve; on a bare forearm it stood 12.7 mm off the skin. While no worn soft layer in sleeves and no worn part with one of sleeveTags is under it, each listed part is drawn with each handle in atMost at that value or below (Radius 0: snug, built to lie on the skin). A short-sleeved shirt still counts as a sleeve, so the guard keeps its standard over it. The game, the armor builder and the preview all dress through ArmorKitOutfit.Show; fit_standoff.dress reads the same row."
+  },
+  "fitOver": {
+   "why": "Refit legs pieces (lane armor-leg-refit, October 30, the lead's option a) carry a Fit morph: their basis hugs the thin under-layers (the tunic, trousers and hose), Fit 1 clears the thick ones. The game sets a part's Fit from the chest layer the outfit wears (its template's layer key); no chest layer, or one not listed, is 0. Values from the clipping proof's legs fit table. The F1 padding is 0 (lane armor-fit, November 8; Adam, November 7: \"we need to get those thigh plates to fit much tighter\"): it hugs the thigh (8.5 mm over the skin, tools/armor-kit/fit_standoff.py) about as the hose does, and at 1 the heavy cuisses stood 46 mm (median) off it, clearing gambeson skirts the heavy sets do not wear; every fitted legs piece measured no closer to clipping it at 0.",
+   "layers": {
+    "light-tunic": 0,
+    "f1-padding": 0,
+    "medium-gambeson": 1,
+    "medium-padded-jack": 1,
+    "light-quilted-jacket": 1
+   }
+  },
+  "bootCover": {
+   "tags": [
+    "trousers"
+   ],
+   "parts": [
+    "hero/light-boot-wrapped-l",
+    "hero/light-boot-wrapped-r",
+    "hero/medium-boot-courtside-l",
+    "hero/medium-boot-courtside-r",
+    "hero/medium-boot-l",
+    "hero/medium-boot-r",
+    "hero/medium-boot-plated-l",
+    "hero/medium-boot-plated-r",
+    "hero/f1-greave-l",
+    "hero/f1-greave-r",
+    "hero/f1-sabaton-l",
+    "hero/f1-sabaton-r",
+    "hero/f1-footwear-l",
+    "hero/f1-footwear-r",
+    "hero/heavy-sabaton-spurred-l",
+    "hero/heavy-sabaton-spurred-r",
+    "hero/wardrobe-riding-boot-l",
+    "hero/wardrobe-riding-boot-r",
+    "hero/wardrobe-thigh-boot-l",
+    "hero/wardrobe-thigh-boot-r"
+   ],
+   "overlapMetres": 0.03,
+   "why": "Boots cover trousers (Adam, November 3: \"we can basically just hide the trousers below the boots if the player is wearing boots that covers the trousers, save some polys\"). While a worn feet look holds one of these parts (boots, greaves and sabatons that go round the leg; not the sandal boot or the poleyns), a part with one of these tags is drawn without its triangles below that boot's rim, measured from the boot's own rolled shape (the lowest of its highest points round the leg), less overlapMetres so the trouser runs on inside the rim. ArmorKitOutfit.BootCover.cs; LightGearProof's boots check holds it."
+  },
+  "robeCover": {
+   "tags": [
+    "trousers",
+    "hakama"
+   ],
+   "parts": [
+    "hero/light-robe-wizard",
+    "hero/light-robe-scholar",
+    "hero/light-robe-wizard-hooded",
+    "hero/light-robe-scholar-hooded",
+    "hero/light-robe-monk",
+    "hero/light-robe-sorcerer",
+    "hero/light-robe-hermit",
+    "hero/light-robe-ceremonial"
+   ],
+   "overlapMetres": 0.03,
+   "why": "A long robe covers the trousers and the hakama (the lead, November 11, on lane light-gear's finding: in the crouched idle the bent leg came through the robe's closed skirt, as it did through the old robe; the boots' rule mirrored, inside the armour pipeline's hide-what-is-covered contract). While a worn look holds one of these parts (the closed robes, never the coats, which open at the front), a part with one of these tags is drawn without its triangles above the robe's hem, measured from the robe's own rolled shape (the highest of its lowest points round the column), plus overlapMetres so the trouser runs on up inside the hem. The body's legs stay hidden under the trousers (LightGearCovers), so nothing shows under the robe. ArmorKitOutfit.BootCover.cs; LightGearProof's robe check holds it, with the short coat as its negative control."
+  },
+  "bodyCover": {
+   "partTag": "garment",
+   "regions": [
+    {
+     "region": "Body_legs",
+     "tags": [
+      "trousers",
+      "hakama"
+     ]
+    },
+    {
+     "region": "Body_legs",
+     "tags": [
+      "floor-robe"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "tunic"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "wrist-sleeve"
+     ]
+    },
+    {
+     "region": "Body_torso",
+     "tags": [
+      "shirt"
+     ],
+     "handle": "BoneLength",
+     "atLeast": 0.5
+    }
+   ],
+   "why": "The stand-in body regions a kit garment hides (lane light-gear; the lead, October 30, and November 11: one fact the game, the builder and fit_poses read). The body's own skin-tight undershirt and leggings (Body_torso, Body_legs) came through a shirt or a vest as pale patches, so a worn part with partTag and one of a row's tags hides that row's region; a row with a handle hides it only while the part's handle is at least atLeast. A region hides only when the garment covers all of it, so nothing shows a hole: trousers and the hakama run to the ankle, and a closed floor robe (tag floor-robe: hemmed below the body's boots region, 0.29 m, at every length and every tear) covers the legs whole; Body_torso runs down the arms to the wrist, so it hides under a tunic or a shirt with its sleeves to the wrist or longer (BoneLength 0.5, the shirt's standard), a robe whose closed sleeves reach the wrist at every handle value (tag wrist-sleeve: the monk's habit, the sorcerer's robe, the ceremonial robe; measured at every handle extreme, each leaves less of the arm uncovered than the shirt at 0.5) hides it too; a rolled shirt sleeve, a robe's open bell sleeve, the hermit's sleeve to mid-forearm or a vest alone keep it, because the body has no separate upper-arm region (Body_bare is only the neck) and hiding the arm would leave a hole. LightGearCovers.cs and tools/armor-kit/fit_standoff.py dress() read it; fit_poses leaves the hidden regions out of the body it tests against (the soft layers still count), so its motion check tests what the game draws."
+  },
+  "helmOver": {
+   "parts": [
+    "hero/medium-mail-hood"
+   ],
+   "slot": "helm",
+   "why": "Helms fitted to what is worn under them (lane helm-overhaul, November 6; Adam: \"we have to figure out a way for the helms to fit the head if there is no underlayer to force the size\"): every helm's basis is fitted to the bare head (the skin plus a 12 mm arming cap) and its Fit morph over the mail hood plus 3 mm (tools/armor-kit/f1_helm_fit.py). While the helm slot's look holds one of these parts, its helms are drawn at Fit 1, otherwise 0; the Armor Kit builder dresses through the same code. The helm leads and the hood follows (phase 2, Adam, November 6: \"we shouldn't be limiting the design of our helms just to accomodate for this weird underlayer\"): the hood takes the same Fit, its coif tucked onto the head and neck down to the jaw (f1_medium_mail_hood; its Fit+ corrective targets keep each handle setting tucked), and the helms are fitted over that."
+  },
+  "cowlOver": {
+   "cowls": [
+    "hero/light-cowl"
+   ],
+   "parts": [
+    "hero/light-plastron"
+   ],
+   "slot": "chest",
+   "why": "A cowl fitted to what it lies on (lane cloth, November 12; the lead: rebuild the cowl with a Fit morph, set over a plastron, on the helmOver pattern). The cowl's basis lies on the tunic and the jerkin, as it was drawn; its Fit morph carries the end on the chest 16 mm further out (tools/armor-kit/f1_light_cowl.py). While the chest look holds one of these parts, its cowls are drawn at Fit 1, otherwise 0; the chest layer's legs Fit (fitOver) never reaches a cowl. The armor builder dresses through the same code."
+  }
+ },
+ "clearance": {
+  "why": "Measured clear ranges (the lead, October 30: a data-driven clearance floor): each part alone over the under-layer a chest set brings, each rolled handle at its min and max; an end that clips more than 0.5 cm2 beyond the part's own default is cut back to the default. The roll draws only inside these ranges (ArmorKitOutfitTemplates.Roll); handles not listed keep their whole range.",
+  "addedCm2": 0.5,
+  "layers": {
+   "f1-padding": {
+    "hero/f1-backplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate-keeled": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-couter-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/f1-fauld-lames": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0.5,
+      1
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/f1-gorget": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/f1-pauldron-dome-l": {
+     "Radius": [
+      0.5,
+      0.5
+     ],
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/f1-pauldron-l": {
+     "AxisUp": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0.5,
+      0.5
+     ],
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/f1-rerebrace-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      1
+     ]
+    },
+    "hero/heavy-pauldron-swept-l": {
+     "scale": [
+      1,
+      1.2
+     ]
+    },
+    "hero/medium-surcoat-front": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "wraps/f1-ring-stack-neck": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "wraps/f1-tube-upperarm-l": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      1
+     ]
+    }
+   },
+   "light-trousers": {
+    "hero/light-belt": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-hip-drape": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "AxisRight": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-sash": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-skirt-tiers-front": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-tabard-back": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-thigh-panel-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-thigh-rig-l": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "light-tunic": {
+    "hero/light-leather-jerkin": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin-v2": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-neck-scarf": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "medium-gambeson": {
+    "hero/f1-backplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-breastplate-keeled": {
+     "BoneLength": [
+      0.5,
+      1
+     ]
+    },
+    "hero/f1-fauld-lames": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/f1-gorget": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-leather-jerkin-v2": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-brigandine-body": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-brigandine-v2": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-mail-tippet": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-scale-vest": {
+     "AxisForward": [
+      0.5,
+      1
+     ],
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0.5,
+      0.5
+     ]
+    },
+    "hero/medium-standing-collar": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-surcoat-front": {
+     "BoneLength": [
+      0,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ],
+     "RadiusBottom": [
+      0.5,
+      0.5
+     ]
+    },
+    "wraps/f1-ring-stack-neck": {
+     "BoneLength": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "medium-hose": {
+    "hero/light-belt": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-hip-drape": {
+     "BoneLength": [
+      0.5,
+      0.5
+     ],
+     "AxisRight": [
+      0.5,
+      0.5
+     ],
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/light-sash": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-belt-plated": {
+     "Radius": [
+      0,
+      0.5
+     ],
+     "AxisForward": [
+      0,
+      0.5
+     ]
+    },
+    "hero/medium-thigh-plate-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   },
+   "none": {
+    "hero/f1-cuisse-l": {
+     "BoneLength": [
+      0.5,
+      1
+     ],
+     "RadiusTop": [
+      0.5,
+      1
+     ]
+    },
+    "hero/medium-thigh-plate-l": {
+     "Radius": [
+      0,
+      0.5
+     ]
+    }
+   }
+  }
+ },
+ "review": {
+  "gate": "tools/armor-kit-templates/review-gate.json",
+  "rollInGame": true,
+  "why": "Lane light-gear (October 30): the light-gear sets were held for Adam's review. Adam's go (November 3) opened the gate (rollInGame true); his later ruling the same day let the robes roll too. Sets in hold stay in the review file, rolled only by the review harness (LightGearProof.cs).",
+  "rolledBy": "the review harness only (LightGearProof.cs); the game rolls godot/content/armor-kit-templates.json"
+ },
+ "templates": []
+}

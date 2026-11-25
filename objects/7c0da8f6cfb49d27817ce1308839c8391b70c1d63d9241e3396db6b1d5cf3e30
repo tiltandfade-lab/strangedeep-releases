@@ -1,0 +1,86 @@
+{
+  "lane": "meshy-base",
+  "date": "2026-11-19",
+  "prop": "saint-statue",
+  "script": "tools/world-paint/bake_base_map.py",
+  "blender": "5.2.2 LTS",
+  "runtime": {
+    "path": "godot/assets/level-dressing/floor1-models/saint-statue/saint-statue-runtime.glb",
+    "sha256": "b4f44ff92af8f85dfa060726326f113a3b87ce6603d4cd45f8a09da7bcb5112f",
+    "parts": [
+      "saint-statue"
+    ],
+    "triangles": 6820
+  },
+  "meshy": {
+    "path": "source-assets/meshy/room-props-retexture/2026-11-19/saint-statue/provider-source/Meshy_AI__1119024347_texture.glb@origin/lane/meshy-retexture-trial",
+    "sha256": "e9eaa3bed7a3c6dcaa2e068d6ba9ab52cd6b0243f8e635dbca1722e20351d1ef",
+    "triangles": 6820,
+    "map": "Image_0",
+    "mapSize": [
+      2048,
+      2048
+    ]
+  },
+  "boundsMisfitMetres": 0.0,
+  "fit": {
+    "scale": 1.03676,
+    "axisScales": [
+      1.03676,
+      1.03676,
+      1.03676
+    ],
+    "offsetMetres": [
+      0.0,
+      -0.06857,
+      1.03676
+    ]
+  },
+  "status": "pending review (docs/GODOT-MATERIAL-QUALITY.md: registration is not acceptance)",
+  "uv": {
+    "layout": "new atlas",
+    "overlap": 0.998,
+    "why": "our UV map stacks or mirrors faces"
+  },
+  "weldedCorners": {
+    "saint-statue": 16149
+  },
+  "fillColour": [
+    0.5127,
+    0.4561,
+    0.3658
+  ],
+  "nearTexelShare": 0.7404,
+  "nearExtrusionMetres": 0.002,
+  "grazing": {
+    "ourTexels": 3105272,
+    "grazingTexels": 285234,
+    "share": 0.0919,
+    "patchAt": [
+      48,
+      960
+    ],
+    "patchSize": 192,
+    "grazeCos": 0.8
+  },
+  "method": "bake: our parts unwrapped into one Smart UV Project atlas, the Meshy map baked onto it selected-to-active (emission, Cycles CPU, 4 samples)",
+  "gapMetres": {
+    "median": 0.0,
+    "p99": 0.0,
+    "max": 0.0,
+    "vertices": 19578
+  },
+  "cageExtrusionMetres": 0.002,
+  "maxRayDistanceMetres": 0.004,
+  "outputs": {
+    "glb": {
+      "path": "godot/assets/world-paint/base-maps/saint-statue/saint-statue-uv.glb",
+      "sha256": "e11ff8a25bd1cf49cb31a39ec6dfb4d44ea20437d3164fd9bed0607fbd4216dd"
+    },
+    "map": {
+      "path": "godot/assets/world-paint/base-maps/saint-statue/saint-statue-base.png",
+      "sha256": "753b85cdcfaa90aa282a70807d2336bad2c9ea4a970ea7f8670c51fcef35e5f1",
+      "size": 2048
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+ "schemaVersion": 1,
+ "what": "Adam's Meshy skeleton fitted inside the hero body on the master rig (lane skeleton-fit); preview only, Floor 6 and deeper",
+ "models": [
+  {
+   "id": "undead-skeleton",
+   "label": "Skeleton (undead)",
+   "file": "undead-skeleton.glb",
+   "sha256": "1e16a086e510921ad1e4abbbe9d17a1f6dd53b17e6aac963cd19397999ad683a",
+   "mesh": "UndeadSkeleton",
+   "triangles": 15880,
+   "materialResponse": "ossuary-bone",
+   "source": "source-assets/characters/skeleton/models/meshy/2026-11-13/user-upload-01/provider-source/Meshy_AI_Human_Skeleton_1114020748_texture.glb",
+   "sourceSha256": "55439d4ca410f5b8498cabace8b750341a49c5132d62087becbdc0d9844d5371",
+   "builtBy": [
+    "tools/skeleton-fit/fit_skeleton.py",
+    "tools/skeleton-fit/export_skeleton.py"
+   ],
+   "clean": {
+    "fingerBridgeFacesDeleted": 119,
+    "fingertipSliversDropped": 0,
+    "looseParts": 54,
+    "openEdgesAfterBudget": 138,
+    "openEdgesAfterWeld": 139,
+    "strayPartsDropped": 0,
+    "triangleBudget": 16000,
+    "triangles": 16000,
+    "weldedVertices": 10577
+   },
+   "seat": {
+    "ankle l": {
+     "lowerMovedMm": [
+      -0.8,
+      35.0,
+      25.0
+     ],
+     "toeVerticesRecut": 46,
+     "upperLength": 1.08,
+     "worstGapMm": 0.3,
+     "worstPassMm": 1.4
+    },
+    "ankle r": {
+     "lowerMovedMm": [
+      0.8,
+      35.0,
+      22.5
+     ],
+     "toeVerticesRecut": 46,
+     "upperLength": 1.09,
+     "worstGapMm": 1.9,
+     "worstPassMm": 1.2
+    },
+    "elbow l": {
+     "lowerMovedMm": [
+      2.5,
+      -3.6,
+      -2.4
+     ],
+     "upperLength": 1.06,
+     "worstGapMm": 0.0,
+     "worstPassMm": 4.7
+    },
+    "elbow r": {
+     "lowerMovedMm": [
+      -5.1,
+      -7.1,
+      -4.8
+     ],
+     "upperLength": 1.07,
+     "worstGapMm": 1.0,
+     "worstPassMm": 0.6
+    },
+    "knee l": {
+     "lowerMovedMm": [
+      -2.5,
+      -0.7,
+      24.9
+     ],
+     "upperLength": 0.96,
+     "worstGapMm": 0.1,
+     "worstPassMm": 6.1
+    },
+    "knee r": {
+     "lowerMovedMm": [
+      2.5,
+      -0.7,
+      24.9
+     ],
+     "upperLength": 0.96,
+     "worstGapMm": 0.0,
+     "worstPassMm": 4.3
+    },
+    "shoulder l": {
+     "armMovedMm": [
+      -3.3,
+      -0.0,
+      3.8
+     ],
+     "girdleMovedMm": [
+      13.1,
+      0.2,
+      -15.1
+     ],
+     "upperLength": 1.02,
+     "worstGapMm": 13.2,
+     "worstPassMm": 0.0
+    },
+    "shoulder r": {
+     "armMovedMm": [
+      6.6,
+      -0.1,
+      7.5
+     ],
+     "girdleMovedMm": [
+      -13.1,
+      0.2,
+      -15.1
+     ],
+     "upperLength": 0.94,
+     "worstGapMm": 14.5,
+     "worstPassMm": 0.0
+    },
+    "wrist l": {
+     "lowerMovedMm": [
+      2.2,
+      -3.8,
+      -2.3
+     ],
+     "upperLength": 1.05,
+     "worstGapMm": 0.9,
+     "worstPassMm": 0.5
+    },
+    "wrist r": {
+     "lowerMovedMm": [
+      -0.0,
+      -0.0,
+      -0.0
+     ],
+     "upperLength": 1.02,
+     "worstGapMm": 3.6,
+     "worstPassMm": 0.7
+    }
+   },
+   "guard": {
+    "script": "tools/skeleton-fit/check_skeleton.py",
+    "failures": [],
+    "tolerancesMm": {
+     "motion": {
+      "hands-and-feet": 25.0,
+      "pelvis": 55.0,
+      "trunk-and-limbs": 25.0
+     },
+     "rest": {
+      "hands-and-feet": 17.0,
+      "trunk-and-limbs": 4.0
+     }
+    },
+    "joints": {
+     "gap": 6.0,
+     "neckStretch": 35.0,
+     "pass": 10.0
+    }
+   }
+  }
+ ]
+}
